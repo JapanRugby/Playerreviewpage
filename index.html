@@ -252,6 +252,107 @@ const statusEl=$('status'), playerSelect=$('playerSelect'), playerList=$('player
 let playerSearchLookup=new Map();
 function setStatus(text, kind='warn'){ const cls=kind==='ok'?'ok':kind==='err'?'err':''; statusEl.innerHTML=`<span class="dot ${cls}"></span><span>${escapeHtml(text)}</span>`; }
 function escapeHtml(v){return String(v??'').replace(/[&<>'"]/g,s=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[s]));}
+
+function detectUiLanguage(){
+  const langs=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'en']).map(x=>String(x||'').toLowerCase());
+  return langs.some(x=>x.startsWith('ja'))?'ja':'en';
+}
+const UI_LANG=detectUiLanguage();
+document.documentElement.lang=UI_LANG;
+const JA_TEXT = new Map([
+  ['Loading data...','データ読み込み中...'],
+  ['Select Player','選手を選択'],
+  ['Select Scope','表示範囲を選択'],
+  ['Type a name, then select from the list.','名前を入力して、候補から選択してください。'],
+  ['Only Japan / Japan XV players are shown.','Japan / Japan XV の選手のみ表示しています。'],
+  ['View','表示'],
+  ['Metric','指標'],
+  ['Match','試合'],
+  ['Season','シーズン'],
+  ['Career','通算'],
+  ['Total','合計'],
+  ['Per game','1試合平均'],
+  ['Per 80','80分換算'],
+  ['Select a player first. Only matches they appeared in will be shown.','まず選手を選択してください。出場した試合のみ表示されます。'],
+  ['Search and select a player, then choose a match or season.','選手を検索・選択してから、試合またはシーズンを選んでください。'],
+  ['Search player name...','選手名を検索...'],
+  ['Game Time','出場時間'],
+  ['Availability & workload','試合数・出場時間'],
+  ['Contribution per player ball-in-play minute','選手個人のBall-in-play 1分あたり貢献度'],
+  ['Opponent comparison','相手比較'],
+  ['Ball Carry','Ball Carry'],
+  ['Defence','Defence'],
+  ['Matches','試合数'],
+  ['Games included in this view','この表示に含まれる試合数'],
+  ['Actual playing time','実出場時間'],
+  ['Player BIP minutes','選手個人のBIP分数'],
+  ['Effort Analysis','Effort Analysis'],
+  ['Tap outside or × to close.','外側または×で閉じる'],
+  ['Tap to see analysis','タップして分析を見る'],
+  ['Tap for analysis','タップで分析'],
+  ['Open','開く'],
+  ['Effort ratio','Effort ratio'],
+  ['5 Category Graph','5分類グラフ'],
+  ['By Time Band','時間帯別'],
+  ['20 minute intervals','20分間隔'],
+  ['Time Bands','時間帯'],
+  ['No Data','No Data'],
+  ['No Effort Review data found.','Effort Reviewデータがありません。'],
+  ['Positive Action Detail','Positive Action Detail'],
+  ['Negative Action Detail','Negative Action Detail'],
+  ['Need to Improve','Need to Improve'],
+  ['No Red effort situations found.','RedのEffort項目はありません。'],
+  ['No exact player selected yet. Choose a name from the search list.','まだ選手が確定していません。検索候補から選択してください。'],
+  ['Loading matches for this player...','この選手の試合を読み込み中...'],
+  ['Loading selected player data...','選択選手のデータを読み込み中...'],
+  ['Selected player data could not be loaded.','選択選手のデータを読み込めませんでした。'],
+  ['Select a match','試合を選択'],
+  ['Select a season','シーズンを選択'],
+  ['Career Total','通算'],
+  ['No season data found for this player.','この選手のシーズンデータがありません。'],
+  ['No match data found for this player.','この選手の試合データがありません。'],
+  ['Loading error','読み込みエラー'],
+  ['Online data could not be loaded. Please check GitHub Pages and generated data files.','オンラインデータを読み込めませんでした。GitHub Pagesと生成済みデータファイルを確認してください。'],
+  ['No difference','差なし'],
+  ['Even','Even'],
+  ['Japan wins','Japan wins'],
+  ['Opponent wins','Opponent wins']
+]);
+function translateTextNodeValue(value){
+  if(UI_LANG!=='ja') return value;
+  const text=String(value||'');
+  const trimmed=text.trim();
+  if(JA_TEXT.has(trimmed)) return text.replace(trimmed, JA_TEXT.get(trimmed));
+  let out=text;
+  out=out.replace(/\b(\d+)\s+times\b/g,'$1回');
+  out=out.replace(/\b(\d+)\s+total times\b/g,'合計 $1回');
+  out=out.replace(/\b(\d+)\s+classified times\b/g,'分類済み $1回');
+  out=out.replace(/\b(\d+)\s+attempts\b/g,'$1 試行');
+  out=out.replace(/\b(\d+)\s+matches\b/g,'$1 試合');
+  out=out.replace(/\b(\d+)\s+match\b/g,'$1 試合');
+  out=out.replace(/\b(\d+)\s+games\b/g,'$1 試合');
+  out=out.replace(/\b(\d+)\s+game\b/g,'$1 試合');
+  out=out.replace(/^(\d{4}) Season$/,'$1 シーズン');
+  out=out.replace(/Choose a match, season, or career to view stats\./,'試合、シーズン、通算を選んでください。');
+  out=out.replace(/ selected\./,' を選択しました。');
+  return out;
+}
+function applyLanguage(root=document){
+  if(UI_LANG!=='ja') return;
+  const playerInput=document.getElementById('playerSelect');
+  if(playerInput) playerInput.setAttribute('placeholder','選手名を検索...');
+  const clear=document.getElementById('clearPlayerSearch');
+  if(clear) clear.setAttribute('aria-label','検索をクリア');
+  const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode(node){
+    if(!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+    const tag=node.parentElement&&node.parentElement.tagName;
+    if(tag==='SCRIPT'||tag==='STYLE') return NodeFilter.FILTER_REJECT;
+    return NodeFilter.FILTER_ACCEPT;
+  }});
+  const nodes=[];
+  while(walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach(node=>{node.nodeValue=translateTextNodeValue(node.nodeValue);});
+}
 function norm(v){return String(v??'').trim().replace(/\s+/g,' ').toLowerCase();}
 function normTeam(v){return String(v??'').trim().replace(/\s+/g,' ').toUpperCase();}
 function isTargetTeam(team){const t=normTeam(team);return CONFIG.targetTeams.some(x=>normTeam(x)===t);}
@@ -1101,6 +1202,13 @@ document.addEventListener('focusin',e=>{const hit=e.target.closest&&e.target.clo
 document.addEventListener('focusout',e=>{const hit=e.target.closest&&e.target.closest('.trendHit');if(hit)hideTrendTooltip();});
 document.addEventListener('touchstart',e=>{const hit=e.target.closest&&e.target.closest('.trendHit');if(hit){const t=e.touches&&e.touches[0];showTrendTooltip(hit,t?t.clientX:null,t?t.clientY:null);clearTimeout(window.__trendTooltipTimer);window.__trendTooltipTimer=setTimeout(hideTrendTooltip,2200);}},{passive:true});
 
+
+
+const __renderOptions = renderOptions;
+renderOptions = function(){ __renderOptions(); applyLanguage(matchCards); applyLanguage(document.querySelector('.controlShell')||document); };
+const __renderDashboard = renderDashboard;
+renderDashboard = function(){ __renderDashboard(); applyLanguage(dashboard); };
+applyLanguage(document);
 
 document.addEventListener('click',e=>{const trigger=e.target.closest&&e.target.closest('[data-effort-analysis]');if(trigger){e.preventDefault();openEffortAnalysisModal(trigger.dataset.effortAnalysis);}});
 $('effortAnalysisModalClose').addEventListener('click',closeEffortAnalysisModal);
