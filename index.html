@@ -696,9 +696,26 @@ function renderEffortShare(raw){
   $('effortShare').innerHTML=`<div class="effortShareHead"><div class="effortShareTitle">Effort ratio</div><div class="effortShareTotal">${total?intFmt(total)+' total times':'No Data'}</div></div><div class="effortStack" aria-label="Gold Green Yellow Red percentage share">${parts.map(p=>`<div class="effortShareSegment ${p.cls}" data-target-width="${p.pctVal.toFixed(2)}%" style="width:${p.pctVal.toFixed(2)}%" title="${p.name}: ${p.pctText}"></div>`).join('')}</div><div class="effortShareLegend">${parts.map(p=>`<div class="effortLegendItem ${p.cls}"><div class="effortLegendTop"><span class="effortDot ${p.cls}"></span><span>${p.name}</span></div><div class="effortLegendPct" data-final="${p.pctText}">${p.pctText}</div><div class="effortLegendCount">${intFmt(p.count)} times</div></div>`).join('')}</div>${renderEffortAnalysis(raw)}`;
 }
 
-function seasonTrendMatches(ctx){
-  if(state.scope!=='season'||!ctx||!ctx.matches||!ctx.matches.length) return [];
-  return [...ctx.matches].sort((a,b)=>String(a.date||'').localeCompare(String(b.date||'')));
+function trendItems(ctx){
+  if(!ctx||!ctx.matches||!ctx.matches.length) return [];
+  const key=state.selectedPlayer;
+  if(state.scope==='season'){
+    return [...ctx.matches].sort((a,b)=>String(a.date||'').localeCompare(String(b.date||'')));
+  }
+  if(state.scope==='career'){
+    const groups=new Map();
+    ctx.matches.forEach(m=>{
+      const season=m.season||'Unknown';
+      if(!groups.has(season)) groups.set(season,[]);
+      groups.get(season).push(m);
+    });
+    return [...groups.entries()].sort((a,b)=>String(a[0]).localeCompare(String(b[0]))).map(([season,ms])=>{
+      const sorted=[...ms].sort((a,b)=>String(a.date||'').localeCompare(String(b.date||'')));
+      const stat=aggregate(sorted,key);
+      return {id:`season-${season}`,label:season,trendLabel:season,date:sorted[0]?.date||'',season,playerStats:new Map([[key,stat]])};
+    });
+  }
+  return [];
 }
 function perMatchScaled(st){ return scaleStats(st,state.metric); }
 function trendValue(st,metric){
@@ -730,6 +747,7 @@ function trendFormat(metric,value){
   return state.metric==='total'?intFmt(value):oneDec(value);
 }
 function shortMatchLabel(m){
+  if(m.trendLabel) return String(m.trendLabel);
   const date=String(m.date||'').slice(5)||String(m.date||'');
   return [date,m.label||m.id].filter(Boolean).join(' · ');
 }
@@ -748,15 +766,16 @@ function renderMiniTrend(metric,label,matches,key,chartClass=''){
   const visiblePoints=coords.map(([x,y],i)=>`<circle class="trendPoint" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4.5" style="animation-delay:${(i*.05).toFixed(2)}s"></circle>`).join('');
   const hitPoints=coords.map(([x,y],i)=>`<circle class="trendHit" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="16" tabindex="0" role="button" data-match="${escapeHtml(points[i].label)}" data-stat="${escapeHtml(label)}" data-value="${escapeHtml(trendFormat(metric,points[i].value))}"></circle>`).join('');
   const last=points[points.length-1];
-  return `<div class="trendChart ${escapeHtml(chartClass)}"><div class="trendChartTop"><div class="trendChartName">${escapeHtml(label)}</div><div class="trendChartLast">${escapeHtml(trendFormat(metric,last.value))}</div></div><svg class="trendSvg" viewBox="0 0 ${w} ${h}" role="img" aria-label="${escapeHtml(label)} match-by-match trend"><line class="trendAxis" x1="${pad}" y1="${h-pad}" x2="${w-pad}" y2="${h-pad}"></line><line class="trendAxis" x1="${pad}" y1="${pad}" x2="${pad}" y2="${h-pad}"></line><path class="trendArea" d="${area}"></path><path class="trendLine" d="${path}"></path>${visiblePoints}${hitPoints}</svg><div class="trendFooter"><span>${escapeHtml(points[0].label)}</span><span>${escapeHtml(last.label)}</span></div></div>`;
+  return `<div class="trendChart ${escapeHtml(chartClass)}"><div class="trendChartTop"><div class="trendChartName">${escapeHtml(label)}</div><div class="trendChartLast">${escapeHtml(trendFormat(metric,last.value))}</div></div><svg class="trendSvg" viewBox="0 0 ${w} ${h}" role="img" aria-label="${escapeHtml(label)} trend"><line class="trendAxis" x1="${pad}" y1="${h-pad}" x2="${w-pad}" y2="${h-pad}"></line><line class="trendAxis" x1="${pad}" y1="${pad}" x2="${pad}" y2="${h-pad}"></line><path class="trendArea" d="${area}"></path><path class="trendLine" d="${path}"></path>${visiblePoints}${hitPoints}</svg><div class="trendFooter"><span>${escapeHtml(points[0].label)}</span><span>${escapeHtml(last.label)}</span></div></div>`;
 }
 function renderTrendPanel(id,title,metrics,ctx){
   const el=$(id); if(!el) return;
-  const matches=seasonTrendMatches(ctx);
-  if(!matches.length){ el.classList.remove('show'); el.innerHTML=''; return; }
+  const items=trendItems(ctx);
+  if(!items.length){ el.classList.remove('show'); el.innerHTML=''; return; }
   const metricNote=metricLabel();
+  const periodLabel=state.scope==='career'?'season':'match';
   el.classList.add('show');
-  el.innerHTML=`<div class="trendHead"><div class="trendTitle">${escapeHtml(title)} by match</div><div class="trendSub">${escapeHtml(metricNote)} · hover each point</div></div><div class="trendGrid">${metrics.map(m=>renderMiniTrend(m.key,m.label,matches,state.selectedPlayer,m.cls||'')).join('')}</div>`;
+  el.innerHTML=`<div class="trendHead"><div class="trendTitle">${escapeHtml(title)} by ${periodLabel}</div><div class="trendSub">${escapeHtml(metricNote)} · hover each point</div></div><div class="trendGrid">${metrics.map(m=>renderMiniTrend(m.key,m.label,items,state.selectedPlayer,m.cls||'')).join('')}</div>`;
 }
 function renderSeasonTrends(ctx){
   const gameTimeTrend=$('gameTimeTrend');
