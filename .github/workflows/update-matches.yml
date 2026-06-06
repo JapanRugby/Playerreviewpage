@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'data/**/*.csv'
+      - 'data/**/*.xml'
       - 'data/match_overrides.json'
       - 'scripts/generate-matches.js'
   workflow_dispatch:
