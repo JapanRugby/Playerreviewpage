@@ -8,8 +8,10 @@ const TARGET_TEAMS = ['Japan', 'Japan XV'];
 
 function norm(v){return String(v??'').trim().replace(/\s+/g,' ').toLowerCase();}
 function normTeam(v){return String(v??'').trim().replace(/\s+/g,' ').toUpperCase();}
-function playerKey(name,team){return `${norm(name)}|${norm(team)}`;}
 function isTargetTeam(team){const t=normTeam(team);return TARGET_TEAMS.some(x=>normTeam(x)===t);}
+function playerKey(name,team){return isTargetTeam(team)?`${norm(name)}|japan-group`:`${norm(name)}|${norm(team)}`;}
+function mergeDisplayTeams(current, incoming){ const list=(Array.isArray(current)?current:(current?[current]:[])).filter(Boolean); if(incoming&&!list.some(t=>normTeam(t)===normTeam(incoming))) list.push(String(incoming).trim()); const order=t=>normTeam(t)==='JAPAN'?0:normTeam(t)==='JAPAN XV'?1:2; return list.sort((a,b)=>order(a)-order(b)||String(a).localeCompare(String(b)));}
+function displayTeamName(teams){ const list=Array.isArray(teams)?teams.filter(Boolean):[]; return list.length?list.join(' / '):'';}
 function toNumber(v){const n=parseFloat(String(v??'').replace(/,/g,''));return Number.isFinite(n)?n:0;}
 function dateLabel(v){ if(!v) return ''; const s=String(v).trim(); const dm=s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/); if(dm) return `${dm[3]}-${dm[2].padStart(2,'0')}-${dm[1].padStart(2,'0')}`; return s.slice(0,10); }
 function titleCaseWords(value){ return String(value||'').trim().replace(/\s+/g,' ').split(' ').filter(Boolean).map(w=>w.charAt(0).toUpperCase()+w.slice(1).toLowerCase()).join(' '); }
@@ -47,7 +49,7 @@ function extractReviewTeam(row){ if(row.TeamName) return row.TeamName; const com
 function blankStats(player){return {player,totalActions:0,appearances:0,minutes:0,ballInPlayMins:0,positiveActions:0,negativeActions:0,carry:0,carryMetres:0,postContactMetres:0,carryDominant:0,carryContact:0,tackleAttempts:0,tackleMade:0,tackleDominant:0,colours:{Gold:0,Green:0,Yellow:0,Red:0},reviewTotal:0,typeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},typeCounts:{},shirt:player.shirt||'',position:player.position||''};}
 function ensurePlayer(match, players, name, team, data={}){
   if(!name||!team) return null; const key=playerKey(name,team);
-  let p=players.get(key); if(!p){ p={key,name:name.trim(),team:team.trim(),shirt:'',position:'',show:isTargetTeam(team),matches:[]}; players.set(key,p); }
+  let p=players.get(key); if(!p){ const teams=mergeDisplayTeams([], team); p={key,name:name.trim(),team:displayTeamName(teams)||team.trim(),teams,shirt:'',position:'',show:isTargetTeam(team),matches:[]}; players.set(key,p); } else { p.teams=mergeDisplayTeams(p.teams||p.team, team); p.team=displayTeamName(p.teams)||p.team; p.show=p.show||isTargetTeam(team); }
   if(data.shirt&&!p.shirt) p.shirt=String(data.shirt).padStart(2,'0'); if(data.position&&!p.position) p.position=data.position;
   let st=match.playerStats.get(key); if(!st){ st=blankStats(p); match.playerStats.set(key,st); }
   if(data.shirt&&!st.shirt) st.shirt=String(data.shirt).padStart(2,'0'); if(data.position&&!st.position) st.position=data.position;
@@ -120,7 +122,7 @@ function main(){
       p.matchSummaries[match.id]={carry:st.carry,tackleMade:st.tackleMade,tackleAttempts:st.tackleAttempts,effort:st.reviewTotal,minutes:st.minutes};
     }
   }
-  const index={generatedAt:new Date().toISOString(),version:2,matches:matchSummaries,players:[...players.values()].filter(p=>p.show).sort((a,b)=>a.team.localeCompare(b.team)||a.name.localeCompare(b.name)).map(p=>({key:p.key,name:p.name,team:p.team,shirt:p.shirt||'',position:p.position||'',matches:p.matches,matchSummaries:p.matchSummaries||{}}))};
+  const index={generatedAt:new Date().toISOString(),version:2,matches:matchSummaries,players:[...players.values()].filter(p=>p.show).sort((a,b)=>a.name.localeCompare(b.name)||a.team.localeCompare(b.team)).map(p=>({key:p.key,name:p.name,team:p.team,teams:p.teams||[p.team].filter(Boolean),shirt:p.shirt||'',position:p.position||'',matches:p.matches,matchSummaries:p.matchSummaries||{}}))};
   fs.writeFileSync(path.join(DATA_DIR,'player_index.json'), JSON.stringify(index));
   console.log(`Generated player_index.json and ${matchSummaries.length} stats files for ${index.players.length} Japan players.`);
 }
