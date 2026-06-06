@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Player Review</title>
+<style>
+:root{
+  --bg:#f6f8fb;
+  --panel:#ffffff;
+  --panel2:#f1f5fb;
+  --text:#111827;
+  --muted:#677388;
+  --line:#dce3ee;
+  --accent:#174ea6;
+  --accent2:#e8f0fe;
+  --gold:#a66a00;
+  --green:#137333;
+  --yellow:#8a5a00;
+  --red:#b3261e;
+  --shadow:0 10px 25px rgba(17,24,39,.08);
+  --radius:22px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:linear-gradient(180deg,#eef4ff 0,#f6f8fb 280px,#f6f8fb 100%);
+  color:var(--text);
+}
+button,select,input{font:inherit}
+.header{
+  max-width:1120px;
+  margin:0 auto;
+  padding:26px 18px 10px;
+}
+.kicker{font-size:13px;color:var(--accent);font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+h1{font-size:clamp(28px,5.5vw,54px);line-height:1.02;margin:8px 0 10px;letter-spacing:-.04em}
+.lead{margin:0;color:var(--muted);font-size:16px;line-height:1.6;max-width:720px}
+.app{max-width:1120px;margin:0 auto;padding:14px 18px 48px}
+.status{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  padding:10px 12px;border:1px solid var(--line);border-radius:999px;
+  background:rgba(255,255,255,.8);color:var(--muted);font-size:13px;width:fit-content;margin:10px 0 18px;
+}
+.dot{width:9px;height:9px;border-radius:99px;background:#9aa7bb;display:inline-block}
+.dot.ok{background:#188038}.dot.warn{background:#f9ab00}.dot.err{background:#d93025}
+.steps{display:grid;grid-template-columns:1fr 1.35fr;gap:16px;margin-bottom:18px}
+.step{
+  background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px;box-shadow:var(--shadow);
+}
+.step h2{font-size:16px;margin:0 0 12px;display:flex;align-items:center;gap:8px}
+.stepno{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-size:14px}
+select{
+  width:100%;min-height:54px;border-radius:16px;border:1px solid #c9d3e2;background:#fff;color:var(--text);
+  padding:0 14px;font-size:17px;font-weight:700;
+}
+.helper{color:var(--muted);font-size:13px;line-height:1.45;margin-top:10px}
+.matchGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.matchCard{
+  border:1px solid var(--line);border-radius:18px;background:#fff;padding:14px;text-align:left;cursor:pointer;
+  box-shadow:0 5px 15px rgba(17,24,39,.05);transition:.15s transform,.15s border-color,.15s background;
+}
+.matchCard:hover{transform:translateY(-1px);border-color:#9bb6e8;background:#fbfdff}
+.matchCard.active{border-color:var(--accent);background:var(--accent2)}
+.matchCard .date{color:var(--muted);font-size:12px;font-weight:700}
+.matchCard .title{font-size:17px;font-weight:900;margin:5px 0 3px}
+.matchCard .meta{font-size:12px;color:var(--muted);line-height:1.35}
+.empty{
+  border:1px dashed #bfcaDA;border-radius:18px;background:#fbfcff;color:var(--muted);padding:18px;line-height:1.6;
+}
+.dashboard{display:none;animation:fade .18s ease-out}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.playerHero{
+  display:grid;grid-template-columns:1.25fr .75fr;gap:16px;margin-bottom:16px;
+}
+.heroCard{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);
+}
+.playerName{font-size:32px;font-weight:950;letter-spacing:-.03em;margin:0 0 8px}
+.heroMeta{display:flex;gap:8px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+.badge{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:#fff;font-weight:700;color:#4f5b6d}
+.scoreLine{font-size:24px;font-weight:950;margin-bottom:6px}.venue{color:var(--muted);font-size:13px;line-height:1.45}
+.section{margin-top:16px}
+.sectionTitle{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 10px}
+.sectionTitle h3{font-size:18px;margin:0}.sectionTitle span{font-size:12px;color:var(--muted)}
+.statGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.statCard{
+  background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 8px 20px rgba(17,24,39,.06);
+  min-height:124px;display:flex;flex-direction:column;justify-content:space-between;
+}
+.statCard .label{color:var(--muted);font-size:13px;font-weight:800;line-height:1.25}
+.statCard .value{font-size:36px;line-height:1;font-weight:950;letter-spacing:-.04em;margin-top:12px}
+.statCard .sub{color:var(--muted);font-size:12px;margin-top:8px;line-height:1.35}
+.statCard.gold{background:#fff7e0;border-color:#f2d28b}.statCard.green{background:#eaf7ee;border-color:#b7e1c1}.statCard.yellow{background:#fff9db;border-color:#f1dc81}.statCard.red{background:#fdecea;border-color:#f4b5b1}
+.statCard.gold .value{color:var(--gold)}.statCard.green .value{color:var(--green)}.statCard.yellow .value{color:var(--yellow)}.statCard.red .value{color:var(--red)}
+.reviewPanel{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.breakdown{
+  background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 8px 20px rgba(17,24,39,.06);
+}
+.breakdown h4{margin:0 0 12px;font-size:15px}
+.barRow{display:grid;grid-template-columns:120px 1fr 42px;gap:10px;align-items:center;margin:9px 0;font-size:13px;color:#334155}
+.barTrack{height:10px;border-radius:999px;background:#eef2f7;overflow:hidden}.barFill{height:100%;background:#8aa8d8;border-radius:999px}
+.formula{
+  margin-top:18px;color:var(--muted);font-size:12px;line-height:1.55;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px;
+}
+details.admin{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px 14px;color:var(--muted)}
+details.admin summary{cursor:pointer;font-weight:800;color:#334155}.adminGrid{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;align-items:end;margin-top:12px}.adminGrid label{font-size:12px;font-weight:800}.adminGrid input{width:100%;border:1px solid var(--line);border-radius:12px;padding:9px;background:#fff}.adminGrid button{border:0;border-radius:12px;background:var(--accent);color:#fff;padding:11px 14px;font-weight:900;cursor:pointer}
+@media(max-width:860px){.steps,.playerHero,.reviewPanel{grid-template-columns:1fr}.statGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.adminGrid{grid-template-columns:1fr}.playerName{font-size:26px}}
+@media(max-width:520px){.header{padding-top:18px}.app{padding-inline:12px}.statGrid{grid-template-columns:1fr}.statCard{min-height:106px}.statCard .value{font-size:32px}.status{border-radius:18px}.heroCard,.step{padding:15px}.barRow{grid-template-columns:94px 1fr 34px}}
+</style>
+</head>
+<body>
+  <header class="header">
+    <div class="kicker">Player Review</div>
+    <h1>自分の試合レビューを<br>すぐ見られるページ</h1>
+    <p class="lead">選手は名前を選び、出場した試合カードを選ぶだけ。CSVはオンライン上の固定URLから読み込み、ブラウザー上で自動計算します。</p>
+  </header>
+  <main class="app">
+    <div id="status" class="status"><span class="dot warn"></span><span>CSVを読み込み中...</span></div>
+    <section class="steps">
+      <div class="step">
+        <h2><span class="stepno">1</span>選手名を選ぶ</h2>
+        <select id="playerSelect" disabled><option>読み込み中...</option></select>
+        <div class="helper">選手一覧は、アップロードされた全試合CSVから自動で作ります。</div>
+      </div>
+      <div class="step">
+        <h2><span class="stepno">2</span>試合を選ぶ</h2>
+        <div id="matchCards" class="matchGrid"><div class="empty">先に選手名を選んでください。出場した試合だけがここに表示されます。</div></div>
+      </div>
+    </section>
+
+    <section id="dashboard" class="dashboard">
+      <div class="playerHero">
+        <div class="heroCard">
+          <p id="playerName" class="playerName"></p>
+          <div id="playerMeta" class="heroMeta"></div>
+        </div>
+        <div class="heroCard">
+          <div id="scoreLine" class="scoreLine"></div>
+          <div id="matchMeta" class="venue"></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sectionTitle"><h3>Carry</h3><span>Ball Carry</span></div>
+        <div class="statGrid" id="carryStats"></div>
+      </div>
+      <div class="section">
+        <div class="sectionTitle"><h3>Tackle</h3><span>Defence</span></div>
+        <div class="statGrid" id="tackleStats"></div>
+      </div>
+      <div class="section">
+        <div class="sectionTitle"><h3>Review Colours</h3><span>Coach Review</span></div>
+        <div class="statGrid" id="colourStats"></div>
+      </div>
+      <div class="section reviewPanel">
+        <div class="breakdown">
+          <h4>Review Type Breakdown</h4>
+          <div id="typeBreakdown"></div>
+        </div>
+        <div class="breakdown">
+          <h4>Summary</h4>
+          <div id="summaryBreakdown"></div>
+        </div>
+      </div>
+      <div class="formula">
+        Carry Metres = <b>Metres2</b> / Post Contact Metres = <b>Metres3</b> / Carry Dominance% = <b>Dominant Contact ÷ Contact判定つきCarry</b> / Tackle Completion = <b>Missed以外 ÷ Tackle試行</b> / Tackle Dominance% = <b>Dominant Tackle ÷ Tackle試行</b>
+      </div>
+    </section>
+
+    <details class="admin">
+      <summary>管理者用: ローカルCSVでプレビュー</summary>
+      <div class="helper">GitHub Pagesへアップロードする前に、手元の2つのCSVを選んで同じ画面で確認できます。選手にはこの操作は不要です。</div>
+      <div class="adminGrid">
+        <div><label>BI CSV</label><input id="localBi" type="file" accept=".csv,text/csv"></div>
+        <div><label>Review CSV</label><input id="localReview" type="file" accept=".csv,text/csv"></div>
+        <button id="localLoad">読み込む</button>
+      </div>
+    </details>
+  </main>
+<script>
+const CONFIG = {
+  manifestUrl: 'data/matches.json'
+};
+
+const state = {
+  matches: [],
+  players: new Map(),
+  selectedPlayer: '',
+  selectedMatch: ''
+};
+
+const $ = (id) => document.getElementById(id);
+const statusEl = $('status');
+const playerSelect = $('playerSelect');
+const matchCards = $('matchCards');
+const dashboard = $('dashboard');
+
+function setStatus(text, kind='warn'){
+  const cls = kind === 'ok' ? 'ok' : kind === 'err' ? 'err' : 'warn';
+  statusEl.innerHTML = `<span class="dot ${cls}"></span><span>${escapeHtml(text)}</span>`;
+}
+function escapeHtml(v){return String(v ?? '').replace(/[&<>'"]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[s]));}
+function norm(v){return String(v ?? '').trim().replace(/\s+/g,' ').toLowerCase();}
+function playerKey(name, team){return `${norm(name)}|${norm(team)}`;}
+function toNumber(v){const n = parseFloat(String(v ?? '').replace(/,/g,'')); return Number.isFinite(n) ? n : 0;}
+function pct(num, den){return den > 0 ? `${Math.round((num / den) * 100)}%` : '—';}
+function intFmt(n){return Math.round(toNumber(n)).toLocaleString('en-US');}
+function urlWithCacheBust(url){const u = new URL(url, location.href); u.searchParams.set('_', String(Date.now())); return u.toString();}
+
+function parseCSV(text){
+  text = String(text || '').replace(/^\uFEFF/, '');
+  const rows = [];
+  let row = [], field = '', inQuotes = false;
+  for(let i=0;i<text.length;i++){
+    const c = text[i];
+    if(inQuotes){
+      if(c === '"'){
+        if(text[i+1] === '"'){ field += '"'; i++; }
+        else inQuotes = false;
+      } else field += c;
+    } else {
+      if(c === '"') inQuotes = true;
+      else if(c === ','){ row.push(field); field = ''; }
+      else if(c === '\n'){
+        row.push(field); field = '';
+        if(row.some(x => String(x).trim() !== '')) rows.push(row);
+        row = [];
+      } else if(c !== '\r') field += c;
+    }
+  }
+  row.push(field);
+  if(row.some(x => String(x).trim() !== '')) rows.push(row);
+  if(!rows.length) return [];
+  const headers = rows.shift().map(h => String(h).replace(/^\uFEFF/,'').trim());
+  return rows.map(cols => {
+    const obj = {};
+    headers.forEach((h,i) => obj[h] = cols[i] ?? '');
+    return obj;
+  });
+}
+
+function extractReviewName(row){
+  const first = row.PlayerFirstName || '';
+  const last = row.PlayerLastName || '';
+  const name = `${first} ${last}`.trim();
+  if(name) return name;
+  const combined = row['PlayerName (Team)'] || '';
+  const m = combined.match(/^(.*?)\s*\((.*?)\)\s*$/);
+  return (m ? m[1] : combined).trim();
+}
+function extractReviewTeam(row){
+  if(row.TeamName) return row.TeamName;
+  const combined = row['PlayerName (Team)'] || '';
+  const m = combined.match(/^(.*?)\s*\((.*?)\)\s*$/);
+  return (m ? m[2] : '').trim();
+}
+function blankStats(player){
+  return {
+    player,
+    totalActions:0,
+    carry:0, carryMetres:0, postContactMetres:0, carryDominant:0, carryContact:0,
+    tackleAttempts:0, tackleMade:0, tackleDominant:0,
+    colours:{Gold:0,Green:0,Yellow:0,Red:0},
+    reviewTotal:0,
+    typeCounts:{},
+    shirt: player.shirt || '',
+    position: player.position || ''
+  };
+}
+function ensurePlayer(match, name, team, data={}){
+  if(!name || !team) return null;
+  const key = playerKey(name, team);
+  let p = state.players.get(key);
+  if(!p){
+    p = {key, name:name.trim(), team:team.trim(), shirt:'', position:''};
+    state.players.set(key, p);
+  }
+  if(data.shirt && !p.shirt) p.shirt = String(data.shirt).padStart(2,'0');
+  if(data.position && !p.position) p.position = data.position;
+  let st = match.playerStats.get(key);
+  if(!st){ st = blankStats(p); match.playerStats.set(key, st); }
+  if(data.shirt && !st.shirt) st.shirt = String(data.shirt).padStart(2,'0');
+  if(data.position && !st.position) st.position = data.position;
+  return {key, player:p, stats:st};
+}
+function dateLabel(v){
+  if(!v) return '';
+  const s = String(v).trim();
+  const dm = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if(dm) return `${dm[3]}-${dm[2].padStart(2,'0')}-${dm[1].padStart(2,'0')}`;
+  return s;
+}
+function deriveMeta(item, biRows){
+  const first = biRows.find(r => r.FXID || r.homeTeamName || r.awayTeamName) || {};
+  const home = item.homeTeam || first.homeTeamName || '';
+  const away = item.awayTeam || first.awayTeamName || '';
+  const score = item.score || ((first.hometeamFTscore || first.awayteamFTscore) ? `${first.hometeamFTscore ?? ''}–${first.awayteamFTscore ?? ''}` : '');
+  const label = item.label || (home && away && score ? `${home} ${score} ${away}` : (home && away ? `${home} v ${away}` : item.id));
+  return {
+    id: String(item.id || first.FXID || label),
+    label,
+    date: item.date || dateLabel(first.datePlayed),
+    home, away, score,
+    venue: item.venue || first.venueName || '',
+    competition: item.competition || first.competitionName || '',
+    raw: item
+  };
+}
+function buildMatch(item, biRows, reviewRows){
+  const meta = deriveMeta(item, biRows);
+  const match = {...meta, playerStats:new Map()};
+
+  for(const row of biRows){
+    const name = (row.playerName || '').trim();
+    const team = (row.teamName || '').trim();
+    const got = ensurePlayer(match, name, team, {shirt:row.playerShirtNumber, position:row.playerpositionName});
+    if(!got) continue;
+    const st = got.stats;
+    st.totalActions++;
+    const action = String(row.actionName || '').trim();
+    if(action === 'Carry'){
+      st.carry++;
+      st.carryMetres += toNumber(row.Metres2);
+      st.postContactMetres += toNumber(row.Metres3);
+      const contact = String(row.qualifier4Name || '');
+      if(/Contact/i.test(contact)) st.carryContact++;
+      if(/Dominant Contact/i.test(contact)) st.carryDominant++;
+    }
+    if(action === 'Tackle'){
+      st.tackleAttempts++;
+      const result = String(row.ActionResultName || '').trim();
+      if(result !== 'Missed') st.tackleMade++;
+      const tq = String(row.qualifier4Name || '');
+      if(/Dominant Tackle/i.test(tq)) st.tackleDominant++;
+    }
+  }
+
+  for(const row of reviewRows){
+    const name = extractReviewName(row);
+    const team = extractReviewTeam(row);
+    const got = ensurePlayer(match, name, team, {shirt:row.ShirtNumber});
+    if(!got) continue;
+    const st = got.stats;
+    const colour = String(row.next_action_result || '').trim();
+    if(st.colours[colour] !== undefined) st.colours[colour]++;
+    st.reviewTotal++;
+    const type = String(row.next_action_type || 'Other').trim() || 'Other';
+    st.typeCounts[type] = (st.typeCounts[type] || 0) + 1;
+  }
+  return match;
+}
+
+async function fetchText(url, bust=false){
+  const target = bust ? urlWithCacheBust(url) : new URL(url, location.href).toString();
+  const res = await fetch(target);
+  if(!res.ok) throw new Error(`${res.status} ${res.statusText}: ${url}`);
+  return await res.text();
+}
+async function loadFromManifest(force=false){
+  const params = new URLSearchParams(location.search);
+  const manifestUrl = params.get('manifest') || CONFIG.manifestUrl;
+  setStatus('試合リストを読み込み中...');
+  const manifestText = await fetchText(manifestUrl, force);
+  const manifest = JSON.parse(manifestText);
+  const baseUrl = new URL(manifestUrl, location.href).toString();
+  const matches = [];
+  let idx = 0;
+  for(const item of manifest){
+    idx++;
+    setStatus(`${idx}/${manifest.length} 試合目のCSVを読み込み中...`);
+    const biUrl = new URL(item.biCsv, baseUrl).toString();
+    const reviewUrl = new URL(item.reviewCsv, baseUrl).toString();
+    const [biText, reviewText] = await Promise.all([fetchText(biUrl, force), fetchText(reviewUrl, force)]);
+    const biRows = parseCSV(biText);
+    const reviewRows = parseCSV(reviewText);
+    matches.push(buildMatch(item, biRows, reviewRows));
+  }
+  state.matches = matches;
+  hydrateUI();
+  const playerCount = state.players.size;
+  setStatus(`${matches.length}試合 / ${playerCount}選手を読み込みました`, 'ok');
+}
+
+function hydrateUI(){
+  const players = [...state.players.values()].sort((a,b) => (a.team.localeCompare(b.team) || a.name.localeCompare(b.name)));
+  const byTeam = new Map();
+  for(const p of players){
+    if(!byTeam.has(p.team)) byTeam.set(p.team, []);
+    byTeam.get(p.team).push(p);
+  }
+  playerSelect.disabled = false;
+  playerSelect.innerHTML = '<option value="">選手名を選ぶ</option>';
+  for(const [team, list] of byTeam){
+    const group = document.createElement('optgroup');
+    group.label = team;
+    for(const p of list){
+      const opt = document.createElement('option');
+      opt.value = p.key;
+      opt.textContent = `${p.shirt ? p.shirt + ' ' : ''}${p.name}`;
+      group.appendChild(opt);
+    }
+    playerSelect.appendChild(group);
+  }
+}
+
+function matchesForPlayer(key){
+  return state.matches.filter(m => m.playerStats.has(key));
+}
+function renderMatches(){
+  dashboard.style.display = 'none';
+  matchCards.innerHTML = '';
+  if(!state.selectedPlayer){
+    matchCards.innerHTML = '<div class="empty">先に選手名を選んでください。出場した試合だけがここに表示されます。</div>';
+    return;
+  }
+  const ms = matchesForPlayer(state.selectedPlayer);
+  if(!ms.length){
+    matchCards.innerHTML = '<div class="empty">この選手の出場データが見つかりませんでした。</div>';
+    return;
+  }
+  for(const m of ms){
+    const st = m.playerStats.get(state.selectedPlayer);
+    const btn = document.createElement('button');
+    btn.className = `matchCard ${state.selectedMatch === m.id ? 'active' : ''}`;
+    btn.innerHTML = `<div class="date">${escapeHtml(m.date || '')}</div><div class="title">${escapeHtml(m.label)}</div><div class="meta">Carry ${st.carry} / Tackle ${st.tackleMade}/${st.tackleAttempts} / Review ${st.reviewTotal}</div>`;
+    btn.addEventListener('click', () => { state.selectedMatch = m.id; renderMatches(); renderDashboard(); });
+    matchCards.appendChild(btn);
+  }
+  if(ms.length === 1){
+    state.selectedMatch = ms[0].id;
+    renderMatches();
+    renderDashboard();
+  }
+}
+function card(label,value,sub='',cls=''){
+  return `<div class="statCard ${cls}"><div><div class="label">${escapeHtml(label)}</div><div class="value">${escapeHtml(value)}</div></div><div class="sub">${escapeHtml(sub)}</div></div>`;
+}
+function renderDashboard(){
+  const match = state.matches.find(m => m.id === state.selectedMatch);
+  if(!match || !state.selectedPlayer) return;
+  const st = match.playerStats.get(state.selectedPlayer);
+  if(!st) return;
+  const p = st.player;
+  dashboard.style.display = 'block';
+  $('playerName').textContent = p.name;
+  const meta = [];
+  if(st.shirt || p.shirt) meta.push(`<span class="badge">#${escapeHtml(st.shirt || p.shirt)}</span>`);
+  meta.push(`<span class="badge">${escapeHtml(p.team)}</span>`);
+  if(st.position || p.position) meta.push(`<span class="badge">${escapeHtml(st.position || p.position)}</span>`);
+  $('playerMeta').innerHTML = meta.join('');
+  $('scoreLine').textContent = match.label;
+  $('matchMeta').innerHTML = `${escapeHtml(match.date || '')}${match.venue ? '<br>' + escapeHtml(match.venue) : ''}${match.competition ? '<br>' + escapeHtml(match.competition) : ''}`;
+  $('carryStats').innerHTML = [
+    card('Carry', intFmt(st.carry), 'キャリー回数'),
+    card('Carry Metres', intFmt(st.carryMetres), 'Metres2 合計'),
+    card('Carry Dominance%', pct(st.carryDominant, st.carryContact), `${st.carryDominant}/${st.carryContact} dominant contact`),
+    card('Post Contact Metres', intFmt(st.postContactMetres), 'Metres3 合計')
+  ].join('');
+  $('tackleStats').innerHTML = [
+    card('Tackle', intFmt(st.tackleMade), `${st.tackleAttempts} attempts`),
+    card('Tackle Completion', pct(st.tackleMade, st.tackleAttempts), `${st.tackleMade}/${st.tackleAttempts} made`),
+    card('Tackle Dominance%', pct(st.tackleDominant, st.tackleAttempts), `${st.tackleDominant}/${st.tackleAttempts} dominant tackle`),
+    card('Total Actions', intFmt(st.totalActions), 'BI CSV内の選手アクション')
+  ].join('');
+  $('colourStats').innerHTML = [
+    card('Gold', intFmt(st.colours.Gold), 'review clips','gold'),
+    card('Green', intFmt(st.colours.Green), 'review clips','green'),
+    card('Yellow', intFmt(st.colours.Yellow), 'review clips','yellow'),
+    card('Red', intFmt(st.colours.Red), 'review clips','red')
+  ].join('');
+  renderBreakdowns(st);
+  dashboard.scrollIntoView({behavior:'smooth', block:'start'});
+}
+function renderBreakdowns(st){
+  const types = Object.entries(st.typeCounts).sort((a,b)=>b[1]-a[1]).slice(0,10);
+  const max = Math.max(1, ...types.map(x=>x[1]));
+  $('typeBreakdown').innerHTML = types.length ? types.map(([name,count]) => `
+    <div class="barRow"><div>${escapeHtml(name)}</div><div class="barTrack"><div class="barFill" style="width:${Math.round(count/max*100)}%"></div></div><div>${count}</div></div>
+  `).join('') : '<div class="empty">Reviewデータがありません。</div>';
+  const colourTotal = Object.values(st.colours).reduce((a,b)=>a+b,0);
+  const rows = [
+    ['Carry Dominant', `${st.carryDominant}/${st.carryContact}`, pct(st.carryDominant, st.carryContact)],
+    ['Tackle Completion', `${st.tackleMade}/${st.tackleAttempts}`, pct(st.tackleMade, st.tackleAttempts)],
+    ['Tackle Dominant', `${st.tackleDominant}/${st.tackleAttempts}`, pct(st.tackleDominant, st.tackleAttempts)],
+    ['Review Total', `${colourTotal}`, 'clips']
+  ];
+  $('summaryBreakdown').innerHTML = rows.map(([name,a,b]) => `<div class="barRow"><div>${escapeHtml(name)}</div><div>${escapeHtml(a)}</div><div>${escapeHtml(b)}</div></div>`).join('');
+}
+
+playerSelect.addEventListener('change', () => {
+  state.selectedPlayer = playerSelect.value;
+  state.selectedMatch = '';
+  renderMatches();
+});
+
+async function fileText(input){
+  const file = input.files && input.files[0];
+  if(!file) throw new Error('CSVファイルを2つ選んでください。');
+  return await file.text();
+}
+$('localLoad').addEventListener('click', async () => {
+  try{
+    state.matches = [];
+    state.players = new Map();
+    state.selectedPlayer = '';
+    state.selectedMatch = '';
+    playerSelect.value = '';
+    setStatus('ローカルCSVを読み込み中...');
+    const [biText, reviewText] = await Promise.all([fileText($('localBi')), fileText($('localReview'))]);
+    const match = buildMatch({id:'local', label:'Local Preview'}, parseCSV(biText), parseCSV(reviewText));
+    state.matches = [match];
+    hydrateUI();
+    renderMatches();
+    setStatus(`ローカルCSV: 1試合 / ${state.players.size}選手を読み込みました`, 'ok');
+  }catch(err){ setStatus(err.message, 'err'); }
+});
+
+loadFromManifest().catch(err => {
+  console.error(err);
+  playerSelect.disabled = true;
+  playerSelect.innerHTML = '<option>読み込みエラー</option>';
+  matchCards.innerHTML = '<div class="empty">オンラインCSVを読み込めませんでした。GitHub Pages上で開いているか、data/matches.json のURLが正しいかを確認してください。管理者用のローカルCSVプレビューは下から使えます。</div>';
+  setStatus(err.message, 'err');
+});
+</script>
+</body>
+</html>
