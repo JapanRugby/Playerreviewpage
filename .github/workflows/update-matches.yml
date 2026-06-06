@@ -1,0 +1,39 @@
+name: Update matches manifest
+
+on:
+  push:
+    paths:
+      - 'data/**/*.csv'
+      - 'data/match_overrides.json'
+      - 'scripts/generate-matches.js'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-matches:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate data/matches.json
+        run: node scripts/generate-matches.js
+
+      - name: Commit updated manifest
+        run: |
+          if git diff --quiet -- data/matches.json; then
+            echo "matches.json is already up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/matches.json
+          git commit -m "Update matches manifest"
+          git push
