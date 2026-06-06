@@ -211,17 +211,6 @@ details.admin{margin-top:18px;background:#fff;border:1px solid var(--line);borde
       Carry Metres = <b>Metres2</b> / Post Contact Metres = <b>Metres3</b> / Carry Dominance% = <b>Dominant Contact ÷ Contact carries</b> / Tackle Completion = <b>made tackles ÷ attempts</b> / Tackle Dominance% = <b>Dominant Tackle ÷ attempts</b>. Samurai Stats = <b>(Positive Actions − Negative Actions) ÷ that player's Ball-in-play minutes</b>. Player Ball-in-play minutes uses <b>SuperScout XML TeamData Player BallInPlayMins</b> when available. Per 80 uses <b>SuperScout XML TeamData MINS</b> when available, with BI CSV match clock / Sub In / Sub Out as fallback.
     </div>
   </section>
-
-  <details class="admin">
-    <summary>Admin: local data preview</summary>
-    <div class="helper">Use this before uploading to GitHub Pages. Players do not need this step.</div>
-    <div class="adminGrid">
-      <div><label>BI CSV</label><input id="localBi" type="file" accept=".csv,text/csv"></div>
-      <div><label>Effort CSV</label><input id="localReview" type="file" accept=".csv,text/csv"></div>
-      <div><label>SuperScout XML <span class="muted">optional</span></label><input id="localXml" type="file" accept=".xml,text/xml,application/xml"></div>
-      <button id="localLoad">Load</button>
-    </div>
-  </details>
 </main>
 <script>
 const CONFIG = { manifestUrl:'data/matches.json', targetTeams:['Japan','Japan XV'] };
@@ -801,9 +790,7 @@ playerSelect.addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefau
 $('clearPlayerSearch').addEventListener('click',resetPlayerSearch);
 $('scopeButtons').addEventListener('click',e=>{const btn=e.target.closest('button[data-scope]');if(!btn)return;state.scope=btn.dataset.scope;state.selectedId='';document.querySelectorAll('#scopeButtons button').forEach(b=>b.classList.toggle('active',b===btn));renderOptions();});
 $('metricButtons').addEventListener('click',e=>{const btn=e.target.closest('button[data-metric]');if(!btn)return;state.metric=btn.dataset.metric;document.querySelectorAll('#metricButtons button').forEach(b=>b.classList.toggle('active',b===btn));renderDashboard();});
-async function fileText(input,required=true){const file=input.files&&input.files[0]; if(!file){ if(required) throw new Error('Please select at least one data file.'); return ''; } return await file.text();}
-$('localLoad').addEventListener('click',async()=>{try{state.mode='live';state.matches=[];state.matchById=new Map();state.players=new Map();state.selectedPlayer='';state.selectedId='';playerSelect.value='';togglePlayerClear();setStatus('Loading local data...');const [biText,reviewText,xmlText]=await Promise.all([fileText($('localBi'),false),fileText($('localReview'),false),fileText($('localXml'),false)]);if(!biText&&!reviewText&&!xmlText) throw new Error('Please select at least one data file.');const match=buildMatch({id:'local',label:'Local Preview'},parseCSV(biText),parseCSV(reviewText),xmlText);state.matches=[match];hydrateUI();renderOptions();setStatus(`Local data loaded: ${[...state.players.values()].filter(p=>p.show).length} Japan players`, 'ok');}catch(err){setStatus(err.message,'err');}});
-loadInitialData().catch(err=>{console.error(err);playerSelect.disabled=true;playerSelect.value='';playerSelect.placeholder='Loading error';matchCards.innerHTML='<div class="empty">Online data could not be loaded. Please check GitHub Pages and generated data files. Admin local data preview is still available below.</div>';setStatus(err.message,'err');});
+loadInitialData().catch(err=>{console.error(err);playerSelect.disabled=true;playerSelect.value='';playerSelect.placeholder='Loading error';matchCards.innerHTML='<div class="empty">Online data could not be loaded. Please check GitHub Pages and generated data files.</div>';setStatus(err.message,'err');});
 </script>
 </body>
 </html>
