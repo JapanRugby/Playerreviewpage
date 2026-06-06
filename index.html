@@ -225,12 +225,6 @@ details.admin{margin-top:18px;background:#fff;border:1px solid var(--line);borde
       <div id="comparisonContent"></div>
     </div>
 
-    <div class="section">
-      <div class="breakdown">
-        <h4>Effort Type Breakdown</h4>
-        <div id="typeBreakdown"></div>
-      </div>
-    </div>
     <div class="formula">
       Carry Metres = <b>Metres2</b> / Post Contact Metres = <b>Metres3</b> / Carry Dominance% = <b>Dominant Contact ÷ Contact carries</b> / Tackle Completion = <b>made tackles ÷ attempts</b> / Tackle Dominance% = <b>Dominant Tackle ÷ attempts</b>. Samurai Stats = <b>(Positive Actions − Negative Actions) ÷ that player's Ball-in-play minutes</b>. Player Ball-in-play minutes uses <b>SuperScout XML TeamData Player BallInPlayMins</b> when available. Per 80 uses <b>SuperScout XML TeamData MINS</b> when available, with BI CSV match clock / Sub In / Sub Out as fallback.
     </div>
@@ -324,11 +318,17 @@ function titleCaseWords(value){ return String(value||'').trim().replace(/\s+/g,'
 function canonicalEffortType(value){ const clean=String(value||'Other').trim().replace(/\s+/g,' '); return clean ? titleCaseWords(clean) : 'Other'; }
 function canonicalEffortColour(value){ const key=String(value||'').trim().toLowerCase(); if(key==='gold') return 'Gold'; if(key==='green') return 'Green'; if(key==='yellow') return 'Yellow'; if(key==='red') return 'Red'; return String(value||'').trim(); }
 function effortAnalysisBucket(type){ const u=String(type||'').toUpperCase(); if(u.includes('PHASE DEFENCE')) return 'Phase Defence'; if(u.includes('LINEBREAK')) return 'Linebreak'; if(u.includes('CARRY')||u.includes('RUCK')||u.includes('TACKLE')||u.includes('JACKALER')) return 'Post Contact'; if(u.includes('KICK')||u.includes('TURNOVER')) return 'Spark'; if(u.includes('LINEOUT')||u.includes('SCRUM')) return 'Set Piece'; return ''; }
-function blankStats(player){return {player,totalActions:0,appearances:0,minutes:0,ballInPlayMins:0,positiveActions:0,negativeActions:0,carry:0,carryMetres:0,postContactMetres:0,carryDominant:0,carryContact:0,tackleAttempts:0,tackleMade:0,tackleDominant:0,colours:{Gold:0,Green:0,Yellow:0,Red:0},reviewTotal:0,typeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},typeCounts:{},positiveActionTypes:{},negativeActionTypes:{},shirt:player.shirt||'',position:player.position||''};}
+function blankStats(player){return {player,totalActions:0,appearances:0,minutes:0,ballInPlayMins:0,positiveActions:0,negativeActions:0,carry:0,carryMetres:0,postContactMetres:0,carryDominant:0,carryContact:0,tackleAttempts:0,tackleMade:0,tackleDominant:0,colours:{Gold:0,Green:0,Yellow:0,Red:0},reviewTotal:0,typeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},timeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},typeCounts:{},positiveActionTypes:{},negativeActionTypes:{},shirt:player.shirt||'',position:player.position||''};}
 function mergeStats(base,add){
   base.totalActions+=add.totalActions; base.appearances+=add.appearances||0; base.minutes+=add.minutes||0; base.ballInPlayMins+=add.ballInPlayMins||0; base.positiveActions+=add.positiveActions||0; base.negativeActions+=add.negativeActions||0;
   for(const k of ['carry','carryMetres','postContactMetres','carryDominant','carryContact','tackleAttempts','tackleMade','tackleDominant','reviewTotal']) base[k]+=add[k]||0;
-  for(const c of ['Gold','Green','Yellow','Red']){ base.colours[c]+=add.colours[c]||0; for(const [t,n] of Object.entries(add.typeByColour[c]||{})) base.typeByColour[c][t]=(base.typeByColour[c][t]||0)+n; }
+  for(const c of ['Gold','Green','Yellow','Red']){
+    base.colours[c]+=add.colours?.[c]||0;
+    base.typeByColour[c]=base.typeByColour[c]||{};
+    base.timeByColour[c]=base.timeByColour[c]||{};
+    for(const [t,n] of Object.entries(add.typeByColour?.[c]||{})) base.typeByColour[c][t]=(base.typeByColour[c][t]||0)+n;
+    for(const [band,n] of Object.entries(add.timeByColour?.[c]||{})) base.timeByColour[c][band]=(base.timeByColour[c][band]||0)+n;
+  }
   for(const [t,n] of Object.entries(add.typeCounts||{})) base.typeCounts[t]=(base.typeCounts[t]||0)+n;
   for(const [t,n] of Object.entries(add.positiveActionTypes||{})) base.positiveActionTypes[t]=(base.positiveActionTypes[t]||0)+n;
   for(const [t,n] of Object.entries(add.negativeActionTypes||{})) base.negativeActionTypes[t]=(base.negativeActionTypes[t]||0)+n;
@@ -520,6 +520,10 @@ function revivePrecomputedMatch(payload){
     const st=rawStats||{};
     const p=state.players.get(key)||st.player||{key,name:st.player?.name||'',team:st.player?.team||'',show:isTargetTeam(st.player?.team||'')};
     st.player=p;
+    st.colours=st.colours||{Gold:0,Green:0,Yellow:0,Red:0};
+    st.typeByColour=st.typeByColour||{Gold:{},Green:{},Yellow:{},Red:{}};
+    st.timeByColour=st.timeByColour||{Gold:{},Green:{},Yellow:{},Red:{}};
+    for(const c of ['Gold','Green','Yellow','Red']){ st.typeByColour[c]=st.typeByColour[c]||{}; st.timeByColour[c]=st.timeByColour[c]||{}; }
     match.playerStats.set(key,st);
     if(!state.players.has(key)) state.players.set(key,p);
   }
@@ -933,7 +937,8 @@ function renderDashboard(){ const ctx=currentContext(); if(!ctx||!ctx.raw) retur
 }
 function renderBreakdowns(st){
   const colours=['Gold','Green','Yellow','Red']; const cls={Gold:'gold',Green:'green',Yellow:'yellow',Red:'redcard'};
-  $('typeBreakdown').innerHTML=colours.map(c=>{ const entries=Object.entries(st.typeByColour[c]||{}).sort((a,b)=>b[1]-a[1]); const max=Math.max(1,...entries.map(x=>x[1])); const rows=entries.length?entries.map(([name,count])=>{ const w=Math.round(count/max*100); return `<div class="barRow"><div>${escapeHtml(name)}</div><div class="barTrack"><div class="barFill ${cls[c]}" data-target-width="${w}%" style="width:${w}%"></div></div><div>${count}</div></div>`; }).join(''):'<div class="helper">No Data</div>'; return `<div class="colourBlock"><div class="colourHead"><span>${c}</span><span class="pill">${intFmt(st.colours[c])}</span></div>${rows}</div>`; }).join('');
+  // Page-bottom Effort Type Breakdown has been removed. Detailed breakdowns now live inside the Effort Review analysis modal.
+  if($('typeBreakdown')) $('typeBreakdown').innerHTML=colours.map(c=>{ const entries=Object.entries(st.typeByColour[c]||{}).sort((a,b)=>b[1]-a[1]); const max=Math.max(1,...entries.map(x=>x[1])); const rows=entries.length?entries.map(([name,count])=>{ const w=Math.round(count/max*100); return `<div class="barRow"><div>${escapeHtml(name)}</div><div class="barTrack"><div class="barFill ${cls[c]}" data-target-width="${w}%" style="width:${w}%"></div></div><div>${count}</div></div>`; }).join(''):'<div class="helper">No Data</div>'; return `<div class="colourBlock"><div class="colourHead"><span>${c}</span><span class="pill">${intFmt(st.colours[c])}</span></div>${rows}</div>`; }).join('');
   const redEntries=Object.entries(st.typeByColour.Red||{}).sort((a,b)=>b[1]-a[1]).slice(0,5);
   $('summaryBreakdown').innerHTML=redEntries.length?`<div class="helper" style="margin-bottom:8px">Most common Red effort situations.</div>${redEntries.map(([name,count])=>`<div class="needItem"><span class="needName">${escapeHtml(name)}</span><span class="needCount">${intFmt(count)} Red</span></div>`).join('')}`:'<div class="helper">No Red effort situations found.</div>';
 }
