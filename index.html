@@ -214,7 +214,7 @@ details.admin{margin-top:18px;background:#fff;border:1px solid var(--line);borde
 </main>
 <script>
 const CONFIG = { manifestUrl:'data/matches.json', targetTeams:['Japan','Japan XV'] };
-const state = { matches:[], players:new Map(), selectedPlayer:'', selectedId:'', scope:'match', metric:'total' };
+const state = { matches:[], players:new Map(), selectedPlayer:'', selectedId:'', scope:'match', metric:'total', mode:'live', matchById:new Map(), matchIndex:new Map(), playerMatchIds:new Map(), playerSummaries:new Map() };
 const $ = id => document.getElementById(id);
 const statusEl=$('status'), playerSelect=$('playerSelect'), matchCards=$('matchCards'), dashboard=$('dashboard');
 function setStatus(text, kind='warn'){ const cls=kind==='ok'?'ok':kind==='err'?'err':''; statusEl.innerHTML=`<span class="dot ${cls}"></span><span>${escapeHtml(text)}</span>`; }
@@ -424,6 +424,68 @@ async function fetchTextOptional(url,bust=true,label='data file'){
   catch(err){ console.warn(`No Data: ${label}`,err); return {text:'',ok:false,error:err.message}; }
 }
 async function loadFromManifest(force=false){ const params=new URLSearchParams(location.search); const manifestUrl=params.get('manifest')||CONFIG.manifestUrl; setStatus('Loading match list...'); const manifestText=await fetchText(manifestUrl,force); const manifest=JSON.parse(manifestText); const matches=[]; let idx=0; const missing=[]; for(const item of manifest){ idx++; setStatus(`Loading match data ${idx}/${manifest.length}...`); const biUrl=item.biCsv?resolveCsvUrl(item.biCsv,manifestUrl):''; const reviewUrl=item.reviewCsv?resolveCsvUrl(item.reviewCsv,manifestUrl):''; const xmlUrl=item.superscoutXml?resolveCsvUrl(item.superscoutXml,manifestUrl):''; const [biRes,reviewRes,xmlRes]=await Promise.all([fetchTextOptional(biUrl,force,`${item.id||idx} BI CSV`),fetchTextOptional(reviewUrl,force,`${item.id||idx} Effort CSV`),fetchTextOptional(xmlUrl,force,`${item.id||idx} SuperScout XML`)]); if(!biRes.ok) missing.push(`${item.id||idx}: BI CSV`); if(!reviewRes.ok) missing.push(`${item.id||idx}: Effort CSV`); matches.push(buildMatch(item,parseCSV(biRes.text),parseCSV(reviewRes.text),xmlRes.text)); } state.matches=matches; hydrateUI(); const loadedPlayers=[...state.players.values()].filter(p=>p.show).length; const note=missing.length?` · No Data for ${missing.length} source(s)`:''; setStatus(`${matches.length} matches / ${loadedPlayers} Japan players loaded${note}`, loadedPlayers?'ok':'err'); }
+
+function statJsonUrl(matchId){ return new URL(`data/stats/${encodeURIComponent(matchId)}.json`, location.href).toString(); }
+function revivePrecomputedMatch(payload){
+  const info=payload.match||{};
+  const match={...info, playerStats:new Map()};
+  for(const [key,rawStats] of Object.entries(payload.playerStats||{})){
+    const st=rawStats||{};
+    const p=state.players.get(key)||st.player||{key,name:st.player?.name||'',team:st.player?.team||'',show:isTargetTeam(st.player?.team||'')};
+    st.player=p;
+    match.playerStats.set(key,st);
+    if(!state.players.has(key)) state.players.set(key,p);
+  }
+  return match;
+}
+async function loadPrecomputedIndex(force=false){
+  const indexUrl = new URL('data/player_index.json', location.href).toString();
+  setStatus('Loading player index...');
+  const txt=await fetchText(indexUrl,force);
+  const index=JSON.parse(txt);
+  state.mode='precomputed';
+  state.matches=[];
+  state.matchById=new Map();
+  state.matchIndex=new Map();
+  state.playerMatchIds=new Map();
+  state.playerSummaries=new Map();
+  state.players=new Map();
+  for(const m of index.matches||[]) state.matchIndex.set(String(m.id),m);
+  for(const p of index.players||[]){
+    state.players.set(p.key,{key:p.key,name:p.name,team:p.team,shirt:p.shirt||'',position:p.position||'',show:true,matches:p.matches||[]});
+    state.playerMatchIds.set(p.key,p.matches||[]);
+    state.playerSummaries.set(p.key,p.matchSummaries||{});
+  }
+  hydrateUI();
+  const matchCount=(index.matches||[]).length;
+  const playerCount=(index.players||[]).length;
+  setStatus(`${matchCount} matches / ${playerCount} Japan players indexed`, 'ok');
+}
+async function loadPlayerMatches(key,force=false){
+  if(state.mode!=='precomputed'||!key) return;
+  const ids=state.playerMatchIds.get(key)||[];
+  if(!ids.length) return;
+  const missing=[];
+  const toLoad=ids.filter(id=>!state.matchById.has(id));
+  if(toLoad.length) setStatus(`Loading selected player data ${toLoad.length} match file(s)...`);
+  await Promise.all(toLoad.map(async id=>{
+    try{
+      const txt=await fetchText(statJsonUrl(id),force);
+      const m=revivePrecomputedMatch(JSON.parse(txt));
+      state.matchById.set(m.id,m);
+    }catch(err){ console.warn(`No Data: stats/${id}.json`,err); missing.push(id); }
+  }));
+  state.matches=[...state.matchById.values()].sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
+  const note=missing.length?` · No Data for ${missing.length} match file(s)`:'';
+  setStatus(`${ids.length-missing.length}/${ids.length} selected-player match file(s) loaded${note}`, missing.length?'warn':'ok');
+}
+async function loadInitialData(){
+  const params=new URLSearchParams(location.search);
+  if(params.get('manifest')) return loadFromManifest(true);
+  try{ await loadPrecomputedIndex(true); }
+  catch(err){ console.warn('Precomputed data not available; falling back to CSV/XML live loading.', err); await loadFromManifest(true); }
+}
+
 function hydrateUI(){ const players=[...state.players.values()].filter(p=>p.show).sort((a,b)=>(a.team.localeCompare(b.team)||a.name.localeCompare(b.name))); const byTeam=new Map(); for(const p of players){ if(!byTeam.has(p.team)) byTeam.set(p.team,[]); byTeam.get(p.team).push(p); } playerSelect.disabled=false; playerSelect.innerHTML='<option value="">Select player</option>'; for(const [team,list] of byTeam){ const group=document.createElement('optgroup'); group.label=team; for(const p of list){ const opt=document.createElement('option'); opt.value=p.key; opt.textContent=p.name; group.appendChild(opt); } playerSelect.appendChild(group); } }
 function matchesForPlayer(key){return state.matches.filter(m=>m.playerStats.has(key));}
 function seasonsForPlayer(key){return [...new Set(matchesForPlayer(key).map(m=>m.season||'Unknown'))].sort().reverse();}
@@ -600,12 +662,12 @@ function renderComparison(ctx){ const sec=$('comparisonSection'), cont=$('compar
   matchupCell('Effort Gold',raw.colours.Gold,opp.colours.Gold,intFmt,true),
   matchupCell('Effort Red',raw.colours.Red,opp.colours.Red,intFmt,false)
 ].join(''); cont.innerHTML=`<div class="matchupShell"><div class="matchupTop"><div class="matchupPlayer"><div class="matchupName">${escapeHtml(raw.player.name||'Unknown')}</div><div class="matchupTeam">Japan · #${escapeHtml(raw.shirt||raw.player.shirt||'')}</div></div><div class="matchupVs">VS</div><div class="matchupPlayer right"><div class="matchupName">${escapeHtml(opp.player.name||'Unknown')}</div><div class="matchupTeam">${escapeHtml(opp.player.team)} · #${escapeHtml(opp.shirt||opp.player.shirt||'')}</div></div></div><div class="matchupTable"><div class="matchupLegend"><div class="legendLeft">${escapeHtml(raw.player.name||'Japan player')}</div><div class="legendRight">${escapeHtml(opp.player.name||'Opponent')}</div></div>${rows}</div></div>`; }
-playerSelect.addEventListener('change',()=>{state.selectedPlayer=playerSelect.value;state.selectedId='';renderOptions();});
+playerSelect.addEventListener('change',async()=>{state.selectedPlayer=playerSelect.value;state.selectedId='';dashboard.style.display='none';matchCards.innerHTML='<div class="empty">Loading selected player data...</div>';try{await loadPlayerMatches(state.selectedPlayer,true);renderOptions();}catch(err){console.error(err);matchCards.innerHTML='<div class="empty">Selected player data could not be loaded.</div>';setStatus(err.message,'err');}});
 $('scopeButtons').addEventListener('click',e=>{const btn=e.target.closest('button[data-scope]');if(!btn)return;state.scope=btn.dataset.scope;state.selectedId='';document.querySelectorAll('#scopeButtons button').forEach(b=>b.classList.toggle('active',b===btn));renderOptions();});
 $('metricButtons').addEventListener('click',e=>{const btn=e.target.closest('button[data-metric]');if(!btn)return;state.metric=btn.dataset.metric;document.querySelectorAll('#metricButtons button').forEach(b=>b.classList.toggle('active',b===btn));renderDashboard();});
 async function fileText(input,required=true){const file=input.files&&input.files[0]; if(!file){ if(required) throw new Error('Please select at least one data file.'); return ''; } return await file.text();}
-$('localLoad').addEventListener('click',async()=>{try{state.matches=[];state.players=new Map();state.selectedPlayer='';state.selectedId='';playerSelect.value='';setStatus('Loading local data...');const [biText,reviewText,xmlText]=await Promise.all([fileText($('localBi'),false),fileText($('localReview'),false),fileText($('localXml'),false)]);if(!biText&&!reviewText&&!xmlText) throw new Error('Please select at least one data file.');const match=buildMatch({id:'local',label:'Local Preview'},parseCSV(biText),parseCSV(reviewText),xmlText);state.matches=[match];hydrateUI();renderOptions();setStatus(`Local data loaded: ${[...state.players.values()].filter(p=>p.show).length} Japan players`, 'ok');}catch(err){setStatus(err.message,'err');}});
-loadFromManifest(true).catch(err=>{console.error(err);playerSelect.disabled=true;playerSelect.innerHTML='<option>Loading error</option>';matchCards.innerHTML='<div class="empty">Online data could not be loaded. Please check GitHub Pages and data/matches.json. Admin local data preview is still available below.</div>';setStatus(err.message,'err');});
+$('localLoad').addEventListener('click',async()=>{try{state.mode='live';state.matches=[];state.matchById=new Map();state.players=new Map();state.selectedPlayer='';state.selectedId='';playerSelect.value='';setStatus('Loading local data...');const [biText,reviewText,xmlText]=await Promise.all([fileText($('localBi'),false),fileText($('localReview'),false),fileText($('localXml'),false)]);if(!biText&&!reviewText&&!xmlText) throw new Error('Please select at least one data file.');const match=buildMatch({id:'local',label:'Local Preview'},parseCSV(biText),parseCSV(reviewText),xmlText);state.matches=[match];hydrateUI();renderOptions();setStatus(`Local data loaded: ${[...state.players.values()].filter(p=>p.show).length} Japan players`, 'ok');}catch(err){setStatus(err.message,'err');}});
+loadInitialData().catch(err=>{console.error(err);playerSelect.disabled=true;playerSelect.innerHTML='<option>Loading error</option>';matchCards.innerHTML='<div class="empty">Online data could not be loaded. Please check GitHub Pages and generated data files. Admin local data preview is still available below.</div>';setStatus(err.message,'err');});
 </script>
 </body>
 </html>
