@@ -73,9 +73,25 @@ select:focus,.playerSearch:focus{border-color:#7ba7e8;box-shadow:0 0 0 4px rgba(
 .playerHero{display:grid;grid-template-columns:1.35fr .65fr;gap:16px;margin-bottom:16px}.heroCard{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
 .heroCard:before{content:"";position:absolute;inset:auto -60px -90px auto;width:180px;height:180px;border-radius:50%;background:rgba(215,25,32,.08)}
 .playerName{font-size:clamp(30px,4vw,48px);font-weight:1000;letter-spacing:-.055em;margin:0 0 10px}.heroMeta{display:flex;gap:8px;flex-wrap:wrap;color:var(--muted);font-size:13px}.badge{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:7px 10px;background:#fff;font-weight:850;color:#344054}.badge.red{background:#fff1f1;border-color:#ffd0d2;color:#aa151b}.scoreLine{font-size:24px;font-weight:1000;letter-spacing:-.035em;margin-bottom:6px}.venue{color:var(--muted);font-size:13px;line-height:1.5}
-.section{margin-top:16px}.sectionTitle{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 10px}.sectionTitle h3{font-size:18px;margin:0;letter-spacing:-.02em}.sectionTitle span{font-size:12px;color:var(--muted);font-weight:700}.statGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.statCard{background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px;box-shadow:0 10px 24px rgba(16,24,40,.07);min-height:128px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.statCard:after{content:"";position:absolute;top:-40px;right:-40px;width:110px;height:110px;border-radius:999px;background:#eef4ff;z-index:0;pointer-events:none}.statCard .label{position:relative;z-index:1;color:var(--muted);font-size:12px;font-weight:950;line-height:1.25;text-transform:uppercase;letter-spacing:.04em;overflow-wrap:anywhere;word-break:normal}.statCard .value{position:relative;z-index:1;font-size:38px;line-height:1;font-weight:1000;letter-spacing:-.05em;margin-top:14px}.statCard .sub{position:relative;z-index:1;color:var(--muted);font-size:12px;margin-top:8px;line-height:1.35}.statCard.gold{background:#fff7e0;border-color:#f2d28b}.statCard.green{background:#eaf8ef;border-color:#b7e1c1}.statCard.yellow{background:#fff9db;border-color:#f1dc81}.statCard.redcard{background:#fff0ef;border-color:#f4b5b1}.statCard.gold .value{color:var(--gold)}.statCard.green .value{color:var(--green)}.statCard.yellow .value{color:var(--yellow)}.statCard.redcard .value{color:var(--red)}
+.section{margin-top:16px}.sectionTitle{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 10px}.sectionTitle h3{font-size:18px;margin:0;letter-spacing:-.02em}.sectionTitle span{font-size:12px;color:var(--muted);font-weight:700}.statGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.statCard{background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px;box-shadow:0 10px 24px rgba(16,24,40,.07);min-height:128px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.statCard:after{content:"";position:absolute;top:-40px;right:-40px;width:110px;height:110px;border-radius:999px;background:#eef4ff;z-index:0;pointer-events:none}.statCard .label{position:relative;z-index:1;color:var(--muted);font-size:12px;font-weight:950;line-height:1.25;text-transform:uppercase;letter-spacing:.04em;overflow-wrap:anywhere;word-break:normal}.statCard .value{position:relative;z-index:1;font-size:38px;line-height:1;font-weight:1000;letter-spacing:-.05em;margin-top:14px}.statCard .sub{position:relative;z-index:1;color:var(--muted);font-size:12px;margin-top:8px;line-height:1.35}.statCard.gold{background:#fff7e0;border-color:#f2d28b}.statCard.green{background:#eaf8ef;border-color:#b7e1c1}.statCard.yellow{background:#fff9db;border-color:#f1dc81}.statCard.redcard{background:#fff0ef;border-color:#f4b5b1} .statCard.gold .value{color:var(--gold)}.statCard.green .value{color:var(--green)}.statCard.yellow .value{color:var(--yellow)}.statCard.redcard .value{color:var(--red)}
+.effortReviewTap{cursor:pointer;text-align:left;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;isolation:isolate}.effortReviewTap:hover{transform:translateY(-3px);box-shadow:0 18px 34px rgba(16,24,40,.13);border-color:#93add6}.effortReviewTap:active{transform:translateY(-1px) scale(.99)}.effortReviewTap:focus-visible{outline:3px solid rgba(215,25,32,.28);outline-offset:3px}.effortReviewTap .tapBadge{position:absolute;right:10px;top:10px;z-index:2;display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:5px 8px;background:rgba(16,24,40,.86);color:#fff;font-size:10px;font-weight:1000;letter-spacing:.04em;text-transform:uppercase;box-shadow:0 8px 18px rgba(16,24,40,.18)}.effortReviewTap .tapBadge:before{content:"↗";font-size:12px;line-height:1}.effortReviewTap .tapHint{display:inline-flex;align-items:center;gap:6px;color:#0b3a78;font-weight:1000}.effortReviewTap .tapHint:before{content:"👆";font-size:13px;filter:saturate(.8)}.effortReviewTap .tapRing{position:absolute;right:14px;bottom:14px;z-index:1;width:30px;height:30px;border-radius:999px;border:2px solid rgba(215,25,32,.35);opacity:.9;animation:tapPulse 1.8s ease-out infinite;pointer-events:none}.effortReviewTap.gold .tapRing{border-color:rgba(176,106,0,.35)}.effortReviewTap.green .tapRing{border-color:rgba(8,116,67,.35)}.effortReviewTap.yellow .tapRing{border-color:rgba(154,103,0,.35)}.effortReviewTap.redcard .tapRing{border-color:rgba(196,50,43,.38)}@keyframes tapPulse{0%{transform:scale(.7);opacity:.75}72%{transform:scale(1.38);opacity:0}100%{transform:scale(1.38);opacity:0}}
 .trendPanel{display:none;margin-top:12px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:16px;box-shadow:0 10px 24px rgba(16,24,40,.07)}.trendPanel.show{display:block}.trendHead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.trendTitle{font-size:13px;font-weight:1000;text-transform:uppercase;letter-spacing:.05em;color:#101828}.trendSub{font-size:12px;color:var(--muted);font-weight:850}.trendGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.trendChart{border:1px solid #edf1f7;border-radius:18px;background:linear-gradient(180deg,#fbfdff,#fff);padding:12px;opacity:0;transform:translateY(8px)}.trendChart.trend-gold{background:linear-gradient(180deg,rgba(218,165,32,.16),#fff);border-color:rgba(218,165,32,.30)}.trendChart.trend-green{background:linear-gradient(180deg,rgba(34,197,94,.14),#fff);border-color:rgba(34,197,94,.28)}.trendChart.trend-yellow{background:linear-gradient(180deg,rgba(250,204,21,.18),#fff);border-color:rgba(250,204,21,.32)}.trendChart.trend-red{background:linear-gradient(180deg,rgba(239,68,68,.13),#fff);border-color:rgba(239,68,68,.28)}.trendChart.trend-gold .trendLine{stroke:#d4a017}.trendChart.trend-green .trendLine{stroke:#16a34a}.trendChart.trend-yellow .trendLine{stroke:#eab308}.trendChart.trend-red .trendLine{stroke:#dc2626}.trendChart.trend-gold .trendArea{fill:rgba(218,165,32,.16)}.trendChart.trend-green .trendArea{fill:rgba(34,197,94,.14)}.trendChart.trend-yellow .trendArea{fill:rgba(250,204,21,.18)}.trendChart.trend-red .trendArea{fill:rgba(239,68,68,.13)}.trendChart.trend-gold .trendPoint{stroke:#d4a017}.trendChart.trend-green .trendPoint{stroke:#16a34a}.trendChart.trend-yellow .trendPoint{stroke:#eab308}.trendChart.trend-red .trendPoint{stroke:#dc2626}.trendChart.trend-gold .trendChartLast{color:#8a5f00;background:rgba(218,165,32,.16)}.trendChart.trend-green .trendChartLast{color:#166534;background:rgba(34,197,94,.14)}.trendChart.trend-yellow .trendChartLast{color:#854d0e;background:rgba(250,204,21,.20)}.trendChart.trend-red .trendChartLast{color:#991b1b;background:rgba(239,68,68,.13)}.trendChart.is-visible{animation:statPop .42s cubic-bezier(.2,.8,.2,1) both}.trendChartTop{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}.trendChartName{font-size:12px;font-weight:1000;color:#344054;text-transform:uppercase;letter-spacing:.04em}.trendChartLast{font-size:12px;font-weight:950;color:var(--blue);background:#eef4ff;border-radius:999px;padding:4px 8px}.trendSvg{width:100%;height:128px;display:block;overflow:visible}.trendAxis{stroke:#e7edf6;stroke-width:1}.trendArea{fill:rgba(11,58,120,.08);opacity:.8}.trendLine{fill:none;stroke:var(--blue);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:900;stroke-dashoffset:900;transition:stroke-dashoffset 1s cubic-bezier(.2,.8,.2,1)}.trendChart.is-visible .trendLine{stroke-dashoffset:0}.trendPoint{fill:#fff;stroke:var(--accent);stroke-width:3;filter:drop-shadow(0 3px 5px rgba(16,24,40,.18));opacity:0;transform-box:fill-box;transform-origin:center}.trendChart.is-visible .trendPoint{animation:checkPop .36s cubic-bezier(.2,.8,.2,1) both}.trendNoData{color:var(--muted);font-size:13px;line-height:1.5;padding:8px 0}.trendFooter{display:flex;justify-content:space-between;gap:8px;margin-top:6px;color:var(--muted);font-size:11px;font-weight:800}.trendTooltip{position:fixed;z-index:9999;pointer-events:none;opacity:0;transform:translate(-50%,-10px) scale(.98);background:#111827;color:#fff;border:1px solid rgba(255,255,255,.16);box-shadow:0 16px 36px rgba(16,24,40,.24);border-radius:14px;padding:9px 11px;min-width:132px;transition:opacity .12s ease,transform .12s ease}.trendTooltip.show{opacity:1;transform:translate(-50%,-16px) scale(1)}.tooltipMatch{font-size:11px;font-weight:900;color:#cbd5e1;margin-bottom:3px;white-space:nowrap}.tooltipValue{font-size:13px;font-weight:1000;color:#fff;white-space:nowrap}.trendHit{fill:transparent;stroke:transparent;pointer-events:all;cursor:pointer}.trendPoint.active{fill:var(--accent);stroke:#fff;stroke-width:3}
 .effortShareCard{margin-top:12px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:16px;box-shadow:0 10px 24px rgba(16,24,40,.07)}.effortShareHead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.effortShareTitle{font-size:13px;font-weight:1000;text-transform:uppercase;letter-spacing:.05em;color:#101828}.effortShareTotal{font-size:12px;color:var(--muted);font-weight:900}.effortStack{height:28px;border-radius:999px;overflow:hidden;background:#eef2f7;display:flex;box-shadow:inset 0 0 0 1px rgba(16,24,40,.04)}.effortShareSegment{height:100%;width:0;min-width:0;transition:width .85s cubic-bezier(.2,.8,.2,1);position:relative}.effortShareSegment.gold{background:linear-gradient(90deg,#f6c65b,#d89a21)}.effortShareSegment.green{background:linear-gradient(90deg,#6ee7a8,#21a668)}.effortShareSegment.yellow{background:linear-gradient(90deg,#fde68a,#e5bd24)}.effortShareSegment.redcard{background:linear-gradient(90deg,#ff9a9f,#db4a42)}.effortShareSegment.postContact{background:linear-gradient(90deg,#5eead4,#0f766e)}.effortShareSegment.spark{background:linear-gradient(90deg,#93c5fd,#1d4ed8)}.effortShareSegment.setPiece{background:linear-gradient(90deg,#c4b5fd,#7c3aed)}.effortShareSegment.phaseDefence{background:linear-gradient(90deg,#fca5a5,#b91c1c)}.effortShareSegment.linebreak{background:linear-gradient(90deg,#fcd34d,#b45309)}.effortShareLegend{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:12px}.effortLegendItem{border:1px solid #edf1f7;border-radius:16px;padding:10px;background:#fbfcff;position:relative;overflow:hidden}.effortLegendItem:before{content:'';position:absolute;inset:0 0 auto 0;height:4px;background:#e5e7eb}.effortLegendItem.gold{background:linear-gradient(180deg,#fff8e6,#fff);border-color:#f3d58a}.effortLegendItem.green{background:linear-gradient(180deg,#ecfdf3,#fff);border-color:#9ee6bd}.effortLegendItem.yellow{background:linear-gradient(180deg,#fffbe6,#fff);border-color:#f5df73}.effortLegendItem.redcard{background:linear-gradient(180deg,#fff1f2,#fff);border-color:#f5a3a8}.effortLegendItem.postContact{background:linear-gradient(180deg,#ecfdfa,#fff);border-color:#99f6e4}.effortLegendItem.spark{background:linear-gradient(180deg,#eff6ff,#fff);border-color:#bfdbfe}.effortLegendItem.setPiece{background:linear-gradient(180deg,#f5f3ff,#fff);border-color:#ddd6fe}.effortLegendItem.phaseDefence{background:linear-gradient(180deg,#fff1f2,#fff);border-color:#fecaca}.effortLegendItem.linebreak{background:linear-gradient(180deg,#fffbeb,#fff);border-color:#fde68a}.effortLegendItem.gold:before{background:#d89a21}.effortLegendItem.green:before{background:#21a668}.effortLegendItem.yellow:before{background:#e5bd24}.effortLegendItem.redcard:before{background:#db4a42}.effortLegendItem.postContact:before{background:#0f766e}.effortLegendItem.spark:before{background:#1d4ed8}.effortLegendItem.setPiece:before{background:#7c3aed}.effortLegendItem.phaseDefence:before{background:#b91c1c}.effortLegendItem.linebreak:before{background:#b45309}.effortLegendTop{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:1000}.effortDot{width:10px;height:10px;border-radius:999px;display:inline-block}.effortDot.gold{background:#d89a21}.effortDot.green{background:#21a668}.effortDot.yellow{background:#e5bd24}.effortDot.redcard{background:#db4a42}.effortDot.postContact{background:#0f766e}.effortDot.spark{background:#1d4ed8}.effortDot.setPiece{background:#7c3aed}.effortDot.phaseDefence{background:#b91c1c}.effortDot.linebreak{background:#b45309}.effortAnalysisBlock{margin-top:18px;padding-top:16px;border-top:1px solid #edf1f7}.effortAnalysisGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}.effortAnalysisCard{border:1px solid #edf1f7;border-radius:20px;padding:14px;background:#fbfcff;position:relative;overflow:hidden}.effortAnalysisCard:before{content:'';position:absolute;inset:0 0 auto 0;height:5px;background:#e5e7eb}.effortAnalysisCard.gold{background:linear-gradient(180deg,#fff8e6,#fff);border-color:#f3d58a}.effortAnalysisCard.green{background:linear-gradient(180deg,#ecfdf3,#fff);border-color:#9ee6bd}.effortAnalysisCard.yellow{background:linear-gradient(180deg,#fffbe6,#fff);border-color:#f5df73}.effortAnalysisCard.redcard{background:linear-gradient(180deg,#fff1f2,#fff);border-color:#f5a3a8}.effortAnalysisCard.gold:before{background:#d89a21}.effortAnalysisCard.green:before{background:#21a668}.effortAnalysisCard.yellow:before{background:#e5bd24}.effortAnalysisCard.redcard:before{background:#db4a42}.effortAnalysisCardHead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;font-size:12px;font-weight:1000;text-transform:uppercase;letter-spacing:.04em}.effortAnalysisLegend{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+
+.effortLegendItem.effortClickable{cursor:pointer;transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;}
+.effortLegendItem.effortClickable:hover,.effortLegendItem.effortClickable:focus-visible{transform:translateY(-2px);box-shadow:0 14px 30px rgba(16,24,40,.12);outline:none;}
+.effortLegendHint{font-size:11px;color:var(--muted);font-weight:850;margin-top:6px;}
+.effortModal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(7,16,31,.54);backdrop-filter:blur(10px);}
+.effortModal.open{display:flex;}
+.effortModalPanel{width:min(720px,calc(100vw - 28px));max-height:min(82vh,760px);overflow:auto;background:linear-gradient(180deg,#fff,#f8fbff);border:1px solid rgba(255,255,255,.55);border-radius:28px;box-shadow:0 30px 90px rgba(7,16,31,.38);padding:18px;animation:modalRise .22s ease both;}
+.effortModalHead{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px;}
+.effortModalTitle{font-size:20px;font-weight:1000;letter-spacing:-.03em;color:#101828;}
+.effortModalSub{font-size:12px;color:var(--muted);font-weight:850;margin-top:3px;}
+.effortModalClose{width:40px;height:40px;border:0;border-radius:999px;background:#f2f4f7;color:#101828;font-size:22px;font-weight:900;cursor:pointer;}
+.effortModalClose:hover{background:#e4e7ec;}
+.effortModalBody .effortAnalysisCard{box-shadow:none;}
+@keyframes modalRise{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
+@media(max-width:540px){.effortModal{align-items:flex-end;padding:10px}.effortModalPanel{width:100%;max-height:84vh;border-radius:24px 24px 18px 18px;padding:15px}.effortModalTitle{font-size:18px}}
 .header:before,.header:after{content:"";position:absolute;pointer-events:none;border-radius:999px;filter:blur(.1px);opacity:.78}
 .header:before{width:220px;height:220px;right:24px;top:18px;background:radial-gradient(circle at 50% 26%,rgba(255,221,228,.55) 0 8%,transparent 9%),radial-gradient(circle at 26% 50%,rgba(255,221,228,.45) 0 8%,transparent 9%),radial-gradient(circle at 74% 50%,rgba(255,221,228,.45) 0 8%,transparent 9%),radial-gradient(circle at 40% 74%,rgba(255,221,228,.40) 0 8%,transparent 9%),radial-gradient(circle at 62% 74%,rgba(255,221,228,.40) 0 8%,transparent 9%);transform:rotate(-18deg)}
 .header:after{width:120px;height:120px;left:56%;top:70px;background:radial-gradient(circle at 50% 20%,rgba(255,185,199,.22) 0 9%,transparent 10%),radial-gradient(circle at 22% 52%,rgba(255,185,199,.20) 0 9%,transparent 10%),radial-gradient(circle at 78% 52%,rgba(255,185,199,.20) 0 9%,transparent 10%);transform:rotate(22deg)}
@@ -91,7 +107,8 @@ select:focus,.playerSearch:focus{border-color:#7ba7e8;box-shadow:0 0 0 4px rgba(
 .compareGrid{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:stretch}.compareCard{background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px;box-shadow:0 10px 24px rgba(16,24,40,.07)}.compareName{font-size:18px;font-weight:1000;letter-spacing:-.025em}.compareTeam{font-size:12px;color:var(--muted);font-weight:850;margin-top:2px}.vs{display:grid;place-items:center;font-weight:1000;color:#98a2b3}.miniStats{margin-top:12px;display:grid;gap:8px}.miniRow{display:flex;justify-content:space-between;gap:10px;border-top:1px solid #edf1f7;padding-top:8px;font-size:13px}.miniRow b{font-size:14px}.formula{margin-top:18px;color:var(--muted);font-size:12px;line-height:1.55;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px}
 details.admin{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px 14px;color:var(--muted)}details.admin summary{cursor:pointer;font-weight:850;color:#334155}.adminGrid{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;align-items:end;margin-top:12px}.adminGrid label{font-size:12px;font-weight:850}.adminGrid input{width:100%;border:1px solid var(--line);border-radius:12px;padding:9px;background:#fff}.adminGrid button{border:0;border-radius:12px;background:var(--blue);color:#fff;padding:11px 14px;font-weight:950;cursor:pointer}
 
-.samuraiCard{background:linear-gradient(135deg,#07101f,#0b3a78);color:#fff;border-color:rgba(255,255,255,.18)}.samuraiCard:after{background:rgba(255,255,255,.10)}.samuraiCard .label,.samuraiCard .sub{color:#dbe8ff}.samuraiCard .value{color:#fff}.samuraiDetail{margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.samuraiDetailCard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:14px;box-shadow:0 10px 24px rgba(16,24,40,.07)}.samuraiDetailCard.positive{border-color:#abefc6;background:linear-gradient(180deg,#f6fef9,#fff)}.samuraiDetailCard.negative{border-color:#f6c7c3;background:linear-gradient(180deg,#fff8f7,#fff)}.samuraiDetailHead{display:flex;justify-content:space-between;align-items:center;gap:8px;font-weight:1000;margin-bottom:10px}.samuraiDetailTitle{font-size:13px;text-transform:uppercase;letter-spacing:.04em}.samuraiDetailList{display:flex;flex-direction:column;gap:7px}.samuraiDetailRow{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border-top:1px solid #edf1f7;padding-top:7px;font-size:13px}.samuraiDetailRow:first-child{border-top:0;padding-top:0}.samuraiDetailName{font-weight:850;color:#344054}.samuraiDetailCount{font-weight:1000;border-radius:999px;padding:3px 8px;background:#f2f4f7}.samuraiDetailCard.positive .samuraiDetailCount{background:#ecfdf3;color:#067647}.samuraiDetailCard.negative .samuraiDetailCount{background:#fff0ef;color:#d71920}.compactStats .statCard{min-height:104px}.compactStats .statCard .value{font-size:34px}.matchupShell{background:#fff;border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);overflow:hidden}.matchupTop{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;background:linear-gradient(90deg,#f8fbff,#fff,#fff7f7)}.matchupPlayer{padding:18px}.matchupPlayer.right{text-align:right}.matchupName{font-size:22px;font-weight:1000;letter-spacing:-.04em}.matchupTeam{font-size:12px;color:var(--muted);font-weight:900;margin-top:4px}.matchupVs{display:grid;place-items:center;padding:0 18px;font-weight:1000;color:#98a2b3}.matchupTable{padding:12px 16px 18px}.matchupLegend{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:4px 0 12px;font-size:12px;font-weight:950;color:var(--muted)}.legendLeft{text-align:left}.legendRight{text-align:right}.matchupChartRow{border-top:1px solid #edf1f7;padding:13px 0}.chartHeader{display:grid;grid-template-columns:90px 1fr 90px;gap:10px;align-items:center;margin-bottom:8px}.chartVal{font-size:18px;font-weight:1000}.chartVal.right{text-align:right}.chartMetric{text-align:center;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:950}.chartBars{display:grid;grid-template-columns:1fr 1fr;gap:6px;align-items:center}.barHalf{height:16px;background:#eef2f7;border-radius:999px;overflow:hidden;position:relative}.barHalf.left .barGraph{margin-left:auto;background:linear-gradient(90deg,#86b7ff,#0b3a78)}.barHalf.right .barGraph{background:linear-gradient(90deg,#d71920,#ff9a9f)}.barGraph{height:100%;border-radius:999px;min-width:4px}.chartDelta{text-align:center;margin-top:8px;display:flex;justify-content:center;gap:6px;flex-wrap:wrap}.deltaPill,.winnerPill{display:inline-flex;align-items:center;border-radius:999px;background:#f2f4f7;color:#475467;font-size:12px;font-weight:950;padding:5px 9px}.winnerPill{background:#ecfdf3;color:#067647;border:1px solid #abefc6}.winnerPill.tie{background:#f2f4f7;color:#475467;border-color:#e4e7ec}.chartMetric .metricWinner{display:block;margin-top:3px;font-size:10px;color:#067647;font-weight:1000;letter-spacing:.02em}.win{color:var(--green)}.lose{color:var(--red)}.winnerCheck{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;margin:0 6px;border-radius:999px;background:#12b76a;color:#fff;font-size:14px;font-weight:1000;box-shadow:0 6px 14px rgba(18,183,106,.22)}.chartVal.right .winnerCheck{margin-left:6px;margin-right:0}.chartVal:not(.right) .winnerCheck{margin-left:0;margin-right:6px}.needImprove{background:linear-gradient(180deg,#fff8f7,#fff);border-color:#f6c7c3}.effortNeed{margin-top:12px}.needItem{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #f3d6d3;padding:10px 0}.needItem:first-child{border-top:0}.needName{font-weight:950}.needCount{background:#fff0ef;color:var(--red);border:1px solid #f4b5b1;border-radius:999px;padding:4px 9px;font-weight:1000;font-size:12px}
+.statCard.effortReviewTap{border:1px solid var(--line);text-align:left;width:100%;cursor:pointer}.statCard.effortReviewTap:hover,.statCard.effortReviewTap:focus-visible{transform:translateY(-2px);outline:none;box-shadow:0 18px 40px rgba(16,24,40,.14)}
+.samuraiCard{background:linear-gradient(135deg,#07101f,#0b3a78);color:#fff;border-color:rgba(255,255,255,.18)}.samuraiCard:after{background:rgba(255,255,255,.10)}.samuraiCard .label,.samuraiCard .sub{color:#dbe8ff}.samuraiCard .value{color:#fff}.samuraiDetail{margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.samuraiDetailCard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:14px;box-shadow:0 10px 24px rgba(16,24,40,.07)}.samuraiDetailCard.positive{border-color:#abefc6;background:linear-gradient(180deg,#f6fef9,#fff)}.samuraiDetailCard.negative{border-color:#f6c7c3;background:linear-gradient(180deg,#fff8f7,#fff)}.samuraiDetailHead{display:flex;justify-content:space-between;align-items:center;gap:8px;font-weight:1000;margin-bottom:10px}.samuraiDetailTitle{font-size:13px;text-transform:uppercase;letter-spacing:.04em}.samuraiDetailList{display:flex;flex-direction:column;gap:7px}.samuraiDetailRow{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border-top:1px solid #edf1f7;padding-top:7px;font-size:13px}.samuraiDetailRow:first-child{border-top:0;padding-top:0}.samuraiDetailName{font-weight:850;color:#344054}.samuraiDetailCount{font-weight:1000;border-radius:999px;padding:3px 8px;background:#f2f4f7}.samuraiDetailCard.positive .samuraiDetailCount{background:#ecfdf3;color:#067647}.samuraiDetailCard.negative .samuraiDetailCount{background:#fff0ef;color:#d71920}.compactStats .statCard{min-height:104px}.compactStats .statCard .value{font-size:34px}.matchupShell{background:#fff;border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);overflow:hidden}.matchupTop{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;background:linear-gradient(90deg,#f8fbff,#fff,#fff7f7)}.matchupPlayer{padding:18px}.matchupPlayer.right{text-align:right}.matchupName{font-size:22px;font-weight:1000;letter-spacing:-.04em}.matchupTeam{font-size:12px;color:var(--muted);font-weight:900;margin-top:4px}.matchupVs{display:grid;place-items:center;padding:0 18px;font-weight:1000;color:#98a2b3}.matchupTable{padding:12px 16px 18px}.matchupLegend{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:4px 0 12px;font-size:12px;font-weight:950;color:var(--muted)}.legendLeft{text-align:left}.legendRight{text-align:right}.matchupChartRow{border-top:1px solid #edf1f7;padding:13px 0}.chartHeader{display:grid;grid-template-columns:90px 1fr 90px;gap:10px;align-items:center;margin-bottom:8px}.chartVal{font-size:18px;font-weight:1000}.chartVal.right{text-align:right}.chartMetric{text-align:center;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:950}.chartBars{display:grid;grid-template-columns:1fr 1fr;gap:6px;align-items:center}.barHalf{height:16px;background:#eef2f7;border-radius:999px;overflow:hidden;position:relative}.barHalf.left .barGraph{margin-left:auto;background:linear-gradient(90deg,#ff9a9f,#d71920)}.barHalf.right .barGraph{background:linear-gradient(90deg,#111827,#000000)}.barGraph{height:100%;border-radius:999px;min-width:4px}.barGraph.zeroBar{min-width:0}.chartDelta{text-align:center;margin-top:8px;display:flex;justify-content:center;gap:6px;flex-wrap:wrap}.deltaPill,.winnerPill{display:inline-flex;align-items:center;border-radius:999px;background:#f2f4f7;color:#475467;font-size:12px;font-weight:950;padding:5px 9px}.winnerPill{background:#ecfdf3;color:#067647;border:1px solid #abefc6}.winnerPill.tie{background:#f2f4f7;color:#475467;border-color:#e4e7ec}.chartMetric .metricWinner{display:block;margin-top:3px;font-size:10px;color:#067647;font-weight:1000;letter-spacing:.02em}.win{color:var(--green)}.lose{color:var(--red)}.winnerCheck{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;margin:0 6px;border-radius:999px;background:#12b76a;color:#fff;font-size:14px;font-weight:1000;box-shadow:0 6px 14px rgba(18,183,106,.22)}.chartVal.right .winnerCheck{margin-left:6px;margin-right:0}.chartVal:not(.right) .winnerCheck{margin-left:0;margin-right:6px}.needImprove{background:linear-gradient(180deg,#fff8f7,#fff);border-color:#f6c7c3}.effortNeed{margin-top:12px}.needItem{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #f3d6d3;padding:10px 0}.needItem:first-child{border-top:0}.needName{font-weight:950}.needCount{background:#fff0ef;color:var(--red);border:1px solid #f4b5b1;border-radius:999px;padding:4px 9px;font-weight:1000;font-size:12px}
 @keyframes statPop{0%{opacity:0;transform:perspective(800px) rotateX(14deg) translateY(14px) scale(.96)}65%{opacity:1;transform:perspective(800px) rotateX(-3deg) translateY(-2px) scale(1.01)}100%{opacity:1;transform:perspective(800px) rotateX(0) translateY(0) scale(1)}}
 @keyframes checkPop{0%{opacity:0;transform:scale(.4)}70%{transform:scale(1.12)}100%{opacity:1;transform:scale(1)}}
 .value,.metricNum{font-variant-numeric:tabular-nums}.statCard,.matchupChartRow,.effortShareCard{opacity:0;transform:translateY(10px) scale(.98)}.statCard.is-visible,.matchupChartRow.is-visible,.effortShareCard.is-visible{animation:statPop .42s cubic-bezier(.2,.8,.2,1) both}.winnerCheck{opacity:0;transform:scale(.4)}.winnerCheck.is-visible{animation:checkPop .42s cubic-bezier(.2,.8,.2,1) both}.barGraph{width:0;transition:width .75s cubic-bezier(.2,.8,.2,1)}
@@ -110,7 +127,7 @@ details.admin{margin-top:18px;background:#fff;border:1px solid var(--line);borde
   .viewControls{grid-template-columns:1fr!important}
   .effortShareLegend{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
-@media(max-width:540px){.cleanTitle .kicker{font-size:17px;letter-spacing:.11em}.topline{gap:0}}
+@media(max-width:540px){.cleanTitle .kicker{font-size:17px;letter-spacing:.11em}.topline{gap:0}.effortReviewTap .tapBadge{right:8px;top:8px;font-size:9px;padding:4px 7px}.effortReviewTap .tapRing{right:10px;bottom:10px;width:24px;height:24px}.effortReviewTap .tapHint{font-size:11px}}
 </style>
 </head>
 <body>
@@ -219,6 +236,20 @@ details.admin{margin-top:18px;background:#fff;border:1px solid var(--line);borde
     </div>
   </section>
 </main>
+
+<div id="effortAnalysisModal" class="effortModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="effortAnalysisModalTitle">
+  <div class="effortModalPanel">
+    <div class="effortModalHead">
+      <div>
+        <div id="effortAnalysisModalTitle" class="effortModalTitle">Effort Analysis</div>
+        <div id="effortAnalysisModalSub" class="effortModalSub">Tap outside or × to close.</div>
+      </div>
+      <button id="effortAnalysisModalClose" class="effortModalClose" type="button" aria-label="Close Effort Analysis">×</button>
+    </div>
+    <div id="effortAnalysisModalBody" class="effortModalBody"></div>
+  </div>
+</div>
+
 <script>
 const CONFIG = { manifestUrl:'data/matches.json', targetTeams:['Japan','Japan XV'] };
 const state = { matches:[], players:new Map(), selectedPlayer:'', selectedId:'', scope:'match', metric:'total', mode:'live', matchById:new Map(), matchIndex:new Map(), playerMatchIds:new Map(), playerSummaries:new Map() };
@@ -634,6 +665,7 @@ function currentContext(){ if(!state.selectedPlayer) return null; const ms=match
 function metricLabel(){return state.metric==='perGame'?'Per game':state.metric==='per80'?'Per 80':'Total';}
 function displayNumber(v){return state.metric==='total'?intFmt(v):oneDec(v);}
 function card(label,value,sub='',cls=''){const safeValue=escapeHtml(value);return `<div class="statCard ${cls}"><div><div class="label">${escapeHtml(label)}</div><div class="value" data-final="${safeValue}">${safeValue}</div></div>${sub?`<div class="sub">${escapeHtml(sub)}</div>`:''}</div>`;}
+function effortReviewCard(label,value,cls=''){const safeValue=escapeHtml(value);return `<button type="button" class="statCard effortReviewTap ${cls}" data-effort-analysis="${escapeHtml(label)}" aria-label="Open ${escapeHtml(label)} Effort Analysis"><span class="tapBadge">Open</span><span class="tapRing" aria-hidden="true"></span><div><div class="label">${escapeHtml(label)}</div><div class="value" data-final="${safeValue}">${safeValue}</div></div><div class="sub tapHint">Tap to see analysis</div></button>`;}
 function parseAnimatedNumber(text){
   const raw=String(text??'').trim();
   const match=raw.match(/^([+\-])?([\d,]+(?:\.\d+)?)(%)?$/);
@@ -692,56 +724,105 @@ function prepareScrollAnimations(root=document){
 }
 function animateDashboardNumbers(){ prepareScrollAnimations(dashboard); }
 
-function renderEffortAnalysis(raw){
-  const buckets=[
+function effortAnalysisBuckets(){
+  return [
     {name:'Post Contact',cls:'postContact',match:['CARRY','RUCK','TACKLE','JACKALER']},
     {name:'Spark',cls:'spark',match:['KICK','TURNOVER']},
     {name:'Set Piece',cls:'setPiece',match:['LINEOUT','SCRUM']},
     {name:'Phase Defence',cls:'phaseDefence',match:['PHASE DEFENCE']},
     {name:'Linebreak',cls:'linebreak',match:['LINEBREAK']}
   ];
-  const colours=[['Gold','gold'],['Red','redcard']];
-  const byColour={};
-  let classifiedTotal=0;
-  for(const [colour] of colours){
-    byColour[colour]={};
-    for(const b of buckets) byColour[colour][b.name]=0;
-    for(const [type,count] of Object.entries(raw.typeByColour?.[colour]||{})){
-      const bucket=effortAnalysisBucket(type);
-      if(bucket){
-        const n=toNumber(count);
-        byColour[colour][bucket]=(byColour[colour][bucket]||0)+n;
-        classifiedTotal+=n;
-      }
-    }
+}
+function effortAnalysisColours(){ return [['Gold','gold'],['Red','redcard']]; }
+function effortAnalysisForColour(raw, colour){
+  const buckets=effortAnalysisBuckets();
+  const byBucket={};
+  for(const b of buckets) byBucket[b.name]=0;
+  for(const [type,count] of Object.entries(raw?.typeByColour?.[colour]||{})){
+    const bucket=effortAnalysisBucket(type);
+    if(bucket) byBucket[bucket]=(byBucket[bucket]||0)+toNumber(count);
   }
-  if(!classifiedTotal){
-    return `<div class="effortAnalysisBlock"><div class="effortShareHead"><div class="effortShareTitle">Effort Analysis</div><div class="effortShareTotal">No Data</div></div><div class="helper">No classified Effort data found.</div></div>`;
+  const total=buckets.reduce((sum,b)=>sum+toNumber(byBucket[b.name]),0);
+  return {colour,buckets,byBucket,total};
+}
+function renderEffortAnalysisCard(raw, colour){
+  const colourCls=colour==='Red'?'redcard':String(colour||'').toLowerCase();
+  if(!effortAnalysisColours().some(([c])=>c===colour)){
+    return `<div class="effortAnalysisCard ${colourCls}"><div class="effortAnalysisCardHead"><span><span class="effortDot ${colourCls}"></span> ${escapeHtml(colour)}</span><span class="pill">No Data</span></div><div class="helper">Effort Analysis is currently shown for Gold and Red only.</div></div>`;
   }
-  const cards=colours.map(([colour,colourCls])=>{
-    const total=buckets.reduce((sum,b)=>sum+toNumber(byColour[colour][b.name]),0);
-    if(!total){
-      return `<div class="effortAnalysisCard ${colourCls}"><div class="effortAnalysisCardHead"><span><span class="effortDot ${colourCls}"></span> ${colour}</span><span class="pill">No Data</span></div><div class="helper">No classified ${colour} Effort data.</div></div>`;
-    }
-    const parts=buckets.map(b=>{
-      const count=toNumber(byColour[colour][b.name]);
-      const pctVal=(count/total)*100;
-      return {...b,count,pctVal,pctText:`${Math.round(pctVal)}%`};
-    });
-    return `<div class="effortAnalysisCard ${colourCls}"><div class="effortAnalysisCardHead"><span><span class="effortDot ${colourCls}"></span> ${colour}</span><span class="pill">${intFmt(total)} times</span></div><div class="effortStack" aria-label="${colour} Post Contact Spark Set Piece percentage share">${parts.map(p=>`<div class="effortShareSegment ${p.cls}" data-target-width="${p.pctVal.toFixed(2)}%" style="width:${p.pctVal.toFixed(2)}%" title="${colour} ${p.name}: ${p.pctText}"></div>`).join('')}</div><div class="effortAnalysisLegend">${parts.map(p=>`<div class="effortLegendItem ${p.cls}"><div class="effortLegendTop"><span class="effortDot ${p.cls}"></span><span>${p.name}</span></div><div class="effortLegendPct" data-final="${p.pctText}">${p.pctText}</div><div class="effortLegendCount">${intFmt(p.count)} times</div></div>`).join('')}</div></div>`;
-  }).join('');
-  return `<div class="effortAnalysisBlock"><div class="effortShareHead"><div class="effortShareTitle">Effort Analysis</div><div class="effortShareTotal">${intFmt(classifiedTotal)} classified times</div></div><div class="helper">Gold and Red Efforts are split into Post Contact, Spark, Set Piece, Phase Defence, and Linebreak.</div><div class="effortAnalysisGrid">${cards}</div></div>`;
+  const data=effortAnalysisForColour(raw,colour);
+  if(!data.total){
+    return `<div class="effortAnalysisCard ${colourCls}"><div class="effortAnalysisCardHead"><span><span class="effortDot ${colourCls}"></span> ${escapeHtml(colour)}</span><span class="pill">No Data</span></div><div class="helper">No classified ${escapeHtml(colour)} Effort data.</div></div>`;
+  }
+  const parts=data.buckets.map(b=>{
+    const count=toNumber(data.byBucket[b.name]);
+    const pctVal=(count/data.total)*100;
+    return {...b,count,pctVal,pctText:`${Math.round(pctVal)}%`};
+  });
+  return `<div class="effortAnalysisCard ${colourCls}"><div class="effortAnalysisCardHead"><span><span class="effortDot ${colourCls}"></span> ${escapeHtml(colour)} Effort Analysis</span><span class="pill">${intFmt(data.total)} times</span></div><div class="effortStack" aria-label="${escapeHtml(colour)} Effort Analysis percentage share">${parts.map(p=>`<div class="effortShareSegment ${p.cls}" data-target-width="${p.pctVal.toFixed(2)}%" style="width:${p.pctVal.toFixed(2)}%" title="${escapeHtml(colour)} ${p.name}: ${p.pctText}"></div>`).join('')}</div><div class="effortAnalysisLegend">${parts.map(p=>`<div class="effortLegendItem ${p.cls}"><div class="effortLegendTop"><span class="effortDot ${p.cls}"></span><span>${p.name}</span></div><div class="effortLegendPct" data-final="${p.pctText}">${p.pctText}</div><div class="effortLegendCount">${intFmt(p.count)} times</div></div>`).join('')}</div></div>`;
+}
+function renderEffortAnalysis(raw){
+  const cards=effortAnalysisColours().map(([colour])=>renderEffortAnalysisCard(raw,colour)).join('');
+  const total=effortAnalysisColours().reduce((sum,[colour])=>sum+effortAnalysisForColour(raw,colour).total,0);
+  return `<div class="effortAnalysisBlock"><div class="effortShareHead"><div class="effortShareTitle">Effort Analysis</div><div class="effortShareTotal">${total?intFmt(total)+' classified times':'No Data'}</div></div><div class="helper">Gold and Red Efforts are split into Post Contact, Spark, Set Piece, Phase Defence, and Linebreak.</div><div class="effortAnalysisGrid">${cards}</div></div>`;
+}
+function effortTimeBands(){return [{name:'0-20',min:0,max:20},{name:'20-40',min:20,max:40},{name:'40-60',min:40,max:60},{name:'60-80',min:60,max:80},{name:'80+',min:80,max:Infinity}];}
+function effortTimeBandData(raw,colour){
+  const source=raw?.timeByColour?.[colour]||{};
+  const bands=effortTimeBands().map(b=>({name:b.name,count:toNumber(source[b.name])}));
+  const total=bands.reduce((sum,b)=>sum+b.count,0);
+  return {bands,total};
+}
+function renderEffortTimeBands(raw,colour,colourCls){
+  const data=effortTimeBandData(raw,colour);
+  if(!data.total){return `<div class="effortAnalysisCard ${colourCls}"><div class="effortAnalysisCardHead"><span>Time Bands</span><span class="pill">No Data</span></div><div class="helper">No ${escapeHtml(colour)} Effort timing data.</div></div>`;}
+  const parts=data.bands.map(b=>{const pctVal=data.total?(b.count/data.total)*100:0;return {...b,pctVal,pctText:`${Math.round(pctVal)}%`};});
+  return `<div class="effortAnalysisCard ${colourCls}"><div class="effortAnalysisCardHead"><span>Time Bands</span><span class="pill">${intFmt(data.total)} times</span></div><div class="effortStack" aria-label="${escapeHtml(colour)} Effort by 20 minute bands">${parts.map(p=>`<div class="effortShareSegment ${colourCls}" data-target-width="${p.pctVal.toFixed(2)}%" style="width:${p.pctVal.toFixed(2)}%" title="${p.name}: ${p.pctText}"></div>`).join('')}</div><div class="effortAnalysisLegend">${parts.map(p=>`<div class="effortLegendItem ${colourCls}"><div class="effortLegendTop"><span class="effortDot ${colourCls}"></span><span>${p.name}</span></div><div class="effortLegendPct" data-final="${p.pctText}">${p.pctText}</div><div class="effortLegendCount">${intFmt(p.count)} times</div></div>`).join('')}</div></div>`;
+}
+function renderEffortTypeBreakdownForColour(raw,colour,colourCls){
+  const entries=Object.entries(raw?.typeByColour?.[colour]||{}).map(([type,count])=>({type,count:toNumber(count)})).filter(x=>x.count>0).sort((a,b)=>b.count-a.count||a.type.localeCompare(b.type));
+  const total=entries.reduce((sum,x)=>sum+x.count,0);
+  if(!total){return `<div class="effortAnalysisCard ${colourCls}"><div class="effortAnalysisCardHead"><span>Effort Type Breakdown</span><span class="pill">No Data</span></div><div class="helper">No ${escapeHtml(colour)} Effort Type data.</div></div>`;}
+  const top=entries.slice(0,10);
+  return `<div class="effortAnalysisCard ${colourCls}"><div class="effortAnalysisCardHead"><span>Effort Type Breakdown</span><span class="pill">${intFmt(total)} times</span></div><div class="breakdownList">${top.map(x=>{const pct=(x.count/total)*100;return `<div class="barRow"><div class="barLabel">${escapeHtml(x.type)}</div><div class="barTrack"><div class="barFill ${colourCls}" data-target-width="${pct.toFixed(2)}%" style="width:${pct.toFixed(2)}%"></div></div><div class="barValue">${intFmt(x.count)}</div></div>`;}).join('')}</div>${entries.length>10?`<div class="helper">Showing top 10 of ${entries.length} types.</div>`:''}</div>`;
+}
+function renderEffortAnalysisModalContent(raw,colour){
+  const colourCls=colour==='Red'?'redcard':String(colour||'').toLowerCase();
+  return `<div class="effortAnalysisBlock"><div class="effortShareHead"><div class="effortShareTitle">5 Category Graph</div><div class="effortShareTotal">${escapeHtml(colour)}</div></div>${renderEffortAnalysisCard(raw,colour)}</div><div class="effortAnalysisBlock"><div class="effortShareHead"><div class="effortShareTitle">By Time Band</div><div class="effortShareTotal">20 minute intervals</div></div>${renderEffortTimeBands(raw,colour,colourCls)}</div><div class="effortAnalysisBlock"><div class="effortShareHead"><div class="effortShareTitle">Effort Type Breakdown</div><div class="effortShareTotal">${escapeHtml(colour)}</div></div>${renderEffortTypeBreakdownForColour(raw,colour,colourCls)}</div>`;
 }
 function renderEffortShare(raw){
   const colours=[['Gold','gold'],['Green','green'],['Yellow','yellow'],['Red','redcard']];
   const total=colours.reduce((sum,[name])=>sum+toNumber(raw.colours?.[name]),0);
-  if(!total){ $('effortShare').innerHTML=`<div class="helper">No Effort Review data found.</div>${renderEffortAnalysis(raw)}`; return; }
+  if(!total){ $('effortShare').innerHTML=`<div class="helper">No Effort Review data found.</div>`; return; }
   const parts=colours.map(([name,cls])=>{
     const count=toNumber(raw.colours?.[name]);
     const pctVal=(count/total)*100;
-    return {name,cls,count,pctVal,pctText:`${Math.round(pctVal)}%`};
+    const hasAnalysis=effortAnalysisColours().some(([c])=>c===name);
+    return {name,cls,count,pctVal,pctText:`${Math.round(pctVal)}%`,hasAnalysis};
   });
-  $('effortShare').innerHTML=`<div class="effortShareHead"><div class="effortShareTitle">Effort ratio</div><div class="effortShareTotal">${total?intFmt(total)+' total times':'No Data'}</div></div><div class="effortStack" aria-label="Gold Green Yellow Red percentage share">${parts.map(p=>`<div class="effortShareSegment ${p.cls}" data-target-width="${p.pctVal.toFixed(2)}%" style="width:${p.pctVal.toFixed(2)}%" title="${p.name}: ${p.pctText}"></div>`).join('')}</div><div class="effortShareLegend">${parts.map(p=>`<div class="effortLegendItem ${p.cls}"><div class="effortLegendTop"><span class="effortDot ${p.cls}"></span><span>${p.name}</span></div><div class="effortLegendPct" data-final="${p.pctText}">${p.pctText}</div><div class="effortLegendCount">${intFmt(p.count)} times</div></div>`).join('')}</div>${renderEffortAnalysis(raw)}`;
+  $('effortShare').innerHTML=`<div class="effortShareHead"><div class="effortShareTitle">Effort ratio</div><div class="effortShareTotal">${total?intFmt(total)+' total times':'No Data'}</div></div><div class="effortStack" aria-label="Gold Green Yellow Red percentage share">${parts.map(p=>`<div class="effortShareSegment ${p.cls}" data-target-width="${p.pctVal.toFixed(2)}%" style="width:${p.pctVal.toFixed(2)}%" title="${p.name}: ${p.pctText}"></div>`).join('')}</div><div class="effortShareLegend">${parts.map(p=>`<button type="button" class="effortLegendItem effortClickable ${p.cls}" data-effort-analysis="${p.name}" aria-label="Open ${p.name} Effort Analysis"><div class="effortLegendTop"><span class="effortDot ${p.cls}"></span><span>${p.name}</span></div><div class="effortLegendPct" data-final="${p.pctText}">${p.pctText}</div><div class="effortLegendCount">${intFmt(p.count)} times</div><div class="effortLegendHint">Tap for analysis</div></button>`).join('')}</div>`;
+}
+
+function openEffortAnalysisModal(colour){
+  const ctx=currentContext();
+  const raw=ctx&&ctx.raw;
+  if(!raw) return;
+  const modal=$('effortAnalysisModal');
+  $('effortAnalysisModalTitle').textContent=`${colour} Effort Analysis`;
+  $('effortAnalysisModalSub').textContent=effortAnalysisColours().some(([c])=>c===colour)
+    ? '5 category graph, 20-minute timing, and Effort Type Breakdown.'
+    : 'Gold and Red have detailed Effort Analysis in the current setup.';
+  $('effortAnalysisModalBody').innerHTML=renderEffortAnalysisModalContent(raw,colour);
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+  prepareScrollAnimations(modal);
+}
+function closeEffortAnalysisModal(){
+  const modal=$('effortAnalysisModal');
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
 }
 
 function trendItems(ctx){
@@ -844,7 +925,7 @@ function renderSamuraiDetail(st){
 function renderDashboard(){ const ctx=currentContext(); if(!ctx||!ctx.raw) return; const raw=ctx.raw; const st=scaleStats(raw,state.metric); const p=raw.player; dashboard.style.display='block'; $('playerName').textContent=p.name; const meta=[]; if(raw.shirt||p.shirt) meta.push(`<span class="badge red">#${escapeHtml(raw.shirt||p.shirt)}</span>`); meta.push(`<span class="badge">${escapeHtml(p.team)}</span>`); if(raw.position||p.position) meta.push(`<span class="badge">${escapeHtml(raw.position||p.position)}</span>`); meta.push(`<span class="badge">${escapeHtml(metricLabel())}</span>`); if(ctx.match&&ctx.match.minutesSource) meta.push(`<span class="badge">Minutes: ${escapeHtml(ctx.match.minutesSource)}</span>`); $('playerMeta').innerHTML=meta.join(''); $('scoreLine').textContent=ctx.label; $('matchMeta').innerHTML=ctx.sub||''; $('carryContext').textContent=metricLabel(); $('tackleContext').textContent=metricLabel(); $('effortContext').textContent=metricLabel();
   $('carryStats').innerHTML=[card('Carry',displayNumber(st.carry)),card('Carry Metres',displayNumber(st.carryMetres)),card('Carry Dominance%',pct(raw.carryDominant,raw.carryContact),`${raw.carryDominant}/${raw.carryContact} dominant contact`),card('Post Contact Metres',displayNumber(st.postContactMetres))].join('');
   $('tackleStats').innerHTML=[card('Tackle',displayNumber(st.tackleMade),`${intFmt(raw.tackleAttempts)} attempts`),card('Tackle Completion',pct(raw.tackleMade,raw.tackleAttempts),`${raw.tackleMade}/${raw.tackleAttempts} made`),card('Tackle Dominance%',pct(raw.tackleDominant,raw.tackleAttempts),`${raw.tackleDominant}/${raw.tackleAttempts} dominant tackle`)].join('');
-  $('colourStats').innerHTML=[card('Gold',displayNumber(st.colours.Gold),'','gold'),card('Green',displayNumber(st.colours.Green),'','green'),card('Yellow',displayNumber(st.colours.Yellow),'','yellow'),card('Red',displayNumber(st.colours.Red),'','redcard')].join(''); renderEffortShare(raw);
+  $('colourStats').innerHTML=[effortReviewCard('Gold',displayNumber(st.colours.Gold),'gold'),effortReviewCard('Green',displayNumber(st.colours.Green),'green'),effortReviewCard('Yellow',displayNumber(st.colours.Yellow),'yellow'),effortReviewCard('Red',displayNumber(st.colours.Red),'redcard')].join(''); renderEffortShare(raw);
   $('gameTimeStats').innerHTML=[card('Matches',intFmt(raw.appearances||ctx.matches?.length||1),'Games included in this view'),card('Minutes Played',oneDec(raw.minutes||0),'Actual playing time'),card('Ball-in-play Min',oneDec(raw.ballInPlayMins),'Player BIP minutes')].join('');
   $('samuraiStats').innerHTML=[card('Samurai Stats',signedOneDec(samuraiRate(raw)),`${intFmt(raw.positiveActions)} positive / ${intFmt(raw.negativeActions)} negative`,'samuraiCard'),card('Positive Actions',displayNumber(st.positiveActions)),card('Negative Actions',displayNumber(st.negativeActions))].join(''); renderSamuraiDetail(raw);
   renderSeasonTrends(ctx);
@@ -886,22 +967,31 @@ function findOpponentSameNumber(match,raw){
   if(!shirt) return null;
   const jersey=Number(shirt);
   const playerTeam=normTeam(raw.player.team);
-  const candidates=[];
-  for(const st of match.playerStats.values()){
-    const s=String(st.shirt||st.player.shirt||'').replace(/^0+/,'');
-    if(s===shirt && normTeam(st.player.team)!==playerTeam) candidates.push(st);
-  }
-  if(!candidates.length) return null;
+  const allOpponents=[...match.playerStats.values()].filter(st=>normTeam(st.player.team)!==playerTeam);
+  const sameNumber=allOpponents.filter(st=>String(st.shirt||st.player.shirt||'').replace(/^0+/,'')===shirt);
   if(Number.isFinite(jersey) && jersey>=19){
-    return candidates.find(st=>sameReservePositionGroup(raw,st)) || null;
+    const sameNumberSameRole=sameNumber.find(st=>sameReservePositionGroup(raw,st));
+    if(sameNumberSameRole) return sameNumberSameRole;
+    const rawGroup=positionGroupId(getPositionIdValue(raw));
+    if(!rawGroup) return null;
+    return allOpponents.find(st=>{
+      const oppJersey=Number(String(st.shirt||st.player.shirt||'').replace(/^0+/,''));
+      if(!Number.isFinite(oppJersey) || oppJersey<19) return false;
+      return positionGroupId(getPositionIdValue(st))===rawGroup;
+    }) || null;
   }
-  return candidates[0];
+  return sameNumber[0] || null;
 }
 function matchupCell(label,left,right,format=(v)=>intFmt(v),higherBetter=true){
   const l=toNumber(left), r=toNumber(right);
-  const max=Math.max(Math.abs(l),Math.abs(r),1);
-  const lw=Math.max(4,Math.round(Math.abs(l)/max*100));
-  const rw=Math.max(4,Math.round(Math.abs(r)/max*100));
+  // Signed metrics such as Samurai Stats can be negative. A negative value should not
+  // draw a positive-length comparison bar, so bar length is based only on values above zero.
+  const lBar=Math.max(l,0), rBar=Math.max(r,0);
+  const max=Math.max(lBar,rBar,1);
+  const lw=lBar<=0?0:Math.max(4,Math.round(lBar/max*100));
+  const rw=rBar<=0?0:Math.max(4,Math.round(rBar/max*100));
+  const lZero=lw===0?' zeroBar':'';
+  const rZero=rw===0?' zeroBar':'';
   const delta=l-r;
   const tie=l===r;
   const japanWins=!tie && ((l>r)===higherBetter);
@@ -915,7 +1005,7 @@ function matchupCell(label,left,right,format=(v)=>intFmt(v),higherBetter=true){
   const diff=Math.abs(delta);
   const diffText=tie?'No difference':`${higherBetter?'Margin':'Lower by'} ${format(diff)}`;
   const metricWinner=tie?'Even':(japanWins?'Japan': 'Opponent');
-  const leftText=escapeHtml(format(left)); const rightText=escapeHtml(format(right)); return `<div class="matchupChartRow"><div class="chartHeader"><div class="chartVal ${lCls}">${leftCheck}<span class="metricNum" data-final="${leftText}">${leftText}</span></div><div class="chartMetric">${escapeHtml(label)}<span class="metricWinner">${escapeHtml(metricWinner)}</span></div><div class="chartVal right ${rCls}"><span class="metricNum" data-final="${rightText}">${rightText}</span>${rightCheck}</div></div><div class="chartBars"><div class="barHalf left"><div class="barGraph" style="width:${lw}%"></div></div><div class="barHalf right"><div class="barGraph" style="width:${rw}%"></div></div></div><div class="chartDelta"><span class="${winnerClass}">${escapeHtml(winner)}</span><span class="deltaPill">${escapeHtml(diffText)}</span></div></div>`;
+  const leftText=escapeHtml(format(left)); const rightText=escapeHtml(format(right)); return `<div class="matchupChartRow"><div class="chartHeader"><div class="chartVal ${lCls}">${leftCheck}<span class="metricNum" data-final="${leftText}">${leftText}</span></div><div class="chartMetric">${escapeHtml(label)}<span class="metricWinner">${escapeHtml(metricWinner)}</span></div><div class="chartVal right ${rCls}"><span class="metricNum" data-final="${rightText}">${rightText}</span>${rightCheck}</div></div><div class="chartBars"><div class="barHalf left"><div class="barGraph${lZero}" style="width:${lw}%"></div></div><div class="barHalf right"><div class="barGraph${rZero}" style="width:${rw}%"></div></div></div><div class="chartDelta"><span class="${winnerClass}">${escapeHtml(winner)}</span><span class="deltaPill">${escapeHtml(diffText)}</span></div></div>`;
 }
 function pctNum(num,den){return den>0?Math.round((num/den)*100):0;}
 function renderComparison(ctx){ const sec=$('comparisonSection'), cont=$('comparisonContent'); if(state.scope!=='match'||!ctx.match){sec.style.display='none';return;} const raw=ctx.raw; const opp=findOpponentSameNumber(ctx.match,raw); if(!opp){ sec.style.display='block'; cont.innerHTML='<div class="empty">No matching opponent was found. For jerseys 1–18 this uses the same number; for 19+ it also requires a compatible position ID group.</div>'; return; } sec.style.display='block'; const rows=[
@@ -1015,6 +1105,12 @@ document.addEventListener('pointerout',e=>{const hit=e.target.closest&&e.target.
 document.addEventListener('focusin',e=>{const hit=e.target.closest&&e.target.closest('.trendHit');if(hit)showTrendTooltip(hit);});
 document.addEventListener('focusout',e=>{const hit=e.target.closest&&e.target.closest('.trendHit');if(hit)hideTrendTooltip();});
 document.addEventListener('touchstart',e=>{const hit=e.target.closest&&e.target.closest('.trendHit');if(hit){const t=e.touches&&e.touches[0];showTrendTooltip(hit,t?t.clientX:null,t?t.clientY:null);clearTimeout(window.__trendTooltipTimer);window.__trendTooltipTimer=setTimeout(hideTrendTooltip,2200);}},{passive:true});
+
+
+document.addEventListener('click',e=>{const trigger=e.target.closest&&e.target.closest('[data-effort-analysis]');if(trigger){e.preventDefault();openEffortAnalysisModal(trigger.dataset.effortAnalysis);}});
+$('effortAnalysisModalClose').addEventListener('click',closeEffortAnalysisModal);
+$('effortAnalysisModal').addEventListener('click',e=>{if(e.target.id==='effortAnalysisModal')closeEffortAnalysisModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeEffortAnalysisModal();});
 
 playerSelect.addEventListener('input',()=>{ togglePlayerClear(); });
 playerSelect.addEventListener('change',handlePlayerSearch);
