@@ -77,8 +77,6 @@ details.admin{margin-top:18px;background:#fff;border:1px solid var(--line);borde
 <body>
 <header class="header">
   <div class="topline"><div class="brandMark">J</div><div><div class="kicker">Japan Rugby Performance</div><div style="font-size:13px;color:#dbe8ff;font-weight:800">Player Effort Hub</div></div></div>
-  <h1>Player Review, made simple.</h1>
-  <p class="lead">Select your name, choose the match or season, and see the key Carry, Tackle, and Effort metrics in a clean player-first dashboard.</p>
 </header>
 <main class="app">
   <div id="status" class="status"><span class="dot"></span><span>Loading data...</span></div>
@@ -404,7 +402,7 @@ function renderDashboard(){ const ctx=currentContext(); if(!ctx||!ctx.raw) retur
   $('carryStats').innerHTML=[card('Carry',displayNumber(st.carry)),card('Carry Metres',displayNumber(st.carryMetres)),card('Carry Dominance%',pct(raw.carryDominant,raw.carryContact),`${raw.carryDominant}/${raw.carryContact} dominant contact`),card('Post Contact Metres',displayNumber(st.postContactMetres))].join('');
   $('tackleStats').innerHTML=[card('Tackle',displayNumber(st.tackleMade),`${intFmt(raw.tackleAttempts)} attempts`),card('Tackle Completion',pct(raw.tackleMade,raw.tackleAttempts),`${raw.tackleMade}/${raw.tackleAttempts} made`),card('Tackle Dominance%',pct(raw.tackleDominant,raw.tackleAttempts),`${raw.tackleDominant}/${raw.tackleAttempts} dominant tackle`),card('Total Actions',displayNumber(st.totalActions))].join('');
   $('colourStats').innerHTML=[card('Gold',displayNumber(st.colours.Gold),'','gold'),card('Green',displayNumber(st.colours.Green),'','green'),card('Yellow',displayNumber(st.colours.Yellow),'','yellow'),card('Red',displayNumber(st.colours.Red),'','redcard')].join('');
-  $('samuraiStats').innerHTML=[card('Samurai Stats',signedOneDec(samuraiRate(raw)),`${intFmt(raw.positiveActions)} positive / ${intFmt(raw.negativeActions)} negative / ${oneDec(raw.ballInPlayMins)} BIP min`,'samuraiCard'),card('Positive Actions',displayNumber(st.positiveActions)),card('Negative Actions',displayNumber(st.negativeActions)),card('Ball-in-play Min',oneDec(raw.ballInPlayMins))].join('');
+  $('samuraiStats').innerHTML=[card('Matches',intFmt(raw.appearances||ctx.matches?.length||1),'Games included in this view'),card('Minutes Played',oneDec(raw.minutes||0),'Actual playing time'),card('Samurai Stats',signedOneDec(samuraiRate(raw)),`${intFmt(raw.positiveActions)} positive / ${intFmt(raw.negativeActions)} negative / ${oneDec(raw.ballInPlayMins)} BIP min`,'samuraiCard'),card('Positive Actions',displayNumber(st.positiveActions)),card('Negative Actions',displayNumber(st.negativeActions)),card('Ball-in-play Min',oneDec(raw.ballInPlayMins))].join('');
   renderBreakdowns(raw); renderComparison(ctx); dashboard.scrollIntoView({behavior:'smooth',block:'start'});
 }
 function renderBreakdowns(st){
