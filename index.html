@@ -72,11 +72,11 @@ details.admin{margin-top:18px;background:#fff;border:1px solid var(--line);borde
 .samuraiCard{background:linear-gradient(135deg,#07101f,#0b3a78);color:#fff;border-color:rgba(255,255,255,.18)}.samuraiCard:after{background:rgba(255,255,255,.10)}.samuraiCard .label,.samuraiCard .sub{color:#dbe8ff}.samuraiCard .value{color:#fff}.compactStats .statCard{min-height:104px}.compactStats .statCard .value{font-size:34px}.matchupShell{background:#fff;border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);overflow:hidden}.matchupTop{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;background:linear-gradient(90deg,#f8fbff,#fff,#fff7f7)}.matchupPlayer{padding:18px}.matchupPlayer.right{text-align:right}.matchupName{font-size:22px;font-weight:1000;letter-spacing:-.04em}.matchupTeam{font-size:12px;color:var(--muted);font-weight:900;margin-top:4px}.matchupVs{display:grid;place-items:center;padding:0 18px;font-weight:1000;color:#98a2b3}.matchupTable{padding:12px 16px 18px}.matchupLegend{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:4px 0 12px;font-size:12px;font-weight:950;color:var(--muted)}.legendLeft{text-align:left}.legendRight{text-align:right}.matchupChartRow{border-top:1px solid #edf1f7;padding:13px 0}.chartHeader{display:grid;grid-template-columns:90px 1fr 90px;gap:10px;align-items:center;margin-bottom:8px}.chartVal{font-size:18px;font-weight:1000}.chartVal.right{text-align:right}.chartMetric{text-align:center;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:950}.chartBars{display:grid;grid-template-columns:1fr 1fr;gap:6px;align-items:center}.barHalf{height:16px;background:#eef2f7;border-radius:999px;overflow:hidden;position:relative}.barHalf.left .barGraph{margin-left:auto;background:linear-gradient(90deg,#86b7ff,#0b3a78)}.barHalf.right .barGraph{background:linear-gradient(90deg,#d71920,#ff9a9f)}.barGraph{height:100%;border-radius:999px;min-width:4px}.chartDelta{text-align:center;margin-top:8px;display:flex;justify-content:center;gap:6px;flex-wrap:wrap}.deltaPill,.winnerPill{display:inline-flex;align-items:center;border-radius:999px;background:#f2f4f7;color:#475467;font-size:12px;font-weight:950;padding:5px 9px}.winnerPill{background:#ecfdf3;color:#067647;border:1px solid #abefc6}.winnerPill.tie{background:#f2f4f7;color:#475467;border-color:#e4e7ec}.chartMetric .metricWinner{display:block;margin-top:3px;font-size:10px;color:#067647;font-weight:1000;letter-spacing:.02em}.win{color:var(--green)}.lose{color:var(--red)}.winnerCheck{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;margin:0 6px;border-radius:999px;background:#12b76a;color:#fff;font-size:14px;font-weight:1000;box-shadow:0 6px 14px rgba(18,183,106,.22)}.chartVal.right .winnerCheck{margin-left:6px;margin-right:0}.chartVal:not(.right) .winnerCheck{margin-left:0;margin-right:6px}.needImprove{background:linear-gradient(180deg,#fff8f7,#fff);border-color:#f6c7c3}.needItem{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #f3d6d3;padding:10px 0}.needItem:first-child{border-top:0}.needName{font-weight:950}.needCount{background:#fff0ef;color:var(--red);border:1px solid #f4b5b1;border-radius:999px;padding:4px 9px;font-weight:1000;font-size:12px}
 @keyframes statPop{0%{opacity:0;transform:translateY(10px) scale(.98)}100%{opacity:1;transform:translateY(0) scale(1)}}
 @keyframes checkPop{0%{opacity:0;transform:scale(.4)}70%{transform:scale(1.12)}100%{opacity:1;transform:scale(1)}}
-.statCard{animation:statPop .42s cubic-bezier(.2,.8,.2,1) both}.statGrid .statCard:nth-child(2){animation-delay:.04s}.statGrid .statCard:nth-child(3){animation-delay:.08s}.statGrid .statCard:nth-child(4){animation-delay:.12s}.value,.metricNum{font-variant-numeric:tabular-nums}.winnerCheck{animation:checkPop .42s cubic-bezier(.2,.8,.2,1) both}.barGraph{width:0;transition:width .75s cubic-bezier(.2,.8,.2,1)}.matchupChartRow{animation:statPop .38s cubic-bezier(.2,.8,.2,1) both}.matchupChartRow:nth-child(2){animation-delay:.03s}.matchupChartRow:nth-child(3){animation-delay:.06s}.matchupChartRow:nth-child(4){animation-delay:.09s}.matchupChartRow:nth-child(5){animation-delay:.12s}.matchupChartRow:nth-child(6){animation-delay:.15s}.matchupChartRow:nth-child(7){animation-delay:.18s}.matchupChartRow:nth-child(8){animation-delay:.21s}
-@media (prefers-reduced-motion: reduce){.statCard,.matchupChartRow,.winnerCheck{animation:none!important}.barGraph{transition:none!important}}
+.value,.metricNum{font-variant-numeric:tabular-nums}.statCard,.matchupChartRow{opacity:0;transform:translateY(10px) scale(.98)}.statCard.is-visible,.matchupChartRow.is-visible{animation:statPop .42s cubic-bezier(.2,.8,.2,1) both}.winnerCheck{opacity:0;transform:scale(.4)}.winnerCheck.is-visible{animation:checkPop .42s cubic-bezier(.2,.8,.2,1) both}.barGraph{width:0;transition:width .75s cubic-bezier(.2,.8,.2,1)}
+@media (prefers-reduced-motion: reduce){.statCard,.matchupChartRow,.winnerCheck{opacity:1;transform:none;animation:none!important}.barGraph{transition:none!important}}
 
-@media(max-width:900px){.matchupPlayer.right{text-align:left}.matchupVs{padding:10px}.chartHeader{grid-template-columns:66px 1fr 66px}.chartVal{font-size:15px}.chartMetric{font-size:10px}.steps,.playerHero,.reviewPanel,.viewControls,.compareGrid,.matchupTop{grid-template-columns:1fr}.statGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.adminGrid{grid-template-columns:1fr}.vs{padding:0}.compareGrid .vs:before,.compareGrid .vs:after{content:"";display:block;height:1px;background:var(--line)}}
-@media(max-width:540px){.header{padding-top:22px}.app{padding-inline:12px}.controlShell{border-radius:22px;padding:12px}.statGrid{grid-template-columns:1fr}.statCard{min-height:108px}.statCard .value{font-size:33px}.status{border-radius:18px}.heroCard,.step{padding:15px}.barRow{grid-template-columns:94px 1fr 34px}.segment{flex-direction:column}.playerName{font-size:28px}}
+@media(max-width:900px){.matchupPlayer.right{text-align:right}.matchupTop{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}.matchupPlayer{min-width:0;padding:14px 8px}.matchupVs{padding:0 6px}.matchupName{font-size:16px;line-height:1.12;letter-spacing:-.025em;overflow-wrap:normal;word-break:normal}.matchupTeam{font-size:11px}.chartHeader{grid-template-columns:66px 1fr 66px}.chartVal{font-size:15px}.chartMetric{font-size:10px}.steps,.playerHero,.reviewPanel,.compareGrid{grid-template-columns:1fr}.viewControls{grid-template-columns:1fr 1fr}.statGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.adminGrid{grid-template-columns:1fr}.vs{padding:0}.compareGrid .vs:before,.compareGrid .vs:after{content:"";display:block;height:1px;background:var(--line)}}
+@media(max-width:540px){.header{padding-top:22px}.app{padding-inline:12px}.controlShell{border-radius:22px;padding:12px}.viewControls{gap:8px}.segment{flex-direction:row;overflow-x:auto;scrollbar-width:none}.segment::-webkit-scrollbar{display:none}.segment button{font-size:11px;padding:8px 6px;min-width:58px;white-space:nowrap}.statGrid{grid-template-columns:1fr}.statCard{min-height:108px}.statCard .value{font-size:33px}.status{border-radius:18px}.heroCard,.step{padding:15px}.barRow{grid-template-columns:94px 1fr 34px}.playerName{font-size:28px}.matchupTable{padding:10px}.matchupLegend{font-size:11px;gap:8px}.chartHeader{grid-template-columns:58px 1fr 58px;gap:7px}.winnerCheck{width:18px;height:18px;font-size:12px;margin:0 3px}.matchupName{font-size:14px}.matchupTeam{font-size:10px}}
 </style>
 </head>
 <body>
@@ -424,33 +424,46 @@ function formatAnimatedNumber(info,value){
   const prefix=info.sign==='-'?'-':(info.sign==='+'?'+':'');
   return `${prefix}${body}${info.suffix}`;
 }
-function animateValueElements(root=document){
-  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const elements=[...root.querySelectorAll('[data-final]')];
-  for(const el of elements){
-    const info=parseAnimatedNumber(el.dataset.final);
-    if(!info) continue;
-    const duration=700;
-    const start=performance.now();
-    el.textContent=formatAnimatedNumber(info,0);
-    requestAnimationFrame(function tick(now){
-      const t=Math.min(1,(now-start)/duration);
-      const eased=1-Math.pow(1-t,3);
-      el.textContent=formatAnimatedNumber(info,info.num*eased);
-      if(t<1) requestAnimationFrame(tick); else el.textContent=info.raw;
-    });
-  }
+function animateOneNumber(el){
+  if(el.dataset.animated==='1') return;
+  const info=parseAnimatedNumber(el.dataset.final);
+  if(!info) return;
+  el.dataset.animated='1';
+  const duration=700;
+  const start=performance.now();
+  el.textContent=formatAnimatedNumber(info,0);
+  requestAnimationFrame(function tick(now){
+    const t=Math.min(1,(now-start)/duration);
+    const eased=1-Math.pow(1-t,3);
+    el.textContent=formatAnimatedNumber(info,info.num*eased);
+    if(t<1) requestAnimationFrame(tick); else el.textContent=info.raw;
+  });
 }
-function animateMatchupBars(root=document){
-  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+function prepareScrollAnimations(root=document){
+  const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const bars=[...root.querySelectorAll('.barGraph')];
   for(const bar of bars){
-    const finalWidth=bar.style.width||'0%';
-    bar.style.width='0%';
-    requestAnimationFrame(()=>requestAnimationFrame(()=>{bar.style.width=finalWidth;}));
+    if(!bar.dataset.targetWidth) bar.dataset.targetWidth=bar.style.width||'0%';
+    bar.style.width=reduce?bar.dataset.targetWidth:'0%';
   }
+  if(reduce){
+    root.querySelectorAll('[data-final]').forEach(el=>{el.textContent=el.dataset.final;el.dataset.animated='1';});
+    root.querySelectorAll('.statCard,.matchupChartRow,.winnerCheck').forEach(el=>el.classList.add('is-visible'));
+    return;
+  }
+  const io=new IntersectionObserver((entries,observer)=>{
+    for(const entry of entries){
+      if(!entry.isIntersecting) continue;
+      const el=entry.target;
+      if(el.matches('[data-final]')) animateOneNumber(el);
+      if(el.classList.contains('barGraph')) el.style.width=el.dataset.targetWidth||'0%';
+      if(el.classList.contains('statCard')||el.classList.contains('matchupChartRow')||el.classList.contains('winnerCheck')) el.classList.add('is-visible');
+      observer.unobserve(el);
+    }
+  },{threshold:.22,rootMargin:'0px 0px -8% 0px'});
+  root.querySelectorAll('[data-final],.barGraph,.statCard,.matchupChartRow,.winnerCheck').forEach(el=>io.observe(el));
 }
-function animateDashboardNumbers(){ animateValueElements(dashboard); animateMatchupBars(dashboard); }
+function animateDashboardNumbers(){ prepareScrollAnimations(dashboard); }
 
 function renderDashboard(){ const ctx=currentContext(); if(!ctx||!ctx.raw) return; const raw=ctx.raw; const st=scaleStats(raw,state.metric); const p=raw.player; dashboard.style.display='block'; $('playerName').textContent=p.name; const meta=[]; if(raw.shirt||p.shirt) meta.push(`<span class="badge red">#${escapeHtml(raw.shirt||p.shirt)}</span>`); meta.push(`<span class="badge">${escapeHtml(p.team)}</span>`); if(raw.position||p.position) meta.push(`<span class="badge">${escapeHtml(raw.position||p.position)}</span>`); meta.push(`<span class="badge">${escapeHtml(metricLabel())}</span>`); if(ctx.match&&ctx.match.minutesSource) meta.push(`<span class="badge">Minutes: ${escapeHtml(ctx.match.minutesSource)}</span>`); $('playerMeta').innerHTML=meta.join(''); $('scoreLine').textContent=ctx.label; $('matchMeta').innerHTML=ctx.sub||''; $('carryContext').textContent=metricLabel(); $('tackleContext').textContent=metricLabel(); $('effortContext').textContent=metricLabel();
   $('carryStats').innerHTML=[card('Carry',displayNumber(st.carry)),card('Carry Metres',displayNumber(st.carryMetres)),card('Carry Dominance%',pct(raw.carryDominant,raw.carryContact),`${raw.carryDominant}/${raw.carryContact} dominant contact`),card('Post Contact Metres',displayNumber(st.postContactMetres))].join('');
@@ -497,7 +510,7 @@ function renderComparison(ctx){ const sec=$('comparisonSection'), cont=$('compar
   matchupCell('Tackle Completion',pctNum(raw.tackleMade,raw.tackleAttempts),pctNum(opp.tackleMade,opp.tackleAttempts),v=>`${intFmt(v)}%`,true),
   matchupCell('Effort Gold',raw.colours.Gold,opp.colours.Gold,intFmt,true),
   matchupCell('Effort Red',raw.colours.Red,opp.colours.Red,intFmt,false)
-].join(''); cont.innerHTML=`<div class="matchupShell"><div class="matchupTop"><div class="matchupPlayer"><div class="matchupName">${escapeHtml(raw.player.name||'Unknown')}</div><div class="matchupTeam">Japan · #${escapeHtml(raw.shirt||raw.player.shirt||'')}</div></div><div class="matchupVs">VS</div><div class="matchupPlayer right"><div class="matchupName">${escapeHtml(opp.player.name||'Unknown')}</div><div class="matchupTeam">${escapeHtml(opp.player.team)} · #${escapeHtml(opp.shirt||opp.player.shirt||'')}</div></div></div><div class="matchupTable"><div class="matchupLegend"><div class="legendLeft">Japan player</div><div class="legendRight">Same number opponent</div></div>${rows}</div></div>`; }
+].join(''); cont.innerHTML=`<div class="matchupShell"><div class="matchupTop"><div class="matchupPlayer"><div class="matchupName">${escapeHtml(raw.player.name||'Unknown')}</div><div class="matchupTeam">Japan · #${escapeHtml(raw.shirt||raw.player.shirt||'')}</div></div><div class="matchupVs">VS</div><div class="matchupPlayer right"><div class="matchupName">${escapeHtml(opp.player.name||'Unknown')}</div><div class="matchupTeam">${escapeHtml(opp.player.team)} · #${escapeHtml(opp.shirt||opp.player.shirt||'')}</div></div></div><div class="matchupTable"><div class="matchupLegend"><div class="legendLeft">${escapeHtml(raw.player.name||'Japan player')}</div><div class="legendRight">${escapeHtml(opp.player.name||'Opponent')}</div></div>${rows}</div></div>`; }
 playerSelect.addEventListener('change',()=>{state.selectedPlayer=playerSelect.value;state.selectedId='';renderOptions();});
 $('scopeButtons').addEventListener('click',e=>{const btn=e.target.closest('button[data-scope]');if(!btn)return;state.scope=btn.dataset.scope;state.selectedId='';document.querySelectorAll('#scopeButtons button').forEach(b=>b.classList.toggle('active',b===btn));renderOptions();});
 $('metricButtons').addEventListener('click',e=>{const btn=e.target.closest('button[data-metric]');if(!btn)return;state.metric=btn.dataset.metric;document.querySelectorAll('#metricButtons button').forEach(b=>b.classList.toggle('active',b===btn));renderDashboard();});
