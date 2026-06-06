@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>JAPAN RUGBY PLAYER REVIEW HUB</title>
 <style>
 :root{
@@ -99,7 +100,7 @@ select:focus,.playerSearch:focus{border-color:#e78c95;box-shadow:0 0 0 4px rgba(
 .controlShell,.section .breakdown,.heroCard,.statCard,.matchupShell,.effortShareCard{box-shadow:0 20px 60px rgba(16,24,40,.12),0 0 0 1px rgba(255,255,255,.55) inset}
 .step,.heroCard,.statCard,.breakdown,.effortShareCard{background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(255,255,255,.92))}
 .sectionTitle h3{position:relative;padding-left:14px}.sectionTitle h3:before{content:"";position:absolute;left:0;top:.28em;width:6px;height:1.05em;border-radius:999px;background:linear-gradient(180deg,#d71920,#ffb7c5)}
-.statCard{border-color:#dce6f4}.statCard:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,rgba(215,25,32,.95),rgba(255,183,197,.55),rgba(11,58,120,.80));opacity:.75}
+.statCard{border-color:#dce6f4}.statCard:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,rgba(215,25,32,.95),rgba(255,183,197,.55),rgba(255,183,197,.70));opacity:.75}
 .matchCard.active{background:linear-gradient(135deg,#fff1f3,#fff7fa);box-shadow:0 18px 46px rgba(215,25,32,.14)}
 
 @media(max-width:760px){.effortAnalysisLegend{grid-template-columns:repeat(2,minmax(0,1fr))}}.effortAnalysisLegend .effortLegendPct{font-size:18px}.effortLegendCount.noData{color:#98a2b3}.effortLegendPct{font-size:22px;font-weight:1000;letter-spacing:-.04em;margin-top:6px}.effortLegendCount{font-size:12px;color:var(--muted);font-weight:800;margin-top:2px}
@@ -108,7 +109,7 @@ select:focus,.playerSearch:focus{border-color:#e78c95;box-shadow:0 0 0 4px rgba(
 details.admin{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px 14px;color:var(--muted)}details.admin summary{cursor:pointer;font-weight:850;color:#334155}.adminGrid{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;align-items:end;margin-top:12px}.adminGrid label{font-size:12px;font-weight:850}.adminGrid input{width:100%;border:1px solid var(--line);border-radius:12px;padding:9px;background:#fff}.adminGrid button{border:0;border-radius:12px;background:var(--accent);color:#fff;padding:11px 14px;font-weight:950;cursor:pointer}
 
 .statCard.effortReviewTap{border:1px solid var(--line);text-align:left;width:100%;cursor:pointer}.statCard.effortReviewTap:hover,.statCard.effortReviewTap:focus-visible{transform:translateY(-2px);outline:none;box-shadow:0 18px 40px rgba(16,24,40,.14)}
-.samuraiCard{background:linear-gradient(135deg,#2a0b10,#d71920);color:#fff;border-color:rgba(255,255,255,.18)}.samuraiCard:after{background:rgba(255,255,255,.10)}.samuraiCard .label,.samuraiCard .sub{color:#ffe3e8}.samuraiCard .value{color:#fff}.samuraiDetail{margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.samuraiDetailCard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:14px;box-shadow:0 10px 24px rgba(16,24,40,.07)}.samuraiDetailCard.positive{border-color:#abefc6;background:linear-gradient(180deg,#f6fef9,#fff)}.samuraiDetailCard.negative{border-color:#f6c7c3;background:linear-gradient(180deg,#fff8f7,#fff)}.samuraiDetailHead{display:flex;justify-content:space-between;align-items:center;gap:8px;font-weight:1000;margin-bottom:10px}.samuraiDetailTitle{font-size:13px;text-transform:uppercase;letter-spacing:.04em}.samuraiDetailList{display:flex;flex-direction:column;gap:7px}.samuraiDetailRow{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border-top:1px solid #edf1f7;padding-top:7px;font-size:13px}.samuraiDetailRow:first-child{border-top:0;padding-top:0}.samuraiDetailName{font-weight:850;color:#344054}.samuraiDetailCount{font-weight:1000;border-radius:999px;padding:3px 8px;background:#f2f4f7}.samuraiDetailCard.positive .samuraiDetailCount{background:#ecfdf3;color:#067647}.samuraiDetailCard.negative .samuraiDetailCount{background:#fff0ef;color:#d71920}.compactStats .statCard{min-height:104px}.compactStats .statCard .value{font-size:34px}.matchupShell{background:#fff;border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);overflow:hidden}.matchupTop{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;background:linear-gradient(90deg,#f8fbff,#fff,#fff7f7)}.matchupPlayer{padding:18px}.matchupPlayer.right{text-align:right}.matchupName{font-size:22px;font-weight:1000;letter-spacing:-.04em}.matchupTeam{font-size:12px;color:var(--muted);font-weight:900;margin-top:4px}.matchupVs{display:grid;place-items:center;padding:0 18px;font-weight:1000;color:#98a2b3}.matchupTable{padding:12px 16px 18px}.matchupLegend{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:4px 0 12px;font-size:12px;font-weight:950;color:var(--muted)}.legendLeft{text-align:left}.legendRight{text-align:right}.matchupChartRow{border-top:1px solid #edf1f7;padding:13px 0}.chartHeader{display:grid;grid-template-columns:90px 1fr 90px;gap:10px;align-items:center;margin-bottom:8px}.chartVal{font-size:18px;font-weight:1000}.chartVal.right{text-align:right}.chartMetric{text-align:center;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:950}.chartBars{display:grid;grid-template-columns:1fr 1fr;gap:6px;align-items:center}.barHalf{height:16px;background:#eef2f7;border-radius:999px;overflow:hidden;position:relative}.barHalf.left .barGraph{margin-left:auto;background:linear-gradient(90deg,#ff9a9f,#d71920)}.barHalf.right .barGraph{background:linear-gradient(90deg,#111827,#000000)}.barGraph{height:100%;border-radius:999px;min-width:4px}.barGraph.zeroBar{min-width:0}.chartDelta{text-align:center;margin-top:8px;display:flex;justify-content:center;gap:6px;flex-wrap:wrap}.deltaPill,.winnerPill{display:inline-flex;align-items:center;border-radius:999px;background:#f2f4f7;color:#475467;font-size:12px;font-weight:950;padding:5px 9px}.winnerPill{background:#ecfdf3;color:#067647;border:1px solid #abefc6}.winnerPill.tie{background:#f2f4f7;color:#475467;border-color:#e4e7ec}.chartMetric .metricWinner{display:block;margin-top:3px;font-size:10px;color:#067647;font-weight:1000;letter-spacing:.02em}.win{color:var(--green)}.lose{color:var(--red)}.winnerCheck{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;margin:0 6px;border-radius:999px;background:#12b76a;color:#fff;font-size:14px;font-weight:1000;box-shadow:0 6px 14px rgba(18,183,106,.22)}.chartVal.right .winnerCheck{margin-left:6px;margin-right:0}.chartVal:not(.right) .winnerCheck{margin-left:0;margin-right:6px}.needImprove{background:linear-gradient(180deg,#fff8f7,#fff);border-color:#f6c7c3}.effortNeed{margin-top:12px}.needItem{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #f3d6d3;padding:10px 0}.needItem:first-child{border-top:0}.needName{font-weight:950}.needCount{background:#fff0ef;color:var(--red);border:1px solid #f4b5b1;border-radius:999px;padding:4px 9px;font-weight:1000;font-size:12px}
+.samuraiCard{background:linear-gradient(135deg,#2a0b10,#d71920);color:#fff;border-color:rgba(255,255,255,.18)}.samuraiCard:after{background:rgba(255,255,255,.10)}.samuraiCard .label,.samuraiCard .sub{color:#ffe3e8}.samuraiCard .value{color:#fff}.samuraiDetail{margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.samuraiDetailCard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:14px;box-shadow:0 10px 24px rgba(16,24,40,.07)}.samuraiDetailCard.positive{border-color:#abefc6;background:linear-gradient(180deg,#f6fef9,#fff)}.samuraiDetailCard.negative{border-color:#f6c7c3;background:linear-gradient(180deg,#fff8f7,#fff)}.samuraiDetailHead{display:flex;justify-content:space-between;align-items:center;gap:8px;font-weight:1000;margin-bottom:10px}.samuraiDetailTitle{font-size:13px;text-transform:uppercase;letter-spacing:.04em}.samuraiDetailList{display:flex;flex-direction:column;gap:7px}.samuraiDetailRow{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border-top:1px solid #edf1f7;padding-top:7px;font-size:13px}.samuraiDetailRow:first-child{border-top:0;padding-top:0}.samuraiDetailName{font-weight:850;color:#344054}.samuraiDetailCount{font-weight:1000;border-radius:999px;padding:3px 8px;background:#f2f4f7}.samuraiDetailCard.positive .samuraiDetailCount{background:#ecfdf3;color:#067647}.samuraiDetailCard.negative .samuraiDetailCount{background:#fff0ef;color:#d71920}.statCard.actionable{cursor:pointer;position:relative}.statCard.actionable:hover{transform:translateY(-2px) rotateX(1deg);box-shadow:0 18px 42px rgba(16,24,40,.13)}.statCard.actionable:focus-visible{outline:3px solid rgba(215,25,32,.35);outline-offset:3px}.statCard.actionable .sub:after{content:'  ›';font-weight:1000}.samuraiDetail{display:none!important}.compactStats .statCard{min-height:104px}.compactStats .statCard .value{font-size:34px}.matchupShell{background:#fff;border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);overflow:hidden}.matchupTop{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;background:linear-gradient(90deg,#f8fbff,#fff,#fff7f7)}.matchupPlayer{padding:18px}.matchupPlayer.right{text-align:right}.matchupName{font-size:22px;font-weight:1000;letter-spacing:-.04em}.matchupTeam{font-size:12px;color:var(--muted);font-weight:900;margin-top:4px}.matchupVs{display:grid;place-items:center;padding:0 18px;font-weight:1000;color:#98a2b3}.matchupTable{padding:12px 16px 18px}.matchupLegend{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:4px 0 12px;font-size:12px;font-weight:950;color:var(--muted)}.legendLeft{text-align:left}.legendRight{text-align:right}.matchupChartRow{border-top:1px solid #edf1f7;padding:13px 0}.chartHeader{display:grid;grid-template-columns:90px 1fr 90px;gap:10px;align-items:center;margin-bottom:8px}.chartVal{font-size:18px;font-weight:1000}.chartVal.right{text-align:right}.chartMetric{text-align:center;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:950}.chartBars{display:grid;grid-template-columns:1fr 1fr;gap:6px;align-items:center}.barHalf{height:16px;background:#eef2f7;border-radius:999px;overflow:hidden;position:relative}.barHalf.left .barGraph{margin-left:auto;background:linear-gradient(90deg,#ff9a9f,#d71920)}.barHalf.right .barGraph{background:linear-gradient(90deg,#111827,#000000)}.barGraph{height:100%;border-radius:999px;min-width:4px}.barGraph.zeroBar{min-width:0}.chartDelta{text-align:center;margin-top:8px;display:flex;justify-content:center;gap:6px;flex-wrap:wrap}.deltaPill,.winnerPill{display:inline-flex;align-items:center;border-radius:999px;background:#f2f4f7;color:#475467;font-size:12px;font-weight:950;padding:5px 9px}.winnerPill{background:#ecfdf3;color:#067647;border:1px solid #abefc6}.winnerPill.tie{background:#f2f4f7;color:#475467;border-color:#e4e7ec}.chartMetric .metricWinner{display:block;margin-top:3px;font-size:10px;color:#067647;font-weight:1000;letter-spacing:.02em}.win{color:var(--green)}.lose{color:var(--red)}.winnerCheck{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;margin:0 6px;border-radius:999px;background:#12b76a;color:#fff;font-size:14px;font-weight:1000;box-shadow:0 6px 14px rgba(18,183,106,.22)}.chartVal.right .winnerCheck{margin-left:6px;margin-right:0}.chartVal:not(.right) .winnerCheck{margin-left:0;margin-right:6px}.needImprove{background:linear-gradient(180deg,#fff8f7,#fff);border-color:#f6c7c3}.effortNeed{margin-top:12px}.needItem{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #f3d6d3;padding:10px 0}.needItem:first-child{border-top:0}.needName{font-weight:950}.needCount{background:#fff0ef;color:var(--red);border:1px solid #f4b5b1;border-radius:999px;padding:4px 9px;font-weight:1000;font-size:12px}
 @keyframes statPop{0%{opacity:0;transform:perspective(800px) rotateX(14deg) translateY(14px) scale(.96)}65%{opacity:1;transform:perspective(800px) rotateX(-3deg) translateY(-2px) scale(1.01)}100%{opacity:1;transform:perspective(800px) rotateX(0) translateY(0) scale(1)}}
 @keyframes checkPop{0%{opacity:0;transform:scale(.4)}70%{transform:scale(1.12)}100%{opacity:1;transform:scale(1)}}
 .value,.metricNum{font-variant-numeric:tabular-nums}.statCard,.matchupChartRow,.effortShareCard{opacity:0;transform:translateY(10px) scale(.98)}.statCard.is-visible,.matchupChartRow.is-visible,.effortShareCard.is-visible{animation:statPop .42s cubic-bezier(.2,.8,.2,1) both}.winnerCheck{opacity:0;transform:scale(.4)}.winnerCheck.is-visible{animation:checkPop .42s cubic-bezier(.2,.8,.2,1) both}.barGraph{width:0;transition:width .75s cubic-bezier(.2,.8,.2,1)}
@@ -118,6 +119,67 @@ details.admin{margin-top:18px;background:#fff;border:1px solid var(--line);borde
 @media(max-width:640px){
   .app{padding-left:12px;padding-right:12px}.controlShell{padding:12px;border-radius:24px}.step{padding:14px;border-radius:18px}.statGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.statCard{min-height:104px;padding:12px;border-radius:18px}.statCard .value{font-size:30px}.section{margin-top:12px}.sectionTitle{margin-bottom:8px}.effortShareLegend{grid-template-columns:repeat(2,minmax(0,1fr))}.matchGrid{grid-template-columns:1fr}.simpleScopePicker{grid-template-columns:1fr;gap:8px}.reviewPanel{gap:12px}.breakdown{border-radius:18px}.barRow{grid-template-columns:92px 1fr 36px;font-size:12px}.matchupTable{padding:10px 12px 14px}.chartHeader{grid-template-columns:70px 1fr 70px;gap:6px}.segment{overflow-x:auto;scrollbar-width:none}.segment::-webkit-scrollbar{display:none}.segment button{min-width:88px;white-space:nowrap}
 }
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#16070a;
+    --bg2:#2a0b10;
+    --panel:#151922;
+    --panelSoft:#1f2937;
+    --text:#f8fafc;
+    --muted:#cbd5e1;
+    --line:rgba(255,255,255,.14);
+    --accent:#ff4d57;
+    --blue:#ff4d57;
+    --blue2:rgba(255,77,87,.16);
+    --shadow:0 18px 50px rgba(0,0,0,.34);
+  }
+  body{
+    color:var(--text);
+    background:
+      radial-gradient(circle at 8% 6%, rgba(215,25,32,.36) 0 0, rgba(215,25,32,.18) 0 170px, transparent 360px),
+      radial-gradient(circle at 92% 0%, rgba(255,183,197,.16) 0 0, rgba(255,183,197,.08) 0 210px, transparent 430px),
+      radial-gradient(circle at 50% 16%, rgba(255,77,87,.18) 0 0, rgba(255,77,87,.08) 0 150px, transparent 380px),
+      linear-gradient(145deg,#16070a 0%,#2a0b10 48%,#080a12 100%);
+  }
+  .header{color:#f8fafc}
+  h1{color:#ffffff;text-shadow:0 3px 28px rgba(255,77,87,.22)}
+  .kicker{color:#ffb7c5;text-shadow:none}
+  .status{background:rgba(21,25,34,.76);border-color:rgba(255,255,255,.14);color:#e5e7eb}
+  .controlShell,.step,.heroCard,.trendPanel,.breakdown,.matchupShell,.compareCard,.formula,.effortShareCard,.samuraiDetailCard,.effortModalPanel{
+    background:rgba(21,25,34,.92)!important;
+    border-color:rgba(255,255,255,.14)!important;
+    color:var(--text);
+  }
+  select,.playerSearch,.scopeSelect{background:#0f172a;color:#f8fafc;border-color:rgba(255,255,255,.18)}
+  .clearSearch,.segment{background:#1f2937;border-color:rgba(255,255,255,.12)}
+  .segment button{color:#cbd5e1}.segment button.active{background:#fff;color:#d71920}
+  .statCard{background:rgba(21,25,34,.94)!important;border-color:rgba(255,255,255,.14)!important;color:var(--text)}
+  .statCard .label,.statCard .sub,.heroMeta,.venue,.sectionTitle span,.scopeSummary,.matchupTeam,.trendSub,.badge{color:#cbd5e1}
+  .badge{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14)}
+  .matchCard{background:rgba(21,25,34,.88);border-color:rgba(255,255,255,.14);color:var(--text)}
+  .matchCard.active{background:rgba(255,77,87,.16)!important;border-color:rgba(255,77,87,.45)}
+  .empty{background:rgba(21,25,34,.72);border-color:rgba(255,255,255,.18);color:#cbd5e1}
+  .barTrack,.barHalf,.pill,.deltaPill{background:rgba(255,255,255,.10);color:#dbe4ef}
+  .effortModalClose{background:#1f2937;color:#f8fafc}
+
+  .sectionTitle h3,.breakdown h4,.effortShareTitle,.effortAnalysisCardHead,.trendTitle,.matchupTitle,.modalTitle,.effortModalTitle{color:#ffffff!important}
+  .sectionTitle h3:before{box-shadow:0 0 14px rgba(255,77,87,.45)}
+  .statCard .value,.heroTitle,.playerName,.metricValue,.chartVal,.effortLegendPct,.effortLegendTop,.colourHead,.trendValue,.matchupName{color:#f8fafc!important}
+  .statCard.gold .value{color:#ffd166!important}.statCard.green .value{color:#6ee7a8!important}.statCard.yellow .value{color:#fde68a!important}.statCard.redcard .value{color:#ff8a8a!important}
+  .effortLegendItem,.effortAnalysisCard{background:rgba(15,23,42,.88)!important;border-color:rgba(255,255,255,.14)!important;color:#f8fafc!important}
+  .effortLegendItem.gold,.effortAnalysisCard.gold{background:linear-gradient(180deg,rgba(216,154,33,.24),rgba(15,23,42,.92))!important;border-color:rgba(255,209,102,.45)!important}
+  .effortLegendItem.green,.effortAnalysisCard.green{background:linear-gradient(180deg,rgba(33,166,104,.24),rgba(15,23,42,.92))!important;border-color:rgba(110,231,168,.45)!important}
+  .effortLegendItem.yellow,.effortAnalysisCard.yellow{background:linear-gradient(180deg,rgba(229,189,36,.24),rgba(15,23,42,.92))!important;border-color:rgba(253,230,138,.45)!important}
+  .effortLegendItem.redcard,.effortAnalysisCard.redcard{background:linear-gradient(180deg,rgba(219,74,66,.25),rgba(15,23,42,.92))!important;border-color:rgba(255,138,138,.45)!important}
+  .effortLegendCount,.helper,.smallNote,.effortShareTotal,.trendMeta,.chartMetric,.modalSub{color:#cbd5e1!important}
+  .trendPanel svg text,.trendSvg text{fill:#dbe4ef!important}
+  .trendPanel .axis,.trendAxis{color:#cbd5e1!important}
+  .tooltip,.trendTooltip{background:#0f172a!important;color:#f8fafc!important;border-color:rgba(255,255,255,.2)!important;box-shadow:0 16px 40px rgba(0,0,0,.45)!important}
+  .effortReviewTap .tapHint{color:#ff8a8a!important}.effortReviewTap .tapBadge{background:#f8fafc!important;color:#991b1b!important}
+  .samuraiDetailCard{background:rgba(15,23,42,.88)!important;color:#f8fafc!important}.samuraiDetailCard li,.detailList li{color:#e5e7eb!important}
+}
+
 @media(max-width:900px){.matchupPlayer.right{text-align:right}.matchupTop{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}.matchupPlayer{min-width:0;padding:14px 8px}.matchupVs{padding:0 6px}.matchupName{font-size:16px;line-height:1.12;letter-spacing:-.025em;overflow-wrap:normal;word-break:normal}.matchupTeam{font-size:11px}.chartHeader{grid-template-columns:66px 1fr 66px}.chartVal{font-size:15px}.chartMetric{font-size:10px}.steps,.playerHero,.reviewPanel,.compareGrid{grid-template-columns:1fr}.viewControls{grid-template-columns:1fr 1fr}.statGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.adminGrid{grid-template-columns:1fr}.vs{padding:0}.compareGrid .vs:before,.compareGrid .vs:after{content:"";display:block;height:1px;background:var(--line)}}
 @media(max-width:540px){.samuraiDetail{grid-template-columns:1fr}.statCard:after{display:none}.effortShareLegend{grid-template-columns:repeat(2,minmax(0,1fr))}.effortAnalysisGrid{grid-template-columns:1fr}.effortAnalysisLegend{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.trendGrid{grid-template-columns:1fr}.trendPanel{padding:12px;border-radius:18px}.trendSvg{height:112px}.effortAnalysisLegend .effortLegendItem{padding:8px 6px}.effortAnalysisLegend .effortLegendPct{font-size:16px}.effortStack{height:24px}.header{padding-top:22px}.app{padding-inline:12px;max-width:100vw}.controlShell{border-radius:22px;padding:12px;max-width:100%;overflow:hidden}.steps{gap:12px}.viewControls{grid-template-columns:1fr;gap:12px}.segment{flex-direction:row;overflow-x:auto;scrollbar-width:none}.segment::-webkit-scrollbar{display:none}.segment button{font-size:11px;padding:8px 6px;min-width:0;white-space:nowrap}.statGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.statCard{min-height:104px;padding:12px 10px}.statCard .label{font-size:10px;letter-spacing:.03em;line-height:1.15}.statCard .value{font-size:28px}.status{border-radius:18px}.simpleScopePicker{padding:10px;border-radius:18px}.scopeSelect{font-size:14px;padding:11px 12px}.heroCard,.step{padding:15px}.barRow{grid-template-columns:94px 1fr 34px}.playerName{font-size:28px}.matchupTable{padding:10px}.matchupLegend{font-size:11px;gap:8px}.chartHeader{grid-template-columns:58px 1fr 58px;gap:7px}.winnerCheck{width:18px;height:18px;font-size:12px;margin:0 3px}.matchupName{font-size:14px}.matchupTeam{font-size:10px}}
 
@@ -759,7 +821,7 @@ function aggregate(matches,key){ const p=state.players.get(key)||{name:'',team:'
 function currentContext(){ if(!state.selectedPlayer) return null; const ms=matchesForPlayer(state.selectedPlayer); if(state.scope==='career') return {label:'Career Total', sub:`${ms.length} matches`, matches:ms, raw:aggregate(ms,state.selectedPlayer)}; if(state.scope==='season'){ const s=state.selectedId||seasonsForPlayer(state.selectedPlayer)[0]; const selected=ms.filter(m=>(m.season||'Unknown')===s); return {label:`${s} Season`, sub:`${selected.length} matches`, matches:selected, raw:aggregate(selected,state.selectedPlayer)}; } const m=state.matches.find(x=>x.id===state.selectedId)||ms[0]; return m?{label:m.label,sub:[m.date,m.venue,m.competition].filter(Boolean).join('<br>'),matches:[m],match:m,raw:m.playerStats.get(state.selectedPlayer)}:null; }
 function metricLabel(){return state.metric==='perGame'?'Per game':state.metric==='per80'?'Per 80':'Total';}
 function displayNumber(v){return state.metric==='total'?intFmt(v):oneDec(v);}
-function card(label,value,sub='',cls=''){const safeValue=escapeHtml(value);return `<div class="statCard ${cls}"><div><div class="label">${escapeHtml(label)}</div><div class="value" data-final="${safeValue}">${safeValue}</div></div>${sub?`<div class="sub">${escapeHtml(sub)}</div>`:''}</div>`;}
+function card(label,value,sub='',cls='',attrs={}){const safeValue=escapeHtml(value);const attrText=Object.entries(attrs||{}).map(([k,v])=>` data-${escapeHtml(k)}="${escapeHtml(v)}"`).join('');const role=cls.includes('actionable')?' tabindex="0" role="button"':'';return `<div class="statCard ${cls}"${role}${attrText}><div><div class="label">${escapeHtml(label)}</div><div class="value" data-final="${safeValue}">${safeValue}</div></div>${sub?`<div class="sub">${escapeHtml(sub)}</div>`:''}</div>`;}
 function effortReviewCard(label,value,cls=''){const safeValue=escapeHtml(value);return `<button type="button" class="statCard effortReviewTap ${cls}" data-effort-analysis="${escapeHtml(label)}" aria-label="Open ${escapeHtml(label)} Effort Analysis"><span class="tapBadge">Open</span><span class="tapRing" aria-hidden="true"></span><div><div class="label">${escapeHtml(label)}</div><div class="value" data-final="${safeValue}">${safeValue}</div></div><div class="sub tapHint">Tap to see analysis</div></button>`;}
 function parseAnimatedNumber(text){
   const raw=String(text??'').trim();
@@ -1009,20 +1071,41 @@ function renderSeasonTrends(ctx){
   renderTrendPanel('carryTrend','Carry',[{key:'carry',label:'Carry'},{key:'carryMetres',label:'Carry Metres'},{key:'carryDominance',label:'Carry Dominance%'},{key:'postContactMetres',label:'Post Contact Metres'}],ctx);
   renderTrendPanel('tackleTrend','Tackle',[{key:'tackle',label:'Tackle'},{key:'tackleCompletion',label:'Tackle Completion'},{key:'tackleDominance',label:'Tackle Dominance%'}],ctx);
 }
+function samuraiActionEntries(st,kind){
+  const obj=kind==='positive'?st?.positiveActionTypes:st?.negativeActionTypes;
+  return Object.entries(obj||{}).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]));
+}
+function renderSamuraiActionDetailContent(st,kind){
+  const total=kind==='positive'?toNumber(st?.positiveActions):toNumber(st?.negativeActions);
+  const title=kind==='positive'?'Positive Action Detail':'Negative Action Detail';
+  const entries=samuraiActionEntries(st,kind);
+  const kindCls=kind==='positive'?'positive':'negative';
+  const rows=entries.length?entries.map(([name,count])=>`<div class="samuraiDetailRow"><span class="samuraiDetailName">${escapeHtml(name)}</span><span class="samuraiDetailCount">${intFmt(count)}</span></div>`).join(''):'<div class="helper">No Data</div>';
+  return `<div class="samuraiDetailCard ${kindCls}"><div class="samuraiDetailHead"><span class="samuraiDetailTitle">${escapeHtml(title)}</span><span class="pill">${intFmt(total)}</span></div><div class="samuraiDetailList">${rows}</div></div>`;
+}
+function openSamuraiActionModal(kind){
+  const ctx=currentContext();
+  const raw=ctx&&ctx.raw;
+  if(!raw) return;
+  const modal=$('effortAnalysisModal');
+  const title=kind==='positive'?'Positive Action Detail':'Negative Action Detail';
+  $('effortAnalysisModalTitle').textContent=title;
+  $('effortAnalysisModalSub').textContent=kind==='positive'?'Actions counted as Samurai Stats positives.':'Actions counted as Samurai Stats negatives.';
+  $('effortAnalysisModalBody').innerHTML=renderSamuraiActionDetailContent(raw,kind);
+  applyLanguage($('effortAnalysisModal'));
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
 function renderSamuraiDetail(st){
-  const topEntries=obj=>Object.entries(obj||{}).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])).slice(0,8);
-  const block=(title,total,entries,kind)=>{
-    const rows=entries.length?entries.map(([name,count])=>`<div class="samuraiDetailRow"><span class="samuraiDetailName">${escapeHtml(name)}</span><span class="samuraiDetailCount">${intFmt(count)}</span></div>`).join(''):'<div class="helper">No Data</div>';
-    return `<div class="samuraiDetailCard ${kind}"><div class="samuraiDetailHead"><span class="samuraiDetailTitle">${escapeHtml(title)}</span><span class="pill">${intFmt(total)}</span></div><div class="samuraiDetailList">${rows}</div></div>`;
-  };
-  $('samuraiDetail').innerHTML=block('Positive Action Detail',st.positiveActions||0,topEntries(st.positiveActionTypes),'positive')+block('Negative Action Detail',st.negativeActions||0,topEntries(st.negativeActionTypes),'negative');
+  if($('samuraiDetail')) $('samuraiDetail').innerHTML='';
 }
 function renderDashboard(){ const ctx=currentContext(); if(!ctx||!ctx.raw) return; const raw=ctx.raw; const st=scaleStats(raw,state.metric); const p=raw.player; dashboard.style.display='block'; $('playerName').textContent=p.name; const meta=[]; if(raw.shirt||p.shirt) meta.push(`<span class="badge red">#${escapeHtml(raw.shirt||p.shirt)}</span>`); meta.push(`<span class="badge">${escapeHtml(p.team)}</span>`); if(raw.position||p.position) meta.push(`<span class="badge">${escapeHtml(raw.position||p.position)}</span>`); meta.push(`<span class="badge">${escapeHtml(metricLabel())}</span>`); if(ctx.match&&ctx.match.minutesSource) meta.push(`<span class="badge">Minutes: ${escapeHtml(ctx.match.minutesSource)}</span>`); $('playerMeta').innerHTML=meta.join(''); $('scoreLine').textContent=ctx.label; $('matchMeta').innerHTML=ctx.sub||''; $('carryContext').textContent=metricLabel(); $('tackleContext').textContent=metricLabel(); $('effortContext').textContent=metricLabel();
   $('carryStats').innerHTML=[card('Carry',displayNumber(st.carry)),card('Carry Metres',displayNumber(st.carryMetres)),card('Carry Dominance%',pct(raw.carryDominant,raw.carryContact),`${raw.carryDominant}/${raw.carryContact} dominant contact`),card('Post Contact Metres',displayNumber(st.postContactMetres))].join('');
   $('tackleStats').innerHTML=[card('Tackle',displayNumber(st.tackleMade),`${intFmt(raw.tackleAttempts)} attempts`),card('Tackle Completion',pct(raw.tackleMade,raw.tackleAttempts),`${raw.tackleMade}/${raw.tackleAttempts} made`),card('Tackle Dominance%',pct(raw.tackleDominant,raw.tackleAttempts),`${raw.tackleDominant}/${raw.tackleAttempts} dominant tackle`)].join('');
   $('colourStats').innerHTML=[effortReviewCard('Gold',displayNumber(st.colours.Gold),'gold'),effortReviewCard('Green',displayNumber(st.colours.Green),'green'),effortReviewCard('Yellow',displayNumber(st.colours.Yellow),'yellow'),effortReviewCard('Red',displayNumber(st.colours.Red),'redcard')].join(''); renderEffortShare(raw);
   $('gameTimeStats').innerHTML=[card('Matches',intFmt(raw.appearances||ctx.matches?.length||1),'Games included in this view'),card('Minutes Played',oneDec(raw.minutes||0),'Actual playing time'),card('Ball-in-play Min',oneDec(raw.ballInPlayMins),'Player BIP minutes')].join('');
-  $('samuraiStats').innerHTML=[card('Samurai Stats',signedOneDec(samuraiRate(raw)),`${intFmt(raw.positiveActions)} positive / ${intFmt(raw.negativeActions)} negative`,'samuraiCard'),card('Positive Actions',displayNumber(st.positiveActions)),card('Negative Actions',displayNumber(st.negativeActions))].join(''); renderSamuraiDetail(raw);
+  $('samuraiStats').innerHTML=[card('Samurai Stats',signedOneDec(samuraiRate(raw)),`${intFmt(raw.positiveActions)} positive / ${intFmt(raw.negativeActions)} negative`,'samuraiCard'),card('Positive Actions',displayNumber(st.positiveActions),'Tap for detail','actionable samuraiActionCard',{'samurai-action':'positive'}),card('Negative Actions',displayNumber(st.negativeActions),'Tap for detail','actionable samuraiActionCard',{'samurai-action':'negative'})].join(''); renderSamuraiDetail(raw);
   renderSeasonTrends(ctx);
   renderBreakdowns(raw); renderComparison(ctx); animateDashboardNumbers(); dashboard.scrollIntoView({behavior:'smooth',block:'start'});
 }
@@ -1210,7 +1293,18 @@ const __renderDashboard = renderDashboard;
 renderDashboard = function(){ __renderDashboard(); applyLanguage(dashboard); };
 applyLanguage(document);
 
-document.addEventListener('click',e=>{const trigger=e.target.closest&&e.target.closest('[data-effort-analysis]');if(trigger){e.preventDefault();openEffortAnalysisModal(trigger.dataset.effortAnalysis);}});
+document.addEventListener('click',e=>{
+  const effortTrigger=e.target.closest&&e.target.closest('[data-effort-analysis]');
+  if(effortTrigger){e.preventDefault();openEffortAnalysisModal(effortTrigger.dataset.effortAnalysis);return;}
+  const samuraiTrigger=e.target.closest&&e.target.closest('[data-samurai-action]');
+  if(samuraiTrigger){e.preventDefault();openSamuraiActionModal(samuraiTrigger.dataset.samuraiAction);}
+});
+document.addEventListener('keydown',e=>{
+  if((e.key==='Enter'||e.key===' ')&&e.target?.closest?.('[data-samurai-action]')){
+    e.preventDefault();
+    openSamuraiActionModal(e.target.closest('[data-samurai-action]').dataset.samuraiAction);
+  }
+});
 $('effortAnalysisModalClose').addEventListener('click',closeEffortAnalysisModal);
 $('effortAnalysisModal').addEventListener('click',e=>{if(e.target.id==='effortAnalysisModal')closeEffortAnalysisModal();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeEffortAnalysisModal();});
