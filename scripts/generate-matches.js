@@ -1,142 +1,38 @@
 const fs = require('fs');
 const path = require('path');
 
-const root = path.resolve(__dirname, '..');
-const dataDir = path.join(root, 'data');
-const outPath = path.join(dataDir, 'matches.json');
-const overridesPath = path.join(dataDir, 'match_overrides.json');
-
-function parseCsvLine(line) {
-  const out = [];
-  let cur = '';
-  let inQuotes = false;
-  for (let i = 0; i < line.length; i++) {
-    const ch = line[i];
-    const next = line[i + 1];
-    if (ch === '"') {
-      if (inQuotes && next === '"') {
-        cur += '"';
-        i++;
-      } else {
-        inQuotes = !inQuotes;
-      }
-    } else if (ch === ',' && !inQuotes) {
-      out.push(cur);
-      cur = '';
-    } else {
-      cur += ch;
-    }
+const DATA_DIR = path.join(process.cwd(), 'data');
+function listFiles(dir){ try{return fs.readdirSync(dir).filter(f=>fs.statSync(path.join(dir,f)).isFile());}catch{return [];} }
+function parseId(name){ const m=String(name).match(/^(\d{5,})/); return m ? m[1] : ''; }
+function readFirstCsvRow(file){
+  try{
+    const txt=fs.readFileSync(file,'utf8').replace(/^\uFEFF/,'');
+    const lines=txt.split(/\r?\n/).filter(Boolean); if(lines.length<2) return {};
+    const parse=(line)=>{ const out=[]; let field='',q=false; for(let i=0;i<line.length;i++){ const c=line[i]; if(q){ if(c==='"'){ if(line[i+1]==='"'){field+='"';i++;} else q=false; } else field+=c; } else if(c==='"') q=true; else if(c===','){out.push(field);field='';} else field+=c; } out.push(field); return out; };
+    const h=parse(lines[0]).map(x=>x.trim()); const v=parse(lines[1]); const row={}; h.forEach((x,i)=>row[x]=v[i]||''); return row;
+  }catch{return {};}
+}
+function dateLabel(v){ if(!v) return ''; const s=String(v).trim(); const dm=s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/); if(dm) return `${dm[3]}-${dm[2].padStart(2,'0')}-${dm[1].padStart(2,'0')}`; return s.slice(0,10); }
+function main(){
+  fs.mkdirSync(DATA_DIR,{recursive:true});
+  const files=listFiles(DATA_DIR);
+  let overrides={}; try{overrides=JSON.parse(fs.readFileSync(path.join(DATA_DIR,'match_overrides.json'),'utf8'));}catch{}
+  const groups=new Map();
+  for(const f of files){ const id=parseId(f); if(!id) continue; if(!groups.has(id)) groups.set(id,{id}); const g=groups.get(id); const lower=f.toLowerCase(); if(lower.endsWith('.xml')) g.superscoutXml=f; else if(lower.endsWith('.csv')){ if(lower.includes('measurem')||lower.includes('review')||lower.includes('effort')) g.reviewCsv=f; else g.biCsv=f; } }
+  const out=[];
+  for(const [id,g] of [...groups.entries()].sort((a,b)=>a[0].localeCompare(b[0]))){
+    const first=g.biCsv ? readFirstCsvRow(path.join(DATA_DIR,g.biCsv)) : {};
+    const home=first.homeTeamName||''; const away=first.awayTeamName||''; const score=(first.hometeamFTscore||first.awayteamFTscore)?`${first.hometeamFTscore||''}–${first.awayteamFTscore||''}`:'';
+    const label=(home&&away&&score)?`${home} ${score} ${away}`:(home&&away?`${home} v ${away}`:id);
+    const date=dateLabel(first.datePlayed||first.UTCTime||'');
+    const item={id,label,date,season:date?date.slice(0,4):'Unknown'};
+    if(g.biCsv) item.biCsv=g.biCsv;
+    if(g.reviewCsv) item.reviewCsv=g.reviewCsv;
+    if(g.superscoutXml) item.superscoutXml=g.superscoutXml;
+    Object.assign(item, overrides[id]||{});
+    out.push(item);
   }
-  out.push(cur);
-  return out;
+  fs.writeFileSync(path.join(DATA_DIR,'matches.json'), JSON.stringify(out, null, 2));
+  console.log(`Generated data/matches.json with ${out.length} matches.`);
 }
-
-function readFirstRows(filePath, maxRows = 80) {
-  const text = fs.readFileSync(filePath, 'utf8').replace(/^\uFEFF/, '');
-  const lines = text.split(/\r?\n/).filter(Boolean).slice(0, maxRows + 1);
-  if (lines.length === 0) return { header: [], rows: [] };
-  const header = parseCsvLine(lines[0]);
-  const rows = lines.slice(1).map(parseCsvLine).map(values => {
-    const row = {};
-    header.forEach((h, i) => row[h] = values[i] ?? '');
-    return row;
-  });
-  return { header, rows };
-}
-
-function isoDateFromUtc(value) {
-  if (!value) return '';
-  const m = String(value).match(/^(\d{4}-\d{2}-\d{2})/);
-  return m ? m[1] : '';
-}
-
-function niceFallbackLabel(filename, id) {
-  return filename
-    .replace(new RegExp('^' + id + '_?'), '')
-    .replace(/_?BI\.csv$/i, '')
-    .replace(/_/g, ' ')
-    .replace(/v/i, ' v ')
-    .trim() || id;
-}
-
-function loadOverrides() {
-  if (!fs.existsSync(overridesPath)) return {};
-  return JSON.parse(fs.readFileSync(overridesPath, 'utf8'));
-}
-
-const allFiles = fs.readdirSync(dataDir);
-const files = allFiles.filter(f => f.toLowerCase().endsWith('.csv'));
-const xmlFiles = allFiles.filter(f => f.toLowerCase().endsWith('.xml'));
-const groups = new Map();
-
-for (const file of files) {
-  const idMatch = file.match(/^(\d+)/);
-  if (!idMatch) {
-    console.warn(`Skipped: ${file}（ファイル名の先頭に試合IDがありません）`);
-    continue;
-  }
-  const id = idMatch[1];
-  if (!groups.has(id)) groups.set(id, { id });
-  const g = groups.get(id);
-  const lower = file.toLowerCase();
-
-  // Review CSV: Gold / Green / Yellow / Red が入っているファイル
-  if (lower.includes('measurem') || lower.includes('advanced')) {
-    g.reviewCsv = file;
-  } else {
-    g.biCsv = file;
-  }
-}
-
-for (const file of xmlFiles) {
-  const idMatch = file.match(/^(\d+)/);
-  if (!idMatch) {
-    console.warn(`Skipped XML: ${file}（ファイル名の先頭に試合IDがありません）`);
-    continue;
-  }
-  const id = idMatch[1];
-  if (!groups.has(id)) groups.set(id, { id });
-  groups.get(id).superscoutXml = file;
-}
-
-const overrides = loadOverrides();
-const matches = [];
-
-for (const [id, group] of Array.from(groups.entries()).sort(([a], [b]) => a.localeCompare(b))) {
-  if (!group.biCsv && !group.reviewCsv && !group.superscoutXml) {
-    console.warn(`Skipped match ${id}: data file not found`);
-    continue;
-  }
-
-  const metaFile = group.biCsv || group.reviewCsv;
-  const rows = metaFile ? readFirstRows(path.join(dataDir, metaFile)).rows : [];
-  let homeTeam = '';
-  let awayTeam = '';
-  let date = '';
-
-  for (const row of rows) {
-    homeTeam = homeTeam || row.homeTeamName || row.HomeTeamName || row.Home || '';
-    awayTeam = awayTeam || row.awayTeamName || row.AwayTeamName || row.Away || '';
-    date = date || isoDateFromUtc(row.UTCTime || row.utcTime || row.Date || row.datePlayed || '');
-    if (homeTeam && awayTeam && date) break;
-  }
-
-  const fallbackFileName = path.basename(metaFile || group.superscoutXml || id);
-  const entry = {
-    id,
-    label: homeTeam && awayTeam ? `${homeTeam} v ${awayTeam}` : niceFallbackLabel(fallbackFileName, id),
-    date,
-    homeTeam,
-    awayTeam,
-    score: '',
-    venue: '',
-    ...(group.biCsv ? { biCsv: group.biCsv } : {}),
-    ...(group.reviewCsv ? { reviewCsv: group.reviewCsv } : {}),
-    ...(group.superscoutXml ? { superscoutXml: group.superscoutXml } : {})
-  };
-
-  matches.push({ ...entry, ...(overrides[id] || {}) });
-}
-
-fs.writeFileSync(outPath, JSON.stringify(matches, null, 2) + '\n');
-console.log(`Generated ${path.relative(root, outPath)} with ${matches.length} match(es).`);
+main();
