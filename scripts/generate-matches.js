@@ -64,7 +64,9 @@ function loadOverrides() {
   return JSON.parse(fs.readFileSync(overridesPath, 'utf8'));
 }
 
-const files = fs.readdirSync(dataDir).filter(f => f.toLowerCase().endsWith('.csv'));
+const allFiles = fs.readdirSync(dataDir);
+const files = allFiles.filter(f => f.toLowerCase().endsWith('.csv'));
+const xmlFiles = allFiles.filter(f => f.toLowerCase().endsWith('.xml'));
 const groups = new Map();
 
 for (const file of files) {
@@ -84,6 +86,17 @@ for (const file of files) {
   } else {
     g.biCsv = file;
   }
+}
+
+for (const file of xmlFiles) {
+  const idMatch = file.match(/^(\d+)/);
+  if (!idMatch) {
+    console.warn(`Skipped XML: ${file}（ファイル名の先頭に試合IDがありません）`);
+    continue;
+  }
+  const id = idMatch[1];
+  if (!groups.has(id)) groups.set(id, { id });
+  groups.get(id).superscoutXml = file;
 }
 
 const overrides = loadOverrides();
@@ -118,7 +131,8 @@ for (const [id, group] of Array.from(groups.entries()).sort(([a], [b]) => a.loca
     score: '',
     venue: '',
     biCsv: group.biCsv,
-    reviewCsv: group.reviewCsv
+    reviewCsv: group.reviewCsv,
+    ...(group.superscoutXml ? { superscoutXml: group.superscoutXml } : {})
   };
 
   matches.push({ ...entry, ...(overrides[id] || {}) });
