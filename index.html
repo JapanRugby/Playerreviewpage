@@ -123,7 +123,7 @@ details.admin summary{cursor:pointer;font-weight:800;color:#334155}.adminGrid{di
       <div class="step">
         <h2><span class="stepno">1</span>選手名を選ぶ</h2>
         <select id="playerSelect" disabled><option>読み込み中...</option></select>
-        <div class="helper">選手一覧は、アップロードされた全試合CSVから自動で作ります。</div>
+        <div class="helper">選手一覧は JAPAN / JAPAN XV の選手だけを表示します。</div>
       </div>
       <div class="step">
         <h2><span class="stepno">2</span>試合を選ぶ</h2>
@@ -182,7 +182,8 @@ details.admin summary{cursor:pointer;font-weight:800;color:#334155}.adminGrid{di
   </main>
 <script>
 const CONFIG = {
-  manifestUrl: 'data/matches.json'
+  manifestUrl: 'data/matches.json',
+  targetTeams: ['Japan', 'Japan XV']
 };
 
 const state = {
@@ -205,10 +206,27 @@ function setStatus(text, kind='warn'){
 function escapeHtml(v){return String(v ?? '').replace(/[&<>'"]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[s]));}
 function norm(v){return String(v ?? '').trim().replace(/\s+/g,' ').toLowerCase();}
 function playerKey(name, team){return `${norm(name)}|${norm(team)}`;}
+function normTeam(v){return String(v ?? '').trim().replace(/\s+/g,' ').toUpperCase();}
+function isTargetTeam(team){
+  const t = normTeam(team);
+  return CONFIG.targetTeams.some(x => normTeam(x) === t);
+}
 function toNumber(v){const n = parseFloat(String(v ?? '').replace(/,/g,'')); return Number.isFinite(n) ? n : 0;}
 function pct(num, den){return den > 0 ? `${Math.round((num / den) * 100)}%` : '—';}
 function intFmt(n){return Math.round(toNumber(n)).toLocaleString('en-US');}
 function urlWithCacheBust(url){const u = new URL(url, location.href); u.searchParams.set('_', String(Date.now())); return u.toString();}
+function resolveCsvUrl(fileRef, manifestUrl){
+  const ref = String(fileRef || '').trim().replace(/\\/g, '/');
+  if(!ref) throw new Error('matches.json にCSVファイル名がありません');
+  if(/^https?:\/\//i.test(ref) || ref.startsWith('//') || ref.startsWith('/')){
+    return new URL(ref, location.href).toString();
+  }
+  // matches.json が data/ 内にあり、CSV指定が "946487_xxx.csv" なら data/ 内として解決。
+  // CSV指定がすでに "data/946487_xxx.csv" なら、ページ直下から解決して data/data を防ぐ。
+  const siteBase = new URL('./', location.href).toString();
+  const manifestBase = new URL(manifestUrl, location.href).toString();
+  return ref.startsWith('data/') ? new URL(ref, siteBase).toString() : new URL(ref, manifestBase).toString();
+}
 
 function parseCSV(text){
   text = String(text || '').replace(/^\uFEFF/, '');
@@ -272,6 +290,7 @@ function blankStats(player){
 }
 function ensurePlayer(match, name, team, data={}){
   if(!name || !team) return null;
+  if(!isTargetTeam(team)) return null;
   const key = playerKey(name, team);
   let p = state.players.get(key);
   if(!p){
@@ -353,9 +372,9 @@ function buildMatch(item, biRows, reviewRows){
   return match;
 }
 
-async function fetchText(url, bust=false){
+async function fetchText(url, bust=true){
   const target = bust ? urlWithCacheBust(url) : new URL(url, location.href).toString();
-  const res = await fetch(target);
+  const res = await fetch(target, { cache: 'no-store' });
   if(!res.ok) throw new Error(`${res.status} ${res.statusText}: ${url}`);
   return await res.text();
 }
@@ -371,8 +390,8 @@ async function loadFromManifest(force=false){
   for(const item of manifest){
     idx++;
     setStatus(`${idx}/${manifest.length} 試合目のCSVを読み込み中...`);
-    const biUrl = new URL(item.biCsv, baseUrl).toString();
-    const reviewUrl = new URL(item.reviewCsv, baseUrl).toString();
+    const biUrl = resolveCsvUrl(item.biCsv, manifestUrl);
+    const reviewUrl = resolveCsvUrl(item.reviewCsv, manifestUrl);
     const [biText, reviewText] = await Promise.all([fetchText(biUrl, force), fetchText(reviewUrl, force)]);
     const biRows = parseCSV(biText);
     const reviewRows = parseCSV(reviewText);
@@ -381,7 +400,7 @@ async function loadFromManifest(force=false){
   state.matches = matches;
   hydrateUI();
   const playerCount = state.players.size;
-  setStatus(`${matches.length}試合 / ${playerCount}選手を読み込みました`, 'ok');
+  setStatus(`${matches.length}試合 / ${playerCount}選手を読み込みました（JAPAN / JAPAN XVのみ）`, 'ok');
 }
 
 function hydrateUI(){
@@ -514,11 +533,11 @@ $('localLoad').addEventListener('click', async () => {
     state.matches = [match];
     hydrateUI();
     renderMatches();
-    setStatus(`ローカルCSV: 1試合 / ${state.players.size}選手を読み込みました`, 'ok');
+    setStatus(`ローカルCSV: 1試合 / ${state.players.size}選手を読み込みました（JAPAN / JAPAN XVのみ）`, 'ok');
   }catch(err){ setStatus(err.message, 'err'); }
 });
 
-loadFromManifest().catch(err => {
+loadFromManifest(true).catch(err => {
   console.error(err);
   playerSelect.disabled = true;
   playerSelect.innerHTML = '<option>読み込みエラー</option>';
