@@ -516,22 +516,33 @@ function seasonsForPlayer(key){return [...new Set(matchesForPlayer(key).map(m=>m
 function optionSummaryForMatch(m,st){
   return [m.date||'', `Carry ${intFmt(st.carry)}`, `Tackle ${intFmt(st.tackleMade)}/${intFmt(st.tackleAttempts)}`, `Effort ${intFmt(st.reviewTotal)}`].filter(Boolean).join(' · ');
 }
-function renderSimpleScopePicker(kind, items, selectedId, placeholder='Select an option'){
+function renderSimpleScopePicker(kind, items, selectedId, placeholder='Select an option', autoRender=true){
   const label = kind==='match'?'Match':kind==='season'?'Season':'Career';
   const disabled = !items.length;
+  const hasSelection = selectedId && items.some(it=>String(it.id)===String(selectedId));
   matchCards.innerHTML = `<div class="simpleScopePicker ${disabled?'':'scopeReady'}">
     <div><div class="simpleScopeLabel">${escapeHtml(label)}</div><div class="scopeSummary" id="scopeSummaryText">${disabled?'No data available':'Choose from available '+label.toLowerCase()+'s'}</div></div>
     <select id="scopeItemSelect" class="scopeSelect" ${disabled?'disabled':''}></select>
   </div>`;
   const sel=$('scopeItemSelect');
-  sel.innerHTML = disabled ? `<option>${escapeHtml(placeholder)}</option>` : items.map(it=>`<option value="${escapeHtml(it.id)}" ${String(it.id)===String(selectedId)?'selected':''}>${escapeHtml(it.label)}</option>`).join('');
+  if(disabled){
+    sel.innerHTML = `<option>${escapeHtml(placeholder)}</option>`;
+  }else{
+    const placeholderOption = `<option value="" ${hasSelection?'':'selected'}>${escapeHtml(placeholder)}</option>`;
+    sel.innerHTML = placeholderOption + items.map(it=>`<option value="${escapeHtml(it.id)}" ${String(it.id)===String(selectedId)?'selected':''}>${escapeHtml(it.label)}</option>`).join('');
+  }
   const setSummary=()=>{
     const current=items.find(it=>String(it.id)===String(sel.value));
     const summary=$('scopeSummaryText');
-    if(summary) summary.textContent=current?.summary || '';
+    if(summary) summary.textContent=current?.summary || (disabled?'No data available':`Select a ${label.toLowerCase()} to view the dashboard`);
   };
   setSummary();
-  sel.addEventListener('change',()=>{ state.selectedId=sel.value; setSummary(); renderDashboard(); });
+  sel.addEventListener('change',()=>{
+    state.selectedId=sel.value;
+    setSummary();
+    if(state.selectedId) renderDashboard(); else dashboard.style.display='none';
+  });
+  if(autoRender && hasSelection) renderDashboard();
 }
 function renderOptions(){
   dashboard.style.display='none';
@@ -544,31 +555,28 @@ function renderOptions(){
     const ms=matchesForPlayer(state.selectedPlayer);
     state.selectedId='career';
     renderSimpleScopePicker('career',[{id:'career',label:'Career Total',summary:`${ms.length} match${ms.length===1?'':'es'} selected`}],'career');
-    renderDashboard();
     return;
   }
   if(state.scope==='season'){
     const seasons=seasonsForPlayer(state.selectedPlayer);
     if(!seasons.length){matchCards.innerHTML='<div class="empty">No season data found for this player.</div>';return;}
-    if(!state.selectedId || !seasons.includes(state.selectedId)) state.selectedId=seasons[0];
+    if(state.selectedId && !seasons.includes(state.selectedId)) state.selectedId='';
     const items=seasons.map(s=>{
       const ms=matchesForPlayer(state.selectedPlayer).filter(m=>(m.season||'Unknown')===s);
       const total=aggregate(ms,state.selectedPlayer);
       return {id:s,label:s,summary:`${ms.length} game${ms.length===1?'':'s'} · Carry ${intFmt(total.carry)} · Effort ${intFmt(total.reviewTotal)}`};
     });
-    renderSimpleScopePicker('season',items,state.selectedId,'No season data');
-    renderDashboard();
+    renderSimpleScopePicker('season',items,state.selectedId,'Select a season',false);
     return;
   }
   const ms=matchesForPlayer(state.selectedPlayer);
   if(!ms.length){matchCards.innerHTML='<div class="empty">No match data found for this player.</div>';return;}
-  if(!state.selectedId || !ms.some(m=>String(m.id)===String(state.selectedId))) state.selectedId=ms[0].id;
+  if(state.selectedId && !ms.some(m=>String(m.id)===String(state.selectedId))) state.selectedId='';
   const items=ms.map(m=>{
     const st=m.playerStats.get(state.selectedPlayer);
     return {id:m.id,label:[m.date,m.label].filter(Boolean).join(' — '),summary:optionSummaryForMatch(m,st)};
   });
-  renderSimpleScopePicker('match',items,state.selectedId,'No match data');
-  renderDashboard();
+  renderSimpleScopePicker('match',items,state.selectedId,'Select a match',false);
 }
 function aggregate(matches,key){ const p=state.players.get(key)||{name:'',team:''}; const agg=blankStats(p); agg.minutes=0; for(const m of matches){ const st=m.playerStats.get(key); if(st) mergeStats(agg,st); } return agg; }
 function currentContext(){ if(!state.selectedPlayer) return null; const ms=matchesForPlayer(state.selectedPlayer); if(state.scope==='career') return {label:'Career Total', sub:`${ms.length} matches`, matches:ms, raw:aggregate(ms,state.selectedPlayer)}; if(state.scope==='season'){ const s=state.selectedId||seasonsForPlayer(state.selectedPlayer)[0]; const selected=ms.filter(m=>(m.season||'Unknown')===s); return {label:`${s} Season`, sub:`${selected.length} matches`, matches:selected, raw:aggregate(selected,state.selectedPlayer)}; } const m=state.matches.find(x=>x.id===state.selectedId)||ms[0]; return m?{label:m.label,sub:[m.date,m.venue,m.competition].filter(Boolean).join('<br>'),matches:[m],match:m,raw:m.playerStats.get(state.selectedPlayer)}:null; }
@@ -744,13 +752,13 @@ async function handlePlayerSearch(){
     $('playerSearchHint').textContent='No exact player selected yet. Choose a name from the search list.';
     return;
   }
-  $('playerSearchHint').textContent='Loading selected player...';
+  $('playerSearchHint').textContent='Loading matches for this player...';
   state.selectedPlayer=key; state.selectedId=''; dashboard.style.display='none';
   matchCards.innerHTML='<div class="empty">Loading selected player data...</div>';
   try{
     await loadPlayerMatches(state.selectedPlayer,true);
     const p=state.players.get(state.selectedPlayer);
-    $('playerSearchHint').textContent=p?`${p.name} selected`:'Player selected';
+    $('playerSearchHint').textContent=p?`${p.name} selected. Choose a match, season, or career to view stats.`:'Player selected. Choose a match, season, or career to view stats.';
     renderOptions();
   }catch(err){
     console.error(err);
