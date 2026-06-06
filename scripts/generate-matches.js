@@ -103,35 +103,35 @@ const overrides = loadOverrides();
 const matches = [];
 
 for (const [id, group] of Array.from(groups.entries()).sort(([a], [b]) => a.localeCompare(b))) {
-  if (!group.biCsv || !group.reviewCsv) {
-    console.warn(`Skipped match ${id}: BI CSVまたはReview CSVが足りません`);
+  if (!group.biCsv && !group.reviewCsv && !group.superscoutXml) {
+    console.warn(`Skipped match ${id}: data file not found`);
     continue;
   }
 
-  const biPath = path.join(dataDir, group.biCsv);
-  const { rows } = readFirstRows(biPath);
+  const metaFile = group.biCsv || group.reviewCsv;
+  const rows = metaFile ? readFirstRows(path.join(dataDir, metaFile)).rows : [];
   let homeTeam = '';
   let awayTeam = '';
   let date = '';
 
   for (const row of rows) {
-    homeTeam = homeTeam || row.homeTeamName || row.HomeTeamName || '';
-    awayTeam = awayTeam || row.awayTeamName || row.AwayTeamName || '';
-    date = date || isoDateFromUtc(row.UTCTime || row.utcTime || row.Date || '');
+    homeTeam = homeTeam || row.homeTeamName || row.HomeTeamName || row.Home || '';
+    awayTeam = awayTeam || row.awayTeamName || row.AwayTeamName || row.Away || '';
+    date = date || isoDateFromUtc(row.UTCTime || row.utcTime || row.Date || row.datePlayed || '');
     if (homeTeam && awayTeam && date) break;
   }
 
-  const biFileName = path.basename(group.biCsv);
+  const fallbackFileName = path.basename(metaFile || group.superscoutXml || id);
   const entry = {
     id,
-    label: homeTeam && awayTeam ? `${homeTeam} v ${awayTeam}` : niceFallbackLabel(biFileName, id),
+    label: homeTeam && awayTeam ? `${homeTeam} v ${awayTeam}` : niceFallbackLabel(fallbackFileName, id),
     date,
     homeTeam,
     awayTeam,
     score: '',
     venue: '',
-    biCsv: group.biCsv,
-    reviewCsv: group.reviewCsv,
+    ...(group.biCsv ? { biCsv: group.biCsv } : {}),
+    ...(group.reviewCsv ? { reviewCsv: group.reviewCsv } : {}),
     ...(group.superscoutXml ? { superscoutXml: group.superscoutXml } : {})
   };
 
