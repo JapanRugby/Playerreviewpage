@@ -64,6 +64,7 @@ select:focus,.playerSearch:focus{border-color:#7ba7e8;box-shadow:0 0 0 4px rgba(
 .matchCard{border:1px solid var(--line);border-radius:19px;background:#fff;padding:14px;text-align:left;cursor:pointer;box-shadow:0 8px 20px rgba(16,24,40,.07);transition:.16s transform,.16s border-color,.16s background}
 .matchCard:hover{transform:translateY(-2px);border-color:#8bb3ec;background:#fbfdff}.matchCard.active{border-color:var(--blue);background:var(--blue2)}
 .matchCard .date{color:var(--muted);font-size:12px;font-weight:850}.matchCard .title{font-size:16px;font-weight:1000;margin:5px 0 4px;letter-spacing:-.02em}.matchCard .meta{font-size:12px;color:var(--muted);line-height:1.35}
+.simpleScopePicker{display:grid;grid-template-columns:180px minmax(0,1fr);gap:12px;align-items:center;border:1px solid var(--line);border-radius:22px;background:linear-gradient(135deg,#fff,#fbfdff);padding:12px;box-shadow:0 10px 28px rgba(16,24,40,.07)}.simpleScopeLabel{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:1000}.scopeSelect{width:100%;min-width:0;border:1px solid #d0d5dd;border-radius:16px;background:#fff;padding:13px 14px;font-size:15px;font-weight:900;color:var(--ink);outline:none}.scopeSelect:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(11,58,120,.10)}.scopeSummary{font-size:12px;color:var(--muted);font-weight:850;margin-top:5px;line-height:1.35}.scopeReady{border-color:#c7d7f5;background:linear-gradient(135deg,#f8fbff,#fff7fa)}
 .empty{border:1px dashed #bfcaDA;border-radius:18px;background:#fbfcff;color:var(--muted);padding:18px;line-height:1.6}
 .dashboard{display:none;animation:fade .18s ease-out}@keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
 .playerHero{display:grid;grid-template-columns:1.35fr .65fr;gap:16px;margin-bottom:16px}.heroCard{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
@@ -94,10 +95,10 @@ details.admin{margin-top:18px;background:#fff;border:1px solid var(--line);borde
 
 
 @media(max-width:640px){
-  .app{padding-left:12px;padding-right:12px}.controlShell{padding:12px;border-radius:24px}.step{padding:14px;border-radius:18px}.statGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.statCard{min-height:104px;padding:12px;border-radius:18px}.statCard .value{font-size:30px}.section{margin-top:12px}.sectionTitle{margin-bottom:8px}.effortShareLegend{grid-template-columns:repeat(2,minmax(0,1fr))}.matchGrid{grid-template-columns:1fr}.reviewPanel{gap:12px}.breakdown{border-radius:18px}.barRow{grid-template-columns:92px 1fr 36px;font-size:12px}.matchupTable{padding:10px 12px 14px}.chartHeader{grid-template-columns:70px 1fr 70px;gap:6px}.segment{overflow-x:auto;scrollbar-width:none}.segment::-webkit-scrollbar{display:none}.segment button{min-width:88px;white-space:nowrap}
+  .app{padding-left:12px;padding-right:12px}.controlShell{padding:12px;border-radius:24px}.step{padding:14px;border-radius:18px}.statGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.statCard{min-height:104px;padding:12px;border-radius:18px}.statCard .value{font-size:30px}.section{margin-top:12px}.sectionTitle{margin-bottom:8px}.effortShareLegend{grid-template-columns:repeat(2,minmax(0,1fr))}.matchGrid{grid-template-columns:1fr}.simpleScopePicker{grid-template-columns:1fr;gap:8px}.reviewPanel{gap:12px}.breakdown{border-radius:18px}.barRow{grid-template-columns:92px 1fr 36px;font-size:12px}.matchupTable{padding:10px 12px 14px}.chartHeader{grid-template-columns:70px 1fr 70px;gap:6px}.segment{overflow-x:auto;scrollbar-width:none}.segment::-webkit-scrollbar{display:none}.segment button{min-width:88px;white-space:nowrap}
 }
 @media(max-width:900px){.matchupPlayer.right{text-align:right}.matchupTop{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}.matchupPlayer{min-width:0;padding:14px 8px}.matchupVs{padding:0 6px}.matchupName{font-size:16px;line-height:1.12;letter-spacing:-.025em;overflow-wrap:normal;word-break:normal}.matchupTeam{font-size:11px}.chartHeader{grid-template-columns:66px 1fr 66px}.chartVal{font-size:15px}.chartMetric{font-size:10px}.steps,.playerHero,.reviewPanel,.compareGrid{grid-template-columns:1fr}.viewControls{grid-template-columns:1fr 1fr}.statGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.adminGrid{grid-template-columns:1fr}.vs{padding:0}.compareGrid .vs:before,.compareGrid .vs:after{content:"";display:block;height:1px;background:var(--line)}}
-@media(max-width:540px){.statCard:after{display:none}.effortShareLegend{grid-template-columns:repeat(2,minmax(0,1fr))}.effortAnalysisGrid{grid-template-columns:1fr}.effortAnalysisLegend{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.effortAnalysisLegend .effortLegendItem{padding:8px 6px}.effortAnalysisLegend .effortLegendPct{font-size:16px}.effortStack{height:24px}.header{padding-top:22px}.app{padding-inline:12px;max-width:100vw}.controlShell{border-radius:22px;padding:12px;max-width:100%;overflow:hidden}.steps{gap:12px}.viewControls{grid-template-columns:1fr;gap:12px}.segment{flex-direction:row;overflow-x:auto;scrollbar-width:none}.segment::-webkit-scrollbar{display:none}.segment button{font-size:11px;padding:8px 6px;min-width:0;white-space:nowrap}.statGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.statCard{min-height:104px;padding:12px 10px}.statCard .label{font-size:10px;letter-spacing:.03em;line-height:1.15}.statCard .value{font-size:28px}.status{border-radius:18px}.heroCard,.step{padding:15px}.barRow{grid-template-columns:94px 1fr 34px}.playerName{font-size:28px}.matchupTable{padding:10px}.matchupLegend{font-size:11px;gap:8px}.chartHeader{grid-template-columns:58px 1fr 58px;gap:7px}.winnerCheck{width:18px;height:18px;font-size:12px;margin:0 3px}.matchupName{font-size:14px}.matchupTeam{font-size:10px}}
+@media(max-width:540px){.statCard:after{display:none}.effortShareLegend{grid-template-columns:repeat(2,minmax(0,1fr))}.effortAnalysisGrid{grid-template-columns:1fr}.effortAnalysisLegend{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.effortAnalysisLegend .effortLegendItem{padding:8px 6px}.effortAnalysisLegend .effortLegendPct{font-size:16px}.effortStack{height:24px}.header{padding-top:22px}.app{padding-inline:12px;max-width:100vw}.controlShell{border-radius:22px;padding:12px;max-width:100%;overflow:hidden}.steps{gap:12px}.viewControls{grid-template-columns:1fr;gap:12px}.segment{flex-direction:row;overflow-x:auto;scrollbar-width:none}.segment::-webkit-scrollbar{display:none}.segment button{font-size:11px;padding:8px 6px;min-width:0;white-space:nowrap}.statGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.statCard{min-height:104px;padding:12px 10px}.statCard .label{font-size:10px;letter-spacing:.03em;line-height:1.15}.statCard .value{font-size:28px}.status{border-radius:18px}.simpleScopePicker{padding:10px;border-radius:18px}.scopeSelect{font-size:14px;padding:11px 12px}.heroCard,.step{padding:15px}.barRow{grid-template-columns:94px 1fr 34px}.playerName{font-size:28px}.matchupTable{padding:10px}.matchupLegend{font-size:11px;gap:8px}.chartHeader{grid-template-columns:58px 1fr 58px;gap:7px}.winnerCheck{width:18px;height:18px;font-size:12px;margin:0 3px}.matchupName{font-size:14px}.matchupTeam{font-size:10px}}
 
 @media(max-width:640px){
   .steps,.playerHero,.reviewPanel,.compareGrid{grid-template-columns:1fr!important}
@@ -512,18 +513,62 @@ function hydrateUI(){
 }
 function matchesForPlayer(key){return state.matches.filter(m=>m.playerStats.has(key));}
 function seasonsForPlayer(key){return [...new Set(matchesForPlayer(key).map(m=>m.season||'Unknown'))].sort().reverse();}
+function optionSummaryForMatch(m,st){
+  return [m.date||'', `Carry ${intFmt(st.carry)}`, `Tackle ${intFmt(st.tackleMade)}/${intFmt(st.tackleAttempts)}`, `Effort ${intFmt(st.reviewTotal)}`].filter(Boolean).join(' · ');
+}
+function renderSimpleScopePicker(kind, items, selectedId, placeholder='Select an option'){
+  const label = kind==='match'?'Match':kind==='season'?'Season':'Career';
+  const disabled = !items.length;
+  matchCards.innerHTML = `<div class="simpleScopePicker ${disabled?'':'scopeReady'}">
+    <div><div class="simpleScopeLabel">${escapeHtml(label)}</div><div class="scopeSummary" id="scopeSummaryText">${disabled?'No data available':'Choose from available '+label.toLowerCase()+'s'}</div></div>
+    <select id="scopeItemSelect" class="scopeSelect" ${disabled?'disabled':''}></select>
+  </div>`;
+  const sel=$('scopeItemSelect');
+  sel.innerHTML = disabled ? `<option>${escapeHtml(placeholder)}</option>` : items.map(it=>`<option value="${escapeHtml(it.id)}" ${String(it.id)===String(selectedId)?'selected':''}>${escapeHtml(it.label)}</option>`).join('');
+  const setSummary=()=>{
+    const current=items.find(it=>String(it.id)===String(sel.value));
+    const summary=$('scopeSummaryText');
+    if(summary) summary.textContent=current?.summary || '';
+  };
+  setSummary();
+  sel.addEventListener('change',()=>{ state.selectedId=sel.value; setSummary(); renderDashboard(); });
+}
 function renderOptions(){
-  dashboard.style.display='none'; matchCards.innerHTML=''; if(!state.selectedPlayer){ matchCards.innerHTML='<div class="empty">Select a player first. Only matches they appeared in will be shown.</div>'; return; }
-  if(state.scope==='career'){ state.selectedId='career'; renderDashboard(); return; }
-  if(state.scope==='season'){
-    const seasons=seasonsForPlayer(state.selectedPlayer); if(!seasons.length){matchCards.innerHTML='<div class="empty">No season data found for this player.</div>';return;}
-    for(const s of seasons){ const ms=matchesForPlayer(state.selectedPlayer).filter(m=>(m.season||'Unknown')===s); const total=aggregate(ms,state.selectedPlayer); const btn=document.createElement('button'); btn.className=`matchCard ${state.selectedId===s?'active':''}`; btn.innerHTML=`<div class="date">Season</div><div class="title">${escapeHtml(s)}</div><div class="meta">${ms.length} games / Carry ${intFmt(total.carry)} / Effort ${intFmt(total.reviewTotal)}</div>`; btn.addEventListener('click',()=>{state.selectedId=s;renderOptions();renderDashboard();}); matchCards.appendChild(btn); }
-    if(seasons.length===1&&!state.selectedId){state.selectedId=seasons[0];renderOptions();renderDashboard();}
+  dashboard.style.display='none';
+  matchCards.innerHTML='';
+  if(!state.selectedPlayer){
+    matchCards.innerHTML='<div class="empty">Select a player first. Only matches they appeared in will be shown.</div>';
     return;
   }
-  const ms=matchesForPlayer(state.selectedPlayer); if(!ms.length){matchCards.innerHTML='<div class="empty">No match data found for this player.</div>';return;}
-  for(const m of ms){ const st=m.playerStats.get(state.selectedPlayer); const btn=document.createElement('button'); btn.className=`matchCard ${state.selectedId===m.id?'active':''}`; btn.innerHTML=`<div class="date">${escapeHtml(m.date||'')}</div><div class="title">${escapeHtml(m.label)}</div><div class="meta">Carry ${intFmt(st.carry)} / Tackle ${intFmt(st.tackleMade)}/${intFmt(st.tackleAttempts)} / Effort ${intFmt(st.reviewTotal)}</div>`; btn.addEventListener('click',()=>{state.selectedId=m.id;renderOptions();renderDashboard();}); matchCards.appendChild(btn); }
-  if(ms.length===1&&!state.selectedId){state.selectedId=ms[0].id;renderOptions();renderDashboard();}
+  if(state.scope==='career'){
+    const ms=matchesForPlayer(state.selectedPlayer);
+    state.selectedId='career';
+    renderSimpleScopePicker('career',[{id:'career',label:'Career Total',summary:`${ms.length} match${ms.length===1?'':'es'} selected`}],'career');
+    renderDashboard();
+    return;
+  }
+  if(state.scope==='season'){
+    const seasons=seasonsForPlayer(state.selectedPlayer);
+    if(!seasons.length){matchCards.innerHTML='<div class="empty">No season data found for this player.</div>';return;}
+    if(!state.selectedId || !seasons.includes(state.selectedId)) state.selectedId=seasons[0];
+    const items=seasons.map(s=>{
+      const ms=matchesForPlayer(state.selectedPlayer).filter(m=>(m.season||'Unknown')===s);
+      const total=aggregate(ms,state.selectedPlayer);
+      return {id:s,label:s,summary:`${ms.length} game${ms.length===1?'':'s'} · Carry ${intFmt(total.carry)} · Effort ${intFmt(total.reviewTotal)}`};
+    });
+    renderSimpleScopePicker('season',items,state.selectedId,'No season data');
+    renderDashboard();
+    return;
+  }
+  const ms=matchesForPlayer(state.selectedPlayer);
+  if(!ms.length){matchCards.innerHTML='<div class="empty">No match data found for this player.</div>';return;}
+  if(!state.selectedId || !ms.some(m=>String(m.id)===String(state.selectedId))) state.selectedId=ms[0].id;
+  const items=ms.map(m=>{
+    const st=m.playerStats.get(state.selectedPlayer);
+    return {id:m.id,label:[m.date,m.label].filter(Boolean).join(' — '),summary:optionSummaryForMatch(m,st)};
+  });
+  renderSimpleScopePicker('match',items,state.selectedId,'No match data');
+  renderDashboard();
 }
 function aggregate(matches,key){ const p=state.players.get(key)||{name:'',team:''}; const agg=blankStats(p); agg.minutes=0; for(const m of matches){ const st=m.playerStats.get(key); if(st) mergeStats(agg,st); } return agg; }
 function currentContext(){ if(!state.selectedPlayer) return null; const ms=matchesForPlayer(state.selectedPlayer); if(state.scope==='career') return {label:'Career Total', sub:`${ms.length} matches`, matches:ms, raw:aggregate(ms,state.selectedPlayer)}; if(state.scope==='season'){ const s=state.selectedId||seasonsForPlayer(state.selectedPlayer)[0]; const selected=ms.filter(m=>(m.season||'Unknown')===s); return {label:`${s} Season`, sub:`${selected.length} matches`, matches:selected, raw:aggregate(selected,state.selectedPlayer)}; } const m=state.matches.find(x=>x.id===state.selectedId)||ms[0]; return m?{label:m.label,sub:[m.date,m.venue,m.competition].filter(Boolean).join('<br>'),matches:[m],match:m,raw:m.playerStats.get(state.selectedPlayer)}:null; }
