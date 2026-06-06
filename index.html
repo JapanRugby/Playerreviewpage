@@ -133,18 +133,6 @@ details.admin{margin-top:18px;background:#fff;border:1px solid var(--line);borde
     </div>
 
     <div class="section">
-      <div class="sectionTitle"><h3>Carry</h3><span id="carryContext">Ball Carry</span></div>
-      <div class="statGrid" id="carryStats"></div>
-    </div>
-    <div class="section">
-      <div class="sectionTitle"><h3>Tackle</h3><span id="tackleContext">Defence</span></div>
-      <div class="statGrid" id="tackleStats"></div>
-    </div>
-    <div class="section">
-      <div class="sectionTitle"><h3>Effort Review</h3><span id="effortContext">Effort</span></div>
-      <div class="statGrid" id="colourStats"></div>
-    </div>
-    <div class="section">
       <div class="sectionTitle"><h3>Game Time</h3><span>Availability & workload</span></div>
       <div class="statGrid compactStats" id="gameTimeStats"></div>
     </div>
@@ -152,17 +140,31 @@ details.admin{margin-top:18px;background:#fff;border:1px solid var(--line);borde
       <div class="sectionTitle"><h3>Samurai Stats</h3><span>Contribution per player ball-in-play minute</span></div>
       <div class="statGrid" id="samuraiStats"></div>
     </div>
+    <div class="section">
+      <div class="sectionTitle"><h3>Effort Review</h3><span id="effortContext">Effort</span></div>
+      <div class="statGrid" id="colourStats"></div>
+    </div>
+    <div class="section">
+      <div class="sectionTitle"><h3>Carry</h3><span id="carryContext">Ball Carry</span></div>
+      <div class="statGrid" id="carryStats"></div>
+    </div>
+    <div class="section">
+      <div class="sectionTitle"><h3>Tackle</h3><span id="tackleContext">Defence</span></div>
+      <div class="statGrid" id="tackleStats"></div>
+    </div>
 
     <div id="comparisonSection" class="section" style="display:none">
       <div class="sectionTitle"><h3>Same Number Match-up</h3><span>Opponent comparison</span></div>
       <div id="comparisonContent"></div>
     </div>
 
-    <div class="section reviewPanel">
+    <div class="section reviewPanel singlePanel">
       <div class="breakdown">
         <h4>Effort Type Breakdown</h4>
         <div id="typeBreakdown"></div>
       </div>
+    </div>
+    <div class="section reviewPanel singlePanel">
       <div class="breakdown">
         <h4>Need to Improve</h4>
         <div id="summaryBreakdown"></div>
