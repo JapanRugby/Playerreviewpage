@@ -52,8 +52,10 @@ h1{font-size:clamp(38px,7vw,76px);line-height:.93;margin:0 0 14px;letter-spacing
 .step{background:linear-gradient(180deg,#fff,#fbfcff);border:1px solid var(--line);border-radius:22px;padding:16px;min-width:0;overflow:hidden}
 .step h2{font-size:14px;margin:0 0 12px;display:flex;align-items:center;gap:8px;color:#18243a;text-transform:uppercase;letter-spacing:.06em}
 .stepno{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;letter-spacing:0}
-select{display:block;width:100%;max-width:100%;min-width:0;min-height:56px;border-radius:17px;border:1px solid #cbd5e1;background:#fff;color:var(--text);padding:0 14px;font-size:16px;font-weight:850;outline:none}
-select:focus{border-color:#7ba7e8;box-shadow:0 0 0 4px rgba(11,58,120,.10)}
+select,.playerSearch{display:block;width:100%;max-width:100%;min-width:0;min-height:56px;border-radius:17px;border:1px solid #cbd5e1;background:#fff;color:var(--text);padding:0 14px;font-size:16px;font-weight:850;outline:none}
+select:focus,.playerSearch:focus{border-color:#7ba7e8;box-shadow:0 0 0 4px rgba(11,58,120,.10)}
+.playerSearch::placeholder{color:#98a2b3;font-weight:800}
+.searchHint{display:flex;align-items:center;gap:6px;margin-top:8px;color:var(--muted);font-size:12px;font-weight:800}.searchHint:before{content:"⌕";font-size:14px;color:var(--accent)}
 .helper{color:var(--muted);font-size:13px;line-height:1.45;margin-top:9px}
 .viewControls{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;min-width:0}.viewControls>div{min-width:0}
 .segment{display:flex;gap:6px;background:#eef3fa;border:1px solid #dbe5f2;border-radius:18px;padding:5px;min-height:52px;min-width:0;width:100%;max-width:100%}
@@ -117,7 +119,9 @@ details.admin{margin-top:18px;background:#fff;border:1px solid var(--line);borde
     <div class="steps">
       <div class="step">
         <h2><span class="stepno">1</span>Select Player</h2>
-        <select id="playerSelect" disabled><option>Loading...</option></select>
+        <input id="playerSelect" class="playerSearch" list="playerList" disabled placeholder="Search player name..." autocomplete="off">
+        <datalist id="playerList"></datalist>
+        <div id="playerSearchHint" class="searchHint">Type a name, then select from the list.</div>
         <div class="helper">Only Japan / Japan XV players are shown.</div>
       </div>
       <div class="step">
@@ -216,7 +220,8 @@ details.admin{margin-top:18px;background:#fff;border:1px solid var(--line);borde
 const CONFIG = { manifestUrl:'data/matches.json', targetTeams:['Japan','Japan XV'] };
 const state = { matches:[], players:new Map(), selectedPlayer:'', selectedId:'', scope:'match', metric:'total', mode:'live', matchById:new Map(), matchIndex:new Map(), playerMatchIds:new Map(), playerSummaries:new Map() };
 const $ = id => document.getElementById(id);
-const statusEl=$('status'), playerSelect=$('playerSelect'), matchCards=$('matchCards'), dashboard=$('dashboard');
+const statusEl=$('status'), playerSelect=$('playerSelect'), playerList=$('playerList'), matchCards=$('matchCards'), dashboard=$('dashboard');
+let playerSearchLookup=new Map();
 function setStatus(text, kind='warn'){ const cls=kind==='ok'?'ok':kind==='err'?'err':''; statusEl.innerHTML=`<span class="dot ${cls}"></span><span>${escapeHtml(text)}</span>`; }
 function escapeHtml(v){return String(v??'').replace(/[&<>'"]/g,s=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[s]));}
 function norm(v){return String(v??'').trim().replace(/\s+/g,' ').toLowerCase();}
@@ -486,7 +491,25 @@ async function loadInitialData(){
   catch(err){ console.warn('Precomputed data not available; falling back to CSV/XML live loading.', err); await loadFromManifest(true); }
 }
 
-function hydrateUI(){ const players=[...state.players.values()].filter(p=>p.show).sort((a,b)=>(a.team.localeCompare(b.team)||a.name.localeCompare(b.name))); const byTeam=new Map(); for(const p of players){ if(!byTeam.has(p.team)) byTeam.set(p.team,[]); byTeam.get(p.team).push(p); } playerSelect.disabled=false; playerSelect.innerHTML='<option value="">Select player</option>'; for(const [team,list] of byTeam){ const group=document.createElement('optgroup'); group.label=team; for(const p of list){ const opt=document.createElement('option'); opt.value=p.key; opt.textContent=p.name; group.appendChild(opt); } playerSelect.appendChild(group); } }
+function hydrateUI(){
+  const players=[...state.players.values()].filter(p=>p.show).sort((a,b)=>(a.team.localeCompare(b.team)||a.name.localeCompare(b.name)));
+  playerSearchLookup=new Map();
+  playerList.innerHTML='';
+  const nameCounts=new Map();
+  for(const p of players){ nameCounts.set(p.name,(nameCounts.get(p.name)||0)+1); }
+  for(const p of players){
+    const label=nameCounts.get(p.name)>1?`${p.name} — ${p.team}`:p.name;
+    const opt=document.createElement('option');
+    opt.value=label;
+    opt.label=p.team;
+    opt.dataset.key=p.key;
+    playerList.appendChild(opt);
+    playerSearchLookup.set(label,p.key);
+    if(!playerSearchLookup.has(p.name)) playerSearchLookup.set(p.name,p.key);
+  }
+  playerSelect.disabled=false;
+  playerSelect.placeholder=players.length?'Search player name...':'No players found';
+}
 function matchesForPlayer(key){return state.matches.filter(m=>m.playerStats.has(key));}
 function seasonsForPlayer(key){return [...new Set(matchesForPlayer(key).map(m=>m.season||'Unknown'))].sort().reverse();}
 function renderOptions(){
@@ -662,12 +685,41 @@ function renderComparison(ctx){ const sec=$('comparisonSection'), cont=$('compar
   matchupCell('Effort Gold',raw.colours.Gold,opp.colours.Gold,intFmt,true),
   matchupCell('Effort Red',raw.colours.Red,opp.colours.Red,intFmt,false)
 ].join(''); cont.innerHTML=`<div class="matchupShell"><div class="matchupTop"><div class="matchupPlayer"><div class="matchupName">${escapeHtml(raw.player.name||'Unknown')}</div><div class="matchupTeam">Japan · #${escapeHtml(raw.shirt||raw.player.shirt||'')}</div></div><div class="matchupVs">VS</div><div class="matchupPlayer right"><div class="matchupName">${escapeHtml(opp.player.name||'Unknown')}</div><div class="matchupTeam">${escapeHtml(opp.player.team)} · #${escapeHtml(opp.shirt||opp.player.shirt||'')}</div></div></div><div class="matchupTable"><div class="matchupLegend"><div class="legendLeft">${escapeHtml(raw.player.name||'Japan player')}</div><div class="legendRight">${escapeHtml(opp.player.name||'Opponent')}</div></div>${rows}</div></div>`; }
-playerSelect.addEventListener('change',async()=>{state.selectedPlayer=playerSelect.value;state.selectedId='';dashboard.style.display='none';matchCards.innerHTML='<div class="empty">Loading selected player data...</div>';try{await loadPlayerMatches(state.selectedPlayer,true);renderOptions();}catch(err){console.error(err);matchCards.innerHTML='<div class="empty">Selected player data could not be loaded.</div>';setStatus(err.message,'err');}});
+async function handlePlayerSearch(){
+  const typed=playerSelect.value.trim();
+  let key=playerSearchLookup.get(typed);
+  if(!key){
+    const matches=[...state.players.values()].filter(p=>p.show&&norm(p.name)===norm(typed));
+    if(matches.length===1) key=matches[0].key;
+  }
+  if(!typed){
+    state.selectedPlayer=''; state.selectedId=''; dashboard.style.display='none'; renderOptions(); return;
+  }
+  if(!key){
+    $('playerSearchHint').textContent='No exact player selected yet. Choose a name from the search list.';
+    return;
+  }
+  $('playerSearchHint').textContent='Loading selected player...';
+  state.selectedPlayer=key; state.selectedId=''; dashboard.style.display='none';
+  matchCards.innerHTML='<div class="empty">Loading selected player data...</div>';
+  try{
+    await loadPlayerMatches(state.selectedPlayer,true);
+    const p=state.players.get(state.selectedPlayer);
+    $('playerSearchHint').textContent=p?`${p.name} selected`:'Player selected';
+    renderOptions();
+  }catch(err){
+    console.error(err);
+    matchCards.innerHTML='<div class="empty">Selected player data could not be loaded.</div>';
+    setStatus(err.message,'err');
+  }
+}
+playerSelect.addEventListener('change',handlePlayerSearch);
+playerSelect.addEventListener('keydown',e=>{ if(e.key==='Enter') handlePlayerSearch(); });
 $('scopeButtons').addEventListener('click',e=>{const btn=e.target.closest('button[data-scope]');if(!btn)return;state.scope=btn.dataset.scope;state.selectedId='';document.querySelectorAll('#scopeButtons button').forEach(b=>b.classList.toggle('active',b===btn));renderOptions();});
 $('metricButtons').addEventListener('click',e=>{const btn=e.target.closest('button[data-metric]');if(!btn)return;state.metric=btn.dataset.metric;document.querySelectorAll('#metricButtons button').forEach(b=>b.classList.toggle('active',b===btn));renderDashboard();});
 async function fileText(input,required=true){const file=input.files&&input.files[0]; if(!file){ if(required) throw new Error('Please select at least one data file.'); return ''; } return await file.text();}
 $('localLoad').addEventListener('click',async()=>{try{state.mode='live';state.matches=[];state.matchById=new Map();state.players=new Map();state.selectedPlayer='';state.selectedId='';playerSelect.value='';setStatus('Loading local data...');const [biText,reviewText,xmlText]=await Promise.all([fileText($('localBi'),false),fileText($('localReview'),false),fileText($('localXml'),false)]);if(!biText&&!reviewText&&!xmlText) throw new Error('Please select at least one data file.');const match=buildMatch({id:'local',label:'Local Preview'},parseCSV(biText),parseCSV(reviewText),xmlText);state.matches=[match];hydrateUI();renderOptions();setStatus(`Local data loaded: ${[...state.players.values()].filter(p=>p.show).length} Japan players`, 'ok');}catch(err){setStatus(err.message,'err');}});
-loadInitialData().catch(err=>{console.error(err);playerSelect.disabled=true;playerSelect.innerHTML='<option>Loading error</option>';matchCards.innerHTML='<div class="empty">Online data could not be loaded. Please check GitHub Pages and generated data files. Admin local data preview is still available below.</div>';setStatus(err.message,'err');});
+loadInitialData().catch(err=>{console.error(err);playerSelect.disabled=true;playerSelect.value='';playerSelect.placeholder='Loading error';matchCards.innerHTML='<div class="empty">Online data could not be loaded. Please check GitHub Pages and generated data files. Admin local data preview is still available below.</div>';setStatus(err.message,'err');});
 </script>
 </body>
 </html>
