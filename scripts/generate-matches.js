@@ -80,9 +80,9 @@ for (const file of files) {
 
   // Review CSV: Gold / Green / Yellow / Red が入っているファイル
   if (lower.includes('measurem') || lower.includes('advanced')) {
-    g.reviewCsv = `data/${file}`;
+    g.reviewCsv = file;
   } else {
-    g.biCsv = `data/${file}`;
+    g.biCsv = file;
   }
 }
 
@@ -95,7 +95,7 @@ for (const [id, group] of Array.from(groups.entries()).sort(([a], [b]) => a.loca
     continue;
   }
 
-  const biPath = path.join(root, group.biCsv);
+  const biPath = path.join(dataDir, group.biCsv);
   const { rows } = readFirstRows(biPath);
   let homeTeam = '';
   let awayTeam = '';
