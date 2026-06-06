@@ -657,7 +657,7 @@ function renderEffortAnalysis(raw){
     {name:'Phase Defence',cls:'phaseDefence',match:['PHASE DEFENCE']},
     {name:'Linebreak',cls:'linebreak',match:['LINEBREAK']}
   ];
-  const colours=[['Gold','gold'],['Green','green'],['Yellow','yellow'],['Red','redcard']];
+  const colours=[['Gold','gold'],['Red','redcard']];
   const byColour={};
   let classifiedTotal=0;
   for(const [colour] of colours){
@@ -687,7 +687,7 @@ function renderEffortAnalysis(raw){
     });
     return `<div class="effortAnalysisCard ${colourCls}"><div class="effortAnalysisCardHead"><span><span class="effortDot ${colourCls}"></span> ${colour}</span><span class="pill">${intFmt(total)} times</span></div><div class="effortStack" aria-label="${colour} Post Contact Spark Set Piece percentage share">${parts.map(p=>`<div class="effortShareSegment ${p.cls}" data-target-width="${p.pctVal.toFixed(2)}%" style="width:${p.pctVal.toFixed(2)}%" title="${colour} ${p.name}: ${p.pctText}"></div>`).join('')}</div><div class="effortAnalysisLegend">${parts.map(p=>`<div class="effortLegendItem ${p.cls}"><div class="effortLegendTop"><span class="effortDot ${p.cls}"></span><span>${p.name}</span></div><div class="effortLegendPct" data-final="${p.pctText}">${p.pctText}</div><div class="effortLegendCount">${intFmt(p.count)} times</div></div>`).join('')}</div></div>`;
   }).join('');
-  return `<div class="effortAnalysisBlock"><div class="effortShareHead"><div class="effortShareTitle">Effort Analysis</div><div class="effortShareTotal">${intFmt(classifiedTotal)} classified times</div></div><div class="helper">Each Effort colour is split into Post Contact, Spark, Set Piece, Phase Defence, and Linebreak.</div><div class="effortAnalysisGrid">${cards}</div></div>`;
+  return `<div class="effortAnalysisBlock"><div class="effortShareHead"><div class="effortShareTitle">Effort Analysis</div><div class="effortShareTotal">${intFmt(classifiedTotal)} classified times</div></div><div class="helper">Gold and Red Efforts are split into Post Contact, Spark, Set Piece, Phase Defence, and Linebreak.</div><div class="effortAnalysisGrid">${cards}</div></div>`;
 }
 function renderEffortShare(raw){
   const colours=[['Gold','gold'],['Green','green'],['Yellow','yellow'],['Red','redcard']];
