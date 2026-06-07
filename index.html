@@ -1755,18 +1755,41 @@ function compareScopeLabel(){
   return s==='match'?'Game':s==='season'?'Season':'Career';
 }
 function compareMetricLabel(){ return metricLabel(); }
+function matchInfoForPlayerId(id){
+  const key=String(id||'');
+  const fromIndex=state.matchIndex?.get(key);
+  const loaded=state.matchById?.get(key);
+  return loaded || fromIndex || {id:key,label:key,date:'',season:'Unknown'};
+}
+function comparePlayerMatchItemsFromIndex(playerKey){
+  const ids=state.playerMatchIds?.get(playerKey)||[];
+  return ids.map(id=>matchInfoForPlayerId(id)).filter(Boolean).map(m=>({
+    id:String(m.id||''),
+    label:m.label||m.matchName||String(m.id||''),
+    date:m.date||'',
+    season:m.season||'Unknown',
+    summary:m.label||m.matchName||String(m.id||'')
+  })).sort(matchSortDesc);
+}
 function targetItemsForComparePlayer(playerKey){
   if(!playerKey) return [];
   const scope=state.compare.scope;
-  const ms=matchesForPlayer(playerKey);
+  const ms=state.mode==='precomputed' ? comparePlayerMatchItemsFromIndex(playerKey) : matchesForPlayer(playerKey);
   if(scope==='match'){
     return ms.map(m=>({id:m.id,label:[m.date,m.label].filter(Boolean).join(' — '),summary:m.label||m.id}));
   }
   if(scope==='season'){
-    return seasonsForPlayer(playerKey).map(season=>{
-      const sm=ms.filter(m=>(m.season||'Unknown')===season);
-      return {id:season,label:`${season} (${sm.length})`,summary:`${sm.length} match${sm.length===1?'':'es'}`};
-    });
+    const bySeason=new Map();
+    for(const m of ms){
+      const season=m.season||'Unknown';
+      if(!bySeason.has(season)) bySeason.set(season,[]);
+      bySeason.get(season).push(m);
+    }
+    return [...bySeason.entries()].sort((a,b)=>String(b[0]).localeCompare(String(a[0]))).map(([season,sm])=>({
+      id:season,
+      label:`${season} (${sm.length})`,
+      summary:`${sm.length} match${sm.length===1?'':'es'}`
+    }));
   }
   return [];
 }
