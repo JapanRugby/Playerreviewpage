@@ -257,13 +257,18 @@ body{background:
       <div id="tackleTrend" class="trendPanel"></div>
     </div>
 
+    <div id="goalKickSection" class="section" style="display:none">
+      <div class="sectionTitle"><h3>Goal Kick</h3><span>Only shown for goal kickers</span></div>
+      <div class="statGrid" id="goalKickStats"></div>
+    </div>
+
     <div id="comparisonSection" class="section" style="display:none">
       <div class="sectionTitle"><h3>Same Number Match-up</h3><span>Opponent comparison</span></div>
       <div id="comparisonContent"></div>
     </div>
 
     <div class="formula">
-      Carry Metres = <b>Metres2</b> / Post Contact Metres = <b>Metres3</b> / Carry Dominance% = <b>Dominant Contact ÷ Contact carries</b> / Tackle Completion = <b>made tackles ÷ attempts</b> / Tackle Dominance% = <b>Dominant Tackle ÷ attempts</b>. Samurai Stats = <b>(JRFU Positive Actions − JRFU Negative Actions) ÷ that player's Ball-in-play minutes</b>. Player Ball-in-play minutes uses <b>SuperScout XML TeamData Player BallInPlayMins</b> when available. Per 80 uses <b>SuperScout XML TeamData MINS</b> when available, with BI CSV match clock / Sub In / Sub Out as fallback.
+      Carry Metres = <b>Metres2</b> / Post Contact Metres = <b>Metres3</b> / Carry Dominance% = <b>Dominant Contact ÷ Contact carries</b> / Tackle Completion = <b>made tackles ÷ attempts</b> / Tackle Dominance% = <b>Dominant Tackle ÷ attempts</b>. Goal Kick% = <b>Goals kicked ÷ goal kick attempts</b>. Samurai Stats = <b>(JRFU Positive Actions − JRFU Negative Actions) ÷ that player's Ball-in-play minutes</b>. Player Ball-in-play minutes uses <b>SuperScout XML TeamData Player BallInPlayMins</b> when available. Per 80 uses <b>SuperScout XML TeamData MINS</b> when available, with BI CSV match clock / Sub In / Sub Out as fallback.
     </div>
   </section>
 </main>
@@ -472,10 +477,10 @@ function titleCaseWords(value){ return String(value||'').trim().replace(/\s+/g,'
 function canonicalEffortType(value){ const clean=String(value||'Other').trim().replace(/\s+/g,' '); return clean ? titleCaseWords(clean) : 'Other'; }
 function canonicalEffortColour(value){ const key=String(value||'').trim().toLowerCase(); if(key==='gold') return 'Gold'; if(key==='green') return 'Green'; if(key==='yellow') return 'Yellow'; if(key==='red') return 'Red'; return String(value||'').trim(); }
 function effortAnalysisBucket(type){ const u=String(type||'').toUpperCase(); if(u.includes('PHASE DEFENCE')) return 'Phase Defence'; if(u.includes('LINEBREAK')) return 'Linebreak'; if(u.includes('CARRY')||u.includes('RUCK')||u.includes('TACKLE')||u.includes('JACKALER')) return 'Post Contact'; if(u.includes('KICK')||u.includes('TURNOVER')) return 'Spark'; if(u.includes('LINEOUT')||u.includes('SCRUM')) return 'Set Piece'; return ''; }
-function blankStats(player){return {player,totalActions:0,appearances:0,minutes:0,ballInPlayMins:0,positiveActions:0,negativeActions:0,carry:0,carryMetres:0,postContactMetres:0,carryDominant:0,carryContact:0,tackleAttempts:0,tackleMade:0,tackleDominant:0,colours:{Gold:0,Green:0,Yellow:0,Red:0},reviewTotal:0,typeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},timeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},typeCounts:{},positiveActionTypes:{},negativeActionTypes:{},shirt:'',position:'',positionId:'',rosterSource:''};}
+function blankStats(player){return {player,totalActions:0,appearances:0,minutes:0,ballInPlayMins:0,positiveActions:0,negativeActions:0,carry:0,carryMetres:0,postContactMetres:0,carryDominant:0,carryContact:0,tackleAttempts:0,tackleMade:0,tackleDominant:0,goalKickAttempts:0,goalKickMade:0,colours:{Gold:0,Green:0,Yellow:0,Red:0},reviewTotal:0,typeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},timeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},typeCounts:{},positiveActionTypes:{},negativeActionTypes:{},shirt:'',position:'',positionId:'',rosterSource:''};}
 function mergeStats(base,add){
   base.totalActions+=add.totalActions; base.appearances+=add.appearances||0; base.minutes+=add.minutes||0; base.ballInPlayMins+=add.ballInPlayMins||0; base.positiveActions+=add.positiveActions||0; base.negativeActions+=add.negativeActions||0;
-  for(const k of ['carry','carryMetres','postContactMetres','carryDominant','carryContact','tackleAttempts','tackleMade','tackleDominant','reviewTotal']) base[k]+=add[k]||0;
+  for(const k of ['carry','carryMetres','postContactMetres','carryDominant','carryContact','tackleAttempts','tackleMade','tackleDominant','goalKickAttempts','goalKickMade','reviewTotal']) base[k]+=add[k]||0;
   for(const c of ['Gold','Green','Yellow','Red']){ base.colours[c]+=add.colours?.[c]||0; for(const [t,n] of Object.entries(add.typeByColour?.[c]||{})) base.typeByColour[c][t]=(base.typeByColour[c][t]||0)+n; for(const [band,n] of Object.entries(add.timeByColour?.[c]||{})) base.timeByColour[c][band]=(base.timeByColour[c][band]||0)+n; }
   for(const [t,n] of Object.entries(add.typeCounts||{})) base.typeCounts[t]=(base.typeCounts[t]||0)+n;
   for(const [t,n] of Object.entries(add.positiveActionTypes||{})) base.positiveActionTypes[t]=(base.positiveActionTypes[t]||0)+n;
@@ -486,7 +491,7 @@ function mergeStats(base,add){
 function scaleStats(st,metric){
   const factor = metric==='perGame' ? 1/Math.max(1,st.appearances||1) : metric==='per80' ? 80/Math.max(1,st.minutes||0.0001) : 1;
   const copy=JSON.parse(JSON.stringify(st)); copy.player=st.player; copy.scaleFactor=factor;
-  for(const k of ['totalActions','carry','carryMetres','postContactMetres','tackleAttempts','tackleMade','reviewTotal','positiveActions','negativeActions']) copy[k]=(st[k]||0)*factor;
+  for(const k of ['totalActions','carry','carryMetres','postContactMetres','tackleAttempts','tackleMade','goalKickAttempts','goalKickMade','reviewTotal','positiveActions','negativeActions']) copy[k]=(st[k]||0)*factor;
   for(const c of ['Gold','Green','Yellow','Red']) copy.colours[c]=(st.colours[c]||0)*factor;
   return copy;
 }
@@ -655,7 +660,7 @@ function buildMatch(item,biRows,reviewRows,xmlText=''){
     applyXmlMinutes(st,xmlInfoFor(row,name,team));
     st.totalActions++; const sam=samuraiScoreRow(row); st.positiveActions+=sam.positive; st.negativeActions+=sam.negative; for(const label of sam.positiveReasons||[]) st.positiveActionTypes[label]=(st.positiveActionTypes[label]||0)+1; for(const label of sam.negativeReasons||[]) st.negativeActionTypes[label]=(st.negativeActionTypes[label]||0)+1; const action=String(row.actionName||'').trim();
     if(action==='Carry'){ st.carry++; st.carryMetres+=toNumber(row.Metres2); st.postContactMetres+=toNumber(row.Metres3); const contact=String(row.qualifier4Name||''); if(/Contact/i.test(contact)) st.carryContact++; if(/Dominant Contact/i.test(contact)) st.carryDominant++; }
-    if(action==='Tackle'){ st.tackleAttempts++; const result=String(row.ActionResultName||'').trim(); if(result!=='Missed') st.tackleMade++; const tq=String(row.qualifier4Name||''); if(/Dominant Tackle/i.test(tq)) st.tackleDominant++; }
+    if(action==='Tackle'){ st.tackleAttempts++; const result=String(row.ActionResultName||'').trim(); if(result!=='Missed') st.tackleMade++; const tq=String(row.qualifier4Name||''); if(/Dominant Tackle/i.test(tq)) st.tackleDominant++; } if(action==='Goal Kick'){ const result=String(row.ActionResultName||'').trim(); if(result){ st.goalKickAttempts++; if(result==='Goal Kicked') st.goalKickMade++; } }
   }
   for(const row of reviewRows){
     const name=extractReviewName(row); const team=extractReviewTeam(row); const got=ensurePlayer(match,name,team,{shirt:row.ShirtNumber}); if(!got) continue; const st=got.stats;
@@ -1171,6 +1176,17 @@ function renderSamuraiDetail(st){
 function renderDashboard(){ const ctx=currentContext(); if(!ctx||!ctx.raw) return; const raw=ctx.raw; const st=scaleStats(raw,state.metric); const p=raw.player; dashboard.style.display='block'; $('playerName').textContent=p.name; const meta=[]; if(raw.shirt) meta.push(`<span class="badge red">#${escapeHtml(raw.shirt)}</span>`); meta.push(`<span class="badge">${escapeHtml(p.team)}</span>`); if(raw.position) meta.push(`<span class="badge">${escapeHtml(raw.position)}</span>`); meta.push(`<span class="badge">${escapeHtml(metricLabel())}</span>`); if(ctx.match&&ctx.match.minutesSource) meta.push(`<span class="badge">Minutes: ${escapeHtml(ctx.match.minutesSource)}</span>`); $('playerMeta').innerHTML=meta.join(''); $('scoreLine').textContent=ctx.label; $('matchMeta').innerHTML=ctx.sub||''; $('carryContext').textContent=metricLabel(); $('tackleContext').textContent=metricLabel(); $('effortContext').textContent=metricLabel();
   $('carryStats').innerHTML=[card('Carry',displayNumber(st.carry)),card('Carry Metres',displayNumber(st.carryMetres)),card('Carry Dominance%',pct(raw.carryDominant,raw.carryContact),`${raw.carryDominant}/${raw.carryContact} dominant contact`),card('Post Contact Metres',displayNumber(st.postContactMetres))].join('');
   $('tackleStats').innerHTML=[card('Tackle',displayNumber(st.tackleMade),`${intFmt(raw.tackleAttempts)} attempts`),card('Tackle Completion',pct(raw.tackleMade,raw.tackleAttempts),`${raw.tackleMade}/${raw.tackleAttempts} made`),card('Tackle Dominance%',pct(raw.tackleDominant,raw.tackleAttempts),`${raw.tackleDominant}/${raw.tackleAttempts} dominant tackle`)].join('');
+  const goalKickSection=$('goalKickSection');
+  if(goalKickSection){
+    const attempts=toNumber(raw.goalKickAttempts||0);
+    if(attempts>0){
+      goalKickSection.style.display='block';
+      $('goalKickStats').innerHTML=[card('Attempts',displayNumber(st.goalKickAttempts)),card('Success Rate',pct(raw.goalKickMade,raw.goalKickAttempts),`${intFmt(raw.goalKickMade||0)}/${intFmt(raw.goalKickAttempts||0)} made`)].join('');
+    } else {
+      goalKickSection.style.display='none';
+      if($('goalKickStats')) $('goalKickStats').innerHTML='';
+    }
+  }
   $('colourStats').innerHTML=[effortReviewCard('Gold',displayNumber(st.colours.Gold),'gold'),effortReviewCard('Green',displayNumber(st.colours.Green),'green'),effortReviewCard('Yellow',displayNumber(st.colours.Yellow),'yellow'),effortReviewCard('Red',displayNumber(st.colours.Red),'redcard')].join(''); renderEffortShare(raw);
   $('gameTimeStats').innerHTML=[card('Matches',intFmt(raw.appearances||ctx.matches?.length||1),'Games included in this view'),card('Minutes Played',oneDec(raw.minutes||0),'Actual playing time'),card('Ball-in-play Min',oneDec(raw.ballInPlayMins),'Player BIP minutes')].join('');
   $('samuraiStats').innerHTML=[card('Samurai Stats',signedOneDec(samuraiRate(raw)),`${intFmt(raw.positiveActions)} positive / ${intFmt(raw.negativeActions)} negative`,'samuraiCard'),card('Positive Actions',displayNumber(st.positiveActions),'Tap for detail','actionable samuraiActionCard',{'samurai-action':'positive'}),card('Negative Actions',displayNumber(st.negativeActions),'Tap for detail','actionable samuraiActionCard',{'samurai-action':'negative'})].join(''); renderSamuraiDetail(raw);
