@@ -53,7 +53,7 @@ function parseSuperScoutMinutes(xmlText){
 }
 function extractReviewName(row){ const first=row.PlayerFirstName||'', last=row.PlayerLastName||''; const name=`${first} ${last}`.trim(); if(name) return name; const combined=row['PlayerName (Team)']||''; const m=combined.match(/^(.*?)\s*\((.*?)\)\s*$/); return (m?m[1]:combined).trim(); }
 function extractReviewTeam(row){ if(row.TeamName) return row.TeamName; const combined=row['PlayerName (Team)']||''; const m=combined.match(/^(.*?)\s*\((.*?)\)\s*$/); return (m?m[2]:'').trim(); }
-function blankStats(player){return {player,team:player.team||'',teams:player.teams||[],positionId:'',totalActions:0,appearances:0,minutes:0,ballInPlayMins:0,positiveActions:0,negativeActions:0,carry:0,carryMetres:0,postContactMetres:0,carryDominant:0,carryContact:0,tackleAttempts:0,tackleMade:0,tackleDominant:0,goalKickAttempts:0,goalKickMade:0,colours:{Gold:0,Green:0,Yellow:0,Red:0},reviewTotal:0,typeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},timeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},typeCounts:{},positiveActionTypes:{},negativeActionTypes:{},shirt:'',position:'',rosterSource:'',matchHistory:[]};}
+function blankStats(player){return {player,team:player.team||'',teams:player.teams||[],positionId:'',totalActions:0,appearances:0,minutes:0,ballInPlayMins:0,positiveActions:0,negativeActions:0,carry:0,carryMetres:0,postContactMetres:0,carryDominant:0,carryContact:0,tackleAttempts:0,tackleMade:0,tackleDominant:0,goalKickAttempts:0,goalKickMade:0,cleanBreaks:0,defendersBeaten:0,tackleFirstAttempts:0,tackleFirstMade:0,tackleFirstDominant:0,ruckSupportAttack:0,ruckSupportAttackEffective:0,colours:{Gold:0,Green:0,Yellow:0,Red:0},reviewTotal:0,typeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},timeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},typeCounts:{},positiveActionTypes:{},negativeActionTypes:{},shirt:'',position:'',rosterSource:'',matchHistory:[]};}
 function ensurePlayer(match, players, name, team, data={}){
   if(!name||!team) return null; const key=playerKey(name,team);
   let p=players.get(key); if(!p){ const teams=mergeDisplayTeams([], team); p={key,name:name.trim(),team:displayTeamName(teams)||team.trim(),teams,shirt:'',position:'',show:isTargetTeam(team),matches:[]}; players.set(key,p); } else { p.teams=mergeDisplayTeams(p.teams||p.team, team); p.team=displayTeamName(p.teams)||p.team; p.show=p.show||isTargetTeam(team); }
@@ -189,12 +189,56 @@ function attachMatchHistory(match){
 }
 
 function deriveMeta(item,biRows){ const first=biRows.find(r=>r.FXID||r.homeTeamName||r.awayTeamName)||{}; const home=item.homeTeam||first.homeTeamName||''; const away=item.awayTeam||first.awayTeamName||''; const score=item.score||((first.hometeamFTscore||first.awayteamFTscore)?`${first.hometeamFTscore??''}–${first.awayteamFTscore??''}`:''); const label=item.label||(home&&away&&score?`${home} ${score} ${away}`:(home&&away?`${home} v ${away}`:item.id)); const date=item.date||dateLabel(first.datePlayed||first.UTCTime); const season=String(item.season||first.season||date.slice(0,4)||'Unknown'); return {id:String(item.id||first.FXID||label),label,date,season,home,away,score,venue:item.venue||first.venueName||'',competition:item.competition||first.competitionName||'',raw:item}; }
+
+function rowTextForCompare(row){return [row.actionName,row.ActionName,row.ActionTypeName,row.actionTypeName,row.ActionResultName,row.actionResultName,row.qualifier3Name,row.qualifier4Name,row.qualifier5Name,row.qualifier6Name,row.qualifier7Name,row.Qualifier3Name,row.Qualifier4Name].map(x=>String(x||'')).join(' | ');}
+function compareNorm(v){return String(v||'').trim().replace(/\s+/g,' ').toLowerCase();}
+function rowIsFirstTackle(row){
+  const text=compareNorm(rowTextForCompare(row));
+  return text.includes('1st tackle') || text.includes('first tackle') || text.includes('1st tackler') || text.includes('first tackler');
+}
+function rowIsTackleAttempt(row){
+  const action=compareNorm(row.actionName||row.ActionName);
+  return action==='tackle' || action==='missed tackle';
+}
+function rowIsTackleMade(row){
+  const action=compareNorm(row.actionName||row.ActionName);
+  const result=compareNorm(row.ActionResultName||row.actionResultName);
+  return action==='tackle' && result!=='missed';
+}
+function isRuckSupportAttack(row){
+  const action=compareNorm(row.actionName||row.ActionName);
+  const q4=compareNorm(row.qualifier4Name||row.Qualifier4Name);
+  const text=compareNorm(rowTextForCompare(row));
+  return (action==='ruck ooa' && q4==='attacking ooa') || text.includes('ruck support attack');
+}
+function isRuckSupportAttackEffective(row){
+  const type=compareNorm(row.ActionTypeName||row.actionTypeName);
+  const result=compareNorm(row.ActionResultName||row.actionResultName);
+  return ['cleaned out','secured','effective','success','won'].includes(type) || ['success','won','turnover won','penalty won'].includes(result);
+}
+function trackComparisonMetrics(st,row){
+  const action=compareNorm(row.actionName||row.ActionName);
+  const type=compareNorm(row.ActionTypeName||row.actionTypeName);
+  const q4=compareNorm(row.qualifier4Name||row.Qualifier4Name);
+  if(type==='initial break' || type==='supported break' || type==='clean break') st.cleanBreaks++;
+  if(type==='defender beaten') st.defendersBeaten++;
+  if(rowIsTackleAttempt(row) && rowIsFirstTackle(row)){
+    st.tackleFirstAttempts++;
+    if(rowIsTackleMade(row)) st.tackleFirstMade++;
+    if(action==='tackle' && q4==='dominant tackle') st.tackleFirstDominant++;
+  }
+  if(isRuckSupportAttack(row)){
+    st.ruckSupportAttack++;
+    if(isRuckSupportAttackEffective(row)) st.ruckSupportAttackEffective++;
+  }
+}
+
 function buildMatch(item,biRows,reviewRows,xmlText,players){
   const meta=deriveMeta(item,biRows); const matchEnd=computeMatchEndMinutes(biRows); const xmlData=parseSuperScoutMinutes(xmlText); const fallbackMinutes=computePlayerMinutesFromBI(biRows,matchEnd); const playerMinutes=xmlData.minutes.size?xmlData.minutes:fallbackMinutes; const playerBallInPlay=xmlData.ballInPlay.size?xmlData.ballInPlay:playerMinutes; const match={...meta,matchEndMinutes:matchEnd,minutesSource:xmlData.minutes.size?'SuperScout XML':'BI CSV fallback',playerStats:new Map()}; const seen=new Set();
   const xmlInfoFor=(row,name,team)=>{ const plid=String(row.PLID||row.plid||'').trim(); if(plid && xmlData.playersByPlid.has(plid)) return xmlData.playersByPlid.get(plid); const shirt=String(row.playerShirtNumber||row.ShirtNumber||'').replace(/^0+/,'').trim(); if(team&&shirt&&xmlData.playersByShirt.has(`${norm(team)}|${shirt}`)) return xmlData.playersByShirt.get(`${norm(team)}|${shirt}`); return xmlData.players.get(playerKey(name,team))||null; };
   const applyXmlMinutes=(st,info)=>{ if(!info) return false; if(info.minutes>0) st.minutes=info.minutes; if(info.ballInPlayMins>0) st.ballInPlayMins=info.ballInPlayMins; const xmlShirt=normalizeShirt(info.shirt); if(xmlShirt) st.shirt=xmlShirt; if(info.position) st.position=info.position; if(info.positionId||info.position) st.positionId=info.positionId||info.position; if(xmlShirt||info.position||info.positionId) st.rosterSource='SuperScout XML'; return true; };
   for(const info of xmlData.players.values()){ if(info.minutes<=0) continue; const got=ensurePlayer(match,players,info.name,info.team,{shirt:info.shirt,position:info.position,positionId:info.positionId||info.position}); if(!got) continue; got.stats.appearances=1; got.stats.minutes=info.minutes; got.stats.ballInPlayMins=info.ballInPlayMins||info.minutes||0; seen.add(got.key); }
-  for(const row of biRows){ const name=(row.playerName||'').trim(); const team=(row.teamName||'').trim(); const got=ensurePlayer(match,players,name,team,{shirt:row.playerShirtNumber,position:row.playerpositionName,positionId:row.playerpositionId||row.PositionID||row.PosID}); if(!got) continue; const st=got.stats; const sk=got.key; if(!seen.has(sk)){ seen.add(sk); st.appearances=1; st.minutes=playerMinutes.get(sk)||0; st.ballInPlayMins=playerBallInPlay.get(sk)||st.minutes||0; } applyXmlMinutes(st,xmlInfoFor(row,name,team)); st.totalActions++; const sam=samuraiScoreRow(row); st.positiveActions+=sam.positive; st.negativeActions+=sam.negative; for(const label of sam.positiveReasons||[]) st.positiveActionTypes[label]=(st.positiveActionTypes[label]||0)+1; for(const label of sam.negativeReasons||[]) st.negativeActionTypes[label]=(st.negativeActionTypes[label]||0)+1; const action=String(row.actionName||'').trim(); if(action==='Carry'){ st.carry++; st.carryMetres+=toNumber(row.Metres2); st.postContactMetres+=toNumber(row.Metres3); const contact=String(row.qualifier4Name||''); if(/Contact/i.test(contact)) st.carryContact++; if(/Dominant Contact/i.test(contact)) st.carryDominant++; } if(action==='Tackle'){ st.tackleAttempts++; const result=String(row.ActionResultName||'').trim(); if(result!=='Missed') st.tackleMade++; const tq=String(row.qualifier4Name||''); if(/Dominant Tackle/i.test(tq)) st.tackleDominant++; } if(action==='Goal Kick'){ const result=String(row.ActionResultName||'').trim(); if(result){ st.goalKickAttempts++; if(result==='Goal Kicked') st.goalKickMade++; } } }
+  for(const row of biRows){ const name=(row.playerName||'').trim(); const team=(row.teamName||'').trim(); const got=ensurePlayer(match,players,name,team,{shirt:row.playerShirtNumber,position:row.playerpositionName,positionId:row.playerpositionId||row.PositionID||row.PosID}); if(!got) continue; const st=got.stats; const sk=got.key; if(!seen.has(sk)){ seen.add(sk); st.appearances=1; st.minutes=playerMinutes.get(sk)||0; st.ballInPlayMins=playerBallInPlay.get(sk)||st.minutes||0; } applyXmlMinutes(st,xmlInfoFor(row,name,team)); st.totalActions++; trackComparisonMetrics(st,row); const sam=samuraiScoreRow(row); st.positiveActions+=sam.positive; st.negativeActions+=sam.negative; for(const label of sam.positiveReasons||[]) st.positiveActionTypes[label]=(st.positiveActionTypes[label]||0)+1; for(const label of sam.negativeReasons||[]) st.negativeActionTypes[label]=(st.negativeActionTypes[label]||0)+1; const action=String(row.actionName||'').trim(); if(action==='Carry'){ st.carry++; st.carryMetres+=toNumber(row.Metres2); st.postContactMetres+=toNumber(row.Metres3); const contact=String(row.qualifier4Name||''); if(/Contact/i.test(contact)) st.carryContact++; if(/Dominant Contact/i.test(contact)) st.carryDominant++; } if(action==='Tackle'){ st.tackleAttempts++; const result=String(row.ActionResultName||'').trim(); if(result!=='Missed') st.tackleMade++; const tq=String(row.qualifier4Name||''); if(/Dominant Tackle/i.test(tq)) st.tackleDominant++; } if(action==='Goal Kick'){ const result=String(row.ActionResultName||'').trim(); if(result){ st.goalKickAttempts++; if(result==='Goal Kicked') st.goalKickMade++; } } }
   for(const row of reviewRows){ const name=extractReviewName(row); const team=extractReviewTeam(row); const got=ensurePlayer(match,players,name,team,{shirt:row.ShirtNumber}); if(!got) continue; const st=got.stats; if(!st.appearances){ const sk=playerKey(name,team); st.appearances=1; st.minutes=playerMinutes.get(sk)||0; st.ballInPlayMins=playerBallInPlay.get(sk)||st.minutes||0; } const colour=canonicalEffortColour(row.next_action_result); const type=canonicalEffortType(row.next_action_type||'Other'); if(st.colours[colour]!==undefined){ st.colours[colour]++; st.typeByColour[colour][type]=(st.typeByColour[colour][type]||0)+1; const band=effortTimeBand(rowClockMinutes(row)); if(band) st.timeByColour[colour][band]=(st.timeByColour[colour][band]||0)+1; } st.reviewTotal++; st.typeCounts[type]=(st.typeCounts[type]||0)+1; }
   attachMatchHistory(match);
   return match;
@@ -226,8 +270,8 @@ function main(){
   }
   matchSummaries.sort((a,b)=>String(b.date||'').localeCompare(String(a.date||''))||String(b.id||'').localeCompare(String(a.id||'')));
   for(const p of players.values()){ p.matches=(p.matches||[]).sort((a,b)=>{ const ma=matchSummaries.find(m=>m.id===a)||{}; const mb=matchSummaries.find(m=>m.id===b)||{}; return String(mb.date||'').localeCompare(String(ma.date||''))||String(b).localeCompare(String(a)); }); }
-  const index={generatedAt:new Date().toISOString(),version:3,matches:matchSummaries,players:[...players.values()].filter(p=>p.show).sort((a,b)=>a.name.localeCompare(b.name)||a.team.localeCompare(b.team)).map(p=>({key:p.key,name:p.name,team:p.team,teams:p.teams||[p.team].filter(Boolean),shirt:p.shirt||'',position:p.position||'',matches:p.matches,matchSummaries:p.matchSummaries||{}}))};
+  const index={generatedAt:new Date().toISOString(),version:3,matches:matchSummaries,players:[...players.values()].filter(p=>(p.matches||[]).length).sort((a,b)=>a.name.localeCompare(b.name)||a.team.localeCompare(b.team)).map(p=>({key:p.key,name:p.name,team:p.team,teams:p.teams||[p.team].filter(Boolean),show:!!p.show,shirt:p.shirt||'',position:p.position||'',matches:p.matches,matchSummaries:p.matchSummaries||{}}))};
   fs.writeFileSync(path.join(DATA_DIR,'player_index.json'), JSON.stringify(index));
-  console.log(`Generated player_index.json and ${matchSummaries.length} stats files for ${index.players.length} Japan players.`);
+  console.log(`Generated player_index.json and ${matchSummaries.length} stats files for ${index.players.length} indexed players.`);
 }
 main();
