@@ -182,6 +182,25 @@ body{background:
 @media(max-width:540px){.effortStack.richGraph{height:64px;border-radius:16px}.effortAnalysisCard.graphOnly .effortStack.richGraph{height:70px}.effortSegmentName{font-size:9px}.effortSegmentPct{font-size:13px}.effortSegmentCount{font-size:9px}.effortMiniLabels{gap:6px}.effortMiniLabel{font-size:11px;padding:6px 8px}.effortShareLegend{display:none!important}}
 
 
+
+/* v76: prominent mode switch and full comparison screen */
+.modeSwitchPanel{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 18px}
+.modeSwitchBtn{position:relative;text-align:left;border:1px solid rgba(213,221,232,.95);background:rgba(255,255,255,.92);border-radius:26px;padding:18px 20px;cursor:pointer;box-shadow:0 14px 34px rgba(16,24,40,.08);color:#071a3a;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.modeSwitchBtn:before{content:'';position:absolute;inset:0 auto 0 0;width:6px;background:#d71920;opacity:.45}
+.modeSwitchBtn.compare:before{background:#071a3a}
+.modeSwitchBtn:hover,.modeSwitchBtn:focus-visible{transform:translateY(-2px);box-shadow:0 20px 44px rgba(16,24,40,.12);outline:none;border-color:#d71920}
+.modeSwitchBtn.active{border-color:#d71920;background:linear-gradient(135deg,#fff,#f9fbff);box-shadow:0 18px 42px rgba(215,25,32,.12)}
+.modeSwitchBtn.compare.active{border-color:#071a3a;box-shadow:0 18px 42px rgba(7,26,58,.14)}
+.modeSwitchBtn strong{display:block;font-size:24px;letter-spacing:-.04em;line-height:1.05;margin:3px 0 5px}
+.modeSwitchBtn small{display:block;color:#667085;font-weight:850;line-height:1.35}
+.modeKicker{display:inline-flex;align-items:center;border-radius:999px;background:#f2f4f7;color:#475467;font-size:11px;font-weight:1000;text-transform:uppercase;letter-spacing:.08em;padding:5px 9px}
+.modeSwitchBtn.active .modeKicker{background:#fff1f1;color:#b42318}.modeSwitchBtn.compare.active .modeKicker{background:#edf2f8;color:#071a3a}
+body.compare-mode .controlShell,body.compare-mode #dashboard{display:none!important}
+body.compare-mode .compareShell{display:block}
+body.compare-mode .compareShell{padding:22px;border-radius:32px}
+body.compare-mode .compareTitle{font-size:24px}.compareModeIntro{display:none}
+@media(max-width:760px){.modeSwitchPanel{grid-template-columns:1fr;gap:10px}.modeSwitchBtn{padding:15px 16px;border-radius:22px}.modeSwitchBtn strong{font-size:20px}body.compare-mode .compareShell{padding:14px;border-radius:24px}}
+
 /* v75: player comparison mode */
 .compareShell{background:rgba(255,255,255,.9);border:1px solid rgba(213,221,232,.9);border-radius:30px;box-shadow:var(--shadow);padding:16px;margin:0 0 18px;display:none}.compareShell.show{display:block}.compareTop{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.compareTitle{font-size:16px;font-weight:1000;letter-spacing:-.02em;color:#071a3a}.compareSub{font-size:12px;color:var(--muted);font-weight:800;margin-top:3px}.compareToggleRow{display:flex;align-items:center;justify-content:flex-end;margin:0 0 12px}.compareToggle{border:1px solid #d7e0ec;background:#fff;border-radius:999px;padding:9px 13px;font-weight:1000;color:#071a3a;cursor:pointer;box-shadow:0 8px 18px rgba(16,24,40,.06)}.compareToggle.active{background:#071a3a;color:#fff;border-color:#071a3a}.compareControls{display:grid;grid-template-columns:1fr 1fr;gap:14px}.comparePick{border:1px solid var(--line);border-radius:22px;background:linear-gradient(180deg,#fff,#f8fafc);padding:14px}.comparePick h3{margin:0 0 10px;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:#475467}.comparePickGrid{display:grid;grid-template-columns:170px 1fr;gap:10px}.compareSelect{min-height:48px;border-radius:15px;border:1px solid #cbd5e1;background:#fff;color:#0b1220;padding:0 12px;font-size:14px;font-weight:900;outline:none;width:100%}.compareSelect:focus{border-color:#e78c95;box-shadow:0 0 0 4px rgba(215,25,32,.10)}.compareActions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px}.compareRun{border:0;border-radius:999px;background:var(--accent);color:#fff;font-weight:1000;padding:11px 16px;cursor:pointer;box-shadow:0 12px 24px rgba(215,25,32,.22)}.compareRun:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}.compareResult{margin-top:14px}.compareHeader{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;margin:12px 0}.comparePlayerName{font-size:18px;font-weight:1000;letter-spacing:-.02em}.comparePlayerMeta{font-size:12px;color:var(--muted);font-weight:850;margin-top:3px}.compareVs{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#071a3a;color:#fff;font-size:12px;font-weight:1000}.compareChart{display:grid;gap:10px}.compareRow{border:1px solid var(--line);background:#fff;border-radius:18px;padding:12px;box-shadow:0 8px 20px rgba(16,24,40,.06)}.compareRowHead{display:grid;grid-template-columns:92px 1fr 92px;align-items:center;gap:10px}.compareValue{font-size:18px;font-weight:1000;color:#d71920}.compareValue.right{color:#071a3a;text-align:right}.compareMetric{text-align:center;font-size:13px;font-weight:1000;color:#344054}.compareBars{display:grid;grid-template-columns:1fr 1fr;gap:5px;align-items:center;margin-top:9px}.compareHalf{height:12px;background:#eef2f7;border-radius:999px;overflow:hidden;position:relative}.compareHalf.left .compareBar{margin-left:auto;background:#d71920}.compareHalf.right .compareBar{margin-right:auto;background:#071a3a}.compareBar{height:100%;border-radius:999px;width:0%;transition:width .75s cubic-bezier(.2,.8,.2,1)}.compareWinner{margin-top:7px;display:flex;justify-content:center}.compareWinner span{font-size:11px;font-weight:1000;border-radius:999px;padding:5px 9px;background:#eef2f7;color:#344054}.compareWinner .leftWin{background:#fff1f1;color:#b42318}.compareWinner .rightWin{background:#edf2f8;color:#071a3a}.compareGroupTitle{margin:18px 0 8px;font-size:13px;font-weight:1000;color:#071a3a;text-transform:uppercase;letter-spacing:.08em}.compareEmpty{border:1px dashed #bfcaDA;border-radius:18px;background:#fbfcff;color:var(--muted);padding:16px;line-height:1.55}
 @media(max-width:760px){.compareControls{grid-template-columns:1fr}.comparePickGrid{grid-template-columns:1fr}.compareHeader{grid-template-columns:1fr;text-align:center}.compareVs{margin:0 auto}.compareRowHead{grid-template-columns:72px 1fr 72px}.compareValue{font-size:15px}.compareMetric{font-size:12px}.compareTop{align-items:flex-start;flex-direction:column}.compareToggleRow{justify-content:flex-start}}
@@ -194,7 +213,20 @@ body{background:
 </header>
 <main class="app">
   <div id="status" class="status"><span class="dot"></span><span>Loading data...</span></div>
-  <section class="controlShell">
+  <section class="modeSwitchPanel" aria-label="Select dashboard mode">
+    <button id="playerReviewModeToggle" class="modeSwitchBtn active" type="button">
+      <span class="modeKicker">Player mode</span>
+      <strong>Stats Review</strong>
+      <small>Search one player and review match / season / career.</small>
+    </button>
+    <button id="compareModeToggle" class="modeSwitchBtn compare" type="button">
+      <span class="modeKicker">Comparison mode</span>
+      <strong>Stats Comparison</strong>
+      <small>Select two players and compare key stats by graph.</small>
+    </button>
+  </section>
+
+  <section class="controlShell" id="reviewControls">
     <div class="steps">
       <div class="step">
         <h2><span class="stepno">1</span>Select Player</h2>
@@ -234,12 +266,9 @@ body{background:
   </section>
 
 
-  <div class="compareToggleRow">
-    <button id="compareModeToggle" class="compareToggle" type="button">Compare players</button>
-  </div>
   <section id="compareShell" class="compareShell" aria-label="Player comparison">
     <div class="compareTop">
-      <div><div class="compareTitle">Player Comparison</div><div class="compareSub">Select team and player for both sides. Values follow the current Total / Per game / Per 80 setting.</div></div>
+      <div><div class="compareTitle">Stats Comparison</div><div class="compareSub">Select team and player for both sides. Values follow the current Total / Per game / Per 80 setting.</div></div>
       <button id="compareClose" class="compareToggle" type="button">Close</button>
     </div>
     <div class="compareControls">
@@ -341,6 +370,9 @@ document.documentElement.lang=UI_LANG;
 const JA_TEXT = new Map([
   ['Loading data...','データ読み込み中...'],
   ['Select Player','選手を選択'],
+  ['Stats Review','スタッツレビュー'],
+  ['Stats Comparison','スタッツ比較'],
+  ['Player Comparison','スタッツ比較'],
   ['Select Scope','表示範囲を選択'],
   ['Type a name, then select from the list.','名前を入力して、候補から選択してください。'],
   ['Only Japan / Japan XV players are shown.','Japan / Japan XV の選手のみ表示しています。'],
@@ -1606,7 +1638,15 @@ function hydrateComparePlayers(side){
   sel.value=players.some(p=>p.key===current)?current:''; state.compare[`player${side}`]=sel.value; updateCompareRunState();
 }
 function updateCompareRunState(){ const btn=$('compareRun'); if(!btn) return; btn.disabled=!(state.compare.player1&&state.compare.player2); }
-function setCompareMode(on){ state.compareMode=!!on; const shell=$('compareShell'), btn=$('compareModeToggle'); if(shell) shell.classList.toggle('show',state.compareMode); if(btn) btn.classList.toggle('active',state.compareMode); if(btn) btn.textContent=state.compareMode?'Comparison on':'Compare players'; if(state.compareMode) hydrateCompareUI(); }
+function setCompareMode(on){
+  state.compareMode=!!on;
+  const shell=$('compareShell'), compareBtn=$('compareModeToggle'), reviewBtn=$('playerReviewModeToggle');
+  document.body.classList.toggle('compare-mode',state.compareMode);
+  if(shell) shell.classList.toggle('show',state.compareMode);
+  if(compareBtn){ compareBtn.classList.toggle('active',state.compareMode); compareBtn.setAttribute('aria-pressed',state.compareMode?'true':'false'); }
+  if(reviewBtn){ reviewBtn.classList.toggle('active',!state.compareMode); reviewBtn.setAttribute('aria-pressed',!state.compareMode?'true':'false'); }
+  if(state.compareMode){ hydrateCompareUI(); if(dashboard) dashboard.style.display='none'; if(shell) shell.scrollIntoView({behavior:'smooth',block:'start'}); }
+}
 function scaledForComparison(raw){ return scaleStats(raw,state.metric); }
 function comparisonMetricRows(a,b){
   return [
@@ -1693,7 +1733,8 @@ $('clearPlayerSearch').addEventListener('click',resetPlayerSearch);
 $('scopeButtons').addEventListener('click',e=>{const btn=e.target.closest('button[data-scope]');if(!btn)return;state.scope=btn.dataset.scope;state.selectedId='';document.querySelectorAll('#scopeButtons button').forEach(b=>b.classList.toggle('active',b===btn));renderOptions();});
 $('metricButtons').addEventListener('click',e=>{const btn=e.target.closest('button[data-metric]');if(!btn)return;state.metric=btn.dataset.metric;document.querySelectorAll('#metricButtons button').forEach(b=>b.classList.toggle('active',b===btn));renderDashboard(); if(state.compareMode&&state.compare.player1&&state.compare.player2) runPlayerComparison();});
 
-const compareToggle=$('compareModeToggle'); if(compareToggle) compareToggle.addEventListener('click',()=>setCompareMode(!state.compareMode));
+const compareToggle=$('compareModeToggle'); if(compareToggle) compareToggle.addEventListener('click',()=>setCompareMode(true));
+const playerReviewToggle=$('playerReviewModeToggle'); if(playerReviewToggle) playerReviewToggle.addEventListener('click',()=>setCompareMode(false));
 const compareClose=$('compareClose'); if(compareClose) compareClose.addEventListener('click',()=>setCompareMode(false));
 for(const side of [1,2]){
   const teamSel=$(`compareTeam${side}`); if(teamSel) teamSel.addEventListener('change',()=>{state.compare[`team${side}`]=teamSel.value; state.compare[`player${side}`]=''; hydrateComparePlayers(side);});
