@@ -1196,8 +1196,15 @@ function findOpponentSameNumber(match,raw){
   const shirt=String(raw.shirt||raw.player.shirt||'').replace(/^0+/,'');
   if(!shirt) return null;
   const jersey=Number(shirt);
-  const playerTeam=normTeam(raw.player.team);
-  const allOpponents=[...match.playerStats.values()].filter(st=>normTeam(st.player.team)!==playerTeam);
+  const selectedTeamIsJapan=isTargetTeam(raw.player&&raw.player.team) || isTargetTeam(raw.team) || (Array.isArray(raw.player&&raw.player.teams) && raw.player.teams.some(isTargetTeam));
+  // The reviewed player list is Japan / Japan XV only. For match-up, always compare
+  // against the actual opposition side, never another Japan / Japan XV player.
+  // This also avoids merged player labels like "Japan / Japan XV" being treated as a third team.
+  const allOpponents=[...match.playerStats.values()].filter(st=>{
+    const team=st.player&&st.player.team;
+    if(selectedTeamIsJapan) return !isTargetTeam(team);
+    return normTeam(team)!==normTeam(raw.player&&raw.player.team);
+  });
   const sameNumber=allOpponents.filter(st=>String(st.shirt||st.player.shirt||'').replace(/^0+/,'')===shirt);
   if(Number.isFinite(jersey) && jersey>=19){
     const sameNumberSameRole=sameNumber.find(st=>sameReservePositionGroup(raw,st));
