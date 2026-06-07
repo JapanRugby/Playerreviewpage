@@ -153,6 +153,19 @@ body{background:
 .sectionTitle h3:before{background:linear-gradient(180deg,#d71920,#071a3a)}
 .kicker{color:#071a3a}.matchCard.active{background:linear-gradient(135deg,#edf2f8,#fff);border-color:#d71920}.scopeReady{background:linear-gradient(135deg,#f8fafc,#edf2f8);border-color:#b9c6d8}
 
+
+/* v65: Make Effort graphs self-explanatory without percentage cards */
+.effortStack.richGraph{height:58px;border-radius:18px;position:relative;box-shadow:inset 0 0 0 1px rgba(16,24,40,.06),0 10px 22px rgba(16,24,40,.07)}
+.effortStack.richGraph .effortShareSegment{display:flex;align-items:center;justify-content:center;min-width:0;overflow:hidden;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.22);isolation:isolate}
+.effortStack.richGraph .effortShareSegment.yellow,.effortStack.richGraph .effortShareSegment.gold{color:#101828;text-shadow:0 1px 1px rgba(255,255,255,.28)}
+.effortSegmentClickable{cursor:pointer;transition:filter .18s ease,transform .18s ease}.effortSegmentClickable:hover,.effortSegmentClickable:focus-visible{filter:saturate(1.12) brightness(1.03);outline:3px solid rgba(215,25,32,.22);outline-offset:2px;z-index:2}.effortSegmentClickable:active{transform:scale(.995)}
+.effortSegmentLabel{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;line-height:1.05;padding:0 8px;text-align:center;white-space:nowrap;max-width:100%;opacity:0;transform:translateY(3px);transition:opacity .35s ease .25s,transform .35s ease .25s}
+.effortShareCard.is-visible .effortSegmentLabel,.effortAnalysisCard.is-visible .effortSegmentLabel,.effortModalBody .effortSegmentLabel{opacity:1;transform:none}
+.effortSegmentName{font-size:11px;font-weight:1000;letter-spacing:.04em;text-transform:uppercase;overflow:hidden;text-overflow:ellipsis;max-width:100%}.effortSegmentPct{font-size:15px;font-weight:1000;letter-spacing:-.04em}.effortSegmentCount{font-size:10px;font-weight:900;opacity:.86}
+.effortMiniLabels{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.effortMiniLabel{display:inline-flex;align-items:center;gap:6px;border:1px solid #e6ebf2;border-radius:999px;background:rgba(255,255,255,.82);padding:7px 10px;font-size:12px;font-weight:900;color:#344054}.effortMiniLabel b{color:#101828}.effortMiniLabel .effortDot{width:9px;height:9px}.effortMiniLabel.tap{cursor:pointer}.effortMiniLabel.tap:after{content:'↗';font-size:11px;color:#98a2b3;margin-left:2px}
+.effortGraphNote{font-size:12px;color:#667085;font-weight:850;margin-top:10px}.effortAnalysisCard.graphOnly{padding:18px}.effortAnalysisCard.graphOnly .effortAnalysisCardHead{margin-bottom:14px}.effortAnalysisCard.graphOnly .effortStack.richGraph{height:64px}.effortAnalysisCard.graphOnly .effortMiniLabels{margin-top:14px}.effortGraphSummary{font-size:12px;color:#667085;font-weight:850;margin-top:8px;line-height:1.4}
+@media(max-width:540px){.effortStack.richGraph{height:64px;border-radius:16px}.effortAnalysisCard.graphOnly .effortStack.richGraph{height:70px}.effortSegmentName{font-size:9px}.effortSegmentPct{font-size:13px}.effortSegmentCount{font-size:9px}.effortMiniLabels{gap:6px}.effortMiniLabel{font-size:11px;padding:6px 8px}.effortShareLegend{display:none!important}}
+
 </style>
 </head>
 <body>
@@ -864,21 +877,50 @@ function effortAnalysisForColour(raw, colour){
   const total=buckets.reduce((sum,b)=>sum+toNumber(byBucket[b.name]),0);
   return {colour,buckets,byBucket,total};
 }
+
+function graphSegmentLabel(p, opts={}){
+  const name=escapeHtml(p.shortName||p.name);
+  const pct=escapeHtml(p.pctText||'0%');
+  const count=intFmt(p.count||0);
+  const countLabel=opts.countLabel||'times';
+  const tiny=(toNumber(p.pctVal)<9);
+  if(tiny) return '';
+  return `<span class="effortSegmentLabel"><span class="effortSegmentName">${name}</span><span class="effortSegmentPct">${pct}</span><span class="effortSegmentCount">${count} ${countLabel}</span></span>`;
+}
+function graphMiniLabels(parts, opts={}){
+  const countLabel=opts.countLabel||'times';
+  return `<div class="effortMiniLabels">${parts.map(p=>{
+    const action=opts.clickable?` data-effort-analysis="${escapeHtml(p.name)}" role="button" tabindex="0"`:'';
+    const tap=opts.clickable?' tap':'';
+    return `<span class="effortMiniLabel ${tap}"${action}><span class="effortDot ${p.cls}"></span><span>${escapeHtml(p.name)}</span><b>${escapeHtml(p.pctText||'0%')}</b><span>${intFmt(p.count||0)} ${countLabel}</span></span>`;
+  }).join('')}</div>`;
+}
+function richStack(parts, opts={}){
+  const countLabel=opts.countLabel||'times';
+  const clickable=!!opts.clickable;
+  return `<div class="effortStack richGraph" aria-label="${escapeHtml(opts.label||'Effort percentage graph')}">${parts.map(p=>{
+    const clickAttrs=clickable?` data-effort-analysis="${escapeHtml(p.name)}" role="button" tabindex="0" aria-label="Open ${escapeHtml(p.name)} Effort Analysis"`:'';
+    const clickClass=clickable?' effortSegmentClickable':'';
+    return `<div class="effortShareSegment ${p.cls}${clickClass}"${clickAttrs} data-target-width="${p.pctVal.toFixed(2)}%" style="width:${p.pctVal.toFixed(2)}%" title="${escapeHtml(p.name)}: ${escapeHtml(p.pctText||'0%')} · ${intFmt(p.count||0)} ${countLabel}">${graphSegmentLabel(p,{countLabel})}</div>`;
+  }).join('')}</div>`;
+}
+
 function renderEffortAnalysisCard(raw, colour){
   const colourCls=colour==='Red'?'redcard':String(colour||'').toLowerCase();
   if(!effortAnalysisColours().some(([c])=>c===colour)){
-    return `<div class="effortAnalysisCard ${colourCls}"><div class="effortAnalysisCardHead"><span><span class="effortDot ${colourCls}"></span> ${escapeHtml(colour)}</span><span class="pill">No Data</span></div><div class="helper">No classified Effort data for this colour.</div></div>`;
+    return `<div class="effortAnalysisCard ${colourCls} graphOnly"><div class="effortAnalysisCardHead"><span><span class="effortDot ${colourCls}"></span> ${escapeHtml(colour)}</span><span class="pill">No Data</span></div><div class="helper">No classified Effort data for this colour.</div></div>`;
   }
   const data=effortAnalysisForColour(raw,colour);
   if(!data.total){
-    return `<div class="effortAnalysisCard ${colourCls}"><div class="effortAnalysisCardHead"><span><span class="effortDot ${colourCls}"></span> ${escapeHtml(colour)}</span><span class="pill">No Data</span></div><div class="helper">No classified ${escapeHtml(colour)} Effort data.</div></div>`;
+    return `<div class="effortAnalysisCard ${colourCls} graphOnly"><div class="effortAnalysisCardHead"><span><span class="effortDot ${colourCls}"></span> ${escapeHtml(colour)}</span><span class="pill">No Data</span></div><div class="helper">No classified ${escapeHtml(colour)} Effort data.</div></div>`;
   }
   const parts=data.buckets.map(b=>{
     const count=toNumber(data.byBucket[b.name]);
     const pctVal=(count/data.total)*100;
-    return {...b,count,pctVal,pctText:`${Math.round(pctVal)}%`};
+    return {...b,count,pctVal,pctText:`${Math.round(pctVal)}%`,shortName:b.name.replace('Post Contact','Post').replace('Phase Defence','Phase')};
   });
-  return `<div class="effortAnalysisCard ${colourCls}"><div class="effortAnalysisCardHead"><span><span class="effortDot ${colourCls}"></span> ${escapeHtml(colour)} Effort Analysis</span><span class="pill">${intFmt(data.total)} times</span></div><div class="effortStack" aria-label="${escapeHtml(colour)} Effort Analysis percentage share">${parts.map(p=>`<div class="effortShareSegment ${p.cls}" data-target-width="${p.pctVal.toFixed(2)}%" style="width:${p.pctVal.toFixed(2)}%" title="${escapeHtml(colour)} ${p.name}: ${p.pctText}"></div>`).join('')}</div><div class="effortAnalysisLegend">${parts.map(p=>`<div class="effortLegendItem ${p.cls}"><div class="effortLegendTop"><span class="effortDot ${p.cls}"></span><span>${p.name}</span></div><div class="effortLegendPct" data-final="${p.pctText}">${p.pctText}</div><div class="effortLegendCount">${intFmt(p.count)} times</div></div>`).join('')}</div></div>`;
+  const top=parts.filter(p=>p.count>0).sort((a,b)=>b.count-a.count)[0];
+  return `<div class="effortAnalysisCard ${colourCls} graphOnly"><div class="effortAnalysisCardHead"><span><span class="effortDot ${colourCls}"></span> ${escapeHtml(colour)} 5 Category</span><span class="pill">${intFmt(data.total)} times</span></div>${richStack(parts,{label:`${colour} Effort Analysis category share`})}${graphMiniLabels(parts)}<div class="effortGraphSummary">${top?`${escapeHtml(top.name)} is the largest share at ${escapeHtml(top.pctText)} (${intFmt(top.count)} times).`:'No category data.'}</div></div>`;
 }
 function renderEffortAnalysis(raw){
   const cards=effortAnalysisColours().map(([colour])=>renderEffortAnalysisCard(raw,colour)).join('');
@@ -894,9 +936,10 @@ function effortTimeBandData(raw,colour){
 }
 function renderEffortTimeBands(raw,colour,colourCls){
   const data=effortTimeBandData(raw,colour);
-  if(!data.total){return `<div class="effortAnalysisCard ${colourCls}"><div class="effortAnalysisCardHead"><span>Time Bands</span><span class="pill">No Data</span></div><div class="helper">No ${escapeHtml(colour)} Effort timing data.</div></div>`;}
-  const parts=data.bands.map(b=>{const pctVal=data.total?(b.count/data.total)*100:0;return {...b,pctVal,pctText:`${Math.round(pctVal)}%`};});
-  return `<div class="effortAnalysisCard ${colourCls}"><div class="effortAnalysisCardHead"><span>Time Bands</span><span class="pill">${intFmt(data.total)} times</span></div><div class="effortStack" aria-label="${escapeHtml(colour)} Effort by 20 minute bands">${parts.map(p=>`<div class="effortShareSegment ${colourCls}" data-target-width="${p.pctVal.toFixed(2)}%" style="width:${p.pctVal.toFixed(2)}%" title="${p.name}: ${p.pctText}"></div>`).join('')}</div><div class="effortAnalysisLegend">${parts.map(p=>`<div class="effortLegendItem ${colourCls}"><div class="effortLegendTop"><span class="effortDot ${colourCls}"></span><span>${p.name}</span></div><div class="effortLegendPct" data-final="${p.pctText}">${p.pctText}</div><div class="effortLegendCount">${intFmt(p.count)} times</div></div>`).join('')}</div></div>`;
+  if(!data.total){return `<div class="effortAnalysisCard ${colourCls} graphOnly"><div class="effortAnalysisCardHead"><span>Time Bands</span><span class="pill">No Data</span></div><div class="helper">No ${escapeHtml(colour)} Effort timing data.</div></div>`;}
+  const parts=data.bands.map(b=>{const pctVal=data.total?(b.count/data.total)*100:0;return {...b,cls:colourCls,pctVal,pctText:`${Math.round(pctVal)}%`,shortName:b.name};});
+  const top=parts.filter(p=>p.count>0).sort((a,b)=>b.count-a.count)[0];
+  return `<div class="effortAnalysisCard ${colourCls} graphOnly"><div class="effortAnalysisCardHead"><span>Time Bands</span><span class="pill">${intFmt(data.total)} times</span></div>${richStack(parts,{label:`${colour} Effort by 20 minute bands`})}${graphMiniLabels(parts)}<div class="effortGraphSummary">${top?`${escapeHtml(top.name)} has the highest share at ${escapeHtml(top.pctText)} (${intFmt(top.count)} times).`:'No timing data.'}</div></div>`;
 }
 function renderEffortTypeBreakdownForColour(raw,colour,colourCls){
   const entries=Object.entries(raw?.typeByColour?.[colour]||{}).map(([type,count])=>({type,count:toNumber(count)})).filter(x=>x.count>0).sort((a,b)=>b.count-a.count||a.type.localeCompare(b.type));
@@ -916,10 +959,10 @@ function renderEffortShare(raw){
   const parts=colours.map(([name,cls])=>{
     const count=toNumber(raw.colours?.[name]);
     const pctVal=(count/total)*100;
-    const hasAnalysis=effortAnalysisColours().some(([c])=>c===name);
-    return {name,cls,count,pctVal,pctText:`${Math.round(pctVal)}%`,hasAnalysis};
+    return {name,cls,count,pctVal,pctText:`${Math.round(pctVal)}%`};
   });
-  $('effortShare').innerHTML=`<div class="effortShareHead"><div class="effortShareTitle">Effort ratio</div><div class="effortShareTotal">${total?intFmt(total)+' total times':'No Data'}</div></div><div class="effortStack" aria-label="Gold Green Yellow Red percentage share">${parts.map(p=>`<div class="effortShareSegment ${p.cls}" data-target-width="${p.pctVal.toFixed(2)}%" style="width:${p.pctVal.toFixed(2)}%" title="${p.name}: ${p.pctText}"></div>`).join('')}</div><div class="effortShareLegend">${parts.map(p=>`<button type="button" class="effortLegendItem effortClickable ${p.cls}" data-effort-analysis="${p.name}" aria-label="Open ${p.name} Effort Analysis"><div class="effortLegendTop"><span class="effortDot ${p.cls}"></span><span>${p.name}</span></div><div class="effortLegendPct" data-final="${p.pctText}">${p.pctText}</div><div class="effortLegendCount">${intFmt(p.count)} times</div><div class="effortLegendHint">Tap for analysis</div></button>`).join('')}</div>`;
+  const top=parts.filter(p=>p.count>0).sort((a,b)=>b.count-a.count)[0];
+  $('effortShare').innerHTML=`<div class="effortShareHead"><div class="effortShareTitle">Effort ratio</div><div class="effortShareTotal">${total?intFmt(total)+' total times':'No Data'}</div></div>${richStack(parts,{label:'Gold Green Yellow Red percentage share',clickable:true})}${graphMiniLabels(parts,{clickable:true})}<div class="effortGraphNote">Tap a colour in the graph to open Effort Analysis.${top?` Largest share: ${escapeHtml(top.name)} ${escapeHtml(top.pctText)}.`:''}</div>`;
 }
 
 function openEffortAnalysisModal(colour){
@@ -929,8 +972,8 @@ function openEffortAnalysisModal(colour){
   const modal=$('effortAnalysisModal');
   $('effortAnalysisModalTitle').textContent=`${colour} Effort Analysis`;
   $('effortAnalysisModalSub').textContent=effortAnalysisColours().some(([c])=>c===colour)
-    ? '5 category graph, 20-minute timing, and Effort Type Breakdown.'
-    : '5 category graph, 20-minute timing, and Effort Type Breakdown.';
+    ? 'Tap / hover the graph segments to see percentage and count.'
+    : 'Tap / hover the graph segments to see percentage and count.';
   $('effortAnalysisModalBody').innerHTML=renderEffortAnalysisModalContent(raw,colour);
   modal.classList.add('open');
   modal.setAttribute('aria-hidden','false');
@@ -1302,6 +1345,12 @@ document.addEventListener('keydown',e=>{
   if(trendTarget){
     e.preventDefault();
     openTrendGraphModal(trendTarget.dataset.trendOpen);
+    return;
+  }
+  const effortTarget=e.target?.closest?.('[data-effort-analysis]');
+  if(effortTarget){
+    e.preventDefault();
+    openEffortAnalysisModal(effortTarget.dataset.effortAnalysis);
     return;
   }
   const samuraiTarget=e.target?.closest?.('[data-samurai-action]');
