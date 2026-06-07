@@ -260,8 +260,8 @@ body.compare-mode .compareTitle{font-size:24px}.compareModeIntro{display:none}
 @media(max-width:760px){.compareTargetControls{grid-template-columns:1fr}.compareHeader.compareStickyHeader{top:0}}
 
 
-/* v89: world comparison selectable + card display */
-.worldComparisonList{display:grid;gap:0;margin-top:14px;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 12px 28px rgba(16,24,40,.08);overflow:hidden}.worldComparisonHead{display:grid;grid-template-columns:170px 1fr 170px;gap:12px;align-items:center;padding:12px 14px;background:linear-gradient(90deg,#fff1f1,#fff,#edf2f8);font-size:11px;font-weight:1000;text-transform:uppercase;letter-spacing:.08em;color:#667085}.worldComparisonRow{display:grid;grid-template-columns:170px 1fr 170px;gap:12px;align-items:center;padding:14px;border-top:1px solid #edf1f7}.worldComparisonRow:first-child{border-top:0}.worldStatName{font-weight:1000;color:#071a3a;line-height:1.15}.worldStatGroup{font-size:10px;font-weight:1000;text-transform:uppercase;letter-spacing:.08em;color:#667085;margin-top:3px}.worldBarStack{display:grid;gap:8px}.worldBarLine{display:grid;grid-template-columns:72px 1fr 58px;gap:8px;align-items:center;font-size:12px;font-weight:1000;color:#344054}.worldBarTrack{height:13px;border-radius:999px;background:#eaecf0;overflow:hidden}.worldBarFill{height:100%;border-radius:999px;transform-origin:left;animation:barGrow .75s ease both}.worldBarFill.selected{background:linear-gradient(90deg,#ef4444,#d71920)}.worldBarFill.top{background:linear-gradient(90deg,#111827,#000)}.worldLeader{font-size:12px;line-height:1.35;color:#475467;font-weight:850}.worldLeader strong{display:block;color:#071a3a;font-size:14px}.worldDiff{display:inline-flex;border-radius:999px;padding:4px 8px;background:#fff1f1;color:#b42318;font-size:11px;font-weight:1000;margin-top:7px}.worldDiff.good{background:#ecfdf3;color:#067647}.worldSeasonSelect{margin-top:10px}.compactSegment{display:flex;gap:6px}.compactSegment button{flex:1}@keyframes barGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}@media(max-width:760px){.worldComparisonHead{display:none}.worldComparisonRow{grid-template-columns:1fr;gap:10px;padding:14px 12px}.worldLeader{text-align:left}.worldBarLine{grid-template-columns:64px 1fr 54px}.worldControls{grid-template-columns:1fr!important}}
+/* v93: richer world comparison list + robust team/player selector */
+.worldComparisonList{display:grid;gap:0;margin-top:16px;background:rgba(255,255,255,.96);border:1px solid rgba(7,26,58,.12);border-radius:28px;box-shadow:0 22px 52px rgba(7,26,58,.16);overflow:hidden;position:relative}.worldComparisonList:before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,#d71920,#fff,#071a3a);z-index:1}.worldComparisonHead{display:grid;grid-template-columns:190px 1fr 210px;gap:14px;align-items:center;padding:16px 18px 14px;background:linear-gradient(90deg,#f8fafc,#fff,#f2f4f7);font-size:11px;font-weight:1000;text-transform:uppercase;letter-spacing:.1em;color:#667085}.worldComparisonList .compareGroupTitle{margin:0;padding:16px 14px 13px;text-align:center;border-top:1px solid #dbe5f2;border-bottom:1px solid #edf1f7;background:linear-gradient(90deg,#071a3a,#10284f 50%,#071a3a);color:#fff;font-size:15px;font-weight:1000;text-transform:uppercase;letter-spacing:.16em;box-shadow:inset 0 1px 0 rgba(255,255,255,.14)}.worldComparisonList .compareGroupTitle:first-of-type{border-top:0}.worldComparisonRow{display:grid;grid-template-columns:190px 1fr 210px;gap:14px;align-items:center;padding:16px 18px;border-top:1px solid #edf1f7;opacity:0;transform:translateY(10px);transition:opacity .55s ease,transform .55s ease;background:linear-gradient(90deg,rgba(255,255,255,.98),rgba(248,250,252,.82))}.worldComparisonRow:nth-of-type(even){background:linear-gradient(90deg,#fff,#fbfcff)}.worldComparisonRow.is-visible{opacity:1;transform:none}.worldStatName{font-weight:1000;color:#071a3a;line-height:1.12;font-size:15px}.worldStatGroup{display:inline-flex;margin-top:7px;border-radius:999px;padding:4px 8px;background:#f2f4f7;color:#667085;font-size:10px;font-weight:1000;text-transform:uppercase;letter-spacing:.08em}.worldBarStack{display:grid;gap:11px}.worldBarLine{display:grid;grid-template-columns:84px 1fr 70px;gap:10px;align-items:center;font-size:12px;font-weight:1000;color:#344054}.worldBarLabel{display:flex;align-items:center;gap:6px;white-space:nowrap}.worldDot{width:9px;height:9px;border-radius:999px;display:inline-block}.worldDot.selected{background:#d71920}.worldDot.top{background:#05070a}.worldBarTrack{height:18px;border-radius:999px;background:#e8edf5;overflow:hidden;position:relative;box-shadow:inset 0 1px 2px rgba(7,26,58,.12)}.worldBarTrack:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.45),rgba(255,255,255,0) 38%,rgba(255,255,255,.28));pointer-events:none}.worldBarFill{height:100%;border-radius:999px;transform-origin:left;transition:width .95s cubic-bezier(.2,.8,.2,1);box-shadow:0 5px 12px rgba(7,26,58,.18)}.worldBarFill.selected{background:linear-gradient(90deg,#ff6b6b,#d71920 78%,#a80f16)}.worldBarFill.top{background:linear-gradient(90deg,#303844,#111827 78%,#000)}.worldValue{font-variant-numeric:tabular-nums;text-align:right;color:#071a3a}.worldLeader{font-size:12px;line-height:1.35;color:#475467;font-weight:850;background:#fff;border:1px solid #e4eaf2;border-radius:18px;padding:11px 12px;box-shadow:0 8px 18px rgba(16,24,40,.06)}.worldLeader strong{display:block;color:#071a3a;font-size:14px;line-height:1.2}.worldLeaderTeam{display:inline-flex;margin-bottom:5px;border-radius:999px;padding:3px 8px;background:#071a3a;color:#fff;font-size:10px;font-weight:1000;letter-spacing:.08em;text-transform:uppercase}.worldLeaderMeta{display:block;margin-top:4px;color:#667085}.worldDiff{display:inline-flex;border-radius:999px;padding:5px 9px;background:#fff1f1;color:#b42318;font-size:11px;font-weight:1000;margin-top:8px}.worldDiff.good{background:#ecfdf3;color:#067647}.worldSeasonSelect{margin-top:10px}.compactSegment{display:flex;gap:6px}.compactSegment button{flex:1}@keyframes barGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}@media(max-width:760px){.worldComparisonHead{display:none}.worldComparisonList .compareGroupTitle{font-size:13px;letter-spacing:.12em;padding:14px 12px}.worldComparisonRow{grid-template-columns:1fr;gap:12px;padding:15px 12px}.worldLeader{text-align:left}.worldBarLine{grid-template-columns:78px 1fr 58px}.worldControls{grid-template-columns:1fr!important}.worldStatName{text-align:center}.worldStatGroup{display:flex;justify-content:center;width:max-content;margin:7px auto 0}}
 </style>
 </head>
 <body>
@@ -360,7 +360,7 @@ body.compare-mode .compareTitle{font-size:24px}.compareModeIntro{display:none}
 
   <section id="worldShell" class="worldShell" aria-label="World comparison">
     <div class="compareTop">
-      <div><div class="compareTitle">World Comparison</div><div class="compareSub">Choose a player and position. Values are always shown per 80 minutes against top starting players from major nations.</div></div>
+      <div><div class="compareTitle">World Comparison</div><div class="compareSub">Choose any player and position. Values are always shown per 80 minutes against top starting players from major nations.</div></div>
       <button id="worldClose" class="compareToggle" type="button">Close</button>
     </div>
     <div class="worldControls">
@@ -484,7 +484,7 @@ const JA_TEXT = new Map([
   ['World mode','世界比較モード'],
   ['World Comparison','世界と比較'],
   ['Compare one player against global position leaders.','選手を世界のポジション別トップと比較します。'],
-  ['Choose a player and position. Values are always shown per 80 minutes against top starting players from major nations.','選手とポジションを選択してください。主要国のスターティングプレーヤー上位値と常に80分換算で比較します。'],
+  ['Choose any player and position. Values are always shown per 80 minutes against top starting players from major nations.','選手とポジションを選択してください。主要国のスターティングプレーヤー上位値と常に80分換算で比較します。'],
   ['Show world comparison','世界比較を表示'],
   ['Player scope','選手データ範囲'],
   ['World position','世界比較ポジション'],
@@ -1102,14 +1102,14 @@ function animateOneNumber(el){
 }
 function prepareScrollAnimations(root=document){
   const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const bars=[...root.querySelectorAll('.barGraph,.effortShareSegment,.barFill')];
+  const bars=[...root.querySelectorAll('.barGraph,.effortShareSegment,.barFill,.worldBarFill')];
   for(const bar of bars){
     if(!bar.dataset.targetWidth) bar.dataset.targetWidth=bar.style.width||'0%';
     bar.style.width=reduce?bar.dataset.targetWidth:'0%';
   }
   if(reduce){
     root.querySelectorAll('[data-final]').forEach(el=>{el.textContent=el.dataset.final;el.dataset.animated='1';});
-    root.querySelectorAll('.statCard,.matchupChartRow,.effortShareCard,.trendChart,.winnerCheck').forEach(el=>el.classList.add('is-visible')); root.querySelectorAll('.effortShareSegment,.barFill').forEach(el=>{el.style.width=el.dataset.targetWidth||el.style.width||'0%';});
+    root.querySelectorAll('.statCard,.matchupChartRow,.effortShareCard,.trendChart,.winnerCheck,.worldComparisonRow').forEach(el=>el.classList.add('is-visible')); root.querySelectorAll('.effortShareSegment,.barFill,.worldBarFill').forEach(el=>{el.style.width=el.dataset.targetWidth||el.style.width||'0%';});
     return;
   }
   const io=new IntersectionObserver((entries,observer)=>{
@@ -1117,12 +1117,12 @@ function prepareScrollAnimations(root=document){
       if(!entry.isIntersecting) continue;
       const el=entry.target;
       if(el.matches('[data-final]')) animateOneNumber(el);
-      if(el.classList.contains('barGraph')||el.classList.contains('effortShareSegment')||el.classList.contains('barFill')) el.style.width=el.dataset.targetWidth||'0%';
-      if(el.classList.contains('statCard')||el.classList.contains('matchupChartRow')||el.classList.contains('effortShareCard')||el.classList.contains('trendChart')||el.classList.contains('winnerCheck')) el.classList.add('is-visible');
+      if(el.classList.contains('barGraph')||el.classList.contains('effortShareSegment')||el.classList.contains('barFill')||el.classList.contains('worldBarFill')) el.style.width=el.dataset.targetWidth||'0%';
+      if(el.classList.contains('statCard')||el.classList.contains('matchupChartRow')||el.classList.contains('effortShareCard')||el.classList.contains('trendChart')||el.classList.contains('winnerCheck')||el.classList.contains('worldComparisonRow')) el.classList.add('is-visible');
       observer.unobserve(el);
     }
   },{threshold:.22,rootMargin:'0px 0px -8% 0px'});
-  root.querySelectorAll('[data-final],.barGraph,.effortShareSegment,.barFill,.statCard,.matchupChartRow,.effortShareCard,.trendChart,.winnerCheck').forEach(el=>io.observe(el));
+  root.querySelectorAll('[data-final],.barGraph,.effortShareSegment,.barFill,.worldBarFill,.statCard,.matchupChartRow,.worldComparisonRow,.effortShareCard,.trendChart,.winnerCheck').forEach(el=>io.observe(el));
 }
 function animateDashboardNumbers(){ prepareScrollAnimations(dashboard); }
 
@@ -1755,7 +1755,18 @@ document.addEventListener('touchstart',e=>{const hit=e.target.closest&&e.target.
 /* v75: Compare mode */
 function allComparisonPlayers(){ return [...state.players.values()].filter(p=>(state.playerMatchIds.get(p.key)||p.matches||[]).length).sort((a,b)=>String(a.team||'').localeCompare(String(b.team||''))||String(a.name||'').localeCompare(String(b.name||''))); }
 function comparisonTeams(){ const teams=new Set(); for(const p of allComparisonPlayers()){ for(const t of (p.teams&&p.teams.length?p.teams:[p.team])) if(t) teams.add(t); } return [...teams].sort((a,b)=>a.localeCompare(b)); }
-function playerTeamsContain(p,team){ if(!team) return true; return (p.teams&&p.teams.length?p.teams:[p.team]).some(t=>normTeam(t)===normTeam(team)); }
+function teamParts(value){
+  return String(value||'').split(/[\/,&]+|\s+and\s+/i).map(t=>t.trim()).filter(Boolean);
+}
+function teamAliases(p){
+  const raw=[];
+  if(p?.teams&&p.teams.length) raw.push(...p.teams);
+  if(p?.team) raw.push(p.team);
+  const out=new Set();
+  raw.forEach(t=>{ if(!t) return; out.add(String(t).trim()); teamParts(t).forEach(part=>out.add(part)); });
+  return [...out].filter(Boolean);
+}
+function playerTeamsContain(p,team){ if(!team) return true; const target=normTeam(team); return teamAliases(p).some(t=>normTeam(t)===target); }
 function hydrateCompareUI(){
   const t1=$('compareTeam1'),t2=$('compareTeam2'); if(!t1||!t2) return;
   const teams=comparisonTeams(); const allTeamsLabel=UI_LANG==='ja'?'全チーム':'All teams'; const opts=`<option value="">${allTeamsLabel}</option>`+teams.map(t=>`<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join('');
@@ -2002,7 +2013,7 @@ function statQualifiesForWorldPosition(st, positionId){
   const actual=statPositionNumber(st);
   return !!st && statIsStarter(st) && Number.isFinite(target) && actual===target;
 }
-function worldTeams(){ const teams=new Set(); for(const p of allComparisonPlayers()){ for(const t of (p.teams&&p.teams.length?p.teams:[p.team])) if(t) teams.add(t); } return [...teams].sort((a,b)=>a.localeCompare(b)); }
+function worldTeams(){ const teams=new Set(); for(const p of allComparisonPlayers()){ for(const t of teamAliases(p)) if(t) teams.add(t); } return [...teams].sort((a,b)=>a.localeCompare(b)); }
 function hydrateWorldUI(){
   const teamSel=$('worldTeam'), playerSel=$('worldPlayer'), posSel=$('worldPosition');
   if(!teamSel||!playerSel||!posSel) return;
@@ -2026,7 +2037,8 @@ function hydrateWorldPlayers(){
   const current=state.world.player||sel.value||'';
   const players=allComparisonPlayers().filter(p=>playerTeamsContain(p,team));
   const selectPlayerLabel=UI_LANG==='ja'?'選手を選択':'Select player';
-  sel.innerHTML=`<option value="">${selectPlayerLabel}</option>`+players.map(p=>`<option value="${escapeHtml(p.key)}">${escapeHtml(p.name)}${p.team?' — '+escapeHtml(p.team):''}</option>`).join('');
+  const emptyLabel=team ? (UI_LANG==='ja'?'このチームの選手データがありません':'No players found for this team') : selectPlayerLabel;
+  sel.innerHTML=`<option value="">${players.length?selectPlayerLabel:emptyLabel}</option>`+players.map(p=>`<option value="${escapeHtml(p.key)}">${escapeHtml(p.name)}${p.team?' — '+escapeHtml(p.team):''}</option>`).join('');
   sel.value=players.some(p=>p.key===current)?current:'';
   state.world.player=sel.value;
   hydrateWorldSeasonSelect();
@@ -2093,7 +2105,18 @@ function worldComparisonRow(row, top){
   const topName=top?.player?.name||'No Data';
   const topTeam=top?.player?.team||'';
   const topMatches=top?.matches||0;
-  return `<div class="worldComparisonRow matchupChartRow"><div><div class="worldStatName">${escapeHtml(row.label)}</div><div class="worldStatGroup">${escapeHtml(row.group||'')}</div></div><div class="worldBarStack"><div class="worldBarLine"><span>${escapeHtml(UI_LANG==='ja'?'選択選手':'Selected')}</span><div class="worldBarTrack"><div class="worldBarFill selected" style="width:${aw}%"></div></div><span class="metricNum" data-final="${escapeHtml(row.fmt(av))}">${escapeHtml(row.fmt(av))}</span></div><div class="worldBarLine"><span>${escapeHtml(UI_LANG==='ja'?'世界トップ':'World top')}</span><div class="worldBarTrack"><div class="worldBarFill top" style="width:${bw}%"></div></div><span class="metricNum" data-final="${escapeHtml(row.fmt(bv))}">${escapeHtml(row.fmt(bv))}</span></div></div><div class="worldLeader"><strong>${escapeHtml(topTeam?topTeam+' · '+topName:topName)}</strong>${intFmt(topMatches)} ${UI_LANG==='ja'?'試合':'matches'}<br><span class="worldDiff ${good?'good':''}">${escapeHtml(UI_LANG==='ja'?'差':'Gap')} ${escapeHtml(diffText)}</span></div></div>`;
+  const selectedLabel=UI_LANG==='ja'?'選択選手':'Selected';
+  const topLabel=UI_LANG==='ja'?'世界トップ':'World top';
+  const matchLabel=UI_LANG==='ja'?'試合':'matches';
+  const gapLabel=UI_LANG==='ja'?'差':'Gap';
+  return `<div class="worldComparisonRow matchupChartRow">
+    <div><div class="worldStatName">${escapeHtml(row.label)}</div><div class="worldStatGroup">${escapeHtml(row.group||'')}</div></div>
+    <div class="worldBarStack">
+      <div class="worldBarLine"><span class="worldBarLabel"><i class="worldDot selected"></i>${escapeHtml(selectedLabel)}</span><div class="worldBarTrack"><div class="worldBarFill selected" style="width:${aw}%"></div></div><span class="worldValue metricNum" data-final="${escapeHtml(row.fmt(av))}">${escapeHtml(row.fmt(av))}</span></div>
+      <div class="worldBarLine"><span class="worldBarLabel"><i class="worldDot top"></i>${escapeHtml(topLabel)}</span><div class="worldBarTrack"><div class="worldBarFill top" style="width:${bw}%"></div></div><span class="worldValue metricNum" data-final="${escapeHtml(row.fmt(bv))}">${escapeHtml(row.fmt(bv))}</span></div>
+    </div>
+    <div class="worldLeader">${topTeam?`<span class="worldLeaderTeam">${escapeHtml(topTeam)}</span>`:''}<strong>${escapeHtml(topName)}</strong><span class="worldLeaderMeta">${intFmt(topMatches)} ${matchLabel}</span><span class="worldDiff ${good?'good':''}">${escapeHtml(gapLabel)} ${escapeHtml(diffText)}</span></div>
+  </div>`;
 }
 async function runWorldComparison(){
   const out=$('worldResult'); if(!out) return;
