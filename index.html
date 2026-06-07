@@ -696,7 +696,7 @@ function mergeStats(base,add){
 function scaleStats(st,metric){
   const factor = metric==='perGame' ? 1/Math.max(1,st.appearances||1) : metric==='per80' ? 80/Math.max(1,st.minutes||0.0001) : 1;
   const copy=JSON.parse(JSON.stringify(st)); copy.player=st.player; copy.scaleFactor=factor;
-  for(const k of ['totalActions','carry','carryMetres','postContactMetres','cleanBreaks','defendersBeaten','tackleAttempts','tackleMade','tackleFirstAttempts','tackleFirstMade','ruckSupportAttack','ruckSupportAttackEffective','goalKickAttempts','goalKickMade','reviewTotal','positiveActions','negativeActions']) copy[k]=(st[k]||0)*factor;
+  for(const k of ['totalActions','carry','carryMetres','postContactMetres','cleanBreaks','defendersBeaten','tackleAttempts','tackleMade','tackleDominant','tackleFirstAttempts','tackleFirstMade','tackleFirstDominant','carryDominant','carryContact','ruckSupportAttack','ruckSupportAttackEffective','goalKickAttempts','goalKickMade','reviewTotal','positiveActions','negativeActions']) copy[k]=(st[k]||0)*factor;
   for(const c of ['Gold','Green','Yellow','Red']) copy.colours[c]=(st.colours[c]||0)*factor;
   return copy;
 }
@@ -1647,7 +1647,11 @@ function matchupCell(label,left,right,format=(v)=>intFmt(v),higherBetter=true){
   const metricWinner=tie?'Even':(japanWins?'Japan': 'Opponent');
   const leftText=escapeHtml(format(left)); const rightText=escapeHtml(format(right)); return `<div class="matchupChartRow"><div class="chartHeader"><div class="chartVal ${lCls}">${leftCheck}<span class="metricNum" data-final="${leftText}">${leftText}</span></div><div class="chartMetric">${escapeHtml(label)}<span class="metricWinner">${escapeHtml(metricWinner)}</span></div><div class="chartVal right ${rCls}"><span class="metricNum" data-final="${rightText}">${rightText}</span>${rightCheck}</div></div><div class="chartBars"><div class="barHalf left"><div class="barGraph${lZero}" style="width:${lw}%"></div></div><div class="barHalf right"><div class="barGraph${rZero}" style="width:${rw}%"></div></div></div><div class="chartDelta"><span class="${winnerClass}">${escapeHtml(winner)}</span><span class="deltaPill">${escapeHtml(diffText)}</span></div></div>`;
 }
-function pctNum(num,den){return den>0?Math.round((num/den)*100):0;}
+function pctNum(num,den){
+  if(!(den>0)) return 0;
+  const value=Math.round((num/den)*100);
+  return Math.max(0,Math.min(100,value));
+}
 function renderComparison(ctx){ const sec=$('comparisonSection'), cont=$('comparisonContent'); if(state.scope!=='match'||!ctx.match){sec.style.display='none';return;} const raw=ctx.raw; const opp=findOpponentSameNumber(ctx.match,raw); if(!opp){ sec.style.display='block'; cont.innerHTML='<div class="empty">No matching opponent was found. For jerseys 1–18 this uses the same number; for 19+ it also requires a compatible position ID group.</div>'; return; } sec.style.display='block'; const rows=[
   matchupCell('Samurai Stats',samuraiRate(raw),samuraiRate(opp),signedOneDec,true),
   matchupCell('Carry',raw.carry,opp.carry),
