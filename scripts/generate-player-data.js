@@ -8,7 +8,13 @@ const TARGET_TEAMS = ['Japan', 'Japan XV'];
 
 function norm(v){return String(v??'').trim().replace(/\s+/g,' ').toLowerCase();}
 function normTeam(v){return String(v??'').trim().replace(/\s+/g,' ').toUpperCase();}
-function isTargetTeam(team){const t=normTeam(team);return TARGET_TEAMS.some(x=>normTeam(x)===t);}
+function isTargetTeam(team){
+  const t=normTeam(team);
+  if(!t) return false;
+  const targets=TARGET_TEAMS.map(normTeam);
+  if(targets.includes(t)) return true;
+  return t.split(/[\/,&]+/).map(x=>normTeam(x)).some(part=>targets.includes(part));
+}
 function playerKey(name,team){return isTargetTeam(team)?`${norm(name)}|japan-group`:`${norm(name)}|${norm(team)}`;}
 function mergeDisplayTeams(current, incoming){ const list=(Array.isArray(current)?current:(current?[current]:[])).filter(Boolean); if(incoming&&!list.some(t=>normTeam(t)===normTeam(incoming))) list.push(String(incoming).trim()); const order=t=>normTeam(t)==='JAPAN'?0:normTeam(t)==='JAPAN XV'?1:2; return list.sort((a,b)=>order(a)-order(b)||String(a).localeCompare(String(b)));}
 function displayTeamName(teams){ const list=Array.isArray(teams)?teams.filter(Boolean):[]; return list.length?list.join(' / '):'';}

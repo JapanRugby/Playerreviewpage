@@ -392,7 +392,22 @@ function applyLanguage(root=document){
 }
 function norm(v){return String(v??'').trim().replace(/\s+/g,' ').toLowerCase();}
 function normTeam(v){return String(v??'').trim().replace(/\s+/g,' ').toUpperCase();}
-function isTargetTeam(team){const t=normTeam(team);return CONFIG.targetTeams.some(x=>normTeam(x)===t);}
+function isTargetTeam(team){
+  const t=normTeam(team);
+  if(!t) return false;
+  const targets=CONFIG.targetTeams.map(normTeam);
+  if(targets.includes(t)) return true;
+  // Merged labels such as "Japan / Japan XV" must still be treated as Japan side.
+  return t.split(/[\/,&]+/).map(x=>normTeam(x)).some(part=>targets.includes(part));
+}
+function statBelongsToTargetSide(st){
+  if(!st) return false;
+  const p=st.player||{};
+  if(isTargetTeam(p.team)||isTargetTeam(st.team)) return true;
+  if(Array.isArray(p.teams) && p.teams.some(isTargetTeam)) return true;
+  if(String(p.key||st.key||'').includes('|japan-group')) return true;
+  return false;
+}
 function playerKey(name,team){return isTargetTeam(team)?`${norm(name)}|japan-group`:`${norm(name)}|${norm(team)}`;}
 function mergeDisplayTeams(current, incoming){ const list=(Array.isArray(current)?current:(current?[current]:[])).filter(Boolean); if(incoming&&!list.some(t=>normTeam(t)===normTeam(incoming))) list.push(String(incoming).trim()); const order=t=>normTeam(t)==='JAPAN'?0:normTeam(t)==='JAPAN XV'?1:2; return list.sort((a,b)=>order(a)-order(b)||String(a).localeCompare(String(b)));}
 function displayTeamName(teams){ const list=Array.isArray(teams)?teams.filter(Boolean):[]; return list.length?list.join(' / '):'';}
@@ -1202,7 +1217,9 @@ function findOpponentSameNumber(match,raw){
   // This also avoids merged player labels like "Japan / Japan XV" being treated as a third team.
   const allOpponents=[...match.playerStats.values()].filter(st=>{
     const team=st.player&&st.player.team;
-    if(selectedTeamIsJapan) return !isTargetTeam(team);
+    // If the reviewed player is Japan/Japan XV, the comparison candidate must be the actual opposition.
+    // Exclude all Japan-side rows, including merged labels such as "Japan / Japan XV" and keys ending in japan-group.
+    if(selectedTeamIsJapan) return !statBelongsToTargetSide(st);
     return normTeam(team)!==normTeam(raw.player&&raw.player.team);
   });
   const sameNumber=allOpponents.filter(st=>String(st.shirt||st.player.shirt||'').replace(/^0+/,'')===shirt);
