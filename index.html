@@ -245,6 +245,14 @@ body.compare-mode .compareTitle{font-size:24px}.compareModeIntro{display:none}
   .compareVs{ width:38px!important; height:38px!important; margin:0 auto!important; align-self:center; }
 }
 
+
+/* v84: comparison target selector and sticky names */
+.compareScopePanel{margin:14px 0 4px;padding:14px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(180deg,#fff,#f8fafc)}
+.compareScopePanel .helper{margin:0 0 8px}.compareScopePanel .segment{display:flex;flex-wrap:wrap;gap:8px}.compareScopePanel .segment button{flex:1 1 110px}
+.compareTargetControls{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.compareTargetBox{border:1px solid var(--line);border-radius:18px;padding:12px;background:#fff}.compareTargetBox label{display:block;font-size:11px;font-weight:1000;color:#667085;text-transform:uppercase;letter-spacing:.08em;margin-bottom:7px}.compareTargetBox .compareSelect{min-height:44px}.compareTargetHint{grid-column:1/-1;color:var(--muted);font-size:12px;font-weight:800;padding:4px 2px}
+.compareHeader.compareStickyHeader{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:22px;padding:12px;box-shadow:0 10px 24px rgba(16,24,40,.08)}
+@media(max-width:760px){.compareTargetControls{grid-template-columns:1fr}.compareHeader.compareStickyHeader{top:0}}
+
 </style>
 </head>
 <body>
@@ -308,12 +316,21 @@ body.compare-mode .compareTitle{font-size:24px}.compareModeIntro{display:none}
 
   <section id="compareShell" class="compareShell" aria-label="Player comparison">
     <div class="compareTop">
-      <div><div class="compareTitle">Stats Comparison</div><div class="compareSub">Select team and player for both sides. Values follow the selected Total / Per game / Per 80 setting.</div></div>
+      <div><div class="compareTitle">Stats Comparison</div><div class="compareSub">Select two players, then choose Game, Season, or Career to compare.</div></div>
       <button id="compareClose" class="compareToggle" type="button">Close</button>
     </div>
     <div class="compareControls">
       <div class="comparePick"><h3>Player 1</h3><div class="comparePickGrid"><select id="compareTeam1" class="compareSelect"></select><select id="comparePlayer1" class="compareSelect"></select></div></div>
       <div class="comparePick"><h3>Player 2</h3><div class="comparePickGrid"><select id="compareTeam2" class="compareSelect"></select><select id="comparePlayer2" class="compareSelect"></select></div></div>
+    </div>
+    <div class="compareScopePanel">
+      <div class="helper">Compare target</div>
+      <div class="segment" id="compareScopeButtons">
+        <button data-compare-scope="match" type="button">Game</button>
+        <button data-compare-scope="season" type="button">Season</button>
+        <button data-compare-scope="career" class="active" type="button">Career</button>
+      </div>
+      <div id="compareTargetControls" class="compareTargetControls"></div>
     </div>
     <div class="compareMetricPanel">
       <div class="helper">Metric</div>
@@ -402,7 +419,7 @@ body.compare-mode .compareTitle{font-size:24px}.compareModeIntro{display:none}
 
 <script>
 const CONFIG = { manifestUrl:'data/matches.json', targetTeams:['Japan','Japan XV'] };
-const state = { matches:[], players:new Map(), selectedPlayer:'', selectedId:'', scope:'match', metric:'total', mode:'live', matchById:new Map(), matchIndex:new Map(), playerMatchIds:new Map(), playerSummaries:new Map(), compareMode:false, compare:{team1:'',team2:'',player1:'',player2:''} };
+const state = { matches:[], players:new Map(), selectedPlayer:'', selectedId:'', scope:'match', metric:'total', mode:'live', matchById:new Map(), matchIndex:new Map(), playerMatchIds:new Map(), playerSummaries:new Map(), compareMode:false, compare:{team1:'',team2:'',player1:'',player2:'',scope:'career',id1:'',id2:''} };
 const $ = id => document.getElementById(id);
 const statusEl=$('status'), playerSelect=$('playerSelect'), playerList=$('playerList'), matchCards=$('matchCards'), dashboard=$('dashboard');
 let playerSearchLookup=new Map();
@@ -423,8 +440,17 @@ const JA_TEXT = new Map([
   ['Player 1','Player 1'],
   ['Player 2','Player 2'],
   ['Player Comparison','スタッツ比較'],
-  ['Select team and player for both sides. Values follow the selected Total / Per game / Per 80 setting.','両方のチームと選手を選択してください。合計 / 1試合平均 / 80分換算の設定に合わせて表示します。'],
+  ['Select two players, then choose Game, Season, or Career to compare.','両方のチームと選手を選択してください。合計 / 1試合平均 / 80分換算の設定に合わせて表示します。'],
   ['Show comparison','比較を表示'],
+
+  ['Compare target','比較対象'],
+  ['Game','試合'],
+  ['Career','通算'],
+  ['Choose a game for each player.','それぞれの選手で試合を選んでください。'],
+  ['Choose a season for each player.','それぞれの選手でシーズンを選んでください。'],
+  ['Career uses all available matches for each player.','通算は各選手の全試合データを使用します。'],
+  ['Select game','試合を選択'],
+  ['Select season','シーズンを選択'],
   ['Choose two players to compare.','比較する2選手を選んでください。'],
   ['Close','閉じる'],
   ['Player 1','選手 1'],
@@ -1693,7 +1719,10 @@ function hydrateComparePlayers(side){
   const team=$(`compareTeam${side}`)?.value||''; const sel=$(`comparePlayer${side}`); if(!sel) return; const current=state.compare[`player${side}`]||sel.value||'';
   const players=allComparisonPlayers().filter(p=>playerTeamsContain(p,team));
   const selectPlayerLabel=UI_LANG==='ja'?'選手を選択':'Select player'; sel.innerHTML=`<option value="">${selectPlayerLabel}</option>`+players.map(p=>`<option value="${escapeHtml(p.key)}">${escapeHtml(p.name)}${p.team?' — '+escapeHtml(p.team):''}</option>`).join('');
-  sel.value=players.some(p=>p.key===current)?current:''; state.compare[`player${side}`]=sel.value; updateCompareRunState();
+  sel.value=players.some(p=>p.key===current)?current:''; state.compare[`player${side}`]=sel.value;
+  if(!sel.value) state.compare[`id${side}`]='';
+  hydrateCompareTargets();
+  updateCompareRunState();
 }
 function syncMetricButtons(){
   for(const id of ['metricButtons','compareMetricButtons']){
@@ -1706,9 +1735,72 @@ function setMetric(metric){
   state.metric=metric;
   syncMetricButtons();
   if(!state.compareMode) renderDashboard();
-  if(state.compareMode&&state.compare.player1&&state.compare.player2) runPlayerComparison();
+  if(state.compareMode&&isCompareReady()) runPlayerComparison();
 }
-function updateCompareRunState(){ const btn=$('compareRun'); if(!btn) return; btn.disabled=!(state.compare.player1&&state.compare.player2); }
+function syncCompareScopeButtons(){
+  const wrap=$('compareScopeButtons'); if(!wrap) return;
+  wrap.querySelectorAll('button[data-compare-scope]').forEach(b=>b.classList.toggle('active',b.dataset.compareScope===state.compare.scope));
+}
+function setCompareScope(scope){
+  state.compare.scope=scope||'career';
+  state.compare.id1=''; state.compare.id2='';
+  syncCompareScopeButtons();
+  hydrateCompareTargets();
+  updateCompareRunState();
+  const out=$('compareResult'); if(out) out.innerHTML='';
+}
+function compareScopeLabel(){
+  const s=state.compare.scope;
+  if(UI_LANG==='ja') return s==='match'?'試合':s==='season'?'シーズン':'通算';
+  return s==='match'?'Game':s==='season'?'Season':'Career';
+}
+function compareMetricLabel(){ return metricLabel(); }
+function targetItemsForComparePlayer(playerKey){
+  if(!playerKey) return [];
+  const scope=state.compare.scope;
+  const ms=matchesForPlayer(playerKey);
+  if(scope==='match'){
+    return ms.map(m=>({id:m.id,label:[m.date,m.label].filter(Boolean).join(' — '),summary:m.label||m.id}));
+  }
+  if(scope==='season'){
+    return seasonsForPlayer(playerKey).map(season=>{
+      const sm=ms.filter(m=>(m.season||'Unknown')===season);
+      return {id:season,label:`${season} (${sm.length})`,summary:`${sm.length} match${sm.length===1?'':'es'}`};
+    });
+  }
+  return [];
+}
+function hydrateCompareTargets(){
+  const wrap=$('compareTargetControls'); if(!wrap) return;
+  const scope=state.compare.scope||'career';
+  if(scope==='career'){
+    wrap.innerHTML=`<div class="compareTargetHint">${UI_LANG==='ja'?'通算は各選手の全試合データを使用します。':'Career uses all available matches for each player.'}</div>`;
+    state.compare.id1='career'; state.compare.id2='career';
+    return;
+  }
+  const label=scope==='match'?(UI_LANG==='ja'?'試合':'Game'):(UI_LANG==='ja'?'シーズン':'Season');
+  const placeholder=scope==='match'?(UI_LANG==='ja'?'試合を選択':'Select game'):(UI_LANG==='ja'?'シーズンを選択':'Select season');
+  let html='';
+  for(const side of [1,2]){
+    const items=targetItemsForComparePlayer(state.compare[`player${side}`]);
+    const current=state.compare[`id${side}`]||'';
+    if(!items.some(it=>String(it.id)===String(current))) state.compare[`id${side}`]='';
+    html+=`<div class="compareTargetBox"><label>Player ${side} ${escapeHtml(label)}</label><select id="compareTarget${side}" class="compareSelect" ${items.length?'':'disabled'}><option value="">${escapeHtml(placeholder)}</option>${items.map(it=>`<option value="${escapeHtml(it.id)}" ${String(it.id)===String(state.compare[`id${side}`])?'selected':''}>${escapeHtml(it.label)}</option>`).join('')}</select></div>`;
+  }
+  html+=`<div class="compareTargetHint">${scope==='match'?(UI_LANG==='ja'?'それぞれの選手で試合を選んでください。':'Choose a game for each player.'):(UI_LANG==='ja'?'それぞれの選手でシーズンを選んでください。':'Choose a season for each player.')}</div>`;
+  wrap.innerHTML=html;
+  for(const side of [1,2]){
+    const sel=$(`compareTarget${side}`);
+    if(sel) sel.addEventListener('change',()=>{state.compare[`id${side}`]=sel.value; updateCompareRunState(); const out=$('compareResult'); if(out) out.innerHTML='';});
+  }
+}
+function isCompareReady(){
+  if(!(state.compare.player1&&state.compare.player2)) return false;
+  const scope=state.compare.scope||'career';
+  if(scope==='career') return true;
+  return !!(state.compare.id1&&state.compare.id2);
+}
+function updateCompareRunState(){ const btn=$('compareRun'); if(!btn) return; btn.disabled=!isCompareReady(); }
 function setCompareMode(on){
   state.compareMode=!!on;
   const shell=$('compareShell'), compareBtn=$('compareModeToggle'), reviewBtn=$('playerReviewModeToggle');
@@ -1716,7 +1808,7 @@ function setCompareMode(on){
   if(shell) shell.classList.toggle('show',state.compareMode);
   if(compareBtn){ compareBtn.classList.toggle('active',state.compareMode); compareBtn.setAttribute('aria-pressed',state.compareMode?'true':'false'); }
   if(reviewBtn){ reviewBtn.classList.toggle('active',!state.compareMode); reviewBtn.setAttribute('aria-pressed',!state.compareMode?'true':'false'); }
-  if(state.compareMode){ hydrateCompareUI(); syncMetricButtons(); applyLanguage(shell||document); if(dashboard) dashboard.style.display='none'; if(shell) shell.scrollIntoView({behavior:'smooth',block:'start'}); }
+  if(state.compareMode){ hydrateCompareUI(); syncMetricButtons(); syncCompareScopeButtons(); hydrateCompareTargets(); applyLanguage(shell||document); if(dashboard) dashboard.style.display='none'; if(shell) shell.scrollIntoView({behavior:'smooth',block:'start'}); }
 }
 function scaledForComparison(raw){ return scaleStats(raw,state.metric); }
 function comparisonMetricRows(a,b,rawA=null,rawB=null){
@@ -1757,16 +1849,40 @@ function compareBarRow(row){
   const rightText=escapeHtml(row.fmt(bv));
   return `<div class="matchupChartRow compareMatchupRow"><div class="chartHeader"><div class="chartVal ${lCls}">${leftCheck}<span class="metricNum" data-final="${leftText}">${leftText}</span></div><div class="chartMetric">${escapeHtml(row.label)}<span class="metricWinner">${escapeHtml(winner)}</span></div><div class="chartVal right ${rCls}"><span class="metricNum" data-final="${rightText}">${rightText}</span>${rightCheck}</div></div><div class="chartBars"><div class="barHalf left"><div class="barGraph${lZero}" style="width:${aw}%"></div></div><div class="barHalf right"><div class="barGraph${rZero}" style="width:${bw}%"></div></div></div><div class="chartDelta"><span class="${winnerClass}">${escapeHtml(winner)}</span></div></div>`;
 }
+function selectedCompareMatches(playerKey, side){
+  const scope=state.compare.scope||'career';
+  const ms=matchesForPlayer(playerKey);
+  if(scope==='career') return ms;
+  if(scope==='season') return ms.filter(m=>(m.season||'Unknown')===state.compare[`id${side}`]);
+  if(scope==='match') return ms.filter(m=>String(m.id)===String(state.compare[`id${side}`]));
+  return ms;
+}
+function compareSelectionMeta(raw,matches,side){
+  const scope=state.compare.scope||'career';
+  const team=raw?.player?.team||'';
+  const count=matches.length;
+  const metric=compareMetricLabel();
+  if(scope==='match'){
+    const m=matches[0];
+    return [team, m?.date||'', m?.label||'', metric].filter(Boolean).join(' · ');
+  }
+  if(scope==='season'){
+    return [team, state.compare[`id${side}`], `${count} ${UI_LANG==='ja'?'試合':'matches'}`, metric].filter(Boolean).join(' · ');
+  }
+  return [team, `${count} ${UI_LANG==='ja'?'試合':'matches'}`, metric].filter(Boolean).join(' · ');
+}
 async function runPlayerComparison(){
   const p1=state.compare.player1, p2=state.compare.player2; const out=$('compareResult'); if(!p1||!p2||!out) return;
+  if(!isCompareReady()){ out.innerHTML=`<div class="compareEmpty">${UI_LANG==='ja'?'比較する対象を選んでください。':'Choose a comparison target.'}</div>`; return; }
   out.innerHTML=`<div class="compareEmpty">${UI_LANG==='ja'?'比較データを読み込み中...':'Loading comparison data...'}</div>`;
   await Promise.all([loadPlayerMatches(p1,true),loadPlayerMatches(p2,true)]);
-  const m1=matchesForPlayer(p1), m2=matchesForPlayer(p2); const raw1=aggregate(m1,p1), raw2=aggregate(m2,p2); const a=scaledForComparison(raw1), b=scaledForComparison(raw2); const rows=comparisonMetricRows(a,b,raw1,raw2);
-  let html=`<div class="compareHeader"><div class="comparePlayerBlock comparePlayerBlockOne"><div class="comparePlayerLabel">Player 1</div><div class="comparePlayerName">${escapeHtml(raw1.player.name)}</div><div class="comparePlayerMeta">${escapeHtml(raw1.player.team)} · ${m1.length} matches · ${metricLabel()}</div></div><div class="compareVs">VS</div><div class="comparePlayerBlock comparePlayerBlockTwo"><div class="comparePlayerLabel">Player 2</div><div class="comparePlayerName">${escapeHtml(raw2.player.name)}</div><div class="comparePlayerMeta">${escapeHtml(raw2.player.team)} · ${m2.length} matches · ${metricLabel()}</div></div></div><div class="compareChart matchupStyle">`;
+  const m1=selectedCompareMatches(p1,1), m2=selectedCompareMatches(p2,2);
+  if(!m1.length||!m2.length){ out.innerHTML=`<div class="compareEmpty">${UI_LANG==='ja'?'選択した対象のデータがありません。':'No data for the selected comparison target.'}</div>`; return; }
+  const raw1=aggregate(m1,p1), raw2=aggregate(m2,p2); const a=scaledForComparison(raw1), b=scaledForComparison(raw2); const rows=comparisonMetricRows(a,b,raw1,raw2);
+  let html=`<div class="compareHeader compareStickyHeader"><div class="comparePlayerBlock comparePlayerBlockOne"><div class="comparePlayerLabel">Player 1</div><div class="comparePlayerName">${escapeHtml(raw1.player.name)}</div><div class="comparePlayerMeta">${escapeHtml(compareSelectionMeta(raw1,m1,1))}</div></div><div class="compareVs">VS</div><div class="comparePlayerBlock comparePlayerBlockTwo"><div class="comparePlayerLabel">Player 2</div><div class="comparePlayerName">${escapeHtml(raw2.player.name)}</div><div class="comparePlayerMeta">${escapeHtml(compareSelectionMeta(raw2,m2,2))}</div></div></div><div class="compareChart matchupStyle">`;
   let group=''; for(const r of rows){ if(r.group!==group){ group=r.group; html+=`<div class="compareGroupTitle">${escapeHtml(group)}</div>`; } html+=compareBarRow(r); }
   html+='</div>'; out.innerHTML=html; prepareScrollAnimations(out);
 }
-
 
 const __renderOptions = renderOptions;
 renderOptions = function(){ __renderOptions(); applyLanguage(matchCards); applyLanguage(document.querySelector('.controlShell')||document); };
@@ -1821,13 +1937,14 @@ $('clearPlayerSearch').addEventListener('click',resetPlayerSearch);
 $('scopeButtons').addEventListener('click',e=>{const btn=e.target.closest('button[data-scope]');if(!btn)return;state.scope=btn.dataset.scope;state.selectedId='';document.querySelectorAll('#scopeButtons button').forEach(b=>b.classList.toggle('active',b===btn));renderOptions();});
 $('metricButtons').addEventListener('click',e=>{const btn=e.target.closest('button[data-metric]');if(!btn)return;setMetric(btn.dataset.metric);});
 const compareMetricButtons=$('compareMetricButtons'); if(compareMetricButtons) compareMetricButtons.addEventListener('click',e=>{const btn=e.target.closest('button[data-metric]');if(!btn)return;setMetric(btn.dataset.metric);});
+const compareScopeButtons=$('compareScopeButtons'); if(compareScopeButtons) compareScopeButtons.addEventListener('click',e=>{const btn=e.target.closest('button[data-compare-scope]');if(!btn)return;setCompareScope(btn.dataset.compareScope);});
 
 const compareToggle=$('compareModeToggle'); if(compareToggle) compareToggle.addEventListener('click',()=>setCompareMode(true));
 const playerReviewToggle=$('playerReviewModeToggle'); if(playerReviewToggle) playerReviewToggle.addEventListener('click',()=>setCompareMode(false));
 const compareClose=$('compareClose'); if(compareClose) compareClose.addEventListener('click',()=>setCompareMode(false));
 for(const side of [1,2]){
-  const teamSel=$(`compareTeam${side}`); if(teamSel) teamSel.addEventListener('change',()=>{state.compare[`team${side}`]=teamSel.value; state.compare[`player${side}`]=''; hydrateComparePlayers(side);});
-  const playerSel=$(`comparePlayer${side}`); if(playerSel) playerSel.addEventListener('change',()=>{state.compare[`player${side}`]=playerSel.value; updateCompareRunState();});
+  const teamSel=$(`compareTeam${side}`); if(teamSel) teamSel.addEventListener('change',()=>{state.compare[`team${side}`]=teamSel.value; state.compare[`player${side}`]=''; state.compare[`id${side}`]=''; hydrateComparePlayers(side); const out=$('compareResult'); if(out) out.innerHTML='';});
+  const playerSel=$(`comparePlayer${side}`); if(playerSel) playerSel.addEventListener('change',()=>{state.compare[`player${side}`]=playerSel.value; state.compare[`id${side}`]=''; hydrateCompareTargets(); updateCompareRunState(); const out=$('compareResult'); if(out) out.innerHTML='';});
 }
 const compareRun=$('compareRun'); if(compareRun) compareRun.addEventListener('click',runPlayerComparison);
 
