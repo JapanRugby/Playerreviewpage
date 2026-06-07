@@ -412,6 +412,7 @@ function playerKey(name,team){return isTargetTeam(team)?`${norm(name)}|japan-gro
 function mergeDisplayTeams(current, incoming){ const list=(Array.isArray(current)?current:(current?[current]:[])).filter(Boolean); if(incoming&&!list.some(t=>normTeam(t)===normTeam(incoming))) list.push(String(incoming).trim()); const order=t=>normTeam(t)==='JAPAN'?0:normTeam(t)==='JAPAN XV'?1:2; return list.sort((a,b)=>order(a)-order(b)||String(a).localeCompare(String(b)));}
 function displayTeamName(teams){ const list=Array.isArray(teams)?teams.filter(Boolean):[]; return list.length?list.join(' / '):'';}
 function toNumber(v){const n=parseFloat(String(v??'').replace(/,/g,''));return Number.isFinite(n)?n:0;}
+function normalizeShirt(v){ const m=String(v??'').trim().match(/\d+/); return m?String(Number(m[0])).padStart(2,'0'):''; }
 function pct(num,den){return den>0?`${Math.round((num/den)*100)}%`:'—';}
 function intFmt(n){return Math.round(toNumber(n)).toLocaleString('en-US');}
 function oneDec(n){const x=toNumber(n);return Number.isInteger(x)?intFmt(x):x.toLocaleString('en-US',{maximumFractionDigits:1});}
@@ -471,7 +472,7 @@ function titleCaseWords(value){ return String(value||'').trim().replace(/\s+/g,'
 function canonicalEffortType(value){ const clean=String(value||'Other').trim().replace(/\s+/g,' '); return clean ? titleCaseWords(clean) : 'Other'; }
 function canonicalEffortColour(value){ const key=String(value||'').trim().toLowerCase(); if(key==='gold') return 'Gold'; if(key==='green') return 'Green'; if(key==='yellow') return 'Yellow'; if(key==='red') return 'Red'; return String(value||'').trim(); }
 function effortAnalysisBucket(type){ const u=String(type||'').toUpperCase(); if(u.includes('PHASE DEFENCE')) return 'Phase Defence'; if(u.includes('LINEBREAK')) return 'Linebreak'; if(u.includes('CARRY')||u.includes('RUCK')||u.includes('TACKLE')||u.includes('JACKALER')) return 'Post Contact'; if(u.includes('KICK')||u.includes('TURNOVER')) return 'Spark'; if(u.includes('LINEOUT')||u.includes('SCRUM')) return 'Set Piece'; return ''; }
-function blankStats(player){return {player,totalActions:0,appearances:0,minutes:0,ballInPlayMins:0,positiveActions:0,negativeActions:0,carry:0,carryMetres:0,postContactMetres:0,carryDominant:0,carryContact:0,tackleAttempts:0,tackleMade:0,tackleDominant:0,colours:{Gold:0,Green:0,Yellow:0,Red:0},reviewTotal:0,typeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},timeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},typeCounts:{},positiveActionTypes:{},negativeActionTypes:{},shirt:player.shirt||'',position:player.position||''};}
+function blankStats(player){return {player,totalActions:0,appearances:0,minutes:0,ballInPlayMins:0,positiveActions:0,negativeActions:0,carry:0,carryMetres:0,postContactMetres:0,carryDominant:0,carryContact:0,tackleAttempts:0,tackleMade:0,tackleDominant:0,colours:{Gold:0,Green:0,Yellow:0,Red:0},reviewTotal:0,typeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},timeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},typeCounts:{},positiveActionTypes:{},negativeActionTypes:{},shirt:'',position:'',positionId:'',rosterSource:''};}
 function mergeStats(base,add){
   base.totalActions+=add.totalActions; base.appearances+=add.appearances||0; base.minutes+=add.minutes||0; base.ballInPlayMins+=add.ballInPlayMins||0; base.positiveActions+=add.positiveActions||0; base.negativeActions+=add.negativeActions||0;
   for(const k of ['carry','carryMetres','postContactMetres','carryDominant','carryContact','tackleAttempts','tackleMade','tackleDominant','reviewTotal']) base[k]+=add[k]||0;
@@ -493,9 +494,10 @@ function ensurePlayer(match,name,team,data={},includeInList=false){
   if(!name||!team) return null; const key=playerKey(name,team);
   let p=state.players.get(key);
   if(!p){ const teams=mergeDisplayTeams([], team); p={key,name:name.trim(),team:displayTeamName(teams)||team.trim(),teams,shirt:'',position:'',show:isTargetTeam(team)}; state.players.set(key,p); } else { p.teams=mergeDisplayTeams(p.teams||p.team, team); p.team=displayTeamName(p.teams)||p.team; p.show=p.show||isTargetTeam(team); }
-  if(data.shirt&&!p.shirt) p.shirt=String(data.shirt).padStart(2,'0'); if(data.position&&!p.position) p.position=data.position;
+  const normalizedShirt=normalizeShirt(data.shirt);
+  if(normalizedShirt&&!p.shirt) p.shirt=normalizedShirt; if(data.position&&!p.position) p.position=data.position;
   let st=match.playerStats.get(key); if(!st){ st=blankStats(p); match.playerStats.set(key,st); }
-  if(data.shirt&&!st.shirt) st.shirt=String(data.shirt).padStart(2,'0'); if(data.position&&!st.position) st.position=data.position;
+  if(normalizedShirt && st.rosterSource!=='SuperScout XML') st.shirt=normalizedShirt; if(data.position && st.rosterSource!=='SuperScout XML') st.position=data.position; if(data.positionId && st.rosterSource!=='SuperScout XML') st.positionId=data.positionId;
   return {key,player:p,stats:st};
 }
 function dateLabel(v){ if(!v) return ''; const s=String(v).trim(); const dm=s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/); if(dm) return `${dm[3]}-${dm[2].padStart(2,'0')}-${dm[1].padStart(2,'0')}`; return s.slice(0,10); }
@@ -648,7 +650,7 @@ function buildMatch(item,biRows,reviewRows,xmlText=''){
     got.stats.appearances=1; got.stats.minutes=info.minutes; got.stats.ballInPlayMins=info.ballInPlayMins||info.minutes||0; seen.add(got.key);
   }
   for(const row of biRows){
-    const name=(row.playerName||'').trim(); const team=(row.teamName||'').trim(); const got=ensurePlayer(match,name,team,{shirt:row.playerShirtNumber,position:row.playerpositionName}); if(!got) continue; const st=got.stats; const sk=got.key;
+    const name=(row.playerName||'').trim(); const team=(row.teamName||'').trim(); const got=ensurePlayer(match,name,team,{shirt:row.playerShirtNumber,position:row.playerpositionName,positionId:row.playerpositionId||row.PositionID||row.PosID}); if(!got) continue; const st=got.stats; const sk=got.key;
     if(!seen.has(sk)){ seen.add(sk); st.appearances=1; st.minutes=playerMinutes.get(sk)||0; st.ballInPlayMins=playerBallInPlay.get(sk)||st.minutes||0; }
     applyXmlMinutes(st,xmlInfoFor(row,name,team));
     st.totalActions++; const sam=samuraiScoreRow(row); st.positiveActions+=sam.positive; st.negativeActions+=sam.negative; for(const label of sam.positiveReasons||[]) st.positiveActionTypes[label]=(st.positiveActionTypes[label]||0)+1; for(const label of sam.negativeReasons||[]) st.negativeActionTypes[label]=(st.negativeActionTypes[label]||0)+1; const action=String(row.actionName||'').trim();
@@ -1166,7 +1168,7 @@ function openSamuraiActionModal(kind){
 function renderSamuraiDetail(st){
   if($('samuraiDetail')) $('samuraiDetail').innerHTML='';
 }
-function renderDashboard(){ const ctx=currentContext(); if(!ctx||!ctx.raw) return; const raw=ctx.raw; const st=scaleStats(raw,state.metric); const p=raw.player; dashboard.style.display='block'; $('playerName').textContent=p.name; const meta=[]; if(raw.shirt||p.shirt) meta.push(`<span class="badge red">#${escapeHtml(raw.shirt||p.shirt)}</span>`); meta.push(`<span class="badge">${escapeHtml(p.team)}</span>`); if(raw.position||p.position) meta.push(`<span class="badge">${escapeHtml(raw.position||p.position)}</span>`); meta.push(`<span class="badge">${escapeHtml(metricLabel())}</span>`); if(ctx.match&&ctx.match.minutesSource) meta.push(`<span class="badge">Minutes: ${escapeHtml(ctx.match.minutesSource)}</span>`); $('playerMeta').innerHTML=meta.join(''); $('scoreLine').textContent=ctx.label; $('matchMeta').innerHTML=ctx.sub||''; $('carryContext').textContent=metricLabel(); $('tackleContext').textContent=metricLabel(); $('effortContext').textContent=metricLabel();
+function renderDashboard(){ const ctx=currentContext(); if(!ctx||!ctx.raw) return; const raw=ctx.raw; const st=scaleStats(raw,state.metric); const p=raw.player; dashboard.style.display='block'; $('playerName').textContent=p.name; const meta=[]; if(raw.shirt) meta.push(`<span class="badge red">#${escapeHtml(raw.shirt)}</span>`); meta.push(`<span class="badge">${escapeHtml(p.team)}</span>`); if(raw.position) meta.push(`<span class="badge">${escapeHtml(raw.position)}</span>`); meta.push(`<span class="badge">${escapeHtml(metricLabel())}</span>`); if(ctx.match&&ctx.match.minutesSource) meta.push(`<span class="badge">Minutes: ${escapeHtml(ctx.match.minutesSource)}</span>`); $('playerMeta').innerHTML=meta.join(''); $('scoreLine').textContent=ctx.label; $('matchMeta').innerHTML=ctx.sub||''; $('carryContext').textContent=metricLabel(); $('tackleContext').textContent=metricLabel(); $('effortContext').textContent=metricLabel();
   $('carryStats').innerHTML=[card('Carry',displayNumber(st.carry)),card('Carry Metres',displayNumber(st.carryMetres)),card('Carry Dominance%',pct(raw.carryDominant,raw.carryContact),`${raw.carryDominant}/${raw.carryContact} dominant contact`),card('Post Contact Metres',displayNumber(st.postContactMetres))].join('');
   $('tackleStats').innerHTML=[card('Tackle',displayNumber(st.tackleMade),`${intFmt(raw.tackleAttempts)} attempts`),card('Tackle Completion',pct(raw.tackleMade,raw.tackleAttempts),`${raw.tackleMade}/${raw.tackleAttempts} made`),card('Tackle Dominance%',pct(raw.tackleDominant,raw.tackleAttempts),`${raw.tackleDominant}/${raw.tackleAttempts} dominant tackle`)].join('');
   $('colourStats').innerHTML=[effortReviewCard('Gold',displayNumber(st.colours.Gold),'gold'),effortReviewCard('Green',displayNumber(st.colours.Green),'green'),effortReviewCard('Yellow',displayNumber(st.colours.Yellow),'yellow'),effortReviewCard('Red',displayNumber(st.colours.Red),'redcard')].join(''); renderEffortShare(raw);
@@ -1183,7 +1185,7 @@ function renderBreakdowns(st){
   $('summaryBreakdown').innerHTML=redEntries.length?`<div class="helper" style="margin-bottom:8px">Most common Red effort situations.</div>${redEntries.map(([name,count])=>`<div class="needItem"><span class="needName">${escapeHtml(name)}</span><span class="needCount">${intFmt(count)} Red</span></div>`).join('')}`:'<div class="helper">No Red effort situations found.</div>';
 }
 function getJerseyValue(st){
-  const candidates=[st&&st.shirt, st&&st.jersey, st&&st.player&&st.player.shirt, st&&st.player&&st.player.jersey];
+  const candidates=[st&&st.shirt, st&&st.jersey, st&&st.matchShirt, st&&st.rosterShirt];
   for(const v of candidates){
     if(v===undefined||v===null||String(v).trim()==='') continue;
     const m=String(v).match(/\d+/);
@@ -1192,7 +1194,7 @@ function getJerseyValue(st){
   return null;
 }
 function getPositionIdValue(st){
-  const candidates=[st&&st.position,st&&st.positionId,st&&st.posId,st&&st.player&&st.player.position,st&&st.player&&st.player.positionId,st&&st.player&&st.player.posId];
+  const candidates=[st&&st.positionId,st&&st.posId,st&&st.position,st&&st.matchPositionId,st&&st.rosterPositionId];
   for(const v of candidates){
     if(v===undefined||v===null||String(v).trim()==='') continue;
     const m=String(v).match(/\d+/);
@@ -1257,7 +1259,7 @@ function sortOpponentsForMatchup(list, preferredJersey, preferredGroup){
   });
 }
 function findOpponentSameNumber(match,raw){
-  const shirt=String(raw.shirt||raw.player?.shirt||'').replace(/^0+/,'');
+  const shirt=String(raw.shirt||raw.matchShirt||raw.rosterShirt||'').replace(/^0+/,'');
   const jersey=getJerseyValue(raw);
   if(!shirt && !Number.isFinite(jersey)) return null;
   const selectedTeamIsJapan=isTargetTeam(raw.player&&raw.player.team) || isTargetTeam(raw.team) || (Array.isArray(raw.player&&raw.player.teams) && raw.player.teams.some(isTargetTeam)) || String(raw.player?.key||raw.key||'').includes('|japan-group');
@@ -1276,7 +1278,7 @@ function findOpponentSameNumber(match,raw){
 
   const sameNumber=allOpponents.filter(st=>{
     const oppJersey=getJerseyValue(st);
-    const oppShirt=String(st.shirt||st.player?.shirt||'').replace(/^0+/,'');
+    const oppShirt=String(st.shirt||st.matchShirt||st.rosterShirt||'').replace(/^0+/,'');
     return (Number.isFinite(jersey)&&oppJersey===jersey) || (!!shirt&&oppShirt===shirt);
   });
 
@@ -1354,7 +1356,7 @@ function renderComparison(ctx){ const sec=$('comparisonSection'), cont=$('compar
   matchupCell('Tackle Completion',pctNum(raw.tackleMade,raw.tackleAttempts),pctNum(opp.tackleMade,opp.tackleAttempts),v=>`${intFmt(v)}%`,true),
   matchupCell('Effort Gold',raw.colours.Gold,opp.colours.Gold,intFmt,true),
   matchupCell('Effort Red',raw.colours.Red,opp.colours.Red,intFmt,false)
-].join(''); cont.innerHTML=`<div class="matchupShell"><div class="matchupTop"><div class="matchupPlayer"><div class="matchupName">${escapeHtml(raw.player.name||'Unknown')}</div><div class="matchupTeam">Japan · #${escapeHtml(raw.shirt||raw.player.shirt||'')}</div></div><div class="matchupVs">VS</div><div class="matchupPlayer right"><div class="matchupName">${escapeHtml(opp.player.name||'Unknown')}</div><div class="matchupTeam">${escapeHtml(opp.player.team)} · #${escapeHtml(opp.shirt||opp.player.shirt||'')}</div></div></div><div class="matchupTable"><div class="matchupLegend"><div class="legendLeft">${escapeHtml(raw.player.name||'Japan player')}</div><div class="legendRight">${escapeHtml(opp.player.name||'Opponent')}</div></div>${rows}</div></div>`; }
+].join(''); cont.innerHTML=`<div class="matchupShell"><div class="matchupTop"><div class="matchupPlayer"><div class="matchupName">${escapeHtml(raw.player.name||'Unknown')}</div><div class="matchupTeam">Japan · ${raw.shirt?'#'+escapeHtml(raw.shirt):'No shirt data'}</div></div><div class="matchupVs">VS</div><div class="matchupPlayer right"><div class="matchupName">${escapeHtml(opp.player.name||'Unknown')}</div><div class="matchupTeam">${escapeHtml(opp.player.team)} · ${opp.shirt?'#'+escapeHtml(opp.shirt):'No shirt data'}</div></div></div><div class="matchupTable"><div class="matchupLegend"><div class="legendLeft">${escapeHtml(raw.player.name||'Japan player')}</div><div class="legendRight">${escapeHtml(opp.player.name||'Opponent')}</div></div>${rows}</div></div>`; }
 function togglePlayerClear(){
   const btn=$('clearPlayerSearch');
   if(btn) btn.classList.toggle('show', !!playerSelect.value.trim());
