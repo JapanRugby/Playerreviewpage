@@ -102,6 +102,21 @@ select:focus,.playerSearch:focus{border-color:#e78c95;box-shadow:0 0 0 4px rgba(
 .trendOpenIcon{width:42px;height:42px;border-radius:999px;display:grid;place-items:center;background:#071a3a;color:#fff;font-weight:1000;box-shadow:0 10px 22px rgba(7,26,58,.18);flex:0 0 auto}
 .effortModalBody .trendGrid{margin-top:4px}
 .effortModalBody .trendChart{opacity:1;transform:none}
+
+.matchDetailSummary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:10px 0 16px}
+.matchDetailStat{border:1px solid rgba(15,23,42,.10);border-radius:18px;background:linear-gradient(180deg,#fff,#f8fafc);padding:14px;box-shadow:0 12px 26px rgba(15,23,42,.08)}
+.matchDetailStat .label{font-size:.78rem;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.matchDetailStat .value{font-size:1.8rem;font-weight:950;margin-top:4px;color:var(--ink)}
+.matchDetailTableWrap{overflow:auto;border:1px solid rgba(15,23,42,.10);border-radius:18px;background:#fff}
+.matchDetailTable{width:100%;border-collapse:collapse;min-width:520px;font-size:.9rem}
+.matchDetailTable th,.matchDetailTable td{padding:10px 12px;border-bottom:1px solid rgba(15,23,42,.08);text-align:left;white-space:nowrap}
+.matchDetailTable th{font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);background:rgba(248,250,252,.9)}
+.matchDetailTable tr:last-child td{border-bottom:0}
+.matchDetailTable .num{text-align:right;font-variant-numeric:tabular-nums}
+.matchDetailRole{display:inline-flex;align-items:center;border-radius:999px;padding:4px 9px;font-weight:900;font-size:.78rem;background:#eef2ff;color:#1e293b}
+.matchDetailRole.starter{background:rgba(184,0,28,.10);color:#9f1239}
+.matchDetailRole.finisher{background:rgba(15,23,42,.08);color:#0f172a}
+@media(max-width:640px){.matchDetailSummary{grid-template-columns:1fr 1fr}.matchDetailTable{min-width:460px;font-size:.82rem}.matchDetailTable th,.matchDetailTable td{padding:9px 10px}}
 @media(max-width:540px){.trendOpenCard{border-radius:18px;padding:13px}.trendOpenTitle{font-size:12px}.trendOpenSub{font-size:11px}.trendOpenIcon{width:36px;height:36px}}
 @media(max-width:540px){.effortModal{align-items:center;justify-content:center;padding:14px}.effortModalPanel{width:100%;max-height:84vh;border-radius:24px;padding:15px}.effortModalTitle{font-size:18px}}
 .header:before,.header:after{content:"";position:absolute;pointer-events:none;border-radius:999px;filter:blur(.1px);opacity:.48}
@@ -358,7 +373,16 @@ const JA_TEXT = new Map([
   ['No difference','差なし'],
   ['Even','Even'],
   ['Japan wins','Japan wins'],
-  ['Opponent wins','Opponent wins']
+  ['Opponent wins','Opponent wins'],
+  ['Tap for match detail','タップで試合詳細'],
+  ['Match Appearance Detail','出場試合詳細'],
+  ['Starter','Starter'],
+  ['Finisher','Finisher'],
+  ['Role','役割'],
+  ['Match','試合'],
+  ['Shirt','背番号'],
+  ['Minutes','出場時間'],
+  ['No appearance detail available.','出場詳細データがありません。'],
 ]);
 function translateTextNodeValue(value){
   if(UI_LANG!=='ja') return value;
@@ -477,7 +501,7 @@ function titleCaseWords(value){ return String(value||'').trim().replace(/\s+/g,'
 function canonicalEffortType(value){ const clean=String(value||'Other').trim().replace(/\s+/g,' '); return clean ? titleCaseWords(clean) : 'Other'; }
 function canonicalEffortColour(value){ const key=String(value||'').trim().toLowerCase(); if(key==='gold') return 'Gold'; if(key==='green') return 'Green'; if(key==='yellow') return 'Yellow'; if(key==='red') return 'Red'; return String(value||'').trim(); }
 function effortAnalysisBucket(type){ const u=String(type||'').toUpperCase(); if(u.includes('PHASE DEFENCE')) return 'Phase Defence'; if(u.includes('LINEBREAK')) return 'Linebreak'; if(u.includes('CARRY')||u.includes('RUCK')||u.includes('TACKLE')||u.includes('JACKALER')) return 'Post Contact'; if(u.includes('KICK')||u.includes('TURNOVER')) return 'Spark'; if(u.includes('LINEOUT')||u.includes('SCRUM')) return 'Set Piece'; return ''; }
-function blankStats(player){return {player,totalActions:0,appearances:0,minutes:0,ballInPlayMins:0,positiveActions:0,negativeActions:0,carry:0,carryMetres:0,postContactMetres:0,carryDominant:0,carryContact:0,tackleAttempts:0,tackleMade:0,tackleDominant:0,goalKickAttempts:0,goalKickMade:0,colours:{Gold:0,Green:0,Yellow:0,Red:0},reviewTotal:0,typeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},timeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},typeCounts:{},positiveActionTypes:{},negativeActionTypes:{},shirt:'',position:'',positionId:'',rosterSource:''};}
+function blankStats(player){return {player,totalActions:0,appearances:0,minutes:0,ballInPlayMins:0,positiveActions:0,negativeActions:0,carry:0,carryMetres:0,postContactMetres:0,carryDominant:0,carryContact:0,tackleAttempts:0,tackleMade:0,tackleDominant:0,goalKickAttempts:0,goalKickMade:0,colours:{Gold:0,Green:0,Yellow:0,Red:0},reviewTotal:0,typeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},timeByColour:{Gold:{},Green:{},Yellow:{},Red:{}},typeCounts:{},positiveActionTypes:{},negativeActionTypes:{},shirt:'',position:'',positionId:'',rosterSource:'',matchHistory:[]};}
 function mergeStats(base,add){
   base.totalActions+=add.totalActions; base.appearances+=add.appearances||0; base.minutes+=add.minutes||0; base.ballInPlayMins+=add.ballInPlayMins||0; base.positiveActions+=add.positiveActions||0; base.negativeActions+=add.negativeActions||0;
   for(const k of ['carry','carryMetres','postContactMetres','carryDominant','carryContact','tackleAttempts','tackleMade','tackleDominant','goalKickAttempts','goalKickMade','reviewTotal']) base[k]+=add[k]||0;
@@ -486,6 +510,7 @@ function mergeStats(base,add){
   for(const [t,n] of Object.entries(add.positiveActionTypes||{})) base.positiveActionTypes[t]=(base.positiveActionTypes[t]||0)+n;
   for(const [t,n] of Object.entries(add.negativeActionTypes||{})) base.negativeActionTypes[t]=(base.negativeActionTypes[t]||0)+n;
   if(!base.shirt&&add.shirt) base.shirt=add.shirt; if(!base.position&&add.position) base.position=add.position;
+  if(Array.isArray(add.matchHistory)) base.matchHistory.push(...add.matchHistory);
   return base;
 }
 function scaleStats(st,metric){
@@ -631,6 +656,33 @@ function samuraiScoreRow(row){
 }
 function samuraiRate(st){ return (st.ballInPlayMins||0)>0 ? (st.positiveActions-st.negativeActions)/st.ballInPlayMins : 0; }
 function signedOneDec(n){ const x=toNumber(n); return (x>0?'+':'') + x.toLocaleString('en-US',{maximumFractionDigits:2}); }
+
+function starterFinisherRole(shirt){
+  const m=String(shirt||'').match(/\d+/);
+  if(!m) return 'Unknown';
+  const n=Number(m[0]);
+  if(n>=1 && n<=15) return 'Starter';
+  if(n>=16) return 'Finisher';
+  return 'Unknown';
+}
+function attachMatchHistory(match){
+  for(const [key,st] of match.playerStats){
+    if(!st || !(st.appearances || st.minutes || st.totalActions || st.reviewTotal)) continue;
+    const shirt=normalizeShirt(st.shirt||st.jersey||st.matchShirt||'');
+    st.matchHistory=[{
+      matchId:match.id,
+      date:match.date||'',
+      label:match.label||match.id||'',
+      season:match.season||'',
+      shirt,
+      position:st.position||'',
+      positionId:st.positionId||'',
+      minutes:toNumber(st.minutes||0),
+      role:starterFinisherRole(shirt)
+    }];
+  }
+}
+
 function deriveMeta(item,biRows){ const first=biRows.find(r=>r.FXID||r.homeTeamName||r.awayTeamName)||{}; const home=item.homeTeam||first.homeTeamName||''; const away=item.awayTeam||first.awayTeamName||''; const score=item.score||((first.hometeamFTscore||first.awayteamFTscore)?`${first.hometeamFTscore??''}–${first.awayteamFTscore??''}`:''); const label=item.label||(home&&away&&score?`${home} ${score} ${away}`:(home&&away?`${home} v ${away}`:item.id)); const date=item.date||dateLabel(first.datePlayed||first.UTCTime); const season=String(item.season||first.season||date.slice(0,4)||'Unknown'); return {id:String(item.id||first.FXID||label),label,date,season,home,away,score,venue:item.venue||first.venueName||'',competition:item.competition||first.competitionName||'',raw:item}; }
 function buildMatch(item,biRows,reviewRows,xmlText=''){
   const meta=deriveMeta(item,biRows); const matchEnd=computeMatchEndMinutes(biRows); const xmlData=parseSuperScoutMinutes(xmlText); const fallbackMinutes=computePlayerMinutesFromBI(biRows,matchEnd); const playerMinutes=xmlData.minutes.size?xmlData.minutes:fallbackMinutes; const playerBallInPlay=xmlData.ballInPlay.size?xmlData.ballInPlay:playerMinutes; const match={...meta,matchEndMinutes:matchEnd,minutesSource:xmlData.minutes.size?'SuperScout XML':'BI CSV fallback',playerStats:new Map()}; const seen=new Set();
@@ -669,6 +721,7 @@ function buildMatch(item,biRows,reviewRows,xmlText=''){
     if(st.colours[colour]!==undefined){ st.colours[colour]++; st.typeByColour[colour][type]=(st.typeByColour[colour][type]||0)+1; }
     st.reviewTotal++; st.typeCounts[type]=(st.typeCounts[type]||0)+1;
   }
+  attachMatchHistory(match);
   return match;
 }
 async function fetchText(url,bust=true){const target=bust?urlWithCacheBust(url):new URL(url,location.href).toString();const res=await fetch(target,{cache:'no-store'});if(!res.ok) throw new Error(`${res.status} ${res.statusText}: ${url}`);return await res.text();}
@@ -1170,6 +1223,56 @@ function openSamuraiActionModal(kind){
   modal.setAttribute('aria-hidden','false');
   document.body.style.overflow='hidden';
 }
+function appearanceRoleFromShirt(shirt){
+  const n=getJerseyValue({shirt});
+  if(Number.isFinite(n) && n>=1 && n<=15) return 'Starter';
+  if(Number.isFinite(n) && n>=16) return 'Finisher';
+  return 'Unknown';
+}
+function matchAppearanceRows(ctx){
+  if(!ctx || !state.selectedPlayer) return [];
+  const direct=Array.isArray(ctx.raw?.matchHistory) ? ctx.raw.matchHistory : [];
+  const source = direct.length ? direct.map(x=>({...x})) : (ctx.matches||[]).map(m=>{
+    const st=m.playerStats.get(state.selectedPlayer)||{};
+    return {matchId:m.id, date:m.date, label:m.label, season:m.season, shirt:st.shirt||'', position:st.position||'', positionId:st.positionId||'', minutes:st.minutes||0};
+  });
+  return source.map(row=>{
+    const match = state.matchIndex.get(String(row.matchId||'')) || (ctx.matches||[]).find(m=>String(m.id)===String(row.matchId||'')) || {};
+    const shirt=normalizeShirt(row.shirt||row.jersey||row.matchShirt||'');
+    const role=row.role || appearanceRoleFromShirt(shirt);
+    return {
+      matchId:row.matchId||match.id||'',
+      date:row.date||match.date||'',
+      label:row.label||match.label||row.matchId||'Match',
+      season:row.season||match.season||'',
+      shirt,
+      position:row.position||'',
+      positionId:row.positionId||'',
+      minutes:toNumber(row.minutes),
+      role
+    };
+  }).sort((a,b)=>String(b.date||'').localeCompare(String(a.date||''))||String(b.matchId||'').localeCompare(String(a.matchId||'')));
+}
+function renderMatchAppearanceDetailContent(ctx){
+  const rows=matchAppearanceRows(ctx);
+  if(!rows.length) return '<div class="helper">No appearance detail available.</div>';
+  const starter=rows.filter(r=>r.role==='Starter').length;
+  const finisher=rows.filter(r=>r.role==='Finisher').length;
+  const table=rows.map(r=>`<tr><td>${escapeHtml(r.date||'-')}</td><td>${escapeHtml(r.label||'-')}</td><td class="num">${r.shirt?('#'+escapeHtml(String(Number(r.shirt)))):'-'}</td><td>${escapeHtml(r.position||r.positionId||'-')}</td><td><span class="matchDetailRole ${r.role==='Starter'?'starter':r.role==='Finisher'?'finisher':''}">${escapeHtml(r.role)}</span></td><td class="num">${oneDec(r.minutes||0)}</td></tr>`).join('');
+  return `<div class="matchDetailSummary"><div class="matchDetailStat"><div class="label">Starter</div><div class="value">${intFmt(starter)}</div></div><div class="matchDetailStat"><div class="label">Finisher</div><div class="value">${intFmt(finisher)}</div></div></div><div class="matchDetailTableWrap"><table class="matchDetailTable"><thead><tr><th>Date</th><th>Match</th><th class="num">Shirt</th><th>Position</th><th>Role</th><th class="num">Minutes</th></tr></thead><tbody>${table}</tbody></table></div>`;
+}
+function openMatchAppearanceModal(){
+  const ctx=currentContext();
+  if(!ctx || !ctx.raw) return;
+  const modal=$('effortAnalysisModal');
+  $('effortAnalysisModalTitle').textContent='Match Appearance Detail';
+  $('effortAnalysisModalSub').textContent='Starter / Finisher counts and match-by-match shirt number with minutes played.';
+  $('effortAnalysisModalBody').innerHTML=renderMatchAppearanceDetailContent(ctx);
+  applyLanguage($('effortAnalysisModal'));
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
 function renderSamuraiDetail(st){
   if($('samuraiDetail')) $('samuraiDetail').innerHTML='';
 }
@@ -1188,7 +1291,7 @@ function renderDashboard(){ const ctx=currentContext(); if(!ctx||!ctx.raw) retur
     }
   }
   $('colourStats').innerHTML=[effortReviewCard('Gold',displayNumber(st.colours.Gold),'gold'),effortReviewCard('Green',displayNumber(st.colours.Green),'green'),effortReviewCard('Yellow',displayNumber(st.colours.Yellow),'yellow'),effortReviewCard('Red',displayNumber(st.colours.Red),'redcard')].join(''); renderEffortShare(raw);
-  $('gameTimeStats').innerHTML=[card('Matches',intFmt(raw.appearances||ctx.matches?.length||1),'Games included in this view'),card('Minutes Played',oneDec(raw.minutes||0),'Actual playing time'),card('Ball-in-play Min',oneDec(raw.ballInPlayMins),'Player BIP minutes')].join('');
+  $('gameTimeStats').innerHTML=[card('Matches',intFmt(raw.appearances||ctx.matches?.length||1),'Tap for match detail','actionable gameTimeDetailCard',{'match-detail':'appearance'}),card('Minutes Played',oneDec(raw.minutes||0),'Actual playing time'),card('Ball-in-play Min',oneDec(raw.ballInPlayMins),'Player BIP minutes')].join('');
   $('samuraiStats').innerHTML=[card('Samurai Stats',signedOneDec(samuraiRate(raw)),`${intFmt(raw.positiveActions)} positive / ${intFmt(raw.negativeActions)} negative`,'samuraiCard'),card('Positive Actions',displayNumber(st.positiveActions),'Tap for detail','actionable samuraiActionCard',{'samurai-action':'positive'}),card('Negative Actions',displayNumber(st.negativeActions),'Tap for detail','actionable samuraiActionCard',{'samurai-action':'negative'})].join(''); renderSamuraiDetail(raw);
   renderSeasonTrends(ctx);
   renderBreakdowns(raw); renderComparison(ctx); animateDashboardNumbers(); dashboard.scrollIntoView({behavior:'smooth',block:'start'});
@@ -1475,7 +1578,9 @@ document.addEventListener('click',e=>{
   const effortTrigger=e.target.closest&&e.target.closest('[data-effort-analysis]');
   if(effortTrigger){e.preventDefault();openEffortAnalysisModal(effortTrigger.dataset.effortAnalysis);return;}
   const samuraiTrigger=e.target.closest&&e.target.closest('[data-samurai-action]');
-  if(samuraiTrigger){e.preventDefault();openSamuraiActionModal(samuraiTrigger.dataset.samuraiAction);}
+  if(samuraiTrigger){e.preventDefault();openSamuraiActionModal(samuraiTrigger.dataset.samuraiAction);return;}
+  const matchDetailTrigger=e.target.closest&&e.target.closest('[data-match-detail]');
+  if(matchDetailTrigger){e.preventDefault();openMatchAppearanceModal();}
 });
 document.addEventListener('keydown',e=>{
   if(!(e.key==='Enter'||e.key===' ')) return;
@@ -1495,6 +1600,12 @@ document.addEventListener('keydown',e=>{
   if(samuraiTarget){
     e.preventDefault();
     openSamuraiActionModal(samuraiTarget.dataset.samuraiAction);
+    return;
+  }
+  const matchDetailTarget=e.target?.closest?.('[data-match-detail]');
+  if(matchDetailTarget){
+    e.preventDefault();
+    openMatchAppearanceModal();
   }
 });
 $('effortAnalysisModalClose').addEventListener('click',closeEffortAnalysisModal);
