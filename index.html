@@ -1182,8 +1182,8 @@ function renderBreakdowns(st){
   const redEntries=Object.entries(st.typeByColour.Red||{}).sort((a,b)=>b[1]-a[1]).slice(0,5);
   $('summaryBreakdown').innerHTML=redEntries.length?`<div class="helper" style="margin-bottom:8px">Most common Red effort situations.</div>${redEntries.map(([name,count])=>`<div class="needItem"><span class="needName">${escapeHtml(name)}</span><span class="needCount">${intFmt(count)} Red</span></div>`).join('')}`:'<div class="helper">No Red effort situations found.</div>';
 }
-function getPositionIdValue(st){
-  const candidates=[st.position,st.positionId,st.posId,st.player&&st.player.position,st.player&&st.player.positionId,st.player&&st.player.posId];
+function getJerseyValue(st){
+  const candidates=[st&&st.shirt, st&&st.jersey, st&&st.player&&st.player.shirt, st&&st.player&&st.player.jersey];
   for(const v of candidates){
     if(v===undefined||v===null||String(v).trim()==='') continue;
     const m=String(v).match(/\d+/);
@@ -1191,50 +1191,93 @@ function getPositionIdValue(st){
   }
   return null;
 }
+function getPositionIdValue(st){
+  const candidates=[st&&st.position,st&&st.positionId,st&&st.posId,st&&st.player&&st.player.position,st&&st.player&&st.player.positionId,st&&st.player&&st.player.posId];
+  for(const v of candidates){
+    if(v===undefined||v===null||String(v).trim()==='') continue;
+    const m=String(v).match(/\d+/);
+    if(m) return Number(m[0]);
+  }
+  return null;
+}
+function positionTextGroup(value){
+  const t=norm(value).replace(/[\-_]+/g,' ');
+  if(!t) return null;
+  if(/tighthead|loosehead|prop|hooker|front row/.test(t)) return 'front-row';
+  if(/lock|second row/.test(t)) return 'lock';
+  if(/flanker|number\s*8|no\.?\s*8|back row|loose forward/.test(t)) return 'back-row';
+  if(/scrum half|scrumhalf|halfback|half back/.test(t)) return 'scrum-half';
+  if(/fly half|flyhalf|first five|stand off|centre|center|wing|fullback|full back|outside back|back three|backline|back line/.test(t)) return 'backs';
+  return null;
+}
 function positionGroupId(pos){
+  if(pos===undefined||pos===null||String(pos).trim()==='') return null;
   const n=Number(pos);
-  if(!Number.isFinite(n)) return null;
-  if([1,2,3].includes(n)) return 'front-row';
-  if([4,5].includes(n)) return 'lock';
-  if([6,7,8].includes(n)) return 'back-row';
-  if(n===9) return 'scrum-half';
-  if([10,11,12,13,14,15].includes(n)) return 'backs';
-  return String(n);
+  if(Number.isFinite(n)){
+    if([1,2,3].includes(n)) return 'front-row';
+    if([4,5].includes(n)) return 'lock';
+    if([6,7,8].includes(n)) return 'back-row';
+    if(n===9) return 'scrum-half';
+    if([10,11,12,13,14,15].includes(n)) return 'backs';
+    return String(n);
+  }
+  return positionTextGroup(pos);
+}
+function getPositionGroup(st){
+  const explicit=positionGroupId(getPositionIdValue(st)) || positionTextGroup(st&&st.position) || positionTextGroup(st&&st.player&&st.player.position);
+  if(explicit) return explicit;
+  const jersey=getJerseyValue(st);
+  if(Number.isFinite(jersey) && jersey>=1 && jersey<=18) return positionGroupId(jersey);
+  return null;
 }
 function sameReservePositionGroup(a,b){
-  const ga=positionGroupId(getPositionIdValue(a));
-  const gb=positionGroupId(getPositionIdValue(b));
+  const ga=getPositionGroup(a);
+  const gb=getPositionGroup(b);
   if(!ga||!gb) return false;
   return ga===gb;
 }
 function findOpponentSameNumber(match,raw){
   const shirt=String(raw.shirt||raw.player.shirt||'').replace(/^0+/,'');
-  if(!shirt) return null;
-  const jersey=Number(shirt);
+  const jersey=getJerseyValue(raw);
+  if(!shirt && !Number.isFinite(jersey)) return null;
   const selectedTeamIsJapan=isTargetTeam(raw.player&&raw.player.team) || isTargetTeam(raw.team) || (Array.isArray(raw.player&&raw.player.teams) && raw.player.teams.some(isTargetTeam));
   // The reviewed player list is Japan / Japan XV only. For match-up, always compare
   // against the actual opposition side, never another Japan / Japan XV player.
   // This also avoids merged player labels like "Japan / Japan XV" being treated as a third team.
   const allOpponents=[...match.playerStats.values()].filter(st=>{
     const team=st.player&&st.player.team;
-    // If the reviewed player is Japan/Japan XV, the comparison candidate must be the actual opposition.
-    // Exclude all Japan-side rows, including merged labels such as "Japan / Japan XV" and keys ending in japan-group.
+    if(st===raw) return false;
     if(selectedTeamIsJapan) return !statBelongsToTargetSide(st);
     return normTeam(team)!==normTeam(raw.player&&raw.player.team);
   });
-  const sameNumber=allOpponents.filter(st=>String(st.shirt||st.player.shirt||'').replace(/^0+/,'')===shirt);
+  const sameNumber=allOpponents.filter(st=>getJerseyValue(st)===jersey || String(st.shirt||st.player.shirt||'').replace(/^0+/,'')===shirt);
+
   if(Number.isFinite(jersey) && jersey>=19){
     const sameNumberSameRole=sameNumber.find(st=>sameReservePositionGroup(raw,st));
     if(sameNumberSameRole) return sameNumberSameRole;
-    const rawGroup=positionGroupId(getPositionIdValue(raw));
+    const rawGroup=getPositionGroup(raw);
     if(!rawGroup) return null;
     return allOpponents.find(st=>{
-      const oppJersey=Number(String(st.shirt||st.player.shirt||'').replace(/^0+/,''));
+      const oppJersey=getJerseyValue(st);
       if(!Number.isFinite(oppJersey) || oppJersey<19) return false;
-      return positionGroupId(getPositionIdValue(st))===rawGroup;
+      return getPositionGroup(st)===rawGroup;
     }) || null;
   }
-  return sameNumber[0] || null;
+
+  // Starters normally compare by shirt number. If shirt data is missing in the
+  // generated JSON, fall back to the same position group among opposition starters.
+  if(sameNumber.length) return sameNumber[0];
+  if(Number.isFinite(jersey) && jersey>=1 && jersey<=18){
+    const rawGroup=getPositionGroup(raw) || positionGroupId(jersey);
+    if(rawGroup){
+      return allOpponents.find(st=>{
+        const oppJersey=getJerseyValue(st);
+        if(Number.isFinite(oppJersey) && (oppJersey<1 || oppJersey>18)) return false;
+        return getPositionGroup(st)===rawGroup;
+      }) || null;
+    }
+  }
+  return null;
 }
 function matchupCell(label,left,right,format=(v)=>intFmt(v),higherBetter=true){
   const l=toNumber(left), r=toNumber(right);
