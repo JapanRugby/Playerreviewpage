@@ -211,6 +211,40 @@ body.compare-mode .compareTitle{font-size:24px}.compareModeIntro{display:none}
 .compareMatchupRow:first-of-type{border-top:0}
 @media(max-width:760px){.compareControls{grid-template-columns:1fr}.comparePickGrid{grid-template-columns:1fr}.compareHeader{grid-template-columns:1fr;gap:10px;text-align:center;background:linear-gradient(180deg,#fff,#f8fafc);border:1px solid var(--line);border-radius:22px;padding:14px 12px;margin:12px 0 14px}.comparePlayerBlock,.comparePlayerBlockTwo{text-align:center;width:100%;display:block}.comparePlayerLabel{display:block}.comparePlayerName{font-size:20px;max-width:100%;white-space:normal}.comparePlayerMeta{font-size:12px}.compareVs{margin:2px auto;width:42px;height:42px}.compareRowHead{grid-template-columns:72px 1fr 72px}.compareValue{font-size:15px}.compareMetric{font-size:12px}.compareTop{align-items:flex-start;flex-direction:column}.compareToggleRow{justify-content:flex-start}}
 
+
+/* v82: keep comparison names aligned above the left/right graph columns and sticky while scrolling */
+.compareHeader{
+  position:sticky;
+  top:calc(env(safe-area-inset-top, 0px) + 8px);
+  z-index:35;
+  background:rgba(255,255,255,.96);
+  border:1px solid rgba(213,221,232,.95);
+  border-radius:22px;
+  padding:12px 14px;
+  box-shadow:0 14px 34px rgba(16,24,40,.12);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+.comparePlayerBlockOne{text-align:left}
+.comparePlayerBlockTwo{text-align:right}
+@media(max-width:760px){
+  .compareHeader{
+    grid-template-columns:minmax(0,1fr) 44px minmax(0,1fr)!important;
+    gap:8px!important;
+    text-align:initial!important;
+    padding:10px 9px!important;
+    border-radius:18px!important;
+    margin:10px 0 12px!important;
+  }
+  .comparePlayerBlockOne{ text-align:left!important; }
+  .comparePlayerBlockTwo{ text-align:right!important; }
+  .comparePlayerBlock{ min-width:0; width:auto!important; }
+  .comparePlayerLabel{ display:block; font-size:9px; letter-spacing:.12em; margin-bottom:3px; }
+  .comparePlayerName{ font-size:16px!important; line-height:1.12; white-space:normal; overflow-wrap:anywhere; }
+  .comparePlayerMeta{ font-size:10px!important; line-height:1.25; }
+  .compareVs{ width:38px!important; height:38px!important; margin:0 auto!important; align-self:center; }
+}
+
 </style>
 </head>
 <body>
