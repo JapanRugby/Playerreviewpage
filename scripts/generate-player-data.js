@@ -83,58 +83,71 @@ function samuraiReasonLabel(prefix,row){
 }
 function addSamuraiReason(list,label,count=1){ for(let i=0;i<count;i++) list.push(label); }
 function samuraiScoreRow(row){
-  const action=String(row.actionName||'').trim(); const result=String(row.ActionResultName||'').trim(); const q=textBlob(row); let pos=0, neg=0; const positiveReasons=[], negativeReasons=[]; const has=re=>re.test(q);
-  if(action==='Carry'){
-    if(has(/Error|Lost|Turnover|Carried in Touch|Ineffective Contact|Tackled Ineffective/i)){ neg++; addSamuraiReason(negativeReasons,samuraiReasonLabel('Carry negative',row)); }
-    else { pos++; addSamuraiReason(positiveReasons,samuraiReasonLabel('Carry positive',row)); }
-    if(has(/Dominant Contact|Tackled Dominant/i)){ pos++; addSamuraiReason(positiveReasons,'Dominant carry/contact'); }
-    if(has(/Line Break|Clean Break|Defender Beaten|Bumped Off/i)){ pos++; addSamuraiReason(positiveReasons,'Carry linebreak/defender beaten'); }
-  }
-  if(action==='Pass'){
-    if(has(/Incomplete|Bad Pass|Missed|Error|To Opposition/i)){ neg++; addSamuraiReason(negativeReasons,samuraiReasonLabel('Pass negative',row)); }
-    else { pos++; addSamuraiReason(positiveReasons,samuraiReasonLabel('Pass positive',row)); }
-    if(has(/Break Assist/i)){ pos++; addSamuraiReason(positiveReasons,'Pass break assist'); }
-  }
-  if(action==='Collection'){
-    if(has(/Catch|Collected|Success|Won/i)){ pos++; addSamuraiReason(positiveReasons,samuraiReasonLabel('Collection positive',row)); }
-    if(has(/Dropped|Error|Lost/i)){ neg++; addSamuraiReason(negativeReasons,samuraiReasonLabel('Collection negative',row)); }
-  }
-  if(action==='Kick'){
-    if(has(/Kick Error|Charged Down|Failed|Out on Full|Error/i)){ neg++; addSamuraiReason(negativeReasons,samuraiReasonLabel('Kick negative',row)); }
-    else if(has(/Kick in Play|Touch Kick|Penalty Kick Touch|50-22|Territorial|Bomb|Box|Chip/i)){ pos++; addSamuraiReason(positiveReasons,samuraiReasonLabel('Kick positive',row)); }
-    if(has(/Regained|Retained/i)){ pos++; addSamuraiReason(positiveReasons,'Kick regather/retained'); }
-  }
-  if(action==='Restart'){ pos++; addSamuraiReason(positiveReasons,samuraiReasonLabel('Restart positive',row)); if(has(/Retained/i)){ pos++; addSamuraiReason(positiveReasons,'Restart retained'); } }
-  if(action==='Goal Kick'){
-    if(has(/Goal Kicked|Scored|Success/i)){ pos++; addSamuraiReason(positiveReasons,samuraiReasonLabel('Goal kick positive',row)); }
-    else { neg++; addSamuraiReason(negativeReasons,samuraiReasonLabel('Goal kick negative',row)); }
-  }
-  if(action==='Tackle'){
-    if(result==='Missed'||has(/Missed|Ineffective Tackle|Passive|Offload Allowed|Penalty Conceded/i)){ neg++; addSamuraiReason(negativeReasons,samuraiReasonLabel('Tackle negative',row)); }
-    else { pos++; addSamuraiReason(positiveReasons,samuraiReasonLabel('Tackle made',row)); }
-    if(has(/Dominant Tackle/i)){ pos++; addSamuraiReason(positiveReasons,'Dominant tackle'); }
-    if(has(/Turnover|Penalty Won|Try Save/i)){ pos++; addSamuraiReason(positiveReasons,'Tackle turnover/penalty won/try save'); }
-  }
-  if(action==='Missed Tackle'){ neg++; addSamuraiReason(negativeReasons,samuraiReasonLabel('Missed tackle',row)); }
-  if(action==='Ruck'){
-    if(has(/Failed Clearout|Ineffective|Lost|Penalty Conceded|Off Feet|Wrong Side/i)){ neg++; addSamuraiReason(negativeReasons,samuraiReasonLabel('Ruck negative',row)); }
-    else if(has(/Cleaned Out|Own Team|Effective|Jackal|Penalty Won|Turnover Won/i)){ pos++; addSamuraiReason(positiveReasons,samuraiReasonLabel('Ruck positive',row)); }
-  }
-  if(action==='Turnover'){
-    if(has(/Won|Turnover Won|Penalty Won/i)){ pos++; addSamuraiReason(positiveReasons,samuraiReasonLabel('Turnover positive',row)); }
-    else { neg++; addSamuraiReason(negativeReasons,samuraiReasonLabel('Turnover negative',row)); }
-  }
-  if(action==='Lineout Throw'||action==='Lineout Take'){
-    if(has(/Lost|Not Straight|Fail|Offence/i)){ neg++; addSamuraiReason(negativeReasons,samuraiReasonLabel(`${action} negative`,row)); }
-    else { pos++; addSamuraiReason(positiveReasons,samuraiReasonLabel(`${action} positive`,row)); }
-  }
-  if(action==='Penalty Conceded'){ neg++; addSamuraiReason(negativeReasons,samuraiReasonLabel('Penalty conceded',row)); }
-  if(action==='Card'){
-    if(has(/Yellow/i)){ neg++; addSamuraiReason(negativeReasons,'Yellow card'); }
-    if(has(/Red/i)){ neg++; addSamuraiReason(negativeReasons,'Red card'); }
-  }
-  if(has(/Handling Error|Dropped Ball/i)){ neg++; addSamuraiReason(negativeReasons,samuraiReasonLabel('Handling error/dropped ball',row)); }
-  return {positive:pos,negative:neg,positiveReasons,negativeReasons};
+  // JRFU / PowerBI Samurai Stats logic.
+  // A single row can count in multiple categories, matching the DAX measure structure.
+  const normText = v => String(v ?? '').trim().replace(/\s+/g,' ').toLowerCase();
+  const raw = (...keys) => {
+    for (const k of keys) {
+      if (row[k] !== undefined && row[k] !== null && String(row[k]).trim() !== '') return String(row[k]).trim();
+    }
+    return '';
+  };
+  const eq = (value, target) => normText(value) === normText(target);
+  const inSet = (value, list) => list.some(item => eq(value, item));
+
+  const action = raw('actionName','ActionName','action');
+  const type = raw('ActionTypeName','actionTypeName');
+  const result = raw('ActionResultName','actionResultName');
+  const q3 = raw('qualifier3Name','Qualifier3Name');
+  const q4 = raw('qualifier4Name','Qualifier4Name');
+
+  let pos = 0, neg = 0;
+  const positiveReasons = [], negativeReasons = [];
+  const addPos = label => { pos++; positiveReasons.push(label); };
+  const addNeg = label => { neg++; negativeReasons.push(label); };
+
+  // Positive Actions JRFU
+  if(eq(action,'Pass') && inSet(type, ['Complete','Break','Key','Off Target','Try'])) addPos('Pass positive');
+  if(eq(type,'Offload')) addPos('Ball carry offload');
+  if(inSet(type, ['Initial Break','Supported Break'])) addPos('Linebreak');
+  if(inSet(type, ['Try Assist','Break Assist','Decoy','Snake'])) addPos('Attacking quality');
+  if(eq(type,'Defender Beaten')) addPos('Defender beaten');
+  if(inSet(q3, ['Kick in Play','Kick in Play (Own 22)'])) addPos('Kick in play');
+  if(eq(q3,'Penalty Kick') && inSet(result, ['Kick In Touch (Bounce)','Kick In Touch (Full)'])) addPos('Penalty kick to touch');
+  if(eq(action,'Kick') && inSet(result, ['Own Player - Collected','Pressure Error','Try Kick','Pressure in Touch','Pressure Carried Over'])) addPos('Kick retained / pressure');
+  if(eq(action,'Kick') && eq(q4,'50/22')) addPos('50/22');
+  if(eq(action,'Goal Kick') && eq(result,'Goal Kicked')) addPos('Goal kick made');
+  if(eq(action,'Lineout Throw') && inSet(result, ['Won Clean Catch','Won Clean Tap','Won Free Kick','Won Other','Won Other From Scrappy Catch','Won Penalty','Won Tap (Scrappy)'])) addPos('Lineout won');
+  if(eq(action,'Carry')) addPos('Ball carry');
+  if(eq(action,'Carry') && eq(result,'Try Scored')) addPos('Carry try scored');
+  if(inSet(result, ['Complete','Forced in Touch','Passive','Sack','Try Saver','Turnover Won'])) addPos('Tackle made');
+  if(inSet(result, ['Restart Retained','Restart Opp Error','Restart Opp Collection'])) addPos('Restart positive');
+  if(eq(action,'Tackle') && inSet(result, ['Forced in Touch','Turnover Won'])) addPos('Tackle turnover won');
+  if(eq(action,'Tackle') && eq(q4,'Dominant Tackle')) addPos('Dominant tackle');
+  if(eq(q4,'Dominant Contact')) addPos('Dominant carry');
+  if(eq(action,'Collection') && eq(result,'Success')) addPos('Handling success');
+  if(eq(action,'Ruck OOA') && eq(q4,'Attacking OOA') && inSet(type, ['Cleaned Out','Secured'])) addPos('Ruck clean effective');
+  if(eq(action,'Lineout Take') && inSet(type, ['Lineout Steal Front','Lineout Steal Middle','Lineout Steal Back','Lineout Steal 15m+','Lineout Steal Quick','Lineout Win Front','Lineout Win Middle','Lineout Win Back','Lineout Win 15m+','Lineout Win Quick'])) addPos('Lineout opposition steal / win');
+  if(eq(action,'Ruck OOA') && eq(q4,'Defensive OOA') && inSet(type, ['Nuisance','Turnover Won','Penalty Won'])) addPos('Ruck defence effective');
+
+  // Negative Actions JRFU
+  if(eq(result,'Offload Allowed')) addNeg('Offload allowed');
+  if(eq(action,'Missed Tackle')) addNeg('Tackle missed');
+  if(eq(action,'Tackle') && eq(result,'Passive')) addNeg('Passive tackle');
+  if(eq(action,'Penalty Conceded') && eq(q4,'Full Penalty')) addNeg('Penalty conceded - full penalty');
+  if(eq(action,'Penalty Conceded') && eq(q4,'Free Kick')) addNeg('Penalty conceded - free kick');
+  if(eq(action,'Penalty Conceded') && eq(result,'Yellow Card')) addNeg('Yellow card');
+  if(eq(action,'Penalty Conceded') && eq(result,'Red Card')) addNeg('Red card');
+  if(eq(q4,'Ineffective Contact')) addNeg('Ineffective carry/contact');
+  if(eq(action,'Ruck OOA') && eq(q4,'Attacking OOA') && inSet(type, ['Failed Cleanout','Attended','Penalty Conceded'])) addNeg('Ruck clean ineffective');
+  if(eq(action,'Ruck OOA') && eq(q4,'Defensive OOA') && inSet(type, ['Not Clearing','Got Cleaned Out','Penalty Conceded'])) addNeg('Ruck defence ineffective');
+  if(eq(action,'Collection') && eq(result,'Fail')) addNeg('Handling fail');
+  if(eq(type,'Offload') && eq(result,'To Ground')) addNeg('Offload to ground');
+  if(eq(result,'Error On Defence')) addNeg('Error on defence');
+  if(eq(result,'Error On Attack')) addNeg('Error on attack');
+  if(eq(action,'Goal Kick') && eq(result,'Goal Missed')) addNeg('Goal kick missed');
+
+  return {positive:pos, negative:neg, positiveReasons, negativeReasons};
 }
 function deriveMeta(item,biRows){ const first=biRows.find(r=>r.FXID||r.homeTeamName||r.awayTeamName)||{}; const home=item.homeTeam||first.homeTeamName||''; const away=item.awayTeam||first.awayTeamName||''; const score=item.score||((first.hometeamFTscore||first.awayteamFTscore)?`${first.hometeamFTscore??''}–${first.awayteamFTscore??''}`:''); const label=item.label||(home&&away&&score?`${home} ${score} ${away}`:(home&&away?`${home} v ${away}`:item.id)); const date=item.date||dateLabel(first.datePlayed||first.UTCTime); const season=String(item.season||first.season||date.slice(0,4)||'Unknown'); return {id:String(item.id||first.FXID||label),label,date,season,home,away,score,venue:item.venue||first.venueName||'',competition:item.competition||first.competitionName||'',raw:item}; }
 function buildMatch(item,biRows,reviewRows,xmlText,players){
