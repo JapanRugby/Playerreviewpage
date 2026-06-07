@@ -1236,46 +1236,86 @@ function sameReservePositionGroup(a,b){
   if(!ga||!gb) return false;
   return ga===gb;
 }
+function hasMeaningfulMatchupStats(st){
+  return !!st && (toNumber(st.appearances)>0 || toNumber(st.minutes)>0 || toNumber(st.ballInPlayMins)>0 || toNumber(st.totalActions)>0 || toNumber(st.carry)>0 || toNumber(st.tackleAttempts)>0 || toNumber(st.reviewTotal)>0);
+}
+function getStatTeam(st){ return (st&&st.team) || (st&&st.player&&st.player.team) || ''; }
+function sortOpponentsForMatchup(list, preferredJersey, preferredGroup){
+  return [...list].sort((a,b)=>{
+    const aj=getJerseyValue(a), bj=getJerseyValue(b);
+    const ag=getPositionGroup(a), bg=getPositionGroup(b);
+    const aExact=Number.isFinite(preferredJersey)&&aj===preferredJersey?0:1;
+    const bExact=Number.isFinite(preferredJersey)&&bj===preferredJersey?0:1;
+    if(aExact!==bExact) return aExact-bExact;
+    const aGroup=preferredGroup&&ag===preferredGroup?0:1;
+    const bGroup=preferredGroup&&bg===preferredGroup?0:1;
+    if(aGroup!==bGroup) return aGroup-bGroup;
+    const aStarter=Number.isFinite(aj)&&aj>=1&&aj<=18?0:1;
+    const bStarter=Number.isFinite(bj)&&bj>=1&&bj<=18?0:1;
+    if(aStarter!==bStarter) return aStarter-bStarter;
+    return (Number.isFinite(aj)?aj:99)-(Number.isFinite(bj)?bj:99);
+  });
+}
 function findOpponentSameNumber(match,raw){
-  const shirt=String(raw.shirt||raw.player.shirt||'').replace(/^0+/,'');
+  const shirt=String(raw.shirt||raw.player?.shirt||'').replace(/^0+/,'');
   const jersey=getJerseyValue(raw);
   if(!shirt && !Number.isFinite(jersey)) return null;
-  const selectedTeamIsJapan=isTargetTeam(raw.player&&raw.player.team) || isTargetTeam(raw.team) || (Array.isArray(raw.player&&raw.player.teams) && raw.player.teams.some(isTargetTeam));
-  // The reviewed player list is Japan / Japan XV only. For match-up, always compare
-  // against the actual opposition side, never another Japan / Japan XV player.
-  // This also avoids merged player labels like "Japan / Japan XV" being treated as a third team.
-  const allOpponents=[...match.playerStats.values()].filter(st=>{
-    const team=st.player&&st.player.team;
-    if(st===raw) return false;
-    if(selectedTeamIsJapan) return !statBelongsToTargetSide(st);
-    return normTeam(team)!==normTeam(raw.player&&raw.player.team);
-  });
-  const sameNumber=allOpponents.filter(st=>getJerseyValue(st)===jersey || String(st.shirt||st.player.shirt||'').replace(/^0+/,'')===shirt);
+  const selectedTeamIsJapan=isTargetTeam(raw.player&&raw.player.team) || isTargetTeam(raw.team) || (Array.isArray(raw.player&&raw.player.teams) && raw.player.teams.some(isTargetTeam)) || String(raw.player?.key||raw.key||'').includes('|japan-group');
+  const rawGroup=getPositionGroup(raw) || (Number.isFinite(jersey)?positionGroupId(jersey):null);
 
+  // Match-up must be against the actual opposition side.  Some precomputed player
+  // records have merged labels such as "Japan / Japan XV", so rely on the target-side
+  // detector rather than plain team-name inequality.
+  const allOpponents=[...match.playerStats.values()].filter(st=>{
+    if(st===raw) return false;
+    if(!hasMeaningfulMatchupStats(st)) return false;
+    if(selectedTeamIsJapan) return !statBelongsToTargetSide(st);
+    return normTeam(getStatTeam(st))!==normTeam(getStatTeam(raw));
+  });
+  if(!allOpponents.length) return null;
+
+  const sameNumber=allOpponents.filter(st=>{
+    const oppJersey=getJerseyValue(st);
+    const oppShirt=String(st.shirt||st.player?.shirt||'').replace(/^0+/,'');
+    return (Number.isFinite(jersey)&&oppJersey===jersey) || (!!shirt&&oppShirt===shirt);
+  });
+
+  // Starters: same shirt number is the first choice.  If that is missing in the feed,
+  // use the same position group among opposition starters.  This fixes cases such as a
+  // Japan #5 lock where the opposition shirt is not available but PosID / position is.
+  if(Number.isFinite(jersey) && jersey>=1 && jersey<=18){
+    if(sameNumber.length) return sortOpponentsForMatchup(sameNumber,jersey,rawGroup)[0];
+    if(rawGroup){
+      const starterSameGroup=allOpponents.filter(st=>{
+        const oppJersey=getJerseyValue(st);
+        const isStarter=!Number.isFinite(oppJersey) || (oppJersey>=1 && oppJersey<=18);
+        return isStarter && getPositionGroup(st)===rawGroup;
+      });
+      if(starterSameGroup.length) return sortOpponentsForMatchup(starterSameGroup,jersey,rawGroup)[0];
+      // Last starter fallback: use the jersey group itself. For #4/#5 this means either
+      // opposition lock, even if PosID text is absent from the JSON.
+      const jerseyGroupOpp=allOpponents.filter(st=>{
+        const oppJersey=getJerseyValue(st);
+        return Number.isFinite(oppJersey) && oppJersey>=1 && oppJersey<=18 && positionGroupId(oppJersey)===rawGroup;
+      });
+      if(jerseyGroupOpp.length) return sortOpponentsForMatchup(jerseyGroupOpp,jersey,rawGroup)[0];
+    }
+    return null;
+  }
+
+  // Reserves: same shirt number is only valid when the role group also matches.
+  // If the same number has a different role, compare with the opposition reserve who
+  // entered in the same PosID group instead.
   if(Number.isFinite(jersey) && jersey>=19){
     const sameNumberSameRole=sameNumber.find(st=>sameReservePositionGroup(raw,st));
     if(sameNumberSameRole) return sameNumberSameRole;
-    const rawGroup=getPositionGroup(raw);
     if(!rawGroup) return null;
-    return allOpponents.find(st=>{
+    const reserveSameGroup=allOpponents.filter(st=>{
       const oppJersey=getJerseyValue(st);
       if(!Number.isFinite(oppJersey) || oppJersey<19) return false;
       return getPositionGroup(st)===rawGroup;
-    }) || null;
-  }
-
-  // Starters normally compare by shirt number. If shirt data is missing in the
-  // generated JSON, fall back to the same position group among opposition starters.
-  if(sameNumber.length) return sameNumber[0];
-  if(Number.isFinite(jersey) && jersey>=1 && jersey<=18){
-    const rawGroup=getPositionGroup(raw) || positionGroupId(jersey);
-    if(rawGroup){
-      return allOpponents.find(st=>{
-        const oppJersey=getJerseyValue(st);
-        if(Number.isFinite(oppJersey) && (oppJersey<1 || oppJersey>18)) return false;
-        return getPositionGroup(st)===rawGroup;
-      }) || null;
-    }
+    });
+    if(reserveSameGroup.length) return sortOpponentsForMatchup(reserveSameGroup,jersey,rawGroup)[0];
   }
   return null;
 }
