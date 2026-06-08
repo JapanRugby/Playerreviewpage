@@ -1343,6 +1343,267 @@ body{
 @media(max-width:900px){.momentumHero,.momentumViz{grid-template-columns:1fr}.momentumComponentGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.momentumScoreGrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:620px){.momentumSection{padding:14px;border-radius:24px}.momentumScoreGrid,.playerMomentumTop{grid-template-columns:1fr 1fr}.momentumMetric{padding:12px}.momentumMetric strong{font-size:24px}.momentumSvg{height:156px}.momentumComponentGrid{grid-template-columns:1fr}.momentumHeroCard{min-height:120px}.momentumTitle{font-size:22px}}
 
+
+/* v122: Momentum visibility + timeline fixes */
+.momentumSection{background:#ffffff!important;border:1px solid #d6dee9!important;box-shadow:0 16px 36px rgba(7,26,58,.08)!important;color:#071a3a!important}
+.momentumHeroCard{background:linear-gradient(135deg,#071a3a 0%,#0b2447 58%,#111827 100%)!important;color:#fff!important;border:1px solid rgba(255,255,255,.12)!important}
+.momentumHeroCard:after{background:rgba(215,25,32,.22)!important;opacity:.75!important}
+.momentumHeroCard *{position:relative;z-index:1}
+.momentumKicker{color:#fff!important;background:rgba(255,255,255,.18)!important;border:1px solid rgba(255,255,255,.20)!important}
+.momentumTitle{color:#fff!important;text-shadow:0 2px 14px rgba(0,0,0,.22)!important}
+.momentumSub{color:rgba(255,255,255,.92)!important;text-shadow:0 1px 10px rgba(0,0,0,.18)!important}
+.momentumChartCard,.momentumListCard,.momentumMetric,.momentumComponent{background:#fff!important;color:#071a3a!important;border-color:#d6dee9!important}
+.momentumChartHead h4,.momentumListCard h4,.momentumMetric strong,.momentumComponent strong,.momentumPeakMain strong{color:#071a3a!important}
+.momentumSvg{height:210px!important;background:linear-gradient(180deg,#ffffff 0%,#f5f8fc 100%)!important;border:1px solid #d6dee9!important}
+.momentumGridLine{stroke:#e1e7f0;stroke-width:1}
+.momentumLineHome{stroke:#d71920!important;stroke-width:4!important;filter:drop-shadow(0 4px 7px rgba(215,25,32,.20))}
+.momentumAreaPositive{fill:rgba(215,25,32,.16)!important}
+.momentumAreaNegative{fill:rgba(7,26,58,.12)!important}
+.momentumDot{fill:#fff!important;stroke:#d71920!important;stroke-width:2.5!important}
+@media(max-width:620px){.momentumHeroCard{min-height:150px!important;padding:18px!important}.momentumTitle{font-size:24px!important}.momentumSub{font-size:14px!important}.momentumSvg{height:190px!important}.momentumChartHead{align-items:flex-start;flex-direction:column}.momentumChartHead span{font-size:13px!important}}
+
+
+
+/* v123: graph section title readability upgrade */
+:root{
+  --readable-navy:#071a3a;
+  --readable-navy-2:#10284e;
+  --readable-red:#e60012;
+  --readable-text:#07152d;
+  --readable-muted:#475569;
+  --readable-line:#d9e2ef;
+}
+
+/* Section title pills: only white text on dark solid backgrounds */
+.sectionTitle,
+.worldSectionTitle,
+.compareGroupTitle,
+.compareBattleGroupTitle,
+.matchSectionPill,
+.matchModule .sectionTitle{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+  gap:7px!important;
+  margin:22px 0 16px!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  padding:0!important;
+}
+.sectionTitle h3,
+.worldSectionTitle span,
+.compareGroupTitle span,
+.compareBattleGroupTitle span,
+.matchSectionPill span,
+.matchModule .sectionTitle h3{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:10px!important;
+  width:auto!important;
+  max-width:100%!important;
+  min-width:min(100%,320px)!important;
+  padding:12px 20px!important;
+  border-radius:999px!important;
+  background:linear-gradient(135deg,var(--readable-navy),var(--readable-navy-2))!important;
+  color:#fff!important;
+  border:1px solid rgba(255,255,255,.16)!important;
+  box-shadow:0 14px 30px rgba(7,26,58,.22)!important;
+  font-size:15px!important;
+  line-height:1.15!important;
+  letter-spacing:.08em!important;
+  text-transform:uppercase!important;
+  font-weight:1000!important;
+  text-shadow:none!important;
+}
+.sectionTitle h3::before,
+.worldSectionTitle span::before,
+.compareGroupTitle span::before,
+.compareBattleGroupTitle span::before,
+.matchSectionPill span::before,
+.matchModule .sectionTitle h3::before{
+  content:""!important;
+  display:inline-block!important;
+  width:9px!important;
+  height:9px!important;
+  flex:0 0 auto!important;
+  border-radius:999px!important;
+  background:var(--readable-red)!important;
+  box-shadow:0 0 0 5px rgba(230,0,18,.16)!important;
+  margin:0!important;
+}
+.sectionTitle>span,
+.matchModule .sectionTitle>span{
+  color:var(--readable-muted)!important;
+  font-weight:900!important;
+  font-size:12px!important;
+  line-height:1.35!important;
+  text-shadow:none!important;
+  max-width:92%!important;
+}
+
+/* Chart/group headings inside cards: dark text on light cards */
+.chartMetric,
+.trendTitle,
+.trendChartName,
+.trendOpenTitle,
+.battleLabel,
+.worldStatName,
+.h2hControls label,
+.momentumChartHead h4,
+.momentumListCard h4,
+.effortAnalysisModal h3,
+.effortModalBody h4,
+.compareResultHeader:not(.dark) h3{
+  color:var(--readable-text)!important;
+  text-shadow:none!important;
+}
+.chartMetric{
+  font-size:12px!important;
+  line-height:1.22!important;
+  letter-spacing:.06em!important;
+  font-weight:1000!important;
+}
+.chartMetric .metricWinner{
+  color:#067647!important;
+  font-size:10.5px!important;
+  margin-top:4px!important;
+}
+.trendChartName,
+.trendOpenTitle{
+  color:var(--readable-text)!important;
+  letter-spacing:.06em!important;
+}
+.trendSub,
+.trendOpenSub,
+.trendFooter,
+.momentumChartHead span,
+.matchModuleLead{
+  color:var(--readable-muted)!important;
+  text-shadow:none!important;
+}
+
+/* Momentum hero: text must be bright on navy */
+.momentumHeroCard,
+.momentumHeroCard *{
+  color:#fff!important;
+}
+.momentumHeroCard .momentumKicker{
+  background:rgba(255,255,255,.16)!important;
+  color:#fff!important;
+  border:1px solid rgba(255,255,255,.18)!important;
+}
+.momentumHeroCard .momentumSub{
+  color:rgba(255,255,255,.86)!important;
+}
+.momentumTitle{
+  color:#fff!important;
+  text-shadow:0 2px 10px rgba(0,0,0,.25)!important;
+}
+
+/* Light surfaces: force dark readable text */
+.statCard,
+.battleCard,
+.setPieceCard,
+.carryUnitCard,
+.h2hRow,
+.trendChart,
+.trendOpenCard,
+.momentumMetric,
+.momentumChartCard,
+.momentumListCard,
+.compareBattleBoard,
+.worldBenchmarkBoard,
+.matchModule{
+  color:var(--readable-text)!important;
+}
+.statCard small,.statCard .label,.statCard .sub,
+.battleCard small,.setPieceCard small,.carryUnitCard small,
+.h2hPlayer small,.momentumMetric span,.momentumMetric small{
+  color:var(--readable-muted)!important;
+}
+
+/* Make graph cards visually separated without reducing contrast */
+.trendChart,
+.momentumChartCard,
+.momentumListCard,
+.battleCard,
+.setPieceCard,
+.carryUnitCard,
+.h2hRow{
+  background:#fff!important;
+  border:1px solid var(--readable-line)!important;
+  box-shadow:0 14px 34px rgba(7,26,58,.08)!important;
+}
+
+/* Mobile readability */
+@media(max-width:760px){
+  .sectionTitle h3,
+  .worldSectionTitle span,
+  .compareGroupTitle span,
+  .compareBattleGroupTitle span,
+  .matchSectionPill span,
+  .matchModule .sectionTitle h3{
+    min-width:0!important;
+    width:100%!important;
+    padding:11px 14px!important;
+    font-size:12px!important;
+    letter-spacing:.055em!important;
+    white-space:normal!important;
+  }
+  .sectionTitle>span,
+  .matchModule .sectionTitle>span{
+    font-size:11px!important;
+  }
+  .chartMetric{font-size:10.5px!important;letter-spacing:.04em!important;}
+  .trendChartName{font-size:11px!important;}
+  .momentumHeroCard{padding:20px!important;border-radius:26px!important;}
+  .momentumTitle{font-size:24px!important;line-height:1.08!important;}
+}
+
+
+/* v124 battle graph clarity improvement */
+.battleCard{padding:16px 16px 14px!important;}
+.battleCardTop{align-items:center!important;}
+.battleLabel{font-size:15px!important;letter-spacing:-.01em;}
+.battleHint{margin-top:6px;color:#667085;font-size:11px;font-weight:900;letter-spacing:.04em;text-transform:uppercase;}
+.battleCompareHeader{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px;align-items:end;margin-top:12px;}
+.battleTeamBlock{display:grid;gap:4px;min-width:0;}
+.battleTeamBlock.right{text-align:right;}
+.battleTeamName{display:flex;align-items:center;gap:6px;color:#475467;font-size:12px;font-weight:1000;line-height:1.2;min-width:0;}
+.battleTeamName.right{justify-content:flex-end;}
+.battleDot{display:inline-block;width:10px;height:10px;border-radius:999px;flex:0 0 auto;box-shadow:0 0 0 2px rgba(255,255,255,.72);}
+.battleDot.left{background:linear-gradient(90deg,#b90f1b,#ff4d59);}
+.battleDot.right{background:linear-gradient(90deg,#0b1320,#4b5563);}
+.battleTeamValue{font-size:34px;font-weight:1000;line-height:1;color:#071a3a;font-variant-numeric:tabular-nums;}
+.battleTeamValue.left{color:#c1121f;}
+.battleTeamValue.right{text-align:right;color:#111827;}
+.battleVs{align-self:center;justify-self:center;font-size:11px;font-weight:1000;letter-spacing:.18em;color:#98a2b3;border-radius:999px;padding:6px 8px;background:#f2f4f7;}
+.battleTrack100{position:relative;display:flex;align-items:stretch;height:18px;margin-top:14px;border-radius:999px;background:#e8edf5;overflow:hidden;border:1px solid rgba(7,26,58,.08);box-shadow:inset 0 1px 2px rgba(16,24,40,.06);}
+.battleTrackSegment{height:100%;width:0%;transition:width .9s cubic-bezier(.2,.8,.2,1);}
+.battleTrackSegment.left{background:linear-gradient(90deg,#b90f1b 0%, #e21825 52%, #ff5d69 100%)!important;}
+.battleTrackSegment.right{background:linear-gradient(90deg,#07111f 0%, #111827 54%, #475467 100%)!important;}
+.battleTrackDivider{position:absolute;left:50%;top:-3px;bottom:-3px;width:2px;background:rgba(255,255,255,.96);box-shadow:0 0 0 1px rgba(7,26,58,.08);transform:translateX(-1px);pointer-events:none;}
+.battleShareLabels{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:center;margin-top:9px;}
+.battleShareLabel{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:900;color:#475467;}
+.battleShareLabel.right{justify-content:flex-end;text-align:right;}
+.battleSharePct{color:#071a3a;font-size:14px;font-weight:1000;}
+@media(max-width:640px){
+  .battleCard{padding:14px 13px 13px!important;}
+  .battleCompareHeader{grid-template-columns:minmax(0,1fr) 36px minmax(0,1fr);gap:8px;}
+  .battleTeamName{font-size:10.5px;line-height:1.15;}
+  .battleTeamValue{font-size:25px;}
+  .battleVs{font-size:10px;letter-spacing:.12em;padding:4px 5px;}
+  .battleTrack100{height:16px;}
+  .battleShareLabels{grid-template-columns:1fr 1fr;gap:6px;}
+  .battleShareLabel{font-size:10.5px;line-height:1.15;align-items:flex-start;flex-direction:column;gap:2px;}
+  .battleShareLabel.right{align-items:flex-end;}
+  .battleSharePct{font-size:13px;}
+}
+
 </style>
 </head>
 <body>
@@ -3208,11 +3469,14 @@ function matchWinnerLabel(a,b,leftName,rightName,lowerIsBetter=false){
   return {side:leftWins?'left':'right',label:leftWins?leftName:rightName,gap:Math.abs(a-b)};
 }
 function richBattleCard(label,a,b,fmt=displayNumber,leftName='Team 1',rightName='Team 2',lowerIsBetter=false){
-  a=toNumber(a); b=toNumber(b); const max=Math.max(1,Math.max(0,a),Math.max(0,b));
+  a=toNumber(a); b=toNumber(b);
+  const total=Math.max(0,a)+Math.max(0,b);
+  const shareA=total>0 ? (Math.max(0,a)/total*100) : 50;
+  const shareB=total>0 ? (Math.max(0,b)/total*100) : 50;
   const w=matchWinnerLabel(a,b,leftName,rightName,lowerIsBetter);
-  const aw=Math.max(0,a)/max*100, bw=Math.max(0,b)/max*100;
   const gapText=w.side==='even' ? (UI_LANG==='ja'?'同点':'Even') : `${escapeHtml(w.label)} +${escapeHtml(fmt(w.gap))}`;
-  return `<div class="battleCard reveal-card"><div class="battleCardTop"><div class="battleLabel">${escapeHtml(label)}</div><div class="battleWinner ${w.side}">${gapText}</div></div><div class="battleValues"><div class="battleValue left"><span class="metricNum" data-final="${escapeHtml(fmt(a))}">${escapeHtml(fmt(a))}</span></div><div class="battleGap">${escapeHtml(leftName)} vs ${escapeHtml(rightName)}</div><div class="battleValue right"><span class="metricNum" data-final="${escapeHtml(fmt(b))}">${escapeHtml(fmt(b))}</span></div></div><div class="battleTrack"><div class="battleHalf left"><div class="battleFill left matchBarFill" data-width="${aw}" style="width:0%"></div></div><div class="battleHalf"><div class="battleFill right matchBarFill" data-width="${bw}" style="width:0%"></div></div></div></div>`;
+  const hint=lowerIsBetter ? (UI_LANG==='ja'?'少ない方が優位':'Lower is better') : (UI_LANG==='ja'?'多い方が優位':'Higher is better');
+  return `<div class="battleCard reveal-card"><div class="battleCardTop"><div class="battleLabel">${escapeHtml(label)}</div><div class="battleWinner ${w.side}">${gapText}</div></div><div class="battleHint">${escapeHtml(hint)}</div><div class="battleCompareHeader"><div class="battleTeamBlock left"><div class="battleTeamName"><span class="battleDot left"></span>${escapeHtml(leftName)}</div><div class="battleTeamValue left"><span class="metricNum" data-final="${escapeHtml(fmt(a))}">${escapeHtml(fmt(a))}</span></div></div><div class="battleVs">VS</div><div class="battleTeamBlock right"><div class="battleTeamName right">${escapeHtml(rightName)}<span class="battleDot right"></span></div><div class="battleTeamValue right"><span class="metricNum" data-final="${escapeHtml(fmt(b))}">${escapeHtml(fmt(b))}</span></div></div></div><div class="battleTrack100" aria-label="${escapeHtml(leftName)} ${escapeHtml(fmt(a))}, ${escapeHtml(rightName)} ${escapeHtml(fmt(b))}"><div class="battleTrackSegment left matchBarFill" data-width="${shareA}" style="width:0%"></div><div class="battleTrackSegment right matchBarFill" data-width="${shareB}" style="width:0%"></div><div class="battleTrackDivider"></div></div><div class="battleShareLabels"><div class="battleShareLabel left"><span class="battleSharePct">${intFmt(shareA)}%</span><span>${escapeHtml(leftName)}</span></div><div class="battleShareLabel right"><span>${escapeHtml(rightName)}</span><span class="battleSharePct">${intFmt(shareB)}%</span></div></div></div>`;
 }
 function matchSignalCard(label,leftValue,rightValue,fmt,leftName,rightName,lower=false){
   const w=matchWinnerLabel(leftValue,rightValue,leftName,rightName,lower);
@@ -3775,25 +4039,64 @@ function renderMomentumComponents(obj){
   const max=Math.max(1,...vals.map(x=>Math.abs(x[2])));
   return `<div class="momentumComponentGrid">${vals.map(([k,label,val])=>`<div class="momentumComponent"><small>${escapeHtml(label)}</small><strong>${escapeHtml(signedMomentum(val,1))}</strong><div class="miniTrack"><div class="miniFill" data-target-width="${Math.round(Math.abs(val)/max*100)}%"></div></div></div>`).join('')}</div>`;
 }
+function getMomentumSeries(match){
+  const raw=match?.series;
+  if(Array.isArray(raw)) return raw;
+  if(raw?.japan?.length) return raw.japan;
+  if(raw?.home?.length) return raw.home;
+  if(raw?.all?.length) return raw.all;
+  return [];
+}
+function getMomentumTimeSeconds(d){
+  if(d==null) return 0;
+  if(d.t!=null) return Number(d.t)||0;
+  if(d.second!=null) return Number(d.second)||0;
+  if(d.time_sec!=null) return Number(d.time_sec)||0;
+  if(d.time!=null) return Number(d.time)||0;
+  if(d.minute!=null) return (Number(d.minute)||0)*60;
+  return 0;
+}
+function getMomentumValue(d){ return Number(d?.rmi ?? d?.value ?? d?.momentum ?? d?.raw ?? 0)||0; }
+function getMomentumClock(d){
+  if(!d) return '';
+  if(d.matchClock) return d.matchClock;
+  if(d.match_clock) return d.match_clock;
+  const sec=getMomentumTimeSeconds(d); const m=Math.floor(sec/60); const s=Math.round(sec%60); return `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+}
 function renderMomentumSvg(match){
-  const series=(match?.series?.japan&&match.series.japan.length?match.series.japan:match?.series?.home)||[];
+  const series=getMomentumSeries(match).filter(Boolean).sort((a,b)=>getMomentumTimeSeconds(a)-getMomentumTimeSeconds(b));
   if(!series.length) return `<div class="momentumEmpty">${escapeHtml(UI_LANG==='ja'?'Momentum series はまだありません。':'No momentum series available.')}</div>`;
-  const W=720,H=180,pad=22; const maxT=Math.max(...series.map(d=>Number(d.t||d.second||d.time||0)),4800); const vals=series.map(d=>Number(d.rmi??d.value??d.momentum??0)); const maxV=Math.max(10,...vals.map(v=>Math.abs(v))); const x=t=>pad+(Number(t||0)/maxT)*(W-pad*2); const y=v=>H/2-(Number(v||0)/maxV)*(H/2-pad);
-  const pts=series.map(d=>`${x(d.t||d.second||d.time).toFixed(1)},${y(d.rmi??d.value??d.momentum).toFixed(1)}`).join(' ');
+  const W=720,H=210,padL=34,padR=20,padT=20,padB=26;
+  const maxT=Math.max(4800,...series.map(getMomentumTimeSeconds));
+  const vals=series.map(getMomentumValue);
+  const maxV=Math.max(10,...vals.map(v=>Math.abs(v)));
   const zero=H/2;
-  return `<svg class="momentumSvg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-label="Momentum timeline"><line class="momentumZero" x1="${pad}" y1="${zero}" x2="${W-pad}" y2="${zero}"/><line class="momentumAxis" x1="${pad}" y1="${pad}" x2="${pad}" y2="${H-pad}"/><polyline class="momentumLineHome" points="${pts}"/></svg>`;
+  const x=t=>padL+(Number(t||0)/maxT)*(W-padL-padR);
+  const y=v=>zero-(Number(v||0)/maxV)*(zero-padT);
+  const pts=series.map(d=>`${x(getMomentumTimeSeconds(d)).toFixed(1)},${y(getMomentumValue(d)).toFixed(1)}`);
+  const linePts=pts.join(' ');
+  const areaPositive=`${x(getMomentumTimeSeconds(series[0])).toFixed(1)},${zero} ${pts.join(' ')} ${x(getMomentumTimeSeconds(series[series.length-1])).toFixed(1)},${zero}`;
+  const ticks=[0,20,40,60,80].map(m=>{const xx=x(m*60); return `<g><line class="momentumGridLine" x1="${xx}" y1="${padT}" x2="${xx}" y2="${H-padB}"/><text x="${xx}" y="${H-7}" text-anchor="middle" font-size="11" fill="#64748b" font-weight="800">${m}'</text></g>`;}).join('');
+  const dots=series.filter((_,i)=>i%Math.max(1,Math.round(series.length/12))===0).map(d=>`<circle class="momentumDot" cx="${x(getMomentumTimeSeconds(d)).toFixed(1)}" cy="${y(getMomentumValue(d)).toFixed(1)}" r="3"><title>${escapeHtml(getMomentumClock(d))}: ${escapeHtml(signedMomentum(getMomentumValue(d),1))}</title></circle>`).join('');
+  return `<svg class="momentumSvg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-label="Momentum timeline"><rect x="0" y="0" width="${W}" height="${H}" fill="transparent"/>${ticks}<line class="momentumZero" x1="${padL}" y1="${zero}" x2="${W-padR}" y2="${zero}"/><line class="momentumAxis" x1="${padL}" y1="${padT}" x2="${padL}" y2="${H-padB}"/><polygon class="momentumAreaPositive" points="${areaPositive}"/><polyline class="momentumLineHome" points="${linePts}"/>${dots}</svg>`;
 }
 function renderMomentumPeaks(match,limit=5){
-  const peaks=(match?.peaks||[]).slice(0,limit);
+  const peaks=(match?.peaks||[]).slice().sort((a,b)=>Number(b.abs_signal??Math.abs(b.signal||0))-Number(a.abs_signal??Math.abs(a.signal||0))).slice(0,limit);
   if(!peaks.length) return `<div class="momentumEmpty">${escapeHtml(UI_LANG==='ja'?'レビュー候補はまだありません。':'No review peaks available.')}</div>`;
-  return peaks.map(p=>{const sig=Number(p.signal||0); return `<div class="momentumPeak"><div class="momentumPeakTime">${escapeHtml(p.matchClock||'')}</div><div class="momentumPeakMain"><strong>${escapeHtml(p.team||'')}</strong><span>${escapeHtml(p.reason||'')}</span></div><div class="momentumImpact ${sig>=0?'pos':'neg'}">${escapeHtml(signedMomentum(sig,1))}</div></div>`;}).join('');
+  return peaks.map(p=>{const sig=Number(p.signal??p.impact??0); const clock=p.matchClock||p.match_clock||getMomentumClock(p); return `<div class="momentumPeak"><div class="momentumPeakTime">${escapeHtml(clock||'')}</div><div class="momentumPeakMain"><strong>${escapeHtml(p.team||p.perspective||'')}</strong><span>${escapeHtml(p.reason||p.description||'')}</span></div><div class="momentumImpact ${sig>=0?'pos':'neg'}">${escapeHtml(signedMomentum(sig,1))}</div></div>`;}).join('');
 }
 function renderMatchMomentumPanel(match){
   if(!match) return `<div class="momentumEmpty">No Momentum Data</div>`;
-  const possessions=match.possessions?.length||0; const peaks=match.peaks||[]; const biggest=peaks[0];
-  const avg=possessions?((match.possessions||[]).reduce((s,p)=>s+Number(p.finalSignal||0),0)/possessions):0;
+  const series=getMomentumSeries(match);
+  const possessions=match.possessions?.length || series.length || 0;
+  const peaks=match.peaks||[];
+  const biggest=peaks.slice().sort((a,b)=>Number(b.abs_signal??Math.abs(b.signal||0))-Number(a.abs_signal??Math.abs(a.signal||0)))[0];
+  const avg=series.length?(series.reduce((s,p)=>s+getMomentumValue(p),0)/series.length):(match.possessions?.length?((match.possessions||[]).reduce((s,p)=>s+Number(p.finalSignal||0),0)/match.possessions.length):0);
   const title=UI_LANG==='ja'?'Momentum / Match Flow':'Momentum / Match Flow';
-  return `<section class="momentumSection"><div class="momentumHero"><div class="momentumHeroCard"><span class="momentumKicker">${escapeHtml(match.modelVersion||'v5 momentum')}</span><div class="momentumTitle">${escapeHtml(title)}</div><div class="momentumSub">${escapeHtml(UI_LANG==='ja'?'試合の流れを、ポゼッション単位のシグナルと5つの要素で説明します。':'Explains match flow with possession-level signal and five explainable components.')}</div></div><div class="momentumScoreGrid"><div class="momentumMetric"><small>${escapeHtml(UI_LANG==='ja'?'Possessions':'Possessions')}</small><strong>${intFmt(possessions)}</strong><span>${escapeHtml(UI_LANG==='ja'?'分析対象':'analysed')}</span></div><div class="momentumMetric"><small>${escapeHtml(UI_LANG==='ja'?'Biggest swing':'Biggest swing')}</small><strong>${escapeHtml(biggest?signedMomentum(biggest.signal,1):'—')}</strong><span>${escapeHtml(biggest?.matchClock||'No peak')}</span></div><div class="momentumMetric"><small>${escapeHtml(UI_LANG==='ja'?'Average signal':'Average signal')}</small><strong>${escapeHtml(signedMomentum(avg,1))}</strong><span>${escapeHtml(UI_LANG==='ja'?'試合平均':'match average')}</span></div></div></div><div class="momentumViz"><div class="momentumChartCard"><div class="momentumChartHead"><h4>${escapeHtml(UI_LANG==='ja'?'Momentum timeline':'Momentum timeline')}</h4><span>${escapeHtml(match.homeTeamName||'Home')} v ${escapeHtml(match.awayTeamName||'Away')}</span></div>${renderMomentumSvg(match)}</div><div class="momentumListCard"><h4>${escapeHtml(UI_LANG==='ja'?'Key review moments':'Key review moments')}</h4>${renderMomentumPeaks(match,5)}</div></div>${renderMomentumComponents(biggest?.components||{})}</section>`;
+  const home=match.homeTeamName||match.homeTeam||match.home||'Home';
+  const away=match.awayTeamName||match.awayTeam||match.away||'Away';
+  const clock=biggest?(biggest.matchClock||biggest.match_clock||getMomentumClock(biggest)):'No peak';
+  return `<section class="momentumSection"><div class="momentumHero"><div class="momentumHeroCard"><span class="momentumKicker">${escapeHtml(match.modelVersion||'v5 momentum')}</span><div class="momentumTitle">${escapeHtml(title)}</div><div class="momentumSub">${escapeHtml(UI_LANG==='ja'?'試合の流れを、時間ごとのシグナルとレビュー候補で読み解きます。':'Read the match flow through time-based signal and key review moments.')}</div></div><div class="momentumScoreGrid"><div class="momentumMetric"><small>${escapeHtml(UI_LANG==='ja'?'Timeline points':'Timeline points')}</small><strong>${intFmt(possessions)}</strong><span>${escapeHtml(UI_LANG==='ja'?'分析対象':'analysed')}</span></div><div class="momentumMetric"><small>${escapeHtml(UI_LANG==='ja'?'Biggest swing':'Biggest swing')}</small><strong>${escapeHtml(biggest?signedMomentum(Number(biggest.signal??biggest.impact??0),1):'—')}</strong><span>${escapeHtml(clock)}</span></div><div class="momentumMetric"><small>${escapeHtml(UI_LANG==='ja'?'Average signal':'Average signal')}</small><strong>${escapeHtml(signedMomentum(avg,1))}</strong><span>${escapeHtml(UI_LANG==='ja'?'試合平均':'match average')}</span></div></div></div><div class="momentumViz"><div class="momentumChartCard"><div class="momentumChartHead"><h4>${escapeHtml(UI_LANG==='ja'?'Momentum timeline':'Momentum timeline')}</h4><span>${escapeHtml(home)} v ${escapeHtml(away)}</span></div>${renderMomentumSvg(match)}</div><div class="momentumListCard"><h4>${escapeHtml(UI_LANG==='ja'?'Key review moments':'Key review moments')}</h4>${renderMomentumPeaks(match,5)}</div></div>${renderMomentumComponents(biggest?.components||{})}</section>`;
 }
 async function hydrateMatchMomentum(matchId,container){
   if(!container) return; const match=await loadMomentumMatch(matchId); container.innerHTML=match?renderMatchMomentumPanel(match):`<div class="momentumEmpty">${escapeHtml(UI_LANG==='ja'?'Momentum Data はまだありません。data/momentum を確認してください。':'No Momentum Data yet. Check data/momentum.')}</div>`; prepareScrollAnimations(container);

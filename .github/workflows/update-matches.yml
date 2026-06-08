@@ -6,8 +6,10 @@ on:
       - 'data/**/*.csv'
       - 'data/**/*.xml'
       - 'data/match_overrides.json'
+      - 'data/momentum/**'
       - 'scripts/generate-matches.js'
       - 'scripts/generate-player-data.js'
+      - 'scripts/generate-momentum-data.js'
       - '.github/workflows/update-matches.yml'
   workflow_dispatch:
 
@@ -32,29 +34,25 @@ jobs:
       - name: Generate player and match review data
         run: node scripts/generate-player-data.js
 
+      - name: Generate momentum data
+        id: momentum
+        continue-on-error: true
+        run: |
+          node scripts/generate-momentum-data.js
+
+      - name: Warn if momentum generation failed
+        if: steps.momentum.outcome == 'failure'
+        run: |
+          echo "::warning::Momentum generation failed. Player/match review data will still be committed. Check the Generate momentum data log and data/momentum/failures.json if it exists."
+
       - name: Commit generated data
-        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          paths=(
-            "data/matches.json"
-            "data/player_index.json"
-            "data/stats"
-            "data/match_review"
-          )
-
-          for p in "${paths[@]}"; do
-            if [ -e "$p" ]; then
-              git add "$p"
-            fi
-          done
-
+          git add data/matches.json data/player_index.json data/stats data/match_review data/momentum || true
           if git diff --cached --quiet; then
             echo "Generated data is already up to date"
             exit 0
           fi
-
           git commit -m "Update player review data"
           git push
