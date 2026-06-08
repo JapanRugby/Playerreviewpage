@@ -1,18 +1,12 @@
-# Player Review Site v105 - Match Review Fast Mode
+# v106 Workflow fix
 
-This version speeds up Match Review by generating dedicated lightweight JSON files:
+This version includes the updated GitHub Actions workflow for the Match Review fast-mode data generation.
 
-- `data/match_review/<matchId>.json`
+Overwrite:
+- index.html
+- scripts/generate-player-data.js
+- scripts/generate-matches.js
+- .github/workflows/update-matches.yml
 
-Match Review now reads `match_review` JSON instead of the larger player stats JSON whenever possible. If the dedicated file is missing, the page falls back to `data/stats/<matchId>.json` so the site still works.
-
-## Files to update on GitHub
-
-- `index.html`
-- `scripts/generate-player-data.js`
-
-After uploading, run GitHub Actions once:
-
-`Actions → Update player review data → Run workflow`
-
-This generates the new `data/match_review/*.json` files.
+Then run:
+Actions → Update player review data → Run workflow
