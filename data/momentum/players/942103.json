@@ -1,784 +1,3442 @@
-[
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 37753,
-    "playerName": "Luka Matkava",
-    "net_momentum": 17.462213365834433,
-    "momentum_added": 18.82540925973389,
-    "momentum_lost": 1.363195893899455,
-    "events_count": 138,
-    "scoring_threat_player_team": 8.88,
-    "territory_player_team": 24.871,
-    "possession_quality_player_team": 7.705,
-    "contact_breakdown_player_team": -0.78,
-    "discipline_turnover_player_team": -1.8,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 37708,
-    "playerName": "Davit Niniashvili",
-    "net_momentum": 10.35277055474316,
-    "momentum_added": 11.827778082089118,
-    "momentum_lost": 1.4750075273459564,
-    "events_count": 111,
-    "scoring_threat_player_team": 2.16,
-    "territory_player_team": 12.356,
-    "possession_quality_player_team": 14.795,
-    "contact_breakdown_player_team": 0.4100000000000001,
-    "discipline_turnover_player_team": -3.25,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 39118,
-    "playerName": "William Havili",
-    "net_momentum": 6.104868592428281,
-    "momentum_added": 13.04004966933244,
-    "momentum_lost": 6.93518107690416,
-    "events_count": 144,
-    "scoring_threat_player_team": 4.48,
-    "territory_player_team": 32.937,
-    "possession_quality_player_team": 4.69,
-    "contact_breakdown_player_team": -2.47,
-    "discipline_turnover_player_team": -6.3,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 28307,
-    "playerName": "Aka Tabutsadze",
-    "net_momentum": 5.071791796485115,
-    "momentum_added": 6.523584223980135,
-    "momentum_lost": 1.4517924274950196,
-    "events_count": 63,
-    "scoring_threat_player_team": 7.56,
-    "territory_player_team": 3.665,
-    "possession_quality_player_team": 5.340000000000001,
-    "contact_breakdown_player_team": 0.1,
-    "discipline_turnover_player_team": -3.6,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 23880,
-    "playerName": "Vasil Lobzhanidze",
-    "net_momentum": 4.976415889734201,
-    "momentum_added": 6.97056481409997,
-    "momentum_lost": 1.9941489243657688,
-    "events_count": 214,
-    "scoring_threat_player_team": 7.56,
-    "territory_player_team": 4.041,
-    "possession_quality_player_team": 4.995,
-    "contact_breakdown_player_team": 0.07,
-    "discipline_turnover_player_team": -1.95,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 65185,
-    "playerName": "Tevita Ahokovi",
-    "net_momentum": 4.532799555057378,
-    "momentum_added": 5.207946051988538,
-    "momentum_lost": 0.6751464969311607,
-    "events_count": 30,
-    "scoring_threat_player_team": 7.32,
-    "territory_player_team": 1.457,
-    "possession_quality_player_team": -0.355,
-    "contact_breakdown_player_team": 0.14,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 33695,
-    "playerName": "Vano Karkadze",
-    "net_momentum": 3.676810783060591,
-    "momentum_added": 6.835982307199852,
-    "momentum_lost": 3.15917152413926,
-    "events_count": 131,
-    "scoring_threat_player_team": 4.44,
-    "territory_player_team": 0.8500000000000001,
-    "possession_quality_player_team": 2.405,
-    "contact_breakdown_player_team": -4.47,
-    "discipline_turnover_player_team": 3.35,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 37085,
-    "playerName": "Patrick Pellegrini",
-    "net_momentum": 3.5793105438722463,
-    "momentum_added": 4.764809887501853,
-    "momentum_lost": 1.1854993436296062,
-    "events_count": 54,
-    "scoring_threat_player_team": 3.8,
-    "territory_player_team": 3.8,
-    "possession_quality_player_team": 5.13,
-    "contact_breakdown_player_team": 0.3,
-    "discipline_turnover_player_team": -0.1499999999999999,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 10393,
-    "playerName": "Sandro Todua",
-    "net_momentum": 2.149930174473461,
-    "momentum_added": 3.6663003903531166,
-    "momentum_lost": 1.5163702158796557,
-    "events_count": 34,
-    "scoring_threat_player_team": 6.84,
-    "territory_player_team": 2.76,
-    "possession_quality_player_team": 3.5,
-    "contact_breakdown_player_team": -1.66,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 25112,
-    "playerName": "Giorgi Kveseladze",
-    "net_momentum": 1.991120714067759,
-    "momentum_added": 3.0736250076730065,
-    "momentum_lost": 1.0825042936052476,
-    "events_count": 86,
-    "scoring_threat_player_team": 2.52,
-    "territory_player_team": 1.252,
-    "possession_quality_player_team": 4.225,
-    "contact_breakdown_player_team": -1.3199999999999998,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 33903,
-    "playerName": "Lotu Inisi",
-    "net_momentum": 1.9750642965255265,
-    "momentum_added": 4.027780865234647,
-    "momentum_lost": 2.0527165687091204,
-    "events_count": 119,
-    "scoring_threat_player_team": 3.72,
-    "territory_player_team": 2.8000000000000003,
-    "possession_quality_player_team": 6.075,
-    "contact_breakdown_player_team": 1.8,
-    "discipline_turnover_player_team": -2.7,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 28305,
-    "playerName": "Beka Saghinadze",
-    "net_momentum": 1.8137936020054477,
-    "momentum_added": 2.530595799669534,
-    "momentum_lost": 0.7168021976640869,
-    "events_count": 86,
-    "scoring_threat_player_team": 2.4,
-    "territory_player_team": 0.875,
-    "possession_quality_player_team": 1.225,
-    "contact_breakdown_player_team": 1.43,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 28975,
-    "playerName": "Sekope Lopeti-Moli",
-    "net_momentum": 1.5631553435427707,
-    "momentum_added": 1.8035739356876133,
-    "momentum_lost": 0.2404185921448428,
-    "events_count": 41,
-    "scoring_threat_player_team": 2.4,
-    "territory_player_team": 0.25,
-    "possession_quality_player_team": 0.895,
-    "contact_breakdown_player_team": -0.0899999999999999,
-    "discipline_turnover_player_team": 0.95,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 43933,
-    "playerName": "Tornike Kakhoidze",
-    "net_momentum": 1.5368605207512096,
-    "momentum_added": 2.098070468123494,
-    "momentum_lost": 0.5612099473722841,
-    "events_count": 53,
-    "scoring_threat_player_team": 1.56,
-    "territory_player_team": 1.8,
-    "possession_quality_player_team": 4.16,
-    "contact_breakdown_player_team": -2.08,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 67775,
-    "playerName": "Josiah Unga",
-    "net_momentum": 1.373168574212829,
-    "momentum_added": 1.377140968111839,
-    "momentum_lost": 0.00397239389901,
-    "events_count": 31,
-    "scoring_threat_player_team": 0.24,
-    "territory_player_team": 2.8110000000000004,
-    "possession_quality_player_team": 1.41,
-    "contact_breakdown_player_team": 0.5700000000000001,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 25116,
-    "playerName": "Gela Aprasidze",
-    "net_momentum": 1.1819604530202354,
-    "momentum_added": 1.8036926963759825,
-    "momentum_lost": 0.6217322433557473,
-    "events_count": 20,
-    "scoring_threat_player_team": 0.6,
-    "territory_player_team": 0.7040000000000001,
-    "possession_quality_player_team": 0.96,
-    "contact_breakdown_player_team": -0.7299999999999999,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 40096,
-    "playerName": "Irakli Aptsiauri",
-    "net_momentum": 1.1655765149803718,
-    "momentum_added": 1.6592701184882417,
-    "momentum_lost": 0.49369360350787,
-    "events_count": 59,
-    "scoring_threat_player_team": 3.12,
-    "territory_player_team": 0.375,
-    "possession_quality_player_team": 2.18,
-    "contact_breakdown_player_team": 1.3199999999999998,
-    "discipline_turnover_player_team": -2.5,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 59346,
-    "playerName": "Justin Mataele",
-    "net_momentum": 1.0985047549126512,
-    "momentum_added": 2.232700810380467,
-    "momentum_lost": 1.1341960554678157,
-    "events_count": 103,
-    "scoring_threat_player_team": 3.6,
-    "territory_player_team": 0.75,
-    "possession_quality_player_team": 1.105,
-    "contact_breakdown_player_team": -2.56,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 56908,
-    "playerName": "Georges Shvelidze",
-    "net_momentum": 1.0977179366853629,
-    "momentum_added": 1.3167176709930903,
-    "momentum_lost": 0.2189997343077275,
-    "events_count": 16,
-    "scoring_threat_player_team": 0.12,
-    "territory_player_team": 0.425,
-    "possession_quality_player_team": 3.03,
-    "contact_breakdown_player_team": -1.2199999999999998,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 34577,
-    "playerName": "Lado Chachanidze",
-    "net_momentum": 0.9932920083034544,
-    "momentum_added": 1.5359656895390434,
-    "momentum_lost": 0.5426736812355888,
-    "events_count": 80,
-    "scoring_threat_player_team": 3.72,
-    "territory_player_team": -0.175,
-    "possession_quality_player_team": 0.2199999999999999,
-    "contact_breakdown_player_team": -1.6,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 43932,
-    "playerName": "Luka Ivanishvili",
-    "net_momentum": 0.9074814335419638,
-    "momentum_added": 2.398674042783479,
-    "momentum_lost": 1.4911926092415155,
-    "events_count": 101,
-    "scoring_threat_player_team": 3.84,
-    "territory_player_team": 0.4269999999999999,
-    "possession_quality_player_team": 2.23,
-    "contact_breakdown_player_team": -3.36,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 33907,
-    "playerName": "John Tapueluelu",
-    "net_momentum": 0.4137450309534907,
-    "momentum_added": 2.104660813278592,
-    "momentum_lost": 1.6909157823251009,
-    "events_count": 85,
-    "scoring_threat_player_team": 3.24,
-    "territory_player_team": 2.785,
-    "possession_quality_player_team": 6.79,
-    "contact_breakdown_player_team": -0.94,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 30923,
-    "playerName": "Luka Japaridze",
-    "net_momentum": 0.4135861040014605,
-    "momentum_added": 1.1103505156238775,
-    "momentum_lost": 0.696764411622417,
-    "events_count": 17,
-    "scoring_threat_player_team": 0.36,
-    "territory_player_team": 0.0,
-    "possession_quality_player_team": 0.0,
-    "contact_breakdown_player_team": -0.4999999999999999,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 27088,
-    "playerName": "Fetuli Paea",
-    "net_momentum": 0.4121119302613842,
-    "momentum_added": 1.7224161666458764,
-    "momentum_lost": 1.3103042363844923,
-    "events_count": 48,
-    "scoring_threat_player_team": 1.68,
-    "territory_player_team": 1.075,
-    "possession_quality_player_team": 3.785,
-    "contact_breakdown_player_team": -0.8599999999999999,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 25108,
-    "playerName": "Mikheil Babunashvili",
-    "net_momentum": 0.3487783277415607,
-    "momentum_added": 0.4066207651006814,
-    "momentum_lost": 0.0578424373591207,
-    "events_count": 35,
-    "scoring_threat_player_team": 1.2,
-    "territory_player_team": -0.3,
-    "possession_quality_player_team": 0.305,
-    "contact_breakdown_player_team": 0.1399999999999999,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 29249,
-    "playerName": "Sione Havili Talitui",
-    "net_momentum": 0.1661313132875121,
-    "momentum_added": 2.1656704378037674,
-    "momentum_lost": 1.9995391245162557,
-    "events_count": 100,
-    "scoring_threat_player_team": 4.44,
-    "territory_player_team": 0.275,
-    "possession_quality_player_team": 3.77,
-    "contact_breakdown_player_team": -1.1,
-    "discipline_turnover_player_team": -3.75,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 28299,
-    "playerName": "Tornike Jalagonia",
-    "net_momentum": 0.1375512274985778,
-    "momentum_added": 2.3490887452246896,
-    "momentum_lost": 2.211537517726112,
-    "events_count": 102,
-    "scoring_threat_player_team": 2.28,
-    "territory_player_team": 0.85,
-    "possession_quality_player_team": 3.905,
-    "contact_breakdown_player_team": -3.14,
-    "discipline_turnover_player_team": -2.35,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 39107,
-    "playerName": "Paula Latu",
-    "net_momentum": 0.1285626634772017,
-    "momentum_added": 0.8566092772984492,
-    "momentum_lost": 0.7280466138212475,
-    "events_count": 24,
-    "scoring_threat_player_team": 1.2,
-    "territory_player_team": 0.1,
-    "possession_quality_player_team": 0.65,
-    "contact_breakdown_player_team": -0.2799999999999999,
-    "discipline_turnover_player_team": -2.35,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 25110,
-    "playerName": "Giorgi Javakhia",
-    "net_momentum": 0.0576136907283408,
-    "momentum_added": 1.292301335320701,
-    "momentum_lost": 1.2346876445923598,
-    "events_count": 55,
-    "scoring_threat_player_team": 2.04,
-    "territory_player_team": 1.175,
-    "possession_quality_player_team": 2.515,
-    "contact_breakdown_player_team": 1.2800000000000002,
-    "discipline_turnover_player_team": -3.4,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 34574,
-    "playerName": "Giorgi Akhaladze",
-    "net_momentum": 0.002096345278626,
-    "momentum_added": 1.4122918452311937,
-    "momentum_lost": 1.4101954999525674,
-    "events_count": 58,
-    "scoring_threat_player_team": 1.44,
-    "territory_player_team": 0.675,
-    "possession_quality_player_team": 1.445,
-    "contact_breakdown_player_team": 2.4,
-    "discipline_turnover_player_team": -3.4,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 34576,
-    "playerName": "Luka Nioradze",
-    "net_momentum": -0.0499584424817523,
-    "momentum_added": 0.0985894116987823,
-    "momentum_lost": 0.1485478541805346,
-    "events_count": 8,
-    "scoring_threat_player_team": 0.48,
-    "territory_player_team": 0.0,
-    "possession_quality_player_team": 0.0,
-    "contact_breakdown_player_team": 0.45,
-    "discipline_turnover_player_team": -3.25,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 26220,
-    "playerName": "Tima Fainga'anuku",
-    "net_momentum": -0.2015870670578678,
-    "momentum_added": 0.9759858080987291,
-    "momentum_lost": 1.177572875156597,
-    "events_count": 58,
-    "scoring_threat_player_team": 2.52,
-    "territory_player_team": 1.375,
-    "possession_quality_player_team": 6.535,
-    "contact_breakdown_player_team": -3.25,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 60076,
-    "playerName": "Salesi Tuifua",
-    "net_momentum": -0.2712248348445507,
-    "momentum_added": 1.3115268838416083,
-    "momentum_lost": 1.582751718686159,
-    "events_count": 38,
-    "scoring_threat_player_team": 0.96,
-    "territory_player_team": 1.405,
-    "possession_quality_player_team": 0.16,
-    "contact_breakdown_player_team": -0.94,
-    "discipline_turnover_player_team": -2.15,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 21731,
-    "playerName": "Tau Koloamatangi",
-    "net_momentum": -0.284483672574588,
-    "momentum_added": 0.7865245604169554,
-    "momentum_lost": 1.0710082329915434,
-    "events_count": 34,
-    "scoring_threat_player_team": 1.44,
-    "territory_player_team": 0.225,
-    "possession_quality_player_team": 0.48,
-    "contact_breakdown_player_team": 1.62,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 21969,
-    "playerName": "Harrison Mataele",
-    "net_momentum": -0.3433107309625097,
-    "momentum_added": 0.9126157723109016,
-    "momentum_lost": 1.2559265032734117,
-    "events_count": 46,
-    "scoring_threat_player_team": 1.2,
-    "territory_player_team": 0.0499999999999999,
-    "possession_quality_player_team": 0.48,
-    "contact_breakdown_player_team": -1.2399999999999998,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 56290,
-    "playerName": "Giorgi Mamaiashvili",
-    "net_momentum": -0.4591686781216073,
-    "momentum_added": 0.3976819872708462,
-    "momentum_lost": 0.8568506653924535,
-    "events_count": 18,
-    "scoring_threat_player_team": 0.6,
-    "territory_player_team": 0.0,
-    "possession_quality_player_team": 0.0,
-    "contact_breakdown_player_team": -0.7,
-    "discipline_turnover_player_team": -3.25,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 30888,
-    "playerName": "John Ika",
-    "net_momentum": -0.5216408666372154,
-    "momentum_added": 0.9723171010270176,
-    "momentum_lost": 1.493957967664233,
-    "events_count": 31,
-    "scoring_threat_player_team": 1.56,
-    "territory_player_team": -0.85,
-    "possession_quality_player_team": 0.72,
-    "contact_breakdown_player_team": 0.45,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 31310,
-    "playerName": "Siaosi Nginingini",
-    "net_momentum": -0.5351438048281816,
-    "momentum_added": 2.423067763864329,
-    "momentum_lost": 2.958211568692511,
-    "events_count": 248,
-    "scoring_threat_player_team": 8.28,
-    "territory_player_team": -5.205,
-    "possession_quality_player_team": 5.17,
-    "contact_breakdown_player_team": -5.25,
-    "discipline_turnover_player_team": 0.8000000000000003,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 29511,
-    "playerName": "Samiuela Moli",
-    "net_momentum": -0.9275695236717136,
-    "momentum_added": 1.4144559933444838,
-    "momentum_lost": 2.342025517016197,
-    "events_count": 69,
-    "scoring_threat_player_team": 2.28,
-    "territory_player_team": -0.25,
-    "possession_quality_player_team": 0.2449999999999999,
-    "contact_breakdown_player_team": 0.19,
-    "discipline_turnover_player_team": -1.35,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 49704,
-    "playerName": "Kelemete Finau",
-    "net_momentum": -0.9328288173552156,
-    "momentum_added": 0.4122275271506416,
-    "momentum_lost": 1.3450563445058572,
-    "events_count": 52,
-    "scoring_threat_player_team": 1.2,
-    "territory_player_team": 0.3999999999999999,
-    "possession_quality_player_team": 0.49,
-    "contact_breakdown_player_team": -1.87,
-    "discipline_turnover_player_team": -2.5,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 25123,
-    "playerName": "Ilia Spanderashvili",
-    "net_momentum": -1.0131562091044377,
-    "momentum_added": 0.4833091781432049,
-    "momentum_lost": 1.4964653872476426,
-    "events_count": 27,
-    "scoring_threat_player_team": 0.84,
-    "territory_player_team": 0.075,
-    "possession_quality_player_team": -0.365,
-    "contact_breakdown_player_team": 0.32,
-    "discipline_turnover_player_team": -2.15,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 69561,
-    "playerName": "Lolesio Sailosi",
-    "net_momentum": -1.019764179840383,
-    "momentum_added": 0.3250953250800878,
-    "momentum_lost": 1.3448595049204706,
-    "events_count": 18,
-    "scoring_threat_player_team": 0.24,
-    "territory_player_team": 0.8280000000000001,
-    "possession_quality_player_team": -0.12,
-    "contact_breakdown_player_team": -2.76,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 39310,
-    "playerName": "Semisi Paea",
-    "net_momentum": -1.4810551528138118,
-    "momentum_added": 0.8780350116865786,
-    "momentum_lost": 2.3590901645003908,
-    "events_count": 58,
-    "scoring_threat_player_team": 1.44,
-    "territory_player_team": 0.475,
-    "possession_quality_player_team": 2.41,
-    "contact_breakdown_player_team": -1.18,
-    "discipline_turnover_player_team": -2.15,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 2850,
-    "teamName": "Georgia",
-    "PLID": 28302,
-    "playerName": "Sandro Mamamtavrishvili",
-    "net_momentum": -1.9762324805744813,
-    "momentum_added": 0.2776491393304859,
-    "momentum_lost": 2.253881619904967,
-    "events_count": 17,
-    "scoring_threat_player_team": 0.36,
-    "territory_player_team": 0.0,
-    "possession_quality_player_team": 0.0,
-    "contact_breakdown_player_team": -0.7,
-    "discipline_turnover_player_team": -3.75,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 39125,
-    "playerName": "Taniela Filimone",
-    "net_momentum": -2.3439668221636483,
-    "momentum_added": 0.3116686791683367,
-    "momentum_lost": 2.655635501331985,
-    "events_count": 46,
-    "scoring_threat_player_team": 1.08,
-    "territory_player_team": 0.025,
-    "possession_quality_player_team": 2.22,
-    "contact_breakdown_player_team": -1.35,
-    "discipline_turnover_player_team": -1.8,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 942103,
-    "team_id": 750,
-    "teamName": "Tonga",
-    "PLID": 18807,
-    "playerName": "Ben Tameifuna",
-    "net_momentum": -2.5499375637793102,
-    "momentum_added": 0.9009172002100416,
-    "momentum_lost": 3.450854763989352,
-    "events_count": 71,
-    "scoring_threat_player_team": 1.2,
-    "territory_player_team": 0.6000000000000001,
-    "possession_quality_player_team": 0.51,
-    "contact_breakdown_player_team": -3.81,
-    "discipline_turnover_player_team": -1.4,
-    "review_priority": "Medium"
-  }
-]
+{
+  "matchId": "942103",
+  "players": [
+    {
+      "playerKey": "luka matkava|georgia",
+      "playerName": "Luka Matkava",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": 37.68,
+      "momentumAdded": 43.76,
+      "momentumLost": 6.08,
+      "scoringThreat": 8.88,
+      "territory": 24.87,
+      "possessionQuality": 7.71,
+      "contactBreakdown": -0.78,
+      "disciplineTurnover": -3,
+      "actions": 138,
+      "topActions": [
+        {
+          "time": "41:57",
+          "startSecond": 4073.8,
+          "endSecond": 4099.8,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.7,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "71:58",
+          "startSecond": 6766,
+          "endSecond": 6792,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 2.63,
+          "reason": "得点脅威 +2.0 / テリトリー +0.6"
+        },
+        {
+          "time": "67:55",
+          "startSecond": 6523.1,
+          "endSecond": 6549.1,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.52,
+          "reason": "得点脅威 +2.1 / テリトリー +0.4"
+        },
+        {
+          "time": "51:43",
+          "startSecond": 4769.1,
+          "endSecond": 4795.1,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 2.07,
+          "reason": "テリトリー +2.1"
+        },
+        {
+          "time": "72:52",
+          "startSecond": 6861.1,
+          "endSecond": 6887.1,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.78,
+          "reason": "テリトリー +1.8"
+        },
+        {
+          "time": "15:08",
+          "startSecond": 1015.2,
+          "endSecond": 1041.2,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.74,
+          "reason": "テリトリー +1.7"
+        },
+        {
+          "time": "22:12",
+          "startSecond": 1508.4,
+          "endSecond": 1534.4,
+          "action": "Kick",
+          "result": "Error - Territorial Loss",
+          "impact": 1.74,
+          "reason": "テリトリー +1.7"
+        },
+        {
+          "time": "25:51",
+          "startSecond": 1727.1,
+          "endSecond": 1753.1,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.74,
+          "reason": "テリトリー +1.7"
+        },
+        {
+          "time": "22:12",
+          "startSecond": 1508.4,
+          "endSecond": 1534.4,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "31:07",
+          "startSecond": 2114.5,
+          "endSecond": 2140.5,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "william havili|tonga",
+      "playerName": "William Havili",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": 31.36,
+      "momentumAdded": 44.3,
+      "momentumLost": 12.94,
+      "scoringThreat": 4.48,
+      "territory": 32.16,
+      "possessionQuality": 4.69,
+      "contactBreakdown": -2.47,
+      "disciplineTurnover": -7.5,
+      "actions": 143,
+      "topActions": [
+        {
+          "time": "56:48",
+          "startSecond": 5289.7,
+          "endSecond": 5315.7,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 3.03,
+          "reason": "得点脅威 +2.0 / テリトリー +1.0"
+        },
+        {
+          "time": "0:58",
+          "startSecond": 58.2,
+          "endSecond": 84.2,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 2.9,
+          "reason": "得点脅威 +2.0 / テリトリー +0.9"
+        },
+        {
+          "time": "48:53",
+          "startSecond": 4562.8,
+          "endSecond": 4588.8,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 2.67,
+          "reason": "テリトリー +2.7"
+        },
+        {
+          "time": "73:05",
+          "startSecond": 6874.6,
+          "endSecond": 6900.6,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 2.57,
+          "reason": "テリトリー +2.6"
+        },
+        {
+          "time": "36:19",
+          "startSecond": 2504.2,
+          "endSecond": 2530.2,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 2.29,
+          "reason": "テリトリー +2.3"
+        },
+        {
+          "time": "22:49",
+          "startSecond": 1545,
+          "endSecond": 1571,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 2.18,
+          "reason": "テリトリー +2.2"
+        },
+        {
+          "time": "43:56",
+          "startSecond": 4192.2,
+          "endSecond": 4218.2,
+          "action": "Kick",
+          "result": "Error - Territorial Loss",
+          "impact": 2.1,
+          "reason": "テリトリー +2.1"
+        },
+        {
+          "time": "17:20",
+          "startSecond": 1215.8,
+          "endSecond": 1241.8,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 2.07,
+          "reason": "テリトリー +2.1"
+        },
+        {
+          "time": "60:24",
+          "startSecond": 5602.2,
+          "endSecond": 5628.2,
+          "action": "Card",
+          "result": "Foul Play",
+          "impact": -2,
+          "reason": "規律・TO -2.0"
+        },
+        {
+          "time": "38:56",
+          "startSecond": 2661.7,
+          "endSecond": 2687.7,
+          "action": "Kick",
+          "result": "In Goal",
+          "impact": 1.96,
+          "reason": "テリトリー +2.0"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "davit niniashvili|georgia",
+      "playerName": "Davit Niniashvili",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": 24.17,
+      "momentumAdded": 34.02,
+      "momentumLost": 9.85,
+      "scoringThreat": 2.16,
+      "territory": 12.36,
+      "possessionQuality": 14.8,
+      "contactBreakdown": 0.41,
+      "disciplineTurnover": -5.55,
+      "actions": 111,
+      "topActions": [
+        {
+          "time": "55:22",
+          "startSecond": 5023.9,
+          "endSecond": 5049.9,
+          "action": "Carry",
+          "result": "Other",
+          "impact": 2.46,
+          "reason": "テリトリー +1.2 / 継続品質 +1.1 / 接点・BD +0.2"
+        },
+        {
+          "time": "17:26",
+          "startSecond": 1222.4,
+          "endSecond": 1248.4,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 1.96,
+          "reason": "継続品質 +1.0 / テリトリー +0.8 / 接点・BD +0.2"
+        },
+        {
+          "time": "44:09",
+          "startSecond": 4205.5,
+          "endSecond": 4231.5,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.88,
+          "reason": "テリトリー +1.9"
+        },
+        {
+          "time": "73:12",
+          "startSecond": 6881.2,
+          "endSecond": 6907.2,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 1.75,
+          "reason": "継続品質 +0.8 / テリトリー +0.6 / 接点・BD +0.4"
+        },
+        {
+          "time": "22:59",
+          "startSecond": 1555.5,
+          "endSecond": 1581.5,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "57:36",
+          "startSecond": 5337.5,
+          "endSecond": 5363.5,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "73:18",
+          "startSecond": 6887.5,
+          "endSecond": 6913.5,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "45:51",
+          "startSecond": 4380.3,
+          "endSecond": 4406.3,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "39:10",
+          "startSecond": 2675.4,
+          "endSecond": 2701.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.25,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.2"
+        },
+        {
+          "time": "65:16",
+          "startSecond": 6235.1,
+          "endSecond": 6261.1,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 1.14,
+          "reason": "継続品質 +0.6 / テリトリー +0.4 / 接点・BD +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "patrick pellegrini|tonga",
+      "playerName": "Patrick Pellegrini",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": 12.98,
+      "momentumAdded": 15.51,
+      "momentumLost": 2.54,
+      "scoringThreat": 3.8,
+      "territory": 3.8,
+      "possessionQuality": 5.13,
+      "contactBreakdown": 0.3,
+      "disciplineTurnover": -0.05,
+      "actions": 54,
+      "topActions": [
+        {
+          "time": "81:55",
+          "startSecond": 7563.4,
+          "endSecond": 7589.4,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.72,
+          "reason": "得点脅威 +2.1 / テリトリー +0.6"
+        },
+        {
+          "time": "78:26",
+          "startSecond": 7348.8,
+          "endSecond": 7374.8,
+          "action": "Carry",
+          "result": "Penalty Won",
+          "impact": 1.64,
+          "reason": "規律・TO +1.2 / 接点・BD +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "72:58",
+          "startSecond": 6867.3,
+          "endSecond": 6893.3,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 1.33,
+          "reason": "継続品質 +0.5 / 接点・BD +0.4 / テリトリー +0.4"
+        },
+        {
+          "time": "66:27",
+          "startSecond": 6435.8,
+          "endSecond": 6461.8,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "74:55",
+          "startSecond": 7105.7,
+          "endSecond": 7131.7,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.11,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "55:12",
+          "startSecond": 5014.1,
+          "endSecond": 5040.1,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 0.88,
+          "reason": "接点・BD +0.4 / テリトリー +0.3 / 継続品質 +0.2"
+        },
+        {
+          "time": "70:02",
+          "startSecond": 6649.9,
+          "endSecond": 6675.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "70:02",
+          "startSecond": 6650.4,
+          "endSecond": 6676.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "70:02",
+          "startSecond": 6650.6,
+          "endSecond": 6676.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "70:02",
+          "startSecond": 6650.8,
+          "endSecond": 6676.8,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "vasil lobzhanidze|georgia",
+      "playerName": "Vasil Lobzhanidze",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": 11.32,
+      "momentumAdded": 21.31,
+      "momentumLost": 9.99,
+      "scoringThreat": 7.56,
+      "territory": 4.04,
+      "possessionQuality": 5,
+      "contactBreakdown": 0.07,
+      "disciplineTurnover": -5.35,
+      "actions": 214,
+      "topActions": [
+        {
+          "time": "17:33",
+          "startSecond": 1229.4,
+          "endSecond": 1255.4,
+          "action": "Carry",
+          "result": "Penalty Won",
+          "impact": 2.01,
+          "reason": "規律・TO +1.2 / 接点・BD +0.4 / テリトリー +0.2"
+        },
+        {
+          "time": "22:39",
+          "startSecond": 1535.2,
+          "endSecond": 1561.2,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.96,
+          "reason": "テリトリー +2.0"
+        },
+        {
+          "time": "7:46",
+          "startSecond": 466.4,
+          "endSecond": 492.4,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.55,
+          "reason": "テリトリー +1.6"
+        },
+        {
+          "time": "29:12",
+          "startSecond": 1927.8,
+          "endSecond": 1953.8,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "42:41",
+          "startSecond": 4117.9,
+          "endSecond": 4143.9,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.38,
+          "reason": "テリトリー +1.4"
+        },
+        {
+          "time": "65:29",
+          "startSecond": 6248.5,
+          "endSecond": 6274.5,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "19:22",
+          "startSecond": 1338,
+          "endSecond": 1364,
+          "action": "Carry",
+          "result": "Penalty Conceded",
+          "impact": -1.16,
+          "reason": "規律・TO -1.2 / 接点・BD -0.2"
+        },
+        {
+          "time": "19:28",
+          "startSecond": 1344.2,
+          "endSecond": 1370.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "24:37",
+          "startSecond": 1653,
+          "endSecond": 1679,
+          "action": "Scrum",
+          "result": "Lost Free Kick",
+          "impact": -1.1,
+          "reason": "規律・TO -1.1"
+        },
+        {
+          "time": "37:58",
+          "startSecond": 2603.4,
+          "endSecond": 2629.4,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.07,
+          "reason": "テリトリー +1.1"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "aka tabutsadze|georgia",
+      "playerName": "Aka Tabutsadze",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": 10.67,
+      "momentumAdded": 18.81,
+      "momentumLost": 8.15,
+      "scoringThreat": 7.56,
+      "territory": 3.66,
+      "possessionQuality": 5.34,
+      "contactBreakdown": 0.1,
+      "disciplineTurnover": -6,
+      "actions": 63,
+      "topActions": [
+        {
+          "time": "71:22",
+          "startSecond": 6730.9,
+          "endSecond": 6756.9,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "71:14",
+          "startSecond": 6722.3,
+          "endSecond": 6748.3,
+          "action": "Carry",
+          "result": "Kick",
+          "impact": 2.01,
+          "reason": "継続品質 +1.1 / テリトリー +0.8 / 接点・BD +0.2"
+        },
+        {
+          "time": "71:17",
+          "startSecond": 6725,
+          "endSecond": 6751,
+          "action": "Kick",
+          "result": "Own Player - Collected",
+          "impact": 1.67,
+          "reason": "テリトリー +1.7"
+        },
+        {
+          "time": "5:47",
+          "startSecond": 347.6,
+          "endSecond": 373.6,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "31:15",
+          "startSecond": 2122.8,
+          "endSecond": 2148.8,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "36:31",
+          "startSecond": 2516.4,
+          "endSecond": 2542.4,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "16:21",
+          "startSecond": 1091.2,
+          "endSecond": 1117.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "60:25",
+          "startSecond": 5602.7,
+          "endSecond": 5628.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.07,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "71:22",
+          "startSecond": 6730.1,
+          "endSecond": 6756.1,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 0.94,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "71:22",
+          "startSecond": 6730.1,
+          "endSecond": 6756.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "john tapueluelu|tonga",
+      "playerName": "John Tapueluelu",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": 10.37,
+      "momentumAdded": 16.37,
+      "momentumLost": 6,
+      "scoringThreat": 3.24,
+      "territory": 2.79,
+      "possessionQuality": 6.79,
+      "contactBreakdown": -0.94,
+      "disciplineTurnover": -1.5,
+      "actions": 85,
+      "topActions": [
+        {
+          "time": "9:41",
+          "startSecond": 582.1,
+          "endSecond": 608.1,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 1.63,
+          "reason": "継続品質 +0.7 / テリトリー +0.5 / 接点・BD +0.4"
+        },
+        {
+          "time": "13:46",
+          "startSecond": 860.3,
+          "endSecond": 886.3,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "7:50",
+          "startSecond": 470.6,
+          "endSecond": 496.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.25,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.2"
+        },
+        {
+          "time": "57:39",
+          "startSecond": 5340.1,
+          "endSecond": 5366.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.13,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "31:11",
+          "startSecond": 2119.2,
+          "endSecond": 2145.2,
+          "action": "Kick",
+          "result": "Own Player - Collected",
+          "impact": 1.11,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "54:54",
+          "startSecond": 4995.2,
+          "endSecond": 5021.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.08,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "33:01",
+          "startSecond": 2300,
+          "endSecond": 2326,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "70:13",
+          "startSecond": 6661,
+          "endSecond": 6687,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "13:44",
+          "startSecond": 858,
+          "endSecond": 884,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 0.76,
+          "reason": "テリトリー +0.3 / 継続品質 +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "9:42",
+          "startSecond": 582.4,
+          "endSecond": 608.4,
+          "action": "Attacking Qualities",
+          "result": "Kick Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "sandro todua|georgia",
+      "playerName": "Sandro Todua",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": 9.94,
+      "momentumAdded": 14.17,
+      "momentumLost": 4.22,
+      "scoringThreat": 6.84,
+      "territory": 2.76,
+      "possessionQuality": 3.5,
+      "contactBreakdown": -1.66,
+      "disciplineTurnover": -1.5,
+      "actions": 34,
+      "topActions": [
+        {
+          "time": "40:56",
+          "startSecond": 4012.7,
+          "endSecond": 4038.7,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "12:43",
+          "startSecond": 797,
+          "endSecond": 823,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 2.04,
+          "reason": "テリトリー +2.0"
+        },
+        {
+          "time": "63:49",
+          "startSecond": 6130.2,
+          "endSecond": 6156.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "21:29",
+          "startSecond": 1465,
+          "endSecond": 1491,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 1.28,
+          "reason": "継続品質 +0.6 / テリトリー +0.5 / 接点・BD +0.2"
+        },
+        {
+          "time": "40:55",
+          "startSecond": 4011.7,
+          "endSecond": 4037.7,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "21:30",
+          "startSecond": 1465.9,
+          "endSecond": 1491.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "21:31",
+          "startSecond": 1466.9,
+          "endSecond": 1492.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "21:32",
+          "startSecond": 1467.6,
+          "endSecond": 1493.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "21:33",
+          "startSecond": 1469.4,
+          "endSecond": 1495.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "40:55",
+          "startSecond": 4011.4,
+          "endSecond": 4037.4,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 0.6,
+          "reason": "テリトリー +0.2 / 接点・BD +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "lotu inisi|tonga",
+      "playerName": "Lotu Inisi",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": 9.89,
+      "momentumAdded": 17.99,
+      "momentumLost": 8.09,
+      "scoringThreat": 3.72,
+      "territory": 2.8,
+      "possessionQuality": 6.08,
+      "contactBreakdown": 1.8,
+      "disciplineTurnover": -4.5,
+      "actions": 119,
+      "topActions": [
+        {
+          "time": "61:45",
+          "startSecond": 5926.2,
+          "endSecond": 5952.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.5,
+          "reason": "接点・BD +0.7 / テリトリー +0.4 / 継続品質 +0.4"
+        },
+        {
+          "time": "65:45",
+          "startSecond": 6313.3,
+          "endSecond": 6339.3,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "7:25",
+          "startSecond": 445.8,
+          "endSecond": 471.8,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "12:28",
+          "startSecond": 782,
+          "endSecond": 808,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "43:18",
+          "startSecond": 4154.3,
+          "endSecond": 4180.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.37,
+          "reason": "接点・BD +0.7 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "54:44",
+          "startSecond": 4985.9,
+          "endSecond": 5011.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.17,
+          "reason": "接点・BD +0.7 / テリトリー +0.3 / 継続品質 +0.2"
+        },
+        {
+          "time": "1:27",
+          "startSecond": 87.2,
+          "endSecond": 113.2,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 1.14,
+          "reason": "継続品質 +0.6 / テリトリー +0.4 / 接点・BD +0.2"
+        },
+        {
+          "time": "13:31",
+          "startSecond": 845.2,
+          "endSecond": 871.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.11,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "65:42",
+          "startSecond": 6310.6,
+          "endSecond": 6336.6,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 0.84,
+          "reason": "接点・BD +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "38:45",
+          "startSecond": 2650.3,
+          "endSecond": 2676.3,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.78,
+          "reason": "接点・BD -0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "tima fainga'anuku|tonga",
+      "playerName": "Tima Fainga'anuku",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": 7.18,
+      "momentumAdded": 11.98,
+      "momentumLost": 4.81,
+      "scoringThreat": 2.52,
+      "territory": 1.38,
+      "possessionQuality": 6.54,
+      "contactBreakdown": -3.25,
+      "disciplineTurnover": 0,
+      "actions": 58,
+      "topActions": [
+        {
+          "time": "69:53",
+          "startSecond": 6641.1,
+          "endSecond": 6667.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.39,
+          "reason": "接点・BD +0.7 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "9:45",
+          "startSecond": 585.8,
+          "endSecond": 611.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.36,
+          "reason": "接点・BD +0.7 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "2:59",
+          "startSecond": 179.7,
+          "endSecond": 205.7,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 0.77,
+          "reason": "接点・BD +0.4 / テリトリー +0.2"
+        },
+        {
+          "time": "9:46",
+          "startSecond": 586.6,
+          "endSecond": 612.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "31:22",
+          "startSecond": 2130,
+          "endSecond": 2156,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "31:23",
+          "startSecond": 2131.2,
+          "endSecond": 2157.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "70:40",
+          "startSecond": 6688.6,
+          "endSecond": 6714.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "1:49",
+          "startSecond": 109.4,
+          "endSecond": 135.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "2:59",
+          "startSecond": 179.8,
+          "endSecond": 205.8,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "9:45",
+          "startSecond": 585.8,
+          "endSecond": 611.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "tevita ahokovi|tonga",
+      "playerName": "Tevita Ahokovi",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": 7.06,
+      "momentumAdded": 9.27,
+      "momentumLost": 2.21,
+      "scoringThreat": 7.32,
+      "territory": 1.46,
+      "possessionQuality": -0.35,
+      "contactBreakdown": 0.14,
+      "disciplineTurnover": -1.5,
+      "actions": 30,
+      "topActions": [
+        {
+          "time": "80:51",
+          "startSecond": 7499.7,
+          "endSecond": 7525.7,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "65:13",
+          "startSecond": 6232.6,
+          "endSecond": 6258.6,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "78:51",
+          "startSecond": 7373.6,
+          "endSecond": 7399.6,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.31,
+          "reason": "テリトリー +1.3"
+        },
+        {
+          "time": "65:40",
+          "startSecond": 6308.3,
+          "endSecond": 6334.3,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.65,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "vano karkadze|georgia",
+      "playerName": "Vano Karkadze",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": 6.88,
+      "momentumAdded": 18.31,
+      "momentumLost": 11.43,
+      "scoringThreat": 4.44,
+      "territory": 0.85,
+      "possessionQuality": 2.41,
+      "contactBreakdown": -4.47,
+      "disciplineTurnover": 3.65,
+      "actions": 131,
+      "topActions": [
+        {
+          "time": "58:37",
+          "startSecond": 5494.9,
+          "endSecond": 5520.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.85,
+          "reason": "接点・BD +0.7 / 継続品質 +0.6 / テリトリー +0.4"
+        },
+        {
+          "time": "55:16",
+          "startSecond": 5018,
+          "endSecond": 5044,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 1.56,
+          "reason": "継続品質 +0.8 / テリトリー +0.6 / 接点・BD +0.2"
+        },
+        {
+          "time": "6:30",
+          "startSecond": 390.4,
+          "endSecond": 416.4,
+          "action": "Tackle",
+          "result": "Pen Conceded",
+          "impact": -1.55,
+          "reason": "規律・TO -1.2 / 接点・BD -0.3"
+        },
+        {
+          "time": "6:31",
+          "startSecond": 391.4,
+          "endSecond": 417.4,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "24:38",
+          "startSecond": 1653.9,
+          "endSecond": 1679.9,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "26:42",
+          "startSecond": 1778.2,
+          "endSecond": 1804.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "55:18",
+          "startSecond": 5019.6,
+          "endSecond": 5045.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "36:09",
+          "startSecond": 2494,
+          "endSecond": 2520,
+          "action": "Lineout Throw",
+          "result": "Lost Overthrown",
+          "impact": -0.63,
+          "reason": "規律・TO -0.8"
+        },
+        {
+          "time": "21:11",
+          "startSecond": 1446.7,
+          "endSecond": 1472.7,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.6,
+          "reason": "継続品質 -0.6"
+        },
+        {
+          "time": "18:51",
+          "startSecond": 1307.4,
+          "endSecond": 1333.4,
+          "action": "Lineout Throw",
+          "result": "Won Other From Scrappy Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "tornike kakhoidze|georgia",
+      "playerName": "Tornike Kakhoidze",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": 5.44,
+      "momentumAdded": 9.2,
+      "momentumLost": 3.76,
+      "scoringThreat": 1.56,
+      "territory": 1.8,
+      "possessionQuality": 4.16,
+      "contactBreakdown": -2.08,
+      "disciplineTurnover": 0,
+      "actions": 53,
+      "topActions": [
+        {
+          "time": "65:23",
+          "startSecond": 6242.6,
+          "endSecond": 6268.6,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 1.56,
+          "reason": "継続品質 +0.8 / テリトリー +0.6 / 接点・BD +0.2"
+        },
+        {
+          "time": "29:00",
+          "startSecond": 1915.9,
+          "endSecond": 1941.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "29:00",
+          "startSecond": 1916.4,
+          "endSecond": 1942.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "52:16",
+          "startSecond": 4801.4,
+          "endSecond": 4827.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "28:59",
+          "startSecond": 1914.9,
+          "endSecond": 1940.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.62,
+          "reason": "接点・BD +0.4 / テリトリー +0.2"
+        },
+        {
+          "time": "54:18",
+          "startSecond": 4924.2,
+          "endSecond": 4950.2,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.59,
+          "reason": "接点・BD +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "45:15",
+          "startSecond": 4344.8,
+          "endSecond": 4370.8,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "sandro mamamtavrishvili|georgia",
+      "playerName": "Sandro Mamamtavrishvili",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": -5.29,
+      "momentumAdded": 0.36,
+      "momentumLost": 5.65,
+      "scoringThreat": 0.36,
+      "territory": 0,
+      "possessionQuality": 0,
+      "contactBreakdown": -0.7,
+      "disciplineTurnover": -4.95,
+      "actions": 17,
+      "topActions": [
+        {
+          "time": "78:27",
+          "startSecond": 7350.3,
+          "endSecond": 7376.3,
+          "action": "Tackle",
+          "result": "Pen Conceded",
+          "impact": -1.55,
+          "reason": "規律・TO -1.2 / 接点・BD -0.3"
+        },
+        {
+          "time": "74:38",
+          "startSecond": 7087.9,
+          "endSecond": 7113.9,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "78:28",
+          "startSecond": 7350.5,
+          "endSecond": 7376.5,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "78:34",
+          "startSecond": 7356.5,
+          "endSecond": 7382.5,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "giorgi kveseladze|georgia",
+      "playerName": "Giorgi Kveseladze",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": 5.18,
+      "momentumAdded": 10.76,
+      "momentumLost": 5.58,
+      "scoringThreat": 2.52,
+      "territory": 1.25,
+      "possessionQuality": 4.23,
+      "contactBreakdown": -1.32,
+      "disciplineTurnover": -1.5,
+      "actions": 86,
+      "topActions": [
+        {
+          "time": "8:30",
+          "startSecond": 510.5,
+          "endSecond": 536.5,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "2:11",
+          "startSecond": 132,
+          "endSecond": 158,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.88,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "26:50",
+          "startSecond": 1785.7,
+          "endSecond": 1811.7,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 0.78,
+          "reason": "テリトリー +0.8"
+        },
+        {
+          "time": "5:44",
+          "startSecond": 344.4,
+          "endSecond": 370.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "34:27",
+          "startSecond": 2386.5,
+          "endSecond": 2412.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "71:14",
+          "startSecond": 6721.9,
+          "endSecond": 6747.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "76:37",
+          "startSecond": 7230.6,
+          "endSecond": 7256.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "40:06",
+          "startSecond": 3962.8,
+          "endSecond": 3988.8,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.6,
+          "reason": "接点・BD +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "8:30",
+          "startSecond": 510.5,
+          "endSecond": 536.5,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.55,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "josiah unga|tonga",
+      "playerName": "Josiah Unga",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": 5.03,
+      "momentumAdded": 5.11,
+      "momentumLost": 0.08,
+      "scoringThreat": 0.24,
+      "territory": 2.81,
+      "possessionQuality": 1.41,
+      "contactBreakdown": 0.57,
+      "disciplineTurnover": 0,
+      "actions": 31,
+      "topActions": [
+        {
+          "time": "2:47",
+          "startSecond": 167.8,
+          "endSecond": 193.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.19,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.2"
+        },
+        {
+          "time": "26:55",
+          "startSecond": 1791.1,
+          "endSecond": 1817.1,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.07,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "44:17",
+          "startSecond": 4213.2,
+          "endSecond": 4239.2,
+          "action": "Kick",
+          "result": "Own Player - Failed",
+          "impact": 0.89,
+          "reason": "テリトリー +0.9"
+        },
+        {
+          "time": "2:59",
+          "startSecond": 179.5,
+          "endSecond": 205.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "2:50",
+          "startSecond": 170.5,
+          "endSecond": 196.5,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "sekope lopeti-moli|tonga",
+      "playerName": "Sekope Lopeti-Moli",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": 4.51,
+      "momentumAdded": 6.16,
+      "momentumLost": 1.65,
+      "scoringThreat": 2.4,
+      "territory": 0.25,
+      "possessionQuality": 0.9,
+      "contactBreakdown": -0.09,
+      "disciplineTurnover": 1.05,
+      "actions": 41,
+      "topActions": [
+        {
+          "time": "64:58",
+          "startSecond": 6217.1,
+          "endSecond": 6243.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.98,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "75:22",
+          "startSecond": 7132.6,
+          "endSecond": 7158.6,
+          "action": "Lineout Throw",
+          "result": "Lost Clean",
+          "impact": -0.63,
+          "reason": "規律・TO -0.8"
+        },
+        {
+          "time": "68:40",
+          "startSecond": 6568.3,
+          "endSecond": 6594.3,
+          "action": "Tackle",
+          "result": "Sack",
+          "impact": 0.57,
+          "reason": "接点・BD +0.5"
+        },
+        {
+          "time": "79:17",
+          "startSecond": 7406.2,
+          "endSecond": 7432.2,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "70:17",
+          "startSecond": 6665.8,
+          "endSecond": 6691.8,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.56,
+          "reason": "接点・BD -0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "irakli aptsiauri|georgia",
+      "playerName": "Irakli Aptsiauri",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": 4.5,
+      "momentumAdded": 7.04,
+      "momentumLost": 2.54,
+      "scoringThreat": 3.12,
+      "territory": 0.38,
+      "possessionQuality": 2.18,
+      "contactBreakdown": 1.32,
+      "disciplineTurnover": -2.5,
+      "actions": 59,
+      "topActions": [
+        {
+          "time": "42:20",
+          "startSecond": 2996.6,
+          "endSecond": 3022.6,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "47:38",
+          "startSecond": 4487.7,
+          "endSecond": 4513.7,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "40:12",
+          "startSecond": 3968.9,
+          "endSecond": 3994.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.02,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "45:31",
+          "startSecond": 4360.7,
+          "endSecond": 4386.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.86,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "18:54",
+          "startSecond": 1309.8,
+          "endSecond": 1335.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "42:16",
+          "startSecond": 2993.1,
+          "endSecond": 3019.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "58:44",
+          "startSecond": 5501.4,
+          "endSecond": 5527.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "18:53",
+          "startSecond": 1308.9,
+          "endSecond": 1334.9,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.69,
+          "reason": "継続品質 +0.2 / 接点・BD +0.2 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "beka saghinadze|georgia",
+      "playerName": "Beka Saghinadze",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": 4.43,
+      "momentumAdded": 7.55,
+      "momentumLost": 3.12,
+      "scoringThreat": 2.4,
+      "territory": 0.88,
+      "possessionQuality": 1.23,
+      "contactBreakdown": 1.43,
+      "disciplineTurnover": -1.5,
+      "actions": 86,
+      "topActions": [
+        {
+          "time": "13:29",
+          "startSecond": 843.4,
+          "endSecond": 869.4,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "14:39",
+          "startSecond": 985.8,
+          "endSecond": 1011.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.1,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "8:19",
+          "startSecond": 499.2,
+          "endSecond": 525.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.89,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "40:23",
+          "startSecond": 3979.3,
+          "endSecond": 4005.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.78,
+          "reason": "接点・BD +0.5"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "fetuli paea|tonga",
+      "playerName": "Fetuli Paea",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": 4.18,
+      "momentumAdded": 9.49,
+      "momentumLost": 5.31,
+      "scoringThreat": 1.68,
+      "territory": 1.08,
+      "possessionQuality": 3.79,
+      "contactBreakdown": -0.86,
+      "disciplineTurnover": -1.5,
+      "actions": 48,
+      "topActions": [
+        {
+          "time": "3:40",
+          "startSecond": 221.2,
+          "endSecond": 247.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "12:19",
+          "startSecond": 772.9,
+          "endSecond": 798.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.29,
+          "reason": "接点・BD +0.7 / テリトリー +0.3 / 継続品質 +0.2"
+        },
+        {
+          "time": "7:59",
+          "startSecond": 479.4,
+          "endSecond": 505.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.16,
+          "reason": "接点・BD +0.7 / テリトリー +0.3 / 継続品質 +0.2"
+        },
+        {
+          "time": "1:39",
+          "startSecond": 100.1,
+          "endSecond": 126.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.02,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "31:37",
+          "startSecond": 2144.6,
+          "endSecond": 2170.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.97,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "12:20",
+          "startSecond": 774,
+          "endSecond": 800,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "31:18",
+          "startSecond": 2125.3,
+          "endSecond": 2151.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "31:10",
+          "startSecond": 2117.8,
+          "endSecond": 2143.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "37:20",
+          "startSecond": 2564.7,
+          "endSecond": 2590.7,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.61,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "31:18",
+          "startSecond": 2125.3,
+          "endSecond": 2151.3,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 0.6,
+          "reason": "接点・BD +0.2 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "sione havili talitui|tonga",
+      "playerName": "Sione Havili Talitui",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": 3.64,
+      "momentumAdded": 10.48,
+      "momentumLost": 6.85,
+      "scoringThreat": 4.44,
+      "territory": 0.28,
+      "possessionQuality": 3.77,
+      "contactBreakdown": -1.1,
+      "disciplineTurnover": -3.75,
+      "actions": 100,
+      "topActions": [
+        {
+          "time": "21:48",
+          "startSecond": 1483.9,
+          "endSecond": 1509.9,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "33:05",
+          "startSecond": 2303.8,
+          "endSecond": 2329.8,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "39:22",
+          "startSecond": 2687,
+          "endSecond": 2713,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "3:18",
+          "startSecond": 198.6,
+          "endSecond": 224.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.12,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "49:23",
+          "startSecond": 4629.1,
+          "endSecond": 4655.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.98,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "70:04",
+          "startSecond": 6652.8,
+          "endSecond": 6678.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.91,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "37:16",
+          "startSecond": 2561.2,
+          "endSecond": 2587.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "70:04",
+          "startSecond": 6652.8,
+          "endSecond": 6678.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "70:27",
+          "startSecond": 6675.4,
+          "endSecond": 6701.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "36:11",
+          "startSecond": 2496.6,
+          "endSecond": 2522.6,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.56,
+          "reason": "継続品質 +0.2 / 接点・BD +0.2 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "giorgi mamaiashvili|georgia",
+      "playerName": "Giorgi Mamaiashvili",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": -3.35,
+      "momentumAdded": 0.6,
+      "momentumLost": 3.95,
+      "scoringThreat": 0.6,
+      "territory": 0,
+      "possessionQuality": 0,
+      "contactBreakdown": -0.7,
+      "disciplineTurnover": -3.25,
+      "actions": 18,
+      "topActions": [
+        {
+          "time": "55:15",
+          "startSecond": 5017,
+          "endSecond": 5043,
+          "action": "Card",
+          "result": "Foul Play",
+          "impact": -2,
+          "reason": "規律・TO -2.0"
+        },
+        {
+          "time": "55:15",
+          "startSecond": 5016.8,
+          "endSecond": 5042.8,
+          "action": "Penalty Conceded",
+          "result": "Yellow Card",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "lolesio sailosi|tonga",
+      "playerName": "Lolesio Sailosi",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": -3.31,
+      "momentumAdded": 0.95,
+      "momentumLost": 4.26,
+      "scoringThreat": 0.24,
+      "territory": 0.83,
+      "possessionQuality": -0.12,
+      "contactBreakdown": -2.76,
+      "disciplineTurnover": -1.5,
+      "actions": 18,
+      "topActions": [
+        {
+          "time": "71:05",
+          "startSecond": 6713,
+          "endSecond": 6739,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "48:42",
+          "startSecond": 4551.7,
+          "endSecond": 4577.7,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 0.7,
+          "reason": "テリトリー +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "giorgi javakhia|georgia",
+      "playerName": "Giorgi Javakhia",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": 3.01,
+      "momentumAdded": 8.96,
+      "momentumLost": 5.96,
+      "scoringThreat": 2.04,
+      "territory": 1.18,
+      "possessionQuality": 2.52,
+      "contactBreakdown": 1.28,
+      "disciplineTurnover": -4,
+      "actions": 55,
+      "topActions": [
+        {
+          "time": "68:37",
+          "startSecond": 6565.2,
+          "endSecond": 6591.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "43:16",
+          "startSecond": 4152.3,
+          "endSecond": 4178.3,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "49:32",
+          "startSecond": 4637.4,
+          "endSecond": 4663.4,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "52:34",
+          "startSecond": 4820.2,
+          "endSecond": 4846.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.15,
+          "reason": "接点・BD +0.7 / テリトリー +0.3"
+        },
+        {
+          "time": "40:32",
+          "startSecond": 3988.7,
+          "endSecond": 4014.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.1,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "52:15",
+          "startSecond": 4800.5,
+          "endSecond": 4826.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.02,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "52:49",
+          "startSecond": 4835.2,
+          "endSecond": 4861.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.02,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "45:33",
+          "startSecond": 4362.4,
+          "endSecond": 4388.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "52:36",
+          "startSecond": 4822.2,
+          "endSecond": 4848.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "52:50",
+          "startSecond": 4836.1,
+          "endSecond": 4862.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "ben tameifuna|tonga",
+      "playerName": "Ben Tameifuna",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": -2.8,
+      "momentumAdded": 3.98,
+      "momentumLost": 6.77,
+      "scoringThreat": 1.2,
+      "territory": 0.6,
+      "possessionQuality": 0.51,
+      "contactBreakdown": -3.81,
+      "disciplineTurnover": -1.3,
+      "actions": 71,
+      "topActions": [
+        {
+          "time": "6:28",
+          "startSecond": 388.3,
+          "endSecond": 414.3,
+          "action": "Carry",
+          "result": "Penalty Won",
+          "impact": 1.42,
+          "reason": "規律・TO +1.2 / テリトリー +0.2"
+        },
+        {
+          "time": "17:34",
+          "startSecond": 1230.5,
+          "endSecond": 1256.5,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "27:52",
+          "startSecond": 1848,
+          "endSecond": 1874,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "20:54",
+          "startSecond": 1429.7,
+          "endSecond": 1455.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.06,
+          "reason": "接点・BD +0.7 / テリトリー +0.3"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "tau koloamatangi|tonga",
+      "playerName": "Tau Koloamatangi",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": 2.52,
+      "momentumAdded": 4.39,
+      "momentumLost": 1.88,
+      "scoringThreat": 1.44,
+      "territory": 0.23,
+      "possessionQuality": 0.48,
+      "contactBreakdown": 1.62,
+      "disciplineTurnover": -1.25,
+      "actions": 34,
+      "topActions": [
+        {
+          "time": "63:41",
+          "startSecond": 6122.2,
+          "endSecond": 6148.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "65:06",
+          "startSecond": 6225.8,
+          "endSecond": 6251.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.87,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "65:07",
+          "startSecond": 6226.8,
+          "endSecond": 6252.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "73:45",
+          "startSecond": 6914.6,
+          "endSecond": 6940.6,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.62,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "siaosi nginingini|tonga",
+      "playerName": "Siaosi Nginingini",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": -2.45,
+      "momentumAdded": 13.49,
+      "momentumLost": 15.94,
+      "scoringThreat": 8.28,
+      "territory": -5.2,
+      "possessionQuality": 5.17,
+      "contactBreakdown": -5.25,
+      "disciplineTurnover": -5.45,
+      "actions": 248,
+      "topActions": [
+        {
+          "time": "58:46",
+          "startSecond": 5504.3,
+          "endSecond": 5530.3,
+          "action": "Tackle",
+          "result": "Pen Conceded",
+          "impact": -1.55,
+          "reason": "規律・TO -1.2 / 接点・BD -0.3"
+        },
+        {
+          "time": "8:17",
+          "startSecond": 497.5,
+          "endSecond": 523.5,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "55:15",
+          "startSecond": 5016.6,
+          "endSecond": 5042.6,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "58:50",
+          "startSecond": 5507.8,
+          "endSecond": 5533.8,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "13:10",
+          "startSecond": 823.5,
+          "endSecond": 849.5,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.22,
+          "reason": "テリトリー +1.2"
+        },
+        {
+          "time": "60:47",
+          "startSecond": 5863,
+          "endSecond": 5889,
+          "action": "Restart",
+          "result": "Restart Opp Collection",
+          "impact": 0.98,
+          "reason": "テリトリー +1.0"
+        },
+        {
+          "time": "31:16",
+          "startSecond": 2123.7,
+          "endSecond": 2149.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "31:16",
+          "startSecond": 2124.1,
+          "endSecond": 2150.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "70:00",
+          "startSecond": 6648.3,
+          "endSecond": 6674.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "43:15",
+          "startSecond": 4152,
+          "endSecond": 4178,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.7,
+          "reason": "継続品質 -0.6 / テリトリー -0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "georges shvelidze|georgia",
+      "playerName": "Georges Shvelidze",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": 2.36,
+      "momentumAdded": 4.46,
+      "momentumLost": 2.1,
+      "scoringThreat": 0.12,
+      "territory": 0.43,
+      "possessionQuality": 3.03,
+      "contactBreakdown": -1.22,
+      "disciplineTurnover": 0,
+      "actions": 16,
+      "topActions": [
+        {
+          "time": "76:37",
+          "startSecond": 7231.2,
+          "endSecond": 7257.2,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 1.23,
+          "reason": "テリトリー +0.5 / 接点・BD +0.4 / 継続品質 +0.4"
+        },
+        {
+          "time": "76:38",
+          "startSecond": 7232.2,
+          "endSecond": 7258.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "76:39",
+          "startSecond": 7233.1,
+          "endSecond": 7259.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "76:40",
+          "startSecond": 7233.9,
+          "endSecond": 7259.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "76:40",
+          "startSecond": 7234.1,
+          "endSecond": 7260.1,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "luka nioradze|georgia",
+      "playerName": "Luka Nioradze",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": -2.32,
+      "momentumAdded": 0.69,
+      "momentumLost": 3.01,
+      "scoringThreat": 0.48,
+      "territory": 0,
+      "possessionQuality": 0,
+      "contactBreakdown": 0.45,
+      "disciplineTurnover": -3.25,
+      "actions": 8,
+      "topActions": [
+        {
+          "time": "73:55",
+          "startSecond": 6924.2,
+          "endSecond": 6950.2,
+          "action": "Card",
+          "result": "Foul Play",
+          "impact": -1.88,
+          "reason": "規律・TO -2.0"
+        },
+        {
+          "time": "73:55",
+          "startSecond": 6923.9,
+          "endSecond": 6949.9,
+          "action": "Penalty Conceded",
+          "result": "Red Card",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "kelemete finau|tonga",
+      "playerName": "Kelemete Finau",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": -2.28,
+      "momentumAdded": 2.56,
+      "momentumLost": 4.84,
+      "scoringThreat": 1.2,
+      "territory": 0.4,
+      "possessionQuality": 0.49,
+      "contactBreakdown": -1.87,
+      "disciplineTurnover": -2.5,
+      "actions": 52,
+      "topActions": [
+        {
+          "time": "14:35",
+          "startSecond": 982.2,
+          "endSecond": 1008.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "37:10",
+          "startSecond": 2555.6,
+          "endSecond": 2581.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.16,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "10:06",
+          "startSecond": 606.3,
+          "endSecond": 632.3,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "3:28",
+          "startSecond": 209.1,
+          "endSecond": 235.1,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.71,
+          "reason": "接点・BD -0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "giorgi akhaladze|georgia",
+      "playerName": "Giorgi Akhaladze",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": 1.96,
+      "momentumAdded": 6.94,
+      "momentumLost": 4.98,
+      "scoringThreat": 1.44,
+      "territory": 0.68,
+      "possessionQuality": 1.44,
+      "contactBreakdown": 2.4,
+      "disciplineTurnover": -4,
+      "actions": 58,
+      "topActions": [
+        {
+          "time": "21:18",
+          "startSecond": 1454.1,
+          "endSecond": 1480.1,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "45:21",
+          "startSecond": 4350.4,
+          "endSecond": 4376.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.45,
+          "reason": "接点・BD +0.7 / 継続品質 +0.4 / テリトリー +0.4"
+        },
+        {
+          "time": "0:05",
+          "startSecond": 0,
+          "endSecond": 22.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "19:35",
+          "startSecond": 1351.2,
+          "endSecond": 1377.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "21:44",
+          "startSecond": 1479.9,
+          "endSecond": 1505.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.96,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "12:31",
+          "startSecond": 785,
+          "endSecond": 811,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.95,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "45:21",
+          "startSecond": 4350.6,
+          "endSecond": 4376.6,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "luka ivanishvili|georgia",
+      "playerName": "Luka Ivanishvili",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": 1.89,
+      "momentumAdded": 7.58,
+      "momentumLost": 5.69,
+      "scoringThreat": 3.84,
+      "territory": 0.43,
+      "possessionQuality": 2.23,
+      "contactBreakdown": -3.36,
+      "disciplineTurnover": -1.25,
+      "actions": 101,
+      "topActions": [
+        {
+          "time": "54:21",
+          "startSecond": 4926.3,
+          "endSecond": 4952.3,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "58:45",
+          "startSecond": 5503.3,
+          "endSecond": 5529.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.03,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "40:34",
+          "startSecond": 3990.6,
+          "endSecond": 4016.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "76:34",
+          "startSecond": 7228,
+          "endSecond": 7254,
+          "action": "Counter Attack",
+          "result": "",
+          "impact": 0.7,
+          "reason": "テリトリー +0.7"
+        },
+        {
+          "time": "52:16",
+          "startSecond": 4801.6,
+          "endSecond": 4827.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "ilia spanderashvili|georgia",
+      "playerName": "Ilia Spanderashvili",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": -1.88,
+      "momentumAdded": 1.77,
+      "momentumLost": 3.65,
+      "scoringThreat": 0.84,
+      "territory": 0.08,
+      "possessionQuality": -0.37,
+      "contactBreakdown": 0.32,
+      "disciplineTurnover": -2.75,
+      "actions": 27,
+      "topActions": [
+        {
+          "time": "75:26",
+          "startSecond": 7136.7,
+          "endSecond": 7162.7,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "79:51",
+          "startSecond": 7439.5,
+          "endSecond": 7465.5,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "45:35",
+          "startSecond": 4364.7,
+          "endSecond": 4390.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.03,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "75:23",
+          "startSecond": 7133.7,
+          "endSecond": 7159.7,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.55,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "tornike jalagonia|georgia",
+      "playerName": "Tornike Jalagonia",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": 1.45,
+      "momentumAdded": 9.24,
+      "momentumLost": 7.79,
+      "scoringThreat": 2.28,
+      "territory": 0.85,
+      "possessionQuality": 3.91,
+      "contactBreakdown": -3.14,
+      "disciplineTurnover": -2.45,
+      "actions": 102,
+      "topActions": [
+        {
+          "time": "11:29",
+          "startSecond": 722.9,
+          "endSecond": 748.9,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "52:58",
+          "startSecond": 4843.5,
+          "endSecond": 4869.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.08,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "11:26",
+          "startSecond": 719.8,
+          "endSecond": 745.8,
+          "action": "Carry",
+          "result": "Penalty Conceded",
+          "impact": -0.86,
+          "reason": "規律・TO -1.2 / 接点・BD +0.2"
+        },
+        {
+          "time": "40:24",
+          "startSecond": 3980.4,
+          "endSecond": 4006.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "60:49",
+          "startSecond": 5865.1,
+          "endSecond": 5891.1,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.66,
+          "reason": "継続品質 +0.3 / テリトリー +0.2 / 接点・BD +0.2"
+        },
+        {
+          "time": "42:31",
+          "startSecond": 4107.3,
+          "endSecond": 4133.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "52:30",
+          "startSecond": 4815.4,
+          "endSecond": 4841.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "52:59",
+          "startSecond": 4844.4,
+          "endSecond": 4870.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "42:30",
+          "startSecond": 4106.2,
+          "endSecond": 4132.2,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.56,
+          "reason": "継続品質 +0.2 / 接点・BD +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "16:04",
+          "startSecond": 1074.1,
+          "endSecond": 1100.1,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.55,
+          "reason": "接点・BD +0.2 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "justin mataele|tonga",
+      "playerName": "Justin Mataele",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": 1.4,
+      "momentumAdded": 8.72,
+      "momentumLost": 7.32,
+      "scoringThreat": 3.6,
+      "territory": 0.75,
+      "possessionQuality": 1.11,
+      "contactBreakdown": -2.56,
+      "disciplineTurnover": -1.5,
+      "actions": 103,
+      "topActions": [
+        {
+          "time": "61:55",
+          "startSecond": 5935.7,
+          "endSecond": 5961.7,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "49:38",
+          "startSecond": 4643.9,
+          "endSecond": 4669.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.93,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "79:37",
+          "startSecond": 7425.8,
+          "endSecond": 7451.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.7,
+          "reason": "接点・BD +0.5"
+        },
+        {
+          "time": "6:31",
+          "startSecond": 391.7,
+          "endSecond": 417.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "mikheil babunashvili|georgia",
+      "playerName": "Mikheil Babunashvili",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": 1.35,
+      "momentumAdded": 1.53,
+      "momentumLost": 0.18,
+      "scoringThreat": 1.2,
+      "territory": -0.3,
+      "possessionQuality": 0.31,
+      "contactBreakdown": 0.14,
+      "disciplineTurnover": 0,
+      "actions": 35,
+      "topActions": [],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "samiuela moli|tonga",
+      "playerName": "Samiuela Moli",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": 1.32,
+      "momentumAdded": 6.91,
+      "momentumLost": 5.6,
+      "scoringThreat": 2.28,
+      "territory": -0.25,
+      "possessionQuality": 0.25,
+      "contactBreakdown": 0.19,
+      "disciplineTurnover": -1.15,
+      "actions": 69,
+      "topActions": [
+        {
+          "time": "25:25",
+          "startSecond": 1700.6,
+          "endSecond": 1726.6,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "51:02",
+          "startSecond": 4727.5,
+          "endSecond": 4753.5,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "23:28",
+          "startSecond": 1584.4,
+          "endSecond": 1610.4,
+          "action": "Lineout Throw",
+          "result": "Lost Not Straight",
+          "impact": -0.77,
+          "reason": "規律・TO -0.8"
+        },
+        {
+          "time": "31:28",
+          "startSecond": 2135.6,
+          "endSecond": 2161.6,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.68,
+          "reason": "継続品質 -0.6 / テリトリー -0.3"
+        },
+        {
+          "time": "7:24",
+          "startSecond": 445.1,
+          "endSecond": 471.1,
+          "action": "Lineout Throw",
+          "result": "Lost Handling Error",
+          "impact": -0.63,
+          "reason": "規律・TO -0.8"
+        },
+        {
+          "time": "3:07",
+          "startSecond": 187.4,
+          "endSecond": 213.4,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.61,
+          "reason": "テリトリー +0.3 / 接点・BD +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "12:15",
+          "startSecond": 768.7,
+          "endSecond": 794.7,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.6,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "37:06",
+          "startSecond": 2550.8,
+          "endSecond": 2576.8,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.6,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "50:50",
+          "startSecond": 4715.9,
+          "endSecond": 4741.9,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "salesi tuifua|tonga",
+      "playerName": "Salesi Tuifua",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": -1.16,
+      "momentumAdded": 2.5,
+      "momentumLost": 3.66,
+      "scoringThreat": 0.96,
+      "territory": 1.41,
+      "possessionQuality": 0.16,
+      "contactBreakdown": -0.94,
+      "disciplineTurnover": -2.75,
+      "actions": 38,
+      "topActions": [
+        {
+          "time": "40:20",
+          "startSecond": 2833.2,
+          "endSecond": 2859.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "21:20",
+          "startSecond": 1455.7,
+          "endSecond": 1481.7,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.48,
+          "reason": "テリトリー +1.5"
+        },
+        {
+          "time": "5:38",
+          "startSecond": 338.5,
+          "endSecond": 364.5,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "taniela filimone|tonga",
+      "playerName": "Taniela Filimone",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": -1.02,
+      "momentumAdded": 4.92,
+      "momentumLost": 5.94,
+      "scoringThreat": 1.08,
+      "territory": 0.02,
+      "possessionQuality": 2.22,
+      "contactBreakdown": -1.35,
+      "disciplineTurnover": -3,
+      "actions": 46,
+      "topActions": [
+        {
+          "time": "40:05",
+          "startSecond": 3961.1,
+          "endSecond": 3987.1,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "53:26",
+          "startSecond": 4871.5,
+          "endSecond": 4897.5,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "70:03",
+          "startSecond": 6651.5,
+          "endSecond": 6677.5,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 0.82,
+          "reason": "接点・BD +0.4"
+        },
+        {
+          "time": "70:03",
+          "startSecond": 6651.5,
+          "endSecond": 6677.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "31:30",
+          "startSecond": 2138.2,
+          "endSecond": 2164.2,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.69,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "70:55",
+          "startSecond": 6703.4,
+          "endSecond": 6729.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "70:52",
+          "startSecond": 6700.9,
+          "endSecond": 6726.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.55,
+          "reason": "接点・BD +0.4 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "paula latu|tonga",
+      "playerName": "Paula Latu",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": -0.78,
+      "momentumAdded": 1.85,
+      "momentumLost": 2.63,
+      "scoringThreat": 1.2,
+      "territory": 0.1,
+      "possessionQuality": 0.65,
+      "contactBreakdown": -0.28,
+      "disciplineTurnover": -2.45,
+      "actions": 24,
+      "topActions": [
+        {
+          "time": "58:03",
+          "startSecond": 5364.4,
+          "endSecond": 5390.4,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "58:00",
+          "startSecond": 5361.3,
+          "endSecond": 5387.3,
+          "action": "Carry",
+          "result": "Penalty Conceded",
+          "impact": -1.03,
+          "reason": "規律・TO -1.2"
+        },
+        {
+          "time": "80:41",
+          "startSecond": 7489.5,
+          "endSecond": 7515.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "harrison mataele|tonga",
+      "playerName": "Harrison Mataele",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": -0.76,
+      "momentumAdded": 2.43,
+      "momentumLost": 3.19,
+      "scoringThreat": 1.2,
+      "territory": 0.05,
+      "possessionQuality": 0.48,
+      "contactBreakdown": -1.24,
+      "disciplineTurnover": -1.25,
+      "actions": 46,
+      "topActions": [
+        {
+          "time": "44:20",
+          "startSecond": 4216.6,
+          "endSecond": 4242.6,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "john ika|tonga",
+      "playerName": "John Ika",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": -0.72,
+      "momentumAdded": 2.05,
+      "momentumLost": 2.77,
+      "scoringThreat": 1.56,
+      "territory": -0.85,
+      "possessionQuality": 0.72,
+      "contactBreakdown": 0.45,
+      "disciplineTurnover": -2.6,
+      "actions": 31,
+      "topActions": [
+        {
+          "time": "72:42",
+          "startSecond": 6851,
+          "endSecond": 6877,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "76:29",
+          "startSecond": 7222.9,
+          "endSecond": 7248.9,
+          "action": "Scrum",
+          "result": "Lost Outright",
+          "impact": -0.98,
+          "reason": "規律・TO -1.1"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "lado chachanidze|georgia",
+      "playerName": "Lado Chachanidze",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": 0.67,
+      "momentumAdded": 4.76,
+      "momentumLost": 4.1,
+      "scoringThreat": 3.72,
+      "territory": -0.17,
+      "possessionQuality": 0.22,
+      "contactBreakdown": -1.6,
+      "disciplineTurnover": -1.5,
+      "actions": 80,
+      "topActions": [
+        {
+          "time": "53:24",
+          "startSecond": 4869.4,
+          "endSecond": 4895.4,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "11:16",
+          "startSecond": 710.4,
+          "endSecond": 736.4,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 0.79,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "34:36",
+          "startSecond": 2394.9,
+          "endSecond": 2420.9,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.58,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "semisi paea|tonga",
+      "playerName": "Semisi Paea",
+      "team": "Tonga",
+      "matchId": "942103",
+      "netMomentum": 0.39,
+      "momentumAdded": 5.87,
+      "momentumLost": 5.48,
+      "scoringThreat": 1.44,
+      "territory": 0.48,
+      "possessionQuality": 2.41,
+      "contactBreakdown": -1.18,
+      "disciplineTurnover": -2.75,
+      "actions": 58,
+      "topActions": [
+        {
+          "time": "27:07",
+          "startSecond": 1802.9,
+          "endSecond": 1828.9,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "40:58",
+          "startSecond": 2870.8,
+          "endSecond": 2896.8,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "3:01",
+          "startSecond": 181.6,
+          "endSecond": 207.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.21,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.2"
+        },
+        {
+          "time": "31:19",
+          "startSecond": 2127.1,
+          "endSecond": 2153.1,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 0.78,
+          "reason": "接点・BD +0.4"
+        },
+        {
+          "time": "31:19",
+          "startSecond": 2127.1,
+          "endSecond": 2153.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "3:01",
+          "startSecond": 181.6,
+          "endSecond": 207.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "luka japaridze|georgia",
+      "playerName": "Luka Japaridze",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": -0.14,
+      "momentumAdded": 1.26,
+      "momentumLost": 1.4,
+      "scoringThreat": 0.36,
+      "territory": 0,
+      "possessionQuality": 0,
+      "contactBreakdown": -0.5,
+      "disciplineTurnover": 0,
+      "actions": 17,
+      "topActions": [
+        {
+          "time": "65:44",
+          "startSecond": 6313,
+          "endSecond": 6339,
+          "action": "Tackle",
+          "result": "Turnover Won",
+          "impact": 0.57,
+          "reason": "接点・BD +0.5"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "gela aprasidze|georgia",
+      "playerName": "Gela Aprasidze",
+      "team": "Georgia",
+      "matchId": "942103",
+      "netMomentum": 0.03,
+      "momentumAdded": 3.58,
+      "momentumLost": 3.55,
+      "scoringThreat": 0.6,
+      "territory": 0.7,
+      "possessionQuality": 0.96,
+      "contactBreakdown": -0.73,
+      "disciplineTurnover": -1.5,
+      "actions": 20,
+      "topActions": [
+        {
+          "time": "76:50",
+          "startSecond": 7243.8,
+          "endSecond": 7269.8,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "73:50",
+          "startSecond": 6919.6,
+          "endSecond": 6945.6,
+          "action": "Attacking Qualities",
+          "result": "Kick Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "73:50",
+          "startSecond": 6919.4,
+          "endSecond": 6945.4,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.66,
+          "reason": "継続品質 +0.2 / 接点・BD +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "68:36",
+          "startSecond": 6564.7,
+          "endSecond": 6590.7,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.65,
+          "reason": "継続品質 -0.6"
+        },
+        {
+          "time": "76:41",
+          "startSecond": 7235.6,
+          "endSecond": 7261.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "73:47",
+          "startSecond": 6916.6,
+          "endSecond": 6942.6,
+          "action": "Kick",
+          "result": "Own Player - Collected",
+          "impact": 0.63,
+          "reason": "テリトリー +0.6"
+        }
+      ],
+      "reviewPriority": "High"
+    }
+  ]
+}

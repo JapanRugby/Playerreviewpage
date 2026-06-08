@@ -1,784 +1,3197 @@
-[
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 19647,
-    "playerName": "Finn Russell",
-    "net_momentum": 16.31162938415236,
-    "momentum_added": 18.596749417468835,
-    "momentum_lost": 2.285120033316475,
-    "events_count": 101,
-    "scoring_threat_player_team": 12.48,
-    "territory_player_team": 31.222,
-    "possession_quality_player_team": 1.47,
-    "contact_breakdown_player_team": -1.93,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 11041,
-    "playerName": "George Ford",
-    "net_momentum": 10.931136084400547,
-    "momentum_added": 13.114266753359964,
-    "momentum_lost": 2.183130668959416,
-    "events_count": 108,
-    "scoring_threat_player_team": 8.6,
-    "territory_player_team": 16.142,
-    "possession_quality_player_team": 1.25,
-    "contact_breakdown_player_team": -1.94,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 21898,
-    "playerName": "Duhan van der Merwe",
-    "net_momentum": 9.799942775799428,
-    "momentum_added": 12.164636768326634,
-    "momentum_lost": 2.3646939925272066,
-    "events_count": 41,
-    "scoring_threat_player_team": 20.04,
-    "territory_player_team": 2.936,
-    "possession_quality_player_team": 7.96,
-    "contact_breakdown_player_team": -1.67,
-    "discipline_turnover_player_team": -5.05,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 25952,
-    "playerName": "George Furbank",
-    "net_momentum": 4.797995137534623,
-    "momentum_added": 6.442201128809812,
-    "momentum_lost": 1.6442059912751894,
-    "events_count": 76,
-    "scoring_threat_player_team": 7.44,
-    "territory_player_team": 5.316,
-    "possession_quality_player_team": 5.535,
-    "contact_breakdown_player_team": 0.24,
-    "discipline_turnover_player_team": -1.8,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 10187,
-    "playerName": "Jamie George",
-    "net_momentum": 3.900417297936437,
-    "momentum_added": 4.445243864305019,
-    "momentum_lost": 0.5448265663685815,
-    "events_count": 88,
-    "scoring_threat_player_team": 1.44,
-    "territory_player_team": 0.425,
-    "possession_quality_player_team": 2.51,
-    "contact_breakdown_player_team": 0.0300000000000001,
-    "discipline_turnover_player_team": 3.05,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 38481,
-    "playerName": "Immanuel Feyi-Waboso",
-    "net_momentum": 3.384843748354463,
-    "momentum_added": 3.390612382845905,
-    "momentum_lost": 0.0057686344914419,
-    "events_count": 24,
-    "scoring_threat_player_team": 6.96,
-    "territory_player_team": 1.25,
-    "possession_quality_player_team": 4.7,
-    "contact_breakdown_player_team": 2.06,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 37960,
-    "playerName": "Fin Smith",
-    "net_momentum": 3.039812824798631,
-    "momentum_added": 3.318089066684451,
-    "momentum_lost": 0.2782762418858194,
-    "events_count": 38,
-    "scoring_threat_player_team": 2.48,
-    "territory_player_team": 5.924,
-    "possession_quality_player_team": 0.73,
-    "contact_breakdown_player_team": 0.13,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 19087,
-    "playerName": "Henry Slade",
-    "net_momentum": 2.975860180007644,
-    "momentum_added": 5.053956151823171,
-    "momentum_lost": 2.078095971815527,
-    "events_count": 50,
-    "scoring_threat_player_team": 1.68,
-    "territory_player_team": 4.432,
-    "possession_quality_player_team": 0.7099999999999999,
-    "contact_breakdown_player_team": -0.91,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 29556,
-    "playerName": "Cameron Redpath",
-    "net_momentum": 2.92512050684258,
-    "momentum_added": 3.199968012542516,
-    "momentum_lost": 0.2748475056999351,
-    "events_count": 38,
-    "scoring_threat_player_team": 0.48,
-    "territory_player_team": 1.15,
-    "possession_quality_player_team": 4.7,
-    "contact_breakdown_player_team": 0.54,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 19642,
-    "playerName": "George Turner",
-    "net_momentum": 2.3828997046975946,
-    "momentum_added": 3.326404746928828,
-    "momentum_lost": 0.943505042231233,
-    "events_count": 77,
-    "scoring_threat_player_team": 2.28,
-    "territory_player_team": -0.0249999999999999,
-    "possession_quality_player_team": 1.575,
-    "contact_breakdown_player_team": -0.2299999999999999,
-    "discipline_turnover_player_team": 0.4499999999999997,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 18510,
-    "playerName": "Elliot Daly",
-    "net_momentum": 2.3406088755762227,
-    "momentum_added": 2.9575338451752224,
-    "momentum_lost": 0.6169249695989999,
-    "events_count": 40,
-    "scoring_threat_player_team": 1.3199999999999998,
-    "territory_player_team": 2.6830000000000003,
-    "possession_quality_player_team": 4.405,
-    "contact_breakdown_player_team": -0.69,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 22794,
-    "playerName": "Huw Jones",
-    "net_momentum": 2.0318327912577416,
-    "momentum_added": 2.9981891227140034,
-    "momentum_lost": 0.9663563314562612,
-    "events_count": 54,
-    "scoring_threat_player_team": 1.08,
-    "territory_player_team": 1.591,
-    "possession_quality_player_team": 5.955,
-    "contact_breakdown_player_team": -3.95,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 20716,
-    "playerName": "Jack Dempsey",
-    "net_momentum": 1.911574649075956,
-    "momentum_added": 2.9130822714140354,
-    "momentum_lost": 1.0015076223380794,
-    "events_count": 91,
-    "scoring_threat_player_team": 2.04,
-    "territory_player_team": 0.825,
-    "possession_quality_player_team": 1.57,
-    "contact_breakdown_player_team": -0.2499999999999999,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 23744,
-    "playerName": "Ben White",
-    "net_momentum": 1.8923356697056424,
-    "momentum_added": 4.263402845518131,
-    "momentum_lost": 2.3710671758124886,
-    "events_count": 171,
-    "scoring_threat_player_team": 5.52,
-    "territory_player_team": 3.011,
-    "possession_quality_player_team": 1.535,
-    "contact_breakdown_player_team": -1.7599999999999998,
-    "discipline_turnover_player_team": 1.65,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 19376,
-    "playerName": "Ben Spencer",
-    "net_momentum": 1.5071998809605127,
-    "momentum_added": 2.3577857273373843,
-    "momentum_lost": 0.8505858463768717,
-    "events_count": 125,
-    "scoring_threat_player_team": 3.72,
-    "territory_player_team": 1.494,
-    "possession_quality_player_team": 3.255,
-    "contact_breakdown_player_team": 0.18,
-    "discipline_turnover_player_team": -1.6,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 23315,
-    "playerName": "Blair Kinghorn",
-    "net_momentum": 1.4154917959717244,
-    "momentum_added": 2.9726730384035056,
-    "momentum_lost": 1.5571812424317812,
-    "events_count": 50,
-    "scoring_threat_player_team": 0.12,
-    "territory_player_team": 2.777,
-    "possession_quality_player_team": 2.07,
-    "contact_breakdown_player_team": 0.59,
-    "discipline_turnover_player_team": -2.7,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 35631,
-    "playerName": "George Martin",
-    "net_momentum": 1.138571921491648,
-    "momentum_added": 1.8622427997473885,
-    "momentum_lost": 0.7236708782557404,
-    "events_count": 53,
-    "scoring_threat_player_team": 1.56,
-    "territory_player_team": 0.675,
-    "possession_quality_player_team": 2.935,
-    "contact_breakdown_player_team": 0.89,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 21753,
-    "playerName": "Zander Fagerson",
-    "net_momentum": 0.8091856036573895,
-    "momentum_added": 1.1525138002345776,
-    "momentum_lost": 0.3433281965771882,
-    "events_count": 56,
-    "scoring_threat_player_team": 2.4,
-    "territory_player_team": 0.275,
-    "possession_quality_player_team": 1.515,
-    "contact_breakdown_player_team": -0.43,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 34938,
-    "playerName": "Ethan Roots",
-    "net_momentum": 0.7863143949019251,
-    "momentum_added": 1.5558709716553711,
-    "momentum_lost": 0.769556576753446,
-    "events_count": 59,
-    "scoring_threat_player_team": 1.44,
-    "territory_player_team": 0.275,
-    "possession_quality_player_team": 2.0500000000000003,
-    "contact_breakdown_player_team": -0.2799999999999999,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 22764,
-    "playerName": "Scott Cummings",
-    "net_momentum": 0.6311088180418304,
-    "momentum_added": 1.121286120987852,
-    "momentum_lost": 0.4901773029460216,
-    "events_count": 91,
-    "scoring_threat_player_team": 1.7999999999999998,
-    "territory_player_team": 0.0,
-    "possession_quality_player_team": 0.5750000000000001,
-    "contact_breakdown_player_team": -1.64,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 20440,
-    "playerName": "Maro Itoje",
-    "net_momentum": 0.5984217449180739,
-    "momentum_added": 2.509465802392301,
-    "momentum_lost": 1.911044057474228,
-    "events_count": 101,
-    "scoring_threat_player_team": 0.96,
-    "territory_player_team": 0.25,
-    "possession_quality_player_team": 2.315,
-    "contact_breakdown_player_team": -0.96,
-    "discipline_turnover_player_team": -2.15,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 35530,
-    "playerName": "Tommy Freeman",
-    "net_momentum": 0.4606840649002969,
-    "momentum_added": 2.144750310919187,
-    "momentum_lost": 1.6840662460188902,
-    "events_count": 50,
-    "scoring_threat_player_team": 0.84,
-    "territory_player_team": 1.5750000000000002,
-    "possession_quality_player_team": 3.125,
-    "contact_breakdown_player_team": -0.2799999999999999,
-    "discipline_turnover_player_team": -0.7,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 9054,
-    "playerName": "Dan Cole",
-    "net_momentum": 0.4342067640526654,
-    "momentum_added": 0.6082722791864316,
-    "momentum_lost": 0.1740655151337661,
-    "events_count": 42,
-    "scoring_threat_player_team": 0.72,
-    "territory_player_team": 0.2,
-    "possession_quality_player_team": 0.945,
-    "contact_breakdown_player_team": 0.01,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 33848,
-    "playerName": "Ben Healy",
-    "net_momentum": 0.4118633304255037,
-    "momentum_added": 0.5009451187223103,
-    "momentum_lost": 0.0890817882968065,
-    "events_count": 6,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 1.098,
-    "possession_quality_player_team": 0.0,
-    "contact_breakdown_player_team": -0.35,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 21630,
-    "playerName": "George Horne",
-    "net_momentum": 0.3502397855336802,
-    "momentum_added": 0.7575632965494927,
-    "momentum_lost": 0.4073235110158124,
-    "events_count": 41,
-    "scoring_threat_player_team": 0.12,
-    "territory_player_team": 0.216,
-    "possession_quality_player_team": 0.72,
-    "contact_breakdown_player_team": -0.35,
-    "discipline_turnover_player_team": 0.4000000000000001,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 16267,
-    "playerName": "Joe Marler",
-    "net_momentum": 0.3159461930335909,
-    "momentum_added": 0.3262015432405988,
-    "momentum_lost": 0.0102553502070078,
-    "events_count": 19,
-    "scoring_threat_player_team": 0.36,
-    "territory_player_team": 0.1,
-    "possession_quality_player_team": 0.53,
-    "contact_breakdown_player_team": 0.22,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 28595,
-    "playerName": "Kyle Steyn",
-    "net_momentum": 0.2873777180322714,
-    "momentum_added": 1.7254944816325215,
-    "momentum_lost": 1.4381167636002503,
-    "events_count": 47,
-    "scoring_threat_player_team": 0.84,
-    "territory_player_team": 0.125,
-    "possession_quality_player_team": 1.875,
-    "contact_breakdown_player_team": -2.2,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 23732,
-    "playerName": "Ben Earl",
-    "net_momentum": 0.1116757525054929,
-    "momentum_added": 3.724116892035554,
-    "momentum_lost": 3.612441139530061,
-    "events_count": 134,
-    "scoring_threat_player_team": 2.16,
-    "territory_player_team": 1.35,
-    "possession_quality_player_team": 5.315,
-    "contact_breakdown_player_team": 0.55,
-    "discipline_turnover_player_team": -3.05,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 44072,
-    "playerName": "Chandler Cunningham-South",
-    "net_momentum": 0.0844585147516383,
-    "momentum_added": 0.3893746787355777,
-    "momentum_lost": 0.3049161639839393,
-    "events_count": 28,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 0.075,
-    "possession_quality_player_team": 0.15,
-    "contact_breakdown_player_team": 0.5800000000000001,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 36472,
-    "playerName": "Theo Dan",
-    "net_momentum": 0.0777285246516103,
-    "momentum_added": 0.3970924436913345,
-    "momentum_lost": 0.3193639190397242,
-    "events_count": 16,
-    "scoring_threat_player_team": 0.24,
-    "territory_player_team": 0.0,
-    "possession_quality_player_team": 0.0,
-    "contact_breakdown_player_team": -0.7,
-    "discipline_turnover_player_team": 1.0499999999999998,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 19661,
-    "playerName": "Alec Hepburn",
-    "net_momentum": 0.0189787187236374,
-    "momentum_added": 0.3207838755472759,
-    "momentum_lost": 0.3018051568236384,
-    "events_count": 22,
-    "scoring_threat_player_team": 0.12,
-    "territory_player_team": 0.1,
-    "possession_quality_player_team": 0.265,
-    "contact_breakdown_player_team": -0.4599999999999999,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 22627,
-    "playerName": "Sam Skinner",
-    "net_momentum": -0.0790264162792707,
-    "momentum_added": 0.0,
-    "momentum_lost": 0.0790264162792707,
-    "events_count": 17,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 0.075,
-    "possession_quality_player_team": 0.16,
-    "contact_breakdown_player_team": -0.3399999999999999,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 22778,
-    "playerName": "Ellis Genge",
-    "net_momentum": -0.3416701389894001,
-    "momentum_added": 1.515505707790891,
-    "momentum_lost": 1.8571758467802917,
-    "events_count": 76,
-    "scoring_threat_player_team": 1.7999999999999998,
-    "territory_player_team": 0.6499999999999999,
-    "possession_quality_player_team": 1.395,
-    "contact_breakdown_player_team": 0.93,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 7635,
-    "playerName": "Danny Care",
-    "net_momentum": -0.4539247837519241,
-    "momentum_added": 1.9232297484032812,
-    "momentum_lost": 2.3771545321552057,
-    "events_count": 137,
-    "scoring_threat_player_team": 2.88,
-    "territory_player_team": -0.5909999999999997,
-    "possession_quality_player_team": 2.165,
-    "contact_breakdown_player_team": -0.52,
-    "discipline_turnover_player_team": -1.6,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 17125,
-    "playerName": "Grant Gilchrist",
-    "net_momentum": -0.482931903957869,
-    "momentum_added": 0.8209921490064328,
-    "momentum_lost": 1.303924052964302,
-    "events_count": 66,
-    "scoring_threat_player_team": 0.96,
-    "territory_player_team": -0.2,
-    "possession_quality_player_team": -0.255,
-    "contact_breakdown_player_team": -0.3899999999999999,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 21754,
-    "playerName": "Jamie Ritchie",
-    "net_momentum": -0.4886201222646891,
-    "momentum_added": 0.8733667240094343,
-    "momentum_lost": 1.3619868462741234,
-    "events_count": 46,
-    "scoring_threat_player_team": 1.92,
-    "territory_player_team": -0.075,
-    "possession_quality_player_team": 0.49,
-    "contact_breakdown_player_team": -0.75,
-    "discipline_turnover_player_team": -2.15,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 24121,
-    "playerName": "Will Stuart",
-    "net_momentum": -0.5746506355754903,
-    "momentum_added": 0.3711754072356529,
-    "momentum_lost": 0.9458260428111432,
-    "events_count": 37,
-    "scoring_threat_player_team": 0.36,
-    "territory_player_team": 0.35,
-    "possession_quality_player_team": 0.48,
-    "contact_breakdown_player_team": -0.0699999999999999,
-    "discipline_turnover_player_team": -2.15,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 28737,
-    "playerName": "Andy Christie",
-    "net_momentum": -0.6849164323628654,
-    "momentum_added": 0.1087691234516191,
-    "momentum_lost": 0.7936855558144845,
-    "events_count": 34,
-    "scoring_threat_player_team": 0.12,
-    "territory_player_team": 0.0249999999999999,
-    "possession_quality_player_team": 0.275,
-    "contact_breakdown_player_team": -1.6,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 21713,
-    "playerName": "Pierre Schoeman",
-    "net_momentum": -0.9626025897329008,
-    "momentum_added": 1.38103218583035,
-    "momentum_lost": 2.343634775563251,
-    "events_count": 81,
-    "scoring_threat_player_team": 2.64,
-    "territory_player_team": 0.65,
-    "possession_quality_player_team": 1.31,
-    "contact_breakdown_player_team": -1.7999999999999998,
-    "discipline_turnover_player_team": -4.5,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 21608,
-    "playerName": "Sam Underhill",
-    "net_momentum": -1.047844305971003,
-    "momentum_added": 0.6513849080210362,
-    "momentum_lost": 1.6992292139920393,
-    "events_count": 56,
-    "scoring_threat_player_team": 0.72,
-    "territory_player_team": 0.4999999999999999,
-    "possession_quality_player_team": 1.495,
-    "contact_breakdown_player_team": -1.21,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 31235,
-    "playerName": "Ewan Ashman",
-    "net_momentum": -1.1523829860429364,
-    "momentum_added": 1.6389987485886452,
-    "momentum_lost": 2.7913817346315817,
-    "events_count": 50,
-    "scoring_threat_player_team": 0.12,
-    "territory_player_team": -0.475,
-    "possession_quality_player_team": 1.04,
-    "contact_breakdown_player_team": -0.7999999999999998,
-    "discipline_turnover_player_team": -0.4000000000000001,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 30035,
-    "playerName": "Rory Darge",
-    "net_momentum": -1.5346475397272192,
-    "momentum_added": 1.7991272718075069,
-    "momentum_lost": 3.333774811534726,
-    "events_count": 100,
-    "scoring_threat_player_team": 2.16,
-    "territory_player_team": -0.0249999999999999,
-    "possession_quality_player_team": 0.6,
-    "contact_breakdown_player_team": -2.11,
-    "discipline_turnover_player_team": -2.15,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 29561,
-    "playerName": "Ollie Lawrence",
-    "net_momentum": -1.904880304478483,
-    "momentum_added": 1.2310721100582598,
-    "momentum_lost": 3.135952414536743,
-    "events_count": 59,
-    "scoring_threat_player_team": 0.48,
-    "territory_player_team": 0.6,
-    "possession_quality_player_team": 2.595,
-    "contact_breakdown_player_team": -0.27,
-    "discipline_turnover_player_team": -2.7,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 23331,
-    "playerName": "Sione Tuipulotu",
-    "net_momentum": -2.057830573543427,
-    "momentum_added": 0.604873929462917,
-    "momentum_lost": 2.662704503006344,
-    "events_count": 31,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 0.475,
-    "possession_quality_player_team": 1.595,
-    "contact_breakdown_player_team": 1.46,
-    "discipline_turnover_player_team": -2.35,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 29671,
-    "playerName": "Elliot Millar-Mills",
-    "net_momentum": -2.080837026961534,
-    "momentum_added": 0.0973431995107281,
-    "momentum_lost": 2.1781802264722625,
-    "events_count": 38,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 0.075,
-    "possession_quality_player_team": 0.07,
-    "contact_breakdown_player_team": -1.5299999999999998,
-    "discipline_turnover_player_team": -2.5,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 936538,
-    "team_id": 550,
-    "teamName": "England",
-    "PLID": 36455,
-    "playerName": "Ollie Chessum",
-    "net_momentum": -3.644848806021995,
-    "momentum_added": 1.9601334863601143,
-    "momentum_lost": 5.604982292382109,
-    "events_count": 87,
-    "scoring_threat_player_team": 2.04,
-    "territory_player_team": 0.325,
-    "possession_quality_player_team": 0.7699999999999999,
-    "contact_breakdown_player_team": 2.49,
-    "discipline_turnover_player_team": -1.8,
-    "review_priority": "High"
-  }
-]
+{
+  "matchId": "936538",
+  "players": [
+    {
+      "playerKey": "finn russell|scotland",
+      "playerName": "Finn Russell",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": 41.74,
+      "momentumAdded": 45.91,
+      "momentumLost": 4.17,
+      "scoringThreat": 12.48,
+      "territory": 31.22,
+      "possessionQuality": 1.47,
+      "contactBreakdown": -1.93,
+      "disciplineTurnover": -1.5,
+      "actions": 101,
+      "topActions": [
+        {
+          "time": "65:03",
+          "startSecond": 5348.9,
+          "endSecond": 5374.9,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 3,
+          "reason": "得点脅威 +2.0 / テリトリー +1.0"
+        },
+        {
+          "time": "46:18",
+          "startSecond": 3963.6,
+          "endSecond": 3989.6,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.68,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "30:29",
+          "startSecond": 1938.4,
+          "endSecond": 1964.4,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.65,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "57:21",
+          "startSecond": 4792.7,
+          "endSecond": 4818.7,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.65,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "20:29",
+          "startSecond": 1335,
+          "endSecond": 1361,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.63,
+          "reason": "得点脅威 +2.0 / テリトリー +0.6"
+        },
+        {
+          "time": "34:33",
+          "startSecond": 2195.2,
+          "endSecond": 2221.2,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.52,
+          "reason": "得点脅威 +2.1 / テリトリー +0.4"
+        },
+        {
+          "time": "60:29",
+          "startSecond": 4980.9,
+          "endSecond": 5006.9,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 2.42,
+          "reason": "テリトリー +2.4"
+        },
+        {
+          "time": "10:27",
+          "startSecond": 669.3,
+          "endSecond": 695.3,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.92,
+          "reason": "テリトリー +1.9"
+        },
+        {
+          "time": "27:42",
+          "startSecond": 1771.4,
+          "endSecond": 1797.4,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.76,
+          "reason": "テリトリー +1.8"
+        },
+        {
+          "time": "12:43",
+          "startSecond": 868.7,
+          "endSecond": 894.7,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.68,
+          "reason": "テリトリー +1.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "george ford|england",
+      "playerName": "George Ford",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 22.13,
+      "momentumAdded": 28.74,
+      "momentumLost": 6.61,
+      "scoringThreat": 8.6,
+      "territory": 15.72,
+      "possessionQuality": 1.25,
+      "contactBreakdown": -1.94,
+      "disciplineTurnover": -1.5,
+      "actions": 107,
+      "topActions": [
+        {
+          "time": "35:58",
+          "startSecond": 2279.3,
+          "endSecond": 2305.3,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.9,
+          "reason": "得点脅威 +2.0 / テリトリー +0.9"
+        },
+        {
+          "time": "14:43",
+          "startSecond": 988.9,
+          "endSecond": 1014.9,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.7,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "6:12",
+          "startSecond": 362.2,
+          "endSecond": 388.2,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.68,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "49:30",
+          "startSecond": 4251.7,
+          "endSecond": 4277.7,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.67,
+          "reason": "得点脅威 +2.1 / テリトリー +0.6"
+        },
+        {
+          "time": "32:01",
+          "startSecond": 2030.1,
+          "endSecond": 2056.1,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "53:24",
+          "startSecond": 4534.1,
+          "endSecond": 4560.1,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.42,
+          "reason": "テリトリー +1.4"
+        },
+        {
+          "time": "44:03",
+          "startSecond": 3828.6,
+          "endSecond": 3854.6,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.27,
+          "reason": "テリトリー +1.3"
+        },
+        {
+          "time": "12:47",
+          "startSecond": 872.9,
+          "endSecond": 898.9,
+          "action": "Carry",
+          "result": "Kick",
+          "impact": 1.18,
+          "reason": "継続品質 +0.6 / テリトリー +0.4 / 接点・BD +0.2"
+        },
+        {
+          "time": "38:39",
+          "startSecond": 2441.3,
+          "endSecond": 2467.3,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.15,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "58:26",
+          "startSecond": 4857.9,
+          "endSecond": 4883.9,
+          "action": "Carry",
+          "result": "Kick",
+          "impact": 0.96,
+          "reason": "継続品質 +0.5 / テリトリー +0.3 / 接点・BD +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "duhan van der merwe|scotland",
+      "playerName": "Duhan van der Merwe",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": 21.82,
+      "momentumAdded": 31.42,
+      "momentumLost": 9.6,
+      "scoringThreat": 20.04,
+      "territory": 2.94,
+      "possessionQuality": 7.96,
+      "contactBreakdown": -1.67,
+      "disciplineTurnover": -7.45,
+      "actions": 41,
+      "topActions": [
+        {
+          "time": "19:17",
+          "startSecond": 1262.8,
+          "endSecond": 1288.8,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "29:04",
+          "startSecond": 1853.8,
+          "endSecond": 1879.8,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "44:50",
+          "startSecond": 3875.6,
+          "endSecond": 3901.6,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "28:56",
+          "startSecond": 1845.2,
+          "endSecond": 1871.2,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 2.86,
+          "reason": "テリトリー +1.6 / 継続品質 +1.1 / 接点・BD +0.2"
+        },
+        {
+          "time": "77:28",
+          "startSecond": 6190.8,
+          "endSecond": 6216.8,
+          "action": "Card",
+          "result": "Foul Play",
+          "impact": -2,
+          "reason": "規律・TO -2.0"
+        },
+        {
+          "time": "77:28",
+          "startSecond": 6190.3,
+          "endSecond": 6216.3,
+          "action": "Tackle",
+          "result": "Pen Conceded",
+          "impact": -1.55,
+          "reason": "規律・TO -1.2 / 接点・BD -0.3"
+        },
+        {
+          "time": "19:13",
+          "startSecond": 1258.7,
+          "endSecond": 1284.7,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 1.51,
+          "reason": "テリトリー +0.5 / 継続品質 +0.5 / 接点・BD +0.4"
+        },
+        {
+          "time": "16:17",
+          "startSecond": 1083.2,
+          "endSecond": 1109.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "47:56",
+          "startSecond": 4061.8,
+          "endSecond": 4087.8,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "44:46",
+          "startSecond": 3871.8,
+          "endSecond": 3897.8,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 1.35,
+          "reason": "テリトリー +0.5 / 継続品質 +0.5 / 接点・BD +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "george furbank|england",
+      "playerName": "George Furbank",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 15.53,
+      "momentumAdded": 22.06,
+      "momentumLost": 6.53,
+      "scoringThreat": 7.44,
+      "territory": 5.32,
+      "possessionQuality": 5.54,
+      "contactBreakdown": 0.24,
+      "disciplineTurnover": -3,
+      "actions": 76,
+      "topActions": [
+        {
+          "time": "4:54",
+          "startSecond": 284.4,
+          "endSecond": 310.4,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "10:33",
+          "startSecond": 675.9,
+          "endSecond": 701.9,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.92,
+          "reason": "テリトリー +1.9"
+        },
+        {
+          "time": "31:21",
+          "startSecond": 1990.7,
+          "endSecond": 2016.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.53,
+          "reason": "接点・BD +0.7 / 継続品質 +0.5 / テリトリー +0.3"
+        },
+        {
+          "time": "27:29",
+          "startSecond": 1758.9,
+          "endSecond": 1784.9,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "28:54",
+          "startSecond": 1843.6,
+          "endSecond": 1869.6,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "61:42",
+          "startSecond": 5132.2,
+          "endSecond": 5158.2,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 1.44,
+          "reason": "継続品質 +0.7 / テリトリー +0.5 / 接点・BD +0.2"
+        },
+        {
+          "time": "65:51",
+          "startSecond": 5397.1,
+          "endSecond": 5423.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.23,
+          "reason": "接点・BD +0.7 / テリトリー +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "27:45",
+          "startSecond": 1774.7,
+          "endSecond": 1800.7,
+          "action": "Carry",
+          "result": "Kick",
+          "impact": 1.02,
+          "reason": "継続品質 +0.5 / テリトリー +0.4 / 接点・BD +0.2"
+        },
+        {
+          "time": "57:59",
+          "startSecond": 4830.6,
+          "endSecond": 4856.6,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.96,
+          "reason": "継続品質 +0.5 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "27:49",
+          "startSecond": 1778.5,
+          "endSecond": 1804.5,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 0.93,
+          "reason": "テリトリー +0.9"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "immanuel feyi-waboso|england",
+      "playerName": "Immanuel Feyi-Waboso",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 14.97,
+      "momentumAdded": 15.01,
+      "momentumLost": 0.05,
+      "scoringThreat": 6.96,
+      "territory": 1.25,
+      "possessionQuality": 4.7,
+      "contactBreakdown": 2.06,
+      "disciplineTurnover": 0,
+      "actions": 24,
+      "topActions": [
+        {
+          "time": "66:01",
+          "startSecond": 5406.3,
+          "endSecond": 5432.3,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "78:41",
+          "startSecond": 6297.1,
+          "endSecond": 6323.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.5,
+          "reason": "接点・BD +0.7 / テリトリー +0.4 / 継続品質 +0.4"
+        },
+        {
+          "time": "74:54",
+          "startSecond": 6036.7,
+          "endSecond": 6062.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.43,
+          "reason": "接点・BD +0.7 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "65:58",
+          "startSecond": 5403.6,
+          "endSecond": 5429.6,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 1.02,
+          "reason": "テリトリー +0.4 / 継続品質 +0.4 / 接点・BD +0.2"
+        },
+        {
+          "time": "73:18",
+          "startSecond": 5940.8,
+          "endSecond": 5966.8,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.87,
+          "reason": "継続品質 +0.4 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "65:58",
+          "startSecond": 5404.1,
+          "endSecond": 5430.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "65:59",
+          "startSecond": 5405.2,
+          "endSecond": 5431.2,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "73:19",
+          "startSecond": 5941.7,
+          "endSecond": 5967.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "73:20",
+          "startSecond": 5942.4,
+          "endSecond": 5968.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "jamie george|england",
+      "playerName": "Jamie George",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 8.16,
+      "momentumAdded": 11.15,
+      "momentumLost": 3,
+      "scoringThreat": 1.44,
+      "territory": 0.43,
+      "possessionQuality": 2.51,
+      "contactBreakdown": 0.03,
+      "disciplineTurnover": 3.75,
+      "actions": 88,
+      "topActions": [
+        {
+          "time": "25:43",
+          "startSecond": 1652.2,
+          "endSecond": 1678.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.27,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.3"
+        },
+        {
+          "time": "44:22",
+          "startSecond": 3847.2,
+          "endSecond": 3873.2,
+          "action": "Lineout Throw",
+          "result": "Lost Clean",
+          "impact": -0.75,
+          "reason": "規律・TO -0.8"
+        },
+        {
+          "time": "59:39",
+          "startSecond": 4931.2,
+          "endSecond": 4957.2,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.73,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "17:44",
+          "startSecond": 1170.4,
+          "endSecond": 1196.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "41:21",
+          "startSecond": 3602.8,
+          "endSecond": 3628.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "60:03",
+          "startSecond": 4955,
+          "endSecond": 4981,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "63:35",
+          "startSecond": 5261.2,
+          "endSecond": 5287.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "17:44",
+          "startSecond": 1170.5,
+          "endSecond": 1196.5,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.62,
+          "reason": "継続品質 -0.6"
+        },
+        {
+          "time": "23:21",
+          "startSecond": 1510.8,
+          "endSecond": 1536.8,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "fin smith|england",
+      "playerName": "Fin Smith",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 7.76,
+      "momentumAdded": 10.41,
+      "momentumLost": 2.65,
+      "scoringThreat": 2.48,
+      "territory": 5.92,
+      "possessionQuality": 0.73,
+      "contactBreakdown": 0.13,
+      "disciplineTurnover": -1.5,
+      "actions": 38,
+      "topActions": [
+        {
+          "time": "66:59",
+          "startSecond": 5465.1,
+          "endSecond": 5491.1,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 2.63,
+          "reason": "得点脅威 +2.0 / テリトリー +0.6"
+        },
+        {
+          "time": "74:43",
+          "startSecond": 6025.4,
+          "endSecond": 6051.4,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "62:30",
+          "startSecond": 5179.8,
+          "endSecond": 5205.8,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.48,
+          "reason": "テリトリー +1.5"
+        },
+        {
+          "time": "69:04",
+          "startSecond": 5589.6,
+          "endSecond": 5615.6,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.18,
+          "reason": "テリトリー +1.2"
+        },
+        {
+          "time": "77:53",
+          "startSecond": 6216,
+          "endSecond": 6242,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.04,
+          "reason": "テリトリー +1.0"
+        },
+        {
+          "time": "75:32",
+          "startSecond": 6074.5,
+          "endSecond": 6100.5,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1,
+          "reason": "テリトリー +1.0"
+        },
+        {
+          "time": "76:09",
+          "startSecond": 6111.4,
+          "endSecond": 6137.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.96,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "73:52",
+          "startSecond": 5974.2,
+          "endSecond": 6000.2,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.77,
+          "reason": "継続品質 -0.6 / テリトリー -0.2"
+        },
+        {
+          "time": "65:28",
+          "startSecond": 5373.4,
+          "endSecond": 5399.4,
+          "action": "Restart",
+          "result": "Restart Opp Error",
+          "impact": 0.75,
+          "reason": "テリトリー +0.8"
+        },
+        {
+          "time": "61:53",
+          "startSecond": 5142.7,
+          "endSecond": 5168.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "ben white|scotland",
+      "playerName": "Ben White",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": 7.21,
+      "momentumAdded": 13.96,
+      "momentumLost": 6.75,
+      "scoringThreat": 5.52,
+      "territory": 3.01,
+      "possessionQuality": 1.54,
+      "contactBreakdown": -1.76,
+      "disciplineTurnover": -1.1,
+      "actions": 171,
+      "topActions": [
+        {
+          "time": "38:34",
+          "startSecond": 2435.4,
+          "endSecond": 2461.4,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.27,
+          "reason": "テリトリー +1.3"
+        },
+        {
+          "time": "57:55",
+          "startSecond": 4827,
+          "endSecond": 4853,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.12,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "3:55",
+          "startSecond": 224.9,
+          "endSecond": 250.9,
+          "action": "Scrum",
+          "result": "Lost Free Kick",
+          "impact": -1.1,
+          "reason": "規律・TO -1.1"
+        },
+        {
+          "time": "31:17",
+          "startSecond": 1986.8,
+          "endSecond": 2012.8,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.09,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "26:54",
+          "startSecond": 1723.9,
+          "endSecond": 1749.9,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.06,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "47:07",
+          "startSecond": 4012.7,
+          "endSecond": 4038.7,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 0.93,
+          "reason": "テリトリー +0.9"
+        },
+        {
+          "time": "10:47",
+          "startSecond": 689.6,
+          "endSecond": 715.6,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.7,
+          "reason": "継続品質 -0.6 / テリトリー -0.2"
+        },
+        {
+          "time": "24:51",
+          "startSecond": 1600.2,
+          "endSecond": 1626.2,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 0.7,
+          "reason": "テリトリー +0.7"
+        },
+        {
+          "time": "61:40",
+          "startSecond": 5129.8,
+          "endSecond": 5155.8,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 0.67,
+          "reason": "テリトリー +0.7"
+        },
+        {
+          "time": "59:34",
+          "startSecond": 4925.9,
+          "endSecond": 4951.9,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 0.63,
+          "reason": "テリトリー +0.6"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "ben spencer|england",
+      "playerName": "Ben Spencer",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 7,
+      "momentumAdded": 10.74,
+      "momentumLost": 3.74,
+      "scoringThreat": 3.72,
+      "territory": 1.49,
+      "possessionQuality": 3.26,
+      "contactBreakdown": 0.18,
+      "disciplineTurnover": -1.65,
+      "actions": 125,
+      "topActions": [
+        {
+          "time": "78:55",
+          "startSecond": 6310.2,
+          "endSecond": 6336.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "54:50",
+          "startSecond": 4619.2,
+          "endSecond": 4645.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "53:04",
+          "startSecond": 4513.8,
+          "endSecond": 4539.8,
+          "action": "Scrum",
+          "result": "Won Penalty",
+          "impact": 1.1,
+          "reason": "規律・TO +1.1"
+        },
+        {
+          "time": "62:13",
+          "startSecond": 5163.3,
+          "endSecond": 5189.3,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 0.93,
+          "reason": "テリトリー +0.9"
+        },
+        {
+          "time": "74:16",
+          "startSecond": 5998.8,
+          "endSecond": 6024.8,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 0.8,
+          "reason": "テリトリー +0.8"
+        },
+        {
+          "time": "59:10",
+          "startSecond": 4901.6,
+          "endSecond": 4927.6,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 0.78,
+          "reason": "テリトリー +0.8"
+        },
+        {
+          "time": "65:57",
+          "startSecond": 5403.2,
+          "endSecond": 5429.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "65:57",
+          "startSecond": 5403.2,
+          "endSecond": 5429.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "73:44",
+          "startSecond": 5966.2,
+          "endSecond": 5992.2,
+          "action": "Kick",
+          "result": "Own Player - Collected",
+          "impact": 0.67,
+          "reason": "テリトリー +0.7"
+        },
+        {
+          "time": "75:09",
+          "startSecond": 6051.5,
+          "endSecond": 6077.5,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.55,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "cameron redpath|scotland",
+      "playerName": "Cameron Redpath",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": 6.87,
+      "momentumAdded": 8.74,
+      "momentumLost": 1.87,
+      "scoringThreat": 0.48,
+      "territory": 1.15,
+      "possessionQuality": 4.7,
+      "contactBreakdown": 0.54,
+      "disciplineTurnover": 0,
+      "actions": 38,
+      "topActions": [
+        {
+          "time": "44:31",
+          "startSecond": 3856.9,
+          "endSecond": 3882.9,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 1.92,
+          "reason": "継続品質 +1.0 / テリトリー +0.7 / 接点・BD +0.2"
+        },
+        {
+          "time": "52:00",
+          "startSecond": 4401.5,
+          "endSecond": 4427.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.02,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "40:37",
+          "startSecond": 3558.9,
+          "endSecond": 3584.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.71,
+          "reason": "接点・BD +0.5 / テリトリー +0.2"
+        },
+        {
+          "time": "44:32",
+          "startSecond": 3857.6,
+          "endSecond": 3883.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "44:32",
+          "startSecond": 3858.1,
+          "endSecond": 3884.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "44:35",
+          "startSecond": 3860.4,
+          "endSecond": 3886.4,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "71:29",
+          "startSecond": 5734.4,
+          "endSecond": 5760.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "71:30",
+          "startSecond": 5735.3,
+          "endSecond": 5761.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "44:39",
+          "startSecond": 3864.6,
+          "endSecond": 3890.6,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "elliot daly|england",
+      "playerName": "Elliot Daly",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 6.22,
+      "momentumAdded": 9.07,
+      "momentumLost": 2.86,
+      "scoringThreat": 1.32,
+      "territory": 2.68,
+      "possessionQuality": 4.41,
+      "contactBreakdown": -0.69,
+      "disciplineTurnover": -1.5,
+      "actions": 40,
+      "topActions": [
+        {
+          "time": "26:11",
+          "startSecond": 1680.3,
+          "endSecond": 1706.3,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "4:51",
+          "startSecond": 281.4,
+          "endSecond": 307.4,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 0.95,
+          "reason": "継続品質 +0.4 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "58:45",
+          "startSecond": 4876.8,
+          "endSecond": 4902.8,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 0.84,
+          "reason": "継続品質 +0.4 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "60:38",
+          "startSecond": 4989.9,
+          "endSecond": 5015.9,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 0.79,
+          "reason": "テリトリー +0.8"
+        },
+        {
+          "time": "31:30",
+          "startSecond": 1999.6,
+          "endSecond": 2025.6,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 0.78,
+          "reason": "テリトリー +0.8"
+        },
+        {
+          "time": "4:52",
+          "startSecond": 281.7,
+          "endSecond": 307.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "4:52",
+          "startSecond": 282.2,
+          "endSecond": 308.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "4:52",
+          "startSecond": 282.4,
+          "endSecond": 308.4,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "4:53",
+          "startSecond": 283.2,
+          "endSecond": 309.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "1:55",
+          "startSecond": 105,
+          "endSecond": 131,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "ben earl|england",
+      "playerName": "Ben Earl",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 5.13,
+      "momentumAdded": 13.88,
+      "momentumLost": 8.75,
+      "scoringThreat": 2.16,
+      "territory": 1.35,
+      "possessionQuality": 5.32,
+      "contactBreakdown": 0.55,
+      "disciplineTurnover": -4.25,
+      "actions": 134,
+      "topActions": [
+        {
+          "time": "9:20",
+          "startSecond": 602.5,
+          "endSecond": 628.5,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "23:33",
+          "startSecond": 1522.7,
+          "endSecond": 1548.7,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "56:07",
+          "startSecond": 4719.2,
+          "endSecond": 4745.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "63:41",
+          "startSecond": 5266.8,
+          "endSecond": 5292.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.25,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.2"
+        },
+        {
+          "time": "75:03",
+          "startSecond": 6045.2,
+          "endSecond": 6071.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.1,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "0:44",
+          "startSecond": 34,
+          "endSecond": 60,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.03,
+          "reason": "接点・BD +0.7 / テリトリー +0.3"
+        },
+        {
+          "time": "60:15",
+          "startSecond": 4967.2,
+          "endSecond": 4993.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.92,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "65:39",
+          "startSecond": 5385,
+          "endSecond": 5411,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "67:37",
+          "startSecond": 5502.7,
+          "endSecond": 5528.7,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.73,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "25:29",
+          "startSecond": 1638.5,
+          "endSecond": 1664.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "huw jones|scotland",
+      "playerName": "Huw Jones",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": 4.68,
+      "momentumAdded": 8.67,
+      "momentumLost": 3.99,
+      "scoringThreat": 1.08,
+      "territory": 1.59,
+      "possessionQuality": 5.96,
+      "contactBreakdown": -3.95,
+      "disciplineTurnover": 0,
+      "actions": 54,
+      "topActions": [
+        {
+          "time": "19:07",
+          "startSecond": 1252.9,
+          "endSecond": 1278.9,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 2.26,
+          "reason": "継続品質 +1.1 / テリトリー +0.8 / 接点・BD +0.4"
+        },
+        {
+          "time": "19:12",
+          "startSecond": 1258.3,
+          "endSecond": 1284.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "19:07",
+          "startSecond": 1253,
+          "endSecond": 1279,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "19:08",
+          "startSecond": 1253.7,
+          "endSecond": 1279.7,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "28:56",
+          "startSecond": 1845.2,
+          "endSecond": 1871.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "28:56",
+          "startSecond": 1845.2,
+          "endSecond": 1871.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "31:55",
+          "startSecond": 2024.6,
+          "endSecond": 2050.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "31:56",
+          "startSecond": 2025.9,
+          "endSecond": 2051.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "george martin|england",
+      "playerName": "George Martin",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 4.56,
+      "momentumAdded": 6.53,
+      "momentumLost": 1.97,
+      "scoringThreat": 1.56,
+      "territory": 0.68,
+      "possessionQuality": 2.94,
+      "contactBreakdown": 0.89,
+      "disciplineTurnover": -1.5,
+      "actions": 53,
+      "topActions": [
+        {
+          "time": "47:59",
+          "startSecond": 4064.6,
+          "endSecond": 4090.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.82,
+          "reason": "接点・BD +0.7 / 継続品質 +0.6 / テリトリー +0.5"
+        },
+        {
+          "time": "49:46",
+          "startSecond": 4267.6,
+          "endSecond": 4293.6,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "48:01",
+          "startSecond": 4067.2,
+          "endSecond": 4093.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "60:03",
+          "startSecond": 4955.2,
+          "endSecond": 4981.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "63:35",
+          "startSecond": 5261,
+          "endSecond": 5287,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "henry slade|england",
+      "playerName": "Henry Slade",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 4.41,
+      "momentumAdded": 9.02,
+      "momentumLost": 4.61,
+      "scoringThreat": 1.68,
+      "territory": 4.43,
+      "possessionQuality": 0.71,
+      "contactBreakdown": -0.91,
+      "disciplineTurnover": -1.5,
+      "actions": 50,
+      "topActions": [
+        {
+          "time": "38:10",
+          "startSecond": 2411.9,
+          "endSecond": 2437.9,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.59,
+          "reason": "テリトリー +1.6"
+        },
+        {
+          "time": "22:52",
+          "startSecond": 1481.3,
+          "endSecond": 1507.3,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.46,
+          "reason": "テリトリー +1.5"
+        },
+        {
+          "time": "2:10",
+          "startSecond": 120.4,
+          "endSecond": 146.4,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "48:11",
+          "startSecond": 4077.1,
+          "endSecond": 4103.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.21,
+          "reason": "接点・BD +0.7 / テリトリー +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "16:46",
+          "startSecond": 1111.6,
+          "endSecond": 1137.6,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.04,
+          "reason": "テリトリー +1.0"
+        },
+        {
+          "time": "1:55",
+          "startSecond": 104.8,
+          "endSecond": 130.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "38:10",
+          "startSecond": 2411.4,
+          "endSecond": 2437.4,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "9:19",
+          "startSecond": 602.2,
+          "endSecond": 628.2,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.55,
+          "reason": "継続品質 -0.6"
+        },
+        {
+          "time": "17:18",
+          "startSecond": 1144,
+          "endSecond": 1170,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.55,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "elliot millar-mills|scotland",
+      "playerName": "Elliot Millar-Mills",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": -3.88,
+      "momentumAdded": 0.37,
+      "momentumLost": 4.25,
+      "scoringThreat": 0,
+      "territory": 0.08,
+      "possessionQuality": 0.07,
+      "contactBreakdown": -1.53,
+      "disciplineTurnover": -2.5,
+      "actions": 38,
+      "topActions": [
+        {
+          "time": "8:13",
+          "startSecond": 535.9,
+          "endSecond": 561.9,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "13:13",
+          "startSecond": 898.7,
+          "endSecond": 924.7,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "ellis genge|england",
+      "playerName": "Ellis Genge",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 3.53,
+      "momentumAdded": 6.11,
+      "momentumLost": 2.58,
+      "scoringThreat": 1.8,
+      "territory": 0.65,
+      "possessionQuality": 1.39,
+      "contactBreakdown": 0.93,
+      "disciplineTurnover": -1.25,
+      "actions": 76,
+      "topActions": [
+        {
+          "time": "11:35",
+          "startSecond": 800.8,
+          "endSecond": 826.8,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "12:12",
+          "startSecond": 838.5,
+          "endSecond": 864.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.96,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "25:37",
+          "startSecond": 1646.2,
+          "endSecond": 1672.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.91,
+          "reason": "接点・BD +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "tommy freeman|england",
+      "playerName": "Tommy Freeman",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 3.46,
+      "momentumAdded": 8.64,
+      "momentumLost": 5.18,
+      "scoringThreat": 0.84,
+      "territory": 1.58,
+      "possessionQuality": 3.13,
+      "contactBreakdown": -0.28,
+      "disciplineTurnover": -1.8,
+      "actions": 50,
+      "topActions": [
+        {
+          "time": "1:00",
+          "startSecond": 49.7,
+          "endSecond": 75.7,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "58:33",
+          "startSecond": 4865.2,
+          "endSecond": 4891.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "77:28",
+          "startSecond": 6190.2,
+          "endSecond": 6216.2,
+          "action": "Carry",
+          "result": "Penalty Won",
+          "impact": 1.12,
+          "reason": "規律・TO +1.2 / 接点・BD -0.2"
+        },
+        {
+          "time": "35:31",
+          "startSecond": 2253.1,
+          "endSecond": 2279.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.11,
+          "reason": "接点・BD +0.7 / テリトリー +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "1:54",
+          "startSecond": 104,
+          "endSecond": 130,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.09,
+          "reason": "接点・BD +0.7 / テリトリー +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "17:38",
+          "startSecond": 1164,
+          "endSecond": 1190,
+          "action": "Kick",
+          "result": "Own Player - Collected",
+          "impact": 0.93,
+          "reason": "テリトリー +0.9"
+        },
+        {
+          "time": "12:04",
+          "startSecond": 830.3,
+          "endSecond": 856.3,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.76,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "1:54",
+          "startSecond": 104.1,
+          "endSecond": 130.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "17:39",
+          "startSecond": 1164.6,
+          "endSecond": 1190.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "35:32",
+          "startSecond": 2253.5,
+          "endSecond": 2279.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "george turner|scotland",
+      "playerName": "George Turner",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": 3.15,
+      "momentumAdded": 9.41,
+      "momentumLost": 6.27,
+      "scoringThreat": 2.28,
+      "territory": -0.02,
+      "possessionQuality": 1.58,
+      "contactBreakdown": -0.23,
+      "disciplineTurnover": -0.45,
+      "actions": 77,
+      "topActions": [
+        {
+          "time": "38:07",
+          "startSecond": 2408.6,
+          "endSecond": 2434.6,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "52:22",
+          "startSecond": 4423.7,
+          "endSecond": 4449.7,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "15:23",
+          "startSecond": 1028.8,
+          "endSecond": 1054.8,
+          "action": "Lineout Throw",
+          "result": "Lost Other",
+          "impact": -0.77,
+          "reason": "規律・TO -0.8"
+        },
+        {
+          "time": "32:49",
+          "startSecond": 2091.1,
+          "endSecond": 2117.1,
+          "action": "Lineout Throw",
+          "result": "Lost Clean",
+          "impact": -0.72,
+          "reason": "規律・TO -0.8"
+        },
+        {
+          "time": "38:07",
+          "startSecond": 2408.6,
+          "endSecond": 2434.6,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.7,
+          "reason": "継続品質 -0.6 / テリトリー -0.2"
+        },
+        {
+          "time": "40:37",
+          "startSecond": 3559,
+          "endSecond": 3585,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "40:43",
+          "startSecond": 3564.4,
+          "endSecond": 3590.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "31:48",
+          "startSecond": 2017.4,
+          "endSecond": 2043.4,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "jack dempsey|scotland",
+      "playerName": "Jack Dempsey",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": 2.69,
+      "momentumAdded": 6.89,
+      "momentumLost": 4.2,
+      "scoringThreat": 2.04,
+      "territory": 0.83,
+      "possessionQuality": 1.57,
+      "contactBreakdown": -0.25,
+      "disciplineTurnover": -1.5,
+      "actions": 91,
+      "topActions": [
+        {
+          "time": "65:32",
+          "startSecond": 5377.8,
+          "endSecond": 5403.8,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "55:58",
+          "startSecond": 4709.4,
+          "endSecond": 4735.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.33,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.3"
+        },
+        {
+          "time": "55:58",
+          "startSecond": 4709.8,
+          "endSecond": 4735.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "ollie chessum|england",
+      "playerName": "Ollie Chessum",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 2.63,
+      "momentumAdded": 7.15,
+      "momentumLost": 4.53,
+      "scoringThreat": 2.04,
+      "territory": 0.33,
+      "possessionQuality": 0.77,
+      "contactBreakdown": 2.49,
+      "disciplineTurnover": -3,
+      "actions": 87,
+      "topActions": [
+        {
+          "time": "32:52",
+          "startSecond": 2093.8,
+          "endSecond": 2119.8,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "71:16",
+          "startSecond": 5721.9,
+          "endSecond": 5747.9,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "25:48",
+          "startSecond": 1657.4,
+          "endSecond": 1683.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.13,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "36:41",
+          "startSecond": 2323.1,
+          "endSecond": 2349.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.12,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "60:02",
+          "startSecond": 4953.5,
+          "endSecond": 4979.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.02,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "32:52",
+          "startSecond": 2093.8,
+          "endSecond": 2119.8,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.58,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "zander fagerson|scotland",
+      "playerName": "Zander Fagerson",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": 2.51,
+      "momentumAdded": 4.69,
+      "momentumLost": 2.17,
+      "scoringThreat": 2.4,
+      "territory": 0.28,
+      "possessionQuality": 1.52,
+      "contactBreakdown": -0.43,
+      "disciplineTurnover": -1.25,
+      "actions": 56,
+      "topActions": [
+        {
+          "time": "53:08",
+          "startSecond": 4517.9,
+          "endSecond": 4543.9,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "42:43",
+          "startSecond": 3685,
+          "endSecond": 3711,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "40:38",
+          "startSecond": 3560.2,
+          "endSecond": 3586.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "pierre schoeman|scotland",
+      "playerName": "Pierre Schoeman",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": -2.4,
+      "momentumAdded": 5.67,
+      "momentumLost": 8.07,
+      "scoringThreat": 2.64,
+      "territory": 0.65,
+      "possessionQuality": 1.31,
+      "contactBreakdown": -1.8,
+      "disciplineTurnover": -5.2,
+      "actions": 81,
+      "topActions": [
+        {
+          "time": "1:37",
+          "startSecond": 87.5,
+          "endSecond": 113.5,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "3:55",
+          "startSecond": 225,
+          "endSecond": 251,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "43:29",
+          "startSecond": 3730.6,
+          "endSecond": 3756.6,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "43:24",
+          "startSecond": 3726.3,
+          "endSecond": 3752.3,
+          "action": "Carry",
+          "result": "Penalty Conceded",
+          "impact": -1.08,
+          "reason": "規律・TO -1.2"
+        },
+        {
+          "time": "37:52",
+          "startSecond": 2393.6,
+          "endSecond": 2419.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.92,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "40:37",
+          "startSecond": 3559.2,
+          "endSecond": 3585.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "59:22",
+          "startSecond": 4914.2,
+          "endSecond": 4940.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.61,
+          "reason": "接点・BD +0.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "jamie ritchie|scotland",
+      "playerName": "Jamie Ritchie",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": -2.36,
+      "momentumAdded": 3.19,
+      "momentumLost": 5.55,
+      "scoringThreat": 1.92,
+      "territory": -0.08,
+      "possessionQuality": 0.49,
+      "contactBreakdown": -0.75,
+      "disciplineTurnover": -3.95,
+      "actions": 46,
+      "topActions": [
+        {
+          "time": "48:31",
+          "startSecond": 4096.4,
+          "endSecond": 4122.4,
+          "action": "Tackle",
+          "result": "Pen Conceded",
+          "impact": -1.55,
+          "reason": "規律・TO -1.2 / 接点・BD -0.3"
+        },
+        {
+          "time": "15:25",
+          "startSecond": 1031.3,
+          "endSecond": 1057.3,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "48:34",
+          "startSecond": 4099.5,
+          "endSecond": 4125.5,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "24:38",
+          "startSecond": 1587.2,
+          "endSecond": 1613.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "15:25",
+          "startSecond": 1031.2,
+          "endSecond": 1057.2,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.55,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "ethan roots|england",
+      "playerName": "Ethan Roots",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 2.24,
+      "momentumAdded": 4.94,
+      "momentumLost": 2.7,
+      "scoringThreat": 1.44,
+      "territory": 0.28,
+      "possessionQuality": 2.05,
+      "contactBreakdown": -0.28,
+      "disciplineTurnover": -1.25,
+      "actions": 59,
+      "topActions": [
+        {
+          "time": "33:07",
+          "startSecond": 2108.9,
+          "endSecond": 2134.9,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "13:11",
+          "startSecond": 896.6,
+          "endSecond": 922.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.85,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "12:31",
+          "startSecond": 857,
+          "endSecond": 883,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "12:32",
+          "startSecond": 858,
+          "endSecond": 884,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "12:30",
+          "startSecond": 856.2,
+          "endSecond": 882.2,
+          "action": "Carry",
+          "result": "Other",
+          "impact": 0.6,
+          "reason": "継続品質 +0.2 / 接点・BD +0.2 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "rory darge|scotland",
+      "playerName": "Rory Darge",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": -2.12,
+      "momentumAdded": 4.74,
+      "momentumLost": 6.86,
+      "scoringThreat": 2.16,
+      "territory": -0.02,
+      "possessionQuality": 0.6,
+      "contactBreakdown": -2.11,
+      "disciplineTurnover": -2.75,
+      "actions": 100,
+      "topActions": [
+        {
+          "time": "10:48",
+          "startSecond": 691,
+          "endSecond": 717,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "16:21",
+          "startSecond": 1087.2,
+          "endSecond": 1113.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "27:32",
+          "startSecond": 1761.2,
+          "endSecond": 1787.2,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.62,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "dan cole|england",
+      "playerName": "Dan Cole",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 1.88,
+      "momentumAdded": 2.7,
+      "momentumLost": 0.82,
+      "scoringThreat": 0.72,
+      "territory": 0.2,
+      "possessionQuality": 0.95,
+      "contactBreakdown": 0.01,
+      "disciplineTurnover": 0,
+      "actions": 42,
+      "topActions": [
+        {
+          "time": "1:38",
+          "startSecond": 88.6,
+          "endSecond": 114.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.04,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "36:45",
+          "startSecond": 2326.5,
+          "endSecond": 2352.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "will stuart|england",
+      "playerName": "Will Stuart",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": -1.63,
+      "momentumAdded": 2.06,
+      "momentumLost": 3.69,
+      "scoringThreat": 0.36,
+      "territory": 0.35,
+      "possessionQuality": 0.48,
+      "contactBreakdown": -0.07,
+      "disciplineTurnover": -2.75,
+      "actions": 37,
+      "topActions": [
+        {
+          "time": "60:21",
+          "startSecond": 4972.9,
+          "endSecond": 4998.9,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "72:51",
+          "startSecond": 5913.2,
+          "endSecond": 5939.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "65:55",
+          "startSecond": 5400.5,
+          "endSecond": 5426.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "grant gilchrist|scotland",
+      "playerName": "Grant Gilchrist",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": -1.38,
+      "momentumAdded": 2.07,
+      "momentumLost": 3.46,
+      "scoringThreat": 0.96,
+      "territory": -0.2,
+      "possessionQuality": -0.25,
+      "contactBreakdown": -0.39,
+      "disciplineTurnover": -1.5,
+      "actions": 66,
+      "topActions": [
+        {
+          "time": "35:10",
+          "startSecond": 2231.8,
+          "endSecond": 2257.8,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "16:12",
+          "startSecond": 1078.4,
+          "endSecond": 1104.4,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.82,
+          "reason": "継続品質 -0.6 / テリトリー -0.3"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "joe marler|england",
+      "playerName": "Joe Marler",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 1.21,
+      "momentumAdded": 1.29,
+      "momentumLost": 0.08,
+      "scoringThreat": 0.36,
+      "territory": 0.1,
+      "possessionQuality": 0.53,
+      "contactBreakdown": 0.22,
+      "disciplineTurnover": 0,
+      "actions": 19,
+      "topActions": [
+        {
+          "time": "65:54",
+          "startSecond": 5400.2,
+          "endSecond": 5426.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "andy christie|scotland",
+      "playerName": "Andy Christie",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": -1.18,
+      "momentumAdded": 0.49,
+      "momentumLost": 1.67,
+      "scoringThreat": 0.12,
+      "territory": 0.03,
+      "possessionQuality": 0.28,
+      "contactBreakdown": -1.6,
+      "disciplineTurnover": 0,
+      "actions": 34,
+      "topActions": [],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "ollie lawrence|england",
+      "playerName": "Ollie Lawrence",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": -1.09,
+      "momentumAdded": 5.91,
+      "momentumLost": 7,
+      "scoringThreat": 0.48,
+      "territory": 0.6,
+      "possessionQuality": 2.6,
+      "contactBreakdown": -0.27,
+      "disciplineTurnover": -4.5,
+      "actions": 59,
+      "topActions": [
+        {
+          "time": "11:01",
+          "startSecond": 704.2,
+          "endSecond": 730.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "17:18",
+          "startSecond": 1144,
+          "endSecond": 1170,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "76:16",
+          "startSecond": 6118.9,
+          "endSecond": 6144.9,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "28:09",
+          "startSecond": 1798.6,
+          "endSecond": 1824.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.93,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "65:54",
+          "startSecond": 5400,
+          "endSecond": 5426,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "40:04",
+          "startSecond": 2568.3,
+          "endSecond": 2594.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "58:49",
+          "startSecond": 4880.8,
+          "endSecond": 4906.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "76:16",
+          "startSecond": 6118.9,
+          "endSecond": 6144.9,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.62,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "sione tuipulotu|scotland",
+      "playerName": "Sione Tuipulotu",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": 1.08,
+      "momentumAdded": 3.64,
+      "momentumLost": 2.55,
+      "scoringThreat": 0,
+      "territory": 0.48,
+      "possessionQuality": 1.6,
+      "contactBreakdown": 1.46,
+      "disciplineTurnover": -2.45,
+      "actions": 31,
+      "topActions": [
+        {
+          "time": "22:20",
+          "startSecond": 1449.8,
+          "endSecond": 1475.8,
+          "action": "Carry",
+          "result": "Penalty Conceded",
+          "impact": -1.3,
+          "reason": "規律・TO -1.2 / 接点・BD -0.2"
+        },
+        {
+          "time": "22:24",
+          "startSecond": 1453.5,
+          "endSecond": 1479.5,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "0:08",
+          "startSecond": 0,
+          "endSecond": 23.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.19,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.2"
+        },
+        {
+          "time": "37:46",
+          "startSecond": 2388,
+          "endSecond": 2414,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1,
+          "reason": "接点・BD +0.7 / テリトリー +0.3"
+        },
+        {
+          "time": "19:07",
+          "startSecond": 1252.9,
+          "endSecond": 1278.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "blair kinghorn|scotland",
+      "playerName": "Blair Kinghorn",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": 1.06,
+      "momentumAdded": 7.65,
+      "momentumLost": 6.6,
+      "scoringThreat": 0.12,
+      "territory": 2.78,
+      "possessionQuality": 2.07,
+      "contactBreakdown": 0.59,
+      "disciplineTurnover": -4.5,
+      "actions": 50,
+      "topActions": [
+        {
+          "time": "31:32",
+          "startSecond": 2001.9,
+          "endSecond": 2027.9,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.7,
+          "reason": "テリトリー +1.7"
+        },
+        {
+          "time": "0:16",
+          "startSecond": 6.3,
+          "endSecond": 32.3,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "12:29",
+          "startSecond": 855,
+          "endSecond": 881,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "59:51",
+          "startSecond": 4942.7,
+          "endSecond": 4968.7,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "62:19",
+          "startSecond": 5169.2,
+          "endSecond": 5195.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.06,
+          "reason": "接点・BD +0.7 / テリトリー +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "10:41",
+          "startSecond": 683.9,
+          "endSecond": 709.9,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.65,
+          "reason": "継続品質 +0.2 / テリトリー +0.2 / 接点・BD +0.2"
+        },
+        {
+          "time": "27:53",
+          "startSecond": 1782.1,
+          "endSecond": 1808.1,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.6,
+          "reason": "継続品質 +0.2 / 接点・BD +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "58:12",
+          "startSecond": 4844.1,
+          "endSecond": 4870.1,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.6,
+          "reason": "継続品質 +0.2 / 接点・BD +0.2 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "theo dan|england",
+      "playerName": "Theo Dan",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 0.89,
+      "momentumAdded": 1.59,
+      "momentumLost": 0.7,
+      "scoringThreat": 0.24,
+      "territory": 0,
+      "possessionQuality": 0,
+      "contactBreakdown": -0.7,
+      "disciplineTurnover": 1.35,
+      "actions": 16,
+      "topActions": [
+        {
+          "time": "69:38",
+          "startSecond": 5624.1,
+          "endSecond": 5650.1,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "kyle steyn|scotland",
+      "playerName": "Kyle Steyn",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": -0.86,
+      "momentumAdded": 5.91,
+      "momentumLost": 6.77,
+      "scoringThreat": 0.84,
+      "territory": 0.13,
+      "possessionQuality": 1.87,
+      "contactBreakdown": -2.2,
+      "disciplineTurnover": -1.5,
+      "actions": 47,
+      "topActions": [
+        {
+          "time": "7:20",
+          "startSecond": 482.6,
+          "endSecond": 508.6,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "52:11",
+          "startSecond": 4412.5,
+          "endSecond": 4438.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.99,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "12:40",
+          "startSecond": 865.7,
+          "endSecond": 891.7,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.92,
+          "reason": "継続品質 -0.6 / テリトリー -0.4"
+        },
+        {
+          "time": "31:44",
+          "startSecond": 2013.1,
+          "endSecond": 2039.1,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 0.9,
+          "reason": "継続品質 +0.4 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "61:16",
+          "startSecond": 5105.7,
+          "endSecond": 5131.7,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.76,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "31:46",
+          "startSecond": 2015.2,
+          "endSecond": 2041.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "38:19",
+          "startSecond": 2420.6,
+          "endSecond": 2446.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "67:38",
+          "startSecond": 5504.1,
+          "endSecond": 5530.1,
+          "action": "Tackle",
+          "result": "Sack",
+          "impact": 0.57,
+          "reason": "接点・BD +0.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "chandler cunningham-south|england",
+      "playerName": "Chandler Cunningham-South",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 0.81,
+      "momentumAdded": 1.51,
+      "momentumLost": 0.7,
+      "scoringThreat": 0,
+      "territory": 0.08,
+      "possessionQuality": 0.15,
+      "contactBreakdown": 0.58,
+      "disciplineTurnover": 0,
+      "actions": 28,
+      "topActions": [
+        {
+          "time": "60:08",
+          "startSecond": 4960.1,
+          "endSecond": 4986.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.91,
+          "reason": "接点・BD +0.7"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "ben healy|scotland",
+      "playerName": "Ben Healy",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": 0.75,
+      "momentumAdded": 1.1,
+      "momentumLost": 0.35,
+      "scoringThreat": 0,
+      "territory": 1.1,
+      "possessionQuality": 0,
+      "contactBreakdown": -0.35,
+      "disciplineTurnover": 0,
+      "actions": 6,
+      "topActions": [
+        {
+          "time": "73:14",
+          "startSecond": 5937,
+          "endSecond": 5963,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.1,
+          "reason": "テリトリー +1.1"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "scott cummings|scotland",
+      "playerName": "Scott Cummings",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": 0.74,
+      "momentumAdded": 4.34,
+      "momentumLost": 3.61,
+      "scoringThreat": 1.8,
+      "territory": 0,
+      "possessionQuality": 0.58,
+      "contactBreakdown": -1.64,
+      "disciplineTurnover": 0,
+      "actions": 91,
+      "topActions": [
+        {
+          "time": "63:09",
+          "startSecond": 5235.2,
+          "endSecond": 5261.2,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.71,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "36:32",
+          "startSecond": 2314.2,
+          "endSecond": 2340.2,
+          "action": "Tackle",
+          "result": "Sack",
+          "impact": 0.57,
+          "reason": "接点・BD +0.5"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "ewan ashman|scotland",
+      "playerName": "Ewan Ashman",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": -0.61,
+      "momentumAdded": 4.75,
+      "momentumLost": 5.36,
+      "scoringThreat": 0.12,
+      "territory": -0.47,
+      "possessionQuality": 1.04,
+      "contactBreakdown": -0.8,
+      "disciplineTurnover": -0.5,
+      "actions": 50,
+      "topActions": [
+        {
+          "time": "77:14",
+          "startSecond": 6176.7,
+          "endSecond": 6202.7,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "68:47",
+          "startSecond": 5572.3,
+          "endSecond": 5598.3,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "68:27",
+          "startSecond": 5552.9,
+          "endSecond": 5578.9,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.91,
+          "reason": "接点・BD -0.7 / テリトリー -0.2"
+        },
+        {
+          "time": "55:50",
+          "startSecond": 4701.7,
+          "endSecond": 4727.7,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.73,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "55:51",
+          "startSecond": 4703.1,
+          "endSecond": 4729.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "george horne|scotland",
+      "playerName": "George Horne",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": -0.54,
+      "momentumAdded": 1.77,
+      "momentumLost": 2.31,
+      "scoringThreat": 0.12,
+      "territory": 0.22,
+      "possessionQuality": 0.72,
+      "contactBreakdown": -0.35,
+      "disciplineTurnover": -1.25,
+      "actions": 41,
+      "topActions": [
+        {
+          "time": "74:50",
+          "startSecond": 6033.1,
+          "endSecond": 6059.1,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "63:27",
+          "startSecond": 5253.2,
+          "endSecond": 5279.2,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 0.81,
+          "reason": "テリトリー +0.8"
+        },
+        {
+          "time": "74:39",
+          "startSecond": 6021.6,
+          "endSecond": 6047.6,
+          "action": "Kick",
+          "result": "Pressure Error",
+          "impact": 0.78,
+          "reason": "テリトリー +0.8"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "danny care|england",
+      "playerName": "Danny Care",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 0.53,
+      "momentumAdded": 7.43,
+      "momentumLost": 6.9,
+      "scoringThreat": 2.88,
+      "territory": -0.59,
+      "possessionQuality": 2.17,
+      "contactBreakdown": -0.52,
+      "disciplineTurnover": -3.4,
+      "actions": 137,
+      "topActions": [
+        {
+          "time": "15:32",
+          "startSecond": 1037.8,
+          "endSecond": 1063.8,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "17:46",
+          "startSecond": 1171.7,
+          "endSecond": 1197.7,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "40:12",
+          "startSecond": 2576.5,
+          "endSecond": 2602.5,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "6:43",
+          "startSecond": 392.8,
+          "endSecond": 418.8,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.11,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "8:09",
+          "startSecond": 531.7,
+          "endSecond": 557.7,
+          "action": "Scrum",
+          "result": "Won Penalty",
+          "impact": 1.1,
+          "reason": "規律・TO +1.1"
+        },
+        {
+          "time": "37:01",
+          "startSecond": 2342.9,
+          "endSecond": 2368.9,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 0.69,
+          "reason": "テリトリー +0.7"
+        },
+        {
+          "time": "40:18",
+          "startSecond": 3518.4,
+          "endSecond": 3544.4,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 0.63,
+          "reason": "テリトリー +0.6"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "sam underhill|england",
+      "playerName": "Sam Underhill",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": 0.26,
+      "momentumAdded": 3.26,
+      "momentumLost": 3,
+      "scoringThreat": 0.72,
+      "territory": 0.5,
+      "possessionQuality": 1.5,
+      "contactBreakdown": -1.21,
+      "disciplineTurnover": -1.25,
+      "actions": 56,
+      "topActions": [
+        {
+          "time": "21:05",
+          "startSecond": 1371.4,
+          "endSecond": 1397.4,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "0:54",
+          "startSecond": 44.5,
+          "endSecond": 70.5,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 0.9,
+          "reason": "継続品質 +0.4 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "36:42",
+          "startSecond": 2324.2,
+          "endSecond": 2350.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "maro itoje|england",
+      "playerName": "Maro Itoje",
+      "team": "England",
+      "matchId": "936538",
+      "netMomentum": -0.18,
+      "momentumAdded": 6.99,
+      "momentumLost": 7.17,
+      "scoringThreat": 0.96,
+      "territory": 0.25,
+      "possessionQuality": 2.32,
+      "contactBreakdown": -0.96,
+      "disciplineTurnover": -2.75,
+      "actions": 101,
+      "topActions": [
+        {
+          "time": "70:04",
+          "startSecond": 5649.8,
+          "endSecond": 5675.8,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "63:45",
+          "startSecond": 5270.8,
+          "endSecond": 5296.8,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "59:52",
+          "startSecond": 4943.6,
+          "endSecond": 4969.6,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.81,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "28:41",
+          "startSecond": 1831,
+          "endSecond": 1857,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.76,
+          "reason": "接点・BD +0.5 / テリトリー +0.2"
+        },
+        {
+          "time": "77:15",
+          "startSecond": 6177.3,
+          "endSecond": 6203.3,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.73,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "35:49",
+          "startSecond": 2271.1,
+          "endSecond": 2297.1,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.68,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "12:57",
+          "startSecond": 882.9,
+          "endSecond": 908.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "28:42",
+          "startSecond": 1831.6,
+          "endSecond": 1857.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "35:51",
+          "startSecond": 2273.2,
+          "endSecond": 2299.2,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "sam skinner|scotland",
+      "playerName": "Sam Skinner",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": -0.1,
+      "momentumAdded": 0,
+      "momentumLost": 0.1,
+      "scoringThreat": 0,
+      "territory": 0.08,
+      "possessionQuality": 0.16,
+      "contactBreakdown": -0.34,
+      "disciplineTurnover": 0,
+      "actions": 17,
+      "topActions": [],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "alec hepburn|scotland",
+      "playerName": "Alec Hepburn",
+      "team": "Scotland",
+      "matchId": "936538",
+      "netMomentum": 0.03,
+      "momentumAdded": 1.08,
+      "momentumLost": 1.05,
+      "scoringThreat": 0.12,
+      "territory": 0.1,
+      "possessionQuality": 0.27,
+      "contactBreakdown": -0.46,
+      "disciplineTurnover": 0,
+      "actions": 22,
+      "topActions": [],
+      "reviewPriority": "Low"
+    }
+  ]
+}

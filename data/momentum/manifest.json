@@ -1,39 +1,29 @@
 {
-  "dataset": "player_review_hub_momentum_v5",
-  "version": "v5_explainable",
-  "generatedAt": "2026-06-09",
-  "rootPath": "data/momentum",
-  "description": "Explainable Rugby Momentum dataset for Player Review Hub. Copy copy_to_repo/data/momentum into the web app repository.",
-  "modelPrinciple": "Momentum = scoring threat + territory + possession quality + contact/breakdown + discipline/turnover, blended with learned 5-minute scoring probabilities.",
-  "counts": {
-    "matchesInIndex": 251,
-    "matchJsonFiles": 251,
-    "playerJsonFiles": 265,
-    "reviewClips": 3000,
-    "japanMatches": 41
-  },
-  "files": {
+  "generatedAt": "2026-06-08T21:50:51.234Z",
+  "modelVersion": "v5-auto-explainable-lite",
+  "source": "Opta BI CSV",
+  "matches": 264,
+  "japanMatches": 46,
+  "filesScanned": 266,
+  "uniqueFixtures": 264,
+  "outputs": {
     "index": "data/momentum/index.json",
-    "matchDetail": "data/momentum/matches/{matchId}.json",
-    "playerSummaryByMatch": "data/momentum/players/{matchId}.json",
-    "reviewClips": "data/momentum/review_clips.json",
-    "metrics": "data/momentum/metrics.json",
-    "logic": "data/momentum/logic.md",
-    "modelCard": "data/momentum/model_card.md"
+    "matches": "data/momentum/matches/{matchId}.json",
+    "players": "data/momentum/players/{matchId}.json",
+    "reviewClips": "data/momentum/review_clips.json"
   },
-  "matchId": "FXID as string",
-  "playerId": "Opta PLID where available",
-  "rmiScale": "-100 to +100; positive rmi in match JSON is home-team view unless otherwise noted in UI copy",
-  "recommendedUiLabels": {
-    "rmi": "Momentum",
-    "net_momentum": "Net Momentum",
-    "momentum_added": "Momentum Added",
-    "momentum_lost": "Momentum Lost",
-    "review_priority": "Review Priority",
-    "scoring_threat": "Scoring Threat",
-    "territory": "Territory",
-    "possession_quality": "Possession Quality",
-    "contact_breakdown": "Contact / Breakdown",
-    "discipline_turnover": "Discipline / Turnover"
-  }
+  "logic": {
+    "definition": "RMI measures which team is moving closer to the next score.",
+    "components": [
+      "scoringThreat",
+      "territory",
+      "possessionQuality",
+      "contactBreakdown",
+      "disciplineTurnover"
+    ],
+    "halfLifeSeconds": 240,
+    "scale": "-100 to +100 via 100*tanh(raw/3.0)",
+    "note": "This automatic generator uses a dependency-free explainable inference approximation. Full deep model retraining should be run manually/offline and then the logic can be refreshed."
+  },
+  "failures": []
 }

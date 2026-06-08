@@ -1,31 +1,23 @@
-# Rugby Momentum v5 Logic
+# Rugby Momentum v5 automatic JSON logic
 
-Rugby Momentum Index measures which team is moving closer to the next score. The base unit is possession (`FXID + SetNum`).
+Momentum means **which team is moving closer to the next score**.
 
-## Prediction target
-For each possession the model predicts:
-1. `P(owner scores within 5 minutes)`
-2. `P(opponent scores within 5 minutes)`
-3. `expected owner-minus-opponent point differential within 5 minutes`
+The automatic website generator scans `data/*_BI.csv` and creates JSON under `data/momentum/`.
 
-## Final signal
-`learned_signal = 5 × (P_owner_score - P_opponent_score) + 0.60 × predicted_margin_delta`
+## Components
 
-`rule_signal = scoring_threat + territory + possession_quality + contact_breakdown + discipline_turnover`
+- scoringThreat: tries, goal kicks, attacking 22 entries, near-line pressure.
+- territory: x movement, kick metres, defensive exits, counterattack metres.
+- possessionQuality: carries, passes, attacking qualities, quick/slow ruck signals.
+- contactBreakdown: gain-line, dominant carry/tackle, ruck movement.
+- disciplineTurnover: penalties, cards, turnovers, set-piece wins/losses.
 
-`final_signal = learned_signal + 0.35 × clipped(rule_signal, -6, +6)`
+## Output
 
-Rolling RMI uses a 240 second exponential half-life and is scaled to -100 to +100 with `100 × tanh(raw / 3.0)`.
+- `matches/{matchId}.json`: match timeline, peaks, and possession values.
+- `players/{matchId}.json`: player momentum contribution.
+- `review_clips.json`: high-impact review candidates.
 
-## Explainable components
-- Scoring threat: tries, goal kicks, attacking 22 entries, near-line pressure.
-- Territory: x movement, kick metres, defensive exits, counterattack metres.
-- Possession quality: positive carries, passes, attacking qualities, quick ruck signals.
-- Contact / breakdown: gain-line success, dominant carries/tackles, ruck movement.
-- Discipline / turnover: penalties conceded, cards, turnovers, set-piece wins/losses.
+## Updating
 
-## Run summary
-- Fixtures: 265
-- Japan fixtures: 41
-- Possessions: 23,141
-- Best validation loss: 1.8697
+Commit or upload a new `*_BI.csv` into `data/`. GitHub Actions runs `node scripts/generate-momentum-data.js` and commits updated JSON.

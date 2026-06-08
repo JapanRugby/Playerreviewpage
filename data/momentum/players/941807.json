@@ -1,784 +1,3523 @@
-[
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 28237,
-    "playerName": "Tomas Albornoz",
-    "net_momentum": 24.402368052663206,
-    "momentum_added": 27.710420126926444,
-    "momentum_lost": 3.308052074263239,
-    "events_count": 206,
-    "scoring_threat_player_team": 23.68,
-    "territory_player_team": 34.554,
-    "possession_quality_player_team": 6.79,
-    "contact_breakdown_player_team": -1.37,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 19637,
-    "playerName": "Tommaso Allan",
-    "net_momentum": 8.686325586127047,
-    "momentum_added": 10.549629581426784,
-    "momentum_lost": 1.863303995299736,
-    "events_count": 101,
-    "scoring_threat_player_team": 7.32,
-    "territory_player_team": 15.992,
-    "possession_quality_player_team": 7.12,
-    "contact_breakdown_player_team": -2.4,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 37288,
-    "playerName": "Martin Page-Relo",
-    "net_momentum": 6.753054653773637,
-    "momentum_added": 8.818778837654005,
-    "momentum_lost": 2.065724183880368,
-    "events_count": 269,
-    "scoring_threat_player_team": 9.32,
-    "territory_player_team": 5.0920000000000005,
-    "possession_quality_player_team": 8.145,
-    "contact_breakdown_player_team": -1.24,
-    "discipline_turnover_player_team": 1.5000000000000002,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 23362,
-    "playerName": "Juan Cruz Mallia",
-    "net_momentum": 6.428346289429695,
-    "momentum_added": 12.518477036177655,
-    "momentum_lost": 6.090130746747962,
-    "events_count": 131,
-    "scoring_threat_player_team": 7.08,
-    "territory_player_team": 12.696,
-    "possession_quality_player_team": 8.36,
-    "contact_breakdown_player_team": -3.12,
-    "discipline_turnover_player_team": -1.95,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 33837,
-    "playerName": "Paolo Garbisi",
-    "net_momentum": 6.3027718599360885,
-    "momentum_added": 8.791716282772338,
-    "momentum_lost": 2.488944422836249,
-    "events_count": 175,
-    "scoring_threat_player_team": 1.44,
-    "territory_player_team": 15.043,
-    "possession_quality_player_team": 4.33,
-    "contact_breakdown_player_team": -1.5399999999999998,
-    "discipline_turnover_player_team": -1.4500000000000002,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 37804,
-    "playerName": "Giacomo Nicotera",
-    "net_momentum": 6.058975685702574,
-    "momentum_added": 6.450956108309198,
-    "momentum_lost": 0.3919804226066242,
-    "events_count": 57,
-    "scoring_threat_player_team": 7.8,
-    "territory_player_team": 0.1499999999999999,
-    "possession_quality_player_team": 1.25,
-    "contact_breakdown_player_team": -0.1999999999999999,
-    "discipline_turnover_player_team": 1.9,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 27075,
-    "playerName": "Joel Sclavi",
-    "net_momentum": 5.939873145175182,
-    "momentum_added": 6.422781804072624,
-    "momentum_lost": 0.4829086588974416,
-    "events_count": 61,
-    "scoring_threat_player_team": 7.2,
-    "territory_player_team": 0.875,
-    "possession_quality_player_team": 1.485,
-    "contact_breakdown_player_team": -0.2699999999999999,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 18825,
-    "playerName": "Matias Alemanno",
-    "net_momentum": 5.5801283446939545,
-    "momentum_added": 5.790264315930559,
-    "momentum_lost": 0.2101359712366045,
-    "events_count": 20,
-    "scoring_threat_player_team": 6.84,
-    "territory_player_team": 0.25,
-    "possession_quality_player_team": 1.87,
-    "contact_breakdown_player_team": 1.06,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 24729,
-    "playerName": "Bautista Delguy",
-    "net_momentum": 4.736427833834664,
-    "momentum_added": 5.621161778257225,
-    "momentum_lost": 0.8847339444225604,
-    "events_count": 61,
-    "scoring_threat_player_team": 7.2,
-    "territory_player_team": 3.896,
-    "possession_quality_player_team": 10.2,
-    "contact_breakdown_player_team": -1.7399999999999998,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 19775,
-    "playerName": "Santiago Cordero",
-    "net_momentum": 4.133890603310688,
-    "momentum_added": 4.192488397799839,
-    "momentum_lost": 0.0585977944891519,
-    "events_count": 30,
-    "scoring_threat_player_team": 6.36,
-    "territory_player_team": 1.725,
-    "possession_quality_player_team": 4.875,
-    "contact_breakdown_player_team": -0.0299999999999999,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 23457,
-    "playerName": "Gonzalo Bertranou",
-    "net_momentum": 2.58641062244796,
-    "momentum_added": 5.511349359277635,
-    "momentum_lost": 2.924938736829676,
-    "events_count": 209,
-    "scoring_threat_player_team": 11.64,
-    "territory_player_team": -2.066,
-    "possession_quality_player_team": 5.485,
-    "contact_breakdown_player_team": -3.32,
-    "discipline_turnover_player_team": -0.7,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 20776,
-    "playerName": "Julian Montoya",
-    "net_momentum": 1.7912984028400951,
-    "momentum_added": 3.35003428548913,
-    "momentum_lost": 1.558735882649035,
-    "events_count": 99,
-    "scoring_threat_player_team": 2.04,
-    "territory_player_team": 0.1499999999999999,
-    "possession_quality_player_team": 1.485,
-    "contact_breakdown_player_team": -2.05,
-    "discipline_turnover_player_team": 2.8,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 19767,
-    "playerName": "Juan Ignacio Brex",
-    "net_momentum": 1.7802260811426251,
-    "momentum_added": 3.360280833991301,
-    "momentum_lost": 1.580054752848676,
-    "events_count": 112,
-    "scoring_threat_player_team": 2.04,
-    "territory_player_team": 1.125,
-    "possession_quality_player_team": 6.495,
-    "contact_breakdown_player_team": 1.41,
-    "discipline_turnover_player_team": -1.8,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 21534,
-    "playerName": "Sebastian Negri",
-    "net_momentum": 1.7530658905295078,
-    "momentum_added": 2.070044297712913,
-    "momentum_lost": 0.3169784071834055,
-    "events_count": 85,
-    "scoring_threat_player_team": 1.7999999999999998,
-    "territory_player_team": 1.225,
-    "possession_quality_player_team": 2.395,
-    "contact_breakdown_player_team": 4.47,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 33586,
-    "playerName": "Lucio Cinti",
-    "net_momentum": 1.6599419046510289,
-    "momentum_added": 3.854394646783575,
-    "momentum_lost": 2.1944527421325457,
-    "events_count": 91,
-    "scoring_threat_player_team": 0.72,
-    "territory_player_team": 3.172,
-    "possession_quality_player_team": 6.565,
-    "contact_breakdown_player_team": -3.49,
-    "discipline_turnover_player_team": -1.8,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 28242,
-    "playerName": "Gonzalo Garcia",
-    "net_momentum": 1.347579014967872,
-    "momentum_added": 2.281938763986544,
-    "momentum_lost": 0.934359749018672,
-    "events_count": 98,
-    "scoring_threat_player_team": 0.48,
-    "territory_player_team": 1.368,
-    "possession_quality_player_team": 2.195,
-    "contact_breakdown_player_team": -1.5699999999999998,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 18838,
-    "playerName": "Matias Moroni",
-    "net_momentum": 1.255338118095396,
-    "momentum_added": 1.782652515657122,
-    "momentum_lost": 0.5273143975617259,
-    "events_count": 32,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 0.8500000000000001,
-    "possession_quality_player_team": 4.26,
-    "contact_breakdown_player_team": -0.69,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 18839,
-    "playerName": "Matias Orlando",
-    "net_momentum": 1.0966978924721402,
-    "momentum_added": 2.035683309649878,
-    "momentum_lost": 0.9389854171777374,
-    "events_count": 73,
-    "scoring_threat_player_team": 1.68,
-    "territory_player_team": 0.625,
-    "possession_quality_player_team": 3.0500000000000003,
-    "contact_breakdown_player_team": -0.6699999999999999,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 34007,
-    "playerName": "Manuel Zuliani",
-    "net_momentum": 0.8442326064518898,
-    "momentum_added": 1.0316036895105305,
-    "momentum_lost": 0.1873710830586408,
-    "events_count": 30,
-    "scoring_threat_player_team": 0.36,
-    "territory_player_team": 0.35,
-    "possession_quality_player_team": 0.6950000000000001,
-    "contact_breakdown_player_team": 1.24,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 35623,
-    "playerName": "Louis Lynagh",
-    "net_momentum": 0.8352711813693366,
-    "momentum_added": 3.0481979750988315,
-    "momentum_lost": 2.212926793729495,
-    "events_count": 71,
-    "scoring_threat_player_team": 0.72,
-    "territory_player_team": 2.205,
-    "possession_quality_player_team": 4.76,
-    "contact_breakdown_player_team": -1.0399999999999998,
-    "discipline_turnover_player_team": -4.5,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 34751,
-    "playerName": "Ignacio Ruiz",
-    "net_momentum": 0.7983344962158908,
-    "momentum_added": 2.1547245349105046,
-    "momentum_lost": 1.356390038694614,
-    "events_count": 33,
-    "scoring_threat_player_team": 0.6,
-    "territory_player_team": 0.15,
-    "possession_quality_player_team": 1.54,
-    "contact_breakdown_player_team": 0.23,
-    "discipline_turnover_player_team": -1.85,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 27370,
-    "playerName": "Danilo Fischetti",
-    "net_momentum": 0.753958314956254,
-    "momentum_added": 1.1364256543544804,
-    "momentum_lost": 0.3824673393982263,
-    "events_count": 40,
-    "scoring_threat_player_team": 1.2,
-    "territory_player_team": 0.6249999999999999,
-    "possession_quality_player_team": 3.34,
-    "contact_breakdown_player_team": 0.6000000000000001,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 37678,
-    "playerName": "Joaquin Oviedo",
-    "net_momentum": 0.7327413635871713,
-    "momentum_added": 3.5068681954559278,
-    "momentum_lost": 2.774126831868756,
-    "events_count": 107,
-    "scoring_threat_player_team": 0.96,
-    "territory_player_team": 1.8,
-    "possession_quality_player_team": 3.87,
-    "contact_breakdown_player_team": -0.3899999999999999,
-    "discipline_turnover_player_team": -2.35,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 30915,
-    "playerName": "Santiago Grondona",
-    "net_momentum": 0.7016880230593577,
-    "momentum_added": 1.0499352940546935,
-    "momentum_lost": 0.3482472709953358,
-    "events_count": 69,
-    "scoring_threat_player_team": 1.08,
-    "territory_player_team": 0.2249999999999999,
-    "possession_quality_player_team": 1.935,
-    "contact_breakdown_player_team": -2.27,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 23737,
-    "playerName": "Dino Lamb",
-    "net_momentum": 0.6776114820888778,
-    "momentum_added": 1.0008563275195237,
-    "momentum_lost": 0.323244845430646,
-    "events_count": 38,
-    "scoring_threat_player_team": 1.2,
-    "territory_player_team": -0.125,
-    "possession_quality_player_team": 0.53,
-    "contact_breakdown_player_team": 0.19,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 25098,
-    "playerName": "Franco Molina",
-    "net_momentum": 0.6442605497134917,
-    "momentum_added": 2.199600305088744,
-    "momentum_lost": 1.5553397553752522,
-    "events_count": 77,
-    "scoring_threat_player_team": 1.2,
-    "territory_player_team": 0.0999999999999999,
-    "possession_quality_player_team": 4.42,
-    "contact_breakdown_player_team": -0.8299999999999998,
-    "discipline_turnover_player_team": -2.15,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 21537,
-    "playerName": "Federico Ruzza",
-    "net_momentum": 0.6074628713449173,
-    "momentum_added": 0.799507821179828,
-    "momentum_lost": 0.1920449498349107,
-    "events_count": 54,
-    "scoring_threat_player_team": 0.36,
-    "territory_player_team": 1.525,
-    "possession_quality_player_team": 2.91,
-    "contact_breakdown_player_team": 0.59,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 34627,
-    "playerName": "Ange Capuozzo",
-    "net_momentum": 0.5345613017228982,
-    "momentum_added": 0.7852813627395899,
-    "momentum_lost": 0.2507200610166917,
-    "events_count": 14,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 1.303,
-    "possession_quality_player_team": 2.345,
-    "contact_breakdown_player_team": -0.56,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 36688,
-    "playerName": "Lorenzo Cannone",
-    "net_momentum": 0.4522485999399318,
-    "momentum_added": 2.5638542423364443,
-    "momentum_lost": 2.1116056423965124,
-    "events_count": 90,
-    "scoring_threat_player_team": 1.92,
-    "territory_player_team": 0.6,
-    "possession_quality_player_team": 4.785,
-    "contact_breakdown_player_team": 0.23,
-    "discipline_turnover_player_team": -4.15,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 38632,
-    "playerName": "Mirco Spagnolo",
-    "net_momentum": 0.4510360835232812,
-    "momentum_added": 1.059684275477973,
-    "momentum_lost": 0.6086481919546917,
-    "events_count": 77,
-    "scoring_threat_player_team": 1.2,
-    "territory_player_team": 0.55,
-    "possession_quality_player_team": 2.2,
-    "contact_breakdown_player_team": -2.25,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 30907,
-    "playerName": "Juan Bautista Pedemonte",
-    "net_momentum": 0.4314985208581278,
-    "momentum_added": 0.5120394430157538,
-    "momentum_lost": 0.0805409221576259,
-    "events_count": 25,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": -0.125,
-    "possession_quality_player_team": 1.46,
-    "contact_breakdown_player_team": -0.4299999999999999,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 34534,
-    "playerName": "Juan Martin Gonzalez",
-    "net_momentum": 0.2709772487790202,
-    "momentum_added": 4.767410601736422,
-    "momentum_lost": 4.496433352957402,
-    "events_count": 118,
-    "scoring_threat_player_team": 1.44,
-    "territory_player_team": 1.675,
-    "possession_quality_player_team": 7.235,
-    "contact_breakdown_player_team": -0.7999999999999999,
-    "discipline_turnover_player_team": -6.65,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 18980,
-    "playerName": "Francisco Gomez Kodela",
-    "net_momentum": 0.2239635204087094,
-    "momentum_added": 0.4555555692527151,
-    "momentum_lost": 0.2315920488440057,
-    "events_count": 23,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 0.2,
-    "possession_quality_player_team": 0.23,
-    "contact_breakdown_player_team": 0.31,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 24683,
-    "playerName": "Marco Zanon",
-    "net_momentum": 0.1006688540790417,
-    "momentum_added": 0.1639236512818324,
-    "momentum_lost": 0.0632547972027906,
-    "events_count": 16,
-    "scoring_threat_player_team": 0.12,
-    "territory_player_team": 1.0670000000000002,
-    "possession_quality_player_team": 0.31,
-    "contact_breakdown_player_team": -0.3299999999999999,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 33828,
-    "playerName": "Gianmarco Lucchesi",
-    "net_momentum": -0.0368310908003558,
-    "momentum_added": 0.9272452027126656,
-    "momentum_lost": 0.9640762935130214,
-    "events_count": 77,
-    "scoring_threat_player_team": 1.44,
-    "territory_player_team": 0.3,
-    "possession_quality_player_team": -0.0799999999999999,
-    "contact_breakdown_player_team": -3.51,
-    "discipline_turnover_player_team": -1.55,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 21764,
-    "playerName": "Ignacio Calles",
-    "net_momentum": -0.0938651221147415,
-    "momentum_added": 0.0370429646090678,
-    "momentum_lost": 0.1309080867238094,
-    "events_count": 11,
-    "scoring_threat_player_team": 0.12,
-    "territory_player_team": 0.0,
-    "possession_quality_player_team": 0.0,
-    "contact_breakdown_player_team": -1.4,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 27864,
-    "playerName": "Niccolo Cannone",
-    "net_momentum": -0.1654684880130567,
-    "momentum_added": 1.1793433190564249,
-    "momentum_lost": 1.3448118070694817,
-    "events_count": 94,
-    "scoring_threat_player_team": 2.16,
-    "territory_player_team": 0.425,
-    "possession_quality_player_team": 1.72,
-    "contact_breakdown_player_team": -1.4499999999999995,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 37801,
-    "playerName": "Tommaso Menoncello",
-    "net_momentum": -0.5658449193461974,
-    "momentum_added": 3.374444902429081,
-    "momentum_lost": 3.940289821775279,
-    "events_count": 109,
-    "scoring_threat_player_team": 2.52,
-    "territory_player_team": 2.958,
-    "possession_quality_player_team": 10.425,
-    "contact_breakdown_player_team": 2.4200000000000004,
-    "discipline_turnover_player_team": -5.55,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 38627,
-    "playerName": "Alessandro Garbisi",
-    "net_momentum": -0.6970685308040832,
-    "momentum_added": 0.298185186412772,
-    "momentum_lost": 0.9952537172168552,
-    "events_count": 63,
-    "scoring_threat_player_team": 1.08,
-    "territory_player_team": 0.0189999999999999,
-    "possession_quality_player_team": 1.36,
-    "contact_breakdown_player_team": -1.23,
-    "discipline_turnover_player_team": -1.6,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 27368,
-    "playerName": "Michele Lamaro",
-    "net_momentum": -0.6974437405036255,
-    "momentum_added": 0.7387009742800978,
-    "momentum_lost": 1.4361447147837234,
-    "events_count": 97,
-    "scoring_threat_player_team": 1.3199999999999998,
-    "territory_player_team": 0.5,
-    "possession_quality_player_team": 1.72,
-    "contact_breakdown_player_team": -4.14,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 22334,
-    "playerName": "Monty Ioane",
-    "net_momentum": -0.7364084239618507,
-    "momentum_added": 2.132206333196565,
-    "momentum_lost": 2.8686147571584155,
-    "events_count": 87,
-    "scoring_threat_player_team": 0.72,
-    "territory_player_team": 2.05,
-    "possession_quality_player_team": 5.6850000000000005,
-    "contact_breakdown_player_team": -0.9299999999999996,
-    "discipline_turnover_player_team": -3.05,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 38493,
-    "playerName": "Pedro Rubiolo",
-    "net_momentum": -0.920869282091498,
-    "momentum_added": 0.5172282436310762,
-    "momentum_lost": 1.4380975257225743,
-    "events_count": 92,
-    "scoring_threat_player_team": 1.08,
-    "territory_player_team": 0.0499999999999999,
-    "possession_quality_player_team": 1.05,
-    "contact_breakdown_player_team": -3.82,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 20533,
-    "playerName": "Simone Ferrari",
-    "net_momentum": -0.9752209262682486,
-    "momentum_added": 0.2631592442445241,
-    "momentum_lost": 1.2383801705127728,
-    "events_count": 28,
-    "scoring_threat_player_team": 1.08,
-    "territory_player_team": 0.225,
-    "possession_quality_player_team": 0.32,
-    "contact_breakdown_player_team": -1.02,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 952,
-    "teamName": "Italy",
-    "PLID": 24112,
-    "playerName": "Marco Riccioni",
-    "net_momentum": -1.0033138265226962,
-    "momentum_added": 0.3844103541111958,
-    "momentum_lost": 1.3877241806338918,
-    "events_count": 57,
-    "scoring_threat_player_team": 1.3199999999999998,
-    "territory_player_team": 0.025,
-    "possession_quality_player_team": 0.61,
-    "contact_breakdown_player_team": -3.4,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 34536,
-    "playerName": "Rodrigo Isgro",
-    "net_momentum": -1.1880011885274266,
-    "momentum_added": 1.7070534631184309,
-    "momentum_lost": 2.8950546516458573,
-    "events_count": 51,
-    "scoring_threat_player_team": 0.72,
-    "territory_player_team": 3.172,
-    "possession_quality_player_team": 4.075,
-    "contact_breakdown_player_team": 0.6500000000000001,
-    "discipline_turnover_player_team": -4.5,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941807,
-    "team_id": 800,
-    "teamName": "Argentina",
-    "PLID": 34532,
-    "playerName": "Thomas Gallo",
-    "net_momentum": -1.547322225339188,
-    "momentum_added": 1.8275693348324968,
-    "momentum_lost": 3.374891560171685,
-    "events_count": 87,
-    "scoring_threat_player_team": 1.08,
-    "territory_player_team": 0.55,
-    "possession_quality_player_team": 3.03,
-    "contact_breakdown_player_team": -1.5199999999999998,
-    "discipline_turnover_player_team": -3.6,
-    "review_priority": "High"
-  }
-]
+{
+  "matchId": "941807",
+  "players": [
+    {
+      "playerKey": "tomas albornoz|argentina",
+      "playerName": "Tomas Albornoz",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 61.48,
+      "momentumAdded": 71.06,
+      "momentumLost": 9.58,
+      "scoringThreat": 23.68,
+      "territory": 33.88,
+      "possessionQuality": 6.79,
+      "contactBreakdown": -1.37,
+      "disciplineTurnover": -1.5,
+      "actions": 205,
+      "topActions": [
+        {
+          "time": "56:24",
+          "startSecond": 4981.9,
+          "endSecond": 5007.9,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "66:19",
+          "startSecond": 5685.6,
+          "endSecond": 5711.6,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 2.8,
+          "reason": "得点脅威 +2.0 / テリトリー +0.8"
+        },
+        {
+          "time": "78:35",
+          "startSecond": 6554.7,
+          "endSecond": 6580.7,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.72,
+          "reason": "得点脅威 +2.1 / テリトリー +0.6"
+        },
+        {
+          "time": "29:04",
+          "startSecond": 1957.8,
+          "endSecond": 1983.8,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.7,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "73:39",
+          "startSecond": 6129.8,
+          "endSecond": 6155.8,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.7,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "11:37",
+          "startSecond": 828.6,
+          "endSecond": 854.6,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.67,
+          "reason": "得点脅威 +2.1 / テリトリー +0.6"
+        },
+        {
+          "time": "49:07",
+          "startSecond": 4398.6,
+          "endSecond": 4424.6,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.65,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "57:24",
+          "startSecond": 5042.7,
+          "endSecond": 5068.7,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.57,
+          "reason": "得点脅威 +2.1 / テリトリー +0.5"
+        },
+        {
+          "time": "3:17",
+          "startSecond": 189.5,
+          "endSecond": 215.5,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.37,
+          "reason": "得点脅威 +2.1 / テリトリー +0.3"
+        },
+        {
+          "time": "60:39",
+          "startSecond": 5283.9,
+          "endSecond": 5309.9,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 2.29,
+          "reason": "テリトリー +2.3"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "tommaso allan|italy",
+      "playerName": "Tommaso Allan",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": 28.03,
+      "momentumAdded": 31.87,
+      "momentumLost": 3.83,
+      "scoringThreat": 7.32,
+      "territory": 15.99,
+      "possessionQuality": 7.12,
+      "contactBreakdown": -2.4,
+      "disciplineTurnover": 0,
+      "actions": 101,
+      "topActions": [
+        {
+          "time": "68:53",
+          "startSecond": 5839,
+          "endSecond": 5865,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 2.78,
+          "reason": "得点脅威 +2.0 / テリトリー +0.8"
+        },
+        {
+          "time": "43:33",
+          "startSecond": 2836.2,
+          "endSecond": 2862.2,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.72,
+          "reason": "得点脅威 +2.1 / テリトリー +0.6"
+        },
+        {
+          "time": "42:45",
+          "startSecond": 3962.4,
+          "endSecond": 3988.4,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.67,
+          "reason": "得点脅威 +2.1 / テリトリー +0.6"
+        },
+        {
+          "time": "23:32",
+          "startSecond": 1542.7,
+          "endSecond": 1568.7,
+          "action": "Kick",
+          "result": "Kick in Touch (Bounce)",
+          "impact": 2.31,
+          "reason": "テリトリー +2.3"
+        },
+        {
+          "time": "26:53",
+          "startSecond": 1744.5,
+          "endSecond": 1770.5,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.63,
+          "reason": "テリトリー +1.6"
+        },
+        {
+          "time": "69:42",
+          "startSecond": 5888.9,
+          "endSecond": 5914.9,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.63,
+          "reason": "テリトリー +1.6"
+        },
+        {
+          "time": "59:34",
+          "startSecond": 5210,
+          "endSecond": 5236,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.59,
+          "reason": "テリトリー +1.6"
+        },
+        {
+          "time": "18:45",
+          "startSecond": 1256.4,
+          "endSecond": 1282.4,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 1.47,
+          "reason": "継続品質 +0.7 / テリトリー +0.6 / 接点・BD +0.2"
+        },
+        {
+          "time": "16:28",
+          "startSecond": 1119.2,
+          "endSecond": 1145.2,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.37,
+          "reason": "テリトリー +1.4"
+        },
+        {
+          "time": "12:46",
+          "startSecond": 897.3,
+          "endSecond": 923.3,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.15,
+          "reason": "テリトリー +1.1"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "juan cruz mallia|argentina",
+      "playerName": "Juan Cruz Mallia",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 21.97,
+      "momentumAdded": 33.14,
+      "momentumLost": 11.17,
+      "scoringThreat": 7.08,
+      "territory": 12.7,
+      "possessionQuality": 8.36,
+      "contactBreakdown": -3.12,
+      "disciplineTurnover": -3.05,
+      "actions": 130,
+      "topActions": [
+        {
+          "time": "10:39",
+          "startSecond": 770,
+          "endSecond": 796,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "10:28",
+          "startSecond": 759.2,
+          "endSecond": 785.2,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 3.36,
+          "reason": "テリトリー +1.9 / 継続品質 +1.1 / 接点・BD +0.4"
+        },
+        {
+          "time": "71:36",
+          "startSecond": 6006.8,
+          "endSecond": 6032.8,
+          "action": "Kick",
+          "result": "Kick in Touch (Bounce)",
+          "impact": 2.44,
+          "reason": "テリトリー +2.4"
+        },
+        {
+          "time": "18:38",
+          "startSecond": 1249.1,
+          "endSecond": 1275.1,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 2.11,
+          "reason": "テリトリー +2.1"
+        },
+        {
+          "time": "4:52",
+          "startSecond": 284.8,
+          "endSecond": 310.8,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "74:20",
+          "startSecond": 6170.8,
+          "endSecond": 6196.8,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "33:57",
+          "startSecond": 2250.6,
+          "endSecond": 2276.6,
+          "action": "Carry",
+          "result": "Penalty Won",
+          "impact": 1.44,
+          "reason": "規律・TO +1.2 / 接点・BD +0.2"
+        },
+        {
+          "time": "17:17",
+          "startSecond": 1167.9,
+          "endSecond": 1193.9,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "64:53",
+          "startSecond": 5599.8,
+          "endSecond": 5625.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.24,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.3"
+        },
+        {
+          "time": "27:00",
+          "startSecond": 1750.7,
+          "endSecond": 1776.7,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.22,
+          "reason": "テリトリー +1.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "martin page-relo|italy",
+      "playerName": "Martin Page-Relo",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": 18.32,
+      "momentumAdded": 26.47,
+      "momentumLost": 8.15,
+      "scoringThreat": 9.32,
+      "territory": 5.09,
+      "possessionQuality": 8.15,
+      "contactBreakdown": -1.24,
+      "disciplineTurnover": -3,
+      "actions": 269,
+      "topActions": [
+        {
+          "time": "18:31",
+          "startSecond": 1242,
+          "endSecond": 1268,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 3.33,
+          "reason": "得点脅威 +2.0 / テリトリー +1.3"
+        },
+        {
+          "time": "0:22",
+          "startSecond": 14.7,
+          "endSecond": 40.7,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.74,
+          "reason": "テリトリー +1.7"
+        },
+        {
+          "time": "7:29",
+          "startSecond": 526.2,
+          "endSecond": 552.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "44:01",
+          "startSecond": 4038.6,
+          "endSecond": 4064.6,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.44,
+          "reason": "テリトリー +1.4"
+        },
+        {
+          "time": "8:59",
+          "startSecond": 670,
+          "endSecond": 696,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.39,
+          "reason": "テリトリー +1.4"
+        },
+        {
+          "time": "26:41",
+          "startSecond": 1732.4,
+          "endSecond": 1758.4,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "21:35",
+          "startSecond": 1426.2,
+          "endSecond": 1452.2,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.26,
+          "reason": "テリトリー +1.3"
+        },
+        {
+          "time": "33:52",
+          "startSecond": 2246.2,
+          "endSecond": 2272.2,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.26,
+          "reason": "テリトリー +1.3"
+        },
+        {
+          "time": "31:16",
+          "startSecond": 2090.1,
+          "endSecond": 2116.1,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.12,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "46:18",
+          "startSecond": 4229.4,
+          "endSecond": 4255.4,
+          "action": "Scrum",
+          "result": "Lost Free Kick",
+          "impact": -1.1,
+          "reason": "規律・TO -1.1"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "bautista delguy|argentina",
+      "playerName": "Bautista Delguy",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 18.06,
+      "momentumAdded": 24.11,
+      "momentumLost": 6.05,
+      "scoringThreat": 7.2,
+      "territory": 3.9,
+      "possessionQuality": 10.2,
+      "contactBreakdown": -1.74,
+      "disciplineTurnover": -1.5,
+      "actions": 61,
+      "topActions": [
+        {
+          "time": "77:33",
+          "startSecond": 6493,
+          "endSecond": 6519,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "0:56",
+          "startSecond": 48,
+          "endSecond": 74,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 2.64,
+          "reason": "継続品質 +1.1 / テリトリー +0.9 / 接点・BD +0.7"
+        },
+        {
+          "time": "39:44",
+          "startSecond": 2607,
+          "endSecond": 2633,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "77:29",
+          "startSecond": 6489.2,
+          "endSecond": 6515.2,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 1.46,
+          "reason": "テリトリー +0.6 / 継続品質 +0.6 / 接点・BD +0.2"
+        },
+        {
+          "time": "21:47",
+          "startSecond": 1437.7,
+          "endSecond": 1463.7,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 1.43,
+          "reason": "継続品質 +0.7 / テリトリー +0.6 / 接点・BD +0.2"
+        },
+        {
+          "time": "56:12",
+          "startSecond": 4970.2,
+          "endSecond": 4996.2,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 1.03,
+          "reason": "接点・BD +0.4 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "77:29",
+          "startSecond": 6489.2,
+          "endSecond": 6515.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "77:30",
+          "startSecond": 6489.4,
+          "endSecond": 6515.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "77:31",
+          "startSecond": 6490.7,
+          "endSecond": 6516.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "0:29",
+          "startSecond": 21.6,
+          "endSecond": 47.6,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 0.67,
+          "reason": "テリトリー +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "paolo garbisi|italy",
+      "playerName": "Paolo Garbisi",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": 16.72,
+      "momentumAdded": 24.38,
+      "momentumLost": 7.66,
+      "scoringThreat": 1.44,
+      "territory": 15.04,
+      "possessionQuality": 4.33,
+      "contactBreakdown": -1.54,
+      "disciplineTurnover": -2.55,
+      "actions": 175,
+      "topActions": [
+        {
+          "time": "38:46",
+          "startSecond": 2548.9,
+          "endSecond": 2574.9,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.97,
+          "reason": "テリトリー +2.0"
+        },
+        {
+          "time": "28:19",
+          "startSecond": 1829.9,
+          "endSecond": 1855.9,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "37:15",
+          "startSecond": 2458.4,
+          "endSecond": 2484.4,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "41:35",
+          "startSecond": 2718.4,
+          "endSecond": 2744.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.16,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "25:15",
+          "startSecond": 1646,
+          "endSecond": 1672,
+          "action": "Kick",
+          "result": "Kick in Touch (Bounce)",
+          "impact": 1,
+          "reason": "テリトリー +1.0"
+        },
+        {
+          "time": "78:54",
+          "startSecond": 6597.4,
+          "endSecond": 6623.4,
+          "action": "Restart",
+          "result": "Restart Opp Collection",
+          "impact": 0.93,
+          "reason": "テリトリー +0.9"
+        },
+        {
+          "time": "66:54",
+          "startSecond": 5720.4,
+          "endSecond": 5746.4,
+          "action": "Restart",
+          "result": "Restart Opp Collection",
+          "impact": 0.9,
+          "reason": "テリトリー +0.9"
+        },
+        {
+          "time": "60:05",
+          "startSecond": 5250.2,
+          "endSecond": 5276.2,
+          "action": "Kick",
+          "result": "Kick in Touch (Bounce)",
+          "impact": 0.89,
+          "reason": "テリトリー +0.9"
+        },
+        {
+          "time": "3:48",
+          "startSecond": 220.5,
+          "endSecond": 246.5,
+          "action": "Restart",
+          "result": "Restart Opp Collection",
+          "impact": 0.88,
+          "reason": "テリトリー +0.9"
+        },
+        {
+          "time": "40:00",
+          "startSecond": 3795.4,
+          "endSecond": 3821.4,
+          "action": "Restart",
+          "result": "Restart Opp Collection",
+          "impact": 0.85,
+          "reason": "テリトリー +0.9"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "santiago cordero|argentina",
+      "playerName": "Santiago Cordero",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 12.93,
+      "momentumAdded": 13.63,
+      "momentumLost": 0.7,
+      "scoringThreat": 6.36,
+      "territory": 1.73,
+      "possessionQuality": 4.88,
+      "contactBreakdown": -0.03,
+      "disciplineTurnover": 0,
+      "actions": 30,
+      "topActions": [
+        {
+          "time": "65:18",
+          "startSecond": 5624.7,
+          "endSecond": 5650.7,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "65:15",
+          "startSecond": 5621.4,
+          "endSecond": 5647.4,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 1.65,
+          "reason": "継続品質 +0.8 / テリトリー +0.6 / 接点・BD +0.2"
+        },
+        {
+          "time": "77:18",
+          "startSecond": 6478.1,
+          "endSecond": 6504.1,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 1.06,
+          "reason": "接点・BD +0.4 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "77:11",
+          "startSecond": 6470.6,
+          "endSecond": 6496.6,
+          "action": "Counter Attack",
+          "result": "",
+          "impact": 0.9,
+          "reason": "テリトリー +0.9"
+        },
+        {
+          "time": "65:16",
+          "startSecond": 5622.6,
+          "endSecond": 5648.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "65:17",
+          "startSecond": 5623.5,
+          "endSecond": 5649.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "65:15",
+          "startSecond": 5621.4,
+          "endSecond": 5647.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "77:20",
+          "startSecond": 6479.6,
+          "endSecond": 6505.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "77:21",
+          "startSecond": 6480.9,
+          "endSecond": 6506.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "tommaso menoncello|italy",
+      "playerName": "Tommaso Menoncello",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": 11.57,
+      "momentumAdded": 25.1,
+      "momentumLost": 13.53,
+      "scoringThreat": 2.52,
+      "territory": 2.96,
+      "possessionQuality": 10.43,
+      "contactBreakdown": 2.42,
+      "disciplineTurnover": -6.75,
+      "actions": 109,
+      "topActions": [
+        {
+          "time": "26:34",
+          "startSecond": 1724.7,
+          "endSecond": 1750.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.8,
+          "reason": "接点・BD +0.7 / 継続品質 +0.6 / テリトリー +0.5"
+        },
+        {
+          "time": "4:53",
+          "startSecond": 285.8,
+          "endSecond": 311.8,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 1.54,
+          "reason": "継続品質 +0.6 / テリトリー +0.5 / 接点・BD +0.4"
+        },
+        {
+          "time": "10:27",
+          "startSecond": 758.2,
+          "endSecond": 784.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "5:02",
+          "startSecond": 294.7,
+          "endSecond": 320.7,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "8:39",
+          "startSecond": 649.9,
+          "endSecond": 675.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.34,
+          "reason": "接点・BD +0.7 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "76:50",
+          "startSecond": 6450.1,
+          "endSecond": 6476.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.33,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.3"
+        },
+        {
+          "time": "46:46",
+          "startSecond": 4258,
+          "endSecond": 4284,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "79:43",
+          "startSecond": 6647.2,
+          "endSecond": 6673.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "63:37",
+          "startSecond": 5514.9,
+          "endSecond": 5540.9,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "55:14",
+          "startSecond": 4912.6,
+          "endSecond": 4938.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1,
+          "reason": "接点・BD +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "giacomo nicotera|italy",
+      "playerName": "Giacomo Nicotera",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": 11.1,
+      "momentumAdded": 14,
+      "momentumLost": 2.9,
+      "scoringThreat": 7.8,
+      "territory": 0.15,
+      "possessionQuality": 1.25,
+      "contactBreakdown": -0.2,
+      "disciplineTurnover": 2.1,
+      "actions": 57,
+      "topActions": [
+        {
+          "time": "67:59",
+          "startSecond": 5785.6,
+          "endSecond": 5811.6,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "56:02",
+          "startSecond": 4960.5,
+          "endSecond": 4986.5,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "67:59",
+          "startSecond": 5785.2,
+          "endSecond": 5811.2,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 0.91,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "63:22",
+          "startSecond": 5500.3,
+          "endSecond": 5526.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.85,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "74:43",
+          "startSecond": 6193.5,
+          "endSecond": 6219.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "55:09",
+          "startSecond": 4907.1,
+          "endSecond": 4933.1,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "67:42",
+          "startSecond": 5768.2,
+          "endSecond": 5794.2,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "sebastian negri|italy",
+      "playerName": "Sebastian Negri",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": 9.89,
+      "momentumAdded": 11.66,
+      "momentumLost": 1.77,
+      "scoringThreat": 1.8,
+      "territory": 1.23,
+      "possessionQuality": 2.4,
+      "contactBreakdown": 4.47,
+      "disciplineTurnover": 0,
+      "actions": 85,
+      "topActions": [
+        {
+          "time": "13:20",
+          "startSecond": 931.3,
+          "endSecond": 957.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.06,
+          "reason": "接点・BD +0.7 / テリトリー +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "40:33",
+          "startSecond": 3830.1,
+          "endSecond": 3856.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.05,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "9:41",
+          "startSecond": 712.1,
+          "endSecond": 738.1,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.99,
+          "reason": "継続品質 +0.5 / テリトリー +0.4 / 接点・BD +0.2"
+        },
+        {
+          "time": "6:03",
+          "startSecond": 355.3,
+          "endSecond": 381.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.92,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "9:41",
+          "startSecond": 712.2,
+          "endSecond": 738.2,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "33:41",
+          "startSecond": 2234.7,
+          "endSecond": 2260.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "50:45",
+          "startSecond": 4551.7,
+          "endSecond": 4577.7,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.65,
+          "reason": "継続品質 -0.6"
+        },
+        {
+          "time": "29:43",
+          "startSecond": 1996.4,
+          "endSecond": 2022.4,
+          "action": "Tackle",
+          "result": "Sack",
+          "impact": 0.57,
+          "reason": "接点・BD +0.5"
+        },
+        {
+          "time": "13:22",
+          "startSecond": 933.1,
+          "endSecond": 959.1,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        },
+        {
+          "time": "39:08",
+          "startSecond": 2570.8,
+          "endSecond": 2596.8,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "gonzalo bertranou|argentina",
+      "playerName": "Gonzalo Bertranou",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 9.84,
+      "momentumAdded": 18.1,
+      "momentumLost": 8.26,
+      "scoringThreat": 11.64,
+      "territory": -2.07,
+      "possessionQuality": 5.49,
+      "contactBreakdown": -3.32,
+      "disciplineTurnover": -1.9,
+      "actions": 209,
+      "topActions": [
+        {
+          "time": "28:20",
+          "startSecond": 1831.2,
+          "endSecond": 1857.2,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "22:28",
+          "startSecond": 1479.5,
+          "endSecond": 1505.5,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "37:21",
+          "startSecond": 2464.4,
+          "endSecond": 2490.4,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "13:10",
+          "startSecond": 920.7,
+          "endSecond": 946.7,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.11,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "14:58",
+          "startSecond": 1029.5,
+          "endSecond": 1055.5,
+          "action": "Scrum",
+          "result": "Won Penalty",
+          "impact": 1.1,
+          "reason": "規律・TO +1.1"
+        },
+        {
+          "time": "49:50",
+          "startSecond": 4455.8,
+          "endSecond": 4481.8,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 0.9,
+          "reason": "テリトリー +0.9"
+        },
+        {
+          "time": "28:19",
+          "startSecond": 1830.4,
+          "endSecond": 1856.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "40:19",
+          "startSecond": 3816.8,
+          "endSecond": 3842.8,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 0.74,
+          "reason": "テリトリー +0.7"
+        },
+        {
+          "time": "30:33",
+          "startSecond": 2046.8,
+          "endSecond": 2072.8,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 0.65,
+          "reason": "テリトリー +0.7"
+        },
+        {
+          "time": "16:10",
+          "startSecond": 1101.6,
+          "endSecond": 1127.6,
+          "action": "Kick",
+          "result": "Own Player - Collected",
+          "impact": 0.55,
+          "reason": "テリトリー +0.6"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "joel sclavi|argentina",
+      "playerName": "Joel Sclavi",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 9.29,
+      "momentumAdded": 11.01,
+      "momentumLost": 1.72,
+      "scoringThreat": 7.2,
+      "territory": 0.88,
+      "possessionQuality": 1.49,
+      "contactBreakdown": -0.27,
+      "disciplineTurnover": 0,
+      "actions": 61,
+      "topActions": [
+        {
+          "time": "48:07",
+          "startSecond": 4338.6,
+          "endSecond": 4364.6,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "43:26",
+          "startSecond": 4003.8,
+          "endSecond": 4029.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "48:06",
+          "startSecond": 4338,
+          "endSecond": 4364,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 0.64,
+          "reason": "接点・BD +0.4"
+        },
+        {
+          "time": "28:02",
+          "startSecond": 1813.2,
+          "endSecond": 1839.2,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "matias alemanno|argentina",
+      "playerName": "Matias Alemanno",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 8.52,
+      "momentumAdded": 10,
+      "momentumLost": 1.48,
+      "scoringThreat": 6.84,
+      "territory": 0.25,
+      "possessionQuality": 1.87,
+      "contactBreakdown": 1.06,
+      "disciplineTurnover": -1.5,
+      "actions": 20,
+      "topActions": [
+        {
+          "time": "72:41",
+          "startSecond": 6071.8,
+          "endSecond": 6097.8,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "69:33",
+          "startSecond": 5879.3,
+          "endSecond": 5905.3,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "69:32",
+          "startSecond": 5878.2,
+          "endSecond": 5904.2,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 1,
+          "reason": "接点・BD +0.4 / 継続品質 +0.3 / テリトリー +0.3"
+        },
+        {
+          "time": "72:40",
+          "startSecond": 6070.9,
+          "endSecond": 6096.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "72:40",
+          "startSecond": 6071.2,
+          "endSecond": 6097.2,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "72:39",
+          "startSecond": 6069.9,
+          "endSecond": 6095.9,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 0.65,
+          "reason": "接点・BD +0.2 / テリトリー +0.2 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "juan ignacio brex|italy",
+      "playerName": "Juan Ignacio Brex",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": 8.07,
+      "momentumAdded": 14.22,
+      "momentumLost": 6.16,
+      "scoringThreat": 2.04,
+      "territory": 1.13,
+      "possessionQuality": 6.5,
+      "contactBreakdown": 1.41,
+      "disciplineTurnover": -3,
+      "actions": 112,
+      "topActions": [
+        {
+          "time": "29:57",
+          "startSecond": 2010.6,
+          "endSecond": 2036.6,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "58:30",
+          "startSecond": 5108.5,
+          "endSecond": 5134.5,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "39:21",
+          "startSecond": 2584.3,
+          "endSecond": 2610.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.31,
+          "reason": "接点・BD +0.7 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "41:41",
+          "startSecond": 2724.3,
+          "endSecond": 2750.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.12,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "4:58",
+          "startSecond": 290.2,
+          "endSecond": 316.2,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.99,
+          "reason": "継続品質 +0.5 / テリトリー +0.4 / 接点・BD +0.2"
+        },
+        {
+          "time": "61:57",
+          "startSecond": 5362.6,
+          "endSecond": 5388.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.97,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "5:00",
+          "startSecond": 292,
+          "endSecond": 318,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "4:58",
+          "startSecond": 290.2,
+          "endSecond": 316.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "6:06",
+          "startSecond": 358,
+          "endSecond": 384,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "39:15",
+          "startSecond": 2578.4,
+          "endSecond": 2604.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "danilo fischetti|italy",
+      "playerName": "Danilo Fischetti",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": 5.77,
+      "momentumAdded": 7.64,
+      "momentumLost": 1.88,
+      "scoringThreat": 1.2,
+      "territory": 0.63,
+      "possessionQuality": 3.34,
+      "contactBreakdown": 0.6,
+      "disciplineTurnover": 0,
+      "actions": 40,
+      "topActions": [
+        {
+          "time": "74:43",
+          "startSecond": 6193.6,
+          "endSecond": 6219.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 2.71,
+          "reason": "継続品質 +1.1 / テリトリー +1.0 / 接点・BD +0.7"
+        },
+        {
+          "time": "82:43",
+          "startSecond": 6826.4,
+          "endSecond": 6852.4,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.82,
+          "reason": "継続品質 -0.6 / テリトリー -0.3"
+        },
+        {
+          "time": "59:52",
+          "startSecond": 5237.4,
+          "endSecond": 5263.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "74:43",
+          "startSecond": 6194.3,
+          "endSecond": 6220.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "74:43",
+          "startSecond": 6194.5,
+          "endSecond": 6220.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "74:44",
+          "startSecond": 6194.6,
+          "endSecond": 6220.6,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "49:38",
+          "startSecond": 4443.8,
+          "endSecond": 4469.8,
+          "action": "Tackle",
+          "result": "Sack",
+          "impact": 0.57,
+          "reason": "接点・BD +0.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "federico ruzza|italy",
+      "playerName": "Federico Ruzza",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": 5.39,
+      "momentumAdded": 6.68,
+      "momentumLost": 1.29,
+      "scoringThreat": 0.36,
+      "territory": 1.53,
+      "possessionQuality": 2.91,
+      "contactBreakdown": 0.59,
+      "disciplineTurnover": 0,
+      "actions": 54,
+      "topActions": [
+        {
+          "time": "39:16",
+          "startSecond": 2578.6,
+          "endSecond": 2604.6,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 2.26,
+          "reason": "継続品質 +1.1 / テリトリー +1.0 / 接点・BD +0.2"
+        },
+        {
+          "time": "5:52",
+          "startSecond": 344.3,
+          "endSecond": 370.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.88,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "30:35",
+          "startSecond": 2049.2,
+          "endSecond": 2075.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.75,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "39:16",
+          "startSecond": 2579.3,
+          "endSecond": 2605.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "39:17",
+          "startSecond": 2579.7,
+          "endSecond": 2605.7,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "julian montoya|argentina",
+      "playerName": "Julian Montoya",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 5.23,
+      "momentumAdded": 9.27,
+      "momentumLost": 4.04,
+      "scoringThreat": 2.04,
+      "territory": 0.15,
+      "possessionQuality": 1.49,
+      "contactBreakdown": -2.05,
+      "disciplineTurnover": 3.6,
+      "actions": 99,
+      "topActions": [
+        {
+          "time": "13:01",
+          "startSecond": 911.9,
+          "endSecond": 937.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.91,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "1:07",
+          "startSecond": 59.7,
+          "endSecond": 85.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "47:52",
+          "startSecond": 4323.9,
+          "endSecond": 4349.9,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "43:27",
+          "startSecond": 4004.3,
+          "endSecond": 4030.3,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "matias orlando|argentina",
+      "playerName": "Matias Orlando",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 4.69,
+      "momentumAdded": 9.15,
+      "momentumLost": 4.46,
+      "scoringThreat": 1.68,
+      "territory": 0.63,
+      "possessionQuality": 3.05,
+      "contactBreakdown": -0.67,
+      "disciplineTurnover": 0,
+      "actions": 73,
+      "topActions": [
+        {
+          "time": "43:35",
+          "startSecond": 4012.4,
+          "endSecond": 4038.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.51,
+          "reason": "接点・BD +0.7 / 継続品質 +0.4 / テリトリー +0.4"
+        },
+        {
+          "time": "20:47",
+          "startSecond": 1377.8,
+          "endSecond": 1403.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.24,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.3"
+        },
+        {
+          "time": "4:06",
+          "startSecond": 237.9,
+          "endSecond": 263.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.98,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "2:24",
+          "startSecond": 136.5,
+          "endSecond": 162.5,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.69,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "20:48",
+          "startSecond": 1378.9,
+          "endSecond": 1404.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "20:48",
+          "startSecond": 1379.5,
+          "endSecond": 1405.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "43:37",
+          "startSecond": 4013.9,
+          "endSecond": 4039.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "39:43",
+          "startSecond": 2606.2,
+          "endSecond": 2632.2,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.55,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "matias moroni|argentina",
+      "playerName": "Matias Moroni",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 4.42,
+      "momentumAdded": 5.54,
+      "momentumLost": 1.12,
+      "scoringThreat": 0,
+      "territory": 0.85,
+      "possessionQuality": 4.26,
+      "contactBreakdown": -0.69,
+      "disciplineTurnover": 0,
+      "actions": 32,
+      "topActions": [
+        {
+          "time": "65:09",
+          "startSecond": 5615.4,
+          "endSecond": 5641.4,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 1.64,
+          "reason": "テリトリー +0.8 / 継続品質 +0.6 / 接点・BD +0.2"
+        },
+        {
+          "time": "65:10",
+          "startSecond": 5616.5,
+          "endSecond": 5642.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "65:11",
+          "startSecond": 5617.4,
+          "endSecond": 5643.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "65:11",
+          "startSecond": 5617.7,
+          "endSecond": 5643.7,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "65:12",
+          "startSecond": 5618.3,
+          "endSecond": 5644.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "65:15",
+          "startSecond": 5621.3,
+          "endSecond": 5647.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "79:21",
+          "startSecond": 6624.7,
+          "endSecond": 6650.7,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 0.57,
+          "reason": "テリトリー +0.3 / 接点・BD +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "pedro rubiolo|argentina",
+      "playerName": "Pedro Rubiolo",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": -4.09,
+      "momentumAdded": 2.36,
+      "momentumLost": 6.44,
+      "scoringThreat": 1.08,
+      "territory": 0.05,
+      "possessionQuality": 1.05,
+      "contactBreakdown": -3.82,
+      "disciplineTurnover": -2.45,
+      "actions": 92,
+      "topActions": [
+        {
+          "time": "41:52",
+          "startSecond": 2735.2,
+          "endSecond": 2761.2,
+          "action": "Tackle",
+          "result": "Pen Conceded",
+          "impact": -1.55,
+          "reason": "規律・TO -1.2 / 接点・BD -0.3"
+        },
+        {
+          "time": "41:54",
+          "startSecond": 2737.3,
+          "endSecond": 2763.3,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "81:00",
+          "startSecond": 6724.1,
+          "endSecond": 6750.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "gianmarco lucchesi|italy",
+      "playerName": "Gianmarco Lucchesi",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": -4,
+      "momentumAdded": 2.89,
+      "momentumLost": 6.88,
+      "scoringThreat": 1.44,
+      "territory": 0.3,
+      "possessionQuality": -0.08,
+      "contactBreakdown": -3.51,
+      "disciplineTurnover": -2.15,
+      "actions": 77,
+      "topActions": [
+        {
+          "time": "18:56",
+          "startSecond": 1267.2,
+          "endSecond": 1293.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "2:19",
+          "startSecond": 131.5,
+          "endSecond": 157.5,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "30:55",
+          "startSecond": 2069,
+          "endSecond": 2095,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.76,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "24:12",
+          "startSecond": 1582.7,
+          "endSecond": 1608.7,
+          "action": "Lineout Throw",
+          "result": "Lost Handling Error",
+          "impact": -0.63,
+          "reason": "規律・TO -0.8"
+        },
+        {
+          "time": "32:19",
+          "startSecond": 2152.5,
+          "endSecond": 2178.5,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "lucio cinti|argentina",
+      "playerName": "Lucio Cinti",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 3.97,
+      "momentumAdded": 13.46,
+      "momentumLost": 9.49,
+      "scoringThreat": 0.72,
+      "territory": 3.17,
+      "possessionQuality": 6.57,
+      "contactBreakdown": -3.49,
+      "disciplineTurnover": -3,
+      "actions": 91,
+      "topActions": [
+        {
+          "time": "6:30",
+          "startSecond": 382.8,
+          "endSecond": 408.8,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 1.77,
+          "reason": "継続品質 +0.9 / テリトリー +0.7 / 接点・BD +0.2"
+        },
+        {
+          "time": "16:22",
+          "startSecond": 1113.1,
+          "endSecond": 1139.1,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.52,
+          "reason": "テリトリー +1.5"
+        },
+        {
+          "time": "7:43",
+          "startSecond": 540,
+          "endSecond": 566,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "53:25",
+          "startSecond": 4712.3,
+          "endSecond": 4738.3,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "39:34",
+          "startSecond": 2597.1,
+          "endSecond": 2623.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.46,
+          "reason": "接点・BD +0.7 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "1:25",
+          "startSecond": 77,
+          "endSecond": 103,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "1:24",
+          "startSecond": 76.5,
+          "endSecond": 102.5,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.76,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "3:52",
+          "startSecond": 224.8,
+          "endSecond": 250.8,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.76,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "12:18",
+          "startSecond": 869.5,
+          "endSecond": 895.5,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.73,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "29:42",
+          "startSecond": 1995.4,
+          "endSecond": 2021.4,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.73,
+          "reason": "接点・BD -0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "joaquin oviedo|argentina",
+      "playerName": "Joaquin Oviedo",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 3.79,
+      "momentumAdded": 10.31,
+      "momentumLost": 6.52,
+      "scoringThreat": 0.96,
+      "territory": 1.8,
+      "possessionQuality": 3.87,
+      "contactBreakdown": -0.39,
+      "disciplineTurnover": -2.45,
+      "actions": 107,
+      "topActions": [
+        {
+          "time": "78:59",
+          "startSecond": 6603,
+          "endSecond": 6629,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.42,
+          "reason": "接点・BD +0.7 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "67:02",
+          "startSecond": 5728.1,
+          "endSecond": 5754.1,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "2:10",
+          "startSecond": 122.1,
+          "endSecond": 148.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.06,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "80:28",
+          "startSecond": 6692.2,
+          "endSecond": 6718.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.98,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "21:55",
+          "startSecond": 1446.1,
+          "endSecond": 1472.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.97,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "1:18",
+          "startSecond": 70.4,
+          "endSecond": 96.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.93,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "66:56",
+          "startSecond": 5722.2,
+          "endSecond": 5748.2,
+          "action": "Carry",
+          "result": "Penalty Conceded",
+          "impact": -0.93,
+          "reason": "規律・TO -1.2 / 接点・BD +0.2"
+        },
+        {
+          "time": "75:04",
+          "startSecond": 6215.1,
+          "endSecond": 6241.1,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.89,
+          "reason": "継続品質 +0.4 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "46:26",
+          "startSecond": 4237.2,
+          "endSecond": 4263.2,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.78,
+          "reason": "継続品質 +0.4 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "9:21",
+          "startSecond": 692.4,
+          "endSecond": 718.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.66,
+          "reason": "接点・BD +0.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "ange capuozzo|italy",
+      "playerName": "Ange Capuozzo",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": 3.09,
+      "momentumAdded": 3.97,
+      "momentumLost": 0.88,
+      "scoringThreat": 0,
+      "territory": 1.3,
+      "possessionQuality": 2.35,
+      "contactBreakdown": -0.56,
+      "disciplineTurnover": 0,
+      "actions": 14,
+      "topActions": [
+        {
+          "time": "4:35",
+          "startSecond": 267.6,
+          "endSecond": 293.6,
+          "action": "Carry",
+          "result": "Kick",
+          "impact": 0.96,
+          "reason": "継続品質 +0.5 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "4:23",
+          "startSecond": 255.3,
+          "endSecond": 281.3,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 0.83,
+          "reason": "継続品質 +0.4 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "4:40",
+          "startSecond": 272.8,
+          "endSecond": 298.8,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 0.7,
+          "reason": "テリトリー +0.7"
+        },
+        {
+          "time": "4:24",
+          "startSecond": 255.9,
+          "endSecond": 281.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "4:39",
+          "startSecond": 271.1,
+          "endSecond": 297.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "lorenzo cannone|italy",
+      "playerName": "Lorenzo Cannone",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": 2.79,
+      "momentumAdded": 9.53,
+      "momentumLost": 6.74,
+      "scoringThreat": 1.92,
+      "territory": 0.6,
+      "possessionQuality": 4.79,
+      "contactBreakdown": 0.23,
+      "disciplineTurnover": -4.75,
+      "actions": 90,
+      "topActions": [
+        {
+          "time": "75:01",
+          "startSecond": 6211.9,
+          "endSecond": 6237.9,
+          "action": "Card",
+          "result": "Foul Play",
+          "impact": -2,
+          "reason": "規律・TO -2.0"
+        },
+        {
+          "time": "24:12",
+          "startSecond": 1583.2,
+          "endSecond": 1609.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "75:01",
+          "startSecond": 6211.8,
+          "endSecond": 6237.8,
+          "action": "Penalty Conceded",
+          "result": "Yellow Card",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "7:17",
+          "startSecond": 514.2,
+          "endSecond": 540.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.13,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "59:04",
+          "startSecond": 5163,
+          "endSecond": 5189,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.85,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "41:43",
+          "startSecond": 2726,
+          "endSecond": 2752,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "63:17",
+          "startSecond": 5495.4,
+          "endSecond": 5521.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "6:06",
+          "startSecond": 358,
+          "endSecond": 384,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "31:07",
+          "startSecond": 2080.3,
+          "endSecond": 2106.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "40:39",
+          "startSecond": 3836.2,
+          "endSecond": 3862.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "marco riccioni|italy",
+      "playerName": "Marco Riccioni",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": -2.69,
+      "momentumAdded": 1.62,
+      "momentumLost": 4.31,
+      "scoringThreat": 1.32,
+      "territory": 0.02,
+      "possessionQuality": 0.61,
+      "contactBreakdown": -3.4,
+      "disciplineTurnover": -1.25,
+      "actions": 57,
+      "topActions": [
+        {
+          "time": "15:00",
+          "startSecond": 1030.9,
+          "endSecond": 1056.9,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "40:52",
+          "startSecond": 3849.6,
+          "endSecond": 3875.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "manuel zuliani|italy",
+      "playerName": "Manuel Zuliani",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": 2.65,
+      "momentumAdded": 3.32,
+      "momentumLost": 0.67,
+      "scoringThreat": 0.36,
+      "territory": 0.35,
+      "possessionQuality": 0.7,
+      "contactBreakdown": 1.24,
+      "disciplineTurnover": 0,
+      "actions": 30,
+      "topActions": [
+        {
+          "time": "59:49",
+          "startSecond": 5234.2,
+          "endSecond": 5260.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.23,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.2"
+        },
+        {
+          "time": "69:35",
+          "startSecond": 5881.4,
+          "endSecond": 5907.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.95,
+          "reason": "接点・BD +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "juan martin gonzalez|argentina",
+      "playerName": "Juan Martin Gonzalez",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 2.3,
+      "momentumAdded": 13.45,
+      "momentumLost": 11.15,
+      "scoringThreat": 1.44,
+      "territory": 1.68,
+      "possessionQuality": 7.24,
+      "contactBreakdown": -0.8,
+      "disciplineTurnover": -7.25,
+      "actions": 118,
+      "topActions": [
+        {
+          "time": "32:33",
+          "startSecond": 2166.3,
+          "endSecond": 2192.3,
+          "action": "Card",
+          "result": "Professional Foul",
+          "impact": -2,
+          "reason": "規律・TO -2.0"
+        },
+        {
+          "time": "74:55",
+          "startSecond": 6205.9,
+          "endSecond": 6231.9,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 1.63,
+          "reason": "継続品質 +0.7 / テリトリー +0.5 / 接点・BD +0.4"
+        },
+        {
+          "time": "50:28",
+          "startSecond": 4494.2,
+          "endSecond": 4520.2,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "32:33",
+          "startSecond": 2166.3,
+          "endSecond": 2192.3,
+          "action": "Penalty Conceded",
+          "result": "Penalty Try",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "62:02",
+          "startSecond": 5367.6,
+          "endSecond": 5393.6,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "77:21",
+          "startSecond": 6481,
+          "endSecond": 6507,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 1.23,
+          "reason": "継続品質 +0.6 / テリトリー +0.5 / 接点・BD +0.2"
+        },
+        {
+          "time": "58:59",
+          "startSecond": 5158.4,
+          "endSecond": 5184.4,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "46:37",
+          "startSecond": 4249,
+          "endSecond": 4275,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "81:06",
+          "startSecond": 6730.2,
+          "endSecond": 6756.2,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.93,
+          "reason": "継続品質 +0.4 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "74:09",
+          "startSecond": 6160.1,
+          "endSecond": 6186.1,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.74,
+          "reason": "継続品質 +0.3 / テリトリー +0.3 / 接点・BD +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "franco molina|argentina",
+      "playerName": "Franco Molina",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 2.14,
+      "momentumAdded": 7.08,
+      "momentumLost": 4.93,
+      "scoringThreat": 1.2,
+      "territory": 0.1,
+      "possessionQuality": 4.42,
+      "contactBreakdown": -0.83,
+      "disciplineTurnover": -2.75,
+      "actions": 77,
+      "topActions": [
+        {
+          "time": "12:28",
+          "startSecond": 879.6,
+          "endSecond": 905.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.54,
+          "reason": "接点・BD +0.7 / テリトリー +0.5 / 継続品質 +0.4"
+        },
+        {
+          "time": "43:48",
+          "startSecond": 4025.8,
+          "endSecond": 4051.8,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "41:37",
+          "startSecond": 3894.3,
+          "endSecond": 3920.3,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "4:08",
+          "startSecond": 240,
+          "endSecond": 266,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "6:19",
+          "startSecond": 370.9,
+          "endSecond": 396.9,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.65,
+          "reason": "継続品質 -0.6"
+        },
+        {
+          "time": "9:22",
+          "startSecond": 693.2,
+          "endSecond": 719.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "12:30",
+          "startSecond": 881,
+          "endSecond": 907,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "12:30",
+          "startSecond": 881.4,
+          "endSecond": 907.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "28:14",
+          "startSecond": 1825.1,
+          "endSecond": 1851.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "46:41",
+          "startSecond": 4252.4,
+          "endSecond": 4278.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "michele lamaro|italy",
+      "playerName": "Michele Lamaro",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": -2.1,
+      "momentumAdded": 4.16,
+      "momentumLost": 6.26,
+      "scoringThreat": 1.32,
+      "territory": 0.5,
+      "possessionQuality": 1.72,
+      "contactBreakdown": -4.14,
+      "disciplineTurnover": -1.5,
+      "actions": 97,
+      "topActions": [
+        {
+          "time": "13:31",
+          "startSecond": 941.8,
+          "endSecond": 967.8,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "9:41",
+          "startSecond": 712.1,
+          "endSecond": 738.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "50:26",
+          "startSecond": 4491.7,
+          "endSecond": 4517.7,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 0.65,
+          "reason": "継続品質 +0.2 / テリトリー +0.2 / 接点・BD +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "monty ioane|italy",
+      "playerName": "Monty Ioane",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": 2.08,
+      "momentumAdded": 13.02,
+      "momentumLost": 10.94,
+      "scoringThreat": 0.72,
+      "territory": 2.05,
+      "possessionQuality": 5.69,
+      "contactBreakdown": -0.93,
+      "disciplineTurnover": -5.45,
+      "actions": 87,
+      "topActions": [
+        {
+          "time": "52:23",
+          "startSecond": 4650,
+          "endSecond": 4676,
+          "action": "Tackle",
+          "result": "Pen Conceded",
+          "impact": -1.55,
+          "reason": "規律・TO -1.2 / 接点・BD -0.3"
+        },
+        {
+          "time": "19:31",
+          "startSecond": 1302.6,
+          "endSecond": 1328.6,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "52:20",
+          "startSecond": 4647.1,
+          "endSecond": 4673.1,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "24:55",
+          "startSecond": 1626.2,
+          "endSecond": 1652.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.4,
+          "reason": "接点・BD +0.7 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "52:26",
+          "startSecond": 4652.7,
+          "endSecond": 4678.7,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "13:28",
+          "startSecond": 939.5,
+          "endSecond": 965.5,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 0.93,
+          "reason": "継続品質 +0.4 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "27:05",
+          "startSecond": 1756.5,
+          "endSecond": 1782.5,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.81,
+          "reason": "継続品質 +0.4 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "40:27",
+          "startSecond": 3824.6,
+          "endSecond": 3850.6,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.8,
+          "reason": "継続品質 +0.3 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "5:27",
+          "startSecond": 319.1,
+          "endSecond": 345.1,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 0.68,
+          "reason": "テリトリー +0.3 / 継続品質 +0.2 / 接点・BD +0.2"
+        },
+        {
+          "time": "19:31",
+          "startSecond": 1302.3,
+          "endSecond": 1328.3,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 0.67,
+          "reason": "接点・BD +0.4 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "dino lamb|italy",
+      "playerName": "Dino Lamb",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": 1.8,
+      "momentumAdded": 2.79,
+      "momentumLost": 0.99,
+      "scoringThreat": 1.2,
+      "territory": -0.12,
+      "possessionQuality": 0.53,
+      "contactBreakdown": 0.19,
+      "disciplineTurnover": 0,
+      "actions": 38,
+      "topActions": [
+        {
+          "time": "62:03",
+          "startSecond": 5367.9,
+          "endSecond": 5393.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.1,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "mirco spagnolo|italy",
+      "playerName": "Mirco Spagnolo",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": 1.7,
+      "momentumAdded": 5.08,
+      "momentumLost": 3.38,
+      "scoringThreat": 1.2,
+      "territory": 0.55,
+      "possessionQuality": 2.2,
+      "contactBreakdown": -2.25,
+      "disciplineTurnover": 0,
+      "actions": 77,
+      "topActions": [
+        {
+          "time": "31:06",
+          "startSecond": 2079.3,
+          "endSecond": 2105.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.99,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "40:51",
+          "startSecond": 3848.4,
+          "endSecond": 3874.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.85,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "42:01",
+          "startSecond": 2744.2,
+          "endSecond": 2770.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "33:40",
+          "startSecond": 2234.2,
+          "endSecond": 2260.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "alessandro garbisi|italy",
+      "playerName": "Alessandro Garbisi",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": -1.52,
+      "momentumAdded": 2.66,
+      "momentumLost": 4.18,
+      "scoringThreat": 1.08,
+      "territory": 0.02,
+      "possessionQuality": 1.36,
+      "contactBreakdown": -1.23,
+      "disciplineTurnover": -2.75,
+      "actions": 63,
+      "topActions": [
+        {
+          "time": "74:51",
+          "startSecond": 6202,
+          "endSecond": 6228,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "77:06",
+          "startSecond": 6466.1,
+          "endSecond": 6492.1,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.37,
+          "reason": "テリトリー +1.4"
+        },
+        {
+          "time": "71:52",
+          "startSecond": 6022.7,
+          "endSecond": 6048.7,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "louis lynagh|italy",
+      "playerName": "Louis Lynagh",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": 1.44,
+      "momentumAdded": 9.09,
+      "momentumLost": 7.64,
+      "scoringThreat": 0.72,
+      "territory": 2.21,
+      "possessionQuality": 4.76,
+      "contactBreakdown": -1.04,
+      "disciplineTurnover": -5.2,
+      "actions": 71,
+      "topActions": [
+        {
+          "time": "56:10",
+          "startSecond": 4968.6,
+          "endSecond": 4994.6,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "18:48",
+          "startSecond": 1259.2,
+          "endSecond": 1285.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.27,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.3"
+        },
+        {
+          "time": "6:13",
+          "startSecond": 365.7,
+          "endSecond": 391.7,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "33:57",
+          "startSecond": 2250.7,
+          "endSecond": 2276.7,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "60:45",
+          "startSecond": 5290,
+          "endSecond": 5316,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 0.81,
+          "reason": "テリトリー +0.8"
+        },
+        {
+          "time": "82:49",
+          "startSecond": 6832.6,
+          "endSecond": 6858.6,
+          "action": "Kick",
+          "result": "Kick in Touch (Bounce)",
+          "impact": 0.67,
+          "reason": "テリトリー +0.7"
+        },
+        {
+          "time": "18:48",
+          "startSecond": 1259.2,
+          "endSecond": 1285.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "18:49",
+          "startSecond": 1260,
+          "endSecond": 1286,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "26:33",
+          "startSecond": 1724.5,
+          "endSecond": 1750.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "58:17",
+          "startSecond": 5095.7,
+          "endSecond": 5121.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "niccolo cannone|italy",
+      "playerName": "Niccolo Cannone",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": 1.36,
+      "momentumAdded": 6.38,
+      "momentumLost": 5.02,
+      "scoringThreat": 2.16,
+      "territory": 0.43,
+      "possessionQuality": 1.72,
+      "contactBreakdown": -1.45,
+      "disciplineTurnover": -1.5,
+      "actions": 94,
+      "topActions": [
+        {
+          "time": "39:28",
+          "startSecond": 2590.8,
+          "endSecond": 2616.8,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "33:38",
+          "startSecond": 2232,
+          "endSecond": 2258,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.87,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "50:47",
+          "startSecond": 4553.4,
+          "endSecond": 4579.4,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.76,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "31:06",
+          "startSecond": 2080.2,
+          "endSecond": 2106.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "ignacio calles|argentina",
+      "playerName": "Ignacio Calles",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": -1.28,
+      "momentumAdded": 0.12,
+      "momentumLost": 1.4,
+      "scoringThreat": 0.12,
+      "territory": 0,
+      "possessionQuality": 0,
+      "contactBreakdown": -1.4,
+      "disciplineTurnover": 0,
+      "actions": 11,
+      "topActions": [],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "marco zanon|italy",
+      "playerName": "Marco Zanon",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": 1.17,
+      "momentumAdded": 1.52,
+      "momentumLost": 0.36,
+      "scoringThreat": 0.12,
+      "territory": 1.07,
+      "possessionQuality": 0.31,
+      "contactBreakdown": -0.33,
+      "disciplineTurnover": 0,
+      "actions": 16,
+      "topActions": [
+        {
+          "time": "71:31",
+          "startSecond": 6002.4,
+          "endSecond": 6028.4,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 0.59,
+          "reason": "テリトリー +0.6"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "rodrigo isgro|argentina",
+      "playerName": "Rodrigo Isgro",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 1.12,
+      "momentumAdded": 9.65,
+      "momentumLost": 8.54,
+      "scoringThreat": 0.72,
+      "territory": 3.17,
+      "possessionQuality": 4.08,
+      "contactBreakdown": 0.65,
+      "disciplineTurnover": -7.5,
+      "actions": 51,
+      "topActions": [
+        {
+          "time": "1:40",
+          "startSecond": 92.8,
+          "endSecond": 118.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 2.2,
+          "reason": "継続品質 +0.8 / 接点・BD +0.7 / テリトリー +0.7"
+        },
+        {
+          "time": "26:46",
+          "startSecond": 1737.4,
+          "endSecond": 1763.4,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.81,
+          "reason": "テリトリー +1.8"
+        },
+        {
+          "time": "6:35",
+          "startSecond": 387.6,
+          "endSecond": 413.6,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 1.5,
+          "reason": "継続品質 +0.6 / テリトリー +0.5 / 接点・BD +0.4"
+        },
+        {
+          "time": "19:10",
+          "startSecond": 1281,
+          "endSecond": 1307,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "38:58",
+          "startSecond": 2561,
+          "endSecond": 2587,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "61:11",
+          "startSecond": 5316.5,
+          "endSecond": 5342.5,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "6:38",
+          "startSecond": 389.9,
+          "endSecond": 415.9,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "35:57",
+          "startSecond": 2379.9,
+          "endSecond": 2405.9,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "28:11",
+          "startSecond": 1822.3,
+          "endSecond": 1848.3,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 0.79,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "1:42",
+          "startSecond": 94,
+          "endSecond": 120,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "ignacio ruiz|argentina",
+      "playerName": "Ignacio Ruiz",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 1.07,
+      "momentumAdded": 5.01,
+      "momentumLost": 3.94,
+      "scoringThreat": 0.6,
+      "territory": 0.15,
+      "possessionQuality": 1.54,
+      "contactBreakdown": 0.23,
+      "disciplineTurnover": -1.45,
+      "actions": 33,
+      "topActions": [
+        {
+          "time": "63:05",
+          "startSecond": 5482.8,
+          "endSecond": 5508.8,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "81:18",
+          "startSecond": 6741.4,
+          "endSecond": 6767.4,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "81:17",
+          "startSecond": 6740.6,
+          "endSecond": 6766.6,
+          "action": "Carry",
+          "result": "Penalty Conceded",
+          "impact": -1.05,
+          "reason": "規律・TO -1.2"
+        },
+        {
+          "time": "72:38",
+          "startSecond": 6068.8,
+          "endSecond": 6094.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "72:38",
+          "startSecond": 6068.8,
+          "endSecond": 6094.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "75:42",
+          "startSecond": 6382.3,
+          "endSecond": 6408.3,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.6,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "72:38",
+          "startSecond": 6068.6,
+          "endSecond": 6094.6,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "santiago grondona|argentina",
+      "playerName": "Santiago Grondona",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 0.97,
+      "momentumAdded": 3.44,
+      "momentumLost": 2.47,
+      "scoringThreat": 1.08,
+      "territory": 0.23,
+      "possessionQuality": 1.94,
+      "contactBreakdown": -2.27,
+      "disciplineTurnover": 0,
+      "actions": 69,
+      "topActions": [
+        {
+          "time": "28:16",
+          "startSecond": 1826.8,
+          "endSecond": 1852.8,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 0.87,
+          "reason": "継続品質 +0.3 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "1:07",
+          "startSecond": 59.6,
+          "endSecond": 85.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "28:16",
+          "startSecond": 1826.8,
+          "endSecond": 1852.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "gonzalo garcia|argentina",
+      "playerName": "Gonzalo Garcia",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 0.97,
+      "momentumAdded": 4.95,
+      "momentumLost": 3.98,
+      "scoringThreat": 0.48,
+      "territory": 1.37,
+      "possessionQuality": 2.2,
+      "contactBreakdown": -1.57,
+      "disciplineTurnover": -1.5,
+      "actions": 98,
+      "topActions": [
+        {
+          "time": "58:37",
+          "startSecond": 5114.8,
+          "endSecond": 5140.8,
+          "action": "Kick",
+          "result": "Kick in Touch (Bounce)",
+          "impact": 1.53,
+          "reason": "テリトリー +1.5"
+        },
+        {
+          "time": "75:45",
+          "startSecond": 6384.8,
+          "endSecond": 6410.8,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "61:37",
+          "startSecond": 5342.2,
+          "endSecond": 5368.2,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.07,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "51:30",
+          "startSecond": 4597,
+          "endSecond": 4623,
+          "action": "Kick",
+          "result": "Own Player - Collected",
+          "impact": 0.81,
+          "reason": "テリトリー +0.8"
+        },
+        {
+          "time": "52:01",
+          "startSecond": 4627.7,
+          "endSecond": 4653.7,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 0.78,
+          "reason": "テリトリー +0.8"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "juan bautista pedemonte|argentina",
+      "playerName": "Juan Bautista Pedemonte",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 0.91,
+      "momentumAdded": 1.78,
+      "momentumLost": 0.88,
+      "scoringThreat": 0,
+      "territory": -0.12,
+      "possessionQuality": 1.46,
+      "contactBreakdown": -0.43,
+      "disciplineTurnover": 0,
+      "actions": 25,
+      "topActions": [
+        {
+          "time": "80:30",
+          "startSecond": 6694.2,
+          "endSecond": 6720.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "81:00",
+          "startSecond": 6724,
+          "endSecond": 6750,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "francisco gomez kodela|argentina",
+      "playerName": "Francisco Gomez Kodela",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": 0.74,
+      "momentumAdded": 1.48,
+      "momentumLost": 0.74,
+      "scoringThreat": 0,
+      "territory": 0.2,
+      "possessionQuality": 0.23,
+      "contactBreakdown": 0.31,
+      "disciplineTurnover": 0,
+      "actions": 23,
+      "topActions": [
+        {
+          "time": "79:28",
+          "startSecond": 6631.3,
+          "endSecond": 6657.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.91,
+          "reason": "接点・BD +0.7"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "simone ferrari|italy",
+      "playerName": "Simone Ferrari",
+      "team": "Italy",
+      "matchId": "941807",
+      "netMomentum": -0.64,
+      "momentumAdded": 1.61,
+      "momentumLost": 2.26,
+      "scoringThreat": 1.08,
+      "territory": 0.23,
+      "possessionQuality": 0.32,
+      "contactBreakdown": -1.02,
+      "disciplineTurnover": -1.25,
+      "actions": 28,
+      "topActions": [
+        {
+          "time": "46:18",
+          "startSecond": 4229.5,
+          "endSecond": 4255.5,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "thomas gallo|argentina",
+      "playerName": "Thomas Gallo",
+      "team": "Argentina",
+      "matchId": "941807",
+      "netMomentum": -0.56,
+      "momentumAdded": 6.41,
+      "momentumLost": 6.97,
+      "scoringThreat": 1.08,
+      "territory": 0.55,
+      "possessionQuality": 3.03,
+      "contactBreakdown": -1.52,
+      "disciplineTurnover": -3.7,
+      "actions": 87,
+      "topActions": [
+        {
+          "time": "31:32",
+          "startSecond": 2105.9,
+          "endSecond": 2131.9,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "54:11",
+          "startSecond": 4849.2,
+          "endSecond": 4875.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "31:29",
+          "startSecond": 2102.3,
+          "endSecond": 2128.3,
+          "action": "Carry",
+          "result": "Penalty Conceded",
+          "impact": -0.81,
+          "reason": "規律・TO -1.2 / 接点・BD +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "1:05",
+          "startSecond": 57.1,
+          "endSecond": 83.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "1:05",
+          "startSecond": 57.3,
+          "endSecond": 83.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "51:16",
+          "startSecond": 4583.4,
+          "endSecond": 4609.4,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.73,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "4:08",
+          "startSecond": 240.1,
+          "endSecond": 266.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "31:29",
+          "startSecond": 2102.7,
+          "endSecond": 2128.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "1:04",
+          "startSecond": 56.4,
+          "endSecond": 82.4,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.59,
+          "reason": "継続品質 +0.2 / テリトリー +0.2 / 接点・BD +0.2"
+        },
+        {
+          "time": "1:34",
+          "startSecond": 85.9,
+          "endSecond": 111.9,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    }
+  ]
+}

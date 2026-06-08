@@ -1,784 +1,3333 @@
-[
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 22551,
-    "playerName": "Antoine Dupont",
-    "net_momentum": 15.105128882143076,
-    "momentum_added": 16.342505430846128,
-    "momentum_lost": 1.2373765487030506,
-    "events_count": 245,
-    "scoring_threat_player_team": 12.96,
-    "territory_player_team": 6.476,
-    "possession_quality_player_team": 12.77,
-    "contact_breakdown_player_team": 0.8,
-    "discipline_turnover_player_team": 0.4000000000000001,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 21635,
-    "playerName": "Thomas Ramos",
-    "net_momentum": 13.430383781132354,
-    "momentum_added": 15.495494937110196,
-    "momentum_lost": 2.065111155977842,
-    "events_count": 94,
-    "scoring_threat_player_team": 12.16,
-    "territory_player_team": 15.385,
-    "possession_quality_player_team": 8.315,
-    "contact_breakdown_player_team": -1.59,
-    "discipline_turnover_player_team": -2.7,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 38612,
-    "playerName": "Louis Bielle-Biarrey",
-    "net_momentum": 10.834614478114304,
-    "momentum_added": 10.98750852004856,
-    "momentum_lost": 0.1528940419342568,
-    "events_count": 45,
-    "scoring_threat_player_team": 14.16,
-    "territory_player_team": 3.682,
-    "possession_quality_player_team": 5.25,
-    "contact_breakdown_player_team": 0.95,
-    "discipline_turnover_player_team": 1.1,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 29456,
-    "playerName": "Gregory Alldritt",
-    "net_momentum": 9.2497444714312,
-    "momentum_added": 10.213747014420704,
-    "momentum_lost": 0.9640025429895048,
-    "events_count": 166,
-    "scoring_threat_player_team": 11.4,
-    "territory_player_team": 1.65,
-    "possession_quality_player_team": 5.5,
-    "contact_breakdown_player_team": 2.08,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 22521,
-    "playerName": "Julien Marchand",
-    "net_momentum": 9.156394034685997,
-    "momentum_added": 9.332953735615758,
-    "momentum_lost": 0.1765597009297607,
-    "events_count": 66,
-    "scoring_threat_player_team": 8.879999999999999,
-    "territory_player_team": 0.15,
-    "possession_quality_player_team": 1.23,
-    "contact_breakdown_player_team": -0.0799999999999999,
-    "discipline_turnover_player_team": 2.45,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 36660,
-    "playerName": "Nolann Le Garrec",
-    "net_momentum": 7.662943659896579,
-    "momentum_added": 8.830330545513451,
-    "momentum_lost": 1.1673868856168703,
-    "events_count": 86,
-    "scoring_threat_player_team": 6.04,
-    "territory_player_team": 5.402,
-    "possession_quality_player_team": 1.51,
-    "contact_breakdown_player_team": -0.7,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 56573,
-    "playerName": "Theo Attissogbe",
-    "net_momentum": 6.342605942751139,
-    "momentum_added": 7.069168239827584,
-    "momentum_lost": 0.7265622970764447,
-    "events_count": 46,
-    "scoring_threat_player_team": 13.080000000000002,
-    "territory_player_team": 4.255,
-    "possession_quality_player_team": 5.345000000000001,
-    "contact_breakdown_player_team": 0.07,
-    "discipline_turnover_player_team": -1.8,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 27528,
-    "playerName": "Romain Ntamack",
-    "net_momentum": 5.919938022666453,
-    "momentum_added": 7.669079963293533,
-    "momentum_lost": 1.74914194062708,
-    "events_count": 100,
-    "scoring_threat_player_team": 3.36,
-    "territory_player_team": 8.871,
-    "possession_quality_player_team": 6.365,
-    "contact_breakdown_player_team": -0.5299999999999999,
-    "discipline_turnover_player_team": -4.15,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 24578,
-    "playerName": "Peato Mauvaka",
-    "net_momentum": 4.837259336805769,
-    "momentum_added": 5.2864048733153295,
-    "momentum_lost": 0.4491455365095605,
-    "events_count": 87,
-    "scoring_threat_player_team": 4.2,
-    "territory_player_team": 0.45,
-    "possession_quality_player_team": 1.955,
-    "contact_breakdown_player_team": 2.39,
-    "discipline_turnover_player_team": 2.0,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 27023,
-    "playerName": "Pierre-Louis Barassi",
-    "net_momentum": 4.2898343394236615,
-    "momentum_added": 4.836965340719687,
-    "momentum_lost": 0.5471310012960252,
-    "events_count": 75,
-    "scoring_threat_player_team": 3.0,
-    "territory_player_team": 1.449,
-    "possession_quality_player_team": 2.475,
-    "contact_breakdown_player_team": -1.54,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 43905,
-    "playerName": "Dan Edwards",
-    "net_momentum": 4.247501549984999,
-    "momentum_added": 6.745575629800203,
-    "momentum_lost": 2.498074079815205,
-    "events_count": 126,
-    "scoring_threat_player_team": 0.48,
-    "territory_player_team": 11.714,
-    "possession_quality_player_team": 3.135,
-    "contact_breakdown_player_team": -3.67,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 25826,
-    "playerName": "Ben Thomas",
-    "net_momentum": 3.8286631909202944,
-    "momentum_added": 6.171513563424394,
-    "momentum_lost": 2.3428503725040994,
-    "events_count": 154,
-    "scoring_threat_player_team": 1.92,
-    "territory_player_team": 12.378,
-    "possession_quality_player_team": 5.4350000000000005,
-    "contact_breakdown_player_team": 0.59,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 27744,
-    "playerName": "Emmanuel Meafou",
-    "net_momentum": 3.6550026261852473,
-    "momentum_added": 3.950364352245981,
-    "momentum_lost": 0.295361726060733,
-    "events_count": 89,
-    "scoring_threat_player_team": 3.72,
-    "territory_player_team": 0.625,
-    "possession_quality_player_team": 3.0,
-    "contact_breakdown_player_team": 2.5,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 21436,
-    "playerName": "Tomos Williams",
-    "net_momentum": 3.3961665999956336,
-    "momentum_added": 7.183318095811536,
-    "momentum_lost": 3.787151495815901,
-    "events_count": 348,
-    "scoring_threat_player_team": 10.32,
-    "territory_player_team": -1.0759999999999996,
-    "possession_quality_player_team": 8.95,
-    "contact_breakdown_player_team": -3.26,
-    "discipline_turnover_player_team": 3.1500000000000004,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 32690,
-    "playerName": "Yoram Moefana",
-    "net_momentum": 3.2972181926476165,
-    "momentum_added": 4.671009259065377,
-    "momentum_lost": 1.3737910664177602,
-    "events_count": 74,
-    "scoring_threat_player_team": 2.76,
-    "territory_player_team": 0.2499999999999999,
-    "possession_quality_player_team": 4.185,
-    "contact_breakdown_player_team": -2.28,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 38614,
-    "playerName": "Emilien Gailleton",
-    "net_momentum": 3.1750616692916527,
-    "momentum_added": 3.292535650618477,
-    "momentum_lost": 0.1174739813268243,
-    "events_count": 14,
-    "scoring_threat_player_team": 6.72,
-    "territory_player_team": 0.1,
-    "possession_quality_player_team": 2.02,
-    "contact_breakdown_player_team": -0.8699999999999999,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 20321,
-    "playerName": "Cyril Baille",
-    "net_momentum": 2.2896408330546807,
-    "momentum_added": 2.370518301332245,
-    "momentum_lost": 0.0808774682775639,
-    "events_count": 45,
-    "scoring_threat_player_team": 2.04,
-    "territory_player_team": 0.725,
-    "possession_quality_player_team": 0.905,
-    "contact_breakdown_player_team": 1.62,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 33102,
-    "playerName": "Paul Boudehent",
-    "net_momentum": 2.082760538677819,
-    "momentum_added": 3.1550031011541435,
-    "momentum_lost": 1.0722425624763243,
-    "events_count": 100,
-    "scoring_threat_player_team": 3.48,
-    "territory_player_team": 1.6820000000000002,
-    "possession_quality_player_team": 0.6300000000000001,
-    "contact_breakdown_player_team": 1.85,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 33843,
-    "playerName": "Jac Morgan",
-    "net_momentum": 1.894578427161645,
-    "momentum_added": 4.143410728282779,
-    "momentum_lost": 2.248832301121133,
-    "events_count": 149,
-    "scoring_threat_player_team": 3.72,
-    "territory_player_team": 2.93,
-    "possession_quality_player_team": 6.33,
-    "contact_breakdown_player_team": 2.45,
-    "discipline_turnover_player_team": -2.7,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 29782,
-    "playerName": "Jean-Baptiste Gros",
-    "net_momentum": 1.8194606365365444,
-    "momentum_added": 2.1231861934174567,
-    "momentum_lost": 0.3037255568809123,
-    "events_count": 85,
-    "scoring_threat_player_team": 3.84,
-    "territory_player_team": 0.75,
-    "possession_quality_player_team": 3.63,
-    "contact_breakdown_player_team": 0.8899999999999999,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 22239,
-    "playerName": "Uini Atonio",
-    "net_momentum": 1.7982647720798846,
-    "momentum_added": 2.342990877751101,
-    "momentum_lost": 0.5447261056712166,
-    "events_count": 59,
-    "scoring_threat_player_team": 2.28,
-    "territory_player_team": 0.3249999999999999,
-    "possession_quality_player_team": 0.135,
-    "contact_breakdown_player_team": 0.8300000000000001,
-    "discipline_turnover_player_team": -0.1499999999999999,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 18613,
-    "playerName": "Liam Williams",
-    "net_momentum": 1.2965321837715396,
-    "momentum_added": 2.2030425919466032,
-    "momentum_lost": 0.9065104081750636,
-    "events_count": 81,
-    "scoring_threat_player_team": 1.7999999999999998,
-    "territory_player_team": 2.305,
-    "possession_quality_player_team": 3.915,
-    "contact_breakdown_player_team": -1.4899999999999998,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 36653,
-    "playerName": "Mickael Guillard",
-    "net_momentum": 1.2066205594576445,
-    "momentum_added": 1.700210998277909,
-    "momentum_lost": 0.4935904388202644,
-    "events_count": 49,
-    "scoring_threat_player_team": 0.84,
-    "territory_player_team": 0.75,
-    "possession_quality_player_team": 1.41,
-    "contact_breakdown_player_team": 0.49,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 20559,
-    "playerName": "Francois Cros",
-    "net_momentum": 1.1490309801613452,
-    "momentum_added": 1.2341780780481244,
-    "momentum_lost": 0.085147097886779,
-    "events_count": 81,
-    "scoring_threat_player_team": 2.28,
-    "territory_player_team": 0.05,
-    "possession_quality_player_team": 1.45,
-    "contact_breakdown_player_team": -1.22,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 24490,
-    "playerName": "Alexandre Roumat",
-    "net_momentum": 1.0789748122779843,
-    "momentum_added": 2.158282178508677,
-    "momentum_lost": 1.079307366230693,
-    "events_count": 88,
-    "scoring_threat_player_team": 4.32,
-    "territory_player_team": 0.125,
-    "possession_quality_player_team": 1.27,
-    "contact_breakdown_player_team": -0.4499999999999999,
-    "discipline_turnover_player_team": -5.05,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 40411,
-    "playerName": "Oscar Jegou",
-    "net_momentum": 0.9673056172916484,
-    "momentum_added": 0.9673056172916484,
-    "momentum_lost": 0.0,
-    "events_count": 25,
-    "scoring_threat_player_team": 1.2,
-    "territory_player_team": -0.075,
-    "possession_quality_player_team": 0.61,
-    "contact_breakdown_player_team": 0.45,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 21514,
-    "playerName": "Josh Adams",
-    "net_momentum": 0.6430928063236669,
-    "momentum_added": 2.6351880255357134,
-    "momentum_lost": 1.9920952192120465,
-    "events_count": 72,
-    "scoring_threat_player_team": 0.72,
-    "territory_player_team": 1.978,
-    "possession_quality_player_team": 3.63,
-    "contact_breakdown_player_team": 0.83,
-    "discipline_turnover_player_team": -2.15,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 18495,
-    "playerName": "Henry Thomas",
-    "net_momentum": 0.6241981042225492,
-    "momentum_added": 1.14034497133496,
-    "momentum_lost": 0.5161468671124108,
-    "events_count": 63,
-    "scoring_threat_player_team": 1.3199999999999998,
-    "territory_player_team": -0.05,
-    "possession_quality_player_team": 0.735,
-    "contact_breakdown_player_team": -1.25,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 27530,
-    "playerName": "Georges-Henri Colombe",
-    "net_momentum": 0.2778057787461775,
-    "momentum_added": 0.997834492120308,
-    "momentum_lost": 0.7200287133741304,
-    "events_count": 37,
-    "scoring_threat_player_team": 0.6,
-    "territory_player_team": 0.125,
-    "possession_quality_player_team": 0.68,
-    "contact_breakdown_player_team": 0.62,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 22744,
-    "playerName": "Owen Watkin",
-    "net_momentum": 0.2479035943880892,
-    "momentum_added": 1.0647102548728375,
-    "momentum_lost": 0.8168066604847484,
-    "events_count": 45,
-    "scoring_threat_player_team": 0.24,
-    "territory_player_team": 0.4839999999999999,
-    "possession_quality_player_team": 1.15,
-    "contact_breakdown_player_team": 0.81,
-    "discipline_turnover_player_team": -1.8,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 20327,
-    "playerName": "Nicky Smith",
-    "net_momentum": 0.1836763830854478,
-    "momentum_added": 0.3493170804982471,
-    "momentum_lost": 0.1656406974127993,
-    "events_count": 52,
-    "scoring_threat_player_team": 0.6,
-    "territory_player_team": 0.5,
-    "possession_quality_player_team": 0.915,
-    "contact_breakdown_player_team": 0.89,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 25969,
-    "playerName": "Tommy Reffell",
-    "net_momentum": 0.0659874255164768,
-    "momentum_added": 1.3563767765706738,
-    "momentum_lost": 1.2903893510541968,
-    "events_count": 108,
-    "scoring_threat_player_team": 2.4,
-    "territory_player_team": 1.0339999999999998,
-    "possession_quality_player_team": 1.7,
-    "contact_breakdown_player_team": -1.25,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 24078,
-    "playerName": "Keiron Assiratti",
-    "net_momentum": -0.1214110386957537,
-    "momentum_added": 0.1848665871436462,
-    "momentum_lost": 0.3062776258394,
-    "events_count": 39,
-    "scoring_threat_player_team": 0.84,
-    "territory_player_team": 0.1,
-    "possession_quality_player_team": 0.24,
-    "contact_breakdown_player_team": -1.85,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 19398,
-    "playerName": "Rhodri Williams",
-    "net_momentum": -0.122820324274304,
-    "momentum_added": 0.1759893788907221,
-    "momentum_lost": 0.2988097031650261,
-    "events_count": 69,
-    "scoring_threat_player_team": 0.36,
-    "territory_player_team": -2.925,
-    "possession_quality_player_team": 1.75,
-    "contact_breakdown_player_team": 0.01,
-    "discipline_turnover_player_team": 0.55,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 20025,
-    "playerName": "Nick Tompkins",
-    "net_momentum": -0.1858315599410971,
-    "momentum_added": 1.6501152676697963,
-    "momentum_lost": 1.8359468276108937,
-    "events_count": 93,
-    "scoring_threat_player_team": 1.08,
-    "territory_player_team": 0.825,
-    "possession_quality_player_team": 4.715,
-    "contact_breakdown_player_team": 1.0499999999999998,
-    "discipline_turnover_player_team": -1.8,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 650,
-    "teamName": "France",
-    "PLID": 39711,
-    "playerName": "Hugo Auradou",
-    "net_momentum": -0.2169096253446276,
-    "momentum_added": 0.4387800171858522,
-    "momentum_lost": 0.6556896425304798,
-    "events_count": 39,
-    "scoring_threat_player_team": 0.84,
-    "territory_player_team": 0.0,
-    "possession_quality_player_team": 0.04,
-    "contact_breakdown_player_team": -1.06,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 29440,
-    "playerName": "Aaron Wainwright",
-    "net_momentum": -0.2980940269544573,
-    "momentum_added": 0.0001477674829744,
-    "momentum_lost": 0.2982417944374317,
-    "events_count": 9,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 0.025,
-    "possession_quality_player_team": 0.0,
-    "contact_breakdown_player_team": -0.78,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 25821,
-    "playerName": "James Botham",
-    "net_momentum": -0.5993246238537511,
-    "momentum_added": 1.055331915017572,
-    "momentum_lost": 1.6546565388713232,
-    "events_count": 88,
-    "scoring_threat_player_team": 2.16,
-    "territory_player_team": 0.1,
-    "possession_quality_player_team": 0.615,
-    "contact_breakdown_player_team": -2.7,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 38682,
-    "playerName": "Dafydd Jenkins",
-    "net_momentum": -0.7506540756951355,
-    "momentum_added": 1.044688005904052,
-    "momentum_lost": 1.7953420815991874,
-    "events_count": 143,
-    "scoring_threat_player_team": 2.76,
-    "territory_player_team": 0.4499999999999999,
-    "possession_quality_player_team": 1.795,
-    "contact_breakdown_player_team": -3.86,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 32980,
-    "playerName": "Blair Murray",
-    "net_momentum": -0.8889298568456754,
-    "momentum_added": 1.7175950000818427,
-    "momentum_lost": 2.606524856927518,
-    "events_count": 19,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 0.325,
-    "possession_quality_player_team": 0.88,
-    "contact_breakdown_player_team": 0.1599999999999999,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 38687,
-    "playerName": "Evan Lloyd",
-    "net_momentum": -1.0391422110180957,
-    "momentum_added": 1.767723771540238,
-    "momentum_lost": 2.806865982558333,
-    "events_count": 82,
-    "scoring_threat_player_team": 1.44,
-    "territory_player_team": 0.4,
-    "possession_quality_player_team": 1.6700000000000002,
-    "contact_breakdown_player_team": -2.58,
-    "discipline_turnover_player_team": -5.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 20426,
-    "playerName": "Will Rowlands",
-    "net_momentum": -1.0643132292452662,
-    "momentum_added": 0.8764590988118608,
-    "momentum_lost": 1.9407723280571272,
-    "events_count": 138,
-    "scoring_threat_player_team": 3.24,
-    "territory_player_team": 0.675,
-    "possession_quality_player_team": 1.265,
-    "contact_breakdown_player_team": -2.84,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 20436,
-    "playerName": "Elliot Dee",
-    "net_momentum": -1.2179075297563138,
-    "momentum_added": 1.3159218736564122,
-    "momentum_lost": 2.5338294034127262,
-    "events_count": 100,
-    "scoring_threat_player_team": 2.4,
-    "territory_player_team": 0.2,
-    "possession_quality_player_team": 2.045,
-    "contact_breakdown_player_team": -1.1799999999999995,
-    "discipline_turnover_player_team": 0.1499999999999999,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 29598,
-    "playerName": "Tom Rogers",
-    "net_momentum": -1.240058044541485,
-    "momentum_added": 2.549386533540269,
-    "momentum_lost": 3.7894445780817536,
-    "events_count": 43,
-    "scoring_threat_player_team": 1.08,
-    "territory_player_team": 1.25,
-    "possession_quality_player_team": 2.93,
-    "contact_breakdown_player_team": -0.01,
-    "discipline_turnover_player_team": -1.8,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 37819,
-    "playerName": "Freddie Thomas",
-    "net_momentum": -2.006861077856294,
-    "momentum_added": 0.3040297196318469,
-    "momentum_lost": 2.310890797488141,
-    "events_count": 25,
-    "scoring_threat_player_team": 0.24,
-    "territory_player_team": 0.425,
-    "possession_quality_player_team": 0.32,
-    "contact_breakdown_player_team": -0.3999999999999999,
-    "discipline_turnover_player_team": -3.25,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941789,
-    "team_id": 500,
-    "teamName": "Wales",
-    "PLID": 19851,
-    "playerName": "Gareth Thomas",
-    "net_momentum": -2.262747023754456,
-    "momentum_added": 0.640237350858792,
-    "momentum_lost": 2.9029843746132475,
-    "events_count": 68,
-    "scoring_threat_player_team": 1.2,
-    "territory_player_team": 0.1249999999999999,
-    "possession_quality_player_team": 0.23,
-    "contact_breakdown_player_team": -2.63,
-    "discipline_turnover_player_team": -2.5,
-    "review_priority": "Medium"
-  }
-]
+{
+  "matchId": "941789",
+  "players": [
+    {
+      "playerKey": "antoine dupont|france",
+      "playerName": "Antoine Dupont",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 32.86,
+      "momentumAdded": 39.56,
+      "momentumLost": 6.7,
+      "scoringThreat": 12.96,
+      "territory": 6.48,
+      "possessionQuality": 12.77,
+      "contactBreakdown": 0.8,
+      "disciplineTurnover": -0.15,
+      "actions": 245,
+      "topActions": [
+        {
+          "time": "25:37",
+          "startSecond": 1709.7,
+          "endSecond": 1735.7,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 2.18,
+          "reason": "テリトリー +2.2"
+        },
+        {
+          "time": "34:50",
+          "startSecond": 2540,
+          "endSecond": 2566,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 2.07,
+          "reason": "テリトリー +2.1"
+        },
+        {
+          "time": "32:48",
+          "startSecond": 2394.4,
+          "endSecond": 2420.4,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 2.03,
+          "reason": "継続品質 +1.1 / テリトリー +0.8 / 接点・BD +0.2"
+        },
+        {
+          "time": "0:12",
+          "startSecond": 2.5,
+          "endSecond": 28.5,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.89,
+          "reason": "テリトリー +1.9"
+        },
+        {
+          "time": "2:45",
+          "startSecond": 156.1,
+          "endSecond": 182.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.37,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.2"
+        },
+        {
+          "time": "24:21",
+          "startSecond": 1633.5,
+          "endSecond": 1659.5,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.33,
+          "reason": "テリトリー +1.3"
+        },
+        {
+          "time": "36:11",
+          "startSecond": 2620.8,
+          "endSecond": 2646.8,
+          "action": "Kick",
+          "result": "Pressure Carried Over",
+          "impact": 1.3,
+          "reason": "テリトリー +1.3"
+        },
+        {
+          "time": "44:27",
+          "startSecond": 4207.9,
+          "endSecond": 4233.9,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "37:50",
+          "startSecond": 2767.4,
+          "endSecond": 2793.4,
+          "action": "Scrum",
+          "result": "Won Penalty",
+          "impact": 1.22,
+          "reason": "規律・TO +1.1"
+        },
+        {
+          "time": "41:42",
+          "startSecond": 4042.8,
+          "endSecond": 4068.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.13,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "thomas ramos|france",
+      "playerName": "Thomas Ramos",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 29.77,
+      "momentumAdded": 38.71,
+      "momentumLost": 8.94,
+      "scoringThreat": 12.16,
+      "territory": 15.39,
+      "possessionQuality": 8.32,
+      "contactBreakdown": -1.59,
+      "disciplineTurnover": -4.5,
+      "actions": 94,
+      "topActions": [
+        {
+          "time": "18:23",
+          "startSecond": 1276.1,
+          "endSecond": 1302.1,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.73,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "33:55",
+          "startSecond": 2462,
+          "endSecond": 2488,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.73,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "55:04",
+          "startSecond": 4974.7,
+          "endSecond": 5000.7,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 2.73,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "23:27",
+          "startSecond": 1580,
+          "endSecond": 1606,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.65,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "41:14",
+          "startSecond": 3021.1,
+          "endSecond": 3047.1,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.63,
+          "reason": "得点脅威 +2.0 / テリトリー +0.6"
+        },
+        {
+          "time": "30:19",
+          "startSecond": 2147.1,
+          "endSecond": 2173.1,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 2.04,
+          "reason": "テリトリー +2.0"
+        },
+        {
+          "time": "60:00",
+          "startSecond": 5280,
+          "endSecond": 5306,
+          "action": "Kick",
+          "result": "Kick in Touch (Bounce)",
+          "impact": 2,
+          "reason": "テリトリー +2.0"
+        },
+        {
+          "time": "57:25",
+          "startSecond": 5116.3,
+          "endSecond": 5142.3,
+          "action": "Kick",
+          "result": "Kick in Touch (Bounce)",
+          "impact": 1.81,
+          "reason": "テリトリー +1.8"
+        },
+        {
+          "time": "1:38",
+          "startSecond": 88.6,
+          "endSecond": 114.6,
+          "action": "Kick",
+          "result": "Kick in Touch (Bounce)",
+          "impact": 1.75,
+          "reason": "テリトリー +1.8"
+        },
+        {
+          "time": "9:18",
+          "startSecond": 626.3,
+          "endSecond": 652.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.71,
+          "reason": "接点・BD +0.7 / 継続品質 +0.6 / テリトリー +0.4"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "louis bielle-biarrey|france",
+      "playerName": "Louis Bielle-Biarrey",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 25.24,
+      "momentumAdded": 26.06,
+      "momentumLost": 0.82,
+      "scoringThreat": 14.16,
+      "territory": 3.68,
+      "possessionQuality": 5.25,
+      "contactBreakdown": 0.95,
+      "disciplineTurnover": 1.2,
+      "actions": 45,
+      "topActions": [
+        {
+          "time": "22:26",
+          "startSecond": 1518.7,
+          "endSecond": 1544.7,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "40:19",
+          "startSecond": 2966.3,
+          "endSecond": 2992.3,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "29:56",
+          "startSecond": 2123.7,
+          "endSecond": 2149.7,
+          "action": "Carry",
+          "result": "Penalty Won",
+          "impact": 1.57,
+          "reason": "規律・TO +1.2 / 接点・BD +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "32:37",
+          "startSecond": 2384.2,
+          "endSecond": 2410.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.47,
+          "reason": "接点・BD +0.7 / 継続品質 +0.5 / テリトリー +0.3"
+        },
+        {
+          "time": "71:15",
+          "startSecond": 6189.8,
+          "endSecond": 6215.8,
+          "action": "Restart",
+          "result": "Restart Opp Collection",
+          "impact": 1.15,
+          "reason": "テリトリー +1.2"
+        },
+        {
+          "time": "63:38",
+          "startSecond": 5574.6,
+          "endSecond": 5600.6,
+          "action": "Kick",
+          "result": "Kick in Touch (Bounce)",
+          "impact": 1.07,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "22:23",
+          "startSecond": 1516.1,
+          "endSecond": 1542.1,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 0.98,
+          "reason": "テリトリー +0.5 / 継続品質 +0.2 / 接点・BD +0.2"
+        },
+        {
+          "time": "16:47",
+          "startSecond": 1180,
+          "endSecond": 1206,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "22:24",
+          "startSecond": 1516.7,
+          "endSecond": 1542.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "22:24",
+          "startSecond": 1517,
+          "endSecond": 1543,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "gregory alldritt|france",
+      "playerName": "Gregory Alldritt",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 20.63,
+      "momentumAdded": 24.01,
+      "momentumLost": 3.38,
+      "scoringThreat": 11.4,
+      "territory": 1.65,
+      "possessionQuality": 5.5,
+      "contactBreakdown": 2.08,
+      "disciplineTurnover": 0,
+      "actions": 166,
+      "topActions": [
+        {
+          "time": "77:16",
+          "startSecond": 6648.7,
+          "endSecond": 6674.7,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "34:30",
+          "startSecond": 2520,
+          "endSecond": 2546,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.35,
+          "reason": "接点・BD +0.7 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "3:08",
+          "startSecond": 255.8,
+          "endSecond": 281.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.27,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.3"
+        },
+        {
+          "time": "4:34",
+          "startSecond": 341.6,
+          "endSecond": 367.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.19,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.2"
+        },
+        {
+          "time": "39:32",
+          "startSecond": 2870.3,
+          "endSecond": 2896.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.15,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "24:02",
+          "startSecond": 1614.5,
+          "endSecond": 1640.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.99,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2"
+        },
+        {
+          "time": "3:36",
+          "startSecond": 283.6,
+          "endSecond": 309.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.83,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "15:45",
+          "startSecond": 1117.5,
+          "endSecond": 1143.5,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.69,
+          "reason": "継続品質 +0.3 / テリトリー +0.2 / 接点・BD +0.2"
+        },
+        {
+          "time": "3:08",
+          "startSecond": 256.4,
+          "endSecond": 282.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "32:44",
+          "startSecond": 2390.5,
+          "endSecond": 2416.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "theo attissogbe|france",
+      "playerName": "Theo Attissogbe",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 19.75,
+      "momentumAdded": 24.85,
+      "momentumLost": 5.1,
+      "scoringThreat": 13.08,
+      "territory": 4.26,
+      "possessionQuality": 5.35,
+      "contactBreakdown": 0.07,
+      "disciplineTurnover": -3,
+      "actions": 46,
+      "topActions": [
+        {
+          "time": "17:21",
+          "startSecond": 1214.2,
+          "endSecond": 1240.2,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "32:59",
+          "startSecond": 2405.8,
+          "endSecond": 2431.8,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "27:25",
+          "startSecond": 1972.9,
+          "endSecond": 1998.9,
+          "action": "Kick",
+          "result": "Kick in Touch (Bounce)",
+          "impact": 2.41,
+          "reason": "テリトリー +2.4"
+        },
+        {
+          "time": "21:20",
+          "startSecond": 1453.3,
+          "endSecond": 1479.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.79,
+          "reason": "接点・BD +0.7 / 継続品質 +0.6 / テリトリー +0.5"
+        },
+        {
+          "time": "5:06",
+          "startSecond": 373.6,
+          "endSecond": 399.6,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 1.68,
+          "reason": "継続品質 +0.7 / テリトリー +0.6 / 接点・BD +0.4"
+        },
+        {
+          "time": "51:32",
+          "startSecond": 4730.8,
+          "endSecond": 4756.8,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "64:18",
+          "startSecond": 5614.3,
+          "endSecond": 5640.3,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "41:20",
+          "startSecond": 4021.1,
+          "endSecond": 4047.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.33,
+          "reason": "接点・BD +0.7 / テリトリー +0.4 / 継続品質 +0.2"
+        },
+        {
+          "time": "17:20",
+          "startSecond": 1213.3,
+          "endSecond": 1239.3,
+          "action": "Attacking Qualities",
+          "result": "Kick Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "32:55",
+          "startSecond": 2402.1,
+          "endSecond": 2428.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "ben thomas|wales",
+      "playerName": "Ben Thomas",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": 17.97,
+      "momentumAdded": 23.11,
+      "momentumLost": 5.14,
+      "scoringThreat": 1.92,
+      "territory": 11.53,
+      "possessionQuality": 5.44,
+      "contactBreakdown": 0.59,
+      "disciplineTurnover": -1.5,
+      "actions": 153,
+      "topActions": [
+        {
+          "time": "30:13",
+          "startSecond": 2141.3,
+          "endSecond": 2167.3,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 2.11,
+          "reason": "テリトリー +2.1"
+        },
+        {
+          "time": "24:26",
+          "startSecond": 1639.3,
+          "endSecond": 1665.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.84,
+          "reason": "接点・BD +0.7 / 継続品質 +0.6 / テリトリー +0.5"
+        },
+        {
+          "time": "20:12",
+          "startSecond": 1384.9,
+          "endSecond": 1410.9,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "0:16",
+          "startSecond": 6.4,
+          "endSecond": 32.4,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 1.2,
+          "reason": "継続品質 +0.6 / テリトリー +0.4 / 接点・BD +0.2"
+        },
+        {
+          "time": "71:25",
+          "startSecond": 6199.5,
+          "endSecond": 6225.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.14,
+          "reason": "接点・BD +0.7 / テリトリー +0.3 / 継続品質 +0.2"
+        },
+        {
+          "time": "27:15",
+          "startSecond": 1963.1,
+          "endSecond": 1989.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.13,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "3:01",
+          "startSecond": 249.1,
+          "endSecond": 275.1,
+          "action": "Restart",
+          "result": "Restart Opp Collection",
+          "impact": 1.08,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "9:12",
+          "startSecond": 620.4,
+          "endSecond": 646.4,
+          "action": "Kick",
+          "result": "Pressure Error",
+          "impact": 1,
+          "reason": "テリトリー +1.0"
+        },
+        {
+          "time": "23:58",
+          "startSecond": 1610.6,
+          "endSecond": 1636.6,
+          "action": "Restart",
+          "result": "Restart Opp Collection",
+          "impact": 0.98,
+          "reason": "テリトリー +1.0"
+        },
+        {
+          "time": "18:56",
+          "startSecond": 1308.8,
+          "endSecond": 1334.8,
+          "action": "Restart",
+          "result": "Restart Opp Collection",
+          "impact": 0.95,
+          "reason": "テリトリー +1.0"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "tomos williams|wales",
+      "playerName": "Tomos Williams",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": 13.68,
+      "momentumAdded": 24.38,
+      "momentumLost": 10.69,
+      "scoringThreat": 10.32,
+      "territory": -1.08,
+      "possessionQuality": 8.95,
+      "contactBreakdown": -3.26,
+      "disciplineTurnover": -1.25,
+      "actions": 348,
+      "topActions": [
+        {
+          "time": "35:34",
+          "startSecond": 2583.7,
+          "endSecond": 2609.7,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.3,
+          "reason": "テリトリー +1.3"
+        },
+        {
+          "time": "39:12",
+          "startSecond": 2849.6,
+          "endSecond": 2875.6,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "32:33",
+          "startSecond": 2380.2,
+          "endSecond": 2406.2,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.22,
+          "reason": "テリトリー +1.2"
+        },
+        {
+          "time": "27:19",
+          "startSecond": 1966.7,
+          "endSecond": 1992.7,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.15,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "40:36",
+          "startSecond": 3977,
+          "endSecond": 4003,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.15,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "64:14",
+          "startSecond": 5609.9,
+          "endSecond": 5635.9,
+          "action": "Kick",
+          "result": "Pressure Error",
+          "impact": 1.07,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "15:11",
+          "startSecond": 1084.2,
+          "endSecond": 1110.2,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.04,
+          "reason": "テリトリー +1.0"
+        },
+        {
+          "time": "43:54",
+          "startSecond": 4175.4,
+          "endSecond": 4201.4,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 0.91,
+          "reason": "接点・BD +0.4 / 継続品質 +0.3 / テリトリー +0.2"
+        },
+        {
+          "time": "40:11",
+          "startSecond": 3951.9,
+          "endSecond": 3977.9,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.83,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "25:13",
+          "startSecond": 1686.3,
+          "endSecond": 1712.3,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.71,
+          "reason": "接点・BD -0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "julien marchand|france",
+      "playerName": "Julien Marchand",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 13.33,
+      "momentumAdded": 14.73,
+      "momentumLost": 1.4,
+      "scoringThreat": 8.88,
+      "territory": 0.15,
+      "possessionQuality": 1.23,
+      "contactBreakdown": -0.08,
+      "disciplineTurnover": 3.15,
+      "actions": 66,
+      "topActions": [
+        {
+          "time": "54:00",
+          "startSecond": 4911.3,
+          "endSecond": 4937.3,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "52:25",
+          "startSecond": 4783.9,
+          "endSecond": 4809.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.83,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "73:53",
+          "startSecond": 6415.2,
+          "endSecond": 6441.2,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.79,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "66:59",
+          "startSecond": 5784.6,
+          "endSecond": 5810.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "53:45",
+          "startSecond": 4895.8,
+          "endSecond": 4921.8,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "66:58",
+          "startSecond": 5783.5,
+          "endSecond": 5809.5,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.56,
+          "reason": "接点・BD +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "romain ntamack|france",
+      "playerName": "Romain Ntamack",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 13.32,
+      "momentumAdded": 19.69,
+      "momentumLost": 6.37,
+      "scoringThreat": 3.36,
+      "territory": 8.87,
+      "possessionQuality": 6.37,
+      "contactBreakdown": -0.53,
+      "disciplineTurnover": -4.75,
+      "actions": 100,
+      "topActions": [
+        {
+          "time": "69:46",
+          "startSecond": 5951.8,
+          "endSecond": 5977.8,
+          "action": "Card",
+          "result": "Foul Play",
+          "impact": -2,
+          "reason": "規律・TO -2.0"
+        },
+        {
+          "time": "19:47",
+          "startSecond": 1359.6,
+          "endSecond": 1385.6,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "66:24",
+          "startSecond": 5740.1,
+          "endSecond": 5766.1,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.44,
+          "reason": "テリトリー +1.4"
+        },
+        {
+          "time": "11:43",
+          "startSecond": 875.6,
+          "endSecond": 901.6,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.37,
+          "reason": "テリトリー +1.4"
+        },
+        {
+          "time": "48:55",
+          "startSecond": 4539.5,
+          "endSecond": 4565.5,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.33,
+          "reason": "テリトリー +1.3"
+        },
+        {
+          "time": "69:46",
+          "startSecond": 5951.7,
+          "endSecond": 5977.7,
+          "action": "Penalty Conceded",
+          "result": "Red Card",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "40:55",
+          "startSecond": 3996.4,
+          "endSecond": 4022.4,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 1.2,
+          "reason": "継続品質 +0.6 / テリトリー +0.4 / 接点・BD +0.2"
+        },
+        {
+          "time": "52:40",
+          "startSecond": 4799,
+          "endSecond": 4825,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 1,
+          "reason": "テリトリー +0.5 / 継続品質 +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "37:57",
+          "startSecond": 2775.2,
+          "endSecond": 2801.2,
+          "action": "Kick",
+          "result": "Pressure Error",
+          "impact": 0.96,
+          "reason": "テリトリー +0.8"
+        },
+        {
+          "time": "61:08",
+          "startSecond": 5373.8,
+          "endSecond": 5399.8,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 0.78,
+          "reason": "テリトリー +0.8"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "peato mauvaka|france",
+      "playerName": "Peato Mauvaka",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 11.4,
+      "momentumAdded": 13.54,
+      "momentumLost": 2.15,
+      "scoringThreat": 4.2,
+      "territory": 0.45,
+      "possessionQuality": 1.95,
+      "contactBreakdown": 2.39,
+      "disciplineTurnover": 2.4,
+      "actions": 87,
+      "topActions": [
+        {
+          "time": "41:49",
+          "startSecond": 4050.4,
+          "endSecond": 4076.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.35,
+          "reason": "接点・BD +0.7 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "40:11",
+          "startSecond": 2958.2,
+          "endSecond": 2984.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.03,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "29:27",
+          "startSecond": 2094.9,
+          "endSecond": 2120.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.87,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "16:05",
+          "startSecond": 1138.3,
+          "endSecond": 1164.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "32:20",
+          "startSecond": 2366.7,
+          "endSecond": 2392.7,
+          "action": "Lineout Throw",
+          "result": "Lost Handling Error",
+          "impact": -0.63,
+          "reason": "規律・TO -0.8"
+        },
+        {
+          "time": "2:21",
+          "startSecond": 131.8,
+          "endSecond": 157.8,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "30:57",
+          "startSecond": 2284,
+          "endSecond": 2310,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "38:55",
+          "startSecond": 2833,
+          "endSecond": 2859,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "40:00",
+          "startSecond": 2946.7,
+          "endSecond": 2972.7,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "jac morgan|wales",
+      "playerName": "Jac Morgan",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": 10.93,
+      "momentumAdded": 19.93,
+      "momentumLost": 9,
+      "scoringThreat": 3.72,
+      "territory": 2.93,
+      "possessionQuality": 6.33,
+      "contactBreakdown": 2.45,
+      "disciplineTurnover": -4.5,
+      "actions": 149,
+      "topActions": [
+        {
+          "time": "80:30",
+          "startSecond": 6861,
+          "endSecond": 6887,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 1.8,
+          "reason": "継続品質 +0.9 / テリトリー +0.7 / 接点・BD +0.2"
+        },
+        {
+          "time": "28:04",
+          "startSecond": 2011.4,
+          "endSecond": 2037.4,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "36:01",
+          "startSecond": 2611.1,
+          "endSecond": 2637.1,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "9:35",
+          "startSecond": 642.8,
+          "endSecond": 668.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.42,
+          "reason": "接点・BD +0.7 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "80:33",
+          "startSecond": 6864,
+          "endSecond": 6890,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "30:05",
+          "startSecond": 2133.3,
+          "endSecond": 2159.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.31,
+          "reason": "接点・BD +0.7 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "64:05",
+          "startSecond": 5601,
+          "endSecond": 5627,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.16,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "43:52",
+          "startSecond": 4173.6,
+          "endSecond": 4199.6,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 1.07,
+          "reason": "接点・BD +0.4 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "71:30",
+          "startSecond": 6205.1,
+          "endSecond": 6231.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.97,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "12:43",
+          "startSecond": 935.9,
+          "endSecond": 961.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.9,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "dan edwards|wales",
+      "playerName": "Dan Edwards",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": 10.41,
+      "momentumAdded": 15.94,
+      "momentumLost": 5.53,
+      "scoringThreat": 0.48,
+      "territory": 11.71,
+      "possessionQuality": 3.14,
+      "contactBreakdown": -3.67,
+      "disciplineTurnover": -1.25,
+      "actions": 126,
+      "topActions": [
+        {
+          "time": "40:51",
+          "startSecond": 3992,
+          "endSecond": 4018,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.85,
+          "reason": "テリトリー +1.9"
+        },
+        {
+          "time": "62:53",
+          "startSecond": 5509,
+          "endSecond": 5535,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.81,
+          "reason": "テリトリー +1.8"
+        },
+        {
+          "time": "43:23",
+          "startSecond": 4144.2,
+          "endSecond": 4170.2,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.55,
+          "reason": "テリトリー +1.6"
+        },
+        {
+          "time": "43:34",
+          "startSecond": 4155.1,
+          "endSecond": 4181.1,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 1.25,
+          "reason": "継続品質 +0.6 / テリトリー +0.5 / 接点・BD +0.2"
+        },
+        {
+          "time": "65:45",
+          "startSecond": 5701.4,
+          "endSecond": 5727.4,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "52:03",
+          "startSecond": 4761.8,
+          "endSecond": 4787.8,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.15,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "70:17",
+          "startSecond": 6086.7,
+          "endSecond": 6112.7,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1,
+          "reason": "テリトリー +1.0"
+        },
+        {
+          "time": "34:26",
+          "startSecond": 2516.2,
+          "endSecond": 2542.2,
+          "action": "Restart",
+          "result": "Restart Opp Collection",
+          "impact": 0.98,
+          "reason": "テリトリー +1.0"
+        },
+        {
+          "time": "55:30",
+          "startSecond": 5001.3,
+          "endSecond": 5027.3,
+          "action": "Restart",
+          "result": "Restart Opp Collection",
+          "impact": 0.85,
+          "reason": "テリトリー +0.9"
+        },
+        {
+          "time": "68:37",
+          "startSecond": 5882.5,
+          "endSecond": 5908.5,
+          "action": "Restart",
+          "result": "Restart Opp Collection",
+          "impact": 0.75,
+          "reason": "テリトリー +0.8"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "nolann le garrec|france",
+      "playerName": "Nolann Le Garrec",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 9.25,
+      "momentumAdded": 13.97,
+      "momentumLost": 4.71,
+      "scoringThreat": 6.04,
+      "territory": 5.4,
+      "possessionQuality": 1.51,
+      "contactBreakdown": -0.7,
+      "disciplineTurnover": -3,
+      "actions": 86,
+      "topActions": [
+        {
+          "time": "78:14",
+          "startSecond": 6707,
+          "endSecond": 6733,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 2.65,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "68:08",
+          "startSecond": 5853.8,
+          "endSecond": 5879.8,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 2.63,
+          "reason": "得点脅威 +2.0 / テリトリー +0.6"
+        },
+        {
+          "time": "75:46",
+          "startSecond": 6558.7,
+          "endSecond": 6584.7,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.75,
+          "reason": "テリトリー +1.8"
+        },
+        {
+          "time": "71:52",
+          "startSecond": 6227.2,
+          "endSecond": 6253.2,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "61:42",
+          "startSecond": 5437.6,
+          "endSecond": 5463.6,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "51:57",
+          "startSecond": 4756.4,
+          "endSecond": 4782.4,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.26,
+          "reason": "テリトリー +1.3"
+        },
+        {
+          "time": "74:01",
+          "startSecond": 6423.2,
+          "endSecond": 6449.2,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 0.85,
+          "reason": "テリトリー +0.9"
+        },
+        {
+          "time": "69:01",
+          "startSecond": 5906.9,
+          "endSecond": 5932.9,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 0.79,
+          "reason": "テリトリー +0.8"
+        },
+        {
+          "time": "55:53",
+          "startSecond": 5023.6,
+          "endSecond": 5049.6,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 0.75,
+          "reason": "テリトリー +0.8"
+        },
+        {
+          "time": "75:37",
+          "startSecond": 6518.6,
+          "endSecond": 6544.6,
+          "action": "Kick",
+          "result": "Error - Charged Down",
+          "impact": -0.67,
+          "reason": "テリトリー -0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "emmanuel meafou|france",
+      "playerName": "Emmanuel Meafou",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 8.35,
+      "momentumAdded": 10.03,
+      "momentumLost": 1.69,
+      "scoringThreat": 3.72,
+      "territory": 0.63,
+      "possessionQuality": 3,
+      "contactBreakdown": 2.5,
+      "disciplineTurnover": -1.5,
+      "actions": 89,
+      "topActions": [
+        {
+          "time": "27:13",
+          "startSecond": 1961,
+          "endSecond": 1987,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "0:05",
+          "startSecond": 0,
+          "endSecond": 21.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.01,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2"
+        },
+        {
+          "time": "21:34",
+          "startSecond": 1467.3,
+          "endSecond": 1493.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.91,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "15:55",
+          "startSecond": 1127.7,
+          "endSecond": 1153.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "21:57",
+          "startSecond": 1489.6,
+          "endSecond": 1515.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "39:28",
+          "startSecond": 2866.2,
+          "endSecond": 2892.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.7,
+          "reason": "接点・BD +0.5"
+        },
+        {
+          "time": "31:17",
+          "startSecond": 2304.2,
+          "endSecond": 2330.2,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.6,
+          "reason": "接点・BD +0.2 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "emilien gailleton|france",
+      "playerName": "Emilien Gailleton",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 7.97,
+      "momentumAdded": 9.02,
+      "momentumLost": 1.05,
+      "scoringThreat": 6.72,
+      "territory": 0.1,
+      "possessionQuality": 2.02,
+      "contactBreakdown": -0.87,
+      "disciplineTurnover": 0,
+      "actions": 14,
+      "topActions": [
+        {
+          "time": "67:16",
+          "startSecond": 5801.7,
+          "endSecond": 5827.7,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "67:14",
+          "startSecond": 5799.6,
+          "endSecond": 5825.6,
+          "action": "Attacking Qualities",
+          "result": "Kick Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "67:14",
+          "startSecond": 5799.8,
+          "endSecond": 5825.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "67:15",
+          "startSecond": 5800.2,
+          "endSecond": 5826.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "jean-baptiste gros|france",
+      "playerName": "Jean-Baptiste Gros",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 7.61,
+      "momentumAdded": 11.25,
+      "momentumLost": 3.64,
+      "scoringThreat": 3.84,
+      "territory": 0.75,
+      "possessionQuality": 3.63,
+      "contactBreakdown": 0.89,
+      "disciplineTurnover": -1.5,
+      "actions": 85,
+      "topActions": [
+        {
+          "time": "9:30",
+          "startSecond": 638.4,
+          "endSecond": 664.4,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "4:41",
+          "startSecond": 348.7,
+          "endSecond": 374.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.21,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.2"
+        },
+        {
+          "time": "21:55",
+          "startSecond": 1488.3,
+          "endSecond": 1514.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.03,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "16:34",
+          "startSecond": 1167.1,
+          "endSecond": 1193.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.95,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "16:35",
+          "startSecond": 1168.1,
+          "endSecond": 1194.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "21:57",
+          "startSecond": 1489.8,
+          "endSecond": 1515.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "4:42",
+          "startSecond": 349.5,
+          "endSecond": 375.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "9:29",
+          "startSecond": 636.6,
+          "endSecond": 662.6,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 0.65,
+          "reason": "接点・BD +0.4 / テリトリー +0.2"
+        },
+        {
+          "time": "3:25",
+          "startSecond": 272.9,
+          "endSecond": 298.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.64,
+          "reason": "接点・BD +0.5"
+        },
+        {
+          "time": "17:13",
+          "startSecond": 1205.5,
+          "endSecond": 1231.5,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.64,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "liam williams|wales",
+      "playerName": "Liam Williams",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": 6.53,
+      "momentumAdded": 11.52,
+      "momentumLost": 4.99,
+      "scoringThreat": 1.8,
+      "territory": 2.31,
+      "possessionQuality": 3.92,
+      "contactBreakdown": -1.49,
+      "disciplineTurnover": 0,
+      "actions": 81,
+      "topActions": [
+        {
+          "time": "34:54",
+          "startSecond": 2543.7,
+          "endSecond": 2569.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 2.03,
+          "reason": "継続品質 +0.8 / 接点・BD +0.7 / テリトリー +0.6"
+        },
+        {
+          "time": "58:53",
+          "startSecond": 5213.2,
+          "endSecond": 5239.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.01,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2"
+        },
+        {
+          "time": "55:57",
+          "startSecond": 5027.9,
+          "endSecond": 5053.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.89,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "69:06",
+          "startSecond": 5911,
+          "endSecond": 5937,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.73,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "56:26",
+          "startSecond": 5056.7,
+          "endSecond": 5082.7,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.68,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "43:49",
+          "startSecond": 4169.9,
+          "endSecond": 4195.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "56:26",
+          "startSecond": 5057.2,
+          "endSecond": 5083.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "10:54",
+          "startSecond": 826.8,
+          "endSecond": 852.8,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.56,
+          "reason": "接点・BD -0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "paul boudehent|france",
+      "playerName": "Paul Boudehent",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 6.14,
+      "momentumAdded": 9.27,
+      "momentumLost": 3.13,
+      "scoringThreat": 3.48,
+      "territory": 1.68,
+      "possessionQuality": 0.63,
+      "contactBreakdown": 1.85,
+      "disciplineTurnover": -1.5,
+      "actions": 100,
+      "topActions": [
+        {
+          "time": "13:26",
+          "startSecond": 978.5,
+          "endSecond": 1004.5,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "13:21",
+          "startSecond": 973.9,
+          "endSecond": 999.9,
+          "action": "Kick",
+          "result": "Own Player - Failed",
+          "impact": 1.33,
+          "reason": "テリトリー +1.3"
+        },
+        {
+          "time": "22:03",
+          "startSecond": 1495.8,
+          "endSecond": 1521.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.03,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "2:22",
+          "startSecond": 133,
+          "endSecond": 159,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.91,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "16:05",
+          "startSecond": 1138.4,
+          "endSecond": 1164.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "pierre-louis barassi|france",
+      "playerName": "Pierre-Louis Barassi",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 5.38,
+      "momentumAdded": 8.87,
+      "momentumLost": 3.49,
+      "scoringThreat": 3,
+      "territory": 1.45,
+      "possessionQuality": 2.48,
+      "contactBreakdown": -1.54,
+      "disciplineTurnover": 0,
+      "actions": 75,
+      "topActions": [
+        {
+          "time": "16:01",
+          "startSecond": 1133.6,
+          "endSecond": 1159.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.22,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "16:29",
+          "startSecond": 1161.8,
+          "endSecond": 1187.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.15,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "40:46",
+          "startSecond": 3987.6,
+          "endSecond": 4013.6,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1,
+          "reason": "テリトリー +1.0"
+        },
+        {
+          "time": "66:51",
+          "startSecond": 5776.2,
+          "endSecond": 5802.2,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 0.9,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "39:28",
+          "startSecond": 2866.2,
+          "endSecond": 2892.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "61:36",
+          "startSecond": 5431.4,
+          "endSecond": 5457.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "4:48",
+          "startSecond": 355.6,
+          "endSecond": 381.6,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.71,
+          "reason": "接点・BD -0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "evan lloyd|wales",
+      "playerName": "Evan Lloyd",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": -5.37,
+      "momentumAdded": 5.96,
+      "momentumLost": 11.32,
+      "scoringThreat": 1.44,
+      "territory": 0.4,
+      "possessionQuality": 1.67,
+      "contactBreakdown": -2.58,
+      "disciplineTurnover": -6.3,
+      "actions": 82,
+      "topActions": [
+        {
+          "time": "29:56",
+          "startSecond": 2124.3,
+          "endSecond": 2150.3,
+          "action": "Card",
+          "result": "Foul Play",
+          "impact": -2,
+          "reason": "規律・TO -2.0"
+        },
+        {
+          "time": "29:56",
+          "startSecond": 2123.8,
+          "endSecond": 2149.8,
+          "action": "Tackle",
+          "result": "Pen Conceded",
+          "impact": -1.55,
+          "reason": "規律・TO -1.2 / 接点・BD -0.3"
+        },
+        {
+          "time": "11:14",
+          "startSecond": 847,
+          "endSecond": 873,
+          "action": "Carry",
+          "result": "Penalty Conceded",
+          "impact": -1.26,
+          "reason": "規律・TO -1.2 / 接点・BD -0.2"
+        },
+        {
+          "time": "29:56",
+          "startSecond": 2123.9,
+          "endSecond": 2149.9,
+          "action": "Penalty Conceded",
+          "result": "Yellow Card",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "11:18",
+          "startSecond": 850.9,
+          "endSecond": 876.9,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "9:41",
+          "startSecond": 649.1,
+          "endSecond": 675.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.95,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "28:00",
+          "startSecond": 2008,
+          "endSecond": 2034,
+          "action": "Lineout Throw",
+          "result": "Lost Handling Error",
+          "impact": -0.8,
+          "reason": "規律・TO -0.8"
+        },
+        {
+          "time": "11:01",
+          "startSecond": 834,
+          "endSecond": 860,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "11:15",
+          "startSecond": 848.3,
+          "endSecond": 874.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "cyril baille|france",
+      "playerName": "Cyril Baille",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 5.29,
+      "momentumAdded": 6.38,
+      "momentumLost": 1.09,
+      "scoringThreat": 2.04,
+      "territory": 0.73,
+      "possessionQuality": 0.91,
+      "contactBreakdown": 1.62,
+      "disciplineTurnover": 0,
+      "actions": 45,
+      "topActions": [
+        {
+          "time": "61:33",
+          "startSecond": 5428.7,
+          "endSecond": 5454.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.29,
+          "reason": "接点・BD +0.7 / テリトリー +0.3 / 継続品質 +0.2"
+        },
+        {
+          "time": "53:09",
+          "startSecond": 4828.5,
+          "endSecond": 4854.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.1,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "52:23",
+          "startSecond": 4781.9,
+          "endSecond": 4807.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.02,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "67:04",
+          "startSecond": 5789.6,
+          "endSecond": 5815.6,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.3 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "yoram moefana|france",
+      "playerName": "Yoram Moefana",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 4.92,
+      "momentumAdded": 10.09,
+      "momentumLost": 5.17,
+      "scoringThreat": 2.76,
+      "territory": 0.25,
+      "possessionQuality": 4.19,
+      "contactBreakdown": -2.28,
+      "disciplineTurnover": 0,
+      "actions": 74,
+      "topActions": [
+        {
+          "time": "51:39",
+          "startSecond": 4738.2,
+          "endSecond": 4764.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.15,
+          "reason": "接点・BD +0.7 / テリトリー +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "75:21",
+          "startSecond": 6503.1,
+          "endSecond": 6529.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.15,
+          "reason": "接点・BD +0.7 / テリトリー +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "52:45",
+          "startSecond": 4804.5,
+          "endSecond": 4830.5,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 1.02,
+          "reason": "継続品質 +0.5 / テリトリー +0.4 / 接点・BD +0.2"
+        },
+        {
+          "time": "40:11",
+          "startSecond": 2958.2,
+          "endSecond": 2984.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "61:35",
+          "startSecond": 5430.4,
+          "endSecond": 5456.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "1:36",
+          "startSecond": 86.3,
+          "endSecond": 112.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "52:45",
+          "startSecond": 4804.5,
+          "endSecond": 4830.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "52:32",
+          "startSecond": 4790.8,
+          "endSecond": 4816.8,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "gareth thomas|wales",
+      "playerName": "Gareth Thomas",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": -4.77,
+      "momentumAdded": 3.58,
+      "momentumLost": 8.35,
+      "scoringThreat": 1.2,
+      "territory": 0.13,
+      "possessionQuality": 0.23,
+      "contactBreakdown": -2.63,
+      "disciplineTurnover": -3.7,
+      "actions": 68,
+      "topActions": [
+        {
+          "time": "2:42",
+          "startSecond": 152.8,
+          "endSecond": 178.8,
+          "action": "Tackle",
+          "result": "Pen Conceded",
+          "impact": -1.55,
+          "reason": "規律・TO -1.2 / 接点・BD -0.3"
+        },
+        {
+          "time": "2:42",
+          "startSecond": 153,
+          "endSecond": 179,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "31:02",
+          "startSecond": 2289.2,
+          "endSecond": 2315.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "0:27",
+          "startSecond": 17.9,
+          "endSecond": 43.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.93,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "nick tompkins|wales",
+      "playerName": "Nick Tompkins",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": 4.67,
+      "momentumAdded": 11.24,
+      "momentumLost": 6.57,
+      "scoringThreat": 1.08,
+      "territory": 0.83,
+      "possessionQuality": 4.72,
+      "contactBreakdown": 1.05,
+      "disciplineTurnover": -3,
+      "actions": 93,
+      "topActions": [
+        {
+          "time": "13:20",
+          "startSecond": 973.1,
+          "endSecond": 999.1,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "70:53",
+          "startSecond": 6122.4,
+          "endSecond": 6148.4,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "57:04",
+          "startSecond": 5095.2,
+          "endSecond": 5121.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.21,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.2"
+        },
+        {
+          "time": "70:43",
+          "startSecond": 6112.4,
+          "endSecond": 6138.4,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 1.09,
+          "reason": "接点・BD +0.4 / 継続品質 +0.3 / テリトリー +0.2"
+        },
+        {
+          "time": "69:20",
+          "startSecond": 5925.6,
+          "endSecond": 5951.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.07,
+          "reason": "接点・BD +0.7 / テリトリー +0.3"
+        },
+        {
+          "time": "79:50",
+          "startSecond": 6821.6,
+          "endSecond": 6847.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.04,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "80:16",
+          "startSecond": 6847.1,
+          "endSecond": 6873.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.01,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2"
+        },
+        {
+          "time": "57:05",
+          "startSecond": 5096.1,
+          "endSecond": 5122.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "79:51",
+          "startSecond": 6821.8,
+          "endSecond": 6847.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "80:16",
+          "startSecond": 6847.2,
+          "endSecond": 6873.2,
+          "action": "Attacking Qualities",
+          "result": "Kick Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "josh adams|wales",
+      "playerName": "Josh Adams",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": 4.41,
+      "momentumAdded": 10.31,
+      "momentumLost": 5.9,
+      "scoringThreat": 0.72,
+      "territory": 1.98,
+      "possessionQuality": 3.63,
+      "contactBreakdown": 0.83,
+      "disciplineTurnover": -2.75,
+      "actions": 72,
+      "topActions": [
+        {
+          "time": "3:43",
+          "startSecond": 291.4,
+          "endSecond": 317.4,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "65:50",
+          "startSecond": 5706,
+          "endSecond": 5732,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "65:36",
+          "startSecond": 5692.6,
+          "endSecond": 5718.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.21,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.2"
+        },
+        {
+          "time": "43:55",
+          "startSecond": 4176.5,
+          "endSecond": 4202.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.13,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2"
+        },
+        {
+          "time": "43:49",
+          "startSecond": 4170.5,
+          "endSecond": 4196.5,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 1.08,
+          "reason": "接点・BD +0.4 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "56:47",
+          "startSecond": 5077.4,
+          "endSecond": 5103.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.96,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "43:55",
+          "startSecond": 4176.5,
+          "endSecond": 4202.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "51:34",
+          "startSecond": 4732.7,
+          "endSecond": 4758.7,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 0.7,
+          "reason": "テリトリー +0.7"
+        },
+        {
+          "time": "43:50",
+          "startSecond": 4171.2,
+          "endSecond": 4197.2,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "elliot dee|wales",
+      "playerName": "Elliot Dee",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": 4.02,
+      "momentumAdded": 6.8,
+      "momentumLost": 2.78,
+      "scoringThreat": 2.4,
+      "territory": 0.2,
+      "possessionQuality": 2.05,
+      "contactBreakdown": -1.18,
+      "disciplineTurnover": 0.55,
+      "actions": 100,
+      "topActions": [
+        {
+          "time": "60:36",
+          "startSecond": 5341.1,
+          "endSecond": 5367.1,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "80:29",
+          "startSecond": 6859.7,
+          "endSecond": 6885.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "45:16",
+          "startSecond": 4320.6,
+          "endSecond": 4346.6,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "70:39",
+          "startSecond": 6108.1,
+          "endSecond": 6134.1,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "69:39",
+          "startSecond": 5944.2,
+          "endSecond": 5970.2,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "uini atonio|france",
+      "playerName": "Uini Atonio",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 3.52,
+      "momentumAdded": 6.32,
+      "momentumLost": 2.8,
+      "scoringThreat": 2.28,
+      "territory": 0.33,
+      "possessionQuality": 0.14,
+      "contactBreakdown": 0.83,
+      "disciplineTurnover": -0.05,
+      "actions": 59,
+      "topActions": [
+        {
+          "time": "2:41",
+          "startSecond": 152,
+          "endSecond": 178,
+          "action": "Carry",
+          "result": "Penalty Won",
+          "impact": 1.59,
+          "reason": "規律・TO +1.2 / 接点・BD +0.2"
+        },
+        {
+          "time": "8:52",
+          "startSecond": 600,
+          "endSecond": 626,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "24:11",
+          "startSecond": 1623.5,
+          "endSecond": 1649.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.93,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "mickael guillard|france",
+      "playerName": "Mickael Guillard",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 3.49,
+      "momentumAdded": 5.34,
+      "momentumLost": 1.85,
+      "scoringThreat": 0.84,
+      "territory": 0.75,
+      "possessionQuality": 1.41,
+      "contactBreakdown": 0.49,
+      "disciplineTurnover": 0,
+      "actions": 49,
+      "topActions": [
+        {
+          "time": "52:47",
+          "startSecond": 4805.7,
+          "endSecond": 4831.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.17,
+          "reason": "接点・BD +0.7 / テリトリー +0.3 / 継続品質 +0.2"
+        },
+        {
+          "time": "76:19",
+          "startSecond": 6592.2,
+          "endSecond": 6618.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.17,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "52:47",
+          "startSecond": 4805.7,
+          "endSecond": 4831.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "53:00",
+          "startSecond": 4818.6,
+          "endSecond": 4844.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "nicky smith|wales",
+      "playerName": "Nicky Smith",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": 2.91,
+      "momentumAdded": 4.19,
+      "momentumLost": 1.29,
+      "scoringThreat": 0.6,
+      "territory": 0.5,
+      "possessionQuality": 0.92,
+      "contactBreakdown": 0.89,
+      "disciplineTurnover": 0,
+      "actions": 52,
+      "topActions": [
+        {
+          "time": "57:14",
+          "startSecond": 5104.7,
+          "endSecond": 5130.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.07,
+          "reason": "接点・BD +0.7 / テリトリー +0.3"
+        },
+        {
+          "time": "56:51",
+          "startSecond": 5082.2,
+          "endSecond": 5108.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.9,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "57:15",
+          "startSecond": 5106.2,
+          "endSecond": 5132.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "71:51",
+          "startSecond": 6226,
+          "endSecond": 6252,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.62,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "freddie thomas|wales",
+      "playerName": "Freddie Thomas",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": -2.66,
+      "momentumAdded": 1.58,
+      "momentumLost": 4.25,
+      "scoringThreat": 0.24,
+      "territory": 0.43,
+      "possessionQuality": 0.32,
+      "contactBreakdown": -0.4,
+      "disciplineTurnover": -3.25,
+      "actions": 25,
+      "topActions": [
+        {
+          "time": "75:37",
+          "startSecond": 6519.2,
+          "endSecond": 6545.2,
+          "action": "Card",
+          "result": "Persistent Infringement",
+          "impact": -2,
+          "reason": "規律・TO -2.0"
+        },
+        {
+          "time": "75:37",
+          "startSecond": 6519,
+          "endSecond": 6545,
+          "action": "Penalty Conceded",
+          "result": "Yellow Card",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "73:05",
+          "startSecond": 6366.8,
+          "endSecond": 6392.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.68,
+          "reason": "接点・BD +0.5 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "francois cros|france",
+      "playerName": "Francois Cros",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 2.56,
+      "momentumAdded": 3.96,
+      "momentumLost": 1.4,
+      "scoringThreat": 2.28,
+      "territory": 0.05,
+      "possessionQuality": 1.45,
+      "contactBreakdown": -1.22,
+      "disciplineTurnover": 0,
+      "actions": 81,
+      "topActions": [
+        {
+          "time": "21:35",
+          "startSecond": 1467.8,
+          "endSecond": 1493.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "24:11",
+          "startSecond": 1623.9,
+          "endSecond": 1649.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "tommy reffell|wales",
+      "playerName": "Tommy Reffell",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": 2.38,
+      "momentumAdded": 6.75,
+      "momentumLost": 4.37,
+      "scoringThreat": 2.4,
+      "territory": 1.03,
+      "possessionQuality": 1.7,
+      "contactBreakdown": -1.25,
+      "disciplineTurnover": -1.5,
+      "actions": 108,
+      "topActions": [
+        {
+          "time": "9:17",
+          "startSecond": 625.4,
+          "endSecond": 651.4,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "32:22",
+          "startSecond": 2369.2,
+          "endSecond": 2395.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.47,
+          "reason": "接点・BD +0.7 / 継続品質 +0.5 / テリトリー +0.3"
+        },
+        {
+          "time": "72:51",
+          "startSecond": 6353.4,
+          "endSecond": 6379.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.98,
+          "reason": "接点・BD +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "will rowlands|wales",
+      "playerName": "Will Rowlands",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": 2.34,
+      "momentumAdded": 7.67,
+      "momentumLost": 5.33,
+      "scoringThreat": 3.24,
+      "territory": 0.68,
+      "possessionQuality": 1.26,
+      "contactBreakdown": -2.84,
+      "disciplineTurnover": 0,
+      "actions": 138,
+      "topActions": [
+        {
+          "time": "11:01",
+          "startSecond": 833.9,
+          "endSecond": 859.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.1,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "59:04",
+          "startSecond": 5224.2,
+          "endSecond": 5250.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.71,
+          "reason": "接点・BD +0.5 / テリトリー +0.2"
+        },
+        {
+          "time": "56:10",
+          "startSecond": 5040.8,
+          "endSecond": 5066.8,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.65,
+          "reason": "接点・BD +0.4 / テリトリー +0.2"
+        },
+        {
+          "time": "59:04",
+          "startSecond": 5225,
+          "endSecond": 5251,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "1:04",
+          "startSecond": 54.8,
+          "endSecond": 80.8,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.63,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "19:24",
+          "startSecond": 1337.1,
+          "endSecond": 1363.1,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.58,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "james botham|wales",
+      "playerName": "James Botham",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": -2.27,
+      "momentumAdded": 4.18,
+      "momentumLost": 6.46,
+      "scoringThreat": 2.16,
+      "territory": 0.1,
+      "possessionQuality": 0.62,
+      "contactBreakdown": -2.7,
+      "disciplineTurnover": -2.45,
+      "actions": 88,
+      "topActions": [
+        {
+          "time": "53:00",
+          "startSecond": 4819,
+          "endSecond": 4845,
+          "action": "Tackle",
+          "result": "Pen Conceded",
+          "impact": -1.55,
+          "reason": "規律・TO -1.2 / 接点・BD -0.3"
+        },
+        {
+          "time": "53:04",
+          "startSecond": 4822.8,
+          "endSecond": 4848.8,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "14:37",
+          "startSecond": 1050.2,
+          "endSecond": 1076.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.01,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "tom rogers|wales",
+      "playerName": "Tom Rogers",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": 2.25,
+      "momentumAdded": 8.49,
+      "momentumLost": 6.24,
+      "scoringThreat": 1.08,
+      "territory": 1.25,
+      "possessionQuality": 2.93,
+      "contactBreakdown": -0.01,
+      "disciplineTurnover": -3,
+      "actions": 43,
+      "topActions": [
+        {
+          "time": "26:51",
+          "startSecond": 1938.8,
+          "endSecond": 1964.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.7,
+          "reason": "接点・BD +0.7 / 継続品質 +0.6 / テリトリー +0.4"
+        },
+        {
+          "time": "19:44",
+          "startSecond": 1357.4,
+          "endSecond": 1383.4,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "36:18",
+          "startSecond": 2628.4,
+          "endSecond": 2654.4,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "10:41",
+          "startSecond": 814,
+          "endSecond": 840,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.4,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.3"
+        },
+        {
+          "time": "19:47",
+          "startSecond": 1360.4,
+          "endSecond": 1386.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.1,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "12:50",
+          "startSecond": 943.4,
+          "endSecond": 969.4,
+          "action": "Attacking Qualities",
+          "result": "Kick Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "12:52",
+          "startSecond": 945,
+          "endSecond": 971,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "19:44",
+          "startSecond": 1357.3,
+          "endSecond": 1383.3,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.55,
+          "reason": "継続品質 -0.6"
+        },
+        {
+          "time": "24:40",
+          "startSecond": 1652.5,
+          "endSecond": 1678.5,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.55,
+          "reason": "テリトリー +0.2 / 接点・BD +0.2 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "oscar jegou|france",
+      "playerName": "Oscar Jegou",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 2.19,
+      "momentumAdded": 2.19,
+      "momentumLost": 0,
+      "scoringThreat": 1.2,
+      "territory": -0.08,
+      "possessionQuality": 0.61,
+      "contactBreakdown": 0.45,
+      "disciplineTurnover": 0,
+      "actions": 25,
+      "topActions": [
+        {
+          "time": "76:53",
+          "startSecond": 6626.2,
+          "endSecond": 6652.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "keiron assiratti|wales",
+      "playerName": "Keiron Assiratti",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": -1.92,
+      "momentumAdded": 0.73,
+      "momentumLost": 2.65,
+      "scoringThreat": 0.84,
+      "territory": 0.1,
+      "possessionQuality": 0.24,
+      "contactBreakdown": -1.85,
+      "disciplineTurnover": -1.25,
+      "actions": 39,
+      "topActions": [
+        {
+          "time": "48:33",
+          "startSecond": 4517.2,
+          "endSecond": 4543.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "alexandre roumat|france",
+      "playerName": "Alexandre Roumat",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": -1.68,
+      "momentumAdded": 6.08,
+      "momentumLost": 7.76,
+      "scoringThreat": 4.32,
+      "territory": 0.13,
+      "possessionQuality": 1.27,
+      "contactBreakdown": -0.45,
+      "disciplineTurnover": -6.95,
+      "actions": 88,
+      "topActions": [
+        {
+          "time": "9:16",
+          "startSecond": 623.6,
+          "endSecond": 649.6,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "30:04",
+          "startSecond": 2132,
+          "endSecond": 2158,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "32:21",
+          "startSecond": 2367.8,
+          "endSecond": 2393.8,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "5:27",
+          "startSecond": 394.7,
+          "endSecond": 420.7,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "5:23",
+          "startSecond": 391.1,
+          "endSecond": 417.1,
+          "action": "Carry",
+          "result": "Penalty Conceded",
+          "impact": -1.03,
+          "reason": "規律・TO -1.2"
+        },
+        {
+          "time": "2:24",
+          "startSecond": 134.7,
+          "endSecond": 160.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "hugo auradou|france",
+      "playerName": "Hugo Auradou",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": -1.68,
+      "momentumAdded": 0.84,
+      "momentumLost": 2.52,
+      "scoringThreat": 0.84,
+      "territory": 0,
+      "possessionQuality": 0.04,
+      "contactBreakdown": -1.06,
+      "disciplineTurnover": -1.5,
+      "actions": 39,
+      "topActions": [
+        {
+          "time": "57:19",
+          "startSecond": 5109.7,
+          "endSecond": 5135.7,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "rhodri williams|wales",
+      "playerName": "Rhodri Williams",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": -0.81,
+      "momentumAdded": 1.11,
+      "momentumLost": 1.91,
+      "scoringThreat": 0.36,
+      "territory": -2.92,
+      "possessionQuality": 1.75,
+      "contactBreakdown": 0.01,
+      "disciplineTurnover": 0,
+      "actions": 69,
+      "topActions": [],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "georges-henri colombe|france",
+      "playerName": "Georges-Henri Colombe",
+      "team": "France",
+      "matchId": "941789",
+      "netMomentum": 0.78,
+      "momentumAdded": 2.81,
+      "momentumLost": 2.03,
+      "scoringThreat": 0.6,
+      "territory": 0.13,
+      "possessionQuality": 0.68,
+      "contactBreakdown": 0.62,
+      "disciplineTurnover": -1.25,
+      "actions": 37,
+      "topActions": [
+        {
+          "time": "58:49",
+          "startSecond": 5209.1,
+          "endSecond": 5235.1,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "52:17",
+          "startSecond": 4775.7,
+          "endSecond": 4801.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.88,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "52:40",
+          "startSecond": 4799,
+          "endSecond": 4825,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "55:45",
+          "startSecond": 5015.8,
+          "endSecond": 5041.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.63,
+          "reason": "接点・BD +0.5"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "henry thomas|wales",
+      "playerName": "Henry Thomas",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": 0.76,
+      "momentumAdded": 2.45,
+      "momentumLost": 1.69,
+      "scoringThreat": 1.32,
+      "territory": -0.05,
+      "possessionQuality": 0.74,
+      "contactBreakdown": -1.25,
+      "disciplineTurnover": 0,
+      "actions": 63,
+      "topActions": [
+        {
+          "time": "44:24",
+          "startSecond": 4205.4,
+          "endSecond": 4231.4,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.63,
+          "reason": "接点・BD +0.2 / 継続品質 +0.2 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "aaron wainwright|wales",
+      "playerName": "Aaron Wainwright",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": -0.75,
+      "momentumAdded": 0.03,
+      "momentumLost": 0.78,
+      "scoringThreat": 0,
+      "territory": 0.03,
+      "possessionQuality": 0,
+      "contactBreakdown": -0.78,
+      "disciplineTurnover": 0,
+      "actions": 9,
+      "topActions": [],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "dafydd jenkins|wales",
+      "playerName": "Dafydd Jenkins",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": -0.35,
+      "momentumAdded": 6.7,
+      "momentumLost": 7.05,
+      "scoringThreat": 2.76,
+      "territory": 0.45,
+      "possessionQuality": 1.8,
+      "contactBreakdown": -3.86,
+      "disciplineTurnover": -1.5,
+      "actions": 143,
+      "topActions": [
+        {
+          "time": "46:42",
+          "startSecond": 4406.2,
+          "endSecond": 4432.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "56:57",
+          "startSecond": 5088,
+          "endSecond": 5114,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.71,
+          "reason": "接点・BD +0.5 / テリトリー +0.2"
+        },
+        {
+          "time": "26:59",
+          "startSecond": 1946.5,
+          "endSecond": 1972.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "owen watkin|wales",
+      "playerName": "Owen Watkin",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": -0.32,
+      "momentumAdded": 4.43,
+      "momentumLost": 4.75,
+      "scoringThreat": 0.24,
+      "territory": 0.48,
+      "possessionQuality": 1.15,
+      "contactBreakdown": 0.81,
+      "disciplineTurnover": -3,
+      "actions": 45,
+      "topActions": [
+        {
+          "time": "1:34",
+          "startSecond": 84.3,
+          "endSecond": 110.3,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "6:28",
+          "startSecond": 455.7,
+          "endSecond": 481.7,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "0:32",
+          "startSecond": 22.8,
+          "endSecond": 48.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.08,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "13:19",
+          "startSecond": 971.8,
+          "endSecond": 997.8,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.7,
+          "reason": "継続品質 -0.6 / テリトリー -0.2"
+        },
+        {
+          "time": "14:41",
+          "startSecond": 1054,
+          "endSecond": 1080,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "25:49",
+          "startSecond": 1721.8,
+          "endSecond": 1747.8,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.63,
+          "reason": "継続品質 +0.2 / テリトリー +0.2 / 接点・BD +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "blair murray|wales",
+      "playerName": "Blair Murray",
+      "team": "Wales",
+      "matchId": "941789",
+      "netMomentum": -0.14,
+      "momentumAdded": 1.83,
+      "momentumLost": 1.97,
+      "scoringThreat": 0,
+      "territory": 0.33,
+      "possessionQuality": 0.88,
+      "contactBreakdown": 0.16,
+      "disciplineTurnover": -1.5,
+      "actions": 19,
+      "topActions": [
+        {
+          "time": "74:07",
+          "startSecond": 6429.5,
+          "endSecond": 6455.5,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "72:29",
+          "startSecond": 6331.6,
+          "endSecond": 6357.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.19,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.2"
+        },
+        {
+          "time": "74:05",
+          "startSecond": 6427.4,
+          "endSecond": 6453.4,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 0.64,
+          "reason": "継続品質 +0.3 / 接点・BD +0.2 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    }
+  ]
+}

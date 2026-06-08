@@ -1,784 +1,3512 @@
-[
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 31235,
-    "playerName": "Ewan Ashman",
-    "net_momentum": 12.44059869403707,
-    "momentum_added": 12.620214914017913,
-    "momentum_lost": 0.1796162199808417,
-    "events_count": 83,
-    "scoring_threat_player_team": 9.12,
-    "territory_player_team": 0.875,
-    "possession_quality_player_team": 5.75,
-    "contact_breakdown_player_team": 2.53,
-    "discipline_turnover_player_team": 3.85,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 34450,
-    "playerName": "Fergus Burke",
-    "net_momentum": 10.426803322402384,
-    "momentum_added": 11.49149102390606,
-    "momentum_lost": 1.0646877015036769,
-    "events_count": 124,
-    "scoring_threat_player_team": 11.0,
-    "territory_player_team": 6.831,
-    "possession_quality_player_team": 9.505,
-    "contact_breakdown_player_team": -1.95,
-    "discipline_turnover_player_team": -1.8,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 35689,
-    "playerName": "Jamie Dobie",
-    "net_momentum": 7.879956054037062,
-    "momentum_added": 10.69814279797774,
-    "momentum_lost": 2.81818674394068,
-    "events_count": 211,
-    "scoring_threat_player_team": 9.36,
-    "territory_player_team": 6.899,
-    "possession_quality_player_team": 8.18,
-    "contact_breakdown_player_team": -0.5199999999999998,
-    "discipline_turnover_player_team": -2.85,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 29893,
-    "playerName": "Kyle Rowe",
-    "net_momentum": 7.328900467148013,
-    "momentum_added": 8.916640173476504,
-    "momentum_lost": 1.5877397063284913,
-    "events_count": 78,
-    "scoring_threat_player_team": 7.8,
-    "territory_player_team": 5.758,
-    "possession_quality_player_team": 10.575,
-    "contact_breakdown_player_team": 0.26,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 19642,
-    "playerName": "George Turner",
-    "net_momentum": 7.2224899856169955,
-    "momentum_added": 7.826287652026374,
-    "momentum_lost": 0.6037976664093786,
-    "events_count": 70,
-    "scoring_threat_player_team": 8.399999999999999,
-    "territory_player_team": 0.7749999999999999,
-    "possession_quality_player_team": 1.115,
-    "contact_breakdown_player_team": 0.1699999999999999,
-    "discipline_turnover_player_team": 1.75,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 25842,
-    "playerName": "Jacob Umaga",
-    "net_momentum": 6.7929955494311525,
-    "momentum_added": 9.62693300674886,
-    "momentum_lost": 2.8339374573177074,
-    "events_count": 103,
-    "scoring_threat_player_team": 5.44,
-    "territory_player_team": 12.464,
-    "possession_quality_player_team": 4.405,
-    "contact_breakdown_player_team": -0.5099999999999999,
-    "discipline_turnover_player_team": -2.7,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 28720,
-    "playerName": "Arron Reed",
-    "net_momentum": 6.578436778390156,
-    "momentum_added": 7.345812313773246,
-    "momentum_lost": 0.76737553538309,
-    "events_count": 61,
-    "scoring_threat_player_team": 7.92,
-    "territory_player_team": 2.383,
-    "possession_quality_player_team": 7.705,
-    "contact_breakdown_player_team": 0.2299999999999999,
-    "discipline_turnover_player_team": -2.7,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 21630,
-    "playerName": "George Horne",
-    "net_momentum": 6.241538055564332,
-    "momentum_added": 7.460178175623701,
-    "momentum_lost": 1.2186401200593688,
-    "events_count": 130,
-    "scoring_threat_player_team": 12.24,
-    "territory_player_team": 1.316,
-    "possession_quality_player_team": 3.33,
-    "contact_breakdown_player_team": -2.62,
-    "discipline_turnover_player_team": 0.7500000000000001,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 22603,
-    "playerName": "Duncan Paia'aua",
-    "net_momentum": 6.027720884800607,
-    "momentum_added": 8.046895300381983,
-    "momentum_lost": 2.0191744155813773,
-    "events_count": 91,
-    "scoring_threat_player_team": 8.52,
-    "territory_player_team": 5.165,
-    "possession_quality_player_team": 8.21,
-    "contact_breakdown_player_team": 0.9600000000000002,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 21757,
-    "playerName": "Rory Hutchinson",
-    "net_momentum": 5.412037551583635,
-    "momentum_added": 6.777588928058472,
-    "momentum_lost": 1.3655513764748357,
-    "events_count": 67,
-    "scoring_threat_player_team": 7.08,
-    "territory_player_team": 3.193,
-    "possession_quality_player_team": 4.25,
-    "contact_breakdown_player_team": -1.4499999999999995,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 23992,
-    "playerName": "Benjamin Nee-Nee",
-    "net_momentum": 5.33494447632021,
-    "momentum_added": 6.336266139780439,
-    "momentum_lost": 1.001321663460229,
-    "events_count": 90,
-    "scoring_threat_player_team": 8.520000000000001,
-    "territory_player_team": 1.041,
-    "possession_quality_player_team": 5.45,
-    "contact_breakdown_player_team": 0.5900000000000001,
-    "discipline_turnover_player_team": -1.8,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 28595,
-    "playerName": "Kyle Steyn",
-    "net_momentum": 4.95484156435192,
-    "momentum_added": 5.299930991619713,
-    "momentum_lost": 0.3450894272677931,
-    "events_count": 27,
-    "scoring_threat_player_team": 6.96,
-    "territory_player_team": 1.5500000000000005,
-    "possession_quality_player_team": 3.62,
-    "contact_breakdown_player_team": 0.0100000000000001,
-    "discipline_turnover_player_team": 0.35,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 27309,
-    "playerName": "Stafford McDowall",
-    "net_momentum": 4.131656298098829,
-    "momentum_added": 5.030487890785828,
-    "momentum_lost": 0.8988315926869992,
-    "events_count": 92,
-    "scoring_threat_player_team": 3.24,
-    "territory_player_team": 4.292,
-    "possession_quality_player_team": 6.09,
-    "contact_breakdown_player_team": -2.27,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 21047,
-    "playerName": "Rodney Iona",
-    "net_momentum": 4.1181135078409,
-    "momentum_added": 4.1181135078409,
-    "momentum_lost": 0.0,
-    "events_count": 33,
-    "scoring_threat_player_team": 0.72,
-    "territory_player_team": 8.342,
-    "possession_quality_player_team": 1.805,
-    "contact_breakdown_player_team": 1.0,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 26974,
-    "playerName": "Matt Fagerson",
-    "net_momentum": 3.8034995311726543,
-    "momentum_added": 5.436382340985641,
-    "momentum_lost": 1.6328828098129864,
-    "events_count": 128,
-    "scoring_threat_player_team": 4.92,
-    "territory_player_team": 2.075,
-    "possession_quality_player_team": 5.6,
-    "contact_breakdown_player_team": -1.5199999999999998,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 23395,
-    "playerName": "Melani Matavao",
-    "net_momentum": 3.374945110718356,
-    "momentum_added": 4.347056332319772,
-    "momentum_lost": 0.9721112216014164,
-    "events_count": 226,
-    "scoring_threat_player_team": 7.56,
-    "territory_player_team": -1.337,
-    "possession_quality_player_team": 8.225,
-    "contact_breakdown_player_team": 0.4600000000000001,
-    "discipline_turnover_player_team": 1.85,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 23615,
-    "playerName": "Taleni Seu",
-    "net_momentum": 2.500716170302973,
-    "momentum_added": 2.817796019885741,
-    "momentum_lost": 0.3170798495827679,
-    "events_count": 52,
-    "scoring_threat_player_team": 0.72,
-    "territory_player_team": 1.125,
-    "possession_quality_player_team": 2.835,
-    "contact_breakdown_player_team": 3.09,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 28737,
-    "playerName": "Andy Onyeama-Christie",
-    "net_momentum": 2.461038736188547,
-    "momentum_added": 3.067315384469394,
-    "momentum_lost": 0.6062766482808469,
-    "events_count": 118,
-    "scoring_threat_player_team": 5.52,
-    "territory_player_team": 0.025,
-    "possession_quality_player_team": 2.505,
-    "contact_breakdown_player_team": -1.1199999999999997,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 32973,
-    "playerName": "Niko Jones",
-    "net_momentum": 1.7552535141130852,
-    "momentum_added": 1.931206921550296,
-    "momentum_lost": 0.1759534074372108,
-    "events_count": 51,
-    "scoring_threat_player_team": 1.56,
-    "territory_player_team": 1.125,
-    "possession_quality_player_team": 4.775,
-    "contact_breakdown_player_team": 1.11,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 30035,
-    "playerName": "Rory Darge",
-    "net_momentum": 1.7186952862226754,
-    "momentum_added": 2.3722979558440587,
-    "momentum_lost": 0.6536026696213835,
-    "events_count": 74,
-    "scoring_threat_player_team": 3.48,
-    "territory_player_team": 0.425,
-    "possession_quality_player_team": 0.595,
-    "contact_breakdown_player_team": 0.8100000000000002,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 31603,
-    "playerName": "Pita Anae-Ah Sue",
-    "net_momentum": 1.5150168768781491,
-    "momentum_added": 2.3408766990249914,
-    "momentum_lost": 0.8258598221468418,
-    "events_count": 65,
-    "scoring_threat_player_team": 1.68,
-    "territory_player_team": 0.375,
-    "possession_quality_player_team": 1.645,
-    "contact_breakdown_player_team": -0.69,
-    "discipline_turnover_player_team": 0.6499999999999998,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 23665,
-    "playerName": "Adam Hastings",
-    "net_momentum": 1.4124169305419716,
-    "momentum_added": 1.654796891282519,
-    "momentum_lost": 0.2423799607405475,
-    "events_count": 22,
-    "scoring_threat_player_team": 0.72,
-    "territory_player_team": 4.612,
-    "possession_quality_player_team": 0.16,
-    "contact_breakdown_player_team": -1.5799999999999998,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 17125,
-    "playerName": "Grant Gilchrist",
-    "net_momentum": 1.390292220612933,
-    "momentum_added": 3.5013278971832285,
-    "momentum_lost": 2.111035676570296,
-    "events_count": 105,
-    "scoring_threat_player_team": 10.56,
-    "territory_player_team": 0.7,
-    "possession_quality_player_team": 1.165,
-    "contact_breakdown_player_team": -0.92,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 33484,
-    "playerName": "Iakopo Petelo-Mapu",
-    "net_momentum": 0.7700459843389516,
-    "momentum_added": 1.514290159733678,
-    "momentum_lost": 0.7442441753947264,
-    "events_count": 44,
-    "scoring_threat_player_team": 2.52,
-    "territory_player_team": 0.7999999999999999,
-    "possession_quality_player_team": 2.33,
-    "contact_breakdown_player_team": 2.74,
-    "discipline_turnover_player_team": -3.25,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 28164,
-    "playerName": "Samuel Slade",
-    "net_momentum": 0.6286211728957511,
-    "momentum_added": 1.186084284147069,
-    "momentum_lost": 0.5574631112513175,
-    "events_count": 76,
-    "scoring_threat_player_team": 1.68,
-    "territory_player_team": 0.3,
-    "possession_quality_player_team": 0.4399999999999999,
-    "contact_breakdown_player_team": 0.61,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 36714,
-    "playerName": "Gregor Brown",
-    "net_momentum": 0.6027901491499961,
-    "momentum_added": 1.628767403475133,
-    "momentum_lost": 1.0259772543251369,
-    "events_count": 78,
-    "scoring_threat_player_team": 3.84,
-    "territory_player_team": 0.625,
-    "possession_quality_player_team": 2.15,
-    "contact_breakdown_player_team": -1.38,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 31482,
-    "playerName": "Luteru Tolai",
-    "net_momentum": 0.5731459900565815,
-    "momentum_added": 1.7236458489455555,
-    "momentum_lost": 1.150499858888974,
-    "events_count": 38,
-    "scoring_threat_player_team": 1.56,
-    "territory_player_team": 0.3,
-    "possession_quality_player_team": 1.005,
-    "contact_breakdown_player_team": -0.35,
-    "discipline_turnover_player_team": -0.2500000000000001,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 70253,
-    "playerName": "Latrell Smiler Ah-Kiong",
-    "net_momentum": 0.4675666139762588,
-    "momentum_added": 0.7810192763291466,
-    "momentum_lost": 0.3134526623528878,
-    "events_count": 35,
-    "scoring_threat_player_team": 0.12,
-    "territory_player_team": 2.366,
-    "possession_quality_player_team": 5.3500000000000005,
-    "contact_breakdown_player_team": 0.7199999999999999,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 29671,
-    "playerName": "Elliot Millar Mills",
-    "net_momentum": 0.4465719894943279,
-    "momentum_added": 0.8632739629873465,
-    "momentum_lost": 0.4167019734930186,
-    "events_count": 63,
-    "scoring_threat_player_team": 1.92,
-    "territory_player_team": 0.525,
-    "possession_quality_player_team": 0.7250000000000001,
-    "contact_breakdown_player_team": -0.4399999999999999,
-    "discipline_turnover_player_team": -2.35,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 20067,
-    "playerName": "Aki Seiuli",
-    "net_momentum": 0.2927467357381761,
-    "momentum_added": 1.1703455490603307,
-    "momentum_lost": 0.8775988133221545,
-    "events_count": 73,
-    "scoring_threat_player_team": 2.52,
-    "territory_player_team": 0.825,
-    "possession_quality_player_team": 2.85,
-    "contact_breakdown_player_team": -1.92,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 22360,
-    "playerName": "Rory Sutherland",
-    "net_momentum": 0.2575975511717214,
-    "momentum_added": 0.8089783453454946,
-    "momentum_lost": 0.5513807941737731,
-    "events_count": 44,
-    "scoring_threat_player_team": 1.92,
-    "territory_player_team": 0.3,
-    "possession_quality_player_team": 0.395,
-    "contact_breakdown_player_team": -0.77,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 31531,
-    "playerName": "Michael Curry",
-    "net_momentum": 0.1999060458862826,
-    "momentum_added": 0.1999060458862826,
-    "momentum_lost": 0.0,
-    "events_count": 10,
-    "scoring_threat_player_team": 0.48,
-    "territory_player_team": -0.05,
-    "possession_quality_player_team": 0.08,
-    "contact_breakdown_player_team": 0.45,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 55872,
-    "playerName": "Kaynan Siteine-Tua",
-    "net_momentum": 0.0601127247507867,
-    "momentum_added": 0.0601127247507867,
-    "momentum_lost": 0.0,
-    "events_count": 6,
-    "scoring_threat_player_team": 0.24,
-    "territory_player_team": 0.0,
-    "possession_quality_player_team": 0.0,
-    "contact_breakdown_player_team": 0.0,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 29911,
-    "playerName": "Finlay Richardson",
-    "net_momentum": 0.0161711358335733,
-    "momentum_added": 0.5229984316468865,
-    "momentum_lost": 0.5068272958133133,
-    "events_count": 23,
-    "scoring_threat_player_team": 0.96,
-    "territory_player_team": 0.2,
-    "possession_quality_player_team": 0.915,
-    "contact_breakdown_player_team": -0.72,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 30216,
-    "playerName": "Marshall Sykes",
-    "net_momentum": 0.0,
-    "momentum_added": 0.0,
-    "momentum_lost": 0.0,
-    "events_count": 3,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 0.0,
-    "possession_quality_player_team": 0.0,
-    "contact_breakdown_player_team": 0.0,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 31270,
-    "playerName": "Connor Tupai",
-    "net_momentum": -0.1511523351413545,
-    "momentum_added": 0.3494461567644655,
-    "momentum_lost": 0.5005984919058202,
-    "events_count": 35,
-    "scoring_threat_player_team": 1.68,
-    "territory_player_team": -0.95,
-    "possession_quality_player_team": 0.96,
-    "contact_breakdown_player_team": 0.12,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 33469,
-    "playerName": "Jonah Mau'u",
-    "net_momentum": -0.3649959918828355,
-    "momentum_added": 0.8372502653507409,
-    "momentum_lost": 1.2022462572335764,
-    "events_count": 51,
-    "scoring_threat_player_team": 0.84,
-    "territory_player_team": 0.275,
-    "possession_quality_player_team": 2.3400000000000003,
-    "contact_breakdown_player_team": -3.18,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 23386,
-    "playerName": "Marco Fepulea'i",
-    "net_momentum": -0.3725751733133564,
-    "momentum_added": 0.5273056720419534,
-    "momentum_lost": 0.8998808453553098,
-    "events_count": 19,
-    "scoring_threat_player_team": 0.84,
-    "territory_player_team": 0.075,
-    "possession_quality_player_team": 0.845,
-    "contact_breakdown_player_team": 0.1399999999999999,
-    "discipline_turnover_player_team": -2.5,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 33705,
-    "playerName": "Cameron Henderson",
-    "net_momentum": -0.3938584026744203,
-    "momentum_added": 0.394175381032522,
-    "momentum_lost": 0.7880337837069423,
-    "events_count": 28,
-    "scoring_threat_player_team": 0.96,
-    "territory_player_team": 0.175,
-    "possession_quality_player_team": 0.04,
-    "contact_breakdown_player_team": -3.18,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 29897,
-    "playerName": "Nathan McBeth",
-    "net_momentum": -0.4268513900266452,
-    "momentum_added": 1.3780324045829897,
-    "momentum_lost": 1.8048837946096348,
-    "events_count": 52,
-    "scoring_threat_player_team": 1.92,
-    "territory_player_team": 0.25,
-    "possession_quality_player_team": 2.055,
-    "contact_breakdown_player_team": 1.4200000000000002,
-    "discipline_turnover_player_team": -3.75,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 700,
-    "teamName": "Scotland",
-    "PLID": 38477,
-    "playerName": "Ben Muncaster",
-    "net_momentum": -0.4552802494616031,
-    "momentum_added": 0.2479938823641244,
-    "momentum_lost": 0.7032741318257276,
-    "events_count": 30,
-    "scoring_threat_player_team": 0.6,
-    "territory_player_team": 0.0999999999999999,
-    "possession_quality_player_team": 0.16,
-    "contact_breakdown_player_team": -1.7999999999999998,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 23654,
-    "playerName": "Tomasi Alosio",
-    "net_momentum": -0.9248027366765712,
-    "momentum_added": 0.5901908684383453,
-    "momentum_lost": 1.5149936051149164,
-    "events_count": 63,
-    "scoring_threat_player_team": 0.84,
-    "territory_player_team": 0.3749999999999999,
-    "possession_quality_player_team": 1.99,
-    "contact_breakdown_player_team": -3.68,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 36890,
-    "playerName": "Theo McFarland",
-    "net_momentum": -1.1885862340619917,
-    "momentum_added": 2.489854456329096,
-    "momentum_lost": 3.678440690391088,
-    "events_count": 107,
-    "scoring_threat_player_team": 3.24,
-    "territory_player_team": 0.1,
-    "possession_quality_player_team": 2.295,
-    "contact_breakdown_player_team": -1.2899999999999998,
-    "discipline_turnover_player_team": -3.4,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 21998,
-    "playerName": "Michael Alaalatoa",
-    "net_momentum": -1.211149367312662,
-    "momentum_added": 0.4695171659244811,
-    "momentum_lost": 1.680666533237143,
-    "events_count": 67,
-    "scoring_threat_player_team": 1.68,
-    "territory_player_team": -0.225,
-    "possession_quality_player_team": -0.2,
-    "contact_breakdown_player_team": -2.27,
-    "discipline_turnover_player_team": -2.5,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 36388,
-    "playerName": "Tuna Tuitama",
-    "net_momentum": -1.771269191419516,
-    "momentum_added": 2.582813679520437,
-    "momentum_lost": 4.354082870939953,
-    "events_count": 48,
-    "scoring_threat_player_team": 1.3199999999999998,
-    "territory_player_team": 1.95,
-    "possession_quality_player_team": 5.91,
-    "contact_breakdown_player_team": -1.1999999999999995,
-    "discipline_turnover_player_team": -2.7,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 946877,
-    "team_id": 950,
-    "teamName": "Samoa",
-    "PLID": 20725,
-    "playerName": "Henry Taefu",
-    "net_momentum": -5.316364090721574,
-    "momentum_added": 1.0047785660890485,
-    "momentum_lost": 6.321142656810623,
-    "events_count": 65,
-    "scoring_threat_player_team": 2.76,
-    "territory_player_team": 0.2,
-    "possession_quality_player_team": 2.105,
-    "contact_breakdown_player_team": -3.79,
-    "discipline_turnover_player_team": -2.15,
-    "review_priority": "High"
-  }
-]
+{
+  "matchId": "946877",
+  "players": [
+    {
+      "playerKey": "ewan ashman|scotland",
+      "playerName": "Ewan Ashman",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 23.23,
+      "momentumAdded": 24.52,
+      "momentumLost": 1.29,
+      "scoringThreat": 9.12,
+      "territory": 0.88,
+      "possessionQuality": 5.75,
+      "contactBreakdown": 2.53,
+      "disciplineTurnover": 4.95,
+      "actions": 83,
+      "topActions": [
+        {
+          "time": "7:22",
+          "startSecond": 433,
+          "endSecond": 459,
+          "action": "Try",
+          "result": "Rolling Maul",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "21:33",
+          "startSecond": 1454.6,
+          "endSecond": 1480.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.33,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.3"
+        },
+        {
+          "time": "10:45",
+          "startSecond": 642.2,
+          "endSecond": 668.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.21,
+          "reason": "接点・BD +0.7 / テリトリー +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "15:37",
+          "startSecond": 934.2,
+          "endSecond": 960.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.07,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "7:19",
+          "startSecond": 430,
+          "endSecond": 456,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 0.66,
+          "reason": "継続品質 +0.2 / 接点・BD +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "5:43",
+          "startSecond": 333.7,
+          "endSecond": 359.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "19:37",
+          "startSecond": 1338.6,
+          "endSecond": 1364.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "19:38",
+          "startSecond": 1339.6,
+          "endSecond": 1365.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "21:34",
+          "startSecond": 1455,
+          "endSecond": 1481,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "21:34",
+          "startSecond": 1455.6,
+          "endSecond": 1481.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "kyle rowe|scotland",
+      "playerName": "Kyle Rowe",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 22.89,
+      "momentumAdded": 28.72,
+      "momentumLost": 5.83,
+      "scoringThreat": 7.8,
+      "territory": 5.76,
+      "possessionQuality": 10.58,
+      "contactBreakdown": 0.26,
+      "disciplineTurnover": -1.5,
+      "actions": 78,
+      "topActions": [
+        {
+          "time": "54:03",
+          "startSecond": 4572.9,
+          "endSecond": 4598.9,
+          "action": "Try",
+          "result": "Passing Move",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "53:24",
+          "startSecond": 4534,
+          "endSecond": 4560,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 2.53,
+          "reason": "継続品質 +1.0 / テリトリー +0.8 / 接点・BD +0.7"
+        },
+        {
+          "time": "42:11",
+          "startSecond": 3814,
+          "endSecond": 3840,
+          "action": "Kick",
+          "result": "Own Player - Collected",
+          "impact": 1.7,
+          "reason": "テリトリー +1.7"
+        },
+        {
+          "time": "32:30",
+          "startSecond": 2161.4,
+          "endSecond": 2187.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.61,
+          "reason": "接点・BD +0.7 / 継続品質 +0.5 / テリトリー +0.4"
+        },
+        {
+          "time": "77:51",
+          "startSecond": 6167.6,
+          "endSecond": 6193.6,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "19:49",
+          "startSecond": 1350,
+          "endSecond": 1376,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 1.37,
+          "reason": "継続品質 +0.7 / テリトリー +0.5 / 接点・BD +0.2"
+        },
+        {
+          "time": "49:44",
+          "startSecond": 4314.2,
+          "endSecond": 4340.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.27,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.3"
+        },
+        {
+          "time": "19:15",
+          "startSecond": 1316.6,
+          "endSecond": 1342.6,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 1.23,
+          "reason": "継続品質 +0.6 / テリトリー +0.5 / 接点・BD +0.2"
+        },
+        {
+          "time": "46:25",
+          "startSecond": 4068,
+          "endSecond": 4094,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.87,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "53:26",
+          "startSecond": 4535.8,
+          "endSecond": 4561.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "fergus burke|scotland",
+      "playerName": "Fergus Burke",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 22.39,
+      "momentumAdded": 30.16,
+      "momentumLost": 7.77,
+      "scoringThreat": 11,
+      "territory": 6.83,
+      "possessionQuality": 9.51,
+      "contactBreakdown": -1.95,
+      "disciplineTurnover": -3,
+      "actions": 124,
+      "topActions": [
+        {
+          "time": "36:31",
+          "startSecond": 2401.9,
+          "endSecond": 2427.9,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 2.73,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "8:16",
+          "startSecond": 487.3,
+          "endSecond": 513.3,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 2.7,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "31:37",
+          "startSecond": 2108.3,
+          "endSecond": 2134.3,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 2.68,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "13:06",
+          "startSecond": 783.6,
+          "endSecond": 809.6,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.52,
+          "reason": "得点脅威 +2.1 / テリトリー +0.4"
+        },
+        {
+          "time": "27:28",
+          "startSecond": 1808.9,
+          "endSecond": 1834.9,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 1.78,
+          "reason": "継続品質 +0.8 / テリトリー +0.6 / 接点・BD +0.4"
+        },
+        {
+          "time": "23:04",
+          "startSecond": 1545.7,
+          "endSecond": 1571.7,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "37:47",
+          "startSecond": 2478.2,
+          "endSecond": 2504.2,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 1.48,
+          "reason": "継続品質 +0.6 / テリトリー +0.5 / 接点・BD +0.4"
+        },
+        {
+          "time": "27:32",
+          "startSecond": 1812.8,
+          "endSecond": 1838.8,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "10:55",
+          "startSecond": 652.4,
+          "endSecond": 678.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.02,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "59:00",
+          "startSecond": 4869.6,
+          "endSecond": 4895.6,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 0.96,
+          "reason": "テリトリー +1.0"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "duncan paia'aua|samoa",
+      "playerName": "Duncan Paia'aua",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": 21.35,
+      "momentumAdded": 26.49,
+      "momentumLost": 5.13,
+      "scoringThreat": 8.52,
+      "territory": 5.17,
+      "possessionQuality": 8.21,
+      "contactBreakdown": 0.96,
+      "disciplineTurnover": -1.5,
+      "actions": 91,
+      "topActions": [
+        {
+          "time": "63:27",
+          "startSecond": 5207.6,
+          "endSecond": 5233.6,
+          "action": "Try",
+          "result": "Individual Effort",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "0:41",
+          "startSecond": 31.8,
+          "endSecond": 57.8,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.52,
+          "reason": "テリトリー +1.5"
+        },
+        {
+          "time": "41:47",
+          "startSecond": 2745.6,
+          "endSecond": 2771.6,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 1.49,
+          "reason": "継続品質 +0.7 / テリトリー +0.6 / 接点・BD +0.2"
+        },
+        {
+          "time": "41:50",
+          "startSecond": 2748.1,
+          "endSecond": 2774.1,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "18:06",
+          "startSecond": 1082.8,
+          "endSecond": 1108.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.16,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "1:54",
+          "startSecond": 105.2,
+          "endSecond": 131.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.1,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "14:19",
+          "startSecond": 856,
+          "endSecond": 882,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.95,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "22:52",
+          "startSecond": 1533.7,
+          "endSecond": 1559.7,
+          "action": "Counter Attack",
+          "result": "",
+          "impact": 0.9,
+          "reason": "テリトリー +0.9"
+        },
+        {
+          "time": "19:32",
+          "startSecond": 1332.8,
+          "endSecond": 1358.8,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 0.88,
+          "reason": "接点・BD +0.4 / テリトリー +0.3 / 継続品質 +0.2"
+        },
+        {
+          "time": "63:24",
+          "startSecond": 5205.3,
+          "endSecond": 5231.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "jamie dobie|scotland",
+      "playerName": "Jamie Dobie",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 17.02,
+      "momentumAdded": 28.59,
+      "momentumLost": 11.57,
+      "scoringThreat": 9.36,
+      "territory": 6.9,
+      "possessionQuality": 8.18,
+      "contactBreakdown": -0.52,
+      "disciplineTurnover": -6.9,
+      "actions": 211,
+      "topActions": [
+        {
+          "time": "34:31",
+          "startSecond": 2281.8,
+          "endSecond": 2307.8,
+          "action": "Kick",
+          "result": "Kick in Touch (Bounce)",
+          "impact": 1.7,
+          "reason": "テリトリー +1.7"
+        },
+        {
+          "time": "59:38",
+          "startSecond": 4908.1,
+          "endSecond": 4934.1,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "66:15",
+          "startSecond": 5375.6,
+          "endSecond": 5401.6,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "11:55",
+          "startSecond": 712.7,
+          "endSecond": 738.7,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "22:52",
+          "startSecond": 1533.4,
+          "endSecond": 1559.4,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "0:21",
+          "startSecond": 12.1,
+          "endSecond": 38.1,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.36,
+          "reason": "テリトリー +1.4"
+        },
+        {
+          "time": "5:48",
+          "startSecond": 338.4,
+          "endSecond": 364.4,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.27,
+          "reason": "テリトリー +1.3"
+        },
+        {
+          "time": "40:24",
+          "startSecond": 2662.2,
+          "endSecond": 2688.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "13:59",
+          "startSecond": 835.9,
+          "endSecond": 861.9,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.22,
+          "reason": "テリトリー +1.2"
+        },
+        {
+          "time": "21:52",
+          "startSecond": 1473.5,
+          "endSecond": 1499.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.16,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "jacob umaga|samoa",
+      "playerName": "Jacob Umaga",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": 16.65,
+      "momentumAdded": 24.56,
+      "momentumLost": 7.91,
+      "scoringThreat": 5.44,
+      "territory": 11.81,
+      "possessionQuality": 4.41,
+      "contactBreakdown": -0.51,
+      "disciplineTurnover": -4.5,
+      "actions": 102,
+      "topActions": [
+        {
+          "time": "50:52",
+          "startSecond": 4381.6,
+          "endSecond": 4407.6,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 2.83,
+          "reason": "得点脅威 +2.0 / テリトリー +0.8"
+        },
+        {
+          "time": "64:32",
+          "startSecond": 5273,
+          "endSecond": 5299,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.83,
+          "reason": "得点脅威 +2.0 / テリトリー +0.8"
+        },
+        {
+          "time": "5:53",
+          "startSecond": 344.1,
+          "endSecond": 370.1,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "19:34",
+          "startSecond": 1335.1,
+          "endSecond": 1361.1,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "26:38",
+          "startSecond": 1759.3,
+          "endSecond": 1785.3,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "49:04",
+          "startSecond": 4274,
+          "endSecond": 4300,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.34,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.2"
+        },
+        {
+          "time": "33:38",
+          "startSecond": 2228.9,
+          "endSecond": 2254.9,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.18,
+          "reason": "テリトリー +1.2"
+        },
+        {
+          "time": "41:34",
+          "startSecond": 3777.6,
+          "endSecond": 3803.6,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.15,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "8:47",
+          "startSecond": 517.8,
+          "endSecond": 543.8,
+          "action": "Restart",
+          "result": "Restart Retained",
+          "impact": 1.08,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "15:01",
+          "startSecond": 898.2,
+          "endSecond": 924.2,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.07,
+          "reason": "テリトリー +1.1"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "melani matavao|samoa",
+      "playerName": "Melani Matavao",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": 15.61,
+      "momentumAdded": 20.39,
+      "momentumLost": 4.78,
+      "scoringThreat": 7.56,
+      "territory": -1.34,
+      "possessionQuality": 8.23,
+      "contactBreakdown": 0.46,
+      "disciplineTurnover": 0.7,
+      "actions": 226,
+      "topActions": [
+        {
+          "time": "18:21",
+          "startSecond": 1097.9,
+          "endSecond": 1123.9,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "40:27",
+          "startSecond": 2665.8,
+          "endSecond": 2691.8,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 1.12,
+          "reason": "継続品質 +0.6 / テリトリー +0.4 / 接点・BD +0.2"
+        },
+        {
+          "time": "61:05",
+          "startSecond": 5051.2,
+          "endSecond": 5077.2,
+          "action": "Scrum",
+          "result": "Won Penalty",
+          "impact": 1.1,
+          "reason": "規律・TO +1.1"
+        },
+        {
+          "time": "67:44",
+          "startSecond": 5505.4,
+          "endSecond": 5531.4,
+          "action": "Scrum",
+          "result": "Won Penalty",
+          "impact": 1.1,
+          "reason": "規律・TO +1.1"
+        },
+        {
+          "time": "20:50",
+          "startSecond": 1411.4,
+          "endSecond": 1437.4,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 0.94,
+          "reason": "テリトリー +0.9"
+        },
+        {
+          "time": "38:37",
+          "startSecond": 2528.2,
+          "endSecond": 2554.2,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 0.81,
+          "reason": "テリトリー +0.8"
+        },
+        {
+          "time": "58:33",
+          "startSecond": 4842.8,
+          "endSecond": 4868.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "56:34",
+          "startSecond": 4724.2,
+          "endSecond": 4750.2,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 0.76,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "1:53",
+          "startSecond": 103.8,
+          "endSecond": 129.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "56:36",
+          "startSecond": 4726.5,
+          "endSecond": 4752.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "george horne|scotland",
+      "playerName": "George Horne",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 14.97,
+      "momentumAdded": 19.73,
+      "momentumLost": 4.76,
+      "scoringThreat": 12.24,
+      "territory": 1.32,
+      "possessionQuality": 3.33,
+      "contactBreakdown": -2.62,
+      "disciplineTurnover": 0.7,
+      "actions": 130,
+      "topActions": [
+        {
+          "time": "77:13",
+          "startSecond": 6129.5,
+          "endSecond": 6155.5,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.65,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "55:14",
+          "startSecond": 4643.9,
+          "endSecond": 4669.9,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 2.63,
+          "reason": "得点脅威 +2.0 / テリトリー +0.6"
+        },
+        {
+          "time": "45:23",
+          "startSecond": 4006.1,
+          "endSecond": 4032.1,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.6,
+          "reason": "得点脅威 +2.1 / テリトリー +0.5"
+        },
+        {
+          "time": "49:50",
+          "startSecond": 4319.9,
+          "endSecond": 4345.9,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "75:08",
+          "startSecond": 6005,
+          "endSecond": 6031,
+          "action": "Scrum",
+          "result": "Won Penalty",
+          "impact": 1.22,
+          "reason": "規律・TO +1.1"
+        },
+        {
+          "time": "80:42",
+          "startSecond": 6338.9,
+          "endSecond": 6364.9,
+          "action": "Scrum",
+          "result": "Won Penalty",
+          "impact": 1.1,
+          "reason": "規律・TO +1.1"
+        },
+        {
+          "time": "46:43",
+          "startSecond": 4086.4,
+          "endSecond": 4112.4,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.04,
+          "reason": "テリトリー +1.0"
+        },
+        {
+          "time": "55:46",
+          "startSecond": 4675.6,
+          "endSecond": 4701.6,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 0.81,
+          "reason": "テリトリー +0.8"
+        },
+        {
+          "time": "44:44",
+          "startSecond": 3967.4,
+          "endSecond": 3993.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "53:43",
+          "startSecond": 4553.2,
+          "endSecond": 4579.2,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.61,
+          "reason": "接点・BD -0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "arron reed|scotland",
+      "playerName": "Arron Reed",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 13.74,
+      "momentumAdded": 20.16,
+      "momentumLost": 6.42,
+      "scoringThreat": 7.92,
+      "territory": 2.38,
+      "possessionQuality": 7.71,
+      "contactBreakdown": 0.23,
+      "disciplineTurnover": -4.5,
+      "actions": 61,
+      "topActions": [
+        {
+          "time": "30:41",
+          "startSecond": 2051.8,
+          "endSecond": 2077.8,
+          "action": "Try",
+          "result": "Close Range - Scrum",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "27:25",
+          "startSecond": 1806.4,
+          "endSecond": 1832.4,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 1.71,
+          "reason": "継続品質 +0.9 / テリトリー +0.7 / 接点・BD +0.2"
+        },
+        {
+          "time": "17:48",
+          "startSecond": 1064.9,
+          "endSecond": 1090.9,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "19:22",
+          "startSecond": 1323.2,
+          "endSecond": 1349.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "19:59",
+          "startSecond": 1360.3,
+          "endSecond": 1386.3,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "43:02",
+          "startSecond": 3865.3,
+          "endSecond": 3891.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.23,
+          "reason": "接点・BD +0.7 / テリトリー +0.3 / 継続品質 +0.2"
+        },
+        {
+          "time": "30:39",
+          "startSecond": 2050.5,
+          "endSecond": 2076.5,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 0.84,
+          "reason": "テリトリー +0.3 / 継続品質 +0.2 / 接点・BD +0.2"
+        },
+        {
+          "time": "30:40",
+          "startSecond": 2051.1,
+          "endSecond": 2077.1,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "43:04",
+          "startSecond": 3866.7,
+          "endSecond": 3892.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "17:41",
+          "startSecond": 1058.8,
+          "endSecond": 1084.8,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 0.72,
+          "reason": "テリトリー +0.3 / 継続品質 +0.2 / 接点・BD +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "george turner|scotland",
+      "playerName": "George Turner",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 12.71,
+      "momentumAdded": 15.34,
+      "momentumLost": 2.63,
+      "scoringThreat": 8.4,
+      "territory": 0.78,
+      "possessionQuality": 1.12,
+      "contactBreakdown": 0.17,
+      "disciplineTurnover": 2.25,
+      "actions": 70,
+      "topActions": [
+        {
+          "time": "76:14",
+          "startSecond": 6070.2,
+          "endSecond": 6096.2,
+          "action": "Try",
+          "result": "Rolling Maul",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "72:56",
+          "startSecond": 5817.1,
+          "endSecond": 5843.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.52,
+          "reason": "接点・BD +0.7 / テリトリー +0.4 / 継続品質 +0.4"
+        },
+        {
+          "time": "44:02",
+          "startSecond": 3925.1,
+          "endSecond": 3951.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.97,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "40:38",
+          "startSecond": 3720.7,
+          "endSecond": 3746.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.91,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "44:32",
+          "startSecond": 3955.5,
+          "endSecond": 3981.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.91,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "76:01",
+          "startSecond": 6057.4,
+          "endSecond": 6083.4,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "benjamin nee-nee|samoa",
+      "playerName": "Benjamin Nee-Nee",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": 12.6,
+      "momentumAdded": 18.27,
+      "momentumLost": 5.67,
+      "scoringThreat": 8.52,
+      "territory": 1.04,
+      "possessionQuality": 5.45,
+      "contactBreakdown": 0.59,
+      "disciplineTurnover": -3,
+      "actions": 90,
+      "topActions": [
+        {
+          "time": "49:52",
+          "startSecond": 4321.6,
+          "endSecond": 4347.6,
+          "action": "Try",
+          "result": "Interception",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "73:19",
+          "startSecond": 5840.4,
+          "endSecond": 5866.4,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "15:35",
+          "startSecond": 932.3,
+          "endSecond": 958.3,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "0:36",
+          "startSecond": 26.6,
+          "endSecond": 52.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.1,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "49:50",
+          "startSecond": 4320,
+          "endSecond": 4346,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 1.07,
+          "reason": "継続品質 +0.4 / テリトリー +0.4 / 接点・BD +0.2"
+        },
+        {
+          "time": "40:29",
+          "startSecond": 2667.7,
+          "endSecond": 2693.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.01,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2"
+        },
+        {
+          "time": "48:07",
+          "startSecond": 4170.2,
+          "endSecond": 4196.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.99,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "49:14",
+          "startSecond": 4284.2,
+          "endSecond": 4310.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "49:51",
+          "startSecond": 4321,
+          "endSecond": 4347,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "49:51",
+          "startSecond": 4321,
+          "endSecond": 4347,
+          "action": "Attacking Qualities",
+          "result": "Intercepted Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "kyle steyn|scotland",
+      "playerName": "Kyle Steyn",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 12.59,
+      "momentumAdded": 14.85,
+      "momentumLost": 2.26,
+      "scoringThreat": 6.96,
+      "territory": 1.55,
+      "possessionQuality": 3.62,
+      "contactBreakdown": 0.01,
+      "disciplineTurnover": 0.45,
+      "actions": 27,
+      "topActions": [
+        {
+          "time": "35:26",
+          "startSecond": 2337.2,
+          "endSecond": 2363.2,
+          "action": "Try",
+          "result": "Passing Move",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "17:45",
+          "startSecond": 1062.4,
+          "endSecond": 1088.4,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 1.92,
+          "reason": "継続品質 +0.8 / テリトリー +0.7 / 接点・BD +0.4"
+        },
+        {
+          "time": "35:23",
+          "startSecond": 2333.7,
+          "endSecond": 2359.7,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 1.68,
+          "reason": "継続品質 +0.8 / テリトリー +0.7 / 接点・BD +0.2"
+        },
+        {
+          "time": "11:27",
+          "startSecond": 683.9,
+          "endSecond": 709.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.93,
+          "reason": "接点・BD +0.5 / テリトリー +0.3"
+        },
+        {
+          "time": "11:29",
+          "startSecond": 685.9,
+          "endSecond": 711.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "35:24",
+          "startSecond": 2334.9,
+          "endSecond": 2360.9,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "35:25",
+          "startSecond": 2336.3,
+          "endSecond": 2362.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "39:34",
+          "startSecond": 2585.6,
+          "endSecond": 2611.6,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.73,
+          "reason": "継続品質 -0.6 / テリトリー -0.2"
+        },
+        {
+          "time": "17:46",
+          "startSecond": 1063.6,
+          "endSecond": 1089.6,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "12:03",
+          "startSecond": 719.8,
+          "endSecond": 745.8,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "rodney iona|samoa",
+      "playerName": "Rodney Iona",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": 11.87,
+      "momentumAdded": 11.87,
+      "momentumLost": 0,
+      "scoringThreat": 0.72,
+      "territory": 8.34,
+      "possessionQuality": 1.81,
+      "contactBreakdown": 1,
+      "disciplineTurnover": 0,
+      "actions": 33,
+      "topActions": [
+        {
+          "time": "67:48",
+          "startSecond": 5509.3,
+          "endSecond": 5535.3,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.78,
+          "reason": "テリトリー +1.8"
+        },
+        {
+          "time": "65:02",
+          "startSecond": 5303.1,
+          "endSecond": 5329.1,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.6,
+          "reason": "テリトリー +1.6"
+        },
+        {
+          "time": "69:15",
+          "startSecond": 5596.6,
+          "endSecond": 5622.6,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1,
+          "reason": "テリトリー +1.0"
+        },
+        {
+          "time": "61:08",
+          "startSecond": 5068.8,
+          "endSecond": 5094.8,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 0.96,
+          "reason": "テリトリー +1.0"
+        },
+        {
+          "time": "78:48",
+          "startSecond": 6225.1,
+          "endSecond": 6251.1,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 0.96,
+          "reason": "テリトリー +1.0"
+        },
+        {
+          "time": "55:40",
+          "startSecond": 4669.9,
+          "endSecond": 4695.9,
+          "action": "Restart",
+          "result": "Restart Opp Collection",
+          "impact": 0.88,
+          "reason": "テリトリー +0.9"
+        },
+        {
+          "time": "63:24",
+          "startSecond": 5204.5,
+          "endSecond": 5230.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "63:24",
+          "startSecond": 5204.5,
+          "endSecond": 5230.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "68:18",
+          "startSecond": 5539.1,
+          "endSecond": 5565.1,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 0.74,
+          "reason": "テリトリー +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "rory hutchinson|scotland",
+      "playerName": "Rory Hutchinson",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 11.57,
+      "momentumAdded": 16.98,
+      "momentumLost": 5.41,
+      "scoringThreat": 7.08,
+      "territory": 3.19,
+      "possessionQuality": 4.25,
+      "contactBreakdown": -1.45,
+      "disciplineTurnover": -1.5,
+      "actions": 67,
+      "topActions": [
+        {
+          "time": "12:27",
+          "startSecond": 743.9,
+          "endSecond": 769.9,
+          "action": "Try",
+          "result": "From Kick",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "38:57",
+          "startSecond": 2548.1,
+          "endSecond": 2574.1,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 1.53,
+          "reason": "継続品質 +0.7 / テリトリー +0.7 / 接点・BD +0.2"
+        },
+        {
+          "time": "38:58",
+          "startSecond": 2549.6,
+          "endSecond": 2575.6,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "9:37",
+          "startSecond": 567.9,
+          "endSecond": 593.9,
+          "action": "Kick",
+          "result": "Kick in Touch (Bounce)",
+          "impact": 1.44,
+          "reason": "テリトリー +1.4"
+        },
+        {
+          "time": "32:50",
+          "startSecond": 2181.6,
+          "endSecond": 2207.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.96,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "12:25",
+          "startSecond": 742.8,
+          "endSecond": 768.8,
+          "action": "Attacking Qualities",
+          "result": "Kick Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "19:48",
+          "startSecond": 1349.6,
+          "endSecond": 1375.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "19:54",
+          "startSecond": 1355.3,
+          "endSecond": 1381.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "19:55",
+          "startSecond": 1355.9,
+          "endSecond": 1381.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "12:25",
+          "startSecond": 742.6,
+          "endSecond": 768.6,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 0.62,
+          "reason": "接点・BD +0.2 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "stafford mcdowall|scotland",
+      "playerName": "Stafford McDowall",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 11.35,
+      "momentumAdded": 16.12,
+      "momentumLost": 4.77,
+      "scoringThreat": 3.24,
+      "territory": 4.29,
+      "possessionQuality": 6.09,
+      "contactBreakdown": -2.27,
+      "disciplineTurnover": 0,
+      "actions": 92,
+      "topActions": [
+        {
+          "time": "25:50",
+          "startSecond": 1711.4,
+          "endSecond": 1737.4,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.63,
+          "reason": "テリトリー +1.6"
+        },
+        {
+          "time": "9:03",
+          "startSecond": 533.6,
+          "endSecond": 559.6,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.41,
+          "reason": "テリトリー +1.4"
+        },
+        {
+          "time": "33:45",
+          "startSecond": 2236.4,
+          "endSecond": 2262.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.36,
+          "reason": "接点・BD +0.7 / テリトリー +0.4 / 継続品質 +0.2"
+        },
+        {
+          "time": "65:44",
+          "startSecond": 5344.8,
+          "endSecond": 5370.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.15,
+          "reason": "接点・BD +0.7 / テリトリー +0.3"
+        },
+        {
+          "time": "12:24",
+          "startSecond": 741,
+          "endSecond": 767,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "12:24",
+          "startSecond": 741,
+          "endSecond": 767,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "28:53",
+          "startSecond": 1944.2,
+          "endSecond": 1970.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "30:38",
+          "startSecond": 2049.3,
+          "endSecond": 2075.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "44:12",
+          "startSecond": 3934.8,
+          "endSecond": 3960.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "72:59",
+          "startSecond": 5820,
+          "endSecond": 5846,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "matt fagerson|scotland",
+      "playerName": "Matt Fagerson",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 11.07,
+      "momentumAdded": 18.85,
+      "momentumLost": 7.77,
+      "scoringThreat": 4.92,
+      "territory": 2.08,
+      "possessionQuality": 5.6,
+      "contactBreakdown": -1.52,
+      "disciplineTurnover": 0,
+      "actions": 128,
+      "topActions": [
+        {
+          "time": "43:26",
+          "startSecond": 3889,
+          "endSecond": 3915,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.33,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.3"
+        },
+        {
+          "time": "10:51",
+          "startSecond": 647.9,
+          "endSecond": 673.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.27,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "32:14",
+          "startSecond": 2145.2,
+          "endSecond": 2171.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.11,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "46:14",
+          "startSecond": 4056.8,
+          "endSecond": 4082.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.07,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "13:49",
+          "startSecond": 826.2,
+          "endSecond": 852.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.04,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "40:19",
+          "startSecond": 3702,
+          "endSecond": 3728,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.97,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "42:52",
+          "startSecond": 3855,
+          "endSecond": 3881,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.96,
+          "reason": "継続品質 +0.5 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "43:26",
+          "startSecond": 3889.4,
+          "endSecond": 3915.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "43:27",
+          "startSecond": 3889.8,
+          "endSecond": 3915.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "12:03",
+          "startSecond": 719.9,
+          "endSecond": 745.9,
+          "action": "Carry",
+          "result": "Other",
+          "impact": 0.7,
+          "reason": "継続品質 +0.2 / 接点・BD +0.2 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "grant gilchrist|scotland",
+      "playerName": "Grant Gilchrist",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 10.25,
+      "momentumAdded": 14.19,
+      "momentumLost": 3.94,
+      "scoringThreat": 10.56,
+      "territory": 0.7,
+      "possessionQuality": 1.17,
+      "contactBreakdown": -0.92,
+      "disciplineTurnover": -1.25,
+      "actions": 105,
+      "topActions": [
+        {
+          "time": "44:47",
+          "startSecond": 3969.8,
+          "endSecond": 3995.8,
+          "action": "Try",
+          "result": "Close Range - Ruck",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "61:57",
+          "startSecond": 5117.6,
+          "endSecond": 5143.6,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "44:45",
+          "startSecond": 3968.3,
+          "endSecond": 3994.3,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 0.66,
+          "reason": "接点・BD +0.4"
+        },
+        {
+          "time": "29:02",
+          "startSecond": 1953.3,
+          "endSecond": 1979.3,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.55,
+          "reason": "接点・BD +0.2 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "niko jones|samoa",
+      "playerName": "Niko Jones",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": 8.57,
+      "momentumAdded": 9.54,
+      "momentumLost": 0.97,
+      "scoringThreat": 1.56,
+      "territory": 1.13,
+      "possessionQuality": 4.78,
+      "contactBreakdown": 1.11,
+      "disciplineTurnover": 0,
+      "actions": 51,
+      "topActions": [
+        {
+          "time": "47:45",
+          "startSecond": 4148.4,
+          "endSecond": 4174.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 2.61,
+          "reason": "継続品質 +1.1 / テリトリー +0.9 / 接点・BD +0.7"
+        },
+        {
+          "time": "49:18",
+          "startSecond": 4287.9,
+          "endSecond": 4313.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.02,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "49:19",
+          "startSecond": 4288.8,
+          "endSecond": 4314.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "47:47",
+          "startSecond": 4150,
+          "endSecond": 4176,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "47:47",
+          "startSecond": 4150.3,
+          "endSecond": 4176.3,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "71:20",
+          "startSecond": 5721.1,
+          "endSecond": 5747.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "taleni seu|samoa",
+      "playerName": "Taleni Seu",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": 7.77,
+      "momentumAdded": 9.26,
+      "momentumLost": 1.49,
+      "scoringThreat": 0.72,
+      "territory": 1.13,
+      "possessionQuality": 2.84,
+      "contactBreakdown": 3.09,
+      "disciplineTurnover": 0,
+      "actions": 52,
+      "topActions": [
+        {
+          "time": "26:29",
+          "startSecond": 1750.2,
+          "endSecond": 1776.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.1,
+          "reason": "接点・BD +0.7 / テリトリー +0.3"
+        },
+        {
+          "time": "0:25",
+          "startSecond": 15.4,
+          "endSecond": 41.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.07,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "1:38",
+          "startSecond": 88.8,
+          "endSecond": 114.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.96,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "38:27",
+          "startSecond": 2518.4,
+          "endSecond": 2544.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.73,
+          "reason": "接点・BD +0.5 / テリトリー +0.2"
+        },
+        {
+          "time": "37:23",
+          "startSecond": 2454.1,
+          "endSecond": 2480.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "38:28",
+          "startSecond": 2518.9,
+          "endSecond": 2544.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "41:25",
+          "startSecond": 2723.3,
+          "endSecond": 2749.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "latrell smiler ah-kiong|samoa",
+      "playerName": "Latrell Smiler Ah-Kiong",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": 7.06,
+      "momentumAdded": 10.29,
+      "momentumLost": 3.23,
+      "scoringThreat": 0.12,
+      "territory": 2.37,
+      "possessionQuality": 5.35,
+      "contactBreakdown": 0.72,
+      "disciplineTurnover": -1.5,
+      "actions": 35,
+      "topActions": [
+        {
+          "time": "18:15",
+          "startSecond": 1092.4,
+          "endSecond": 1118.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.95,
+          "reason": "接点・BD +0.7 / 継続品質 +0.7 / テリトリー +0.6"
+        },
+        {
+          "time": "39:36",
+          "startSecond": 2587.5,
+          "endSecond": 2613.5,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "46:46",
+          "startSecond": 4089.4,
+          "endSecond": 4115.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.19,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.2"
+        },
+        {
+          "time": "22:57",
+          "startSecond": 1538.2,
+          "endSecond": 1564.2,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 1.07,
+          "reason": "継続品質 +0.5 / テリトリー +0.4 / 接点・BD +0.2"
+        },
+        {
+          "time": "17:48",
+          "startSecond": 1065.7,
+          "endSecond": 1091.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.97,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "39:36",
+          "startSecond": 2587.4,
+          "endSecond": 2613.4,
+          "action": "Kick",
+          "result": "Error - Out of Play",
+          "impact": 0.67,
+          "reason": "テリトリー +0.7"
+        },
+        {
+          "time": "33:11",
+          "startSecond": 2201.8,
+          "endSecond": 2227.8,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.66,
+          "reason": "継続品質 +0.3 / テリトリー +0.2 / 接点・BD +0.2"
+        },
+        {
+          "time": "17:49",
+          "startSecond": 1066.4,
+          "endSecond": 1092.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "18:16",
+          "startSecond": 1093.5,
+          "endSecond": 1119.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "18:17",
+          "startSecond": 1093.8,
+          "endSecond": 1119.8,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "andy onyeama-christie|scotland",
+      "playerName": "Andy Onyeama-Christie",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 5.43,
+      "momentumAdded": 10.47,
+      "momentumLost": 5.04,
+      "scoringThreat": 5.52,
+      "territory": 0.02,
+      "possessionQuality": 2.51,
+      "contactBreakdown": -1.12,
+      "disciplineTurnover": -1.5,
+      "actions": 118,
+      "topActions": [
+        {
+          "time": "48:11",
+          "startSecond": 4174.1,
+          "endSecond": 4200.1,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "53:52",
+          "startSecond": 4562.3,
+          "endSecond": 4588.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.17,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "11:05",
+          "startSecond": 662.6,
+          "endSecond": 688.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "19:57",
+          "startSecond": 1358.1,
+          "endSecond": 1384.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "19:57",
+          "startSecond": 1358.2,
+          "endSecond": 1384.2,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.58,
+          "reason": "継続品質 -0.6"
+        },
+        {
+          "time": "43:35",
+          "startSecond": 3897.8,
+          "endSecond": 3923.8,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.3 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "rory darge|scotland",
+      "playerName": "Rory Darge",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 5.31,
+      "momentumAdded": 7.82,
+      "momentumLost": 2.51,
+      "scoringThreat": 3.48,
+      "territory": 0.42,
+      "possessionQuality": 0.6,
+      "contactBreakdown": 0.81,
+      "disciplineTurnover": 0,
+      "actions": 74,
+      "topActions": [
+        {
+          "time": "5:39",
+          "startSecond": 329.8,
+          "endSecond": 355.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.95,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "44:16",
+          "startSecond": 3939,
+          "endSecond": 3965,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.78,
+          "reason": "接点・BD +0.5"
+        },
+        {
+          "time": "43:48",
+          "startSecond": 3911,
+          "endSecond": 3937,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.75,
+          "reason": "接点・BD +0.5"
+        },
+        {
+          "time": "21:43",
+          "startSecond": 1464.4,
+          "endSecond": 1490.4,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 0.6,
+          "reason": "接点・BD +0.4"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "iakopo petelo-mapu|samoa",
+      "playerName": "Iakopo Petelo-Mapu",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": 4.44,
+      "momentumAdded": 8.15,
+      "momentumLost": 3.71,
+      "scoringThreat": 2.52,
+      "territory": 0.8,
+      "possessionQuality": 2.33,
+      "contactBreakdown": 2.74,
+      "disciplineTurnover": -3.95,
+      "actions": 44,
+      "topActions": [
+        {
+          "time": "51:34",
+          "startSecond": 4424.2,
+          "endSecond": 4450.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "58:36",
+          "startSecond": 4846.4,
+          "endSecond": 4872.4,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "69:43",
+          "startSecond": 5624.6,
+          "endSecond": 5650.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.11,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "49:11",
+          "startSecond": 4280.7,
+          "endSecond": 4306.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.08,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "77:54",
+          "startSecond": 6170.9,
+          "endSecond": 6196.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.06,
+          "reason": "接点・BD +0.7 / テリトリー +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "51:29",
+          "startSecond": 4419.3,
+          "endSecond": 4445.3,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 0.82,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "69:45",
+          "startSecond": 5626,
+          "endSecond": 5652,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "58:34",
+          "startSecond": 4844.5,
+          "endSecond": 4870.5,
+          "action": "Carry",
+          "result": "Penalty Conceded",
+          "impact": -0.73,
+          "reason": "規律・TO -1.2 / 接点・BD +0.2"
+        },
+        {
+          "time": "56:45",
+          "startSecond": 4734.7,
+          "endSecond": 4760.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "adam hastings|scotland",
+      "playerName": "Adam Hastings",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 3.91,
+      "momentumAdded": 5.31,
+      "momentumLost": 1.4,
+      "scoringThreat": 0.72,
+      "territory": 4.61,
+      "possessionQuality": 0.16,
+      "contactBreakdown": -1.58,
+      "disciplineTurnover": 0,
+      "actions": 22,
+      "topActions": [
+        {
+          "time": "71:09",
+          "startSecond": 5709.9,
+          "endSecond": 5735.9,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.48,
+          "reason": "テリトリー +1.5"
+        },
+        {
+          "time": "72:06",
+          "startSecond": 5766.9,
+          "endSecond": 5792.9,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 0.95,
+          "reason": "テリトリー +0.9"
+        },
+        {
+          "time": "64:54",
+          "startSecond": 5294.3,
+          "endSecond": 5320.3,
+          "action": "Restart",
+          "result": "Restart Opp Collection",
+          "impact": 0.8,
+          "reason": "テリトリー +0.8"
+        },
+        {
+          "time": "73:15",
+          "startSecond": 5836.8,
+          "endSecond": 5862.8,
+          "action": "Kick",
+          "result": "Pressure Error",
+          "impact": 0.76,
+          "reason": "テリトリー +0.6"
+        },
+        {
+          "time": "70:33",
+          "startSecond": 5673.9,
+          "endSecond": 5699.9,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 0.73,
+          "reason": "テリトリー +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "gregor brown|scotland",
+      "playerName": "Gregor Brown",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 3.74,
+      "momentumAdded": 8.46,
+      "momentumLost": 4.72,
+      "scoringThreat": 3.84,
+      "territory": 0.63,
+      "possessionQuality": 2.15,
+      "contactBreakdown": -1.38,
+      "disciplineTurnover": -1.5,
+      "actions": 78,
+      "topActions": [
+        {
+          "time": "1:57",
+          "startSecond": 108,
+          "endSecond": 134,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "11:03",
+          "startSecond": 660.8,
+          "endSecond": 686.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.19,
+          "reason": "接点・BD +0.7 / テリトリー +0.3"
+        },
+        {
+          "time": "40:34",
+          "startSecond": 3716.9,
+          "endSecond": 3742.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.92,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "53:38",
+          "startSecond": 4547.7,
+          "endSecond": 4573.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "41:12",
+          "startSecond": 3755.2,
+          "endSecond": 3781.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "michael alaalatoa|samoa",
+      "playerName": "Michael Alaalatoa",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": -3.51,
+      "momentumAdded": 3.01,
+      "momentumLost": 6.52,
+      "scoringThreat": 1.68,
+      "territory": -0.22,
+      "possessionQuality": -0.2,
+      "contactBreakdown": -2.27,
+      "disciplineTurnover": -2.5,
+      "actions": 67,
+      "topActions": [
+        {
+          "time": "53:16",
+          "startSecond": 4525.8,
+          "endSecond": 4551.8,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "4:42",
+          "startSecond": 272.6,
+          "endSecond": 298.6,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "46:57",
+          "startSecond": 4100.4,
+          "endSecond": 4126.4,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.8,
+          "reason": "継続品質 -0.6 / テリトリー -0.3"
+        },
+        {
+          "time": "40:58",
+          "startSecond": 2696.2,
+          "endSecond": 2722.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.68,
+          "reason": "接点・BD +0.5 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "tuna tuitama|samoa",
+      "playerName": "Tuna Tuitama",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": 3.48,
+      "momentumAdded": 11.57,
+      "momentumLost": 8.09,
+      "scoringThreat": 1.32,
+      "territory": 1.95,
+      "possessionQuality": 5.91,
+      "contactBreakdown": -1.2,
+      "disciplineTurnover": -4.5,
+      "actions": 48,
+      "topActions": [
+        {
+          "time": "22:59",
+          "startSecond": 1540.8,
+          "endSecond": 1566.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 2.54,
+          "reason": "継続品質 +1.1 / テリトリー +0.8 / 接点・BD +0.7"
+        },
+        {
+          "time": "11:58",
+          "startSecond": 715.8,
+          "endSecond": 741.8,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "42:07",
+          "startSecond": 3810.4,
+          "endSecond": 3836.4,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "8:54",
+          "startSecond": 525,
+          "endSecond": 551,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "22:54",
+          "startSecond": 1535.3,
+          "endSecond": 1561.3,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 1.37,
+          "reason": "継続品質 +0.7 / テリトリー +0.5 / 接点・BD +0.2"
+        },
+        {
+          "time": "71:31",
+          "startSecond": 5732.5,
+          "endSecond": 5758.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.21,
+          "reason": "接点・BD +0.7 / テリトリー +0.4"
+        },
+        {
+          "time": "8:53",
+          "startSecond": 524.3,
+          "endSecond": 550.3,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 0.85,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        },
+        {
+          "time": "8:54",
+          "startSecond": 524.4,
+          "endSecond": 550.4,
+          "action": "Attacking Qualities",
+          "result": "Kick Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "40:50",
+          "startSecond": 2688.2,
+          "endSecond": 2714.2,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.68,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "18:15",
+          "startSecond": 1092.4,
+          "endSecond": 1118.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "pita anae-ah sue|samoa",
+      "playerName": "Pita Anae-Ah Sue",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": 3.16,
+      "momentumAdded": 8.4,
+      "momentumLost": 5.24,
+      "scoringThreat": 1.68,
+      "territory": 0.38,
+      "possessionQuality": 1.65,
+      "contactBreakdown": -0.69,
+      "disciplineTurnover": 0.15,
+      "actions": 65,
+      "topActions": [
+        {
+          "time": "49:33",
+          "startSecond": 4302.9,
+          "endSecond": 4328.9,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "14:11",
+          "startSecond": 848.8,
+          "endSecond": 874.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.97,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "9:31",
+          "startSecond": 561.6,
+          "endSecond": 587.6,
+          "action": "Lineout Throw",
+          "result": "Lost Overthrown",
+          "impact": -0.77,
+          "reason": "規律・TO -0.8"
+        },
+        {
+          "time": "48:09",
+          "startSecond": 4172.2,
+          "endSecond": 4198.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "14:12",
+          "startSecond": 849.4,
+          "endSecond": 875.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "49:30",
+          "startSecond": 4300,
+          "endSecond": 4326,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 0.64,
+          "reason": "接点・BD +0.4"
+        },
+        {
+          "time": "15:34",
+          "startSecond": 931.5,
+          "endSecond": 957.5,
+          "action": "Lineout Throw",
+          "result": "Lost Handling Error",
+          "impact": -0.63,
+          "reason": "規律・TO -0.8"
+        },
+        {
+          "time": "23:47",
+          "startSecond": 1588.5,
+          "endSecond": 1614.5,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "samuel slade|samoa",
+      "playerName": "Samuel Slade",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": 3.03,
+      "momentumAdded": 5.25,
+      "momentumLost": 2.22,
+      "scoringThreat": 1.68,
+      "territory": 0.3,
+      "possessionQuality": 0.44,
+      "contactBreakdown": 0.61,
+      "disciplineTurnover": 0,
+      "actions": 76,
+      "topActions": [
+        {
+          "time": "56:38",
+          "startSecond": 4728.3,
+          "endSecond": 4754.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.07,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "38:24",
+          "startSecond": 2514.7,
+          "endSecond": 2540.7,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.7,
+          "reason": "継続品質 -0.6 / テリトリー -0.2"
+        },
+        {
+          "time": "58:10",
+          "startSecond": 4820.4,
+          "endSecond": 4846.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.68,
+          "reason": "接点・BD +0.5 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "aki seiuli|samoa",
+      "playerName": "Aki Seiuli",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": 2.78,
+      "momentumAdded": 7.37,
+      "momentumLost": 4.59,
+      "scoringThreat": 2.52,
+      "territory": 0.83,
+      "possessionQuality": 2.85,
+      "contactBreakdown": -1.92,
+      "disciplineTurnover": -1.5,
+      "actions": 73,
+      "topActions": [
+        {
+          "time": "24:39",
+          "startSecond": 1640.1,
+          "endSecond": 1666.1,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "69:53",
+          "startSecond": 5634.2,
+          "endSecond": 5660.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.12,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "33:30",
+          "startSecond": 2221.5,
+          "endSecond": 2247.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.92,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "49:13",
+          "startSecond": 4283,
+          "endSecond": 4309,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "63:08",
+          "startSecond": 5188.4,
+          "endSecond": 5214.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "58:18",
+          "startSecond": 4828.2,
+          "endSecond": 4854.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "68:50",
+          "startSecond": 5571.4,
+          "endSecond": 5597.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "luteru tolai|samoa",
+      "playerName": "Luteru Tolai",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": 2.77,
+      "momentumAdded": 5.55,
+      "momentumLost": 2.78,
+      "scoringThreat": 1.56,
+      "territory": 0.3,
+      "possessionQuality": 1,
+      "contactBreakdown": -0.35,
+      "disciplineTurnover": 0.25,
+      "actions": 38,
+      "topActions": [
+        {
+          "time": "71:41",
+          "startSecond": 5742.5,
+          "endSecond": 5768.5,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "71:37",
+          "startSecond": 5738.4,
+          "endSecond": 5764.4,
+          "action": "Carry",
+          "result": "Penalty Conceded",
+          "impact": -1.1,
+          "reason": "規律・TO -1.2"
+        },
+        {
+          "time": "70:01",
+          "startSecond": 5642.8,
+          "endSecond": 5668.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "61:54",
+          "startSecond": 5114.7,
+          "endSecond": 5140.7,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "62:43",
+          "startSecond": 5163.4,
+          "endSecond": 5189.4,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "69:40",
+          "startSecond": 5621.7,
+          "endSecond": 5647.7,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "79:22",
+          "startSecond": 6258.2,
+          "endSecond": 6284.2,
+          "action": "Lineout Throw",
+          "result": "Won Tap (Scrappy)",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "ben muncaster|scotland",
+      "playerName": "Ben Muncaster",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": -2.19,
+      "momentumAdded": 0.86,
+      "momentumLost": 3.05,
+      "scoringThreat": 0.6,
+      "territory": 0.1,
+      "possessionQuality": 0.16,
+      "contactBreakdown": -1.8,
+      "disciplineTurnover": -1.25,
+      "actions": 30,
+      "topActions": [
+        {
+          "time": "78:28",
+          "startSecond": 6204.7,
+          "endSecond": 6230.7,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "cameron henderson|scotland",
+      "playerName": "Cameron Henderson",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": -2,
+      "momentumAdded": 1.62,
+      "momentumLost": 3.62,
+      "scoringThreat": 0.96,
+      "territory": 0.18,
+      "possessionQuality": 0.04,
+      "contactBreakdown": -3.18,
+      "disciplineTurnover": 0,
+      "actions": 28,
+      "topActions": [
+        {
+          "time": "65:59",
+          "startSecond": 5359.4,
+          "endSecond": 5385.4,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.66,
+          "reason": "接点・BD -0.7"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "nathan mcbeth|scotland",
+      "playerName": "Nathan McBeth",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 1.9,
+      "momentumAdded": 7.17,
+      "momentumLost": 5.27,
+      "scoringThreat": 1.92,
+      "territory": 0.25,
+      "possessionQuality": 2.06,
+      "contactBreakdown": 1.42,
+      "disciplineTurnover": -3.75,
+      "actions": 52,
+      "topActions": [
+        {
+          "time": "61:05",
+          "startSecond": 5052.6,
+          "endSecond": 5078.6,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "67:45",
+          "startSecond": 5506.6,
+          "endSecond": 5532.6,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "68:55",
+          "startSecond": 5576.3,
+          "endSecond": 5602.3,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "40:06",
+          "startSecond": 3689.3,
+          "endSecond": 3715.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.01,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2"
+        },
+        {
+          "time": "46:34",
+          "startSecond": 4077.6,
+          "endSecond": 4103.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.97,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "44:12",
+          "startSecond": 3934.8,
+          "endSecond": 3960.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "44:22",
+          "startSecond": 3944.7,
+          "endSecond": 3970.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.68,
+          "reason": "接点・BD +0.5"
+        },
+        {
+          "time": "41:12",
+          "startSecond": 3755.6,
+          "endSecond": 3781.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "henry taefu|samoa",
+      "playerName": "Henry Taefu",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": -1.47,
+      "momentumAdded": 6.27,
+      "momentumLost": 7.74,
+      "scoringThreat": 2.76,
+      "territory": 0.2,
+      "possessionQuality": 2.11,
+      "contactBreakdown": -3.79,
+      "disciplineTurnover": -2.75,
+      "actions": 65,
+      "topActions": [
+        {
+          "time": "39:00",
+          "startSecond": 2550.7,
+          "endSecond": 2576.7,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "3:33",
+          "startSecond": 203.6,
+          "endSecond": 229.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.16,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "70:09",
+          "startSecond": 5650.2,
+          "endSecond": 5676.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "24:01",
+          "startSecond": 1601.9,
+          "endSecond": 1627.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "47:00",
+          "startSecond": 4103.1,
+          "endSecond": 4129.1,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.71,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "38:33",
+          "startSecond": 2524.1,
+          "endSecond": 2550.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "38:59",
+          "startSecond": 2550.2,
+          "endSecond": 2576.2,
+          "action": "Carry",
+          "result": "Error",
+          "impact": -0.58,
+          "reason": "接点・BD -0.4 / テリトリー -0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "michael curry|samoa",
+      "playerName": "Michael Curry",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": 0.96,
+      "momentumAdded": 0.96,
+      "momentumLost": 0,
+      "scoringThreat": 0.48,
+      "territory": -0.05,
+      "possessionQuality": 0.08,
+      "contactBreakdown": 0.45,
+      "disciplineTurnover": 0,
+      "actions": 10,
+      "topActions": [],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "rory sutherland|scotland",
+      "playerName": "Rory Sutherland",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 0.6,
+      "momentumAdded": 3.07,
+      "momentumLost": 2.47,
+      "scoringThreat": 1.92,
+      "territory": 0.3,
+      "possessionQuality": 0.4,
+      "contactBreakdown": -0.77,
+      "disciplineTurnover": -1.25,
+      "actions": 44,
+      "topActions": [
+        {
+          "time": "14:39",
+          "startSecond": 876.8,
+          "endSecond": 902.8,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "12:19",
+          "startSecond": 736,
+          "endSecond": 762,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.6,
+          "reason": "接点・BD +0.3 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "marco fepulea'i|samoa",
+      "playerName": "Marco Fepulea'i",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": -0.6,
+      "momentumAdded": 1.78,
+      "momentumLost": 2.38,
+      "scoringThreat": 0.84,
+      "territory": 0.08,
+      "possessionQuality": 0.85,
+      "contactBreakdown": 0.14,
+      "disciplineTurnover": -2.5,
+      "actions": 19,
+      "topActions": [
+        {
+          "time": "75:10",
+          "startSecond": 6006.2,
+          "endSecond": 6032.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "80:42",
+          "startSecond": 6339,
+          "endSecond": 6365,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "63:04",
+          "startSecond": 5184.5,
+          "endSecond": 5210.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "tomasi alosio|samoa",
+      "playerName": "Tomasi Alosio",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": -0.47,
+      "momentumAdded": 5.12,
+      "momentumLost": 5.59,
+      "scoringThreat": 0.84,
+      "territory": 0.38,
+      "possessionQuality": 1.99,
+      "contactBreakdown": -3.68,
+      "disciplineTurnover": 0,
+      "actions": 63,
+      "topActions": [
+        {
+          "time": "58:26",
+          "startSecond": 4836.1,
+          "endSecond": 4862.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.27,
+          "reason": "接点・BD +0.7 / テリトリー +0.4 / 継続品質 +0.2"
+        },
+        {
+          "time": "58:28",
+          "startSecond": 4837.7,
+          "endSecond": 4863.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "58:29",
+          "startSecond": 4838.8,
+          "endSecond": 4864.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "18:02",
+          "startSecond": 1079.6,
+          "endSecond": 1105.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.6,
+          "reason": "接点・BD +0.4 / テリトリー +0.3"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "theo mcfarland|samoa",
+      "playerName": "Theo McFarland",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": 0.35,
+      "momentumAdded": 9.9,
+      "momentumLost": 9.55,
+      "scoringThreat": 3.24,
+      "territory": 0.1,
+      "possessionQuality": 2.3,
+      "contactBreakdown": -1.29,
+      "disciplineTurnover": -4,
+      "actions": 107,
+      "topActions": [
+        {
+          "time": "3:41",
+          "startSecond": 211.9,
+          "endSecond": 237.9,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "6:29",
+          "startSecond": 380,
+          "endSecond": 406,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "21:53",
+          "startSecond": 1474.4,
+          "endSecond": 1500.4,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "69:58",
+          "startSecond": 5639.6,
+          "endSecond": 5665.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.05,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "1:48",
+          "startSecond": 98.4,
+          "endSecond": 124.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.98,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "3:37",
+          "startSecond": 208.2,
+          "endSecond": 234.2,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 0.98,
+          "reason": "接点・BD +0.4 / テリトリー +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "68:49",
+          "startSecond": 5570.5,
+          "endSecond": 5596.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.97,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "47:25",
+          "startSecond": 4128.5,
+          "endSecond": 4154.5,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.83,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "3:39",
+          "startSecond": 209.4,
+          "endSecond": 235.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "68:50",
+          "startSecond": 5571.4,
+          "endSecond": 5597.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "connor tupai|samoa",
+      "playerName": "Connor Tupai",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": 0.31,
+      "momentumAdded": 1.97,
+      "momentumLost": 1.66,
+      "scoringThreat": 1.68,
+      "territory": -0.95,
+      "possessionQuality": 0.96,
+      "contactBreakdown": 0.12,
+      "disciplineTurnover": -1.5,
+      "actions": 35,
+      "topActions": [
+        {
+          "time": "79:25",
+          "startSecond": 6261.2,
+          "endSecond": 6287.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "elliot millar mills|scotland",
+      "playerName": "Elliot Millar Mills",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 0.28,
+      "momentumAdded": 3.74,
+      "momentumLost": 3.46,
+      "scoringThreat": 1.92,
+      "territory": 0.53,
+      "possessionQuality": 0.73,
+      "contactBreakdown": -0.44,
+      "disciplineTurnover": -2.45,
+      "actions": 63,
+      "topActions": [
+        {
+          "time": "41:16",
+          "startSecond": 3758.8,
+          "endSecond": 3784.8,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "32:43",
+          "startSecond": 2173.9,
+          "endSecond": 2199.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.83,
+          "reason": "接点・BD +0.5 / テリトリー +0.3"
+        },
+        {
+          "time": "11:06",
+          "startSecond": 662.9,
+          "endSecond": 688.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "41:10",
+          "startSecond": 3753.5,
+          "endSecond": 3779.5,
+          "action": "Carry",
+          "result": "Penalty Conceded",
+          "impact": -0.61,
+          "reason": "規律・TO -1.2 / 接点・BD +0.4"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "jonah mau'u|samoa",
+      "playerName": "Jonah Mau'u",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": 0.28,
+      "momentumAdded": 4.13,
+      "momentumLost": 3.85,
+      "scoringThreat": 0.84,
+      "territory": 0.27,
+      "possessionQuality": 2.34,
+      "contactBreakdown": -3.18,
+      "disciplineTurnover": 0,
+      "actions": 51,
+      "topActions": [
+        {
+          "time": "24:23",
+          "startSecond": 1624.4,
+          "endSecond": 1650.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.02,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "26:31",
+          "startSecond": 1751.8,
+          "endSecond": 1777.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "38:32",
+          "startSecond": 2523.4,
+          "endSecond": 2549.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "41:40",
+          "startSecond": 2738.2,
+          "endSecond": 2764.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "kaynan siteine-tua|samoa",
+      "playerName": "Kaynan Siteine-Tua",
+      "team": "Samoa",
+      "matchId": "946877",
+      "netMomentum": 0.24,
+      "momentumAdded": 0.24,
+      "momentumLost": 0,
+      "scoringThreat": 0.24,
+      "territory": 0,
+      "possessionQuality": 0,
+      "contactBreakdown": 0,
+      "disciplineTurnover": 0,
+      "actions": 6,
+      "topActions": [],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "finlay richardson|scotland",
+      "playerName": "Finlay Richardson",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": -0.14,
+      "momentumAdded": 2.06,
+      "momentumLost": 2.2,
+      "scoringThreat": 0.96,
+      "territory": 0.2,
+      "possessionQuality": 0.92,
+      "contactBreakdown": -0.72,
+      "disciplineTurnover": -1.5,
+      "actions": 23,
+      "topActions": [
+        {
+          "time": "56:51",
+          "startSecond": 4740.8,
+          "endSecond": 4766.8,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "73:07",
+          "startSecond": 5828.8,
+          "endSecond": 5854.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "73:07",
+          "startSecond": 5828.2,
+          "endSecond": 5854.2,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.61,
+          "reason": "テリトリー +0.2 / 接点・BD +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "marshall sykes|scotland",
+      "playerName": "Marshall Sykes",
+      "team": "Scotland",
+      "matchId": "946877",
+      "netMomentum": 0,
+      "momentumAdded": 0,
+      "momentumLost": 0,
+      "scoringThreat": 0,
+      "territory": 0,
+      "possessionQuality": 0,
+      "contactBreakdown": 0,
+      "disciplineTurnover": 0,
+      "actions": 3,
+      "topActions": [],
+      "reviewPriority": "Low"
+    }
+  ]
+}

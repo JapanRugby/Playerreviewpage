@@ -1,784 +1,2855 @@
-[
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 37841,
-    "playerName": "Seungsin Lee",
-    "net_momentum": 20.7844891071304,
-    "momentum_added": 22.44103149291148,
-    "momentum_lost": 1.6565423857810833,
-    "events_count": 143,
-    "scoring_threat_player_team": 16.16,
-    "territory_player_team": 28.248,
-    "possession_quality_player_team": 3.235,
-    "contact_breakdown_player_team": -0.0599999999999999,
-    "discipline_turnover_player_team": -2.15,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 28402,
-    "playerName": "Luke Carty",
-    "net_momentum": 12.45571131009063,
-    "momentum_added": 15.151785635029844,
-    "momentum_lost": 2.6960743249392154,
-    "events_count": 87,
-    "scoring_threat_player_team": 9.68,
-    "territory_player_team": 19.409,
-    "possession_quality_player_team": 1.0,
-    "contact_breakdown_player_team": -1.75,
-    "discipline_turnover_player_team": -1.8,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 28910,
-    "playerName": "Jamason Fa'anana-Schultz",
-    "net_momentum": 10.3880402462129,
-    "momentum_added": 11.95447419423549,
-    "momentum_lost": 1.5664339480225902,
-    "events_count": 104,
-    "scoring_threat_player_team": 9.12,
-    "territory_player_team": 2.225,
-    "possession_quality_player_team": 4.67,
-    "contact_breakdown_player_team": 4.02,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 27652,
-    "playerName": "Dylan Riley",
-    "net_momentum": 8.907241916109257,
-    "momentum_added": 11.48436022714967,
-    "momentum_lost": 2.577118311040414,
-    "events_count": 84,
-    "scoring_threat_player_team": 8.76,
-    "territory_player_team": 3.9,
-    "possession_quality_player_team": 11.14,
-    "contact_breakdown_player_team": 1.33,
-    "discipline_turnover_player_team": -2.15,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 43557,
-    "playerName": "Nicholas McCurran",
-    "net_momentum": 8.6405278323905,
-    "momentum_added": 8.721019574049125,
-    "momentum_lost": 0.080491741658625,
-    "events_count": 76,
-    "scoring_threat_player_team": 8.04,
-    "territory_player_team": 1.675,
-    "possession_quality_player_team": 7.930000000000001,
-    "contact_breakdown_player_team": 0.8799999999999999,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 23585,
-    "playerName": "Malo Tuitama",
-    "net_momentum": 7.582457739639378,
-    "momentum_added": 7.781928783749961,
-    "momentum_lost": 0.1994710441105831,
-    "events_count": 63,
-    "scoring_threat_player_team": 8.16,
-    "territory_player_team": 4.126,
-    "possession_quality_player_team": 8.3,
-    "contact_breakdown_player_team": 2.27,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 21032,
-    "playerName": "Nate Augspurger",
-    "net_momentum": 7.275203760865862,
-    "momentum_added": 10.110077094197514,
-    "momentum_lost": 2.834873333331653,
-    "events_count": 49,
-    "scoring_threat_player_team": 13.92,
-    "territory_player_team": 1.045,
-    "possession_quality_player_team": 4.62,
-    "contact_breakdown_player_team": -0.5399999999999999,
-    "discipline_turnover_player_team": -2.35,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 33820,
-    "playerName": "Kapeli Pifeleti",
-    "net_momentum": 4.72695972361437,
-    "momentum_added": 6.886819434249741,
-    "momentum_lost": 2.159859710635371,
-    "events_count": 83,
-    "scoring_threat_player_team": 1.7999999999999998,
-    "territory_player_team": 1.562,
-    "possession_quality_player_team": 1.455,
-    "contact_breakdown_player_team": -0.5599999999999999,
-    "discipline_turnover_player_team": 2.85,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 30969,
-    "playerName": "Shinobu Fujiwara",
-    "net_momentum": 4.0710681949309615,
-    "momentum_added": 6.940022294812629,
-    "momentum_lost": 2.868954099881668,
-    "events_count": 233,
-    "scoring_threat_player_team": 8.64,
-    "territory_player_team": -5.136,
-    "possession_quality_player_team": 4.5200000000000005,
-    "contact_breakdown_player_team": -0.0699999999999999,
-    "discipline_turnover_player_team": 1.3000000000000005,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 34483,
-    "playerName": "Mamoru Harada",
-    "net_momentum": 3.3468490934916475,
-    "momentum_added": 4.068871068925964,
-    "momentum_lost": 0.722021975434317,
-    "events_count": 55,
-    "scoring_threat_player_team": 7.08,
-    "territory_player_team": -0.325,
-    "possession_quality_player_team": -0.32,
-    "contact_breakdown_player_team": -0.5199999999999999,
-    "discipline_turnover_player_team": 1.4,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 19937,
-    "playerName": "Harumichi Tatekawa",
-    "net_momentum": 3.1356258755923965,
-    "momentum_added": 3.7987331604070462,
-    "momentum_lost": 0.6631072848146499,
-    "events_count": 46,
-    "scoring_threat_player_team": 0.6,
-    "territory_player_team": 4.49,
-    "possession_quality_player_team": 2.495,
-    "contact_breakdown_player_team": 0.26,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 23564,
-    "playerName": "Sanaila Waqa",
-    "net_momentum": 3.097019797680838,
-    "momentum_added": 4.736802694963821,
-    "momentum_lost": 1.6397828972829824,
-    "events_count": 64,
-    "scoring_threat_player_team": 7.800000000000001,
-    "territory_player_team": 0.775,
-    "possession_quality_player_team": 1.77,
-    "contact_breakdown_player_team": -0.51,
-    "discipline_turnover_player_team": -3.05,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 23417,
-    "playerName": "Faulua Makisi",
-    "net_momentum": 2.5369149190430718,
-    "momentum_added": 3.31318086261514,
-    "momentum_lost": 0.7762659435720685,
-    "events_count": 63,
-    "scoring_threat_player_team": 1.44,
-    "territory_player_team": 1.075,
-    "possession_quality_player_team": 3.58,
-    "contact_breakdown_player_team": 0.09,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 46434,
-    "playerName": "Vili Helu",
-    "net_momentum": 2.3484215871757,
-    "momentum_added": 3.272937318899608,
-    "momentum_lost": 0.9245157317239076,
-    "events_count": 87,
-    "scoring_threat_player_team": 3.36,
-    "territory_player_team": 0.1,
-    "possession_quality_player_team": 3.85,
-    "contact_breakdown_player_team": -0.89,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 26760,
-    "playerName": "Takuya Yamasawa",
-    "net_momentum": 1.89663493077942,
-    "momentum_added": 3.256599785204124,
-    "momentum_lost": 1.3599648544247045,
-    "events_count": 30,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 4.462000000000001,
-    "possession_quality_player_team": 1.05,
-    "contact_breakdown_player_team": -0.1599999999999999,
-    "discipline_turnover_player_team": -1.8,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 21723,
-    "playerName": "Juan Philip Smith",
-    "net_momentum": 1.7959257381922775,
-    "momentum_added": 2.4544338739640863,
-    "momentum_lost": 0.6585081357718084,
-    "events_count": 83,
-    "scoring_threat_player_team": 1.56,
-    "territory_player_team": 3.5870000000000006,
-    "possession_quality_player_team": 1.52,
-    "contact_breakdown_player_team": 0.0,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 58972,
-    "playerName": "Tiennan Costley",
-    "net_momentum": 1.753994956948001,
-    "momentum_added": 2.77966076611632,
-    "momentum_lost": 1.0256658091683193,
-    "events_count": 119,
-    "scoring_threat_player_team": 3.24,
-    "territory_player_team": 1.1,
-    "possession_quality_player_team": 3.52,
-    "contact_breakdown_player_team": -2.23,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 38056,
-    "playerName": "Mitch Wilson",
-    "net_momentum": 1.7215352697239834,
-    "momentum_added": 2.59515221157458,
-    "momentum_lost": 0.8736169418505964,
-    "events_count": 34,
-    "scoring_threat_player_team": 0.12,
-    "territory_player_team": 4.018000000000001,
-    "possession_quality_player_team": 1.215,
-    "contact_breakdown_player_team": -1.5499999999999998,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 61929,
-    "playerName": "Keijiro Tamefusa",
-    "net_momentum": 1.556377821453936,
-    "momentum_added": 1.6326381034215338,
-    "momentum_lost": 0.0762602819675977,
-    "events_count": 48,
-    "scoring_threat_player_team": 1.2,
-    "territory_player_team": 0.1999999999999999,
-    "possession_quality_player_team": 1.5550000000000002,
-    "contact_breakdown_player_team": 0.18,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 39901,
-    "playerName": "Tavite Lopeti",
-    "net_momentum": 1.4968359383844807,
-    "momentum_added": 2.3152833742704644,
-    "momentum_lost": 0.818447435885984,
-    "events_count": 47,
-    "scoring_threat_player_team": 0.36,
-    "territory_player_team": 2.97,
-    "possession_quality_player_team": 1.83,
-    "contact_breakdown_player_team": -0.81,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 19865,
-    "playerName": "Tommaso Boni",
-    "net_momentum": 1.2634244948238105,
-    "momentum_added": 2.5251272984321456,
-    "momentum_lost": 1.261702803608335,
-    "events_count": 49,
-    "scoring_threat_player_team": 0.84,
-    "territory_player_team": 2.082,
-    "possession_quality_player_team": 1.62,
-    "contact_breakdown_player_team": -1.2799999999999998,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 28928,
-    "playerName": "Taiki Koyama",
-    "net_momentum": 1.2272251588863337,
-    "momentum_added": 1.5084125630048928,
-    "momentum_lost": 0.2811874041185593,
-    "events_count": 50,
-    "scoring_threat_player_team": 0.36,
-    "territory_player_team": -0.7219999999999999,
-    "possession_quality_player_team": 0.6399999999999999,
-    "contact_breakdown_player_team": 0.63,
-    "discipline_turnover_player_team": 1.1,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 24939,
-    "playerName": "Atsushi Sakate",
-    "net_momentum": 1.186643425043693,
-    "momentum_added": 1.9022679064092016,
-    "momentum_lost": 0.7156244813655086,
-    "events_count": 47,
-    "scoring_threat_player_team": 1.68,
-    "territory_player_team": 0.05,
-    "possession_quality_player_team": 0.24,
-    "contact_breakdown_player_team": -2.73,
-    "discipline_turnover_player_team": 2.45,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 30962,
-    "playerName": "Kanji Shimokawa",
-    "net_momentum": 1.1827777454200754,
-    "momentum_added": 3.564991247488241,
-    "momentum_lost": 2.382213502068166,
-    "events_count": 88,
-    "scoring_threat_player_team": 2.28,
-    "territory_player_team": 1.625,
-    "possession_quality_player_team": 1.705,
-    "contact_breakdown_player_team": -0.35,
-    "discipline_turnover_player_team": -2.5,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 30203,
-    "playerName": "Ruben de Haas",
-    "net_momentum": 1.1154782015473912,
-    "momentum_added": 4.822519395012004,
-    "momentum_lost": 3.707041193464613,
-    "events_count": 140,
-    "scoring_threat_player_team": 2.76,
-    "territory_player_team": 0.0980000000000004,
-    "possession_quality_player_team": 3.72,
-    "contact_breakdown_player_team": -1.7199999999999998,
-    "discipline_turnover_player_team": 1.3000000000000005,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 58967,
-    "playerName": "Isaiah Mapusua",
-    "net_momentum": 0.7917174177807054,
-    "momentum_added": 1.0597189452327402,
-    "momentum_lost": 0.2680015274520349,
-    "events_count": 27,
-    "scoring_threat_player_team": 0.24,
-    "territory_player_team": 0.2249999999999999,
-    "possession_quality_player_team": 1.645,
-    "contact_breakdown_player_team": 0.4,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 36500,
-    "playerName": "Amato Fakatava",
-    "net_momentum": 0.7728245947126011,
-    "momentum_added": 0.9109004305188048,
-    "momentum_lost": 0.1380758358062035,
-    "events_count": 37,
-    "scoring_threat_player_team": 0.6,
-    "territory_player_team": 0.525,
-    "possession_quality_player_team": 1.03,
-    "contact_breakdown_player_team": 0.3799999999999999,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 21619,
-    "playerName": "Sean McNulty",
-    "net_momentum": 0.7485964388498576,
-    "momentum_added": 1.0869259751138414,
-    "momentum_lost": 0.3383295362639839,
-    "events_count": 27,
-    "scoring_threat_player_team": 0.12,
-    "territory_player_team": 0.25,
-    "possession_quality_player_team": 0.04,
-    "contact_breakdown_player_team": -0.43,
-    "discipline_turnover_player_team": 1.2999999999999998,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 31059,
-    "playerName": "Tomoki Osada",
-    "net_momentum": 0.5105854334377726,
-    "momentum_added": 0.5105854334377726,
-    "momentum_lost": 0.0,
-    "events_count": 9,
-    "scoring_threat_player_team": 0.36,
-    "territory_player_team": 0.075,
-    "possession_quality_player_team": 0.265,
-    "contact_breakdown_player_team": 0.06,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 40399,
-    "playerName": "Warner Dearns",
-    "net_momentum": 0.2930640990411666,
-    "momentum_added": 1.8935541815257344,
-    "momentum_lost": 1.600490082484568,
-    "events_count": 96,
-    "scoring_threat_player_team": 1.3199999999999998,
-    "territory_player_team": 0.928,
-    "possession_quality_player_team": 1.945,
-    "contact_breakdown_player_team": -1.6999999999999995,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 23418,
-    "playerName": "Shogo Miura",
-    "net_momentum": 0.2209829097045651,
-    "momentum_added": 1.2306064168710324,
-    "momentum_lost": 1.0096235071664672,
-    "events_count": 40,
-    "scoring_threat_player_team": 1.3199999999999998,
-    "territory_player_team": 0.075,
-    "possession_quality_player_team": 1.46,
-    "contact_breakdown_player_team": -1.43,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 38006,
-    "playerName": "Conner Mooneyham",
-    "net_momentum": 0.1303453249718902,
-    "momentum_added": 0.6232936649989563,
-    "momentum_lost": 0.4929483400270661,
-    "events_count": 25,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 0.15,
-    "possession_quality_player_team": 1.0550000000000002,
-    "contact_breakdown_player_team": -1.2699999999999998,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 38094,
-    "playerName": "Cory Daniel",
-    "net_momentum": 0.1256847436227055,
-    "momentum_added": 1.0891465834589702,
-    "momentum_lost": 0.9634618398362648,
-    "events_count": 61,
-    "scoring_threat_player_team": 1.2,
-    "territory_player_team": 0.075,
-    "possession_quality_player_team": 0.995,
-    "contact_breakdown_player_team": -3.1,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 37874,
-    "playerName": "Shuhei Takeuchi",
-    "net_momentum": 0.0097312204518997,
-    "momentum_added": 0.5959661158828314,
-    "momentum_lost": 0.5862348954309318,
-    "events_count": 35,
-    "scoring_threat_player_team": 0.84,
-    "territory_player_team": 0.2249999999999999,
-    "possession_quality_player_team": 0.23,
-    "contact_breakdown_player_team": 0.06,
-    "discipline_turnover_player_team": -2.15,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 38021,
-    "playerName": "Jason Damm",
-    "net_momentum": 0.0065195887285983,
-    "momentum_added": 0.0590348709813057,
-    "momentum_lost": 0.0525152822527074,
-    "events_count": 19,
-    "scoring_threat_player_team": 0.12,
-    "territory_player_team": 0.0,
-    "possession_quality_player_team": 0.08,
-    "contact_breakdown_player_team": -0.1399999999999999,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 37153,
-    "playerName": "Jake Turnbull",
-    "net_momentum": -0.0107749296332403,
-    "momentum_added": 0.0,
-    "momentum_lost": 0.0107749296332403,
-    "events_count": 20,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 0.0,
-    "possession_quality_player_team": 0.0,
-    "contact_breakdown_player_team": -0.04,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 28091,
-    "playerName": "Jone Naikabula",
-    "net_momentum": -0.113549570059502,
-    "momentum_added": 0.6600196504028447,
-    "momentum_lost": 0.7735692204623468,
-    "events_count": 24,
-    "scoring_threat_player_team": 0.48,
-    "territory_player_team": 0.0999999999999999,
-    "possession_quality_player_team": 1.255,
-    "contact_breakdown_player_team": 0.13,
-    "discipline_turnover_player_team": -1.8,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 38137,
-    "playerName": "Thomas Tu'avao",
-    "net_momentum": -0.1170121556244748,
-    "momentum_added": 0.4884662691865499,
-    "momentum_lost": 0.6054784248110248,
-    "events_count": 17,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 0.3,
-    "possession_quality_player_team": 0.315,
-    "contact_breakdown_player_team": -0.3,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 38080,
-    "playerName": "Jack Iscaro",
-    "net_momentum": -0.2272579820836506,
-    "momentum_added": 1.4102630700345926,
-    "momentum_lost": 1.637521052118243,
-    "events_count": 62,
-    "scoring_threat_player_team": 1.56,
-    "territory_player_team": 0.575,
-    "possession_quality_player_team": 1.275,
-    "contact_breakdown_player_team": -1.43,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 60169,
-    "playerName": "Dominic Besag",
-    "net_momentum": -0.2358800287977575,
-    "momentum_added": 0.1340766628259145,
-    "momentum_lost": 0.369956691623672,
-    "events_count": 15,
-    "scoring_threat_player_team": 0.72,
-    "territory_player_team": -0.0249999999999999,
-    "possession_quality_player_team": 0.115,
-    "contact_breakdown_player_team": -0.77,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 27105,
-    "playerName": "Alex Maughan",
-    "net_momentum": -0.3269398552052565,
-    "momentum_added": 0.3683703686753404,
-    "momentum_lost": 0.6953102238805969,
-    "events_count": 36,
-    "scoring_threat_player_team": 0.6,
-    "territory_player_team": 0.075,
-    "possession_quality_player_team": 0.035,
-    "contact_breakdown_player_team": -0.48,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 38148,
-    "playerName": "Moni Tonga'uiha",
-    "net_momentum": -0.5096497160106531,
-    "momentum_added": 1.1990462926301602,
-    "momentum_lost": 1.7086960086408132,
-    "events_count": 50,
-    "scoring_threat_player_team": 1.44,
-    "territory_player_team": -0.0249999999999999,
-    "possession_quality_player_team": 0.605,
-    "contact_breakdown_player_team": -1.95,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 31016,
-    "playerName": "Paul Mullen",
-    "net_momentum": -0.5713906350757485,
-    "momentum_added": 0.2140132980394051,
-    "momentum_lost": 0.7854039331151537,
-    "events_count": 33,
-    "scoring_threat_player_team": 0.48,
-    "territory_player_team": 0.05,
-    "possession_quality_player_team": 0.23,
-    "contact_breakdown_player_team": -1.0499999999999998,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 17207,
-    "playerName": "Greg Peterson",
-    "net_momentum": -1.5948130552116366,
-    "momentum_added": 0.4002587858653906,
-    "momentum_lost": 1.9950718410770276,
-    "events_count": 66,
-    "scoring_threat_player_team": 0.84,
-    "territory_player_team": -0.325,
-    "possession_quality_player_team": 0.4,
-    "contact_breakdown_player_team": -0.7,
-    "discipline_turnover_player_team": -3.05,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 3000,
-    "teamName": "Japan",
-    "PLID": 58070,
-    "playerName": "Takayoshi Mohara",
-    "net_momentum": -2.323902959664519,
-    "momentum_added": 0.3842606600408873,
-    "momentum_lost": 2.708163619705406,
-    "events_count": 26,
-    "scoring_threat_player_team": 0.24,
-    "territory_player_team": 0.0,
-    "possession_quality_player_team": 0.65,
-    "contact_breakdown_player_team": 0.1,
-    "discipline_turnover_player_team": -3.75,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 941547,
-    "team_id": 2950,
-    "teamName": "USA",
-    "PLID": 31271,
-    "playerName": "Paddy Ryan",
-    "net_momentum": -4.5355066380161375,
-    "momentum_added": 1.4970192764627333,
-    "momentum_lost": 6.032525914478871,
-    "events_count": 86,
-    "scoring_threat_player_team": 1.44,
-    "territory_player_team": 0.675,
-    "possession_quality_player_team": 1.015,
-    "contact_breakdown_player_team": -0.0199999999999999,
-    "discipline_turnover_player_team": -3.05,
-    "review_priority": "High"
-  }
-]
+{
+  "matchId": "941547",
+  "players": [
+    {
+      "playerKey": "seungsin lee|japan-group",
+      "playerName": "Seungsin Lee",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 43.63,
+      "momentumAdded": 50.27,
+      "momentumLost": 6.64,
+      "scoringThreat": 16.16,
+      "territory": 28.25,
+      "possessionQuality": 3.24,
+      "contactBreakdown": -0.06,
+      "disciplineTurnover": -3.95,
+      "actions": 143,
+      "topActions": [
+        {
+          "time": "61:06",
+          "startSecond": 5107.2,
+          "endSecond": 5133.2,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.8,
+          "reason": "得点脅威 +2.0 / テリトリー +0.8"
+        },
+        {
+          "time": "22:57",
+          "startSecond": 1540.9,
+          "endSecond": 1566.9,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.7,
+          "reason": "得点脅威 +2.1 / テリトリー +0.6"
+        },
+        {
+          "time": "39:03",
+          "startSecond": 2636.1,
+          "endSecond": 2662.1,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.7,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "4:13",
+          "startSecond": 302.9,
+          "endSecond": 328.9,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.67,
+          "reason": "得点脅威 +2.1 / テリトリー +0.6"
+        },
+        {
+          "time": "25:04",
+          "startSecond": 1667.1,
+          "endSecond": 1693.1,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 2.62,
+          "reason": "テリトリー +2.6"
+        },
+        {
+          "time": "66:51",
+          "startSecond": 5547.9,
+          "endSecond": 5573.9,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.6,
+          "reason": "得点脅威 +2.1 / テリトリー +0.5"
+        },
+        {
+          "time": "44:57",
+          "startSecond": 3995.7,
+          "endSecond": 4021.7,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.55,
+          "reason": "得点脅威 +2.1 / テリトリー +0.4"
+        },
+        {
+          "time": "14:50",
+          "startSecond": 939.8,
+          "endSecond": 965.8,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.5,
+          "reason": "得点脅威 +2.1 / テリトリー +0.4"
+        },
+        {
+          "time": "61:48",
+          "startSecond": 5234.8,
+          "endSecond": 5260.8,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.74,
+          "reason": "テリトリー +1.7"
+        },
+        {
+          "time": "70:01",
+          "startSecond": 5737.5,
+          "endSecond": 5763.5,
+          "action": "Kick",
+          "result": "Kick in Touch (Bounce)",
+          "impact": 1.63,
+          "reason": "テリトリー +1.6"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "luke carty|usa",
+      "playerName": "Luke Carty",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": 25.34,
+      "momentumAdded": 31.3,
+      "momentumLost": 5.96,
+      "scoringThreat": 9.68,
+      "territory": 19.41,
+      "possessionQuality": 1,
+      "contactBreakdown": -1.75,
+      "disciplineTurnover": -3,
+      "actions": 87,
+      "topActions": [
+        {
+          "time": "17:35",
+          "startSecond": 1104.3,
+          "endSecond": 1130.3,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.7,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "51:38",
+          "startSecond": 4472,
+          "endSecond": 4498,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.68,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "58:30",
+          "startSecond": 4939,
+          "endSecond": 4965,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.63,
+          "reason": "得点脅威 +2.0 / テリトリー +0.6"
+        },
+        {
+          "time": "30:06",
+          "startSecond": 2021.9,
+          "endSecond": 2047.9,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.6,
+          "reason": "得点脅威 +2.0 / テリトリー +0.6"
+        },
+        {
+          "time": "8:34",
+          "startSecond": 563.6,
+          "endSecond": 589.6,
+          "action": "Kick",
+          "result": "Kick in Touch (Bounce)",
+          "impact": 1.55,
+          "reason": "テリトリー +1.6"
+        },
+        {
+          "time": "8:02",
+          "startSecond": 531.4,
+          "endSecond": 557.4,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "19:40",
+          "startSecond": 1229.6,
+          "endSecond": 1255.6,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "75:40",
+          "startSecond": 6076.1,
+          "endSecond": 6102.1,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.41,
+          "reason": "テリトリー +1.4"
+        },
+        {
+          "time": "6:56",
+          "startSecond": 465.4,
+          "endSecond": 491.4,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.33,
+          "reason": "テリトリー +1.3"
+        },
+        {
+          "time": "26:42",
+          "startSecond": 1817.2,
+          "endSecond": 1843.2,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.21,
+          "reason": "テリトリー +1.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "malo tuitama|japan-group",
+      "playerName": "Malo Tuitama",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 22.86,
+      "momentumAdded": 23.65,
+      "momentumLost": 0.79,
+      "scoringThreat": 8.16,
+      "territory": 4.13,
+      "possessionQuality": 8.3,
+      "contactBreakdown": 2.27,
+      "disciplineTurnover": 0,
+      "actions": 63,
+      "topActions": [
+        {
+          "time": "65:52",
+          "startSecond": 5488.1,
+          "endSecond": 5514.1,
+          "action": "Try",
+          "result": "Passing Move",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "1:49",
+          "startSecond": 101.8,
+          "endSecond": 127.8,
+          "action": "Carry",
+          "result": "Other",
+          "impact": 1.47,
+          "reason": "継続品質 +0.6 / テリトリー +0.6 / 接点・BD +0.2"
+        },
+        {
+          "time": "37:21",
+          "startSecond": 2533.8,
+          "endSecond": 2559.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.46,
+          "reason": "接点・BD +0.7 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "4:56",
+          "startSecond": 345.4,
+          "endSecond": 371.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.37,
+          "reason": "接点・BD +0.7 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "18:07",
+          "startSecond": 1137,
+          "endSecond": 1163,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 1.33,
+          "reason": "継続品質 +0.5 / 接点・BD +0.4 / テリトリー +0.4"
+        },
+        {
+          "time": "39:43",
+          "startSecond": 2677.6,
+          "endSecond": 2703.6,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.1,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "65:51",
+          "startSecond": 5487.1,
+          "endSecond": 5513.1,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 0.95,
+          "reason": "テリトリー +0.4 / 継続品質 +0.2 / 接点・BD +0.2"
+        },
+        {
+          "time": "1:45",
+          "startSecond": 97.4,
+          "endSecond": 123.4,
+          "action": "Carry",
+          "result": "Kick",
+          "impact": 0.78,
+          "reason": "テリトリー +0.3 / 継続品質 +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "1:49",
+          "startSecond": 101.8,
+          "endSecond": 127.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "18:10",
+          "startSecond": 1139.5,
+          "endSecond": 1165.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "dylan riley|japan-group",
+      "playerName": "Dylan Riley",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 22.38,
+      "momentumAdded": 27.95,
+      "momentumLost": 5.57,
+      "scoringThreat": 8.76,
+      "territory": 3.9,
+      "possessionQuality": 11.14,
+      "contactBreakdown": 1.33,
+      "disciplineTurnover": -2.75,
+      "actions": 84,
+      "topActions": [
+        {
+          "time": "43:57",
+          "startSecond": 3935.9,
+          "endSecond": 3961.9,
+          "action": "Try",
+          "result": "Individual Effort",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "43:46",
+          "startSecond": 3925.3,
+          "endSecond": 3951.3,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 3.03,
+          "reason": "テリトリー +1.8 / 継続品質 +1.1 / 接点・BD +0.2"
+        },
+        {
+          "time": "52:49",
+          "startSecond": 4543.2,
+          "endSecond": 4569.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "40:38",
+          "startSecond": 2752.8,
+          "endSecond": 2778.8,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "37:56",
+          "startSecond": 2569,
+          "endSecond": 2595,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 1.11,
+          "reason": "継続品質 +0.5 / テリトリー +0.4 / 接点・BD +0.2"
+        },
+        {
+          "time": "65:49",
+          "startSecond": 5485.4,
+          "endSecond": 5511.4,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 0.86,
+          "reason": "継続品質 +0.3 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "21:46",
+          "startSecond": 1469.9,
+          "endSecond": 1495.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.83,
+          "reason": "接点・BD +0.5 / テリトリー +0.2"
+        },
+        {
+          "time": "37:57",
+          "startSecond": 2569.9,
+          "endSecond": 2595.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "65:49",
+          "startSecond": 5485.4,
+          "endSecond": 5511.4,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "65:50",
+          "startSecond": 5486.2,
+          "endSecond": 5512.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "jamason fa'anana-schultz|usa",
+      "playerName": "Jamason Fa'anana-Schultz",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": 20.04,
+      "momentumAdded": 23.05,
+      "momentumLost": 3.02,
+      "scoringThreat": 9.12,
+      "territory": 2.23,
+      "possessionQuality": 4.67,
+      "contactBreakdown": 4.02,
+      "disciplineTurnover": 0,
+      "actions": 104,
+      "topActions": [
+        {
+          "time": "29:08",
+          "startSecond": 1963.5,
+          "endSecond": 1989.5,
+          "action": "Try",
+          "result": "Rolling Maul",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "24:14",
+          "startSecond": 1617.8,
+          "endSecond": 1643.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.37,
+          "reason": "接点・BD +0.7 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "6:24",
+          "startSecond": 433.2,
+          "endSecond": 459.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.19,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.2"
+        },
+        {
+          "time": "56:56",
+          "startSecond": 4803.4,
+          "endSecond": 4829.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.18,
+          "reason": "接点・BD +0.7 / テリトリー +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "47:32",
+          "startSecond": 4151.2,
+          "endSecond": 4177.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.07,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "43:25",
+          "startSecond": 3904,
+          "endSecond": 3930,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.02,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "49:17",
+          "startSecond": 4331.3,
+          "endSecond": 4357.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "43:26",
+          "startSecond": 3904.6,
+          "endSecond": 3930.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "53:01",
+          "startSecond": 4555.1,
+          "endSecond": 4581.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "57:20",
+          "startSecond": 4868.2,
+          "endSecond": 4894.2,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.64,
+          "reason": "接点・BD +0.4"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "nicholas mccurran|japan-group",
+      "playerName": "Nicholas McCurran",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 18.53,
+      "momentumAdded": 19.2,
+      "momentumLost": 0.68,
+      "scoringThreat": 8.04,
+      "territory": 1.68,
+      "possessionQuality": 7.93,
+      "contactBreakdown": 0.88,
+      "disciplineTurnover": 0,
+      "actions": 76,
+      "topActions": [
+        {
+          "time": "13:54",
+          "startSecond": 883.1,
+          "endSecond": 909.1,
+          "action": "Try",
+          "result": "Passing Move",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "13:49",
+          "startSecond": 878.2,
+          "endSecond": 904.2,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 1.78,
+          "reason": "継続品質 +0.9 / テリトリー +0.7 / 接点・BD +0.2"
+        },
+        {
+          "time": "1:49",
+          "startSecond": 101.4,
+          "endSecond": 127.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "21:13",
+          "startSecond": 1436.6,
+          "endSecond": 1462.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "21:13",
+          "startSecond": 1436.8,
+          "endSecond": 1462.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "5:08",
+          "startSecond": 357.2,
+          "endSecond": 383.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "13:49",
+          "startSecond": 878.2,
+          "endSecond": 904.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "43:45",
+          "startSecond": 3924.2,
+          "endSecond": 3950.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "43:45",
+          "startSecond": 3924.2,
+          "endSecond": 3950.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "59:30",
+          "startSecond": 5010.8,
+          "endSecond": 5036.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "nate augspurger|usa",
+      "playerName": "Nate Augspurger",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": 16.59,
+      "momentumAdded": 20.57,
+      "momentumLost": 3.98,
+      "scoringThreat": 13.92,
+      "territory": 1.05,
+      "possessionQuality": 4.62,
+      "contactBreakdown": -0.54,
+      "disciplineTurnover": -2.45,
+      "actions": 49,
+      "topActions": [
+        {
+          "time": "50:40",
+          "startSecond": 4414.5,
+          "endSecond": 4440.5,
+          "action": "Try",
+          "result": "Passing Move",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "57:32",
+          "startSecond": 4880.5,
+          "endSecond": 4906.5,
+          "action": "Try",
+          "result": "Passing Move",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "11:43",
+          "startSecond": 752.7,
+          "endSecond": 778.7,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "50:38",
+          "startSecond": 4412.2,
+          "endSecond": 4438.2,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 0.8,
+          "reason": "テリトリー +0.3 / 継続品質 +0.2 / 接点・BD +0.2"
+        },
+        {
+          "time": "50:38",
+          "startSecond": 4412.3,
+          "endSecond": 4438.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "50:38",
+          "startSecond": 4412.4,
+          "endSecond": 4438.4,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "57:31",
+          "startSecond": 4879.7,
+          "endSecond": 4905.7,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "11:40",
+          "startSecond": 749.9,
+          "endSecond": 775.9,
+          "action": "Carry",
+          "result": "Penalty Conceded",
+          "impact": -0.75,
+          "reason": "規律・TO -1.2 / テリトリー +0.2 / 接点・BD +0.2"
+        },
+        {
+          "time": "6:40",
+          "startSecond": 449.2,
+          "endSecond": 475.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "48:20",
+          "startSecond": 4199.4,
+          "endSecond": 4225.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "kapeli pifeleti|usa",
+      "playerName": "Kapeli Pifeleti",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": 8.11,
+      "momentumAdded": 12.76,
+      "momentumLost": 4.66,
+      "scoringThreat": 1.8,
+      "territory": 1.56,
+      "possessionQuality": 1.46,
+      "contactBreakdown": -0.56,
+      "disciplineTurnover": 3.85,
+      "actions": 83,
+      "topActions": [
+        {
+          "time": "3:14",
+          "startSecond": 243.4,
+          "endSecond": 269.4,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "48:24",
+          "startSecond": 4203,
+          "endSecond": 4229,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 0.96,
+          "reason": "テリトリー +1.0"
+        },
+        {
+          "time": "1:06",
+          "startSecond": 58.1,
+          "endSecond": 84.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.9,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "46:07",
+          "startSecond": 4066.4,
+          "endSecond": 4092.4,
+          "action": "Lineout Throw",
+          "result": "Lost Clean",
+          "impact": -0.75,
+          "reason": "規律・TO -0.8"
+        },
+        {
+          "time": "48:23",
+          "startSecond": 4202.2,
+          "endSecond": 4228.2,
+          "action": "Carry",
+          "result": "Kick",
+          "impact": 0.71,
+          "reason": "継続品質 +0.3 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "6:29",
+          "startSecond": 438.6,
+          "endSecond": 464.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "40:20",
+          "startSecond": 2734,
+          "endSecond": 2760,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "25:56",
+          "startSecond": 1771.8,
+          "endSecond": 1797.8,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.6,
+          "reason": "継続品質 -0.6"
+        },
+        {
+          "time": "48:48",
+          "startSecond": 4302.9,
+          "endSecond": 4328.9,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "50:21",
+          "startSecond": 4395.1,
+          "endSecond": 4421.1,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "mamoru harada|japan-group",
+      "playerName": "Mamoru Harada",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 7.72,
+      "momentumAdded": 9.9,
+      "momentumLost": 2.19,
+      "scoringThreat": 7.08,
+      "territory": -0.33,
+      "possessionQuality": -0.32,
+      "contactBreakdown": -0.52,
+      "disciplineTurnover": 1.8,
+      "actions": 55,
+      "topActions": [
+        {
+          "time": "38:01",
+          "startSecond": 2574.4,
+          "endSecond": 2600.4,
+          "action": "Try",
+          "result": "Close Range - Ruck",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "38:00",
+          "startSecond": 2573.3,
+          "endSecond": 2599.3,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 0.72,
+          "reason": "接点・BD +0.4"
+        },
+        {
+          "time": "43:42",
+          "startSecond": 3920.8,
+          "endSecond": 3946.8,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.7,
+          "reason": "継続品質 -0.6 / テリトリー -0.2"
+        },
+        {
+          "time": "65:41",
+          "startSecond": 5477.5,
+          "endSecond": 5503.5,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "harumichi tatekawa|japan-group",
+      "playerName": "Harumichi Tatekawa",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 6.35,
+      "momentumAdded": 8.57,
+      "momentumLost": 2.22,
+      "scoringThreat": 0.6,
+      "territory": 4.49,
+      "possessionQuality": 2.5,
+      "contactBreakdown": 0.26,
+      "disciplineTurnover": -1.5,
+      "actions": 46,
+      "topActions": [
+        {
+          "time": "63:47",
+          "startSecond": 5363.2,
+          "endSecond": 5389.2,
+          "action": "Kick",
+          "result": "Error - Dead Ball",
+          "impact": 2.25,
+          "reason": "テリトリー +2.2"
+        },
+        {
+          "time": "77:22",
+          "startSecond": 6178.1,
+          "endSecond": 6204.1,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.52,
+          "reason": "テリトリー +1.5"
+        },
+        {
+          "time": "63:53",
+          "startSecond": 5369.6,
+          "endSecond": 5395.6,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "69:48",
+          "startSecond": 5724.2,
+          "endSecond": 5750.2,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 1.02,
+          "reason": "継続品質 +0.5 / テリトリー +0.4 / 接点・BD +0.2"
+        },
+        {
+          "time": "65:48",
+          "startSecond": 5484.2,
+          "endSecond": 5510.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "65:49",
+          "startSecond": 5485.2,
+          "endSecond": 5511.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "65:46",
+          "startSecond": 5482.3,
+          "endSecond": 5508.3,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 0.61,
+          "reason": "テリトリー +0.3 / 接点・BD +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "71:27",
+          "startSecond": 5823.7,
+          "endSecond": 5849.7,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.55,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "tiennan costley|japan-group",
+      "playerName": "Tiennan Costley",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 5.63,
+      "momentumAdded": 8.11,
+      "momentumLost": 2.47,
+      "scoringThreat": 3.24,
+      "territory": 1.1,
+      "possessionQuality": 3.52,
+      "contactBreakdown": -2.23,
+      "disciplineTurnover": 0,
+      "actions": 119,
+      "topActions": [
+        {
+          "time": "18:10",
+          "startSecond": 1139.9,
+          "endSecond": 1165.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.37,
+          "reason": "接点・BD +0.7 / 継続品質 +0.3 / テリトリー +0.2"
+        },
+        {
+          "time": "59:31",
+          "startSecond": 5011.9,
+          "endSecond": 5037.9,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.94,
+          "reason": "テリトリー +0.5 / 継続品質 +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "18:10",
+          "startSecond": 1140,
+          "endSecond": 1166,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "59:31",
+          "startSecond": 5011.9,
+          "endSecond": 5037.9,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "sanaila waqa|japan-group",
+      "playerName": "Sanaila Waqa",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 5.59,
+      "momentumAdded": 11.24,
+      "momentumLost": 5.65,
+      "scoringThreat": 7.8,
+      "territory": 0.78,
+      "possessionQuality": 1.77,
+      "contactBreakdown": -0.51,
+      "disciplineTurnover": -4.25,
+      "actions": 64,
+      "topActions": [
+        {
+          "time": "21:58",
+          "startSecond": 1481.8,
+          "endSecond": 1507.8,
+          "action": "Try",
+          "result": "Close Range - Ruck",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "15:33",
+          "startSecond": 982.2,
+          "endSecond": 1008.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "31:44",
+          "startSecond": 2119.4,
+          "endSecond": 2145.4,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "27:18",
+          "startSecond": 1853.1,
+          "endSecond": 1879.1,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "4:54",
+          "startSecond": 343.4,
+          "endSecond": 369.4,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 0.76,
+          "reason": "テリトリー +0.4 / 接点・BD +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "4:54",
+          "startSecond": 343.4,
+          "endSecond": 369.4,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "21:55",
+          "startSecond": 1478.9,
+          "endSecond": 1504.9,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 0.61,
+          "reason": "接点・BD +0.4"
+        },
+        {
+          "time": "31:43",
+          "startSecond": 2118.8,
+          "endSecond": 2144.8,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 0.6,
+          "reason": "テリトリー +0.2 / 接点・BD +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "shinobu fujiwara|japan-group",
+      "playerName": "Shinobu Fujiwara",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 5.35,
+      "momentumAdded": 13.71,
+      "momentumLost": 8.35,
+      "scoringThreat": 8.64,
+      "territory": -5.14,
+      "possessionQuality": 4.52,
+      "contactBreakdown": -0.07,
+      "disciplineTurnover": -2.6,
+      "actions": 233,
+      "topActions": [
+        {
+          "time": "13:06",
+          "startSecond": 835.6,
+          "endSecond": 861.6,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "24:07",
+          "startSecond": 1610.6,
+          "endSecond": 1636.6,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.33,
+          "reason": "テリトリー +1.3"
+        },
+        {
+          "time": "54:27",
+          "startSecond": 4649.9,
+          "endSecond": 4675.9,
+          "action": "Scrum",
+          "result": "Lost Pen Con",
+          "impact": -1.1,
+          "reason": "規律・TO -1.1"
+        },
+        {
+          "time": "40:32",
+          "startSecond": 2746.5,
+          "endSecond": 2772.5,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 1.06,
+          "reason": "継続品質 +0.5 / テリトリー +0.4 / 接点・BD +0.2"
+        },
+        {
+          "time": "38:00",
+          "startSecond": 2573.2,
+          "endSecond": 2599.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "35:21",
+          "startSecond": 2363.5,
+          "endSecond": 2389.5,
+          "action": "Kick",
+          "result": "Pressure Error",
+          "impact": 0.74,
+          "reason": "テリトリー +0.7"
+        },
+        {
+          "time": "52:47",
+          "startSecond": 4541.8,
+          "endSecond": 4567.8,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.58,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "juan philip smith|usa",
+      "playerName": "Juan Philip Smith",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": 5.17,
+      "momentumAdded": 8.43,
+      "momentumLost": 3.27,
+      "scoringThreat": 1.56,
+      "territory": 3.59,
+      "possessionQuality": 1.52,
+      "contactBreakdown": 0,
+      "disciplineTurnover": -1.5,
+      "actions": 83,
+      "topActions": [
+        {
+          "time": "53:16",
+          "startSecond": 4570.6,
+          "endSecond": 4596.6,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "80:32",
+          "startSecond": 6378.8,
+          "endSecond": 6404.8,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.22,
+          "reason": "テリトリー +1.2"
+        },
+        {
+          "time": "69:41",
+          "startSecond": 5717.4,
+          "endSecond": 5743.4,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.18,
+          "reason": "テリトリー +1.2"
+        },
+        {
+          "time": "62:06",
+          "startSecond": 5252.8,
+          "endSecond": 5278.8,
+          "action": "Kick",
+          "result": "Kick in Touch (Bounce)",
+          "impact": 1.11,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "64:47",
+          "startSecond": 5423.9,
+          "endSecond": 5449.9,
+          "action": "Scrum",
+          "result": "Lost Pen Con",
+          "impact": -1.1,
+          "reason": "規律・TO -1.1"
+        },
+        {
+          "time": "74:07",
+          "startSecond": 5983.8,
+          "endSecond": 6009.8,
+          "action": "Scrum",
+          "result": "Won Penalty",
+          "impact": 1.1,
+          "reason": "規律・TO +1.1"
+        },
+        {
+          "time": "70:58",
+          "startSecond": 5794.1,
+          "endSecond": 5820.1,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1,
+          "reason": "テリトリー +1.0"
+        },
+        {
+          "time": "52:34",
+          "startSecond": 4528.1,
+          "endSecond": 4554.1,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 0.81,
+          "reason": "テリトリー +0.8"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "faulua makisi|japan-group",
+      "playerName": "Faulua Makisi",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 4.69,
+      "momentumAdded": 7.59,
+      "momentumLost": 2.91,
+      "scoringThreat": 1.44,
+      "territory": 1.08,
+      "possessionQuality": 3.58,
+      "contactBreakdown": 0.09,
+      "disciplineTurnover": -1.5,
+      "actions": 63,
+      "topActions": [
+        {
+          "time": "25:48",
+          "startSecond": 1763.1,
+          "endSecond": 1789.1,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "37:27",
+          "startSecond": 2539.5,
+          "endSecond": 2565.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.87,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "2:54",
+          "startSecond": 223.1,
+          "endSecond": 249.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "1:38",
+          "startSecond": 90,
+          "endSecond": 116,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "25:46",
+          "startSecond": 1761.9,
+          "endSecond": 1787.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "34:58",
+          "startSecond": 2340.7,
+          "endSecond": 2366.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "24:59",
+          "startSecond": 1662.6,
+          "endSecond": 1688.6,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.61,
+          "reason": "テリトリー +0.3 / 接点・BD +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "1:39",
+          "startSecond": 91.2,
+          "endSecond": 117.2,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "ruben de haas|usa",
+      "playerName": "Ruben de Haas",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": 4.46,
+      "momentumAdded": 11.5,
+      "momentumLost": 7.04,
+      "scoringThreat": 2.76,
+      "territory": 0.1,
+      "possessionQuality": 3.72,
+      "contactBreakdown": -1.72,
+      "disciplineTurnover": -0.4,
+      "actions": 140,
+      "topActions": [
+        {
+          "time": "35:26",
+          "startSecond": 2368.4,
+          "endSecond": 2394.4,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "16:33",
+          "startSecond": 1042.4,
+          "endSecond": 1068.4,
+          "action": "Scrum",
+          "result": "Won Penalty",
+          "impact": 1.22,
+          "reason": "規律・TO +1.1"
+        },
+        {
+          "time": "34:42",
+          "startSecond": 2324.6,
+          "endSecond": 2350.6,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.18,
+          "reason": "テリトリー +1.2"
+        },
+        {
+          "time": "1:12",
+          "startSecond": 64.1,
+          "endSecond": 90.1,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.16,
+          "reason": "テリトリー +1.2"
+        },
+        {
+          "time": "43:31",
+          "startSecond": 3910.1,
+          "endSecond": 3936.1,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.07,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "19:39",
+          "startSecond": 1228.7,
+          "endSecond": 1254.7,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.9,
+          "reason": "継続品質 -0.6 / テリトリー -0.4"
+        },
+        {
+          "time": "26:09",
+          "startSecond": 1784.6,
+          "endSecond": 1810.6,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.87,
+          "reason": "継続品質 -0.6 / テリトリー -0.3"
+        },
+        {
+          "time": "50:37",
+          "startSecond": 4411.5,
+          "endSecond": 4437.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "50:37",
+          "startSecond": 4411.5,
+          "endSecond": 4437.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "47:50",
+          "startSecond": 4169.6,
+          "endSecond": 4195.6,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 0.69,
+          "reason": "テリトリー +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "tavite lopeti|usa",
+      "playerName": "Tavite Lopeti",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": 4.35,
+      "momentumAdded": 6.6,
+      "momentumLost": 2.24,
+      "scoringThreat": 0.36,
+      "territory": 2.97,
+      "possessionQuality": 1.83,
+      "contactBreakdown": -0.81,
+      "disciplineTurnover": 0,
+      "actions": 47,
+      "topActions": [
+        {
+          "time": "18:37",
+          "startSecond": 1167,
+          "endSecond": 1193,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 2.15,
+          "reason": "テリトリー +2.1"
+        },
+        {
+          "time": "7:54",
+          "startSecond": 523.1,
+          "endSecond": 549.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.11,
+          "reason": "接点・BD +0.7 / テリトリー +0.3"
+        },
+        {
+          "time": "53:10",
+          "startSecond": 4564.1,
+          "endSecond": 4590.1,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.76,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "7:54",
+          "startSecond": 523.7,
+          "endSecond": 549.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "78:01",
+          "startSecond": 6217.8,
+          "endSecond": 6243.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "greg peterson|usa",
+      "playerName": "Greg Peterson",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": -4.03,
+      "momentumAdded": 0.94,
+      "momentumLost": 4.97,
+      "scoringThreat": 0.84,
+      "territory": -0.32,
+      "possessionQuality": 0.4,
+      "contactBreakdown": -0.7,
+      "disciplineTurnover": -4.25,
+      "actions": 66,
+      "topActions": [
+        {
+          "time": "0:03",
+          "startSecond": 0,
+          "endSecond": 21.4,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "9:59",
+          "startSecond": 648.7,
+          "endSecond": 674.7,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "37:42",
+          "startSecond": 2555.1,
+          "endSecond": 2581.1,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "vili helu|usa",
+      "playerName": "Vili Helu",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": 3.97,
+      "momentumAdded": 7.59,
+      "momentumLost": 3.62,
+      "scoringThreat": 3.36,
+      "territory": 0.1,
+      "possessionQuality": 3.85,
+      "contactBreakdown": -0.89,
+      "disciplineTurnover": -2.45,
+      "actions": 87,
+      "topActions": [
+        {
+          "time": "59:20",
+          "startSecond": 5001.3,
+          "endSecond": 5027.3,
+          "action": "Tackle",
+          "result": "Pen Conceded",
+          "impact": -1.55,
+          "reason": "規律・TO -1.2 / 接点・BD -0.3"
+        },
+        {
+          "time": "59:22",
+          "startSecond": 5003.2,
+          "endSecond": 5029.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "27:24",
+          "startSecond": 1859.2,
+          "endSecond": 1885.2,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 1.12,
+          "reason": "継続品質 +0.5 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "27:26",
+          "startSecond": 1861.3,
+          "endSecond": 1887.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "27:29",
+          "startSecond": 1864.3,
+          "endSecond": 1890.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "13:07",
+          "startSecond": 836.6,
+          "endSecond": 862.6,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.66,
+          "reason": "継続品質 +0.3 / テリトリー +0.2 / 接点・BD +0.2"
+        },
+        {
+          "time": "6:40",
+          "startSecond": 449.1,
+          "endSecond": 475.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "26:06",
+          "startSecond": 1781.4,
+          "endSecond": 1807.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "mitch wilson|usa",
+      "playerName": "Mitch Wilson",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": 3.8,
+      "momentumAdded": 5.43,
+      "momentumLost": 1.62,
+      "scoringThreat": 0.12,
+      "territory": 4.02,
+      "possessionQuality": 1.21,
+      "contactBreakdown": -1.55,
+      "disciplineTurnover": 0,
+      "actions": 34,
+      "topActions": [
+        {
+          "time": "10:56",
+          "startSecond": 705.8,
+          "endSecond": 731.8,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 2.08,
+          "reason": "テリトリー +2.1"
+        },
+        {
+          "time": "25:13",
+          "startSecond": 1676.6,
+          "endSecond": 1702.6,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.18,
+          "reason": "テリトリー +1.2"
+        },
+        {
+          "time": "6:44",
+          "startSecond": 453.6,
+          "endSecond": 479.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "tommaso boni|usa",
+      "playerName": "Tommaso Boni",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": 3.26,
+      "momentumAdded": 6.54,
+      "momentumLost": 3.28,
+      "scoringThreat": 0.84,
+      "territory": 2.08,
+      "possessionQuality": 1.62,
+      "contactBreakdown": -1.28,
+      "disciplineTurnover": 0,
+      "actions": 49,
+      "topActions": [
+        {
+          "time": "24:26",
+          "startSecond": 1629.6,
+          "endSecond": 1655.6,
+          "action": "Kick",
+          "result": "Kick in Touch (Bounce)",
+          "impact": 1.36,
+          "reason": "テリトリー +1.4"
+        },
+        {
+          "time": "49:00",
+          "startSecond": 4314.8,
+          "endSecond": 4340.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.22,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "49:02",
+          "startSecond": 4315.9,
+          "endSecond": 4341.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "takayoshi mohara|japan-group",
+      "playerName": "Takayoshi Mohara",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": -2.76,
+      "momentumAdded": 1.34,
+      "momentumLost": 4.1,
+      "scoringThreat": 0.24,
+      "territory": 0,
+      "possessionQuality": 0.65,
+      "contactBreakdown": 0.1,
+      "disciplineTurnover": -3.75,
+      "actions": 26,
+      "topActions": [
+        {
+          "time": "54:27",
+          "startSecond": 4651.4,
+          "endSecond": 4677.4,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "55:39",
+          "startSecond": 4726.7,
+          "endSecond": 4752.7,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "56:53",
+          "startSecond": 4800.1,
+          "endSecond": 4826.1,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "59:42",
+          "startSecond": 5023.2,
+          "endSecond": 5049.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "amato fakatava|japan-group",
+      "playerName": "Amato Fakatava",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 2.54,
+      "momentumAdded": 2.78,
+      "momentumLost": 0.24,
+      "scoringThreat": 0.6,
+      "territory": 0.53,
+      "possessionQuality": 1.03,
+      "contactBreakdown": 0.38,
+      "disciplineTurnover": 0,
+      "actions": 37,
+      "topActions": [
+        {
+          "time": "61:33",
+          "startSecond": 5220,
+          "endSecond": 5246,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.63,
+          "reason": "継続品質 +0.2 / テリトリー +0.2 / 接点・BD +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "warner dearns|japan-group",
+      "playerName": "Warner Dearns",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 2.49,
+      "momentumAdded": 6.97,
+      "momentumLost": 4.48,
+      "scoringThreat": 1.32,
+      "territory": 0.93,
+      "possessionQuality": 1.94,
+      "contactBreakdown": -1.7,
+      "disciplineTurnover": 0,
+      "actions": 96,
+      "topActions": [
+        {
+          "time": "46:12",
+          "startSecond": 4071.1,
+          "endSecond": 4097.1,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 1.31,
+          "reason": "継続品質 +0.5 / 接点・BD +0.4 / テリトリー +0.4"
+        },
+        {
+          "time": "34:57",
+          "startSecond": 2339,
+          "endSecond": 2365,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.73,
+          "reason": "接点・BD +0.5 / テリトリー +0.2"
+        },
+        {
+          "time": "46:13",
+          "startSecond": 4071.6,
+          "endSecond": 4097.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "63:27",
+          "startSecond": 5343.8,
+          "endSecond": 5369.8,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.62,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "atsushi sakate|japan-group",
+      "playerName": "Atsushi Sakate",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 2.39,
+      "momentumAdded": 4.86,
+      "momentumLost": 2.47,
+      "scoringThreat": 1.68,
+      "territory": 0.05,
+      "possessionQuality": 0.24,
+      "contactBreakdown": -2.73,
+      "disciplineTurnover": 3.15,
+      "actions": 47,
+      "topActions": [
+        {
+          "time": "2:44",
+          "startSecond": 213.6,
+          "endSecond": 239.6,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.6,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "31:39",
+          "startSecond": 2114.3,
+          "endSecond": 2140.3,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "moni tonga'uiha|usa",
+      "playerName": "Moni Tonga'uiha",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": -2.38,
+      "momentumAdded": 3.31,
+      "momentumLost": 5.68,
+      "scoringThreat": 1.44,
+      "territory": -0.03,
+      "possessionQuality": 0.61,
+      "contactBreakdown": -1.95,
+      "disciplineTurnover": -2.45,
+      "actions": 50,
+      "topActions": [
+        {
+          "time": "71:11",
+          "startSecond": 5807.2,
+          "endSecond": 5833.2,
+          "action": "Tackle",
+          "result": "Pen Conceded",
+          "impact": -1.55,
+          "reason": "規律・TO -1.2 / 接点・BD -0.3"
+        },
+        {
+          "time": "71:12",
+          "startSecond": 5808.5,
+          "endSecond": 5834.5,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "68:33",
+          "startSecond": 5649.7,
+          "endSecond": 5675.7,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.71,
+          "reason": "接点・BD -0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "takuya yamasawa|japan-group",
+      "playerName": "Takuya Yamasawa",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 2.35,
+      "momentumAdded": 6.24,
+      "momentumLost": 3.89,
+      "scoringThreat": 0,
+      "territory": 4.46,
+      "possessionQuality": 1.05,
+      "contactBreakdown": -0.16,
+      "disciplineTurnover": -3,
+      "actions": 30,
+      "topActions": [
+        {
+          "time": "18:44",
+          "startSecond": 1173.8,
+          "endSecond": 1199.8,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 2.12,
+          "reason": "テリトリー +2.1"
+        },
+        {
+          "time": "0:54",
+          "startSecond": 46.1,
+          "endSecond": 72.1,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "46:26",
+          "startSecond": 4085.3,
+          "endSecond": 4111.3,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "45:36",
+          "startSecond": 4034.9,
+          "endSecond": 4060.9,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.07,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "7:03",
+          "startSecond": 472.3,
+          "endSecond": 498.3,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 0.96,
+          "reason": "テリトリー +1.0"
+        },
+        {
+          "time": "37:34",
+          "startSecond": 2546.6,
+          "endSecond": 2572.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.66,
+          "reason": "接点・BD +0.5"
+        },
+        {
+          "time": "37:35",
+          "startSecond": 2547.6,
+          "endSecond": 2573.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "34:49",
+          "startSecond": 2331.2,
+          "endSecond": 2357.2,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.61,
+          "reason": "接点・BD -0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "keijiro tamefusa|japan-group",
+      "playerName": "Keijiro Tamefusa",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 1.89,
+      "momentumAdded": 3.14,
+      "momentumLost": 1.25,
+      "scoringThreat": 1.2,
+      "territory": 0.2,
+      "possessionQuality": 1.56,
+      "contactBreakdown": 0.18,
+      "disciplineTurnover": -1.25,
+      "actions": 48,
+      "topActions": [
+        {
+          "time": "6:16",
+          "startSecond": 425.2,
+          "endSecond": 451.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "3:10",
+          "startSecond": 239.5,
+          "endSecond": 265.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "37:41",
+          "startSecond": 2553.5,
+          "endSecond": 2579.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "paul mullen|usa",
+      "playerName": "Paul Mullen",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": -1.54,
+      "momentumAdded": 0.64,
+      "momentumLost": 2.18,
+      "scoringThreat": 0.48,
+      "territory": 0.05,
+      "possessionQuality": 0.23,
+      "contactBreakdown": -1.05,
+      "disciplineTurnover": -1.25,
+      "actions": 33,
+      "topActions": [
+        {
+          "time": "64:52",
+          "startSecond": 5428.2,
+          "endSecond": 5454.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "sean mcnulty|usa",
+      "playerName": "Sean McNulty",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": 1.48,
+      "momentumAdded": 2.54,
+      "momentumLost": 1.06,
+      "scoringThreat": 0.12,
+      "territory": 0.25,
+      "possessionQuality": 0.04,
+      "contactBreakdown": -0.43,
+      "disciplineTurnover": 1.5,
+      "actions": 27,
+      "topActions": [
+        {
+          "time": "63:27",
+          "startSecond": 5343.3,
+          "endSecond": 5369.3,
+          "action": "Lineout Throw",
+          "result": "Lost Clean",
+          "impact": -0.75,
+          "reason": "規律・TO -0.8"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "dominic besag|usa",
+      "playerName": "Dominic Besag",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": -1.46,
+      "momentumAdded": 0.66,
+      "momentumLost": 2.13,
+      "scoringThreat": 0.72,
+      "territory": -0.02,
+      "possessionQuality": 0.12,
+      "contactBreakdown": -0.77,
+      "disciplineTurnover": -1.5,
+      "actions": 15,
+      "topActions": [
+        {
+          "time": "76:19",
+          "startSecond": 6115.5,
+          "endSecond": 6141.5,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "shuhei takeuchi|japan-group",
+      "playerName": "Shuhei Takeuchi",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": -1.39,
+      "momentumAdded": 1.62,
+      "momentumLost": 3.01,
+      "scoringThreat": 0.84,
+      "territory": 0.23,
+      "possessionQuality": 0.23,
+      "contactBreakdown": 0.06,
+      "disciplineTurnover": -2.75,
+      "actions": 35,
+      "topActions": [
+        {
+          "time": "80:25",
+          "startSecond": 6371.7,
+          "endSecond": 6397.7,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "74:07",
+          "startSecond": 5983.8,
+          "endSecond": 6009.8,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "paddy ryan|usa",
+      "playerName": "Paddy Ryan",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": -1.14,
+      "momentumAdded": 4.47,
+      "momentumLost": 5.61,
+      "scoringThreat": 1.44,
+      "territory": 0.68,
+      "possessionQuality": 1.02,
+      "contactBreakdown": -0.02,
+      "disciplineTurnover": -4.25,
+      "actions": 86,
+      "topActions": [
+        {
+          "time": "41:13",
+          "startSecond": 3772.1,
+          "endSecond": 3798.1,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "78:04",
+          "startSecond": 6220.8,
+          "endSecond": 6246.8,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "30:52",
+          "startSecond": 2067.3,
+          "endSecond": 2093.3,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "27:21",
+          "startSecond": 1856.8,
+          "endSecond": 1882.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "jone naikabula|japan-group",
+      "playerName": "Jone Naikabula",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": -1.03,
+      "momentumAdded": 2.98,
+      "momentumLost": 4.01,
+      "scoringThreat": 0.48,
+      "territory": 0.1,
+      "possessionQuality": 1.25,
+      "contactBreakdown": 0.13,
+      "disciplineTurnover": -3,
+      "actions": 24,
+      "topActions": [
+        {
+          "time": "5:15",
+          "startSecond": 364.2,
+          "endSecond": 390.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "18:53",
+          "startSecond": 1182.9,
+          "endSecond": 1208.9,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "4:52",
+          "startSecond": 341.9,
+          "endSecond": 367.9,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "40:38",
+          "startSecond": 2752,
+          "endSecond": 2778,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "43:36",
+          "startSecond": 3915,
+          "endSecond": 3941,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        },
+        {
+          "time": "5:15",
+          "startSecond": 364.2,
+          "endSecond": 390.2,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.55,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "alex maughan|usa",
+      "playerName": "Alex Maughan",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": -1.02,
+      "momentumAdded": 0.93,
+      "momentumLost": 1.95,
+      "scoringThreat": 0.6,
+      "territory": 0.08,
+      "possessionQuality": 0.04,
+      "contactBreakdown": -0.48,
+      "disciplineTurnover": -1.25,
+      "actions": 36,
+      "topActions": [
+        {
+          "time": "1:31",
+          "startSecond": 83.6,
+          "endSecond": 109.6,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "isaiah mapusua|japan-group",
+      "playerName": "Isaiah Mapusua",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 1.01,
+      "momentumAdded": 2.74,
+      "momentumLost": 1.73,
+      "scoringThreat": 0.24,
+      "territory": 0.23,
+      "possessionQuality": 1.65,
+      "contactBreakdown": 0.4,
+      "disciplineTurnover": -1.5,
+      "actions": 27,
+      "topActions": [
+        {
+          "time": "72:32",
+          "startSecond": 5888.1,
+          "endSecond": 5914.1,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "63:32",
+          "startSecond": 5348.6,
+          "endSecond": 5374.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "63:33",
+          "startSecond": 5349.3,
+          "endSecond": 5375.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "63:30",
+          "startSecond": 5346.8,
+          "endSecond": 5372.8,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.59,
+          "reason": "テリトリー +0.3 / 接点・BD +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "taiki koyama|japan-group",
+      "playerName": "Taiki Koyama",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 0.91,
+      "momentumAdded": 2.04,
+      "momentumLost": 1.14,
+      "scoringThreat": 0.36,
+      "territory": -0.72,
+      "possessionQuality": 0.64,
+      "contactBreakdown": 0.63,
+      "disciplineTurnover": 0,
+      "actions": 50,
+      "topActions": [
+        {
+          "time": "69:13",
+          "startSecond": 5689.4,
+          "endSecond": 5715.4,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 0.7,
+          "reason": "テリトリー +0.7"
+        },
+        {
+          "time": "72:31",
+          "startSecond": 5887.4,
+          "endSecond": 5913.4,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.6,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "cory daniel|usa",
+      "playerName": "Cory Daniel",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": -0.83,
+      "momentumAdded": 2.33,
+      "momentumLost": 3.16,
+      "scoringThreat": 1.2,
+      "territory": 0.08,
+      "possessionQuality": 0.99,
+      "contactBreakdown": -3.1,
+      "disciplineTurnover": 0,
+      "actions": 61,
+      "topActions": [
+        {
+          "time": "6:26",
+          "startSecond": 435.7,
+          "endSecond": 461.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "tomoki osada|japan-group",
+      "playerName": "Tomoki Osada",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 0.76,
+      "momentumAdded": 0.76,
+      "momentumLost": 0,
+      "scoringThreat": 0.36,
+      "territory": 0.08,
+      "possessionQuality": 0.27,
+      "contactBreakdown": 0.06,
+      "disciplineTurnover": 0,
+      "actions": 9,
+      "topActions": [],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "jack iscaro|usa",
+      "playerName": "Jack Iscaro",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": 0.73,
+      "momentumAdded": 4.01,
+      "momentumLost": 3.28,
+      "scoringThreat": 1.56,
+      "territory": 0.58,
+      "possessionQuality": 1.27,
+      "contactBreakdown": -1.43,
+      "disciplineTurnover": -1.25,
+      "actions": 62,
+      "topActions": [
+        {
+          "time": "40:24",
+          "startSecond": 2737.9,
+          "endSecond": 2763.9,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "27:31",
+          "startSecond": 1866.5,
+          "endSecond": 1892.5,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.69,
+          "reason": "接点・BD -0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "kanji shimokawa|japan-group",
+      "playerName": "Kanji Shimokawa",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 0.36,
+      "momentumAdded": 9.1,
+      "momentumLost": 8.74,
+      "scoringThreat": 2.28,
+      "territory": 1.63,
+      "possessionQuality": 1.71,
+      "contactBreakdown": -0.35,
+      "disciplineTurnover": -4.9,
+      "actions": 88,
+      "topActions": [
+        {
+          "time": "26:13",
+          "startSecond": 1788.6,
+          "endSecond": 1814.6,
+          "action": "Tackle",
+          "result": "Pen Conceded",
+          "impact": -1.55,
+          "reason": "規律・TO -1.2 / 接点・BD -0.3"
+        },
+        {
+          "time": "74:54",
+          "startSecond": 6030.8,
+          "endSecond": 6056.8,
+          "action": "Tackle",
+          "result": "Pen Conceded",
+          "impact": -1.55,
+          "reason": "規律・TO -1.2 / 接点・BD -0.3"
+        },
+        {
+          "time": "1:27",
+          "startSecond": 79.9,
+          "endSecond": 105.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.54,
+          "reason": "接点・BD +0.7 / 継続品質 +0.5 / テリトリー +0.4"
+        },
+        {
+          "time": "26:16",
+          "startSecond": 1791.3,
+          "endSecond": 1817.3,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "74:58",
+          "startSecond": 6034.4,
+          "endSecond": 6060.4,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "80:20",
+          "startSecond": 6366.2,
+          "endSecond": 6392.2,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.81,
+          "reason": "テリトリー +0.3 / 継続品質 +0.2 / 接点・BD +0.2"
+        },
+        {
+          "time": "59:42",
+          "startSecond": 5023.1,
+          "endSecond": 5049.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "80:20",
+          "startSecond": 6366.8,
+          "endSecond": 6392.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "46:19",
+          "startSecond": 4078.4,
+          "endSecond": 4104.4,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.7,
+          "reason": "テリトリー +0.3 / 継続品質 +0.2 / 接点・BD +0.2"
+        },
+        {
+          "time": "76:25",
+          "startSecond": 6121.1,
+          "endSecond": 6147.1,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.58,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "thomas tu'avao|usa",
+      "playerName": "Thomas Tu'avao",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": 0.32,
+      "momentumAdded": 1.02,
+      "momentumLost": 0.7,
+      "scoringThreat": 0,
+      "territory": 0.3,
+      "possessionQuality": 0.32,
+      "contactBreakdown": -0.3,
+      "disciplineTurnover": 0,
+      "actions": 17,
+      "topActions": [
+        {
+          "time": "70:53",
+          "startSecond": 5789.2,
+          "endSecond": 5815.2,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.6,
+          "reason": "継続品質 +0.2 / 接点・BD +0.2 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "shogo miura|japan-group",
+      "playerName": "Shogo Miura",
+      "team": "Japan",
+      "matchId": "941547",
+      "netMomentum": 0.18,
+      "momentumAdded": 2.56,
+      "momentumLost": 2.38,
+      "scoringThreat": 1.32,
+      "territory": 0.08,
+      "possessionQuality": 1.46,
+      "contactBreakdown": -1.43,
+      "disciplineTurnover": -1.25,
+      "actions": 40,
+      "topActions": [
+        {
+          "time": "16:36",
+          "startSecond": 1045.8,
+          "endSecond": 1071.8,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "3:10",
+          "startSecond": 239.2,
+          "endSecond": 265.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "34:58",
+          "startSecond": 2340.6,
+          "endSecond": 2366.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "conner mooneyham|usa",
+      "playerName": "Conner Mooneyham",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": -0.06,
+      "momentumAdded": 2.04,
+      "momentumLost": 2.1,
+      "scoringThreat": 0,
+      "territory": 0.15,
+      "possessionQuality": 1.06,
+      "contactBreakdown": -1.27,
+      "disciplineTurnover": 0,
+      "actions": 25,
+      "topActions": [
+        {
+          "time": "52:51",
+          "startSecond": 4545.7,
+          "endSecond": 4571.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "52:49",
+          "startSecond": 4543.3,
+          "endSecond": 4569.3,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 0.6,
+          "reason": "継続品質 +0.2 / 接点・BD +0.2 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "jason damm|usa",
+      "playerName": "Jason Damm",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": 0.06,
+      "momentumAdded": 0.16,
+      "momentumLost": 0.1,
+      "scoringThreat": 0.12,
+      "territory": 0,
+      "possessionQuality": 0.08,
+      "contactBreakdown": -0.14,
+      "disciplineTurnover": 0,
+      "actions": 19,
+      "topActions": [],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "jake turnbull|usa",
+      "playerName": "Jake Turnbull",
+      "team": "USA",
+      "matchId": "941547",
+      "netMomentum": -0.04,
+      "momentumAdded": 0,
+      "momentumLost": 0.04,
+      "scoringThreat": 0,
+      "territory": 0,
+      "possessionQuality": 0,
+      "contactBreakdown": -0.04,
+      "disciplineTurnover": 0,
+      "actions": 20,
+      "topActions": [],
+      "reviewPriority": "Low"
+    }
+  ]
+}

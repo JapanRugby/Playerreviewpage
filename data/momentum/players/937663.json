@@ -1,767 +1,3070 @@
-[
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 26065,
-    "playerName": "Tiaan Swanepoel",
-    "net_momentum": 18.76701179275437,
-    "momentum_added": 19.679066936426437,
-    "momentum_lost": 0.9120551436720604,
-    "events_count": 130,
-    "scoring_threat_player_team": 12.04,
-    "territory_player_team": 22.881,
-    "possession_quality_player_team": 3.355,
-    "contact_breakdown_player_team": -0.1699999999999998,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 57671,
-    "playerName": "Juan Zuccarino",
-    "net_momentum": 12.324376960656856,
-    "momentum_added": 13.063049026351832,
-    "momentum_lost": 0.7386720656949778,
-    "events_count": 105,
-    "scoring_threat_player_team": 6.72,
-    "territory_player_team": 15.752,
-    "possession_quality_player_team": 4.335,
-    "contact_breakdown_player_team": -3.33,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 23524,
-    "playerName": "Divan Rossouw",
-    "net_momentum": 8.074166004183008,
-    "momentum_added": 9.228558429131589,
-    "momentum_lost": 1.15439242494858,
-    "events_count": 63,
-    "scoring_threat_player_team": 7.08,
-    "territory_player_team": 6.489,
-    "possession_quality_player_team": 8.7,
-    "contact_breakdown_player_team": 0.56,
-    "discipline_turnover_player_team": -4.15,
-    "review_priority": "Critical"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 30224,
-    "playerName": "Santiago Civetta",
-    "net_momentum": 6.5057903116623965,
-    "momentum_added": 8.006470490235142,
-    "momentum_lost": 1.5006801785727453,
-    "events_count": 94,
-    "scoring_threat_player_team": 7.8,
-    "territory_player_team": 0.85,
-    "possession_quality_player_team": 3.88,
-    "contact_breakdown_player_team": 0.1200000000000001,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 43870,
-    "playerName": "Carlos Deus",
-    "net_momentum": 5.87024293857069,
-    "momentum_added": 7.337249120640493,
-    "momentum_lost": 1.4670061820698028,
-    "events_count": 90,
-    "scoring_threat_player_team": 7.2,
-    "territory_player_team": 2.3000000000000003,
-    "possession_quality_player_team": 6.955,
-    "contact_breakdown_player_team": 1.42,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 50620,
-    "playerName": "Danco Burger",
-    "net_momentum": 5.307214970108599,
-    "momentum_added": 6.195091404143351,
-    "momentum_lost": 0.8878764340347515,
-    "events_count": 76,
-    "scoring_threat_player_team": 8.52,
-    "territory_player_team": 5.051,
-    "possession_quality_player_team": 3.22,
-    "contact_breakdown_player_team": 1.0700000000000005,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 20708,
-    "playerName": "Agustin Ormaechea",
-    "net_momentum": 5.243622750614643,
-    "momentum_added": 7.32198736597673,
-    "momentum_lost": 2.078364615362088,
-    "events_count": 205,
-    "scoring_threat_player_team": 5.96,
-    "territory_player_team": 12.012,
-    "possession_quality_player_team": 3.78,
-    "contact_breakdown_player_team": -1.87,
-    "discipline_turnover_player_team": 0.4000000000000001,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 31018,
-    "playerName": "Guillermo Pujadas",
-    "net_momentum": 4.726857245548739,
-    "momentum_added": 5.127366354518274,
-    "momentum_lost": 0.4005091089695338,
-    "events_count": 53,
-    "scoring_threat_player_team": 2.04,
-    "territory_player_team": 0.625,
-    "possession_quality_player_team": 1.44,
-    "contact_breakdown_player_team": -1.17,
-    "discipline_turnover_player_team": 2.25,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 23522,
-    "playerName": "Damian Stevens",
-    "net_momentum": 3.8057201913972114,
-    "momentum_added": 5.665810753454114,
-    "momentum_lost": 1.8600905620569024,
-    "events_count": 287,
-    "scoring_threat_player_team": 10.44,
-    "territory_player_team": -2.737,
-    "possession_quality_player_team": 8.425,
-    "contact_breakdown_player_team": -1.04,
-    "discipline_turnover_player_team": 0.0500000000000002,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 22664,
-    "playerName": "JC Greyling",
-    "net_momentum": 3.656481763209772,
-    "momentum_added": 4.852747459998096,
-    "momentum_lost": 1.1962656967883236,
-    "events_count": 62,
-    "scoring_threat_player_team": 1.56,
-    "territory_player_team": 2.0,
-    "possession_quality_player_team": 5.99,
-    "contact_breakdown_player_team": 3.35,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 23526,
-    "playerName": "Louis van der Westhuizen",
-    "net_momentum": 2.223471786431026,
-    "momentum_added": 4.29790991401214,
-    "momentum_lost": 2.074438127581113,
-    "events_count": 94,
-    "scoring_threat_player_team": 3.6,
-    "territory_player_team": 1.525,
-    "possession_quality_player_team": 3.24,
-    "contact_breakdown_player_team": 1.21,
-    "discipline_turnover_player_team": -0.4000000000000001,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 23529,
-    "playerName": "Wian Conradie",
-    "net_momentum": 2.0134604840124584,
-    "momentum_added": 5.416631420698314,
-    "momentum_lost": 3.403170936685856,
-    "events_count": 94,
-    "scoring_threat_player_team": 10.68,
-    "territory_player_team": 2.05,
-    "possession_quality_player_team": 3.695,
-    "contact_breakdown_player_team": 0.4100000000000002,
-    "discipline_turnover_player_team": -2.15,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 30222,
-    "playerName": "Diego Ardao",
-    "net_momentum": 1.2212868395490064,
-    "momentum_added": 3.5692028629476,
-    "momentum_lost": 2.347916023398593,
-    "events_count": 33,
-    "scoring_threat_player_team": 6.48,
-    "territory_player_team": 0.975,
-    "possession_quality_player_team": 1.18,
-    "contact_breakdown_player_team": 0.01,
-    "discipline_turnover_player_team": -1.8,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 23494,
-    "playerName": "German Kessler",
-    "net_momentum": 1.1371115192858083,
-    "momentum_added": 1.4085695190408312,
-    "momentum_lost": 0.271457999755023,
-    "events_count": 32,
-    "scoring_threat_player_team": 0.6,
-    "territory_player_team": 0.275,
-    "possession_quality_player_team": 0.2,
-    "contact_breakdown_player_team": 0.48,
-    "discipline_turnover_player_team": 1.75,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 28396,
-    "playerName": "Manuel Leindekar",
-    "net_momentum": 1.0053424356697025,
-    "momentum_added": 1.6474019479813458,
-    "momentum_lost": 0.6420595123116432,
-    "events_count": 88,
-    "scoring_threat_player_team": 2.76,
-    "territory_player_team": -0.45,
-    "possession_quality_player_team": 0.4549999999999998,
-    "contact_breakdown_player_team": -1.22,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 52643,
-    "playerName": "Andre van der Berg",
-    "net_momentum": 0.9372598719737276,
-    "momentum_added": 1.0400695407429523,
-    "momentum_lost": 0.102809668769225,
-    "events_count": 22,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 1.425,
-    "possession_quality_player_team": 3.17,
-    "contact_breakdown_player_team": 1.51,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 35269,
-    "playerName": "Felipe Arcos Perez",
-    "net_momentum": 0.8351902459843733,
-    "momentum_added": 3.702600334680324,
-    "momentum_lost": 2.8674100886959506,
-    "events_count": 51,
-    "scoring_threat_player_team": 7.08,
-    "territory_player_team": 1.175,
-    "possession_quality_player_team": 3.79,
-    "contact_breakdown_player_team": -0.2599999999999999,
-    "discipline_turnover_player_team": -3.25,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 37718,
-    "playerName": "Eric Dosantos",
-    "net_momentum": 0.828719098164556,
-    "momentum_added": 1.6481730884604653,
-    "momentum_lost": 0.8194539902959093,
-    "events_count": 51,
-    "scoring_threat_player_team": 2.16,
-    "territory_player_team": 0.25,
-    "possession_quality_player_team": 0.34,
-    "contact_breakdown_player_team": -2.66,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 56157,
-    "playerName": "Bautista Basso",
-    "net_momentum": 0.6526489456694909,
-    "momentum_added": 1.7474690641454325,
-    "momentum_lost": 1.0948201184759414,
-    "events_count": 39,
-    "scoring_threat_player_team": 0.48,
-    "territory_player_team": 2.238,
-    "possession_quality_player_team": 5.08,
-    "contact_breakdown_player_team": -1.4499999999999995,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 26883,
-    "playerName": "Johan Retief",
-    "net_momentum": 0.4771645453427242,
-    "momentum_added": 1.49000950818066,
-    "momentum_lost": 1.0128449628379357,
-    "events_count": 78,
-    "scoring_threat_player_team": 2.16,
-    "territory_player_team": 0.65,
-    "possession_quality_player_team": 1.285,
-    "contact_breakdown_player_team": -0.0599999999999998,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 18952,
-    "playerName": "Casper Viviers",
-    "net_momentum": 0.3848868759686158,
-    "momentum_added": 0.9798674494073047,
-    "momentum_lost": 0.5949805734386888,
-    "events_count": 55,
-    "scoring_threat_player_team": 2.28,
-    "territory_player_team": 0.375,
-    "possession_quality_player_team": 1.865,
-    "contact_breakdown_player_team": -0.4599999999999999,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 29548,
-    "playerName": "Adriaan Ludick",
-    "net_momentum": 0.3496193453461991,
-    "momentum_added": 0.910388481413624,
-    "momentum_lost": 0.560769136067425,
-    "events_count": 56,
-    "scoring_threat_player_team": 1.56,
-    "territory_player_team": 0.2,
-    "possession_quality_player_team": 0.505,
-    "contact_breakdown_player_team": -0.3299999999999999,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 35295,
-    "playerName": "Reinaldo Piussi",
-    "net_momentum": 0.3350167468172712,
-    "momentum_added": 0.6759215525791914,
-    "momentum_lost": 0.3409048057619201,
-    "events_count": 39,
-    "scoring_threat_player_team": 0.12,
-    "territory_player_team": 0.25,
-    "possession_quality_player_team": 0.47,
-    "contact_breakdown_player_team": 0.4100000000000001,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 50441,
-    "playerName": "Gerswin Mouton",
-    "net_momentum": 0.2887336793907535,
-    "momentum_added": 1.3985928178289335,
-    "momentum_lost": 1.1098591384381802,
-    "events_count": 30,
-    "scoring_threat_player_team": 0.36,
-    "territory_player_team": 0.625,
-    "possession_quality_player_team": 1.395,
-    "contact_breakdown_player_team": 0.06,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 25201,
-    "playerName": "Ruan Ludick",
-    "net_momentum": 0.2698747891744313,
-    "momentum_added": 0.3022129537007529,
-    "momentum_lost": 0.0323381645263215,
-    "events_count": 14,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 0.225,
-    "possession_quality_player_team": 0.32,
-    "contact_breakdown_player_team": 0.75,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 43871,
-    "playerName": "Juan Manuel Tafernaberry",
-    "net_momentum": 0.2195443482744852,
-    "momentum_added": 0.552909458577618,
-    "momentum_lost": 0.3333651103031327,
-    "events_count": 46,
-    "scoring_threat_player_team": 0.48,
-    "territory_player_team": 0.0270000000000001,
-    "possession_quality_player_team": 1.12,
-    "contact_breakdown_player_team": -0.35,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 37715,
-    "playerName": "Lucas Bianchi",
-    "net_momentum": 0.1718703692296742,
-    "momentum_added": 0.6310361706682226,
-    "momentum_lost": 0.4591658014385483,
-    "events_count": 27,
-    "scoring_threat_player_team": 0.36,
-    "territory_player_team": 1.316,
-    "possession_quality_player_team": 1.185,
-    "contact_breakdown_player_team": -0.5,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 33457,
-    "playerName": "Des Sethie",
-    "net_momentum": 0.1638973143915164,
-    "momentum_added": 0.4073037626231339,
-    "momentum_lost": 0.2434064482316175,
-    "events_count": 47,
-    "scoring_threat_player_team": 1.44,
-    "territory_player_team": 0.25,
-    "possession_quality_player_team": 0.35,
-    "contact_breakdown_player_team": -1.5,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 29552,
-    "playerName": "Prince Gaoseb",
-    "net_momentum": 0.1022987265377828,
-    "momentum_added": 0.7246181147112821,
-    "momentum_lost": 0.6223193881734993,
-    "events_count": 35,
-    "scoring_threat_player_team": 0.24,
-    "territory_player_team": 0.4,
-    "possession_quality_player_team": 0.225,
-    "contact_breakdown_player_team": 0.7000000000000001,
-    "discipline_turnover_player_team": -1.8,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 25349,
-    "playerName": "Gihard Visagie",
-    "net_momentum": 0.0763447487953118,
-    "momentum_added": 0.4821827564618708,
-    "momentum_lost": 0.405838007666559,
-    "events_count": 17,
-    "scoring_threat_player_team": 0.24,
-    "territory_player_team": 0.0,
-    "possession_quality_player_team": 0.0,
-    "contact_breakdown_player_team": -0.8899999999999999,
-    "discipline_turnover_player_team": 0.7,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 59880,
-    "playerName": "Haitembu Shifuka",
-    "net_momentum": 0.0640499502742107,
-    "momentum_added": 0.1657330931973982,
-    "momentum_lost": 0.1016831429231874,
-    "events_count": 16,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 0.225,
-    "possession_quality_player_team": 0.265,
-    "contact_breakdown_player_team": -0.51,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 21938,
-    "playerName": "Mateo Sanguinetti",
-    "net_momentum": -0.0297844237805557,
-    "momentum_added": 1.1534985722128863,
-    "momentum_lost": 1.1832829959934423,
-    "events_count": 47,
-    "scoring_threat_player_team": 0.6,
-    "territory_player_team": 0.525,
-    "possession_quality_player_team": 0.47,
-    "contact_breakdown_player_team": 0.08,
-    "discipline_turnover_player_team": -2.15,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 11218,
-    "playerName": "Diego Magno",
-    "net_momentum": -0.0878807349392827,
-    "momentum_added": 0.0747845028036176,
-    "momentum_lost": 0.1626652377429003,
-    "events_count": 18,
-    "scoring_threat_player_team": 0.12,
-    "territory_player_team": 0.075,
-    "possession_quality_player_team": 0.0,
-    "contact_breakdown_player_team": -0.4299999999999999,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 57713,
-    "playerName": "Ignacio Alvarez",
-    "net_momentum": -0.2829589396053141,
-    "momentum_added": 0.0,
-    "momentum_lost": 0.2829589396053141,
-    "events_count": 5,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 0.0,
-    "possession_quality_player_team": 0.0,
-    "contact_breakdown_player_team": -0.7,
-    "discipline_turnover_player_team": 0.0,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 33501,
-    "playerName": "Jason Benade",
-    "net_momentum": -0.3057510765197073,
-    "momentum_added": 0.0331772866972269,
-    "momentum_lost": 0.3389283632169342,
-    "events_count": 16,
-    "scoring_threat_player_team": 0.12,
-    "territory_player_team": 0.0,
-    "possession_quality_player_team": 0.0,
-    "contact_breakdown_player_team": -0.35,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 21093,
-    "playerName": "Tjiuee Uanivi",
-    "net_momentum": -0.4353004943059403,
-    "momentum_added": 1.705000177676947,
-    "momentum_lost": 2.1403006719828874,
-    "events_count": 67,
-    "scoring_threat_player_team": 2.76,
-    "territory_player_team": 0.425,
-    "possession_quality_player_team": 0.955,
-    "contact_breakdown_player_team": 2.62,
-    "discipline_turnover_player_team": -3.4,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 17287,
-    "playerName": "PJ van Lill",
-    "net_momentum": -0.6126189961007632,
-    "momentum_added": 0.3985146100142273,
-    "momentum_lost": 1.0111336061149905,
-    "events_count": 32,
-    "scoring_threat_player_team": 0.0,
-    "territory_player_team": 0.3,
-    "possession_quality_player_team": 0.185,
-    "contact_breakdown_player_team": 1.23,
-    "discipline_turnover_player_team": -3.05,
-    "review_priority": "Low"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 57714,
-    "playerName": "Ignacio Facciolo",
-    "net_momentum": -0.8447339642160314,
-    "momentum_added": 2.082501426720792,
-    "momentum_lost": 2.9272353909368234,
-    "events_count": 39,
-    "scoring_threat_player_team": 0.12,
-    "territory_player_team": 2.125,
-    "possession_quality_player_team": 4.995,
-    "contact_breakdown_player_team": 1.14,
-    "discipline_turnover_player_team": -3.25,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 22408,
-    "playerName": "Richard Hardwick",
-    "net_momentum": -1.2148838661992132,
-    "momentum_added": 2.3197824408517045,
-    "momentum_lost": 3.5346663070509177,
-    "events_count": 71,
-    "scoring_threat_player_team": 2.16,
-    "territory_player_team": 1.475,
-    "possession_quality_player_team": 5.025,
-    "contact_breakdown_player_team": 3.62,
-    "discipline_turnover_player_team": -5.4,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2900,
-    "teamName": "Namibia",
-    "PLID": 22681,
-    "playerName": "Johan Deysel",
-    "net_momentum": -1.2322020017835331,
-    "momentum_added": 1.1436977286949936,
-    "momentum_lost": 2.375899730478527,
-    "events_count": 45,
-    "scoring_threat_player_team": 0.72,
-    "territory_player_team": 0.475,
-    "possession_quality_player_team": 1.575,
-    "contact_breakdown_player_team": -2.1,
-    "discipline_turnover_player_team": -3.75,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 21951,
-    "playerName": "Rodrigo Silva",
-    "net_momentum": -1.4521310692229628,
-    "momentum_added": 1.1820666126156818,
-    "momentum_lost": 2.634197681838645,
-    "events_count": 46,
-    "scoring_threat_player_team": 0.36,
-    "territory_player_team": 3.798,
-    "possession_quality_player_team": 1.115,
-    "contact_breakdown_player_team": -1.87,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 23570,
-    "playerName": "Ignacio Dotti",
-    "net_momentum": -1.730610003198517,
-    "momentum_added": 1.2447829882671213,
-    "momentum_lost": 2.9753929914656383,
-    "events_count": 82,
-    "scoring_threat_player_team": 1.08,
-    "territory_player_team": 0.3,
-    "possession_quality_player_team": 0.215,
-    "contact_breakdown_player_team": -1.15,
-    "discipline_turnover_player_team": -1.25,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 23499,
-    "playerName": "Andres Vilaseca",
-    "net_momentum": -1.7354188418352,
-    "momentum_added": 1.6938903974484658,
-    "momentum_lost": 3.4293092392836657,
-    "events_count": 64,
-    "scoring_threat_player_team": 1.56,
-    "territory_player_team": 0.35,
-    "possession_quality_player_team": 0.645,
-    "contact_breakdown_player_team": -0.8999999999999999,
-    "discipline_turnover_player_team": -3.05,
-    "review_priority": "High"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 27503,
-    "playerName": "Matias Benitez",
-    "net_momentum": -2.738185971520412,
-    "momentum_added": 0.5119008228303369,
-    "momentum_lost": 3.250086794350749,
-    "events_count": 44,
-    "scoring_threat_player_team": 1.08,
-    "territory_player_team": 0.025,
-    "possession_quality_player_team": -0.5900000000000001,
-    "contact_breakdown_player_team": -1.88,
-    "discipline_turnover_player_team": -2.15,
-    "review_priority": "Medium"
-  },
-  {
-    "FXID": 937663,
-    "team_id": 2800,
-    "teamName": "Uruguay",
-    "PLID": 25233,
-    "playerName": "Diego Arbelo",
-    "net_momentum": -3.3268028311251934,
-    "momentum_added": 0.3523098076261742,
-    "momentum_lost": 3.6791126387513673,
-    "events_count": 31,
-    "scoring_threat_player_team": 0.48,
-    "territory_player_team": 0.25,
-    "possession_quality_player_team": 0.4,
-    "contact_breakdown_player_team": -0.3,
-    "discipline_turnover_player_team": -0.9,
-    "review_priority": "Medium"
-  }
-]
+{
+  "matchId": "937663",
+  "players": [
+    {
+      "playerKey": "tiaan swanepoel|namibia",
+      "playerName": "Tiaan Swanepoel",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": 36.61,
+      "momentumAdded": 40.92,
+      "momentumLost": 4.31,
+      "scoringThreat": 12.04,
+      "territory": 22.88,
+      "possessionQuality": 3.36,
+      "contactBreakdown": -0.17,
+      "disciplineTurnover": -1.5,
+      "actions": 130,
+      "topActions": [
+        {
+          "time": "47:25",
+          "startSecond": 3134.4,
+          "endSecond": 3160.4,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 3.18,
+          "reason": "得点脅威 +2.0 / テリトリー +1.2"
+        },
+        {
+          "time": "71:23",
+          "startSecond": 4655.5,
+          "endSecond": 4681.5,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 2.85,
+          "reason": "得点脅威 +2.0 / テリトリー +0.9"
+        },
+        {
+          "time": "39:40",
+          "startSecond": 2556.8,
+          "endSecond": 2582.8,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 2.78,
+          "reason": "得点脅威 +2.0 / テリトリー +0.8"
+        },
+        {
+          "time": "42:59",
+          "startSecond": 2867.9,
+          "endSecond": 2893.9,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 2.78,
+          "reason": "得点脅威 +2.0 / テリトリー +0.8"
+        },
+        {
+          "time": "36:35",
+          "startSecond": 2342.2,
+          "endSecond": 2368.2,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.7,
+          "reason": "得点脅威 +2.1 / テリトリー +0.6"
+        },
+        {
+          "time": "57:18",
+          "startSecond": 3810.4,
+          "endSecond": 3836.4,
+          "action": "Kick",
+          "result": "Kick in Touch (Bounce)",
+          "impact": 1.78,
+          "reason": "テリトリー +1.8"
+        },
+        {
+          "time": "67:51",
+          "startSecond": 4443.1,
+          "endSecond": 4469.1,
+          "action": "Kick",
+          "result": "Error - Territorial Loss",
+          "impact": 1.74,
+          "reason": "テリトリー +1.7"
+        },
+        {
+          "time": "8:00",
+          "startSecond": 486.2,
+          "endSecond": 512.2,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.63,
+          "reason": "テリトリー +1.6"
+        },
+        {
+          "time": "7:09",
+          "startSecond": 435,
+          "endSecond": 461,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.59,
+          "reason": "テリトリー +1.6"
+        },
+        {
+          "time": "67:51",
+          "startSecond": 4443.1,
+          "endSecond": 4469.1,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "juan zuccarino|uruguay",
+      "playerName": "Juan Zuccarino",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": 22.7,
+      "momentumAdded": 26.45,
+      "momentumLost": 3.75,
+      "scoringThreat": 6.72,
+      "territory": 14.98,
+      "possessionQuality": 4.34,
+      "contactBreakdown": -3.33,
+      "disciplineTurnover": 0,
+      "actions": 104,
+      "topActions": [
+        {
+          "time": "15:56",
+          "startSecond": 985.7,
+          "endSecond": 1011.7,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.7,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "50:12",
+          "startSecond": 3300.8,
+          "endSecond": 3326.8,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.68,
+          "reason": "得点脅威 +2.0 / テリトリー +0.7"
+        },
+        {
+          "time": "28:35",
+          "startSecond": 1744,
+          "endSecond": 1770,
+          "action": "Goal Kick",
+          "result": "Goal Missed",
+          "impact": 2.63,
+          "reason": "得点脅威 +2.0 / テリトリー +0.6"
+        },
+        {
+          "time": "47:31",
+          "startSecond": 3140.2,
+          "endSecond": 3166.2,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.81,
+          "reason": "テリトリー +1.8"
+        },
+        {
+          "time": "52:07",
+          "startSecond": 3416.4,
+          "endSecond": 3442.4,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.33,
+          "reason": "テリトリー +1.3"
+        },
+        {
+          "time": "23:15",
+          "startSecond": 1424.3,
+          "endSecond": 1450.3,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.3,
+          "reason": "テリトリー +1.3"
+        },
+        {
+          "time": "24:25",
+          "startSecond": 1494.5,
+          "endSecond": 1520.5,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.18,
+          "reason": "テリトリー +1.2"
+        },
+        {
+          "time": "44:39",
+          "startSecond": 2967.6,
+          "endSecond": 2993.6,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.18,
+          "reason": "テリトリー +1.2"
+        },
+        {
+          "time": "21:06",
+          "startSecond": 1295.3,
+          "endSecond": 1321.3,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 1.11,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "48:04",
+          "startSecond": 3173,
+          "endSecond": 3199,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 0.97,
+          "reason": "テリトリー +1.0"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "danco burger|namibia",
+      "playerName": "Danco Burger",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": 17.86,
+      "momentumAdded": 20.64,
+      "momentumLost": 2.78,
+      "scoringThreat": 8.52,
+      "territory": 5.05,
+      "possessionQuality": 3.22,
+      "contactBreakdown": 1.07,
+      "disciplineTurnover": 0,
+      "actions": 76,
+      "topActions": [
+        {
+          "time": "70:11",
+          "startSecond": 4583.7,
+          "endSecond": 4609.7,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "70:11",
+          "startSecond": 4583.1,
+          "endSecond": 4609.1,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 2.13,
+          "reason": "継続品質 +1.1 / テリトリー +0.9 / 接点・BD +0.2"
+        },
+        {
+          "time": "61:57",
+          "startSecond": 4089.4,
+          "endSecond": 4115.4,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.64,
+          "reason": "テリトリー +1.6"
+        },
+        {
+          "time": "18:02",
+          "startSecond": 1111,
+          "endSecond": 1137,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.15,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "74:37",
+          "startSecond": 4849,
+          "endSecond": 4875,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.15,
+          "reason": "接点・BD +0.7 / テリトリー +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "31:52",
+          "startSecond": 1941.3,
+          "endSecond": 1967.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.13,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "41:43",
+          "startSecond": 2791.5,
+          "endSecond": 2817.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.05,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "32:14",
+          "startSecond": 1963.2,
+          "endSecond": 1989.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.97,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "60:22",
+          "startSecond": 3993.8,
+          "endSecond": 4019.8,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 0.81,
+          "reason": "テリトリー +0.8"
+        },
+        {
+          "time": "70:11",
+          "startSecond": 4583.1,
+          "endSecond": 4609.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "agustin ormaechea|uruguay",
+      "playerName": "Agustin Ormaechea",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": 16.88,
+      "momentumAdded": 24.51,
+      "momentumLost": 7.63,
+      "scoringThreat": 5.96,
+      "territory": 12.01,
+      "possessionQuality": 3.78,
+      "contactBreakdown": -1.87,
+      "disciplineTurnover": -3,
+      "actions": 205,
+      "topActions": [
+        {
+          "time": "63:59",
+          "startSecond": 4211.1,
+          "endSecond": 4237.1,
+          "action": "Goal Kick",
+          "result": "Goal Kicked",
+          "impact": 2.67,
+          "reason": "得点脅威 +2.1 / テリトリー +0.6"
+        },
+        {
+          "time": "61:12",
+          "startSecond": 4043.8,
+          "endSecond": 4069.8,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 2.52,
+          "reason": "テリトリー +2.5"
+        },
+        {
+          "time": "6:56",
+          "startSecond": 422.1,
+          "endSecond": 448.1,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "12:49",
+          "startSecond": 798.3,
+          "endSecond": 824.3,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "50:58",
+          "startSecond": 3346.7,
+          "endSecond": 3372.7,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.33,
+          "reason": "テリトリー +1.3"
+        },
+        {
+          "time": "17:00",
+          "startSecond": 1049.8,
+          "endSecond": 1075.8,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.22,
+          "reason": "テリトリー +1.2"
+        },
+        {
+          "time": "29:29",
+          "startSecond": 1798,
+          "endSecond": 1824,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.22,
+          "reason": "テリトリー +1.2"
+        },
+        {
+          "time": "5:22",
+          "startSecond": 312.8,
+          "endSecond": 338.8,
+          "action": "Carry",
+          "result": "Tackled Neutral",
+          "impact": 1.12,
+          "reason": "継続品質 +0.5 / テリトリー +0.3 / 接点・BD +0.2"
+        },
+        {
+          "time": "34:34",
+          "startSecond": 2158.3,
+          "endSecond": 2184.3,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.11,
+          "reason": "テリトリー +1.1"
+        },
+        {
+          "time": "54:01",
+          "startSecond": 3573.1,
+          "endSecond": 3599.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.11,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "divan rossouw|namibia",
+      "playerName": "Divan Rossouw",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": 16.88,
+      "momentumAdded": 23.98,
+      "momentumLost": 7.11,
+      "scoringThreat": 7.08,
+      "territory": 6.49,
+      "possessionQuality": 8.7,
+      "contactBreakdown": 0.56,
+      "disciplineTurnover": -5.95,
+      "actions": 63,
+      "topActions": [
+        {
+          "time": "38:22",
+          "startSecond": 2478.1,
+          "endSecond": 2504.1,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "38:16",
+          "startSecond": 2472.7,
+          "endSecond": 2498.7,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 2.63,
+          "reason": "テリトリー +1.4 / 継続品質 +1.1 / 接点・BD +0.2"
+        },
+        {
+          "time": "61:23",
+          "startSecond": 4054.9,
+          "endSecond": 4080.9,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 2.27,
+          "reason": "テリトリー +2.3"
+        },
+        {
+          "time": "70:02",
+          "startSecond": 4574.4,
+          "endSecond": 4600.4,
+          "action": "Carry",
+          "result": "Off Load",
+          "impact": 2.1,
+          "reason": "継続品質 +0.9 / テリトリー +0.7 / 接点・BD +0.4"
+        },
+        {
+          "time": "25:52",
+          "startSecond": 1581,
+          "endSecond": 1607,
+          "action": "Card",
+          "result": "Professional Foul",
+          "impact": -2,
+          "reason": "規律・TO -2.0"
+        },
+        {
+          "time": "25:49",
+          "startSecond": 1578.2,
+          "endSecond": 1604.2,
+          "action": "Tackle",
+          "result": "Pen Conceded",
+          "impact": -1.55,
+          "reason": "規律・TO -1.2 / 接点・BD -0.3"
+        },
+        {
+          "time": "1:09",
+          "startSecond": 60.3,
+          "endSecond": 86.3,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "56:18",
+          "startSecond": 3750.2,
+          "endSecond": 3776.2,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 1.3,
+          "reason": "テリトリー +1.3"
+        },
+        {
+          "time": "25:51",
+          "startSecond": 1580.4,
+          "endSecond": 1606.4,
+          "action": "Penalty Conceded",
+          "result": "Yellow Card",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "47:35",
+          "startSecond": 3143.7,
+          "endSecond": 3169.7,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 0.84,
+          "reason": "継続品質 +0.4 / テリトリー +0.3 / 接点・BD +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "carlos deus|uruguay",
+      "playerName": "Carlos Deus",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": 16.38,
+      "momentumAdded": 22.66,
+      "momentumLost": 6.28,
+      "scoringThreat": 7.2,
+      "territory": 2.3,
+      "possessionQuality": 6.96,
+      "contactBreakdown": 1.42,
+      "disciplineTurnover": -1.5,
+      "actions": 90,
+      "topActions": [
+        {
+          "time": "27:22",
+          "startSecond": 1671.4,
+          "endSecond": 1697.4,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "25:23",
+          "startSecond": 1552.4,
+          "endSecond": 1578.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 2.61,
+          "reason": "継続品質 +1.1 / テリトリー +0.9 / 接点・BD +0.7"
+        },
+        {
+          "time": "9:58",
+          "startSecond": 604.7,
+          "endSecond": 630.7,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 2.28,
+          "reason": "継続品質 +1.1 / テリトリー +0.8 / 接点・BD +0.4"
+        },
+        {
+          "time": "10:04",
+          "startSecond": 610.8,
+          "endSecond": 636.8,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "48:25",
+          "startSecond": 3194.1,
+          "endSecond": 3220.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.16,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "34:12",
+          "startSecond": 2136.3,
+          "endSecond": 2162.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.07,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "59:38",
+          "startSecond": 3950.2,
+          "endSecond": 3976.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.06,
+          "reason": "接点・BD +0.7 / テリトリー +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "73:06",
+          "startSecond": 4758.6,
+          "endSecond": 4784.6,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.73,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "27:19",
+          "startSecond": 1668.8,
+          "endSecond": 1694.8,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 0.7,
+          "reason": "接点・BD +0.4"
+        },
+        {
+          "time": "1:16",
+          "startSecond": 67.2,
+          "endSecond": 93.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "wian conradie|namibia",
+      "playerName": "Wian Conradie",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": 14.09,
+      "momentumAdded": 22.05,
+      "momentumLost": 7.96,
+      "scoringThreat": 10.68,
+      "territory": 2.05,
+      "possessionQuality": 3.7,
+      "contactBreakdown": 0.41,
+      "disciplineTurnover": -2.75,
+      "actions": 94,
+      "topActions": [
+        {
+          "time": "41:52",
+          "startSecond": 2801.3,
+          "endSecond": 2827.3,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "69:37",
+          "startSecond": 4549.5,
+          "endSecond": 4575.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.83,
+          "reason": "接点・BD +0.7 / 継続品質 +0.6 / テリトリー +0.5"
+        },
+        {
+          "time": "40:56",
+          "startSecond": 2745.1,
+          "endSecond": 2771.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.52,
+          "reason": "接点・BD +0.7 / 継続品質 +0.5 / テリトリー +0.4"
+        },
+        {
+          "time": "11:04",
+          "startSecond": 693.8,
+          "endSecond": 719.8,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "21:40",
+          "startSecond": 1329.2,
+          "endSecond": 1355.2,
+          "action": "Carry",
+          "result": "Penalty Won",
+          "impact": 1.3,
+          "reason": "規律・TO +1.2"
+        },
+        {
+          "time": "47:42",
+          "startSecond": 3151.3,
+          "endSecond": 3177.3,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "19:31",
+          "startSecond": 1200,
+          "endSecond": 1226,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.06,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "32:40",
+          "startSecond": 1989.8,
+          "endSecond": 2015.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.06,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "41:45",
+          "startSecond": 2794.4,
+          "endSecond": 2820.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.03,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "32:41",
+          "startSecond": 1990.8,
+          "endSecond": 2016.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "jc greyling|namibia",
+      "playerName": "JC Greyling",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": 11.4,
+      "momentumAdded": 16.06,
+      "momentumLost": 4.66,
+      "scoringThreat": 1.56,
+      "territory": 2,
+      "possessionQuality": 5.99,
+      "contactBreakdown": 3.35,
+      "disciplineTurnover": -1.5,
+      "actions": 62,
+      "topActions": [
+        {
+          "time": "41:23",
+          "startSecond": 2772.3,
+          "endSecond": 2798.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.88,
+          "reason": "接点・BD +0.7 / 継続品質 +0.7 / テリトリー +0.5"
+        },
+        {
+          "time": "61:06",
+          "startSecond": 4038.2,
+          "endSecond": 4064.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "78:31",
+          "startSecond": 5083.2,
+          "endSecond": 5109.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.41,
+          "reason": "接点・BD +0.7 / テリトリー +0.4 / 継続品質 +0.4"
+        },
+        {
+          "time": "68:33",
+          "startSecond": 4485.1,
+          "endSecond": 4511.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.31,
+          "reason": "接点・BD +0.7 / 継続品質 +0.4 / テリトリー +0.3"
+        },
+        {
+          "time": "19:43",
+          "startSecond": 1212.6,
+          "endSecond": 1238.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.15,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "19:22",
+          "startSecond": 1191,
+          "endSecond": 1217,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.12,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "17:17",
+          "startSecond": 1066.9,
+          "endSecond": 1092.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.99,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "40:35",
+          "startSecond": 2723.7,
+          "endSecond": 2749.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.93,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "6:58",
+          "startSecond": 424.2,
+          "endSecond": 450.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.89,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "41:23",
+          "startSecond": 2772.4,
+          "endSecond": 2798.4,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "damian stevens|namibia",
+      "playerName": "Damian Stevens",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": 11.24,
+      "momentumAdded": 18.49,
+      "momentumLost": 7.25,
+      "scoringThreat": 10.44,
+      "territory": -2.74,
+      "possessionQuality": 8.43,
+      "contactBreakdown": -1.04,
+      "disciplineTurnover": -3.85,
+      "actions": 287,
+      "topActions": [
+        {
+          "time": "8:50",
+          "startSecond": 536,
+          "endSecond": 562,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "13:46",
+          "startSecond": 855.5,
+          "endSecond": 881.5,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "68:09",
+          "startSecond": 4461.1,
+          "endSecond": 4487.1,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.18,
+          "reason": "テリトリー +1.2"
+        },
+        {
+          "time": "0:26",
+          "startSecond": 16.6,
+          "endSecond": 42.6,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.16,
+          "reason": "テリトリー +1.2"
+        },
+        {
+          "time": "79:43",
+          "startSecond": 5187.4,
+          "endSecond": 5213.4,
+          "action": "Scrum",
+          "result": "Lost Pen Con",
+          "impact": -1.1,
+          "reason": "規律・TO -1.1"
+        },
+        {
+          "time": "72:03",
+          "startSecond": 4695.4,
+          "endSecond": 4721.4,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 0.85,
+          "reason": "テリトリー +0.9"
+        },
+        {
+          "time": "41:50",
+          "startSecond": 2799.3,
+          "endSecond": 2825.3,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "46:02",
+          "startSecond": 3051.2,
+          "endSecond": 3077.2,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 0.7,
+          "reason": "テリトリー +0.7"
+        },
+        {
+          "time": "45:23",
+          "startSecond": 3011.7,
+          "endSecond": 3037.7,
+          "action": "Kick",
+          "result": "Kick in Touch (Full)",
+          "impact": 0.67,
+          "reason": "テリトリー +0.7"
+        },
+        {
+          "time": "60:59",
+          "startSecond": 4031,
+          "endSecond": 4057,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "santiago civetta|uruguay",
+      "playerName": "Santiago Civetta",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": 10.2,
+      "momentumAdded": 15.31,
+      "momentumLost": 5.11,
+      "scoringThreat": 7.8,
+      "territory": 0.85,
+      "possessionQuality": 3.88,
+      "contactBreakdown": 0.12,
+      "disciplineTurnover": -2.45,
+      "actions": 94,
+      "topActions": [
+        {
+          "time": "14:45",
+          "startSecond": 914.9,
+          "endSecond": 940.9,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "21:40",
+          "startSecond": 1329.4,
+          "endSecond": 1355.4,
+          "action": "Tackle",
+          "result": "Pen Conceded",
+          "impact": -1.55,
+          "reason": "規律・TO -1.2 / 接点・BD -0.3"
+        },
+        {
+          "time": "21:40",
+          "startSecond": 1329.5,
+          "endSecond": 1355.5,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "13:40",
+          "startSecond": 849.8,
+          "endSecond": 875.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.93,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "14:45",
+          "startSecond": 914.2,
+          "endSecond": 940.2,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 0.69,
+          "reason": "継続品質 +0.2 / 接点・BD +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "48:40",
+          "startSecond": 3209.4,
+          "endSecond": 3235.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.66,
+          "reason": "接点・BD +0.5"
+        },
+        {
+          "time": "4:25",
+          "startSecond": 256.2,
+          "endSecond": 282.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "13:41",
+          "startSecond": 850.4,
+          "endSecond": 876.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "48:41",
+          "startSecond": 3209.5,
+          "endSecond": 3235.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "felipe arcos perez|uruguay",
+      "playerName": "Felipe Arcos Perez",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": 8.54,
+      "momentumAdded": 14.74,
+      "momentumLost": 6.21,
+      "scoringThreat": 7.08,
+      "territory": 1.18,
+      "possessionQuality": 3.79,
+      "contactBreakdown": -0.26,
+      "disciplineTurnover": -3.25,
+      "actions": 51,
+      "topActions": [
+        {
+          "time": "48:59",
+          "startSecond": 3228,
+          "endSecond": 3254,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "48:54",
+          "startSecond": 3223.1,
+          "endSecond": 3249.1,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 2.48,
+          "reason": "継続品質 +1.1 / テリトリー +1.0 / 接点・BD +0.4"
+        },
+        {
+          "time": "36:29",
+          "startSecond": 2273.5,
+          "endSecond": 2299.5,
+          "action": "Card",
+          "result": "Professional Foul",
+          "impact": -2,
+          "reason": "規律・TO -2.0"
+        },
+        {
+          "time": "25:48",
+          "startSecond": 1577,
+          "endSecond": 1603,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.27,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "36:29",
+          "startSecond": 2273.1,
+          "endSecond": 2299.1,
+          "action": "Penalty Conceded",
+          "result": "Yellow Card",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "3:43",
+          "startSecond": 213.7,
+          "endSecond": 239.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.98,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "29:07",
+          "startSecond": 1776.1,
+          "endSecond": 1802.1,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.81,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "33:13",
+          "startSecond": 2022,
+          "endSecond": 2048,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.77,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "12:41",
+          "startSecond": 790,
+          "endSecond": 816,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "48:54",
+          "startSecond": 3223.2,
+          "endSecond": 3249.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "louis van der westhuizen|namibia",
+      "playerName": "Louis van der Westhuizen",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": 8.38,
+      "momentumAdded": 14.47,
+      "momentumLost": 6.09,
+      "scoringThreat": 3.6,
+      "territory": 1.53,
+      "possessionQuality": 3.24,
+      "contactBreakdown": 1.21,
+      "disciplineTurnover": -1.2,
+      "actions": 94,
+      "topActions": [
+        {
+          "time": "60:59",
+          "startSecond": 4031.4,
+          "endSecond": 4057.4,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 1.69,
+          "reason": "継続品質 +0.8 / テリトリー +0.7 / 接点・BD +0.2"
+        },
+        {
+          "time": "45:57",
+          "startSecond": 3046.2,
+          "endSecond": 3072.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.04,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "33:02",
+          "startSecond": 2011.2,
+          "endSecond": 2037.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.03,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "32:35",
+          "startSecond": 1984.1,
+          "endSecond": 2010.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.91,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "41:31",
+          "startSecond": 2779.6,
+          "endSecond": 2805.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.73,
+          "reason": "接点・BD +0.5"
+        },
+        {
+          "time": "8:28",
+          "startSecond": 514.5,
+          "endSecond": 540.5,
+          "action": "Lineout Throw",
+          "result": "Lost Overthrown",
+          "impact": -0.72,
+          "reason": "規律・TO -0.8"
+        },
+        {
+          "time": "61:00",
+          "startSecond": 4032.4,
+          "endSecond": 4058.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "61:00",
+          "startSecond": 4032.6,
+          "endSecond": 4058.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "61:01",
+          "startSecond": 4033,
+          "endSecond": 4059,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "34:09",
+          "startSecond": 2133.4,
+          "endSecond": 2159.4,
+          "action": "Lineout Throw",
+          "result": "Lost Handling Error",
+          "impact": -0.63,
+          "reason": "規律・TO -0.8"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "andre van der berg|namibia",
+      "playerName": "Andre van der Berg",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": 6.11,
+      "momentumAdded": 6.51,
+      "momentumLost": 0.41,
+      "scoringThreat": 0,
+      "territory": 1.43,
+      "possessionQuality": 3.17,
+      "contactBreakdown": 1.51,
+      "disciplineTurnover": 0,
+      "actions": 22,
+      "topActions": [
+        {
+          "time": "68:19",
+          "startSecond": 4471.6,
+          "endSecond": 4497.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 2.33,
+          "reason": "継続品質 +0.9 / 接点・BD +0.7 / テリトリー +0.7"
+        },
+        {
+          "time": "78:02",
+          "startSecond": 5054.3,
+          "endSecond": 5080.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.55,
+          "reason": "接点・BD +0.7 / 継続品質 +0.5 / テリトリー +0.4"
+        },
+        {
+          "time": "69:58",
+          "startSecond": 4569.7,
+          "endSecond": 4595.7,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 1.08,
+          "reason": "継続品質 +0.5 / テリトリー +0.4 / 接点・BD +0.2"
+        },
+        {
+          "time": "70:02",
+          "startSecond": 4574.2,
+          "endSecond": 4600.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "68:25",
+          "startSecond": 4477.2,
+          "endSecond": 4503.2,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "diego ardao|uruguay",
+      "playerName": "Diego Ardao",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": 5.65,
+      "momentumAdded": 10.03,
+      "momentumLost": 4.39,
+      "scoringThreat": 6.48,
+      "territory": 0.97,
+      "possessionQuality": 1.18,
+      "contactBreakdown": 0.01,
+      "disciplineTurnover": -3,
+      "actions": 33,
+      "topActions": [
+        {
+          "time": "62:39",
+          "startSecond": 4130.7,
+          "endSecond": 4156.7,
+          "action": "Try",
+          "result": "",
+          "impact": 6.12,
+          "reason": "得点脅威 +6.1"
+        },
+        {
+          "time": "64:36",
+          "startSecond": 4248.6,
+          "endSecond": 4274.6,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "68:46",
+          "startSecond": 4498,
+          "endSecond": 4524,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "62:38",
+          "startSecond": 4129.7,
+          "endSecond": 4155.7,
+          "action": "Carry",
+          "result": "Try Scored",
+          "impact": 1.49,
+          "reason": "継続品質 +0.5 / テリトリー +0.5 / 接点・BD +0.4"
+        },
+        {
+          "time": "62:38",
+          "startSecond": 4129.7,
+          "endSecond": 4155.7,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "68:45",
+          "startSecond": 4496.8,
+          "endSecond": 4522.8,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 0.57,
+          "reason": "テリトリー +0.3 / 接点・BD +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "richard hardwick|namibia",
+      "playerName": "Richard Hardwick",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": 5.58,
+      "momentumAdded": 13.1,
+      "momentumLost": 7.52,
+      "scoringThreat": 2.16,
+      "territory": 1.48,
+      "possessionQuality": 5.03,
+      "contactBreakdown": 3.62,
+      "disciplineTurnover": -6.7,
+      "actions": 71,
+      "topActions": [
+        {
+          "time": "36:46",
+          "startSecond": 2382.7,
+          "endSecond": 2408.7,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 1.55,
+          "reason": "継続品質 +0.7 / テリトリー +0.5 / 接点・BD +0.4"
+        },
+        {
+          "time": "29:40",
+          "startSecond": 1809,
+          "endSecond": 1835,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "36:51",
+          "startSecond": 2387.5,
+          "endSecond": 2413.5,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "29:34",
+          "startSecond": 1803.4,
+          "endSecond": 1829.4,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 1.45,
+          "reason": "継続品質 +0.6 / 接点・BD +0.4 / テリトリー +0.4"
+        },
+        {
+          "time": "20:22",
+          "startSecond": 1251.2,
+          "endSecond": 1277.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.27,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        },
+        {
+          "time": "5:12",
+          "startSecond": 302.6,
+          "endSecond": 328.6,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "20:37",
+          "startSecond": 1266.9,
+          "endSecond": 1292.9,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "5:07",
+          "startSecond": 298.5,
+          "endSecond": 324.5,
+          "action": "Carry",
+          "result": "Penalty Conceded",
+          "impact": -1.05,
+          "reason": "規律・TO -1.2 / テリトリー +0.2"
+        },
+        {
+          "time": "0:04",
+          "startSecond": 0,
+          "endSecond": 21.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.01,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2"
+        },
+        {
+          "time": "43:38",
+          "startSecond": 2906.6,
+          "endSecond": 2932.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.89,
+          "reason": "接点・BD +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "guillermo pujadas|uruguay",
+      "playerName": "Guillermo Pujadas",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": 5.49,
+      "momentumAdded": 8.97,
+      "momentumLost": 3.48,
+      "scoringThreat": 2.04,
+      "territory": 0.63,
+      "possessionQuality": 1.44,
+      "contactBreakdown": -1.17,
+      "disciplineTurnover": 2.55,
+      "actions": 53,
+      "topActions": [
+        {
+          "time": "12:41",
+          "startSecond": 790,
+          "endSecond": 816,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.78,
+          "reason": "接点・BD +0.7 / テリトリー +0.6 / 継続品質 +0.5"
+        },
+        {
+          "time": "12:42",
+          "startSecond": 791.2,
+          "endSecond": 817.2,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "21:32",
+          "startSecond": 1321.2,
+          "endSecond": 1347.2,
+          "action": "Lineout Throw",
+          "result": "Lost Clean",
+          "impact": -0.75,
+          "reason": "規律・TO -0.8"
+        },
+        {
+          "time": "45:06",
+          "startSecond": 2994.9,
+          "endSecond": 3020.9,
+          "action": "Lineout Throw",
+          "result": "Lost Clean",
+          "impact": -0.63,
+          "reason": "規律・TO -0.8"
+        },
+        {
+          "time": "14:39",
+          "startSecond": 908.6,
+          "endSecond": 934.6,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "bautista basso|uruguay",
+      "playerName": "Bautista Basso",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": 5.1,
+      "momentumAdded": 9.34,
+      "momentumLost": 4.24,
+      "scoringThreat": 0.48,
+      "territory": 2.24,
+      "possessionQuality": 5.08,
+      "contactBreakdown": -1.45,
+      "disciplineTurnover": -1.25,
+      "actions": 39,
+      "topActions": [
+        {
+          "time": "62:31",
+          "startSecond": 4123.5,
+          "endSecond": 4149.5,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 1.56,
+          "reason": "継続品質 +0.8 / テリトリー +0.6 / 接点・BD +0.2"
+        },
+        {
+          "time": "61:27",
+          "startSecond": 4059.6,
+          "endSecond": 4085.6,
+          "action": "Carry",
+          "result": "Kick",
+          "impact": 1.38,
+          "reason": "継続品質 +0.7 / テリトリー +0.5 / 接点・BD +0.2"
+        },
+        {
+          "time": "73:24",
+          "startSecond": 4776.4,
+          "endSecond": 4802.4,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "3:36",
+          "startSecond": 206.8,
+          "endSecond": 232.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.09,
+          "reason": "接点・BD +0.7 / テリトリー +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "61:32",
+          "startSecond": 4064,
+          "endSecond": 4090,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 0.86,
+          "reason": "テリトリー +0.9"
+        },
+        {
+          "time": "62:35",
+          "startSecond": 4127,
+          "endSecond": 4153,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "3:36",
+          "startSecond": 207.5,
+          "endSecond": 233.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "16:35",
+          "startSecond": 1024.5,
+          "endSecond": 1050.5,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "62:31",
+          "startSecond": 4123.7,
+          "endSecond": 4149.7,
+          "action": "Attacking Qualities",
+          "result": "Kick Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "62:32",
+          "startSecond": 4124.6,
+          "endSecond": 4150.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "ignacio facciolo|uruguay",
+      "playerName": "Ignacio Facciolo",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": 4.43,
+      "momentumAdded": 10.43,
+      "momentumLost": 6,
+      "scoringThreat": 0.12,
+      "territory": 2.13,
+      "possessionQuality": 5,
+      "contactBreakdown": 1.14,
+      "disciplineTurnover": -3.95,
+      "actions": 39,
+      "topActions": [
+        {
+          "time": "4:25",
+          "startSecond": 256.5,
+          "endSecond": 282.5,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 2.28,
+          "reason": "継続品質 +1.1 / テリトリー +0.8 / 接点・BD +0.4"
+        },
+        {
+          "time": "12:26",
+          "startSecond": 775.7,
+          "endSecond": 801.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.76,
+          "reason": "接点・BD +0.7 / 継続品質 +0.6 / テリトリー +0.5"
+        },
+        {
+          "time": "62:01",
+          "startSecond": 4093.6,
+          "endSecond": 4119.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.73,
+          "reason": "接点・BD +0.7 / 継続品質 +0.6 / テリトリー +0.4"
+        },
+        {
+          "time": "4:29",
+          "startSecond": 260.4,
+          "endSecond": 286.4,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "56:25",
+          "startSecond": 3757.1,
+          "endSecond": 3783.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.33,
+          "reason": "接点・BD +0.7 / テリトリー +0.4 / 継続品質 +0.2"
+        },
+        {
+          "time": "46:11",
+          "startSecond": 3060.2,
+          "endSecond": 3086.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "65:15",
+          "startSecond": 4286.9,
+          "endSecond": 4312.9,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.95,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "4:26",
+          "startSecond": 257.4,
+          "endSecond": 283.4,
+          "action": "Attacking Qualities",
+          "result": "Line Break",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "56:26",
+          "startSecond": 3758,
+          "endSecond": 3784,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "56:28",
+          "startSecond": 3760.4,
+          "endSecond": 3786.4,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "matias benitez|uruguay",
+      "playerName": "Matias Benitez",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": -4.11,
+      "momentumAdded": 1.14,
+      "momentumLost": 5.25,
+      "scoringThreat": 1.08,
+      "territory": 0.03,
+      "possessionQuality": -0.59,
+      "contactBreakdown": -1.88,
+      "disciplineTurnover": -2.75,
+      "actions": 44,
+      "topActions": [
+        {
+          "time": "37:09",
+          "startSecond": 2405.7,
+          "endSecond": 2431.7,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "7:37",
+          "startSecond": 463.4,
+          "endSecond": 489.4,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "37:09",
+          "startSecond": 2405.7,
+          "endSecond": 2431.7,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.55,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "german kessler|uruguay",
+      "playerName": "German Kessler",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": 3.81,
+      "momentumAdded": 4.59,
+      "momentumLost": 0.79,
+      "scoringThreat": 0.6,
+      "territory": 0.28,
+      "possessionQuality": 0.2,
+      "contactBreakdown": 0.48,
+      "disciplineTurnover": 2.25,
+      "actions": 32,
+      "topActions": [
+        {
+          "time": "52:39",
+          "startSecond": 3447.9,
+          "endSecond": 3473.9,
+          "action": "Lineout Throw",
+          "result": "Won Penalty",
+          "impact": 0.6,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "66:33",
+          "startSecond": 4365,
+          "endSecond": 4391,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.6,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "54:01",
+          "startSecond": 3550.6,
+          "endSecond": 3576.6,
+          "action": "Lineout Throw",
+          "result": "Won Clean Catch",
+          "impact": 0.57,
+          "reason": "規律・TO +0.5"
+        },
+        {
+          "time": "62:24",
+          "startSecond": 4116.2,
+          "endSecond": 4142.2,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "andres vilaseca|uruguay",
+      "playerName": "Andres Vilaseca",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": -3.79,
+      "momentumAdded": 5.94,
+      "momentumLost": 9.73,
+      "scoringThreat": 1.56,
+      "territory": 0.35,
+      "possessionQuality": 0.65,
+      "contactBreakdown": -0.9,
+      "disciplineTurnover": -5.45,
+      "actions": 64,
+      "topActions": [
+        {
+          "time": "19:31",
+          "startSecond": 1200.6,
+          "endSecond": 1226.6,
+          "action": "Tackle",
+          "result": "Pen Conceded",
+          "impact": -1.55,
+          "reason": "規律・TO -1.2 / 接点・BD -0.3"
+        },
+        {
+          "time": "54:39",
+          "startSecond": 3651,
+          "endSecond": 3677,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "74:42",
+          "startSecond": 4853.8,
+          "endSecond": 4879.8,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "19:34",
+          "startSecond": 1203.2,
+          "endSecond": 1229.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "73:22",
+          "startSecond": 4774.6,
+          "endSecond": 4800.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.05,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "54:01",
+          "startSecond": 3576.4,
+          "endSecond": 3602.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.95,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "67:14",
+          "startSecond": 4406.3,
+          "endSecond": 4432.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.92,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "66:46",
+          "startSecond": 4378.7,
+          "endSecond": 4404.7,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.61,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "36:49",
+          "startSecond": 2385.6,
+          "endSecond": 2411.6,
+          "action": "Tackle",
+          "result": "Turnover Won",
+          "impact": 0.57,
+          "reason": "接点・BD +0.5"
+        },
+        {
+          "time": "54:39",
+          "startSecond": 3651,
+          "endSecond": 3677,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.55,
+          "reason": "継続品質 -0.6"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "johan deysel|namibia",
+      "playerName": "Johan Deysel",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": -3.08,
+      "momentumAdded": 4.02,
+      "momentumLost": 7.1,
+      "scoringThreat": 0.72,
+      "territory": 0.48,
+      "possessionQuality": 1.57,
+      "contactBreakdown": -2.1,
+      "disciplineTurnover": -3.75,
+      "actions": 45,
+      "topActions": [
+        {
+          "time": "5:36",
+          "startSecond": 327.3,
+          "endSecond": 353.3,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "24:01",
+          "startSecond": 1470,
+          "endSecond": 1496,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "20:27",
+          "startSecond": 1256.8,
+          "endSecond": 1282.8,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "64:42",
+          "startSecond": 4254.1,
+          "endSecond": 4280.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.02,
+          "reason": "接点・BD +0.7 / テリトリー +0.3"
+        },
+        {
+          "time": "17:32",
+          "startSecond": 1081.6,
+          "endSecond": 1107.6,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "17:36",
+          "startSecond": 1085.1,
+          "endSecond": 1111.1,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "32:01",
+          "startSecond": 1950.8,
+          "endSecond": 1976.8,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.56,
+          "reason": "接点・BD -0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "casper viviers|namibia",
+      "playerName": "Casper Viviers",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": 2.81,
+      "momentumAdded": 5.35,
+      "momentumLost": 2.54,
+      "scoringThreat": 2.28,
+      "territory": 0.38,
+      "possessionQuality": 1.86,
+      "contactBreakdown": -0.46,
+      "disciplineTurnover": -1.25,
+      "actions": 55,
+      "topActions": [
+        {
+          "time": "51:32",
+          "startSecond": 3381,
+          "endSecond": 3407,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "33:06",
+          "startSecond": 2015.1,
+          "endSecond": 2041.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.09,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "33:07",
+          "startSecond": 2016.2,
+          "endSecond": 2042.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "41:36",
+          "startSecond": 2785.2,
+          "endSecond": 2811.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.77,
+          "reason": "継続品質 +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "tjiuee uanivi|namibia",
+      "playerName": "Tjiuee Uanivi",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": 2.76,
+      "momentumAdded": 7.66,
+      "momentumLost": 4.89,
+      "scoringThreat": 2.76,
+      "territory": 0.43,
+      "possessionQuality": 0.96,
+      "contactBreakdown": 2.62,
+      "disciplineTurnover": -4,
+      "actions": 67,
+      "topActions": [
+        {
+          "time": "59:35",
+          "startSecond": 3947.2,
+          "endSecond": 3973.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "52:40",
+          "startSecond": 3449.2,
+          "endSecond": 3475.2,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "22:55",
+          "startSecond": 1404.9,
+          "endSecond": 1430.9,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.13,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "31:57",
+          "startSecond": 1946.2,
+          "endSecond": 1972.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.07,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "40:48",
+          "startSecond": 2736.5,
+          "endSecond": 2762.5,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.92,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "76:20",
+          "startSecond": 4952.3,
+          "endSecond": 4978.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.91,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "40:48",
+          "startSecond": 2737.3,
+          "endSecond": 2763.3,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "johan retief|namibia",
+      "playerName": "Johan Retief",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": 2.54,
+      "momentumAdded": 6.53,
+      "momentumLost": 3.99,
+      "scoringThreat": 2.16,
+      "territory": 0.65,
+      "possessionQuality": 1.29,
+      "contactBreakdown": -0.06,
+      "disciplineTurnover": -1.5,
+      "actions": 78,
+      "topActions": [
+        {
+          "time": "34:10",
+          "startSecond": 2134.5,
+          "endSecond": 2160.5,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "32:47",
+          "startSecond": 1996.1,
+          "endSecond": 2022.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.02,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "68:31",
+          "startSecond": 4482.9,
+          "endSecond": 4508.9,
+          "action": "Carry",
+          "result": "Pass",
+          "impact": 0.74,
+          "reason": "継続品質 +0.3 / テリトリー +0.3 / 接点・BD +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "pj van lill|namibia",
+      "playerName": "PJ van Lill",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": -2.53,
+      "momentumAdded": 2.29,
+      "momentumLost": 4.82,
+      "scoringThreat": 0,
+      "territory": 0.3,
+      "possessionQuality": 0.19,
+      "contactBreakdown": 1.23,
+      "disciplineTurnover": -4.25,
+      "actions": 32,
+      "topActions": [
+        {
+          "time": "64:54",
+          "startSecond": 4266.6,
+          "endSecond": 4292.6,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "68:39",
+          "startSecond": 4490.9,
+          "endSecond": 4516.9,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "65:33",
+          "startSecond": 4305.1,
+          "endSecond": 4331.1,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "78:14",
+          "startSecond": 5065.8,
+          "endSecond": 5091.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.69,
+          "reason": "接点・BD +0.5"
+        },
+        {
+          "time": "68:38",
+          "startSecond": 4489.8,
+          "endSecond": 4515.8,
+          "action": "Carry",
+          "result": "Error",
+          "impact": 0.6,
+          "reason": "接点・BD +0.4"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "gerswin mouton|namibia",
+      "playerName": "Gerswin Mouton",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": 2.44,
+      "momentumAdded": 4.13,
+      "momentumLost": 1.69,
+      "scoringThreat": 0.36,
+      "territory": 0.63,
+      "possessionQuality": 1.4,
+      "contactBreakdown": 0.06,
+      "disciplineTurnover": 0,
+      "actions": 30,
+      "topActions": [
+        {
+          "time": "57:08",
+          "startSecond": 3800.4,
+          "endSecond": 3826.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.06,
+          "reason": "接点・BD +0.7 / テリトリー +0.2 / 継続品質 +0.2"
+        },
+        {
+          "time": "41:22",
+          "startSecond": 2771.2,
+          "endSecond": 2797.2,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "61:36",
+          "startSecond": 4068.5,
+          "endSecond": 4094.5,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.56,
+          "reason": "接点・BD -0.5"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "mateo sanguinetti|uruguay",
+      "playerName": "Mateo Sanguinetti",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": -2.27,
+      "momentumAdded": 3.38,
+      "momentumLost": 5.65,
+      "scoringThreat": 0.6,
+      "territory": 0.53,
+      "possessionQuality": 0.47,
+      "contactBreakdown": 0.08,
+      "disciplineTurnover": -3.95,
+      "actions": 47,
+      "topActions": [
+        {
+          "time": "76:51",
+          "startSecond": 4983.6,
+          "endSecond": 5009.6,
+          "action": "Tackle",
+          "result": "Pen Conceded",
+          "impact": -1.55,
+          "reason": "規律・TO -1.2 / 接点・BD -0.3"
+        },
+        {
+          "time": "78:39",
+          "startSecond": 5091.4,
+          "endSecond": 5117.4,
+          "action": "Turnover",
+          "result": "Error on Defence",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "76:53",
+          "startSecond": 4985.6,
+          "endSecond": 5011.6,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "62:16",
+          "startSecond": 4108.1,
+          "endSecond": 4134.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.04,
+          "reason": "接点・BD +0.7 / 継続品質 +0.2 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "rodrigo silva|uruguay",
+      "playerName": "Rodrigo Silva",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": 1.9,
+      "momentumAdded": 6.19,
+      "momentumLost": 4.29,
+      "scoringThreat": 0.36,
+      "territory": 3.8,
+      "possessionQuality": 1.12,
+      "contactBreakdown": -1.87,
+      "disciplineTurnover": -1.5,
+      "actions": 46,
+      "topActions": [
+        {
+          "time": "68:13",
+          "startSecond": 4465.5,
+          "endSecond": 4491.5,
+          "action": "Kick",
+          "result": "Collected Bounce",
+          "impact": 2.11,
+          "reason": "テリトリー +2.1"
+        },
+        {
+          "time": "69:53",
+          "startSecond": 4565.5,
+          "endSecond": 4591.5,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.74,
+          "reason": "テリトリー +1.7"
+        },
+        {
+          "time": "18:07",
+          "startSecond": 1116,
+          "endSecond": 1142,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "72:59",
+          "startSecond": 4751.7,
+          "endSecond": 4777.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 1.29,
+          "reason": "接点・BD +0.7 / テリトリー +0.3 / 継続品質 +0.3"
+        },
+        {
+          "time": "0:30",
+          "startSecond": 20.8,
+          "endSecond": 46.8,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.83,
+          "reason": "接点・BD -0.7"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "manuel leindekar|uruguay",
+      "playerName": "Manuel Leindekar",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": 1.55,
+      "momentumAdded": 5.04,
+      "momentumLost": 3.49,
+      "scoringThreat": 2.76,
+      "territory": -0.45,
+      "possessionQuality": 0.45,
+      "contactBreakdown": -1.22,
+      "disciplineTurnover": 0,
+      "actions": 88,
+      "topActions": [
+        {
+          "time": "1:11",
+          "startSecond": 61.6,
+          "endSecond": 87.6,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.85,
+          "reason": "継続品質 -0.6 / テリトリー -0.3"
+        },
+        {
+          "time": "25:12",
+          "startSecond": 1541.7,
+          "endSecond": 1567.7,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.82,
+          "reason": "継続品質 -0.6 / テリトリー -0.3"
+        },
+        {
+          "time": "3:50",
+          "startSecond": 220.8,
+          "endSecond": 246.8,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.68,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "25:22",
+          "startSecond": 1551.8,
+          "endSecond": 1577.8,
+          "action": "Attacking Qualities",
+          "result": "",
+          "impact": 0.65,
+          "reason": "継続品質 +0.7"
+        },
+        {
+          "time": "12:33",
+          "startSecond": 782.9,
+          "endSecond": 808.9,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "jason benade|namibia",
+      "playerName": "Jason Benade",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": -1.48,
+      "momentumAdded": 0.12,
+      "momentumLost": 1.6,
+      "scoringThreat": 0.12,
+      "territory": 0,
+      "possessionQuality": 0,
+      "contactBreakdown": -0.35,
+      "disciplineTurnover": -1.25,
+      "actions": 16,
+      "topActions": [
+        {
+          "time": "79:44",
+          "startSecond": 5188.6,
+          "endSecond": 5214.6,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "prince gaoseb|namibia",
+      "playerName": "Prince Gaoseb",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": -1.43,
+      "momentumAdded": 3.06,
+      "momentumLost": 4.49,
+      "scoringThreat": 0.24,
+      "territory": 0.4,
+      "possessionQuality": 0.23,
+      "contactBreakdown": 0.7,
+      "disciplineTurnover": -3,
+      "actions": 35,
+      "topActions": [
+        {
+          "time": "69:48",
+          "startSecond": 4559.7,
+          "endSecond": 4585.7,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "77:48",
+          "startSecond": 5040.2,
+          "endSecond": 5066.2,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.38,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "60:07",
+          "startSecond": 3979.2,
+          "endSecond": 4005.2,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.98,
+          "reason": "接点・BD +0.7 / テリトリー +0.2"
+        },
+        {
+          "time": "69:30",
+          "startSecond": 4542.2,
+          "endSecond": 4568.2,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "ruan ludick|namibia",
+      "playerName": "Ruan Ludick",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": 1.3,
+      "momentumAdded": 1.38,
+      "momentumLost": 0.08,
+      "scoringThreat": 0,
+      "territory": 0.23,
+      "possessionQuality": 0.32,
+      "contactBreakdown": 0.75,
+      "disciplineTurnover": 0,
+      "actions": 14,
+      "topActions": [
+        {
+          "time": "78:22",
+          "startSecond": 5074.3,
+          "endSecond": 5100.3,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.66,
+          "reason": "接点・BD +0.5"
+        },
+        {
+          "time": "78:23",
+          "startSecond": 5075.3,
+          "endSecond": 5101.3,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "juan manuel tafernaberry|uruguay",
+      "playerName": "Juan Manuel Tafernaberry",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": 1.28,
+      "momentumAdded": 2.11,
+      "momentumLost": 0.84,
+      "scoringThreat": 0.48,
+      "territory": 0.03,
+      "possessionQuality": 1.12,
+      "contactBreakdown": -0.35,
+      "disciplineTurnover": 0,
+      "actions": 46,
+      "topActions": [
+        {
+          "time": "77:58",
+          "startSecond": 5050.2,
+          "endSecond": 5076.2,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 1.7,
+          "reason": "テリトリー +1.7"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "reinaldo piussi|uruguay",
+      "playerName": "Reinaldo Piussi",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": 1.25,
+      "momentumAdded": 2.67,
+      "momentumLost": 1.42,
+      "scoringThreat": 0.12,
+      "territory": 0.25,
+      "possessionQuality": 0.47,
+      "contactBreakdown": 0.41,
+      "disciplineTurnover": 0,
+      "actions": 39,
+      "topActions": [
+        {
+          "time": "48:34",
+          "startSecond": 3203.4,
+          "endSecond": 3229.4,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.87,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "67:08",
+          "startSecond": 4399.7,
+          "endSecond": 4425.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.72,
+          "reason": "接点・BD +0.5 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "lucas bianchi|uruguay",
+      "playerName": "Lucas Bianchi",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": 1.11,
+      "momentumAdded": 3.06,
+      "momentumLost": 1.95,
+      "scoringThreat": 0.36,
+      "territory": 1.32,
+      "possessionQuality": 1.19,
+      "contactBreakdown": -0.5,
+      "disciplineTurnover": -1.25,
+      "actions": 27,
+      "topActions": [
+        {
+          "time": "67:56",
+          "startSecond": 4448,
+          "endSecond": 4474,
+          "action": "Carry",
+          "result": "Kick",
+          "impact": 1.44,
+          "reason": "継続品質 +0.7 / テリトリー +0.5 / 接点・BD +0.2"
+        },
+        {
+          "time": "67:29",
+          "startSecond": 4420.7,
+          "endSecond": 4446.7,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "67:58",
+          "startSecond": 4450,
+          "endSecond": 4476,
+          "action": "Kick",
+          "result": "Caught Full",
+          "impact": 0.67,
+          "reason": "テリトリー +0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "ignacio dotti|uruguay",
+      "playerName": "Ignacio Dotti",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": -0.8,
+      "momentumAdded": 3.92,
+      "momentumLost": 4.72,
+      "scoringThreat": 1.08,
+      "territory": 0.3,
+      "possessionQuality": 0.21,
+      "contactBreakdown": -1.15,
+      "disciplineTurnover": -1.25,
+      "actions": 82,
+      "topActions": [
+        {
+          "time": "34:46",
+          "startSecond": 2170.4,
+          "endSecond": 2196.4,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "22:49",
+          "startSecond": 1398.7,
+          "endSecond": 1424.7,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.83,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "73:11",
+          "startSecond": 4763.4,
+          "endSecond": 4789.4,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.71,
+          "reason": "接点・BD -0.7"
+        },
+        {
+          "time": "45:56",
+          "startSecond": 3045,
+          "endSecond": 3071,
+          "action": "Pass",
+          "result": "",
+          "impact": -0.6,
+          "reason": "継続品質 -0.6"
+        },
+        {
+          "time": "4:18",
+          "startSecond": 248.9,
+          "endSecond": 274.9,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "High"
+    },
+    {
+      "playerKey": "ignacio alvarez|uruguay",
+      "playerName": "Ignacio Alvarez",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": -0.7,
+      "momentumAdded": 0,
+      "momentumLost": 0.7,
+      "scoringThreat": 0,
+      "territory": 0,
+      "possessionQuality": 0,
+      "contactBreakdown": -0.7,
+      "disciplineTurnover": 0,
+      "actions": 5,
+      "topActions": [],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "adriaan ludick|namibia",
+      "playerName": "Adriaan Ludick",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": 0.69,
+      "momentumAdded": 3.47,
+      "momentumLost": 2.79,
+      "scoringThreat": 1.56,
+      "territory": 0.2,
+      "possessionQuality": 0.51,
+      "contactBreakdown": -0.33,
+      "disciplineTurnover": -1.25,
+      "actions": 56,
+      "topActions": [
+        {
+          "time": "44:09",
+          "startSecond": 2938,
+          "endSecond": 2964,
+          "action": "Penalty Conceded",
+          "result": "No Action",
+          "impact": -1.25,
+          "reason": "規律・TO -1.3"
+        },
+        {
+          "time": "51:30",
+          "startSecond": 3378.8,
+          "endSecond": 3404.8,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.91,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "40:41",
+          "startSecond": 2730.1,
+          "endSecond": 2756.1,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.85,
+          "reason": "接点・BD +0.7"
+        },
+        {
+          "time": "51:13",
+          "startSecond": 3362.3,
+          "endSecond": 3388.3,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.66,
+          "reason": "接点・BD -0.7"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "diego arbelo|uruguay",
+      "playerName": "Diego Arbelo",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": -0.67,
+      "momentumAdded": 1.42,
+      "momentumLost": 2.09,
+      "scoringThreat": 0.48,
+      "territory": 0.25,
+      "possessionQuality": 0.4,
+      "contactBreakdown": -0.3,
+      "disciplineTurnover": -1.5,
+      "actions": 31,
+      "topActions": [
+        {
+          "time": "30:12",
+          "startSecond": 1841.6,
+          "endSecond": 1867.6,
+          "action": "Turnover",
+          "result": "Error on Attack",
+          "impact": -1.5,
+          "reason": "規律・TO -1.5"
+        },
+        {
+          "time": "25:07",
+          "startSecond": 1536.6,
+          "endSecond": 1562.6,
+          "action": "Carry",
+          "result": "Tackled Dominant",
+          "impact": 0.73,
+          "reason": "接点・BD +0.5 / テリトリー +0.2"
+        }
+      ],
+      "reviewPriority": "Medium"
+    },
+    {
+      "playerKey": "des sethie|namibia",
+      "playerName": "Des Sethie",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": 0.54,
+      "momentumAdded": 2.18,
+      "momentumLost": 1.64,
+      "scoringThreat": 1.44,
+      "territory": 0.25,
+      "possessionQuality": 0.35,
+      "contactBreakdown": -1.5,
+      "disciplineTurnover": 0,
+      "actions": 47,
+      "topActions": [],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "gihard visagie|namibia",
+      "playerName": "Gihard Visagie",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": 0.25,
+      "momentumAdded": 1.12,
+      "momentumLost": 0.87,
+      "scoringThreat": 0.24,
+      "territory": 0,
+      "possessionQuality": 0,
+      "contactBreakdown": -0.89,
+      "disciplineTurnover": 0.9,
+      "actions": 17,
+      "topActions": [
+        {
+          "time": "76:51",
+          "startSecond": 4982.8,
+          "endSecond": 5008.8,
+          "action": "Carry",
+          "result": "Tackled Ineffective",
+          "impact": -0.73,
+          "reason": "接点・BD -0.7"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "diego magno|uruguay",
+      "playerName": "Diego Magno",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": -0.23,
+      "momentumAdded": 0.57,
+      "momentumLost": 0.81,
+      "scoringThreat": 0.12,
+      "territory": 0.08,
+      "possessionQuality": 0,
+      "contactBreakdown": -0.43,
+      "disciplineTurnover": 0,
+      "actions": 18,
+      "topActions": [],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "eric dosantos|uruguay",
+      "playerName": "Eric Dosantos",
+      "team": "Uruguay",
+      "matchId": "937663",
+      "netMomentum": 0.09,
+      "momentumAdded": 3.35,
+      "momentumLost": 3.26,
+      "scoringThreat": 2.16,
+      "territory": 0.25,
+      "possessionQuality": 0.34,
+      "contactBreakdown": -2.66,
+      "disciplineTurnover": 0,
+      "actions": 51,
+      "topActions": [
+        {
+          "time": "48:50",
+          "startSecond": 3218.9,
+          "endSecond": 3244.9,
+          "action": "Ruck",
+          "result": "Won Outright",
+          "impact": 0.56,
+          "reason": "接点・BD +0.4 / 継続品質 +0.2"
+        }
+      ],
+      "reviewPriority": "Low"
+    },
+    {
+      "playerKey": "haitembu shifuka|namibia",
+      "playerName": "Haitembu Shifuka",
+      "team": "Namibia",
+      "matchId": "937663",
+      "netMomentum": -0.02,
+      "momentumAdded": 0.41,
+      "momentumLost": 0.43,
+      "scoringThreat": 0,
+      "territory": 0.23,
+      "possessionQuality": 0.27,
+      "contactBreakdown": -0.51,
+      "disciplineTurnover": 0,
+      "actions": 16,
+      "topActions": [],
+      "reviewPriority": "Low"
+    }
+  ]
+}
