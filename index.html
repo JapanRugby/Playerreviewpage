@@ -1764,7 +1764,7 @@ document.addEventListener('touchstart',e=>{const hit=e.target.closest&&e.target.
 
 /* v75: Compare mode */
 function allComparisonPlayers(){ return [...state.players.values()].filter(p=>(state.playerMatchIds.get(p.key)||p.matches||[]).length).sort((a,b)=>String(a.team||'').localeCompare(String(b.team||''))||String(a.name||'').localeCompare(String(b.name||''))); }
-function sortPlayersNameDesc(players){ return [...players].sort((a,b)=>String(b.name||'').localeCompare(String(a.name||''), undefined, {numeric:true,sensitivity:'base'}) || String(b.team||'').localeCompare(String(a.team||''), undefined, {numeric:true,sensitivity:'base'})); }
+function sortPlayersNameAsc(players){ return [...players].sort((a,b)=>String(a.name||'').localeCompare(String(b.name||''), undefined, {numeric:true,sensitivity:'base'}) || String(a.team||'').localeCompare(String(b.team||''), undefined, {numeric:true,sensitivity:'base'})); }
 function comparisonTeams(){ const teams=new Set(); for(const p of allComparisonPlayers()){ for(const t of (p.teams&&p.teams.length?p.teams:[p.team])) if(t) teams.add(t); } return [...teams].sort((a,b)=>a.localeCompare(b)); }
 function teamParts(value){
   return String(value||'').split(/[\/,&]+|\s+and\s+/i).map(t=>t.trim()).filter(Boolean);
@@ -1786,7 +1786,7 @@ function hydrateCompareUI(){
 }
 function hydrateComparePlayers(side){
   const team=$(`compareTeam${side}`)?.value||''; const sel=$(`comparePlayer${side}`); if(!sel) return; const current=state.compare[`player${side}`]||sel.value||'';
-  const players=sortPlayersNameDesc(allComparisonPlayers().filter(p=>playerTeamsContain(p,team)));
+  const players=sortPlayersNameAsc(allComparisonPlayers().filter(p=>playerTeamsContain(p,team)));
   const selectPlayerLabel=UI_LANG==='ja'?'選手を選択':'Select player'; sel.innerHTML=`<option value="">${selectPlayerLabel}</option>`+players.map(p=>`<option value="${escapeHtml(p.key)}">${escapeHtml(p.name)}${p.team?' — '+escapeHtml(p.team):''}</option>`).join('');
   sel.value=players.some(p=>p.key===current)?current:''; state.compare[`player${side}`]=sel.value;
   if(!sel.value) state.compare[`id${side}`]='';
@@ -2046,7 +2046,7 @@ function hydrateWorldUI(){
 function hydrateWorldPlayers(){
   const team=$('worldTeam')?.value||''; const sel=$('worldPlayer'); if(!sel) return;
   const current=state.world.player||sel.value||'';
-  const players=sortPlayersNameDesc(allComparisonPlayers().filter(p=>playerTeamsContain(p,team)));
+  const players=sortPlayersNameAsc(allComparisonPlayers().filter(p=>playerTeamsContain(p,team)));
   const selectPlayerLabel=UI_LANG==='ja'?'選手を選択':'Select player';
   const emptyLabel=team ? (UI_LANG==='ja'?'このチームの選手データがありません':'No players found for this team') : selectPlayerLabel;
   sel.innerHTML=`<option value="">${players.length?selectPlayerLabel:emptyLabel}</option>`+players.map(p=>`<option value="${escapeHtml(p.key)}">${escapeHtml(p.name)}${p.team?' — '+escapeHtml(p.team):''}</option>`).join('');
