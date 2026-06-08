@@ -987,6 +987,333 @@ input,select,.playerSearch,.scopeSelect,.compareSelect,.matchReviewSelect{
   .modeSwitchBtn{min-height:104px!important;}
 }
 
+
+/* v116: final mobile readability hardening
+   Priority: never use white text on light mode cards; remove translucent cards on mobile. */
+:root{
+  --readable-navy:#071a3a;
+  --readable-ink:#101828;
+  --readable-muted:#4b5b73;
+  --readable-line:#cfd9e7;
+  --readable-soft:#f6f8fb;
+  --readable-red:#d71920;
+}
+.modeSwitchPanel{
+  align-items:stretch!important;
+}
+.modeSwitchBtn:not(.active){
+  background:#ffffff!important;
+  background-image:linear-gradient(180deg,#ffffff 0%,#f7f9fc 100%)!important;
+  color:var(--readable-ink)!important;
+  border:1.5px solid var(--readable-line)!important;
+  box-shadow:0 18px 44px rgba(7,26,58,.15)!important;
+  opacity:1!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+  text-shadow:none!important;
+}
+.modeSwitchBtn:not(.active) *,
+.modeSwitchBtn:not(.active) strong,
+.modeSwitchBtn:not(.active) small,
+.modeSwitchBtn:not(.active) span{
+  color:var(--readable-ink)!important;
+  text-shadow:none!important;
+  opacity:1!important;
+}
+.modeSwitchBtn:not(.active) small{
+  color:var(--readable-muted)!important;
+  font-weight:900!important;
+}
+.modeSwitchBtn:not(.active) .modeKicker{
+  background:#eef3f8!important;
+  color:#26364c!important;
+  border:1px solid #d8e2ef!important;
+}
+.modeSwitchBtn:not(.active)::after{
+  color:rgba(7,26,58,.08)!important;
+  background:rgba(7,26,58,.035)!important;
+  opacity:1!important;
+  z-index:0!important;
+}
+.modeSwitchBtn:not(.active)::before{
+  opacity:1!important;
+}
+.modeSwitchBtn > *{
+  position:relative!important;
+  z-index:2!important;
+}
+.modeSwitchBtn.active{
+  background:linear-gradient(145deg,#d71920 0%,#a20f17 45%,#071a3a 100%)!important;
+  color:#fff!important;
+  border-color:#d71920!important;
+}
+.modeSwitchBtn.active *,
+.modeSwitchBtn.active strong,
+.modeSwitchBtn.active small{
+  color:#fff!important;
+}
+.modeSwitchBtn.active small{
+  color:rgba(255,255,255,.88)!important;
+}
+.modeSwitchBtn.active .modeKicker{
+  background:rgba(255,255,255,.16)!important;
+  color:#fff!important;
+  border-color:rgba(255,255,255,.3)!important;
+}
+.controlShell,
+.compareShell,
+.worldShell,
+.matchReviewShell{
+  background:#ffffff!important;
+  color:var(--readable-ink)!important;
+}
+.controlShell *:not(.active):not(.stepno):not(.compareRun):not(.matchRun):not(.sectionTitle):not(.sectionTitle *),
+.compareShell *:not(.active):not(.sectionTitle):not(.sectionTitle *),
+.worldShell *:not(.active):not(.sectionTitle):not(.sectionTitle *),
+.matchReviewShell *:not(.active):not(.sectionTitle):not(.sectionTitle *){
+  text-shadow:none!important;
+}
+.step,
+.comparePick,
+.worldPick,
+.compareMetricPanel,
+.compareScopePanel,
+.matchReviewControls,
+.statCard,
+.matchModule,
+.reviewPanel,
+.summaryCard,
+.benchmarkCard,
+.heroCard{
+  background:#ffffff!important;
+  color:var(--readable-ink)!important;
+  border-color:var(--readable-line)!important;
+}
+.step h2,
+.step h3,
+.comparePick h2,
+.worldPick h2,
+.matchModule h3,
+.statCard .value,
+.statCard .label{
+  color:var(--readable-ink)!important;
+}
+.helper,
+.searchHint,
+.scopeSummary,
+.statCard .sub,
+.statCard small,
+.matchModuleLead,
+.compareSub,
+.worldSub{
+  color:var(--readable-muted)!important;
+}
+input,
+select,
+textarea,
+.playerSearch,
+.scopeSelect,
+.compareSelect,
+.matchReviewSelect{
+  background:#ffffff!important;
+  color:var(--readable-ink)!important;
+  border-color:var(--readable-line)!important;
+}
+input::placeholder,
+.playerSearch::placeholder{
+  color:#8a98ac!important;
+  opacity:1!important;
+}
+@media(max-width:760px){
+  body{
+    background:
+      radial-gradient(circle at 12% 0%, rgba(215,25,32,.18), transparent 220px),
+      linear-gradient(180deg,#071a3a 0 430px,#f2f5f9 430px,#f8fafc 100%)!important;
+  }
+  .modeSwitchPanel{
+    grid-template-columns:1fr 1fr!important;
+    gap:10px!important;
+    margin-top:16px!important;
+    margin-bottom:20px!important;
+  }
+  .modeSwitchBtn{
+    min-height:118px!important;
+    padding:14px 13px!important;
+    border-radius:22px!important;
+  }
+  .modeSwitchBtn strong{
+    font-size:18px!important;
+    line-height:1.08!important;
+    margin:10px 0 7px!important;
+  }
+  .modeSwitchBtn small{
+    font-size:11px!important;
+    line-height:1.35!important;
+  }
+  .modeKicker{
+    font-size:8.5px!important;
+    letter-spacing:.07em!important;
+    padding:5px 8px!important;
+  }
+  .controlShell{
+    margin-top:0!important;
+    border-radius:26px!important;
+    padding:14px!important;
+  }
+  .step{
+    border-radius:22px!important;
+  }
+}
+@media(max-width:380px){
+  .modeSwitchPanel{grid-template-columns:1fr!important;}
+  .modeSwitchBtn{min-height:96px!important;}
+}
+
+
+
+/* v117 visual upgrade: remove intro clutter and make mode choice cleaner */
+body{
+  background:
+    radial-gradient(circle at 8% 0%, rgba(227,25,55,.16) 0, rgba(227,25,55,0) 34%),
+    radial-gradient(circle at 96% 6%, rgba(7,29,61,.14) 0, rgba(7,29,61,0) 38%),
+    linear-gradient(180deg,#f7f9fd 0%,#eef3f9 42%,#f8fafc 100%)!important;
+  color:#07152b!important;
+}
+.header{
+  padding:28px 22px 24px!important;
+  background:
+    linear-gradient(135deg,#07152b 0%,#0d274e 52%,#e31937 145%)!important;
+  border-bottom:1px solid rgba(255,255,255,.12)!important;
+  box-shadow:0 22px 56px rgba(7,21,43,.22)!important;
+}
+.cleanTitle .kicker{
+  color:#fff!important;
+  text-shadow:0 2px 18px rgba(0,0,0,.24)!important;
+}
+.headerLead{
+  color:rgba(255,255,255,.86)!important;
+  max-width:760px!important;
+}
+.status{
+  margin-top:18px!important;
+  background:#fff!important;
+  color:#07152b!important;
+  border:1px solid rgba(7,21,43,.12)!important;
+  box-shadow:0 12px 30px rgba(7,21,43,.10)!important;
+}
+.modeSwitchPanel{
+  margin-top:18px!important;
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:14px!important;
+}
+.modeSwitchBtn{
+  position:relative!important;
+  overflow:hidden!important;
+  min-height:144px!important;
+  border-radius:28px!important;
+  background:linear-gradient(180deg,#ffffff 0%,#f7f9fc 100%)!important;
+  border:1px solid rgba(7,21,43,.13)!important;
+  box-shadow:0 16px 34px rgba(7,21,43,.10)!important;
+  color:#07152b!important;
+  padding:22px!important;
+  text-align:left!important;
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease!important;
+}
+.modeSwitchBtn::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(227,25,55,.10),rgba(7,21,43,0) 58%);
+  opacity:.9;
+  pointer-events:none;
+}
+.modeSwitchBtn::after{
+  content:"";
+  position:absolute;
+  right:-34px;
+  bottom:-40px;
+  width:150px;
+  height:150px;
+  border-radius:999px;
+  background:rgba(7,21,43,.055);
+  pointer-events:none;
+}
+.modeSwitchBtn:hover,.modeSwitchBtn:focus-visible{
+  transform:translateY(-3px)!important;
+  box-shadow:0 22px 42px rgba(7,21,43,.16)!important;
+  border-color:rgba(227,25,55,.35)!important;
+}
+.modeSwitchBtn.active{
+  background:linear-gradient(135deg,#e31937 0%,#9f1026 43%,#07152b 100%)!important;
+  color:#fff!important;
+  border-color:rgba(227,25,55,.55)!important;
+  box-shadow:0 22px 48px rgba(227,25,55,.25)!important;
+}
+.modeSwitchBtn.active::before{background:linear-gradient(120deg,rgba(255,255,255,.18),rgba(255,255,255,0) 48%)!important;}
+.modeSwitchBtn.active::after{background:rgba(255,255,255,.12)!important;}
+.modeSwitchBtn strong,
+.modeSwitchBtn small,
+.modeSwitchBtn .modeKicker{
+  position:relative;
+  z-index:1;
+}
+.modeSwitchBtn strong{
+  color:inherit!important;
+  font-weight:950!important;
+  letter-spacing:-.03em!important;
+  line-height:1.05!important;
+}
+.modeSwitchBtn small{
+  display:block!important;
+  margin-top:10px!important;
+  color:rgba(7,21,43,.72)!important;
+  font-weight:800!important;
+  line-height:1.35!important;
+}
+.modeSwitchBtn.active small{color:rgba(255,255,255,.86)!important;}
+.modeKicker{
+  color:#e31937!important;
+  background:#fff!important;
+  border:1px solid rgba(227,25,55,.18)!important;
+  box-shadow:0 5px 16px rgba(7,21,43,.08)!important;
+}
+.modeSwitchBtn.active .modeKicker{
+  color:#fff!important;
+  background:rgba(255,255,255,.14)!important;
+  border-color:rgba(255,255,255,.32)!important;
+}
+.controlShell,
+.sectionCard,
+.panel,
+.reviewPanel,
+.comparePanel,
+.worldPanel,
+.matchReviewPanel{
+  background:rgba(255,255,255,.94)!important;
+  border:1px solid rgba(7,21,43,.11)!important;
+  box-shadow:0 22px 56px rgba(7,21,43,.12)!important;
+}
+.sectionTitle,
+.sectionHeader,.sectionHead{
+  color:#07152b!important;
+}
+@media(max-width:760px){
+  .header{padding:26px 20px 22px!important;}
+  .modeSwitchPanel{grid-template-columns:repeat(2,minmax(0,1fr))!important; gap:12px!important;}
+  .modeSwitchBtn{min-height:128px!important; border-radius:24px!important; padding:16px!important;}
+  .modeSwitchBtn strong{font-size:18px!important;}
+  .modeSwitchBtn small{font-size:12px!important;}
+}
+@media(max-width:390px){
+  .modeSwitchBtn strong{font-size:16px!important;}
+  .modeSwitchBtn{min-height:122px!important; padding:14px!important;}
+}
+
+
+/* v118: remove unnecessary Stats Review insight block */
+#reviewInsightDeck,.reviewSnapshot{display:none!important;}
+.playerHero + #reviewInsightDeck{margin:0!important;padding:0!important;height:0!important;}
 </style>
 </head>
 <body>
@@ -996,22 +1323,6 @@ input,select,.playerSearch,.scopeSelect,.compareSelect,.matchReviewSelect{
 </header>
 <main class="app">
   <div id="status" class="status"><span class="dot"></span><span>Loading data...</span></div>
-  <section class="pageIntro" aria-label="Dashboard overview">
-    <div class="pageIntroHero">
-      <small>Performance intelligence</small>
-      <h2>Choose the review lens.</h2>
-      <p>Start with the mode that matches the question: personal growth, player battle, world benchmark, or team match review.</p>
-    </div>
-    <div class="pageIntroCard">
-      <h3>Recommended flow</h3>
-      <div class="journeyList">
-        <div class="journeyItem"><b>1</b><span>Pick a mode. Each page now has a clear purpose and review sequence.</span></div>
-        <div class="journeyItem"><b>2</b><span>Select player, opponent, world position, or match.</span></div>
-        <div class="journeyItem"><b>3</b><span>Read the snapshot first, then open details only when needed.</span></div>
-      </div>
-    </div>
-  </section>
-
   <section class="modeSwitchPanel" aria-label="Select dashboard mode">
     <button id="playerReviewModeToggle" class="modeSwitchBtn active" type="button">
       <span class="modeKicker">01 · Player insight</span>
@@ -3287,30 +3598,11 @@ const worldRun=$('worldRun'); if(worldRun) worldRun.addEventListener('click',run
 /* v114: page-internal structure implementation */
 function v114BestRows(items, limit=3){return items.filter(x=>Number.isFinite(toNumber(x.value))&&Math.abs(toNumber(x.value))>0).sort((a,b)=>Math.abs(toNumber(b.value))-Math.abs(toNumber(a.value))).slice(0,limit);}
 function v114ReviewInsightDeck(raw, st, ctx){
-  if(!raw||!st) return '';
-  const positives=toNumber(raw.positiveActions), negatives=toNumber(raw.negativeActions);
-  const net=positives-negatives;
-  const sam=samuraiRate(raw);
-  const effortTotal=toNumber(raw.colours?.Gold)+toNumber(raw.colours?.Green)+toNumber(raw.colours?.Yellow)+toNumber(raw.colours?.Red);
-  const goldShare=effortTotal?toNumber(raw.colours?.Gold)/effortTotal*100:0;
-  const redShare=effortTotal?toNumber(raw.colours?.Red)/effortTotal*100:0;
-  const strengths=v114BestRows([
-    {label:'Carry metres',value:st.carryMetres,sub:metricLabel()},
-    {label:'Post contact',value:st.postContactMetres,sub:metricLabel()},
-    {label:'Tackle completion',value:pctNum(raw.tackleMade,raw.tackleAttempts),sub:'completion %',fmt:v=>`${intFmt(v)}%`},
-    {label:'Gold effort',value:raw.colours?.Gold,sub:'times'},
-    {label:'Samurai Stats',value:sam,sub:'per BIP min',fmt:signedOneDec}
-  ],3);
-  const negTypes=Object.entries(raw.negativeActionTypes||{}).sort((a,b)=>toNumber(b[1])-toNumber(a[1])).slice(0,2);
-  const redTypes=Object.entries(raw.effortTypesByColour?.Red||raw.effortTypes?.Red||{}).sort((a,b)=>toNumber(b[1])-toNumber(a[1])).slice(0,1);
-  const verdict = sam>0 ? (UI_LANG==='ja'?'プラス貢献':'Positive contribution') : (UI_LANG==='ja'?'改善余地あり':'Needs lift');
-  const sub = `${ctx?.label||''} · ${metricLabel()} · ${oneDec(raw.minutes||0)} min`;
-  const focus=[];
-  if(negTypes.length) focus.push({n:'1',title:negTypes[0][0],sub:`${intFmt(negTypes[0][1])} negative actions`});
-  if(redTypes.length) focus.push({n:'2',title:redTypes[0][0],sub:`${intFmt(redTypes[0][1])} Red efforts`});
-  focus.push({n:String(focus.length+1),title:UI_LANG==='ja'?'Detail cards':'Tap detail cards',sub:UI_LANG==='ja'?'Positive / Negative / Effortをタップして詳細確認':'Open Positive / Negative / Effort details only when needed'});
-  return `<div class="reviewSnapshot"><div class="reviewPanel dark"><small>${escapeHtml(UI_LANG==='ja'?'レビューサマリー':'Review snapshot')}</small><div class="reviewVerdict">${escapeHtml(verdict)}</div><div class="reviewVerdictSub">${escapeHtml(sub)}</div><div class="insightGrid"><div class="insightChip"><small>Samurai</small><strong>${escapeHtml(signedOneDec(sam))}</strong><span>Player BIP rate</span></div><div class="insightChip"><small>Net actions</small><strong>${escapeHtml(signedOneDec(net))}</strong><span>${intFmt(positives)} positive / ${intFmt(negatives)} negative</span></div><div class="insightChip"><small>Effort quality</small><strong>${intFmt(goldShare)}% / ${intFmt(redShare)}%</strong><span>Gold / Red ratio</span></div></div></div><div class="reviewPanel"><h3>${escapeHtml(UI_LANG==='ja'?'Key strengths & next focus':'Key strengths & next focus')}</h3><div class="insightGrid">${strengths.map(x=>`<div class="insightChip"><small>${escapeHtml(x.label)}</small><strong>${escapeHtml((x.fmt||displayNumber)(x.value))}</strong><span>${escapeHtml(x.sub||'')}</span></div>`).join('')}</div><div class="nextFocusList">${focus.map(x=>`<div class="nextFocusItem"><b>${escapeHtml(x.n)}</b><div><strong>${escapeHtml(x.title)}</strong><small>${escapeHtml(x.sub)}</small></div></div>`).join('')}</div><div class="tapNudge">${escapeHtml(UI_LANG==='ja'?'カードをタップすると、詳細分析をフロートで確認できます。':'Tap cards to open focused detail panels.')}</div></div></div>`;
+  // v118: removed the large snapshot / key strengths block from Stats Review.
+  // It reduced readability and duplicated information already available in the stats cards.
+  return '';
 }
+
 const __v114RenderDashboardBase = renderDashboard;
 renderDashboard = function(){
   __v114RenderDashboardBase();
