@@ -669,6 +669,7 @@ function playerKey(name,team){return isTargetTeam(team)?`${norm(name)}|japan-gro
 function mergeDisplayTeams(current, incoming){ const list=(Array.isArray(current)?current:(current?[current]:[])).filter(Boolean); if(incoming&&!list.some(t=>normTeam(t)===normTeam(incoming))) list.push(String(incoming).trim()); const order=t=>normTeam(t)==='JAPAN'?0:normTeam(t)==='JAPAN XV'?1:2; return list.sort((a,b)=>order(a)-order(b)||String(a).localeCompare(String(b)));}
 function displayTeamName(teams){ const list=Array.isArray(teams)?teams.filter(Boolean):[]; return list.length?list.join(' / '):'';}
 function toNumber(v){const n=parseFloat(String(v??'').replace(/,/g,''));return Number.isFinite(n)?n:0;}
+function getField(row,names){ if(!row) return ''; for(const name of names){ if(Object.prototype.hasOwnProperty.call(row,name)) return row[name]; } const lower={}; for(const k of Object.keys(row||{})) lower[k.toLowerCase()]=row[k]; for(const name of names){ const v=lower[String(name).toLowerCase()]; if(v!==undefined) return v; } return ''; }
 function normalizeShirt(v){ const m=String(v??'').trim().match(/\d+/); return m?String(Number(m[0])).padStart(2,'0'):''; }
 function pct(num,den){return den>0?`${Math.round((num/den)*100)}%`:'—';}
 function intFmt(n){return Math.round(toNumber(n)).toLocaleString('en-US');}
@@ -1978,24 +1979,35 @@ function hydrateMatchReviewUI(){
   sel.innerHTML=`<option value="">${escapeHtml(UI_LANG==='ja'?'試合を選択':'Select match')}</option>`+matches.map(m=>`<option value="${escapeHtml(m.id)}">${escapeHtml([m.date,m.label].filter(Boolean).join(' · '))}</option>`).join('');
   if(!sel.value && matches[0]) sel.value=matches[0].id;
 }
-function teamBaseName(team){ const parts=String(team||'').split('/').map(x=>x.trim()).filter(Boolean); return parts[0]||String(team||'').trim()||'Unknown'; }
-function isJapanSideName(team){ return /^Japan( XV)?$/i.test(teamBaseName(team)); }
+function teamBaseName(team){ const raw=String(team||'').trim(); if(!raw) return 'Unknown'; const parts=raw.split('/').map(x=>x.trim()).filter(Boolean); return parts[0]||raw; }
+function isJapanSideName(team){ const parts=String(team||'').split('/').map(x=>x.trim()).filter(Boolean); return parts.some(p=>/^Japan( XV)?$/i.test(p)) || /^Japan( XV)?$/i.test(String(team||'').trim()); }
 function emptyTeamStats(team){return {team,carryMetres:0,kickingMetres:0,penaltiesConceded:0,turnoversConceded:0,opp22Time:0,lineoutTotal:0,lineoutWon:0,scrumTotal:0,scrumWon:0,carry:{fwds:{carries:0,metres:0,pcm:0},bks:{carries:0,metres:0,pcm:0}},rankings:{}};}
 function getMatchTeamStats(match){
-  if(match.teamStats) return match.teamStats;
+  if(Array.isArray(match.teamStats) && match.teamStats.length>=2){
+    const seen=new Map();
+    for(const t of match.teamStats){ const name=String(t.team||'Unknown').trim(); if(!seen.has(name)) seen.set(name,{...emptyTeamStats(name),...t,carry:{...emptyTeamStats(name).carry,...(t.carry||{})}}); }
+    return [...seen.values()];
+  }
   const teams=new Map();
+  const ensure=(team)=>{ const name=String(team||'Unknown').trim(); if(!teams.has(name)) teams.set(name,emptyTeamStats(name)); return teams.get(name); };
   for(const st of match.playerStats.values()){
     const team=teamBaseName(st.team||st.player?.team); if(!team) continue;
-    if(!teams.has(team)) teams.set(team,emptyTeamStats(team));
-    const t=teams.get(team);
-    t.carryMetres+=toNumber(st.carryMetres); t.penaltiesConceded+=toNumber(st.negativeActionTypes?.['Penalty conceded - full penalty'])+toNumber(st.negativeActionTypes?.['Penalty conceded - free kick']);
+    const t=ensure(team);
+    t.carryMetres+=toNumber(st.carryMetres); t.kickingMetres+=toNumber(st.kickingMetres);
+    t.penaltiesConceded+=toNumber(st.negativeActionTypes?.['Penalty conceded - full penalty'])+toNumber(st.negativeActionTypes?.['Penalty conceded - free kick']);
     t.turnoversConceded+=toNumber(st.negativeActionTypes?.['Error on attack'])+toNumber(st.negativeActionTypes?.['Handling fail']);
     const pid=parseInt(String(st.positionId||st.position||'').match(/\d+/)?.[0]||'0',10); const grp=(pid>=1&&pid<=8)?'fwds':'bks';
     t.carry[grp].carries+=toNumber(st.carry); t.carry[grp].metres+=toNumber(st.carryMetres); t.carry[grp].pcm+=toNumber(st.postContactMetres);
   }
   return [...teams.values()];
 }
-function matchTeamsOrdered(teamStats){ const arr=Array.isArray(teamStats)?teamStats:Object.values(teamStats||{}); const japan=arr.find(t=>isJapanSideName(t.team)); const opp=arr.find(t=>!isJapanSideName(t.team))||arr.find(t=>t!==japan); return [japan||arr[0]||emptyTeamStats('Japan'), opp||arr[1]||emptyTeamStats('Opponent')]; }
+function matchTeamsOrdered(teamStats){
+  const arr=Array.isArray(teamStats)?teamStats:Object.values(teamStats||{});
+  const japan=arr.find(t=>isJapanSideName(t.team));
+  let opp=arr.find(t=>!isJapanSideName(t.team));
+  if(!opp && arr.length>1) opp=arr.find(t=>t!==japan);
+  return [japan||arr[0]||emptyTeamStats('Japan'), opp||arr[1]||emptyTeamStats('Opponent')];
+}
 function matchCompareRow(label,a,b,fmt=displayNumber,higher=true){
   const av=toNumber(a), bv=toNumber(b), max=Math.max(1,av>0?av:0,bv>0?bv:0); const aw=av>0?Math.round(av/max*100):0, bw=bv>0?Math.round(bv/max*100):0;
   return `<div class="matchBarRow"><div class="matchBarHead"><div class="matchBarValue left"><span class="metricNum" data-final="${escapeHtml(fmt(av))}">${escapeHtml(fmt(av))}</span></div><div class="matchBarMetric">${escapeHtml(label)}</div><div class="matchBarValue right"><span class="metricNum" data-final="${escapeHtml(fmt(bv))}">${escapeHtml(fmt(bv))}</span></div></div><div class="matchBarTrack"><div class="matchBarHalf left"><div class="matchBarFill jp" style="width:${aw}%"></div></div><div class="matchBarHalf"><div class="matchBarFill opp" style="width:${bw}%"></div></div></div></div>`;
