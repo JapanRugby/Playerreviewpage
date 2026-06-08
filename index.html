@@ -288,6 +288,8 @@ body.compare-mode .compareTitle{font-size:24px}.compareModeIntro{display:none}
 .matchBars{display:grid;gap:12px}.matchBarRow{border:1px solid rgba(7,26,58,.1);border-radius:18px;padding:13px;background:#f8fafc}.matchBarHead{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;font-weight:1000}.matchBarMetric{text-align:center;color:#071a3a}.matchBarValue.left{text-align:left;color:#d71920}.matchBarValue.right{text-align:right;color:#111827}.matchBarTrack{display:grid;grid-template-columns:1fr 1fr;gap:4px;align-items:center;margin-top:8px}.matchBarHalf{height:13px;background:#e9eef5;border-radius:999px;overflow:hidden;display:flex}.matchBarHalf.left{justify-content:flex-end}.matchBarFill{height:100%;width:0;border-radius:999px;transition:width .8s cubic-bezier(.2,.8,.2,1)}.matchBarFill.jp{background:#d71920}.matchBarFill.opp{background:#111827}.matchRanking{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.matchTeamRankingBlock{margin-top:14px}.matchTeamRankingBlock>h4{text-align:center;margin:0 0 10px;color:#071a3a;font-size:16px;font-weight:1000}.matchTeamRankingBlock .matchRanking{margin-bottom:18px}.rankingCard{border:1px solid rgba(7,26,58,.1);border-radius:20px;padding:14px;background:#f8fafc}.rankingCard h4{margin:0 0 10px;color:#071a3a}.rankingCard ol{margin:0;padding-left:22px}.rankingCard li{margin:7px 0;font-weight:850;color:#344054}.timeBandToggles{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:10px 0 16px}.timeBandToggles button{border:1px solid #d0d5dd;background:#fff;border-radius:999px;padding:8px 12px;font-weight:950;cursor:pointer}.timeBandToggles button.active{background:#071a3a;color:#fff;border-color:#071a3a}
 @media(max-width:760px){.matchReviewControls{grid-template-columns:1fr}.matchHero{grid-template-columns:1fr}.matchRanking{grid-template-columns:1fr}.matchBarHead{grid-template-columns:1fr;gap:4px}.matchBarMetric{text-align:left}.matchBarValue.right{text-align:left}}
 
+
+.h2hControls{display:flex;gap:12px;align-items:center;justify-content:center;margin:10px 0 14px}.h2hControls select{border:1px solid rgba(15,23,42,.18);border-radius:14px;padding:10px 12px;background:white;font-weight:800}.h2hList{display:grid;gap:10px}.h2hRow{display:grid;grid-template-columns:1fr 58px 1fr;align-items:center;gap:10px;background:rgba(255,255,255,.82);border:1px solid rgba(15,23,42,.08);border-radius:18px;padding:10px 12px}.h2hNum{width:48px;height:48px;border-radius:999px;background:#07152d;color:white;font-weight:950;display:grid;place-items:center;margin:auto}.h2hPlayer{display:grid;gap:3px;min-width:0}.h2hPlayer.right{text-align:right}.h2hPlayer strong{font-size:13px;white-space:normal}.h2hPlayer small{color:var(--muted);font-weight:700}.h2hVal{font-weight:950;color:#c41230}@media(max-width:640px){.h2hRow{grid-template-columns:1fr 44px 1fr;padding:9px}.h2hNum{width:38px;height:38px}.h2hPlayer strong{font-size:12px}}
 </style>
 </head>
 <body>
@@ -2033,6 +2035,47 @@ function teamRankingGroup(match, team){
   const name=team?.team||'Team';
   return `<div class="matchTeamRankingBlock"><h4>${escapeHtml(name)}</h4><div class="matchRanking">${rankingFromMatch(match,st=>samuraiRate(st),'Samurai Stats Top 5',signedOneDec,name)}${rankingFromMatch(match,'carry','Carries Top 5',displayNumber,name)}${rankingFromMatch(match,st=>pctNum(st.carryDominant,st.carryContact),'Carry Dominance% Top 5',v=>`${intFmt(v)}%`,name)}${rankingFromMatch(match,'tackleMade','Tackle Made Top 5',displayNumber,name)}${rankingFromMatch(match,st=>pctNum(st.tackleDominant,st.tackleAttempts),'Tackle Dominance% Top 5',v=>`${intFmt(v)}%`,name)}${rankingFromMatch(match,'ruckSupportAttack','Ruck Support Attack Top 5',displayNumber,name)}</div></div>`;
 }
+
+function matchStatValueForH2H(st,key){
+  if(!st) return 0;
+  if(key==='samurai') return samuraiRate(st);
+  if(key==='carry') return toNumber(st.carry);
+  if(key==='carryMetres') return toNumber(st.carryMetres);
+  if(key==='carryDominance') return pctNum(st.carryDominant,st.carryContact);
+  if(key==='tackleMade') return toNumber(st.tackleMade);
+  if(key==='tackleDominance') return pctNum(st.tackleDominant,st.tackleAttempts);
+  if(key==='ruckSupportAttack') return toNumber(st.ruckSupportAttack);
+  return 0;
+}
+function matchStatFmtForH2H(key){ return (key==='carryDominance'||key==='tackleDominance') ? (v=>`${intFmt(v)}%`) : (key==='samurai'?signedOneDec:displayNumber); }
+function teamPlayersByShirt(match,teamName){
+  const map=new Map(); const target=normTeam(teamName);
+  for(const st of match.playerStats.values()){
+    const team=normTeam(st.team||st.player?.team||'');
+    if(team!==target) continue;
+    const shirt=normalizeShirt(st.shirt||st.matchShirt||st.jersey||'');
+    if(shirt) map.set(String(Number(shirt)),st);
+  }
+  return map;
+}
+function renderHeadToHead(match,left,right){
+  const leftMap=teamPlayersByShirt(match,left.team), rightMap=teamPlayersByShirt(match,right.team);
+  const opts=[['samurai','Samurai Stats'],['carry','Carries'],['carryMetres','Carry Metres'],['carryDominance','Carry Dominance%'],['tackleMade','Tackle Made'],['tackleDominance','Tackle Dominance%'],['ruckSupportAttack','Ruck Support Attack']];
+  const rows=[];
+  for(let i=1;i<=23;i++){ const a=leftMap.get(String(i)); const b=rightMap.get(String(i)); rows.push(`<div class="h2hRow" data-shirt="${i}"><div class="h2hPlayer left"><strong>${escapeHtml(a?.player?.name||a?.playerName||'—')}</strong><small>${escapeHtml(a?.position||'')}</small><span class="h2hVal" data-side="left">0</span></div><div class="h2hNum">${i}</div><div class="h2hPlayer right"><strong>${escapeHtml(b?.player?.name||b?.playerName||'—')}</strong><small>${escapeHtml(b?.position||'')}</small><span class="h2hVal" data-side="right">0</span></div></div>`); }
+  window.__lastMatchH2H={left:Array.from(leftMap.entries()).map(([k,v])=>[k,v]),right:Array.from(rightMap.entries()).map(([k,v])=>[k,v])};
+  return `<div class="h2hControls"><label>Head to Head stat</label><select id="h2hStatSelect" onchange="updateMatchH2HStat()">${opts.map(o=>`<option value="${o[0]}">${o[1]}</option>`).join('')}</select></div><div class="h2hList">${rows.join('')}</div>`;
+}
+function updateMatchH2HStat(){
+  const sel=$('h2hStatSelect'); if(!sel||!window.__lastMatchH2H) return; const key=sel.value; const fmt=matchStatFmtForH2H(key);
+  const left=new Map(window.__lastMatchH2H.left), right=new Map(window.__lastMatchH2H.right);
+  document.querySelectorAll('.h2hRow').forEach(row=>{ const n=row.dataset.shirt; const a=left.get(n), b=right.get(n); const av=matchStatValueForH2H(a,key), bv=matchStatValueForH2H(b,key); const lv=row.querySelector('[data-side="left"]'), rv=row.querySelector('[data-side="right"]'); if(lv) lv.textContent=fmt(av); if(rv) rv.textContent=fmt(bv); });
+}
+function renderMomentumInline(match,left,right){
+  const total=(t)=>toNumber(t.turnoversConceded)+toNumber(t.penaltiesConceded);
+  return `<div class="matchBars">${matchCompareRow('Momentum Score', Math.max(0,100-total(left)), Math.max(0,100-total(right)), displayNumber)}${matchCompareRow('Penalty Conceded', left.penaltiesConceded, right.penaltiesConceded, displayNumber, false)}${matchCompareRow('Turnovers Conceded', left.turnoversConceded, right.turnoversConceded, displayNumber, false)}</div><div class="empty" style="margin-top:10px">Detailed timeline events can be added from split match_flow JSON in the next iteration.</div>`;
+}
+
 function renderMatchReview(match){
   const teamStats=getMatchTeamStats(match); const [left,right]=matchTeamsOrdered(teamStats, match);
   const lineoutPct=t=>pctNum(t.lineoutWon,t.lineoutTotal); const scrumPct=t=>pctNum(t.scrumWon,t.scrumTotal);
@@ -2043,8 +2086,9 @@ function renderMatchReview(match){
   html+=`<div class="matchSection"><div class="sectionTitle"><h3>Set Piece Detail</h3><span>Lineout & scrum</span></div><div class="matchBars">${matchCompareRow('Lineout Total',left.lineoutTotal,right.lineoutTotal)}${matchCompareRow('Lineout Win %',lineoutPct(left),lineoutPct(right),v=>`${intFmt(v)}%`)}${matchCompareRow('Scrum Total',left.scrumTotal,right.scrumTotal)}${matchCompareRow('Scrum Win %',scrumPct(left),scrumPct(right),v=>`${intFmt(v)}%`)}</div></div>`;
   const carryRow=(group,label,key,fmt=displayNumber)=>matchCompareRow(label,left.carry?.[group]?.[key]||0,right.carry?.[group]?.[key]||0,fmt);
   html+=`<div class="matchSection"><div class="sectionTitle"><h3>Carry Details Comparison</h3><span>Forwards / Backs by Position ID</span></div><div class="matchBars">${carryRow('fwds','Fwds Carries','carries')}${carryRow('fwds','Fwds Carry Metres','metres')}${matchCompareRow('Fwds Metres per Carry',left.carry?.fwds?.carries?left.carry.fwds.metres/left.carry.fwds.carries:0,right.carry?.fwds?.carries?right.carry.fwds.metres/right.carry.fwds.carries:0,oneDec)}${carryRow('fwds','Fwds Post Contact Metres','pcm')}${carryRow('bks','Bks Carries','carries')}${carryRow('bks','Bks Carry Metres','metres')}${matchCompareRow('Bks Metres per Carry',left.carry?.bks?.carries?left.carry.bks.metres/left.carry.bks.carries:0,right.carry?.bks?.carries?right.carry.bks.metres/right.carry.bks.carries:0,oneDec)}${carryRow('bks','Bks Post Contact Metres','pcm')}</div></div>`;
-  html+=`<div class="matchSection"><div class="sectionTitle"><h3>Team Ranking</h3><span>Top 5 by team</span></div>${teamRankingGroup(match,left)}${teamRankingGroup(match,right)}</div>`;
-  html+=`<div class="matchSection"><div class="sectionTitle"><h3>Momentum / Match Flow</h3><span>Tap-loaded flow view</span></div><button type="button" class="matchRun" onclick="openMatchFlowModal()">Open Momentum Flow</button><div class="empty" style="margin-top:10px">Flow events are loaded on tap in v2 structure.</div></div>`;
+  html+=`<div class="matchSection"><div class="sectionTitle"><h3>Momentum / Match Flow</h3><span>Match flow overview</span></div>${renderMomentumInline(match,left,right)}</div>`;
+  html+=`<div class="matchSection"><div class="sectionTitle"><h3>1–23 Head to Head</h3><span>Choose stat with the toggle</span></div>${renderHeadToHead(match,left,right)}</div>`;
+  setTimeout(updateMatchH2HStat,0);
   return html;
 }
 async function runMatchReview(){
