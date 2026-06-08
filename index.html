@@ -408,7 +408,7 @@ body.compare-mode .compareTitle{font-size:24px}.compareModeIntro{display:none}
 
   <section id="matchReviewShell" class="matchReviewShell" aria-label="Match review">
     <div class="compareTop">
-      <div><div class="compareTitle">Match Review</div><div class="compareSub">Choose one match to review team key stats, set piece, rankings, carry details and momentum.</div></div>
+      <div><div class="compareTitle">Match Review</div><div class="compareSub">Choose one match to review team key stats, set piece, carry details and head-to-head.</div></div>
       <button id="matchReviewClose" class="compareToggle" type="button">Close</button>
     </div>
     <div class="matchReviewControls">
@@ -2117,7 +2117,6 @@ function renderMatchReview(match){
   html+=`<div class="matchSection"><div class="sectionTitle"><h3>Set Piece Detail</h3><span>Lineout & scrum</span></div><div class="matchBars">${matchCompareRow('Lineout Total',left.lineoutTotal,right.lineoutTotal)}${matchCompareRow('Lineout Win %',lineoutPct(left),lineoutPct(right),v=>`${intFmt(v)}%`)}${matchCompareRow('Scrum Total',left.scrumTotal,right.scrumTotal)}${matchCompareRow('Scrum Win %',scrumPct(left),scrumPct(right),v=>`${intFmt(v)}%`)}</div></div>`;
   const carryRow=(group,label,key,fmt=displayNumber)=>matchCompareRow(label,left.carry?.[group]?.[key]||0,right.carry?.[group]?.[key]||0,fmt);
   html+=`<div class="matchSection"><div class="sectionTitle"><h3>Carry Details Comparison</h3><span>Forwards / Backs by Position ID</span></div><div class="matchBars">${carryRow('fwds','Fwds Carries','carries')}${carryRow('fwds','Fwds Carry Metres','metres')}${matchCompareRow('Fwds Metres per Carry',left.carry?.fwds?.carries?left.carry.fwds.metres/left.carry.fwds.carries:0,right.carry?.fwds?.carries?right.carry.fwds.metres/right.carry.fwds.carries:0,oneDec)}${carryRow('fwds','Fwds Post Contact Metres','pcm')}${carryRow('bks','Bks Carries','carries')}${carryRow('bks','Bks Carry Metres','metres')}${matchCompareRow('Bks Metres per Carry',left.carry?.bks?.carries?left.carry.bks.metres/left.carry.bks.carries:0,right.carry?.bks?.carries?right.carry.bks.metres/right.carry.bks.carries:0,oneDec)}${carryRow('bks','Bks Post Contact Metres','pcm')}</div></div>`;
-  html+=`<div class="matchSection"><div class="sectionTitle"><h3>Momentum / Match Flow</h3><span>Match flow overview</span></div>${renderMomentumInline(match,left,right)}</div>`;
   html+=`<div class="matchSection"><div class="sectionTitle"><h3>1–23 Head to Head</h3><span>Choose stat with the toggle</span></div>${renderHeadToHead(match,left,right)}</div>`;
   setTimeout(updateMatchH2HStat,0);
   return html;
