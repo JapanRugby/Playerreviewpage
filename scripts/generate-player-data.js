@@ -240,25 +240,75 @@ function canonicalTeamForStats(team){ const raw=String(team||'').trim(); if(!raw
 function emptyTeamStats(team){return {team,carryMetres:0,kickingMetres:0,penaltiesConceded:0,turnoversConceded:0,opp22Time:0,lineoutTotal:0,lineoutWon:0,scrumTotal:0,scrumWon:0,carry:{fwds:{carries:0,metres:0,pcm:0},bks:{carries:0,metres:0,pcm:0}}};}
 function getTeamStatsMap(match){ if(!match.teamStats) match.teamStats=new Map(); return match.teamStats; }
 function ensureTeamStats(match,team){ const name=canonicalTeamForStats(team); const map=getTeamStatsMap(match); if(!map.has(name)) map.set(name,emptyTeamStats(name)); return map.get(name); }
-function rowNormText(row){return [getField(row,['actionName']),getField(row,['ActionTypeName']),getField(row,['ActionResultName']),getField(row,['qualifier3Name']),getField(row,['qualifier4Name']),getField(row,['qualifier5Name']),getField(row,['qualifier6Name']),getField(row,['qualifier7Name'])].map(x=>String(x||'')).join(' | ').toLowerCase();}
-function isLineoutWin(row){ const txt=rowNormText(row); const res=norm(getField(row,['ActionResultName'])); return (/won|success|retained|clean catch|clean tap|free kick|penalty|scrappy/.test(txt) || /won/.test(res)) && !/lost|steal by opposition|opposition won|not straight|overthrow|failed/.test(txt); }
-function isScrumWin(row){ const txt=rowNormText(row); const res=norm(getField(row,['ActionResultName'])); const type=norm(getField(row,['ActionTypeName'])); return /won|retained|complete|success|penalty won|free kick won/.test(res+' '+type+' '+txt) && !/lost|fail|penalty conceded|free kick conceded|turnover conceded/.test(res+' '+type+' '+txt); }
-function isLineoutLost(row){ const txt=rowNormText(row); const action=norm(getField(row,['actionName'])); return action.includes('lineout') && /lost|opposition|steal|not straight|overthrow|failed|turnover conceded/.test(txt) && !/steal front|steal middle|steal back|lineout steal|won/.test(txt); }
-function isScrumLost(row){ const txt=rowNormText(row); const action=norm(getField(row,['actionName'])); return action.includes('scrum') && /lost|opposition|penalty conceded|free kick conceded|turnover conceded|failed/.test(txt); }
-function isTurnoverConcededRow(row){ const txt=rowNormText(row); if(txt.includes('turnover conceded')||txt.includes('turnover lost')) return true; if(isLineoutLost(row)||isScrumLost(row)) return true; return false; }
-function rowPositionId(row,st){ const raw=st?.positionId||getField(row,['playerpositionID','playerpositionId','PositionID','PosID','positionId']); const m=String(raw||'').match(/\d+/); return m?parseInt(m[0],10):0; }
+function textOfRow(row){
+  return [
+    getField(row,['actionName','ActionName','action']),
+    getField(row,['ActionTypeName','actionTypeName','typeName']),
+    getField(row,['ActionResultName','actionResultName','resultName']),
+    getField(row,['qualifier3Name','Qualifier3Name']),
+    getField(row,['qualifier4Name','Qualifier4Name']),
+    getField(row,['qualifier5Name','Qualifier5Name']),
+    getField(row,['qualifier6Name','Qualifier6Name']),
+    getField(row,['qualifier7Name','Qualifier7Name'])
+  ].map(x=>String(x||'')).join(' | ');
+}
+function rowNormText(row){return textOfRow(row).toLowerCase();}
+function actionNameOf(row){return String(getField(row,['actionName','ActionName','actionNameLong'])||'').trim();}
+function resultNameOf(row){return String(getField(row,['ActionResultName','actionResultName','resultName'])||'').trim();}
+function typeNameOf(row){return String(getField(row,['ActionTypeName','actionTypeName','typeName'])||'').trim();}
+function qName(row,n){return String(getField(row,[`qualifier${n}Name`,`Qualifier${n}Name`])||'').trim();}
+function anyTextHas(row, patterns){ const txt=rowNormText(row); return patterns.some(p=>txt.includes(String(p).toLowerCase())); }
+function isKickRow(row){
+  const a=norm(actionNameOf(row));
+  const txt=rowNormText(row);
+  if(a==='goal kick') return false;
+  return a==='kick' || a.includes('kick') || txt.includes('kick in play') || txt.includes('penalty kick') || txt.includes('50/22');
+}
+function kickMetresOf(row){
+  const vals=['Metres','metres','Metres2','metres2','kickMetres','KickingMetres','Kicking Metres'].map(k=>toNumber(getField(row,[k])));
+  return Math.max(0,...vals);
+}
+function isLineoutRow(row){ const a=norm(actionNameOf(row)); const txt=rowNormText(row); return a.includes('lineout') || txt.includes('lineout throw') || txt.includes('lineout take'); }
+function isScrumRow(row){ const a=norm(actionNameOf(row)); const txt=rowNormText(row); return a.includes('scrum') || txt.includes('scrum '); }
+function isLineoutWin(row){ const txt=rowNormText(row); const res=norm(resultNameOf(row)); const type=norm(typeNameOf(row)); return isLineoutRow(row) && (/won|win|success|retained|clean catch|clean tap|free kick|penalty|scrappy|steal/.test(txt+' '+res+' '+type)) && !/lost|not straight|overthrow|failed|opposition won|turnover conceded/.test(txt); }
+function isScrumWin(row){ const txt=rowNormText(row); const res=norm(resultNameOf(row)); const type=norm(typeNameOf(row)); return isScrumRow(row) && /won|retained|complete|success|penalty won|free kick won/.test(res+' '+type+' '+txt) && !/lost|fail|penalty conceded|free kick conceded|turnover conceded|opposition/.test(res+' '+type+' '+txt); }
+function isLineoutLost(row){ const txt=rowNormText(row); return isLineoutRow(row) && /lost|opposition|not straight|overthrow|failed|turnover conceded/.test(txt) && !/lineout steal|steal front|steal middle|steal back|won|win/.test(txt); }
+function isScrumLost(row){ const txt=rowNormText(row); return isScrumRow(row) && /lost|opposition|penalty conceded|free kick conceded|turnover conceded|failed/.test(txt); }
+function isTurnoverConcededRow(row){ const txt=rowNormText(row); if(txt.includes('turnover conceded')||txt.includes('turnover lost')||txt.includes('error on attack')) return true; if(isLineoutLost(row)||isScrumLost(row)) return true; return false; }
+function isPenaltyConcededRow(row){ const a=norm(actionNameOf(row)); const txt=rowNormText(row); return a==='penalty conceded' || txt.includes('penalty conceded') || txt.includes('free kick conceded'); }
+function rowPositionId(row,st){ const raw=st?.positionId||getField(row,['playerpositionID','playerpositionId','PositionID','PosID','positionId','playerPositionId']); const m=String(raw||'').match(/\d+/); return m?parseInt(m[0],10):0; }
+function likelyOpp22ForTeam(match,row){
+  // Prefer team-relative attacking field position when available. If orientation is unclear,
+  // count clear entries at either extreme so the card never disappears for feeds that reverse co-ordinates.
+  const xs=[toNumber(getField(row,['x_coord','x'])),toNumber(getField(row,['x_coord_end','x_end','end_x']))].filter(n=>Number.isFinite(n));
+  if(!xs.length) return false;
+  const max=Math.max(...xs), min=Math.min(...xs);
+  return max>=78 || min<=22;
+}
+function rowDurationMinutes(row){
+  const start=toNumber(getField(row,['ps_timestamp','start_timestamp','startTime']));
+  const end=toNumber(getField(row,['ps_endstamp','end_timestamp','endTime']));
+  if(end>start) return (end-start)/60;
+  return 0;
+}
 function trackTeamMatchStats(match,row,st){
-  const team=String(getField(row,['teamName','TeamName'])||st?.team||st?.player?.team||'').trim(); if(!team) return; const t=ensureTeamStats(match,team);
-  const action=String(getField(row,['actionName'])||'').trim(); const actionN=norm(action);
-  if(action==='Carry'){
-    const metres=toNumber(getField(row,['Metres2','metres2'])), pcm=toNumber(getField(row,['Metres3','metres3'])); t.carryMetres+=metres; const pid=rowPositionId(row,st); const grp=(pid>=1&&pid<=8)?'fwds':'bks'; t.carry[grp].carries++; t.carry[grp].metres+=metres; t.carry[grp].pcm+=pcm;
+  const team=String(getField(row,['teamName','TeamName','team','team_name'])||st?.team||st?.player?.team||'').trim(); if(!team) return; const t=ensureTeamStats(match,team);
+  const action=actionNameOf(row); const actionN=norm(action);
+  if(actionN==='carry'){
+    const metres=toNumber(getField(row,['Metres2','metres2','CarryMetres','Carry Metres']));
+    const pcm=toNumber(getField(row,['Metres3','metres3','PostContactMetres','Post Contact Metres']));
+    t.carryMetres+=metres;
+    const pid=rowPositionId(row,st); const grp=(pid>=1&&pid<=8)?'fwds':'bks';
+    t.carry[grp].carries++; t.carry[grp].metres+=metres; t.carry[grp].pcm+=pcm;
   }
-  if(action==='Kick') t.kickingMetres+=Math.max(toNumber(getField(row,['Metres','metres'])),toNumber(getField(row,['Metres2','metres2'])));
-  if(action==='Penalty Conceded') t.penaltiesConceded++;
+  if(isKickRow(row)) t.kickingMetres+=kickMetresOf(row);
+  if(isPenaltyConcededRow(row)) t.penaltiesConceded++;
   if(isTurnoverConcededRow(row)) t.turnoversConceded++;
-  if(actionN.includes('lineout throw')){ t.lineoutTotal++; if(isLineoutWin(row)) t.lineoutWon++; }
-  if(actionN==='scrum' || actionN.includes('scrum')){ t.scrumTotal++; if(isScrumWin(row)) t.scrumWon++; }
-  const x=toNumber(getField(row,['x_coord'])); const start=toNumber(getField(row,['ps_timestamp'])), end=toNumber(getField(row,['ps_endstamp'])); if(x>=78 && end>start) t.opp22Time+=(end-start)/60;
+  if(isLineoutRow(row) && (actionN.includes('throw') || rowNormText(row).includes('lineout throw'))){ t.lineoutTotal++; if(isLineoutWin(row)) t.lineoutWon++; }
+  // Some providers only mark lineout rows without "throw". Count them if no throw wording exists.
+  if(isLineoutRow(row) && !actionN.includes('throw') && !rowNormText(row).includes('lineout throw') && /won|lost|not straight|overthrow|turnover conceded/.test(rowNormText(row))){ t.lineoutTotal++; if(isLineoutWin(row)) t.lineoutWon++; }
+  if(isScrumRow(row)){ t.scrumTotal++; if(isScrumWin(row)) t.scrumWon++; }
+  const dur=rowDurationMinutes(row); if(dur>0 && likelyOpp22ForTeam(match,row)) t.opp22Time+=dur;
 }
 
 function buildMatch(item,biRows,reviewRows,xmlText,players){

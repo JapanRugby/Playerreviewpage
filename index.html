@@ -289,8 +289,8 @@ body.compare-mode .compareTitle{font-size:24px}.compareModeIntro{display:none}
 @media(max-width:760px){.matchReviewControls{grid-template-columns:1fr}.matchHero{grid-template-columns:1fr}.matchRanking{grid-template-columns:1fr}.matchBarHead{grid-template-columns:1fr;gap:4px}.matchBarMetric{text-align:left}.matchBarValue.right{text-align:left}}
 
 
-.h2hControls{display:flex;gap:12px;align-items:center;justify-content:center;margin:10px 0 14px}.h2hControls select{border:1px solid rgba(15,23,42,.18);border-radius:14px;padding:10px 12px;background:white;font-weight:800}.h2hList{display:grid;gap:10px}.h2hRow{display:grid;grid-template-columns:1fr 58px 1fr;align-items:center;gap:10px;background:rgba(255,255,255,.82);border:1px solid rgba(15,23,42,.08);border-radius:18px;padding:10px 12px}.h2hNum{width:48px;height:48px;border-radius:999px;background:#07152d;color:white;font-weight:950;display:grid;place-items:center;margin:auto}.h2hPlayer{display:grid;gap:3px;min-width:0}.h2hPlayer.right{text-align:right}.h2hPlayer strong{font-size:13px;white-space:normal}.h2hPlayer small{color:var(--muted);font-weight:700}.h2hVal{font-weight:950;color:#c41230}@media(max-width:640px){.h2hRow{grid-template-columns:1fr 44px 1fr;padding:9px}.h2hNum{width:38px;height:38px}.h2hPlayer strong{font-size:12px}}
-</style>
+.h2hControls{display:flex;gap:12px;align-items:center;justify-content:center;margin:10px 0 14px}.h2hControls select{border:1px solid rgba(15,23,42,.18);border-radius:14px;padding:10px 12px;background:white;font-weight:800}.h2hList{display:grid;gap:12px}.h2hRow{display:grid;grid-template-columns:minmax(0,1fr) 58px minmax(0,1fr);align-items:center;gap:12px;background:linear-gradient(135deg,rgba(255,255,255,.95),rgba(255,255,255,.78));border:1px solid rgba(15,23,42,.08);border-radius:22px;padding:12px 14px;box-shadow:0 12px 28px rgba(7,21,45,.08);overflow:hidden}.h2hNum{width:50px;height:50px;border-radius:999px;background:linear-gradient(135deg,#07152d,#132c57);color:white;font-weight:950;display:grid;place-items:center;margin:auto;box-shadow:0 10px 22px rgba(7,21,45,.22)}.h2hPlayer{display:grid;gap:5px;min-width:0}.h2hPlayer.right{text-align:right}.h2hPlayer strong{font-size:13px;white-space:normal;line-height:1.2}.h2hPlayer small{color:var(--muted);font-weight:700}.h2hVal{font-weight:950;color:#c41230}.h2hPlayer.right .h2hVal{color:#111827}.h2hMiniTrack{height:8px;border-radius:999px;background:rgba(7,21,45,.08);overflow:hidden}.h2hMiniFill{height:100%;width:0%;border-radius:999px;transition:width .9s cubic-bezier(.2,.8,.2,1)}.h2hMiniFill.left{background:linear-gradient(90deg,#d71920,#ff5a64)}.h2hMiniFill.right{background:linear-gradient(90deg,#111827,#3f4654)}.matchSection{background:linear-gradient(135deg,rgba(255,255,255,.98),rgba(248,250,252,.9));border:1px solid rgba(7,26,58,.1);border-radius:30px;padding:20px;margin:18px 0;box-shadow:0 18px 42px rgba(16,24,40,.10)}.matchSection .sectionTitle{background:linear-gradient(135deg,#07152d,#102a54);border-radius:20px;padding:14px 16px;text-align:center;color:white;margin-bottom:16px}.matchSection .sectionTitle h3{color:white;margin:0}.matchSection .sectionTitle span{color:rgba(255,255,255,.78)}@media(max-width:640px){.h2hRow{grid-template-columns:minmax(0,1fr) 44px minmax(0,1fr);padding:10px;gap:8px}.h2hNum{width:38px;height:38px}.h2hPlayer strong{font-size:11.5px}.h2hPlayer small{font-size:10.5px}.matchSection{padding:14px;border-radius:24px}}
+.momentumBands{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px}.momentumBand{background:rgba(255,255,255,.82);border:1px solid rgba(7,21,45,.08);border-radius:16px;padding:10px;text-align:center;font-weight:900}.momentumPulse{height:8px;border-radius:999px;background:rgba(7,21,45,.08);overflow:hidden;margin-top:8px}.momentumPulse span{display:block;height:100%;width:70%;background:linear-gradient(90deg,#d71920,#111827);border-radius:999px;animation:pulseFlow 1.5s ease-in-out infinite}@keyframes pulseFlow{0%{transform:translateX(-90%);opacity:.2}50%{opacity:1}100%{transform:translateX(160%);opacity:.2}}@media(max-width:640px){.momentumBands{grid-template-columns:repeat(2,1fr)}}</style>
 </head>
 <body>
 <header class="header">
@@ -1985,21 +1985,37 @@ function teamBaseName(team){ const raw=String(team||'').trim(); if(!raw) return 
 function isJapanSideName(team){ const parts=String(team||'').split('/').map(x=>x.trim()).filter(Boolean); return parts.some(p=>/^Japan( XV)?$/i.test(p)) || /^Japan( XV)?$/i.test(String(team||'').trim()); }
 function emptyTeamStats(team){return {team,carryMetres:0,kickingMetres:0,penaltiesConceded:0,turnoversConceded:0,opp22Time:0,lineoutTotal:0,lineoutWon:0,scrumTotal:0,scrumWon:0,carry:{fwds:{carries:0,metres:0,pcm:0},bks:{carries:0,metres:0,pcm:0}},rankings:{}};}
 function getMatchTeamStats(match){
-  if(Array.isArray(match.teamStats) && match.teamStats.length>=2){
-    const seen=new Map();
-    for(const t of match.teamStats){ const name=String(t.team||'Unknown').trim(); if(!seen.has(name)) seen.set(name,{...emptyTeamStats(name),...t,carry:{...emptyTeamStats(name).carry,...(t.carry||{})}}); }
-    return [...seen.values()];
-  }
   const teams=new Map();
-  const ensure=(team)=>{ const name=String(team||'Unknown').trim(); if(!teams.has(name)) teams.set(name,emptyTeamStats(name)); return teams.get(name); };
-  for(const st of match.playerStats.values()){
+  const ensure=(team)=>{ const name=String(team||'Unknown').trim()||'Unknown'; if(!teams.has(name)) teams.set(name,emptyTeamStats(name)); return teams.get(name); };
+  if(Array.isArray(match.teamStats)){
+    for(const t of match.teamStats){
+      const name=String(t.team||'Unknown').trim()||'Unknown';
+      const base=ensure(name);
+      Object.assign(base,{...t,team:name});
+      base.carry={...emptyTeamStats(name).carry,...(t.carry||{})};
+      base.carry.fwds={...emptyTeamStats(name).carry.fwds,...(t.carry?.fwds||{})};
+      base.carry.bks={...emptyTeamStats(name).carry.bks,...(t.carry?.bks||{})};
+    }
+  }
+  // Fallback/enrichment from player stats. This keeps the section visible even when an older
+  // stats JSON was generated before Match Review team stats existed.
+  for(const st of Object.values(match.playerStats||{})){
     const team=teamBaseName(st.team||st.player?.team); if(!team) continue;
     const t=ensure(team);
-    t.carryMetres+=toNumber(st.carryMetres); t.kickingMetres+=toNumber(st.kickingMetres);
-    t.penaltiesConceded+=toNumber(st.negativeActionTypes?.['Penalty conceded - full penalty'])+toNumber(st.negativeActionTypes?.['Penalty conceded - free kick']);
-    t.turnoversConceded+=toNumber(st.negativeActionTypes?.['Error on attack'])+toNumber(st.negativeActionTypes?.['Handling fail']);
+    if(!t._fallbackApplied){ /* marker initialized lazily */ }
+    t._fallbackCarryMetres=(t._fallbackCarryMetres||0)+toNumber(st.carryMetres);
+    t._fallbackKickingMetres=(t._fallbackKickingMetres||0)+toNumber(st.kickingMetres);
+    t._fallbackPenalties=(t._fallbackPenalties||0)+toNumber(st.negativeActionTypes?.['Penalty conceded - full penalty'])+toNumber(st.negativeActionTypes?.['Penalty conceded - free kick']);
+    t._fallbackTurnovers=(t._fallbackTurnovers||0)+toNumber(st.negativeActionTypes?.['Error on attack'])+toNumber(st.negativeActionTypes?.['Handling fail']);
     const pid=parseInt(String(st.positionId||st.position||'').match(/\d+/)?.[0]||'0',10); const grp=(pid>=1&&pid<=8)?'fwds':'bks';
     t.carry[grp].carries+=toNumber(st.carry); t.carry[grp].metres+=toNumber(st.carryMetres); t.carry[grp].pcm+=toNumber(st.postContactMetres);
+  }
+  for(const t of teams.values()){
+    if(!toNumber(t.carryMetres)) t.carryMetres=toNumber(t._fallbackCarryMetres);
+    if(!toNumber(t.kickingMetres)) t.kickingMetres=toNumber(t._fallbackKickingMetres);
+    if(!toNumber(t.penaltiesConceded)) t.penaltiesConceded=toNumber(t._fallbackPenalties);
+    if(!toNumber(t.turnoversConceded)) t.turnoversConceded=toNumber(t._fallbackTurnovers);
+    delete t._fallbackCarryMetres; delete t._fallbackKickingMetres; delete t._fallbackPenalties; delete t._fallbackTurnovers; delete t._fallbackApplied;
   }
   return [...teams.values()];
 }
@@ -2017,7 +2033,7 @@ function matchTeamsOrdered(teamStats, match){
 }
 function matchCompareRow(label,a,b,fmt=displayNumber,higher=true){
   const av=toNumber(a), bv=toNumber(b), max=Math.max(1,av>0?av:0,bv>0?bv:0); const aw=av>0?Math.round(av/max*100):0, bw=bv>0?Math.round(bv/max*100):0;
-  return `<div class="matchBarRow"><div class="matchBarHead"><div class="matchBarValue left"><span class="metricNum" data-final="${escapeHtml(fmt(av))}">${escapeHtml(fmt(av))}</span></div><div class="matchBarMetric">${escapeHtml(label)}</div><div class="matchBarValue right"><span class="metricNum" data-final="${escapeHtml(fmt(bv))}">${escapeHtml(fmt(bv))}</span></div></div><div class="matchBarTrack"><div class="matchBarHalf left"><div class="matchBarFill jp" style="width:${aw}%"></div></div><div class="matchBarHalf"><div class="matchBarFill opp" style="width:${bw}%"></div></div></div></div>`;
+  return `<div class="matchBarRow reveal-card"><div class="matchBarHead"><div class="matchBarValue left"><span class="metricNum" data-final="${escapeHtml(fmt(av))}">${escapeHtml(fmt(av))}</span></div><div class="matchBarMetric">${escapeHtml(label)}</div><div class="matchBarValue right"><span class="metricNum" data-final="${escapeHtml(fmt(bv))}">${escapeHtml(fmt(bv))}</span></div></div><div class="matchBarTrack"><div class="matchBarHalf left"><div class="matchBarFill jp" data-width="${aw}" style="width:0%"></div></div><div class="matchBarHalf"><div class="matchBarFill opp" data-width="${bw}" style="width:0%"></div></div></div></div>`;
 }
 function matchKeyStatsRows(jp,opp){ return [
   ['Carry Metres',jp.carryMetres,opp.carryMetres,displayNumber],['Kicking Metres',jp.kickingMetres,opp.kickingMetres,displayNumber],['Penalties Conceded',jp.penaltiesConceded,opp.penaltiesConceded,displayNumber],['Turnovers Conceded',jp.turnoversConceded,opp.turnoversConceded,displayNumber],['Opp 22 Area Time',jp.opp22Time,opp.opp22Time,v=>`${oneDec(v)} min`]
@@ -2062,20 +2078,35 @@ function renderHeadToHead(match,left,right){
   const leftMap=teamPlayersByShirt(match,left.team), rightMap=teamPlayersByShirt(match,right.team);
   const opts=[['samurai','Samurai Stats'],['carry','Carries'],['carryMetres','Carry Metres'],['carryDominance','Carry Dominance%'],['tackleMade','Tackle Made'],['tackleDominance','Tackle Dominance%'],['ruckSupportAttack','Ruck Support Attack']];
   const rows=[];
-  for(let i=1;i<=23;i++){ const a=leftMap.get(String(i)); const b=rightMap.get(String(i)); rows.push(`<div class="h2hRow" data-shirt="${i}"><div class="h2hPlayer left"><strong>${escapeHtml(a?.player?.name||a?.playerName||'—')}</strong><small>${escapeHtml(a?.position||'')}</small><span class="h2hVal" data-side="left">0</span></div><div class="h2hNum">${i}</div><div class="h2hPlayer right"><strong>${escapeHtml(b?.player?.name||b?.playerName||'—')}</strong><small>${escapeHtml(b?.position||'')}</small><span class="h2hVal" data-side="right">0</span></div></div>`); }
+  for(let i=1;i<=23;i++){
+    const a=leftMap.get(String(i)); const b=rightMap.get(String(i));
+    rows.push(`<div class="h2hRow reveal-card" data-shirt="${i}"><div class="h2hPlayer left"><strong>${escapeHtml(a?.player?.name||a?.playerName||'—')}</strong><small>${escapeHtml(a?.position||'')}</small><span class="h2hVal" data-side="left">0</span><div class="h2hMiniTrack"><div class="h2hMiniFill left" data-fill-side="left"></div></div></div><div class="h2hNum">${i}</div><div class="h2hPlayer right"><strong>${escapeHtml(b?.player?.name||b?.playerName||'—')}</strong><small>${escapeHtml(b?.position||'')}</small><span class="h2hVal" data-side="right">0</span><div class="h2hMiniTrack"><div class="h2hMiniFill right" data-fill-side="right"></div></div></div></div>`);
+  }
   window.__lastMatchH2H={left:Array.from(leftMap.entries()).map(([k,v])=>[k,v]),right:Array.from(rightMap.entries()).map(([k,v])=>[k,v])};
   return `<div class="h2hControls"><label>Head to Head stat</label><select id="h2hStatSelect" onchange="updateMatchH2HStat()">${opts.map(o=>`<option value="${o[0]}">${o[1]}</option>`).join('')}</select></div><div class="h2hList">${rows.join('')}</div>`;
 }
 function updateMatchH2HStat(){
   const sel=$('h2hStatSelect'); if(!sel||!window.__lastMatchH2H) return; const key=sel.value; const fmt=matchStatFmtForH2H(key);
   const left=new Map(window.__lastMatchH2H.left), right=new Map(window.__lastMatchH2H.right);
-  document.querySelectorAll('.h2hRow').forEach(row=>{ const n=row.dataset.shirt; const a=left.get(n), b=right.get(n); const av=matchStatValueForH2H(a,key), bv=matchStatValueForH2H(b,key); const lv=row.querySelector('[data-side="left"]'), rv=row.querySelector('[data-side="right"]'); if(lv) lv.textContent=fmt(av); if(rv) rv.textContent=fmt(bv); });
+  const rows=[...document.querySelectorAll('.h2hRow')];
+  const values=rows.map(row=>{ const n=row.dataset.shirt; const a=left.get(n), b=right.get(n); return {row,av:matchStatValueForH2H(a,key),bv:matchStatValueForH2H(b,key)}; });
+  const max=Math.max(1,...values.map(v=>Math.max(0,v.av, v.bv)));
+  values.forEach(({row,av,bv})=>{
+    const lv=row.querySelector('[data-side="left"]'), rv=row.querySelector('[data-side="right"]');
+    if(lv) lv.textContent=fmt(av); if(rv) rv.textContent=fmt(bv);
+    const lf=row.querySelector('[data-fill-side="left"]'), rf=row.querySelector('[data-fill-side="right"]');
+    if(lf){ lf.style.width='0%'; requestAnimationFrame(()=>{ lf.style.width=`${Math.max(0,av)/max*100}%`; }); }
+    if(rf){ rf.style.width='0%'; requestAnimationFrame(()=>{ rf.style.width=`${Math.max(0,bv)/max*100}%`; }); }
+  });
 }
 function renderMomentumInline(match,left,right){
-  const total=(t)=>toNumber(t.turnoversConceded)+toNumber(t.penaltiesConceded);
-  return `<div class="matchBars">${matchCompareRow('Momentum Score', Math.max(0,100-total(left)), Math.max(0,100-total(right)), displayNumber)}${matchCompareRow('Penalty Conceded', left.penaltiesConceded, right.penaltiesConceded, displayNumber, false)}${matchCompareRow('Turnovers Conceded', left.turnoversConceded, right.turnoversConceded, displayNumber, false)}</div><div class="empty" style="margin-top:10px">Detailed timeline events can be added from split match_flow JSON in the next iteration.</div>`;
+  const totalNeg=(t)=>toNumber(t.turnoversConceded)+toNumber(t.penaltiesConceded);
+  const leftScore=Math.max(0,100-totalNeg(left));
+  const rightScore=Math.max(0,100-totalNeg(right));
+  const bands=['0-20','20-40','40-60','60-80','80+'];
+  const mini=bands.map((b,i)=>`<div class="momentumBand reveal-card"><strong>${b}</strong><div class="momentumPulse"><span style="animation-delay:${i*.08}s"></span></div></div>`).join('');
+  return `<div class="matchBars">${matchCompareRow('Momentum Score', leftScore, rightScore, displayNumber)}${matchCompareRow('Penalty Conceded', left.penaltiesConceded, right.penaltiesConceded, displayNumber, false)}${matchCompareRow('Turnovers Conceded', left.turnoversConceded, right.turnoversConceded, displayNumber, false)}</div><div class="momentumBands">${mini}</div>`;
 }
-
 function renderMatchReview(match){
   const teamStats=getMatchTeamStats(match); const [left,right]=matchTeamsOrdered(teamStats, match);
   const lineoutPct=t=>pctNum(t.lineoutWon,t.lineoutTotal); const scrumPct=t=>pctNum(t.scrumWon,t.scrumTotal);
@@ -2097,8 +2128,21 @@ async function runMatchReview(){
   await loadMatchIds([id],true);
   const match=state.matchById.get(id);
   if(!match){ out.innerHTML='<div class="compareEmpty">No Data for this match.</div>'; return; }
-  out.innerHTML=renderMatchReview(match); prepareScrollAnimations(out);
+  out.innerHTML=renderMatchReview(match); prepareScrollAnimations(out); animateMatchReviewBars(out);
 }
+
+function animateMatchReviewBars(root=document){
+  const run=()=>{
+    root.querySelectorAll('.matchBarFill[data-width]').forEach(el=>{ const w=el.getAttribute('data-width')||0; el.style.width='0%'; requestAnimationFrame(()=>{ el.style.width=w+'%'; }); });
+    updateMatchH2HStat();
+  };
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){ const el=e.target; const w=el.getAttribute('data-width')||0; el.style.width=w+'%'; io.unobserve(el);}})},{threshold:.2});
+    root.querySelectorAll('.matchBarFill[data-width]').forEach(el=>io.observe(el));
+    setTimeout(updateMatchH2HStat,120);
+  } else setTimeout(run,80);
+}
+
 function openGenericModal(title,html){ const modal=$('effortAnalysisModal'), body=$('effortAnalysisModalBody'), titleEl=$('effortAnalysisModalTitle'); if(!modal||!body) return; if(titleEl) titleEl.textContent=title; body.innerHTML=html; modal.classList.add('show'); modal.setAttribute('aria-hidden','false'); }
 function openMatchFlowModal(){
   const title=UI_LANG==='ja'?'Momentum / Match Flow':'Momentum / Match Flow';
