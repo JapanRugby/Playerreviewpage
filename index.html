@@ -184,11 +184,12 @@ body{background:
 
 
 /* v76: prominent mode switch and full comparison screen */
-.modeSwitchPanel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0 0 18px}
+.modeSwitchPanel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:0 0 18px}
 .modeSwitchBtn{position:relative;text-align:left;border:1px solid rgba(213,221,232,.95);background:rgba(255,255,255,.92);border-radius:26px;padding:18px 20px;cursor:pointer;box-shadow:0 14px 34px rgba(16,24,40,.08);color:#071a3a;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
 .modeSwitchBtn:before{content:'';position:absolute;inset:0 auto 0 0;width:6px;background:#d71920;opacity:.45}
 .modeSwitchBtn.compare:before{background:#071a3a}
 .modeSwitchBtn.world:before{background:linear-gradient(180deg,#d71920,#071a3a)}
+.modeSwitchBtn.matchreview:before{background:#071a3a}
 .modeSwitchBtn:hover,.modeSwitchBtn:focus-visible{transform:translateY(-2px);box-shadow:0 20px 44px rgba(16,24,40,.12);outline:none;border-color:#d71920}
 .modeSwitchBtn.active{border-color:#d71920;background:linear-gradient(135deg,#fff,#f9fbff);box-shadow:0 18px 42px rgba(215,25,32,.12)}
 .modeSwitchBtn.compare.active{border-color:#071a3a;box-shadow:0 18px 42px rgba(7,26,58,.14)}
@@ -199,10 +200,13 @@ body{background:
 .modeSwitchBtn.active .modeKicker{background:#fff1f1;color:#b42318}.modeSwitchBtn.compare.active .modeKicker{background:#edf2f8;color:#071a3a}.modeSwitchBtn.world.active .modeKicker{background:#fff1f1;color:#7a1016}
 body.compare-mode .controlShell,body.compare-mode #dashboard,body.compare-mode .worldShell{display:none!important}
 body.compare-mode .compareShell{display:block}
-body.world-mode .controlShell,body.world-mode #dashboard,body.world-mode .compareShell{display:none!important}
+body.world-mode .controlShell,body.world-mode #dashboard,body.world-mode .compareShell,body.world-mode .matchReviewShell{display:none!important}
 body.world-mode .worldShell{display:block}
-body.compare-mode .compareShell,body.world-mode .worldShell{padding:22px;border-radius:32px}
+body.match-review-mode .controlShell,body.match-review-mode #dashboard,body.match-review-mode .compareShell,body.match-review-mode .worldShell{display:none!important}
+body.match-review-mode .matchReviewShell{display:block}
+body.compare-mode .compareShell,body.world-mode .worldShell,body.match-review-mode .matchReviewShell{padding:22px;border-radius:32px}
 body.compare-mode .compareTitle{font-size:24px}.compareModeIntro{display:none}
+@media(max-width:960px){.modeSwitchPanel{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:760px){.modeSwitchPanel{grid-template-columns:1fr;gap:10px}.modeSwitchBtn{padding:15px 16px;border-radius:22px}.modeSwitchBtn strong{font-size:20px}body.compare-mode .compareShell,body.world-mode .worldShell{padding:14px;border-radius:24px}}
 
 /* v75: player comparison mode */
@@ -272,6 +276,18 @@ body.compare-mode .compareTitle{font-size:24px}.compareModeIntro{display:none}
 .compareChart.matchupStyle .compareGroupTitle:first-child,.worldCardGrid>.compareGroupTitle:first-child{margin-top:0}
 @media(max-width:760px){.sectionTitle h3{min-width:min(100%,260px);font-size:14px;padding:10px 16px;letter-spacing:.08em}.sectionTitle span{font-size:11px}.compareChart.matchupStyle .compareGroupTitle,.worldCardGrid>.compareGroupTitle{font-size:12px;letter-spacing:.1em;padding:12px 10px;border-radius:16px}}
 
+/* v97: Match Review shell */
+.matchReviewShell{display:none;background:rgba(255,255,255,.86);border:1px solid rgba(7,26,58,.12);box-shadow:0 18px 44px rgba(7,26,58,.12);border-radius:32px;margin:0 0 22px}
+.matchReviewControls{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:end;margin:18px 0}
+.matchReviewControls label{font-size:12px;font-weight:1000;text-transform:uppercase;letter-spacing:.08em;color:#475467;display:block;margin:0 0 6px}
+.matchReviewSelect{width:100%;border:1px solid #d0d5dd;border-radius:16px;padding:13px 14px;font-weight:900;background:white;color:#071a3a}
+.matchRun{border:0;border-radius:16px;background:#d71920;color:#fff;font-weight:1000;padding:13px 18px;cursor:pointer;box-shadow:0 12px 24px rgba(215,25,32,.18)}
+.matchReviewResult{margin-top:18px}
+.matchHero{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;margin:0 0 16px}.matchHeroCard{background:#fff;border:1px solid rgba(7,26,58,.1);border-radius:24px;padding:18px;box-shadow:0 12px 28px rgba(16,24,40,.08)}.matchHeroCard h3{margin:0 0 8px;color:#071a3a;font-size:24px}.matchHeroCard p{margin:0;color:#667085;font-weight:800}
+.matchSection{background:#fff;border:1px solid rgba(7,26,58,.1);border-radius:28px;padding:18px;margin:16px 0;box-shadow:0 14px 32px rgba(16,24,40,.08)}
+.matchBars{display:grid;gap:12px}.matchBarRow{border:1px solid rgba(7,26,58,.1);border-radius:18px;padding:13px;background:#f8fafc}.matchBarHead{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;font-weight:1000}.matchBarMetric{text-align:center;color:#071a3a}.matchBarValue.left{text-align:left;color:#d71920}.matchBarValue.right{text-align:right;color:#111827}.matchBarTrack{display:grid;grid-template-columns:1fr 1fr;gap:4px;align-items:center;margin-top:8px}.matchBarHalf{height:13px;background:#e9eef5;border-radius:999px;overflow:hidden;display:flex}.matchBarHalf.left{justify-content:flex-end}.matchBarFill{height:100%;width:0;border-radius:999px;transition:width .8s cubic-bezier(.2,.8,.2,1)}.matchBarFill.jp{background:#d71920}.matchBarFill.opp{background:#111827}.matchRanking{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.rankingCard{border:1px solid rgba(7,26,58,.1);border-radius:20px;padding:14px;background:#f8fafc}.rankingCard h4{margin:0 0 10px;color:#071a3a}.rankingCard ol{margin:0;padding-left:22px}.rankingCard li{margin:7px 0;font-weight:850;color:#344054}.timeBandToggles{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:10px 0 16px}.timeBandToggles button{border:1px solid #d0d5dd;background:#fff;border-radius:999px;padding:8px 12px;font-weight:950;cursor:pointer}.timeBandToggles button.active{background:#071a3a;color:#fff;border-color:#071a3a}
+@media(max-width:760px){.matchReviewControls{grid-template-columns:1fr}.matchHero{grid-template-columns:1fr}.matchRanking{grid-template-columns:1fr}.matchBarHead{grid-template-columns:1fr;gap:4px}.matchBarMetric{text-align:left}.matchBarValue.right{text-align:left}}
+
 </style>
 </head>
 <body>
@@ -295,6 +311,11 @@ body.compare-mode .compareTitle{font-size:24px}.compareModeIntro{display:none}
       <span class="modeKicker">World mode</span>
       <strong>World Comparison</strong>
       <small>Compare one player against global position leaders.</small>
+    </button>
+    <button id="matchReviewModeToggle" class="modeSwitchBtn matchreview" type="button">
+      <span class="modeKicker">Match mode</span>
+      <strong>Match Review</strong>
+      <small>Review team key stats, set piece, rankings and match flow.</small>
     </button>
   </section>
 
@@ -383,6 +404,21 @@ body.compare-mode .compareTitle{font-size:24px}.compareModeIntro{display:none}
     <div id="worldResult" class="worldResult"></div>
   </section>
 
+  <section id="matchReviewShell" class="matchReviewShell" aria-label="Match review">
+    <div class="compareTop">
+      <div><div class="compareTitle">Match Review</div><div class="compareSub">Choose one match to review team key stats, set piece, rankings, carry details and momentum.</div></div>
+      <button id="matchReviewClose" class="compareToggle" type="button">Close</button>
+    </div>
+    <div class="matchReviewControls">
+      <div>
+        <label for="matchReviewSelect">Select match</label>
+        <select id="matchReviewSelect" class="matchReviewSelect"></select>
+      </div>
+      <button id="matchReviewRun" class="matchRun" type="button">Show match review</button>
+    </div>
+    <div id="matchReviewResult" class="matchReviewResult"><div class="compareEmpty">Select a match to start.</div></div>
+  </section>
+
   <section id="dashboard" class="dashboard">
     <div class="playerHero">
       <div class="heroCard">
@@ -458,7 +494,7 @@ body.compare-mode .compareTitle{font-size:24px}.compareModeIntro{display:none}
 
 <script>
 const CONFIG = { manifestUrl:'data/matches.json', targetTeams:['Japan','Japan XV'] };
-const state = { matches:[], players:new Map(), selectedPlayer:'', selectedId:'', scope:'match', metric:'total', mode:'live', matchById:new Map(), matchIndex:new Map(), playerMatchIds:new Map(), playerSummaries:new Map(), compareMode:false, worldMode:false, compare:{team1:'',team2:'',player1:'',player2:'',scope:'career',id1:'',id2:''}, world:{team:'',player:'',position:'1',scope:'total',season:''} };
+const state = { matches:[], players:new Map(), selectedPlayer:'', selectedId:'', scope:'match', metric:'total', mode:'live', matchById:new Map(), matchIndex:new Map(), playerMatchIds:new Map(), playerSummaries:new Map(), compareMode:false, worldMode:false, matchReviewMode:false, compare:{team1:'',team2:'',player1:'',player2:'',scope:'career',id1:'',id2:''}, world:{team:'',player:'',position:'1',scope:'total',season:''} };
 const $ = id => document.getElementById(id);
 const statusEl=$('status'), playerSelect=$('playerSelect'), playerList=$('playerList'), matchCards=$('matchCards'), dashboard=$('dashboard');
 let playerSearchLookup=new Map();
@@ -493,6 +529,8 @@ const JA_TEXT = new Map([
   ['Choose two players to compare.','比較する2選手を選んでください。'],
   ['World mode','世界比較モード'],
   ['World Comparison','世界と比較'],
+  ['Match mode','試合モード'],
+  ['Match Review','試合レビュー'],
   ['Compare one player against global position leaders.','選手を世界のポジション別トップと比較します。'],
   ['Choose any player and position. Values are always shown per 80 minutes against top starting players from major nations.','選手とポジションを選択してください。主要国のスターティングプレーヤー上位値と常に80分換算で比較します。'],
   ['Show world comparison','世界比較を表示'],
@@ -1894,33 +1932,108 @@ function isCompareReady(){
 }
 function updateCompareRunState(){ const btn=$('compareRun'); if(!btn) return; btn.disabled=!isCompareReady(); }
 function updateModeButtons(){
-  const compareBtn=$('compareModeToggle'), reviewBtn=$('playerReviewModeToggle'), worldBtn=$('worldModeToggle');
+  const compareBtn=$('compareModeToggle'), reviewBtn=$('playerReviewModeToggle'), worldBtn=$('worldModeToggle'), matchBtn=$('matchReviewModeToggle');
   if(compareBtn){ compareBtn.classList.toggle('active',state.compareMode); compareBtn.setAttribute('aria-pressed',state.compareMode?'true':'false'); }
   if(worldBtn){ worldBtn.classList.toggle('active',state.worldMode); worldBtn.setAttribute('aria-pressed',state.worldMode?'true':'false'); }
-  if(reviewBtn){ const reviewOn=!(state.compareMode||state.worldMode); reviewBtn.classList.toggle('active',reviewOn); reviewBtn.setAttribute('aria-pressed',reviewOn?'true':'false'); }
+  if(matchBtn){ matchBtn.classList.toggle('active',state.matchReviewMode); matchBtn.setAttribute('aria-pressed',state.matchReviewMode?'true':'false'); }
+  if(reviewBtn){ const reviewOn=!(state.compareMode||state.worldMode||state.matchReviewMode); reviewBtn.classList.toggle('active',reviewOn); reviewBtn.setAttribute('aria-pressed',reviewOn?'true':'false'); }
+}
+function applyModeClasses(){
+  document.body.classList.toggle('compare-mode',!!state.compareMode);
+  document.body.classList.toggle('world-mode',!!state.worldMode);
+  document.body.classList.toggle('match-review-mode',!!state.matchReviewMode);
+  const shell=$('compareShell'), worldShell=$('worldShell'), matchShell=$('matchReviewShell');
+  if(shell) shell.classList.toggle('show',!!state.compareMode);
+  if(worldShell) worldShell.classList.toggle('show',!!state.worldMode);
+  if(matchShell) matchShell.classList.toggle('show',!!state.matchReviewMode);
+  updateModeButtons();
 }
 function setCompareMode(on){
   state.compareMode=!!on;
-  if(state.compareMode) state.worldMode=false;
-  const shell=$('compareShell'), worldShell=$('worldShell');
-  document.body.classList.toggle('compare-mode',state.compareMode);
-  document.body.classList.toggle('world-mode',state.worldMode);
-  if(shell) shell.classList.toggle('show',state.compareMode);
-  if(worldShell) worldShell.classList.toggle('show',state.worldMode);
-  updateModeButtons();
+  if(state.compareMode){ state.worldMode=false; state.matchReviewMode=false; }
+  applyModeClasses();
+  const shell=$('compareShell');
   if(state.compareMode){ hydrateCompareUI(); syncMetricButtons(); syncCompareScopeButtons(); hydrateCompareTargets(); applyLanguage(shell||document); if(dashboard) dashboard.style.display='none'; if(shell) shell.scrollIntoView({behavior:'smooth',block:'start'}); }
 }
 function setWorldMode(on){
   state.worldMode=!!on;
-  if(state.worldMode) state.compareMode=false;
-  const shell=$('compareShell'), worldShell=$('worldShell');
-  document.body.classList.toggle('compare-mode',state.compareMode);
-  document.body.classList.toggle('world-mode',state.worldMode);
-  if(shell) shell.classList.toggle('show',state.compareMode);
-  if(worldShell) worldShell.classList.toggle('show',state.worldMode);
-  updateModeButtons();
+  if(state.worldMode){ state.compareMode=false; state.matchReviewMode=false; }
+  applyModeClasses();
+  const worldShell=$('worldShell');
   if(state.worldMode){ hydrateWorldUI(); applyLanguage(worldShell||document); if(dashboard) dashboard.style.display='none'; if(worldShell) worldShell.scrollIntoView({behavior:'smooth',block:'start'}); }
 }
+function setMatchReviewMode(on){
+  state.matchReviewMode=!!on;
+  if(state.matchReviewMode){ state.compareMode=false; state.worldMode=false; }
+  applyModeClasses();
+  const matchShell=$('matchReviewShell');
+  if(state.matchReviewMode){ hydrateMatchReviewUI(); applyLanguage(matchShell||document); if(dashboard) dashboard.style.display='none'; if(matchShell) matchShell.scrollIntoView({behavior:'smooth',block:'start'}); }
+}
+
+/* v97: Match Review mode */
+function matchReviewMatches(){ return [...state.matchIndex.values()].sort((a,b)=>String(b.date||'').localeCompare(String(a.date||''))||String(b.id||'').localeCompare(String(a.id||''))); }
+function hydrateMatchReviewUI(){
+  const sel=$('matchReviewSelect'); if(!sel) return;
+  const matches=matchReviewMatches();
+  sel.innerHTML=`<option value="">${escapeHtml(UI_LANG==='ja'?'試合を選択':'Select match')}</option>`+matches.map(m=>`<option value="${escapeHtml(m.id)}">${escapeHtml([m.date,m.label].filter(Boolean).join(' · '))}</option>`).join('');
+  if(!sel.value && matches[0]) sel.value=matches[0].id;
+}
+function teamBaseName(team){ const parts=String(team||'').split('/').map(x=>x.trim()).filter(Boolean); return parts[0]||String(team||'').trim()||'Unknown'; }
+function isJapanSideName(team){ return /^Japan( XV)?$/i.test(teamBaseName(team)); }
+function emptyTeamStats(team){return {team,carryMetres:0,kickingMetres:0,penaltiesConceded:0,turnoversConceded:0,opp22Time:0,lineoutTotal:0,lineoutWon:0,scrumTotal:0,scrumWon:0,carry:{fwds:{carries:0,metres:0,pcm:0},bks:{carries:0,metres:0,pcm:0}},rankings:{}};}
+function getMatchTeamStats(match){
+  if(match.teamStats) return match.teamStats;
+  const teams=new Map();
+  for(const st of match.playerStats.values()){
+    const team=teamBaseName(st.team||st.player?.team); if(!team) continue;
+    if(!teams.has(team)) teams.set(team,emptyTeamStats(team));
+    const t=teams.get(team);
+    t.carryMetres+=toNumber(st.carryMetres); t.penaltiesConceded+=toNumber(st.negativeActionTypes?.['Penalty conceded - full penalty'])+toNumber(st.negativeActionTypes?.['Penalty conceded - free kick']);
+    t.turnoversConceded+=toNumber(st.negativeActionTypes?.['Error on attack'])+toNumber(st.negativeActionTypes?.['Handling fail']);
+    const pid=parseInt(String(st.positionId||st.position||'').match(/\d+/)?.[0]||'0',10); const grp=(pid>=1&&pid<=8)?'fwds':'bks';
+    t.carry[grp].carries+=toNumber(st.carry); t.carry[grp].metres+=toNumber(st.carryMetres); t.carry[grp].pcm+=toNumber(st.postContactMetres);
+  }
+  return [...teams.values()];
+}
+function matchTeamsOrdered(teamStats){ const arr=Array.isArray(teamStats)?teamStats:Object.values(teamStats||{}); const japan=arr.find(t=>isJapanSideName(t.team)); const opp=arr.find(t=>!isJapanSideName(t.team))||arr.find(t=>t!==japan); return [japan||arr[0]||emptyTeamStats('Japan'), opp||arr[1]||emptyTeamStats('Opponent')]; }
+function matchCompareRow(label,a,b,fmt=displayNumber,higher=true){
+  const av=toNumber(a), bv=toNumber(b), max=Math.max(1,av>0?av:0,bv>0?bv:0); const aw=av>0?Math.round(av/max*100):0, bw=bv>0?Math.round(bv/max*100):0;
+  return `<div class="matchBarRow"><div class="matchBarHead"><div class="matchBarValue left"><span class="metricNum" data-final="${escapeHtml(fmt(av))}">${escapeHtml(fmt(av))}</span></div><div class="matchBarMetric">${escapeHtml(label)}</div><div class="matchBarValue right"><span class="metricNum" data-final="${escapeHtml(fmt(bv))}">${escapeHtml(fmt(bv))}</span></div></div><div class="matchBarTrack"><div class="matchBarHalf left"><div class="matchBarFill jp" style="width:${aw}%"></div></div><div class="matchBarHalf"><div class="matchBarFill opp" style="width:${bw}%"></div></div></div></div>`;
+}
+function matchKeyStatsRows(jp,opp){ return [
+  ['Carry Metres',jp.carryMetres,opp.carryMetres,displayNumber],['Kicking Metres',jp.kickingMetres,opp.kickingMetres,displayNumber],['Penalties Conceded',jp.penaltiesConceded,opp.penaltiesConceded,displayNumber],['Turnovers Conceded',jp.turnoversConceded,opp.turnoversConceded,displayNumber],['Opp 22 Area Time',jp.opp22Time,opp.opp22Time,v=>`${oneDec(v)} min`]
+]; }
+function rankingFromMatch(match, statKey, label, fmt=displayNumber){
+  const rows=[...match.playerStats.values()].filter(st=>isJapanSideName(st.team||st.player?.team)).map(st=>({name:st.player?.name||'', team:st.player?.team||st.team||'', value:typeof statKey==='function'?statKey(st):toNumber(st[statKey])})).filter(x=>x.value>0).sort((a,b)=>b.value-a.value).slice(0,5);
+  return `<div class="rankingCard"><h4>${escapeHtml(label)}</h4>${rows.length?`<ol>${rows.map(r=>`<li>${escapeHtml(r.name)} <strong>${escapeHtml(fmt(r.value))}</strong></li>`).join('')}</ol>`:`<div class="empty">No Data</div>`}</div>`;
+}
+function renderMatchReview(match){
+  const teamStats=getMatchTeamStats(match); const [jp,opp]=matchTeamsOrdered(teamStats);
+  const lineoutPct=t=>pctNum(t.lineoutWon,t.lineoutTotal); const scrumPct=t=>pctNum(t.scrumWon,t.scrumTotal);
+  let html=`<div class="matchHero"><div class="matchHeroCard"><h3>${escapeHtml(match.match?.label||match.label||'Match Review')}</h3><p>${escapeHtml([match.match?.date||match.date, match.match?.venue||match.venue, match.match?.competition||match.competition].filter(Boolean).join(' · '))}</p></div><div class="matchHeroCard"><h3>${escapeHtml((jp.team||'Japan')+' vs '+(opp.team||'Opponent'))}</h3><p>${escapeHtml(match.match?.score||match.score||'')}</p></div></div>`;
+  html+=`<div class="matchSection"><div class="sectionTitle"><h3>Key Stats Comparison</h3><span>Japan red / Opponent black</span></div><div class="matchBars">${matchKeyStatsRows(jp,opp).map(r=>matchCompareRow(...r)).join('')}</div></div>`;
+  html+=`<div class="matchSection"><div class="sectionTitle"><h3>Set Piece Detail</h3><span>Lineout & scrum</span></div><div class="matchBars">${matchCompareRow('Lineout Total',jp.lineoutTotal,opp.lineoutTotal)}${matchCompareRow('Lineout Win %',lineoutPct(jp),lineoutPct(opp),v=>`${intFmt(v)}%`)}${matchCompareRow('Scrum Total',jp.scrumTotal,opp.scrumTotal)}${matchCompareRow('Scrum Win %',scrumPct(jp),scrumPct(opp),v=>`${intFmt(v)}%`)}</div></div>`;
+  const carryRow=(group,label,key,fmt=displayNumber)=>matchCompareRow(label,jp.carry?.[group]?.[key]||0,opp.carry?.[group]?.[key]||0,fmt);
+  html+=`<div class="matchSection"><div class="sectionTitle"><h3>Carry Details Comparison</h3><span>Forwards / Backs by Position ID</span></div><div class="matchBars">${carryRow('fwds','Fwds Carries','carries')}${carryRow('fwds','Fwds Carry Metres','metres')}${matchCompareRow('Fwds Metres per Carry',jp.carry?.fwds?.carries?jp.carry.fwds.metres/jp.carry.fwds.carries:0,opp.carry?.fwds?.carries?opp.carry.fwds.metres/opp.carry.fwds.carries:0,oneDec)}${carryRow('fwds','Fwds Post Contact Metres','pcm')}${carryRow('bks','Bks Carries','carries')}${carryRow('bks','Bks Carry Metres','metres')}${matchCompareRow('Bks Metres per Carry',jp.carry?.bks?.carries?jp.carry.bks.metres/jp.carry.bks.carries:0,opp.carry?.bks?.carries?opp.carry.bks.metres/opp.carry.bks.carries:0,oneDec)}${carryRow('bks','Bks Post Contact Metres','pcm')}</div></div>`;
+  html+=`<div class="matchSection"><div class="sectionTitle"><h3>Team Ranking</h3><span>Japan players top 5</span></div><div class="matchRanking">${rankingFromMatch(match,st=>samuraiRate(st),'Samurai Stats Top 5',signedOneDec)}${rankingFromMatch(match,'carry','Carries Top 5')}${rankingFromMatch(match,st=>pctNum(st.carryDominant,st.carryContact),'Carry Dominance% Top 5',v=>`${intFmt(v)}%`)}${rankingFromMatch(match,'tackleMade','Tackle Made Top 5')}${rankingFromMatch(match,st=>pctNum(st.tackleDominant,st.tackleAttempts),'Tackle Dominance% Top 5',v=>`${intFmt(v)}%`)}${rankingFromMatch(match,'ruckSupportAttack','Ruck Support Attack Top 5')}</div></div>`;
+  html+=`<div class="matchSection"><div class="sectionTitle"><h3>Momentum / Match Flow</h3><span>Tap-loaded flow view</span></div><button type="button" class="matchRun" onclick="openMatchFlowModal()">Open Momentum Flow</button><div class="empty" style="margin-top:10px">Flow events are loaded on tap in v2 structure.</div></div>`;
+  return html;
+}
+async function runMatchReview(){
+  const sel=$('matchReviewSelect'), out=$('matchReviewResult'); if(!sel||!out) return; const id=sel.value; if(!id){out.innerHTML='<div class="compareEmpty">Select a match.</div>';return;}
+  out.innerHTML='<div class="compareEmpty">Loading match review...</div>';
+  await loadMatchIds([id],true);
+  const match=state.matchById.get(id);
+  if(!match){ out.innerHTML='<div class="compareEmpty">No Data for this match.</div>'; return; }
+  out.innerHTML=renderMatchReview(match); prepareScrollAnimations(out);
+}
+function openGenericModal(title,html){ const modal=$('effortAnalysisModal'), body=$('effortAnalysisModalBody'), titleEl=$('effortAnalysisModalTitle'); if(!modal||!body) return; if(titleEl) titleEl.textContent=title; body.innerHTML=html; modal.classList.add('show'); modal.setAttribute('aria-hidden','false'); }
+function openMatchFlowModal(){
+  const title=UI_LANG==='ja'?'Momentum / Match Flow':'Momentum / Match Flow';
+  const html='<div class="empty">Momentum Flow will use split match_flow JSON and tap-time loading. Current v2 shell is ready for this data.</div>';
+  openGenericModal(title,html);
+}
+
 function scaledForComparison(raw){ return scaleStats(raw,state.metric); }
 function comparisonMetricRows(a,b,rawA=null,rawB=null){
   const samA=rawA||a;
@@ -2229,9 +2342,12 @@ const compareScopeButtons=$('compareScopeButtons'); if(compareScopeButtons) comp
 
 const compareToggle=$('compareModeToggle'); if(compareToggle) compareToggle.addEventListener('click',()=>setCompareMode(true));
 const worldToggle=$('worldModeToggle'); if(worldToggle) worldToggle.addEventListener('click',()=>setWorldMode(true));
-const playerReviewToggle=$('playerReviewModeToggle'); if(playerReviewToggle) playerReviewToggle.addEventListener('click',()=>{state.compareMode=false;setWorldMode(false);});
+const matchReviewToggle=$('matchReviewModeToggle'); if(matchReviewToggle) matchReviewToggle.addEventListener('click',()=>setMatchReviewMode(true));
+const playerReviewToggle=$('playerReviewModeToggle'); if(playerReviewToggle) playerReviewToggle.addEventListener('click',()=>{state.compareMode=false;state.worldMode=false;state.matchReviewMode=false;applyModeClasses(); if(dashboard) dashboard.style.display=state.selectedId?'block':'none';});
 const compareClose=$('compareClose'); if(compareClose) compareClose.addEventListener('click',()=>setCompareMode(false));
 const worldClose=$('worldClose'); if(worldClose) worldClose.addEventListener('click',()=>setWorldMode(false));
+const matchReviewClose=$('matchReviewClose'); if(matchReviewClose) matchReviewClose.addEventListener('click',()=>setMatchReviewMode(false));
+const matchReviewRun=$('matchReviewRun'); if(matchReviewRun) matchReviewRun.addEventListener('click',runMatchReview);
 for(const side of [1,2]){
   const teamSel=$(`compareTeam${side}`); if(teamSel) teamSel.addEventListener('change',()=>{state.compare[`team${side}`]=teamSel.value; state.compare[`player${side}`]=''; state.compare[`id${side}`]=''; hydrateComparePlayers(side); const out=$('compareResult'); if(out) out.innerHTML='';});
   const playerSel=$(`comparePlayer${side}`); if(playerSel) playerSel.addEventListener('change',()=>{state.compare[`player${side}`]=playerSel.value; state.compare[`id${side}`]=''; hydrateCompareTargets(); updateCompareRunState(); const out=$('compareResult'); if(out) out.innerHTML='';});
