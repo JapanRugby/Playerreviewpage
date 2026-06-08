@@ -238,7 +238,7 @@ function trackComparisonMetrics(st,row){
 
 function teamBaseName(team){ const raw=String(team||'').trim(); if(!raw) return 'Unknown'; const parts=raw.split('/').map(x=>x.trim()).filter(Boolean); const first=parts[0]||raw; return first; }
 function canonicalTeamForStats(team){ const raw=String(team||'').trim(); if(!raw) return 'Unknown'; const upper=normTeam(raw); if(upper==='JAPAN') return 'Japan'; if(upper==='JAPAN XV') return 'Japan XV'; return raw; }
-function emptyTeamStats(team){return {team,carryMetres:0,kickingMetres:0,penaltiesConceded:0,turnoversConceded:0,opp22Time:0,lineoutTotal:0,lineoutWon:0,scrumTotal:0,scrumWon:0,carry:{fwds:{carries:0,metres:0,pcm:0},bks:{carries:0,metres:0,pcm:0}}};}
+function emptyTeamStats(team){return {team,carryMetres:0,kickingMetres:0,penaltiesConceded:0,turnoversConceded:0,opp22Time:0,_opp22Intervals:[],lineoutTotal:0,lineoutWon:0,scrumTotal:0,scrumWon:0,carry:{fwds:{carries:0,metres:0,pcm:0},bks:{carries:0,metres:0,pcm:0}}};}
 function getTeamStatsMap(match){ if(!match.teamStats) match.teamStats=new Map(); return match.teamStats; }
 function ensureTeamStats(match,team){ const name=canonicalTeamForStats(team); const map=getTeamStatsMap(match); if(!map.has(name)) map.set(name,emptyTeamStats(name)); return map.get(name); }
 function textOfRow(row){
@@ -278,13 +278,69 @@ function isScrumLost(row){ const txt=rowNormText(row); return isScrumRow(row) &&
 function isTurnoverConcededRow(row){ const txt=rowNormText(row); if(txt.includes('turnover conceded')||txt.includes('turnover lost')||txt.includes('error on attack')) return true; if(isLineoutLost(row)||isScrumLost(row)) return true; return false; }
 function isPenaltyConcededRow(row){ const a=norm(actionNameOf(row)); const txt=rowNormText(row); return a==='penalty conceded' || txt.includes('penalty conceded') || txt.includes('free kick conceded'); }
 function rowPositionId(row,st){ const raw=st?.positionId||getField(row,['playerpositionID','playerpositionId','PositionID','PosID','positionId','playerPositionId']); const m=String(raw||'').match(/\d+/); return m?parseInt(m[0],10):0; }
-function likelyOpp22ForTeam(match,row){
-  // Prefer team-relative attacking field position when available. If orientation is unclear,
-  // count clear entries at either extreme so the card never disappears for feeds that reverse co-ordinates.
-  const xs=[toNumber(getField(row,['x_coord','x'])),toNumber(getField(row,['x_coord_end','x_end','end_x']))].filter(n=>Number.isFinite(n));
-  if(!xs.length) return false;
-  const max=Math.max(...xs), min=Math.min(...xs);
-  return max>=78 || min<=22;
+function isPossessionTimeRow(row){
+  const action=norm(actionNameOf(row));
+  const txt=rowNormText(row);
+  // Opp 22 Area Time should represent time with the ball, not defensive actions or penalties/cards.
+  if(!action) return false;
+  if(action==='tackle' || action==='missed tackle' || action==='penalty conceded' || action==='card') return false;
+  if(txt.includes('tackle') && !txt.includes('tackle break') && !txt.includes('tackled')) return false;
+  const possessionActions=[
+    'carry','pass','kick','collection','lineout throw','scrum','ruck ooa','restart','goal kick',
+    'maul','breakdown','try','conversion','penalty kick'
+  ];
+  if(possessionActions.some(a=>action===a || action.includes(a))) return true;
+  // Some feeds carry possession information in qualifiers/results rather than ActionName.
+  return /(carry|pass|kick in play|penalty kick|lineout throw|scrum|ruck ooa|collection|restart|maul)/.test(txt);
+}
+function opp22IntervalSeconds(row){
+  // SuperScout/BI coordinates are team-relative in the feeds we use: x=100 is the opponent goal-line
+  // for the team on the row. Therefore Opp 22 is x >= 78, not either end of the field.
+  if(!isPossessionTimeRow(row)) return null;
+  const start=toNumber(getField(row,['ps_timestamp','start_timestamp','startTime']));
+  const end=toNumber(getField(row,['ps_endstamp','end_timestamp','endTime']));
+  if(!(end>start)) return null;
+  const x0=toNumber(getField(row,['x_coord','x']));
+  const x1Raw=getField(row,['x_coord_end','x_end','end_x']);
+  const x1=toNumber(x1Raw);
+  if(!Number.isFinite(x0) && !Number.isFinite(x1)) return null;
+  const from=Number.isFinite(x0)?x0:x1;
+  const to=Number.isFinite(x1)?x1:from;
+  const threshold=78;
+  let a=start, b=end;
+  if(from>=threshold && to>=threshold){
+    // Entire action interval is in the opposition 22.
+  }else if(from<threshold && to<threshold){
+    return null;
+  }else if(to!==from){
+    const ratio=(threshold-from)/(to-from);
+    if(!Number.isFinite(ratio)) return null;
+    const cross=start+(end-start)*Math.max(0,Math.min(1,ratio));
+    if(from<threshold && to>=threshold){ a=cross; b=end; }
+    else if(from>=threshold && to<threshold){ a=start; b=cross; }
+  }else{
+    return null;
+  }
+  if(b>a) return [a,b];
+  return null;
+}
+function mergeIntervalsSeconds(intervals){
+  const clean=(intervals||[]).filter(x=>Array.isArray(x)&&x.length===2&&x[1]>x[0]).sort((a,b)=>a[0]-b[0]);
+  if(!clean.length) return 0;
+  let total=0, cs=clean[0][0], ce=clean[0][1];
+  for(let i=1;i<clean.length;i++){
+    const [s,e]=clean[i];
+    if(s<=ce){ if(e>ce) ce=e; }
+    else{ total+=ce-cs; cs=s; ce=e; }
+  }
+  total+=ce-cs;
+  return total/60;
+}
+function finalizeTeamStats(match){
+  for(const t of (match.teamStats||new Map()).values()){
+    t.opp22Time=mergeIntervalsSeconds(t._opp22Intervals);
+    delete t._opp22Intervals;
+  }
 }
 function rowDurationMinutes(row){
   const start=toNumber(getField(row,['ps_timestamp','start_timestamp','startTime']));
@@ -309,7 +365,7 @@ function trackTeamMatchStats(match,row,st){
   // Some providers only mark lineout rows without "throw". Count them if no throw wording exists.
   if(isLineoutRow(row) && !actionN.includes('throw') && !rowNormText(row).includes('lineout throw') && /won|lost|not straight|overthrow|turnover conceded/.test(rowNormText(row))){ t.lineoutTotal++; if(isLineoutWin(row)) t.lineoutWon++; }
   if(isScrumRow(row)){ t.scrumTotal++; if(isScrumWin(row)) t.scrumWon++; }
-  const dur=rowDurationMinutes(row); if(dur>0 && likelyOpp22ForTeam(match,row)) t.opp22Time+=dur;
+  const oppInt=opp22IntervalSeconds(row); if(oppInt) t._opp22Intervals.push(oppInt);
 }
 
 function buildMatch(item,biRows,reviewRows,xmlText,players){
@@ -319,6 +375,7 @@ function buildMatch(item,biRows,reviewRows,xmlText,players){
   for(const info of xmlData.players.values()){ if(info.minutes<=0) continue; const got=ensurePlayer(match,players,info.name,info.team,{shirt:info.shirt,position:info.position,positionId:info.positionId||info.position}); if(!got) continue; got.stats.appearances=1; got.stats.minutes=info.minutes; got.stats.ballInPlayMins=info.ballInPlayMins||info.minutes||0; seen.add(got.key); }
   for(const row of biRows){ trackTeamMatchStats(match,row,null); const name=(getField(row,['playerName'])||'').trim(); const team=(getField(row,['teamName'])||'').trim(); const got=ensurePlayer(match,players,name,team,{shirt:getField(row,['playerShirtNumber','ShirtNumber']),position:getField(row,['playerpositionName','playerPositionName','positionName']),positionId:getField(row,['playerpositionID','playerpositionId','PositionID','PosID'])}); if(!got) continue; const st=got.stats; const sk=got.key; if(!seen.has(sk)){ seen.add(sk); st.appearances=1; st.minutes=playerMinutes.get(sk)||0; st.ballInPlayMins=playerBallInPlay.get(sk)||st.minutes||0; } applyXmlMinutes(st,xmlInfoFor(row,name,team)); st.totalActions++; trackComparisonMetrics(st,row); const sam=samuraiScoreRow(row); st.positiveActions+=sam.positive; st.negativeActions+=sam.negative; for(const label of sam.positiveReasons||[]) st.positiveActionTypes[label]=(st.positiveActionTypes[label]||0)+1; for(const label of sam.negativeReasons||[]) st.negativeActionTypes[label]=(st.negativeActionTypes[label]||0)+1; const action=String(row.actionName||'').trim(); if(action==='Carry'){ st.carry++; st.carryMetres+=toNumber(row.Metres2); st.postContactMetres+=toNumber(row.Metres3); const contact=String(row.qualifier4Name||''); if(/Contact/i.test(contact)) st.carryContact++; if(/Dominant Contact/i.test(contact)) st.carryDominant++; } if(action==='Tackle'){ st.tackleAttempts++; const result=String(row.ActionResultName||'').trim(); if(result!=='Missed') st.tackleMade++; const tq=String(row.qualifier4Name||''); if(/Dominant Tackle/i.test(tq)) st.tackleDominant++; } if(action==='Goal Kick'){ const result=String(row.ActionResultName||'').trim(); if(result){ st.goalKickAttempts++; if(result==='Goal Kicked') st.goalKickMade++; } } }
   for(const row of reviewRows){ const name=extractReviewName(row); const team=extractReviewTeam(row); const got=ensurePlayer(match,players,name,team,{shirt:row.ShirtNumber}); if(!got) continue; const st=got.stats; if(!st.appearances){ const sk=playerKey(name,team); st.appearances=1; st.minutes=playerMinutes.get(sk)||0; st.ballInPlayMins=playerBallInPlay.get(sk)||st.minutes||0; } const colour=canonicalEffortColour(row.next_action_result); const type=canonicalEffortType(row.next_action_type||'Other'); if(st.colours[colour]!==undefined){ st.colours[colour]++; st.typeByColour[colour][type]=(st.typeByColour[colour][type]||0)+1; const band=effortTimeBand(rowClockMinutes(row)); if(band) st.timeByColour[colour][band]=(st.timeByColour[colour][band]||0)+1; } st.reviewTotal++; st.typeCounts[type]=(st.typeCounts[type]||0)+1; }
+  finalizeTeamStats(match);
   attachMatchHistory(match);
   return match;
 }
