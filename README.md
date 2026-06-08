@@ -1,6 +1,10 @@
-# v109 Opp 22 Area Time logic fix
+# JAPAN RUGBY PERFORMANCE REVIEW HUB v114
 
-- Opp 22 Area Time is now calculated as the total merged time a team has the ball in the opposition 22m area.
-- Uses team-relative x coordinates: opposition 22 is x >= 78.
-- Defensive events, penalties/cards, and duplicate overlapping intervals are excluded.
-- Requires regenerating data via GitHub Actions after uploading.
+Full page-level UI/UX implementation.
+
+- Stats Review: review snapshot, key strengths, next focus, detail cards, trends and modal details.
+- Stats Comparison: comparison summary, biggest gaps, category tabs, and battle-board graphs.
+- World Comparison: benchmark score, closest-to-world-class, biggest gaps, and world-top reference board.
+- Match Review: coach snapshot flow, key battles, unit control and 1–23 head-to-head.
+
+Visibility rule: light cards use dark text; white text is limited to navy/red dark surfaces.
