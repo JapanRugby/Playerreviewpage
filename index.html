@@ -496,7 +496,7 @@ body.compare-mode .compareTitle{font-size:24px}.compareModeIntro{display:none}
 
 <script>
 const CONFIG = { manifestUrl:'data/matches.json', targetTeams:['Japan','Japan XV'] };
-const state = { matches:[], players:new Map(), selectedPlayer:'', selectedId:'', scope:'match', metric:'total', mode:'live', matchById:new Map(), matchIndex:new Map(), playerMatchIds:new Map(), playerSummaries:new Map(), compareMode:false, worldMode:false, matchReviewMode:false, compare:{team1:'',team2:'',player1:'',player2:'',scope:'career',id1:'',id2:''}, world:{team:'',player:'',position:'1',scope:'total',season:''} };
+const state = { matches:[], players:new Map(), selectedPlayer:'', selectedId:'', scope:'match', metric:'total', mode:'live', matchById:new Map(), matchReviewById:new Map(), matchIndex:new Map(), playerMatchIds:new Map(), playerSummaries:new Map(), compareMode:false, worldMode:false, matchReviewMode:false, compare:{team1:'',team2:'',player1:'',player2:'',scope:'career',id1:'',id2:''}, world:{team:'',player:'',position:'1',scope:'total',season:''} };
 const $ = id => document.getElementById(id);
 const statusEl=$('status'), playerSelect=$('playerSelect'), playerList=$('playerList'), matchCards=$('matchCards'), dashboard=$('dashboard');
 let playerSearchLookup=new Map();
@@ -964,9 +964,10 @@ async function fetchTextOptional(url,bust=true,label='data file'){
 async function loadFromManifest(force=false){ const params=new URLSearchParams(location.search); const manifestUrl=params.get('manifest')||CONFIG.manifestUrl; setStatus('Loading match list...'); const manifestText=await fetchText(manifestUrl,force); const manifest=JSON.parse(manifestText); const matches=[]; let idx=0; const missing=[]; for(const item of manifest){ idx++; setStatus(`Loading match data ${idx}/${manifest.length}...`); const biUrl=item.biCsv?resolveCsvUrl(item.biCsv,manifestUrl):''; const reviewUrl=item.reviewCsv?resolveCsvUrl(item.reviewCsv,manifestUrl):''; const xmlUrl=item.superscoutXml?resolveCsvUrl(item.superscoutXml,manifestUrl):''; const [biRes,reviewRes,xmlRes]=await Promise.all([fetchTextOptional(biUrl,force,`${item.id||idx} BI CSV`),fetchTextOptional(reviewUrl,force,`${item.id||idx} Effort CSV`),fetchTextOptional(xmlUrl,force,`${item.id||idx} SuperScout XML`)]); if(!biRes.ok) missing.push(`${item.id||idx}: BI CSV`); if(!reviewRes.ok) missing.push(`${item.id||idx}: Effort CSV`); matches.push(buildMatch(item,parseCSV(biRes.text),parseCSV(reviewRes.text),xmlRes.text)); } state.matches=matches; hydrateUI(); const loadedPlayers=[...state.players.values()].filter(p=>p.show).length; const note=missing.length?` · No Data for ${missing.length} source(s)`:''; setStatus(`${matches.length} matches / ${loadedPlayers} Japan players loaded${note}`, loadedPlayers?'ok':'err'); }
 
 function statJsonUrl(matchId){ return new URL(`data/stats/${encodeURIComponent(matchId)}.json`, location.href).toString(); }
+function matchReviewJsonUrl(matchId){ return new URL(`data/match_review/${encodeURIComponent(matchId)}.json`, location.href).toString(); }
 function revivePrecomputedMatch(payload){
   const info=payload.match||{};
-  const match={...info, playerStats:new Map()};
+  const match={...info, teamStats:payload.teamStats||info.teamStats||[], playerStats:new Map()};
   for(const [key,rawStats] of Object.entries(payload.playerStats||{})){
     const st=rawStats||{};
     const p=state.players.get(key)||st.player||{key,name:st.player?.name||'',team:st.player?.team||'',show:isTargetTeam(st.player?.team||'')};
@@ -984,6 +985,7 @@ async function loadPrecomputedIndex(force=false){
   state.mode='precomputed';
   state.matches=[];
   state.matchById=new Map();
+  state.matchReviewById=new Map();
   state.matchIndex=new Map();
   state.playerMatchIds=new Map();
   state.playerSummaries=new Map();
@@ -1981,9 +1983,27 @@ const matchReviewLoadingIds=new Set();
 function idleTask(fn){ if('requestIdleCallback' in window) requestIdleCallback(fn,{timeout:1200}); else setTimeout(fn,120); }
 function prefetchMatchReview(id){
   id=String(id||'');
-  if(!id || state.matchById.has(id) || matchReviewLoadingIds.has(id) || state.mode!=='precomputed') return;
+  if(!id || state.matchReviewById.has(id) || matchReviewLoadingIds.has(id) || state.mode!=='precomputed') return;
   matchReviewLoadingIds.add(id);
-  idleTask(async()=>{ try{ await loadMatchIds([id],false); } catch(e){ console.warn('Match review prefetch failed',id,e); } finally{ matchReviewLoadingIds.delete(id); } });
+  idleTask(async()=>{ try{ await loadMatchReviewId(id,false); } catch(e){ console.warn('Match review prefetch failed',id,e); } finally{ matchReviewLoadingIds.delete(id); } });
+}
+async function loadMatchReviewId(id,force=false){
+  id=String(id||'');
+  if(!id) return null;
+  if(state.matchReviewById.has(id)) return state.matchReviewById.get(id);
+  if(state.mode!=='precomputed') return state.matchById.get(id)||null;
+  try{
+    const txt=await fetchText(matchReviewJsonUrl(id),force);
+    const match=revivePrecomputedMatch(JSON.parse(txt));
+    state.matchReviewById.set(match.id,match);
+    return match;
+  }catch(err){
+    console.warn(`No Data: match_review/${id}.json. Falling back to stats JSON.`,err);
+    await loadMatchIds([id],force);
+    const match=state.matchById.get(id)||null;
+    if(match) state.matchReviewById.set(id,match);
+    return match;
+  }
 }
 function hydrateMatchReviewUI(){
   const sel=$('matchReviewSelect'); if(!sel) return;
@@ -2147,10 +2167,9 @@ async function runMatchReview(){
   }
 
   const matchMeta=state.matchIndex.get(id)||{};
-  out.innerHTML=`<div class="compareEmpty"><strong>${escapeHtml(UI_LANG==='ja'?'試合レビューを準備中':'Preparing match review')}</strong><br><span>${escapeHtml([matchMeta.date,matchMeta.label].filter(Boolean).join(' · ')||id)}</span></div>`;
+  out.innerHTML=`<div class="compareEmpty"><strong>${escapeHtml(UI_LANG==='ja'?'試合レビューを高速読み込み中':'Loading fast match review')}</strong><br><span>${escapeHtml([matchMeta.date,matchMeta.label].filter(Boolean).join(' · ')||id)}</span></div>`;
 
-  await loadMatchIds([id],false);
-  const match=state.matchById.get(id);
+  const match=await loadMatchReviewId(id,false);
   if(!match){ out.innerHTML='<div class="compareEmpty">No Data for this match.</div>'; return; }
   const html=renderMatchReview(match);
   matchReviewHtmlCache.set(id,html);

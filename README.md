@@ -1,7 +1,18 @@
-# Player Review Site v104
+# Player Review Site v105 - Match Review Fast Mode
 
-Match Review loading improvements:
-- Match Review no longer force-reloads stats JSON every time.
-- Selected match data is prefetched in the background when Match Review opens / match changes.
-- Rendered Match Review HTML is cached per match during the session.
-- Loading state shows the selected match while data is being prepared.
+This version speeds up Match Review by generating dedicated lightweight JSON files:
+
+- `data/match_review/<matchId>.json`
+
+Match Review now reads `match_review` JSON instead of the larger player stats JSON whenever possible. If the dedicated file is missing, the page falls back to `data/stats/<matchId>.json` so the site still works.
+
+## Files to update on GitHub
+
+- `index.html`
+- `scripts/generate-player-data.js`
+
+After uploading, run GitHub Actions once:
+
+`Actions → Update player review data → Run workflow`
+
+This generates the new `data/match_review/*.json` files.

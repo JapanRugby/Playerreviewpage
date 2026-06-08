@@ -4,6 +4,7 @@ const path = require('path');
 const ROOT = process.cwd();
 const DATA_DIR = path.join(ROOT, 'data');
 const STATS_DIR = path.join(DATA_DIR, 'stats');
+const MATCH_REVIEW_DIR = path.join(DATA_DIR, 'match_review');
 const TARGET_TEAMS = ['Japan', 'Japan XV'];
 
 function norm(v){return String(v??'').trim().replace(/\s+/g,' ').toLowerCase();}
@@ -322,8 +323,32 @@ function buildMatch(item,biRows,reviewRows,xmlText,players){
   return match;
 }
 function serializeMatch(match){ const playerStats={}; for(const [key,st] of match.playerStats){ playerStats[key]=st; } const teamStats=[...(match.teamStats||new Map()).values()]; return {match:{id:match.id,label:match.label,date:match.date,season:match.season,home:match.home,away:match.away,score:match.score,venue:match.venue,competition:match.competition,matchEndMinutes:match.matchEndMinutes,minutesSource:match.minutesSource}, teamStats, playerStats}; }
+function serializeMatchReview(match){
+  const playerStats={};
+  for(const [key,st] of match.playerStats){
+    const name=st.player?.name||st.playerName||'';
+    const team=st.player?.team||st.team||'';
+    const shirt=normalizeShirt(st.shirt||st.matchShirt||st.jersey||'');
+    // Match Review only needs compact roster + Head-to-Head metrics.
+    if(!name && !shirt) continue;
+    playerStats[key]={
+      player:{key,name,team},
+      team, shirt,
+      position:st.position||'', positionId:st.positionId||'',
+      minutes:toNumber(st.minutes), ballInPlayMins:toNumber(st.ballInPlayMins),
+      positiveActions:toNumber(st.positiveActions), negativeActions:toNumber(st.negativeActions),
+      carry:toNumber(st.carry), carryMetres:toNumber(st.carryMetres), postContactMetres:toNumber(st.postContactMetres),
+      carryContact:toNumber(st.carryContact), carryDominant:toNumber(st.carryDominant),
+      tackleMade:toNumber(st.tackleMade), tackleAttempts:toNumber(st.tackleAttempts), tackleDominant:toNumber(st.tackleDominant),
+      ruckSupportAttack:toNumber(st.ruckSupportAttack)
+    };
+  }
+  const teamStats=[...(match.teamStats||new Map()).values()];
+  return {match:{id:match.id,label:match.label,date:match.date,season:match.season,home:match.home,away:match.away,score:match.score,venue:match.venue,competition:match.competition,matchEndMinutes:match.matchEndMinutes,minutesSource:match.minutesSource}, teamStats, playerStats};
+}
 function main(){
   fs.mkdirSync(STATS_DIR,{recursive:true});
+  fs.mkdirSync(MATCH_REVIEW_DIR,{recursive:true});
   const manifestPath=path.join(DATA_DIR,'matches.json');
   if(!fs.existsSync(manifestPath)){ throw new Error('data/matches.json not found. Run generate-matches.js first.'); }
   const manifest=JSON.parse(fs.readFileSync(manifestPath,'utf8'));
@@ -336,6 +361,7 @@ function main(){
     const match=buildMatch({...item,id:id||item.id},biRows,reviewRows,xmlText,players);
     const serialized=serializeMatch(match);
     fs.writeFileSync(path.join(STATS_DIR, `${match.id}.json`), JSON.stringify(serialized));
+    fs.writeFileSync(path.join(MATCH_REVIEW_DIR, `${match.id}.json`), JSON.stringify(serializeMatchReview(match)));
     const summary={id:match.id,label:match.label,date:match.date,season:match.season,home:match.home,away:match.away,score:match.score,venue:match.venue,competition:match.competition,minutesSource:match.minutesSource};
     matchSummaries.push(summary);
     for(const [key,st] of match.playerStats){
@@ -350,6 +376,6 @@ function main(){
   for(const p of players.values()){ p.matches=(p.matches||[]).sort((a,b)=>{ const ma=matchSummaries.find(m=>m.id===a)||{}; const mb=matchSummaries.find(m=>m.id===b)||{}; return String(mb.date||'').localeCompare(String(ma.date||''))||String(b).localeCompare(String(a)); }); }
   const index={generatedAt:new Date().toISOString(),version:3,matches:matchSummaries,players:[...players.values()].filter(p=>(p.matches||[]).length).sort((a,b)=>a.name.localeCompare(b.name)||a.team.localeCompare(b.team)).map(p=>({key:p.key,name:p.name,team:p.team,teams:p.teams||[p.team].filter(Boolean),show:!!p.show,shirt:p.shirt||'',position:p.position||'',matches:p.matches,matchSummaries:p.matchSummaries||{}}))};
   fs.writeFileSync(path.join(DATA_DIR,'player_index.json'), JSON.stringify(index));
-  console.log(`Generated player_index.json and ${matchSummaries.length} stats files for ${index.players.length} indexed players.`);
+  console.log(`Generated player_index.json, ${matchSummaries.length} stats files and ${matchSummaries.length} match_review files for ${index.players.length} indexed players.`);
 }
 main();
