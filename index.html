@@ -285,7 +285,7 @@ body.compare-mode .compareTitle{font-size:24px}.compareModeIntro{display:none}
 .matchReviewResult{margin-top:18px}
 .matchHero{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;margin:0 0 16px}.matchHeroCard{background:#fff;border:1px solid rgba(7,26,58,.1);border-radius:24px;padding:18px;box-shadow:0 12px 28px rgba(16,24,40,.08)}.matchHeroCard h3{margin:0 0 8px;color:#071a3a;font-size:24px}.matchHeroCard p{margin:0;color:#667085;font-weight:800}
 .matchSection{background:#fff;border:1px solid rgba(7,26,58,.1);border-radius:28px;padding:18px;margin:16px 0;box-shadow:0 14px 32px rgba(16,24,40,.08)}
-.matchBars{display:grid;gap:12px}.matchBarRow{border:1px solid rgba(7,26,58,.1);border-radius:18px;padding:13px;background:#f8fafc}.matchBarHead{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;font-weight:1000}.matchBarMetric{text-align:center;color:#071a3a}.matchBarValue.left{text-align:left;color:#d71920}.matchBarValue.right{text-align:right;color:#111827}.matchBarTrack{display:grid;grid-template-columns:1fr 1fr;gap:4px;align-items:center;margin-top:8px}.matchBarHalf{height:13px;background:#e9eef5;border-radius:999px;overflow:hidden;display:flex}.matchBarHalf.left{justify-content:flex-end}.matchBarFill{height:100%;width:0;border-radius:999px;transition:width .8s cubic-bezier(.2,.8,.2,1)}.matchBarFill.jp{background:#d71920}.matchBarFill.opp{background:#111827}.matchRanking{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.rankingCard{border:1px solid rgba(7,26,58,.1);border-radius:20px;padding:14px;background:#f8fafc}.rankingCard h4{margin:0 0 10px;color:#071a3a}.rankingCard ol{margin:0;padding-left:22px}.rankingCard li{margin:7px 0;font-weight:850;color:#344054}.timeBandToggles{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:10px 0 16px}.timeBandToggles button{border:1px solid #d0d5dd;background:#fff;border-radius:999px;padding:8px 12px;font-weight:950;cursor:pointer}.timeBandToggles button.active{background:#071a3a;color:#fff;border-color:#071a3a}
+.matchBars{display:grid;gap:12px}.matchBarRow{border:1px solid rgba(7,26,58,.1);border-radius:18px;padding:13px;background:#f8fafc}.matchBarHead{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;font-weight:1000}.matchBarMetric{text-align:center;color:#071a3a}.matchBarValue.left{text-align:left;color:#d71920}.matchBarValue.right{text-align:right;color:#111827}.matchBarTrack{display:grid;grid-template-columns:1fr 1fr;gap:4px;align-items:center;margin-top:8px}.matchBarHalf{height:13px;background:#e9eef5;border-radius:999px;overflow:hidden;display:flex}.matchBarHalf.left{justify-content:flex-end}.matchBarFill{height:100%;width:0;border-radius:999px;transition:width .8s cubic-bezier(.2,.8,.2,1)}.matchBarFill.jp{background:#d71920}.matchBarFill.opp{background:#111827}.matchRanking{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.matchTeamRankingBlock{margin-top:14px}.matchTeamRankingBlock>h4{text-align:center;margin:0 0 10px;color:#071a3a;font-size:16px;font-weight:1000}.matchTeamRankingBlock .matchRanking{margin-bottom:18px}.rankingCard{border:1px solid rgba(7,26,58,.1);border-radius:20px;padding:14px;background:#f8fafc}.rankingCard h4{margin:0 0 10px;color:#071a3a}.rankingCard ol{margin:0;padding-left:22px}.rankingCard li{margin:7px 0;font-weight:850;color:#344054}.timeBandToggles{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:10px 0 16px}.timeBandToggles button{border:1px solid #d0d5dd;background:#fff;border-radius:999px;padding:8px 12px;font-weight:950;cursor:pointer}.timeBandToggles button.active{background:#071a3a;color:#fff;border-color:#071a3a}
 @media(max-width:760px){.matchReviewControls{grid-template-columns:1fr}.matchHero{grid-template-columns:1fr}.matchRanking{grid-template-columns:1fr}.matchBarHead{grid-template-columns:1fr;gap:4px}.matchBarMetric{text-align:left}.matchBarValue.right{text-align:left}}
 
 </style>
@@ -2001,12 +2001,17 @@ function getMatchTeamStats(match){
   }
   return [...teams.values()];
 }
-function matchTeamsOrdered(teamStats){
-  const arr=Array.isArray(teamStats)?teamStats:Object.values(teamStats||{});
-  const japan=arr.find(t=>isJapanSideName(t.team));
-  let opp=arr.find(t=>!isJapanSideName(t.team));
-  if(!opp && arr.length>1) opp=arr.find(t=>t!==japan);
-  return [japan||arr[0]||emptyTeamStats('Japan'), opp||arr[1]||emptyTeamStats('Opponent')];
+function matchTeamsOrdered(teamStats, match){
+  const arr=(Array.isArray(teamStats)?teamStats:Object.values(teamStats||{})).filter(Boolean);
+  const byNorm=new Map(arr.map(t=>[normTeam(t.team),t]));
+  const home=match?.match?.home||match?.home||'';
+  const away=match?.match?.away||match?.away||'';
+  let left=null, right=null;
+  if(home) left=byNorm.get(normTeam(home)) || arr.find(t=>normTeam(t.team).includes(normTeam(home)) || normTeam(home).includes(normTeam(t.team)));
+  if(away) right=byNorm.get(normTeam(away)) || arr.find(t=>t!==left && (normTeam(t.team).includes(normTeam(away)) || normTeam(away).includes(normTeam(t.team))));
+  if(!left) left=arr[0]||emptyTeamStats(home||'Team 1');
+  if(!right) right=arr.find(t=>t!==left)||emptyTeamStats(away||'Team 2');
+  return [left,right];
 }
 function matchCompareRow(label,a,b,fmt=displayNumber,higher=true){
   const av=toNumber(a), bv=toNumber(b), max=Math.max(1,av>0?av:0,bv>0?bv:0); const aw=av>0?Math.round(av/max*100):0, bw=bv>0?Math.round(bv/max*100):0;
@@ -2015,19 +2020,30 @@ function matchCompareRow(label,a,b,fmt=displayNumber,higher=true){
 function matchKeyStatsRows(jp,opp){ return [
   ['Carry Metres',jp.carryMetres,opp.carryMetres,displayNumber],['Kicking Metres',jp.kickingMetres,opp.kickingMetres,displayNumber],['Penalties Conceded',jp.penaltiesConceded,opp.penaltiesConceded,displayNumber],['Turnovers Conceded',jp.turnoversConceded,opp.turnoversConceded,displayNumber],['Opp 22 Area Time',jp.opp22Time,opp.opp22Time,v=>`${oneDec(v)} min`]
 ]; }
-function rankingFromMatch(match, statKey, label, fmt=displayNumber){
-  const rows=[...match.playerStats.values()].filter(st=>isJapanSideName(st.team||st.player?.team)).map(st=>({name:st.player?.name||'', team:st.player?.team||st.team||'', value:typeof statKey==='function'?statKey(st):toNumber(st[statKey])})).filter(x=>x.value>0).sort((a,b)=>b.value-a.value).slice(0,5);
-  return `<div class="rankingCard"><h4>${escapeHtml(label)}</h4>${rows.length?`<ol>${rows.map(r=>`<li>${escapeHtml(r.name)} <strong>${escapeHtml(fmt(r.value))}</strong></li>`).join('')}</ol>`:`<div class="empty">No Data</div>`}</div>`;
+function rankingFromMatch(match, statKey, label, fmt=displayNumber, teamFilter=''){
+  const rows=[...match.playerStats.values()]
+    .filter(st=>!teamFilter || normTeam(st.team||st.player?.team)===normTeam(teamFilter))
+    .map(st=>({name:st.player?.name||'', team:st.player?.team||st.team||'', value:typeof statKey==='function'?statKey(st):toNumber(st[statKey])}))
+    .filter(x=>x.value>0)
+    .sort((a,b)=>b.value-a.value || String(a.name).localeCompare(String(b.name)))
+    .slice(0,5);
+  return `<div class="rankingCard"><h4>${escapeHtml(label)}</h4>${rows.length?`<ol>${rows.map(r=>`<li><span>${escapeHtml(r.name)}</span> <small>${escapeHtml(r.team||'')}</small> <strong>${escapeHtml(fmt(r.value))}</strong></li>`).join('')}</ol>`:`<div class="empty">No Data</div>`}</div>`;
+}
+function teamRankingGroup(match, team){
+  const name=team?.team||'Team';
+  return `<div class="matchTeamRankingBlock"><h4>${escapeHtml(name)}</h4><div class="matchRanking">${rankingFromMatch(match,st=>samuraiRate(st),'Samurai Stats Top 5',signedOneDec,name)}${rankingFromMatch(match,'carry','Carries Top 5',displayNumber,name)}${rankingFromMatch(match,st=>pctNum(st.carryDominant,st.carryContact),'Carry Dominance% Top 5',v=>`${intFmt(v)}%`,name)}${rankingFromMatch(match,'tackleMade','Tackle Made Top 5',displayNumber,name)}${rankingFromMatch(match,st=>pctNum(st.tackleDominant,st.tackleAttempts),'Tackle Dominance% Top 5',v=>`${intFmt(v)}%`,name)}${rankingFromMatch(match,'ruckSupportAttack','Ruck Support Attack Top 5',displayNumber,name)}</div></div>`;
 }
 function renderMatchReview(match){
-  const teamStats=getMatchTeamStats(match); const [jp,opp]=matchTeamsOrdered(teamStats);
+  const teamStats=getMatchTeamStats(match); const [left,right]=matchTeamsOrdered(teamStats, match);
   const lineoutPct=t=>pctNum(t.lineoutWon,t.lineoutTotal); const scrumPct=t=>pctNum(t.scrumWon,t.scrumTotal);
-  let html=`<div class="matchHero"><div class="matchHeroCard"><h3>${escapeHtml(match.match?.label||match.label||'Match Review')}</h3><p>${escapeHtml([match.match?.date||match.date, match.match?.venue||match.venue, match.match?.competition||match.competition].filter(Boolean).join(' · '))}</p></div><div class="matchHeroCard"><h3>${escapeHtml((jp.team||'Japan')+' vs '+(opp.team||'Opponent'))}</h3><p>${escapeHtml(match.match?.score||match.score||'')}</p></div></div>`;
-  html+=`<div class="matchSection"><div class="sectionTitle"><h3>Key Stats Comparison</h3><span>Japan red / Opponent black</span></div><div class="matchBars">${matchKeyStatsRows(jp,opp).map(r=>matchCompareRow(...r)).join('')}</div></div>`;
-  html+=`<div class="matchSection"><div class="sectionTitle"><h3>Set Piece Detail</h3><span>Lineout & scrum</span></div><div class="matchBars">${matchCompareRow('Lineout Total',jp.lineoutTotal,opp.lineoutTotal)}${matchCompareRow('Lineout Win %',lineoutPct(jp),lineoutPct(opp),v=>`${intFmt(v)}%`)}${matchCompareRow('Scrum Total',jp.scrumTotal,opp.scrumTotal)}${matchCompareRow('Scrum Win %',scrumPct(jp),scrumPct(opp),v=>`${intFmt(v)}%`)}</div></div>`;
-  const carryRow=(group,label,key,fmt=displayNumber)=>matchCompareRow(label,jp.carry?.[group]?.[key]||0,opp.carry?.[group]?.[key]||0,fmt);
-  html+=`<div class="matchSection"><div class="sectionTitle"><h3>Carry Details Comparison</h3><span>Forwards / Backs by Position ID</span></div><div class="matchBars">${carryRow('fwds','Fwds Carries','carries')}${carryRow('fwds','Fwds Carry Metres','metres')}${matchCompareRow('Fwds Metres per Carry',jp.carry?.fwds?.carries?jp.carry.fwds.metres/jp.carry.fwds.carries:0,opp.carry?.fwds?.carries?opp.carry.fwds.metres/opp.carry.fwds.carries:0,oneDec)}${carryRow('fwds','Fwds Post Contact Metres','pcm')}${carryRow('bks','Bks Carries','carries')}${carryRow('bks','Bks Carry Metres','metres')}${matchCompareRow('Bks Metres per Carry',jp.carry?.bks?.carries?jp.carry.bks.metres/jp.carry.bks.carries:0,opp.carry?.bks?.carries?opp.carry.bks.metres/opp.carry.bks.carries:0,oneDec)}${carryRow('bks','Bks Post Contact Metres','pcm')}</div></div>`;
-  html+=`<div class="matchSection"><div class="sectionTitle"><h3>Team Ranking</h3><span>Japan players top 5</span></div><div class="matchRanking">${rankingFromMatch(match,st=>samuraiRate(st),'Samurai Stats Top 5',signedOneDec)}${rankingFromMatch(match,'carry','Carries Top 5')}${rankingFromMatch(match,st=>pctNum(st.carryDominant,st.carryContact),'Carry Dominance% Top 5',v=>`${intFmt(v)}%`)}${rankingFromMatch(match,'tackleMade','Tackle Made Top 5')}${rankingFromMatch(match,st=>pctNum(st.tackleDominant,st.tackleAttempts),'Tackle Dominance% Top 5',v=>`${intFmt(v)}%`)}${rankingFromMatch(match,'ruckSupportAttack','Ruck Support Attack Top 5')}</div></div>`;
+  const leftName=left.team||match.match?.home||'Team 1';
+  const rightName=right.team||match.match?.away||'Team 2';
+  let html=`<div class="matchHero"><div class="matchHeroCard"><h3>${escapeHtml(match.match?.label||match.label||'Match Review')}</h3><p>${escapeHtml([match.match?.date||match.date, match.match?.venue||match.venue, match.match?.competition||match.competition].filter(Boolean).join(' · '))}</p></div><div class="matchHeroCard"><h3>${escapeHtml(leftName+' vs '+rightName)}</h3><p>${escapeHtml(match.match?.score||match.score||'')}</p></div></div>`;
+  html+=`<div class="matchSection"><div class="sectionTitle"><h3>Key Stats Comparison</h3><span>${escapeHtml(leftName)} red / ${escapeHtml(rightName)} black</span></div><div class="matchBars">${matchKeyStatsRows(left,right).map(r=>matchCompareRow(...r)).join('')}</div></div>`;
+  html+=`<div class="matchSection"><div class="sectionTitle"><h3>Set Piece Detail</h3><span>Lineout & scrum</span></div><div class="matchBars">${matchCompareRow('Lineout Total',left.lineoutTotal,right.lineoutTotal)}${matchCompareRow('Lineout Win %',lineoutPct(left),lineoutPct(right),v=>`${intFmt(v)}%`)}${matchCompareRow('Scrum Total',left.scrumTotal,right.scrumTotal)}${matchCompareRow('Scrum Win %',scrumPct(left),scrumPct(right),v=>`${intFmt(v)}%`)}</div></div>`;
+  const carryRow=(group,label,key,fmt=displayNumber)=>matchCompareRow(label,left.carry?.[group]?.[key]||0,right.carry?.[group]?.[key]||0,fmt);
+  html+=`<div class="matchSection"><div class="sectionTitle"><h3>Carry Details Comparison</h3><span>Forwards / Backs by Position ID</span></div><div class="matchBars">${carryRow('fwds','Fwds Carries','carries')}${carryRow('fwds','Fwds Carry Metres','metres')}${matchCompareRow('Fwds Metres per Carry',left.carry?.fwds?.carries?left.carry.fwds.metres/left.carry.fwds.carries:0,right.carry?.fwds?.carries?right.carry.fwds.metres/right.carry.fwds.carries:0,oneDec)}${carryRow('fwds','Fwds Post Contact Metres','pcm')}${carryRow('bks','Bks Carries','carries')}${carryRow('bks','Bks Carry Metres','metres')}${matchCompareRow('Bks Metres per Carry',left.carry?.bks?.carries?left.carry.bks.metres/left.carry.bks.carries:0,right.carry?.bks?.carries?right.carry.bks.metres/right.carry.bks.carries:0,oneDec)}${carryRow('bks','Bks Post Contact Metres','pcm')}</div></div>`;
+  html+=`<div class="matchSection"><div class="sectionTitle"><h3>Team Ranking</h3><span>Top 5 by team</span></div>${teamRankingGroup(match,left)}${teamRankingGroup(match,right)}</div>`;
   html+=`<div class="matchSection"><div class="sectionTitle"><h3>Momentum / Match Flow</h3><span>Tap-loaded flow view</span></div><button type="button" class="matchRun" onclick="openMatchFlowModal()">Open Momentum Flow</button><div class="empty" style="margin-top:10px">Flow events are loaded on tap in v2 structure.</div></div>`;
   return html;
 }
