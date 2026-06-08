@@ -1,15 +1,19 @@
-# JAPAN RUGBY PERFORMANCE REVIEW HUB v114
+# v120 Momentum static data + Actions fix
 
-Full page-level UI/UX implementation.
+This package integrates the prebuilt `data/momentum/` dataset and removes the failing automatic momentum generation step from GitHub Actions.
 
-- Stats Review: review snapshot, key strengths, next focus, detail cards, trends and modal details.
-- Stats Comparison: comparison summary, biggest gaps, category tabs, and battle-board graphs.
-- World Comparison: benchmark score, closest-to-world-class, biggest gaps, and world-top reference board.
-- Match Review: coach snapshot flow, key battles, unit control and 1–23 head-to-head.
+Copy into the repository:
 
-Visibility rule: light cards use dark text; white text is limited to navy/red dark surfaces.
+- `index.html`
+- `scripts/generate-player-data.js`
+- `scripts/generate-matches.js`
+- `.github/workflows/update-matches.yml`
+- `data/momentum/`
 
+Do not overwrite existing `data/matches.json` or `data/player_index.json` manually.
 
-## v119 Momentum integration
+After copying, run:
 
-This package adds automatic momentum generation and UI integration. Copy `copy_to_repo/data/momentum/` from the momentum patch into your repository's `data/momentum/` folder, but do not overwrite existing `data/matches.json` or `data/player_index.json`. The page fetches `data/momentum/index.json`, `data/momentum/matches/{matchId}.json`, and `data/momentum/players/{matchId}.json`.
+Actions → Update player review data → Run workflow
+
+The workflow now only regenerates `matches.json`, `player_index.json`, `stats/`, and `match_review/`. Momentum JSON is read from the static `data/momentum/` files.
