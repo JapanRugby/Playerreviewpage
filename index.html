@@ -1975,11 +1975,22 @@ function setMatchReviewMode(on){
 
 /* v97: Match Review mode */
 function matchReviewMatches(){ return [...state.matchIndex.values()].sort((a,b)=>String(b.date||'').localeCompare(String(a.date||''))||String(b.id||'').localeCompare(String(a.id||''))); }
+
+const matchReviewHtmlCache=new Map();
+const matchReviewLoadingIds=new Set();
+function idleTask(fn){ if('requestIdleCallback' in window) requestIdleCallback(fn,{timeout:1200}); else setTimeout(fn,120); }
+function prefetchMatchReview(id){
+  id=String(id||'');
+  if(!id || state.matchById.has(id) || matchReviewLoadingIds.has(id) || state.mode!=='precomputed') return;
+  matchReviewLoadingIds.add(id);
+  idleTask(async()=>{ try{ await loadMatchIds([id],false); } catch(e){ console.warn('Match review prefetch failed',id,e); } finally{ matchReviewLoadingIds.delete(id); } });
+}
 function hydrateMatchReviewUI(){
   const sel=$('matchReviewSelect'); if(!sel) return;
   const matches=matchReviewMatches();
   sel.innerHTML=`<option value="">${escapeHtml(UI_LANG==='ja'?'試合を選択':'Select match')}</option>`+matches.map(m=>`<option value="${escapeHtml(m.id)}">${escapeHtml([m.date,m.label].filter(Boolean).join(' · '))}</option>`).join('');
   if(!sel.value && matches[0]) sel.value=matches[0].id;
+  prefetchMatchReview(sel.value);
 }
 function teamBaseName(team){ const raw=String(team||'').trim(); if(!raw) return 'Unknown'; const parts=raw.split('/').map(x=>x.trim()).filter(Boolean); return parts[0]||raw; }
 function isJapanSideName(team){ const parts=String(team||'').split('/').map(x=>x.trim()).filter(Boolean); return parts.some(p=>/^Japan( XV)?$/i.test(p)) || /^Japan( XV)?$/i.test(String(team||'').trim()); }
@@ -2122,13 +2133,32 @@ function renderMatchReview(match){
   return html;
 }
 async function runMatchReview(){
-  const sel=$('matchReviewSelect'), out=$('matchReviewResult'); if(!sel||!out) return; const id=sel.value; if(!id){out.innerHTML='<div class="compareEmpty">Select a match.</div>';return;}
-  out.innerHTML='<div class="compareEmpty">Loading match review...</div>';
-  await loadMatchIds([id],true);
+  const sel=$('matchReviewSelect'), out=$('matchReviewResult');
+  if(!sel||!out) return;
+  const id=String(sel.value||'');
+  if(!id){out.innerHTML='<div class="compareEmpty">Select a match.</div>';return;}
+
+  const cached=matchReviewHtmlCache.get(id);
+  if(cached){
+    out.innerHTML=cached;
+    prepareScrollAnimations(out); animateMatchReviewBars(out);
+    setTimeout(updateMatchH2HStat,0);
+    return;
+  }
+
+  const matchMeta=state.matchIndex.get(id)||{};
+  out.innerHTML=`<div class="compareEmpty"><strong>${escapeHtml(UI_LANG==='ja'?'試合レビューを準備中':'Preparing match review')}</strong><br><span>${escapeHtml([matchMeta.date,matchMeta.label].filter(Boolean).join(' · ')||id)}</span></div>`;
+
+  await loadMatchIds([id],false);
   const match=state.matchById.get(id);
   if(!match){ out.innerHTML='<div class="compareEmpty">No Data for this match.</div>'; return; }
-  out.innerHTML=renderMatchReview(match); prepareScrollAnimations(out); animateMatchReviewBars(out);
+  const html=renderMatchReview(match);
+  matchReviewHtmlCache.set(id,html);
+  out.innerHTML=html;
+  prepareScrollAnimations(out); animateMatchReviewBars(out);
+  setTimeout(updateMatchH2HStat,0);
 }
+
 
 function animateMatchReviewBars(root=document){
   const run=()=>{
@@ -2323,7 +2353,7 @@ async function loadMatchIds(ids,force=false){
   const unique=[...new Set((ids||[]).map(String).filter(Boolean))];
   const toLoad=unique.filter(id=>!state.matchById.has(id));
   if(!toLoad.length) return;
-  setStatus(`Loading world comparison data ${toLoad.length} match file(s)...`);
+  setStatus(`Loading ${toLoad.length} match file(s)...`);
   await Promise.all(toLoad.map(async id=>{
     try{ const txt=await fetchText(statJsonUrl(id),force); const m=revivePrecomputedMatch(JSON.parse(txt)); state.matchById.set(m.id,m); }
     catch(err){ console.warn(`No Data: stats/${id}.json`,err); }
@@ -2462,6 +2492,7 @@ const playerReviewToggle=$('playerReviewModeToggle'); if(playerReviewToggle) pla
 const compareClose=$('compareClose'); if(compareClose) compareClose.addEventListener('click',()=>setCompareMode(false));
 const worldClose=$('worldClose'); if(worldClose) worldClose.addEventListener('click',()=>setWorldMode(false));
 const matchReviewClose=$('matchReviewClose'); if(matchReviewClose) matchReviewClose.addEventListener('click',()=>setMatchReviewMode(false));
+const matchReviewSelectEl=$('matchReviewSelect'); if(matchReviewSelectEl) matchReviewSelectEl.addEventListener('change',()=>prefetchMatchReview(matchReviewSelectEl.value));
 const matchReviewRun=$('matchReviewRun'); if(matchReviewRun) matchReviewRun.addEventListener('click',runMatchReview);
 for(const side of [1,2]){
   const teamSel=$(`compareTeam${side}`); if(teamSel) teamSel.addEventListener('change',()=>{state.compare[`team${side}`]=teamSel.value; state.compare[`player${side}`]=''; state.compare[`id${side}`]=''; hydrateComparePlayers(side); const out=$('compareResult'); if(out) out.innerHTML='';});
