@@ -16,17 +16,34 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: update-player-review-data
+  cancel-in-progress: false
+
 jobs:
   update-player-review-data:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref_name }}
+
+      - name: Sync with latest remote
+        run: |
+          git fetch origin "${GITHUB_REF_NAME}"
+          git checkout "${GITHUB_REF_NAME}"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
+      - name: Prepare output folders
+        run: |
+          mkdir -p data/stats data/match_review data/momentum data/momentum/matches data/momentum/players
 
       - name: Generate matches manifest
         run: node scripts/generate-matches.js
@@ -43,16 +60,32 @@ jobs:
       - name: Warn if momentum generation failed
         if: steps.momentum.outcome == 'failure'
         run: |
-          echo "::warning::Momentum generation failed. Player/match review data will still be committed. Check the Generate momentum data log and data/momentum/failures.json if it exists."
+          echo "::warning::Momentum generation failed. Other generated data will still be committed. Check the 'Generate momentum data' log."
 
-      - name: Commit generated data
+      - name: Commit and push generated data
         run: |
+          set -e
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/matches.json data/player_index.json data/stats data/match_review data/momentum || true
+
+          git add -A data/matches.json data/player_index.json data/stats data/match_review data/momentum || true
+
           if git diff --cached --quiet; then
             echo "Generated data is already up to date"
             exit 0
           fi
+
           git commit -m "Update player review data"
-          git push
+
+          # Another workflow or user may have pushed while this job was running.
+          # Rebase once more immediately before pushing.
+          git fetch origin "${GITHUB_REF_NAME}"
+          git rebase "origin/${GITHUB_REF_NAME}"
+
+          # Push with a retry in case the branch moved again during the first push.
+          git push origin "HEAD:${GITHUB_REF_NAME}" || (
+            echo "Push rejected. Rebasing on the latest remote and retrying once..."
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase "origin/${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          )

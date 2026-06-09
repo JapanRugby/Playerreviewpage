@@ -116,6 +116,11 @@ select:focus,.playerSearch:focus{border-color:#e78c95;box-shadow:0 0 0 4px rgba(
 .matchDetailRole{display:inline-flex;align-items:center;border-radius:999px;padding:4px 9px;font-weight:900;font-size:.78rem;background:#eef2ff;color:#1e293b}
 .matchDetailRole.starter{background:rgba(184,0,28,.10);color:#9f1239}
 .matchDetailRole.finisher{background:rgba(15,23,42,.08);color:#0f172a}
+
+@media(max-width:1280px){
+  .battleTeamValue{font-size:clamp(20px,2vw,28px);} 
+}
+
 @media(max-width:640px){.matchDetailSummary{grid-template-columns:1fr 1fr}.matchDetailTable{min-width:460px;font-size:.82rem}.matchDetailTable th,.matchDetailTable td{padding:9px 10px}}
 @media(max-width:540px){.trendOpenCard{border-radius:18px;padding:13px}.trendOpenTitle{font-size:12px}.trendOpenSub{font-size:11px}.trendOpenIcon{width:36px;height:36px}}
 @media(max-width:540px){.effortModal{align-items:center;justify-content:center;padding:14px}.effortModalPanel{width:100%;max-height:84vh;border-radius:24px;padding:15px}.effortModalTitle{font-size:18px}}
@@ -1570,18 +1575,19 @@ body{
 .battleCardTop{align-items:center!important;}
 .battleLabel{font-size:15px!important;letter-spacing:-.01em;}
 .battleHint{margin-top:6px;color:#667085;font-size:11px;font-weight:900;letter-spacing:.04em;text-transform:uppercase;}
-.battleCompareHeader{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px;align-items:end;margin-top:12px;}
-.battleTeamBlock{display:grid;gap:4px;min-width:0;}
+.battleCompareHeader{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:8px;align-items:end;margin-top:12px;}
+.battleTeamBlock{display:grid;gap:4px;min-width:0;overflow:hidden;}
 .battleTeamBlock.right{text-align:right;}
 .battleTeamName{display:flex;align-items:center;gap:6px;color:#475467;font-size:12px;font-weight:1000;line-height:1.2;min-width:0;}
 .battleTeamName.right{justify-content:flex-end;}
 .battleDot{display:inline-block;width:10px;height:10px;border-radius:999px;flex:0 0 auto;box-shadow:0 0 0 2px rgba(255,255,255,.72);}
 .battleDot.left{background:linear-gradient(90deg,#b90f1b,#ff4d59);}
 .battleDot.right{background:linear-gradient(90deg,#0b1320,#4b5563);}
-.battleTeamValue{font-size:34px;font-weight:1000;line-height:1;color:#071a3a;font-variant-numeric:tabular-nums;}
+.battleTeamValue{font-size:clamp(22px,1.9vw,30px);font-weight:1000;line-height:.92;letter-spacing:-.04em;color:#071a3a;font-variant-numeric:tabular-nums;word-break:break-word;overflow-wrap:anywhere;}
+.battleTeamValue .metricNum{display:inline-block;max-width:100%;}
 .battleTeamValue.left{color:#c1121f;}
 .battleTeamValue.right{text-align:right;color:#111827;}
-.battleVs{align-self:center;justify-self:center;font-size:11px;font-weight:1000;letter-spacing:.18em;color:#98a2b3;border-radius:999px;padding:6px 8px;background:#f2f4f7;}
+.battleVs{align-self:center;justify-self:center;font-size:11px;font-weight:1000;letter-spacing:.16em;color:#98a2b3;border-radius:999px;padding:6px 7px;background:#f2f4f7;}
 .battleTrack100{position:relative;display:flex;align-items:stretch;height:18px;margin-top:14px;border-radius:999px;background:#e8edf5;overflow:hidden;border:1px solid rgba(7,26,58,.08);box-shadow:inset 0 1px 2px rgba(16,24,40,.06);}
 .battleTrackSegment{height:100%;width:0%;transition:width .9s cubic-bezier(.2,.8,.2,1);}
 .battleTrackSegment.left{background:linear-gradient(90deg,#b90f1b 0%, #e21825 52%, #ff5d69 100%)!important;}
@@ -1593,10 +1599,10 @@ body{
 .battleSharePct{color:#071a3a;font-size:14px;font-weight:1000;}
 @media(max-width:640px){
   .battleCard{padding:14px 13px 13px!important;}
-  .battleCompareHeader{grid-template-columns:minmax(0,1fr) 36px minmax(0,1fr);gap:8px;}
+  .battleCompareHeader{grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);gap:6px;}
   .battleTeamName{font-size:10.5px;line-height:1.15;}
-  .battleTeamValue{font-size:25px;}
-  .battleVs{font-size:10px;letter-spacing:.12em;padding:4px 5px;}
+  .battleTeamValue{font-size:22px;line-height:.94;}
+  .battleVs{font-size:10px;letter-spacing:.12em;padding:4px 4px;}
   .battleTrack100{height:16px;}
   .battleShareLabels{grid-template-columns:1fr 1fr;gap:6px;}
   .battleShareLabel{font-size:10.5px;line-height:1.15;align-items:flex-start;flex-direction:column;gap:2px;}
