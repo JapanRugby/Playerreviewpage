@@ -1621,6 +1621,12 @@ body{
 @media(max-width:760px){body{padding-bottom:86px}.mobileBottomNav{display:grid}.growthHero{grid-template-columns:1fr;gap:12px;padding:15px}.growthHero h3{font-size:22px}.growthScore{width:100%;min-width:0}.growthCards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.growthFocusGrid{grid-template-columns:1fr}.worldBenchmarkPanel{grid-template-columns:1fr;text-align:center;padding:15px}.benchmarkScoreRing{margin:0 auto}.benchmarkMiniGrid{grid-template-columns:1fr}.keyFactorGrid{grid-template-columns:1fr 1fr;gap:10px}.keyFactorCard strong{font-size:17px}}
 @media(max-width:430px){.keyFactorGrid{grid-template-columns:1fr}.growthCards{grid-template-columns:1fr 1fr}.growthCard strong{font-size:20px}}
 
+
+/* v130: remove Player Momentum from Player Insights / Stats Review */
+#playerMomentumSlot{display:none!important;}
+#dashboard .playerMomentumTop,
+#dashboard .momentumListCard{display:none!important;}
+
 </style>
 </head>
 <body>
@@ -4168,14 +4174,11 @@ async function hydratePlayerMomentum(ctx){
   slot.innerHTML=renderPlayerMomentumPanel(aggregateMomentumPlayers(items),ctx.label||''); prepareScrollAnimations(slot);
 }
 (function integrateMomentum(){
-  const dash=document.getElementById('dashboard');
-  if(dash && !document.getElementById('playerMomentumSlot')){
-    const slot=document.createElement('div'); slot.id='playerMomentumSlot';
-    const sam=document.getElementById('samuraiStats')?.closest('.section');
-    if(sam && sam.parentNode) sam.parentNode.insertBefore(slot,sam.nextSibling); else dash.appendChild(slot);
-  }
-  const baseRenderDashboard=renderDashboard;
-  renderDashboard=function(){ baseRenderDashboard(); const ctx=currentContext(); hydratePlayerMomentum(ctx); };
+  // v130: Player Momentum is removed from Stats Review / Player Insights.
+  // Momentum remains available in Match Review only.
+  const existingPlayerMomentumSlot=document.getElementById('playerMomentumSlot');
+  if(existingPlayerMomentumSlot) existingPlayerMomentumSlot.remove();
+
   const baseRenderMatchReview=renderMatchReview;
   renderMatchReview=function(match){
     const html=baseRenderMatchReview(match);
