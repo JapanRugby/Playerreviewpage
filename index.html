@@ -1711,6 +1711,92 @@ body{
   .battleTeamValue{font-size:28px!important;}
 }
 
+
+/* v132: battle card value fitting */
+.battleCompareHeader{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) 58px minmax(0,1fr)!important;
+  gap:10px!important;
+  align-items:end!important;
+}
+.battleTeamBlock{
+  min-width:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  gap:4px!important;
+}
+.battleTeamBlock.right{align-items:flex-end!important;}
+.battleTeamName{
+  display:flex!important;
+  align-items:center!important;
+  gap:8px!important;
+  font-size:12px!important;
+  line-height:1.1!important;
+  font-weight:950!important;
+  letter-spacing:-.02em!important;
+  min-width:0!important;
+  white-space:nowrap!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+}
+.battleTeamName.right{justify-content:flex-end!important;}
+.battleTeamValue{
+  display:flex!important;
+  align-items:baseline!important;
+  gap:4px!important;
+  min-width:0!important;
+  max-width:100%!important;
+  color:#071a3a!important;
+}
+.battleTeamValue.right{justify-content:flex-end!important;}
+.metricNum{
+  display:inline-block!important;
+  max-width:100%!important;
+  white-space:nowrap!important;
+  overflow:hidden!important;
+  text-overflow:clip!important;
+  font-weight:1000!important;
+  letter-spacing:-.065em!important;
+  line-height:.92!important;
+  font-variant-numeric:tabular-nums;
+}
+.metricNum.metric--normal{font-size:clamp(28px,2.5vw,54px)!important;}
+.metricNum.metric--tight{font-size:clamp(24px,2.15vw,42px)!important;}
+.metricNum.metric--compact{font-size:clamp(20px,1.8vw,34px)!important;}
+.metricUnit{
+  font-size:clamp(16px,1vw,20px)!important;
+  line-height:1!important;
+  font-weight:1000!important;
+  letter-spacing:-.03em!important;
+  white-space:nowrap!important;
+}
+.battleVs{
+  min-width:58px!important;
+  width:58px!important;
+  border-radius:999px!important;
+  padding:8px 0!important;
+  text-align:center!important;
+  font-size:15px!important;
+  font-weight:1000!important;
+}
+@media(max-width:980px){
+  .battleCompareHeader{grid-template-columns:minmax(0,1fr) 50px minmax(0,1fr)!important;gap:8px!important;}
+  .metricNum.metric--normal{font-size:clamp(24px,4vw,42px)!important;}
+  .metricNum.metric--tight{font-size:clamp(22px,3.5vw,34px)!important;}
+  .metricNum.metric--compact{font-size:clamp(18px,3vw,28px)!important;}
+  .metricUnit{font-size:14px!important;}
+  .battleVs{min-width:50px!important;width:50px!important;font-size:13px!important;padding:6px 0!important;}
+}
+@media(max-width:640px){
+  .battleCompareHeader{grid-template-columns:minmax(0,1fr) 42px minmax(0,1fr)!important;gap:6px!important;}
+  .battleTeamName{font-size:11px!important;gap:6px!important;}
+  .metricNum.metric--normal{font-size:clamp(22px,7vw,34px)!important;}
+  .metricNum.metric--tight{font-size:clamp(19px,6vw,28px)!important;}
+  .metricNum.metric--compact{font-size:clamp(16px,5.2vw,24px)!important;}
+  .metricUnit{font-size:12px!important;}
+  .battleVs{min-width:42px!important;width:42px!important;font-size:11px!important;}
+}
+
 </style>
 </head>
 <body>
@@ -3575,16 +3661,62 @@ function matchWinnerLabel(a,b,leftName,rightName,lowerIsBetter=false){
   const leftWins=lowerIsBetter ? a<b : a>b;
   return {side:leftWins?'left':'right',label:leftWins?leftName:rightName,gap:Math.abs(a-b)};
 }
+
+function battleMetricDisplayParts(value){
+  const raw=String(value??'—').trim();
+  const match=raw.match(/^([+\-]?[0-9][0-9,\.]*)(?:\s*([A-Za-z%]+))?$/);
+  const num=match?match[1]:raw;
+  const unit=match&&match[2]?match[2]:'';
+  const digits=num.replace(/[^0-9]/g,'').length;
+  let sizeClass='metric--normal';
+  if(digits>=5 || num.length>=6) sizeClass='metric--compact';
+  else if(digits>=4 || num.length>=5) sizeClass='metric--tight';
+  return {num,unit,sizeClass};
+}
+function renderBattleMetricValue(value, align='left'){
+  const parts=battleMetricDisplayParts(value);
+  return `<div class="battleTeamValue ${align}"><span class="metricNum ${parts.sizeClass}">${escapeHtml(parts.num)}</span>${parts.unit?`<span class="metricUnit">${escapeHtml(parts.unit)}</span>`:''}</div>`;
+}
 function richBattleCard(label,a,b,fmt=displayNumber,leftName='Team 1',rightName='Team 2',lowerIsBetter=false){
   a=toNumber(a); b=toNumber(b);
+  const displayA=fmt(a);
+  const displayB=fmt(b);
   const total=Math.max(0,a)+Math.max(0,b);
   const shareA=total>0 ? (Math.max(0,a)/total*100) : 50;
   const shareB=total>0 ? (Math.max(0,b)/total*100) : 50;
   const w=matchWinnerLabel(a,b,leftName,rightName,lowerIsBetter);
   const gapText=w.side==='even' ? (UI_LANG==='ja'?'同点':'Even') : `${escapeHtml(w.label)} +${escapeHtml(fmt(w.gap))}`;
   const hint=lowerIsBetter ? (UI_LANG==='ja'?'少ない方が優位':'Lower is better') : (UI_LANG==='ja'?'多い方が優位':'Higher is better');
-  return `<div class="battleCard reveal-card"><div class="battleCardTop"><div class="battleLabel">${escapeHtml(label)}</div><div class="battleWinner ${w.side}">${gapText}</div></div><div class="battleHint">${escapeHtml(hint)}</div><div class="battleCompareHeader"><div class="battleTeamBlock left"><div class="battleTeamName"><span class="battleDot left"></span>${escapeHtml(leftName)}</div><div class="battleTeamValue left"><span class="metricNum" data-final="${escapeHtml(fmt(a))}">${escapeHtml(fmt(a))}</span></div></div><div class="battleVs">VS</div><div class="battleTeamBlock right"><div class="battleTeamName right">${escapeHtml(rightName)}<span class="battleDot right"></span></div><div class="battleTeamValue right"><span class="metricNum" data-final="${escapeHtml(fmt(b))}">${escapeHtml(fmt(b))}</span></div></div></div><div class="battleTrack100" aria-label="${escapeHtml(leftName)} ${escapeHtml(fmt(a))}, ${escapeHtml(rightName)} ${escapeHtml(fmt(b))}"><div class="battleTrackSegment left matchBarFill" data-width="${shareA}" style="width:0%"></div><div class="battleTrackSegment right matchBarFill" data-width="${shareB}" style="width:0%"></div><div class="battleTrackDivider" style="left:${shareA}%"></div></div><div class="battleShareLabels"><div class="battleShareLabel left"><span class="battleSharePct">${intFmt(shareA)}%</span><span>${escapeHtml(leftName)}</span></div><div class="battleShareLabel right"><span>${escapeHtml(rightName)}</span><span class="battleSharePct">${intFmt(shareB)}%</span></div></div></div>`;
+  return `
+  <div class="battleCard reveal-card">
+    <div class="battleHeader">
+      <h4>${escapeHtml(label)}</h4>
+      <div class="battleGapPill">${gapText}</div>
+    </div>
+    <div class="battleHint">${hint}</div>
+    <div class="battleCompareHeader">
+      <div class="battleTeamBlock">
+        <div class="battleTeamName"><span class="battleDot left"></span>${escapeHtml(leftName)}</div>
+        ${renderBattleMetricValue(displayA,'left')}
+      </div>
+      <div class="battleVs">VS</div>
+      <div class="battleTeamBlock right">
+        <div class="battleTeamName right">${escapeHtml(rightName)}<span class="battleDot right"></span></div>
+        ${renderBattleMetricValue(displayB,'right')}
+      </div>
+    </div>
+    <div class="battleTrack100">
+      <div class="battleTrackSegment left matchBarFill" data-width="${shareA.toFixed(2)}" style="width:0%"></div>
+      <div class="battleTrackDivider"></div>
+      <div class="battleTrackSegment right matchBarFill" data-width="${shareB.toFixed(2)}" style="width:0%"></div>
+    </div>
+    <div class="battleShareLabels">
+      <div class="battleShareLabel"><span class="battleSharePct">${intFmt(shareA)}%</span><span>${escapeHtml(leftName)}</span></div>
+      <div class="battleShareLabel right"><span>${escapeHtml(rightName)}</span><span class="battleSharePct">${intFmt(shareB)}%</span></div>
+    </div>
+  </div>`;
 }
+
 function matchSignalCard(label,leftValue,rightValue,fmt,leftName,rightName,lower=false){
   const w=matchWinnerLabel(leftValue,rightValue,leftName,rightName,lower);
   return `<div class="matchSignal"><small>${escapeHtml(label)}</small><strong>${escapeHtml(w.side==='even'?(UI_LANG==='ja'?'Even':'Even'):w.label)}</strong><span>${escapeHtml(fmt(leftValue))} / ${escapeHtml(fmt(rightValue))}</span></div>`;
