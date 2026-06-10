@@ -1588,10 +1588,10 @@ body{
 .battleTeamValue.left{color:#c1121f;}
 .battleTeamValue.right{text-align:right;color:#111827;}
 .battleVs{align-self:center;justify-self:center;font-size:11px;font-weight:1000;letter-spacing:.16em;color:#98a2b3;border-radius:999px;padding:6px 7px;background:#f2f4f7;}
-.battleTrack100{position:relative;display:flex;align-items:stretch;height:18px;margin-top:14px;border-radius:999px;background:#e8edf5;overflow:hidden;border:1px solid rgba(7,26,58,.08);box-shadow:inset 0 1px 2px rgba(16,24,40,.06);}
-.battleTrackSegment{height:100%;width:0%;transition:width .9s cubic-bezier(.2,.8,.2,1);}
-.battleTrackSegment.left{background:linear-gradient(90deg,#b90f1b 0%, #e21825 52%, #ff5d69 100%)!important;}
-.battleTrackSegment.right{background:linear-gradient(90deg,#07111f 0%, #111827 54%, #475467 100%)!important;}
+.battleTrack100{position:relative;display:block;height:18px;margin-top:14px;border-radius:999px;background:#e8edf5;overflow:hidden;border:1px solid rgba(7,26,58,.08);box-shadow:inset 0 1px 2px rgba(16,24,40,.06);}
+.battleTrackSegment{position:absolute;top:0;bottom:0;height:100%;width:0%;transition:width .9s cubic-bezier(.2,.8,.2,1);}
+.battleTrackSegment.left{left:0;background:linear-gradient(90deg,#b90f1b 0%, #e21825 52%, #ff5d69 100%)!important;}
+.battleTrackSegment.right{right:0;background:linear-gradient(90deg,#07111f 0%, #111827 54%, #475467 100%)!important;}
 .battleTrackDivider{position:absolute;left:50%;top:-3px;bottom:-3px;width:2px;background:rgba(255,255,255,.96);box-shadow:0 0 0 1px rgba(7,26,58,.08);transform:translateX(-1px);pointer-events:none;}
 .battleShareLabels{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:center;margin-top:9px;}
 .battleShareLabel{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:900;color:#475467;}
@@ -1609,6 +1609,17 @@ body{
   .battleShareLabel.right{align-items:flex-end;}
   .battleSharePct{font-size:13px;}
 }
+
+
+/* v129 page experience upgrades */
+.growthStoryPanel{background:linear-gradient(135deg,#ffffff,#f8fafc)!important;border:1px solid #dbe5f1!important;border-radius:30px!important;box-shadow:0 18px 44px rgba(16,24,40,.08)!important;}
+.growthHero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center;padding:18px;border-radius:24px;background:linear-gradient(135deg,#071a3a,#10284e);color:#fff;margin-bottom:14px}
+.growthHero h3{margin:4px 0;font-size:26px;letter-spacing:-.04em}.growthHero p{margin:0;color:rgba(255,255,255,.78);font-weight:800}.growthKicker{display:inline-flex;border-radius:999px;background:rgba(255,255,255,.12);padding:6px 10px;font-size:11px;font-weight:1000;letter-spacing:.12em;text-transform:uppercase}.growthScore{min-width:118px;background:#fff;color:#071a3a;border-radius:20px;padding:14px;text-align:center;box-shadow:0 16px 34px rgba(0,0,0,.18)}.growthScore small{font-weight:1000;text-transform:uppercase;color:#667085}.growthScore strong{display:block;font-size:34px;line-height:1;font-weight:1000}.growthScore span{font-size:11px;font-weight:900;color:#475467}.growthCards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.growthCard,.growthFocusCard{background:#fff;border:1px solid #dbe5f1;border-radius:20px;padding:14px;color:#071a3a;box-shadow:0 10px 24px rgba(16,24,40,.05)}.growthCard small,.growthFocusCard small{display:block;color:#667085;font-weight:1000;text-transform:uppercase;letter-spacing:.08em;font-size:10px}.growthCard strong,.growthFocusCard strong{display:block;margin-top:6px;font-size:24px;line-height:1;font-weight:1000}.growthCard span,.growthFocusCard span{display:block;margin-top:7px;color:#526071;font-size:12px;font-weight:850}.growthCard.green strong,.growthFocusCard.good strong{color:#067647}.growthCard.red strong,.growthFocusCard.focus strong{color:#c1121f}.growthFocusGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.worldBenchmarkPanel{display:grid;grid-template-columns:150px minmax(0,1fr);gap:18px;align-items:center;background:#fff;border:1px solid #dbe5f1;border-radius:28px;padding:18px;margin:16px 0;box-shadow:0 18px 44px rgba(16,24,40,.08)}.benchmarkScoreRing{--score:0;width:132px;height:132px;border-radius:999px;display:grid;place-items:center;background:conic-gradient(#d71920 calc(var(--score)*1%),#e9eef5 0);position:relative}.benchmarkScoreRing:after{content:"";position:absolute;inset:12px;border-radius:999px;background:#fff}.benchmarkScoreRing>div{position:relative;z-index:1;text-align:center}.benchmarkScoreRing strong{display:block;font-size:32px;line-height:1;font-weight:1000;color:#071a3a}.benchmarkScoreRing span{display:block;margin-top:5px;font-size:10px;font-weight:1000;color:#667085;text-transform:uppercase}.benchmarkInsightCol h3{margin:0 0 5px;color:#071a3a;font-size:22px}.benchmarkInsightCol p{margin:0 0 12px;color:#526071;font-weight:850}.benchmarkMiniGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.benchmarkMini{border-radius:16px;padding:11px;border:1px solid #e4eaf2;background:#f8fafc}.benchmarkMini.close{background:#ecfdf3;border-color:#b7e4c7}.benchmarkMini.gap{background:#fff1f2;border-color:#fecdd3}.benchmarkMini small{display:block;color:#475467;font-size:10px;font-weight:1000;text-transform:uppercase}.benchmarkMini strong{display:block;font-size:20px;color:#071a3a}.benchmarkMini span{display:block;color:#667085;font-size:10px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.keyFactorsModule{background:#fff!important}.keyFactorGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.keyFactorCard{position:relative;border-radius:20px;padding:14px;background:#f8fafc;border:1px solid #e4eaf2;color:#071a3a;overflow:hidden}.keyFactorCard:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:#98a2b3}.keyFactorCard.left:before{background:#d71920}.keyFactorCard.right:before{background:#111827}.keyFactorCard small{display:block;color:#667085;font-weight:1000;text-transform:uppercase;letter-spacing:.08em;font-size:10px}.keyFactorCard strong{display:block;margin-top:8px;font-size:20px;line-height:1.05;font-weight:1000}.keyFactorCard span{display:block;margin-top:8px;color:#526071;font-size:12px;font-weight:850}
+.mobileBottomNav{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:9999;display:none;grid-template-columns:repeat(4,1fr);gap:6px;width:min(94vw,430px);padding:8px;background:rgba(7,26,58,.94);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.14);border-radius:24px;box-shadow:0 20px 54px rgba(7,26,58,.35)}.mobileBottomNav button{border:0;border-radius:17px;padding:10px 6px;background:transparent;color:rgba(255,255,255,.72);font-weight:1000;font-size:11px;letter-spacing:.02em}.mobileBottomNav button.active{background:#fff;color:#071a3a;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+@media(max-width:760px){body{padding-bottom:86px}.mobileBottomNav{display:grid}.growthHero{grid-template-columns:1fr;gap:12px;padding:15px}.growthHero h3{font-size:22px}.growthScore{width:100%;min-width:0}.growthCards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.growthFocusGrid{grid-template-columns:1fr}.worldBenchmarkPanel{grid-template-columns:1fr;text-align:center;padding:15px}.benchmarkScoreRing{margin:0 auto}.benchmarkMiniGrid{grid-template-columns:1fr}.keyFactorGrid{grid-template-columns:1fr 1fr;gap:10px}.keyFactorCard strong{font-size:17px}}
+@media(max-width:430px){.keyFactorGrid{grid-template-columns:1fr}.growthCards{grid-template-columns:1fr 1fr}.growthCard strong{font-size:20px}}
 
 </style>
 </head>
@@ -3482,7 +3493,7 @@ function richBattleCard(label,a,b,fmt=displayNumber,leftName='Team 1',rightName=
   const w=matchWinnerLabel(a,b,leftName,rightName,lowerIsBetter);
   const gapText=w.side==='even' ? (UI_LANG==='ja'?'同点':'Even') : `${escapeHtml(w.label)} +${escapeHtml(fmt(w.gap))}`;
   const hint=lowerIsBetter ? (UI_LANG==='ja'?'少ない方が優位':'Lower is better') : (UI_LANG==='ja'?'多い方が優位':'Higher is better');
-  return `<div class="battleCard reveal-card"><div class="battleCardTop"><div class="battleLabel">${escapeHtml(label)}</div><div class="battleWinner ${w.side}">${gapText}</div></div><div class="battleHint">${escapeHtml(hint)}</div><div class="battleCompareHeader"><div class="battleTeamBlock left"><div class="battleTeamName"><span class="battleDot left"></span>${escapeHtml(leftName)}</div><div class="battleTeamValue left"><span class="metricNum" data-final="${escapeHtml(fmt(a))}">${escapeHtml(fmt(a))}</span></div></div><div class="battleVs">VS</div><div class="battleTeamBlock right"><div class="battleTeamName right">${escapeHtml(rightName)}<span class="battleDot right"></span></div><div class="battleTeamValue right"><span class="metricNum" data-final="${escapeHtml(fmt(b))}">${escapeHtml(fmt(b))}</span></div></div></div><div class="battleTrack100" aria-label="${escapeHtml(leftName)} ${escapeHtml(fmt(a))}, ${escapeHtml(rightName)} ${escapeHtml(fmt(b))}"><div class="battleTrackSegment left matchBarFill" data-width="${shareA}" style="width:0%"></div><div class="battleTrackSegment right matchBarFill" data-width="${shareB}" style="width:0%"></div><div class="battleTrackDivider"></div></div><div class="battleShareLabels"><div class="battleShareLabel left"><span class="battleSharePct">${intFmt(shareA)}%</span><span>${escapeHtml(leftName)}</span></div><div class="battleShareLabel right"><span>${escapeHtml(rightName)}</span><span class="battleSharePct">${intFmt(shareB)}%</span></div></div></div>`;
+  return `<div class="battleCard reveal-card"><div class="battleCardTop"><div class="battleLabel">${escapeHtml(label)}</div><div class="battleWinner ${w.side}">${gapText}</div></div><div class="battleHint">${escapeHtml(hint)}</div><div class="battleCompareHeader"><div class="battleTeamBlock left"><div class="battleTeamName"><span class="battleDot left"></span>${escapeHtml(leftName)}</div><div class="battleTeamValue left"><span class="metricNum" data-final="${escapeHtml(fmt(a))}">${escapeHtml(fmt(a))}</span></div></div><div class="battleVs">VS</div><div class="battleTeamBlock right"><div class="battleTeamName right">${escapeHtml(rightName)}<span class="battleDot right"></span></div><div class="battleTeamValue right"><span class="metricNum" data-final="${escapeHtml(fmt(b))}">${escapeHtml(fmt(b))}</span></div></div></div><div class="battleTrack100" aria-label="${escapeHtml(leftName)} ${escapeHtml(fmt(a))}, ${escapeHtml(rightName)} ${escapeHtml(fmt(b))}"><div class="battleTrackSegment left matchBarFill" data-width="${shareA}" style="width:0%"></div><div class="battleTrackSegment right matchBarFill" data-width="${shareB}" style="width:0%"></div><div class="battleTrackDivider" style="left:${shareA}%"></div></div><div class="battleShareLabels"><div class="battleShareLabel left"><span class="battleSharePct">${intFmt(shareA)}%</span><span>${escapeHtml(leftName)}</span></div><div class="battleShareLabel right"><span>${escapeHtml(rightName)}</span><span class="battleSharePct">${intFmt(shareB)}%</span></div></div></div>`;
 }
 function matchSignalCard(label,leftValue,rightValue,fmt,leftName,rightName,lower=false){
   const w=matchWinnerLabel(leftValue,rightValue,leftName,rightName,lower);
@@ -3542,6 +3553,7 @@ async function runMatchReview(){
   const html=renderMatchReview(match);
   matchReviewHtmlCache.set(id,html);
   out.innerHTML=html;
+  v129InjectWorldBenchmark(out, baseRows, tops);
   prepareScrollAnimations(out); animateMatchReviewBars(out);
   setTimeout(updateMatchH2HStat,0);
 }
@@ -3774,6 +3786,26 @@ function worldComparisonRow(row, top){
     <div class="worldLeader">${topTeam?`<span class="worldLeaderTeam">${escapeHtml(topTeam)}</span>`:''}<strong>${escapeHtml(topName)}</strong><span class="worldLeaderMeta">${intFmt(topMatches)} ${matchLabel}</span><span class="worldDiff ${good?'good':''}">${escapeHtml(gapLabel)} ${escapeHtml(diffText)}</span></div>
   </div>`;
 }
+
+function v129WorldValueForDisplay(row, top){
+  const selected=worldMetricValue(row,'a');
+  const best=top && Number.isFinite(top.value) ? top.value : 0;
+  const ratio=best>0 ? Math.max(0, Math.min(100, selected/best*100)) : 0;
+  return {selected,best,ratio,gap:best-selected};
+}
+function v129InjectWorldBenchmark(out, rows, tops){
+  if(!out||!rows||!tops) return;
+  const items=rows.map((r,i)=>({row:r,top:tops[i],...v129WorldValueForDisplay(r,tops[i])})).filter(x=>x.top&&x.top.player&&x.best>0);
+  if(!items.length) return;
+  const score=Math.round(items.reduce((s,x)=>s+x.ratio,0)/items.length);
+  const closest=items.slice().sort((a,b)=>b.ratio-a.ratio).slice(0,3);
+  const gaps=items.slice().sort((a,b)=>a.ratio-b.ratio).slice(0,3);
+  const card=(x,cls)=>`<div class="benchmarkMini ${cls}"><small>${escapeHtml(x.row.label)}</small><strong>${intFmt(x.ratio)}%</strong><span>${escapeHtml(x.top.player?.team||'')} · ${escapeHtml(x.top.player?.name||'World top')}</span></div>`;
+  const html=`<section class="worldBenchmarkPanel"><div class="benchmarkScoreRing" style="--score:${score}"><div><strong>${score}%</strong><span>${escapeHtml(UI_LANG==='ja'?'World Benchmark':'World Benchmark')}</span></div></div><div class="benchmarkInsightCol"><h3>${escapeHtml(UI_LANG==='ja'?'世界基準への距離':'Distance to world class')}</h3><p>${escapeHtml(UI_LANG==='ja'?'選択選手のPer80を、選択ポジションの世界トップ値と比較しています。':'Selected player per 80 compared with world top values for the chosen position.')}</p><div class="benchmarkMiniGrid">${closest.map(x=>card(x,'close')).join('')}${gaps.map(x=>card(x,'gap')).join('')}</div></div></section>`;
+  const header=out.querySelector('.compareHeader');
+  if(header) header.insertAdjacentHTML('afterend',html);
+}
+
 async function runWorldComparison(){
   const out=$('worldResult'); if(!out) return;
   const playerKey=state.world.player, groupId=state.world.position||'1';
@@ -3897,9 +3929,22 @@ const worldRun=$('worldRun'); if(worldRun) worldRun.addEventListener('click',run
 /* v114: page-internal structure implementation */
 function v114BestRows(items, limit=3){return items.filter(x=>Number.isFinite(toNumber(x.value))&&Math.abs(toNumber(x.value))>0).sort((a,b)=>Math.abs(toNumber(b.value))-Math.abs(toNumber(a.value))).slice(0,limit);}
 function v114ReviewInsightDeck(raw, st, ctx){
-  // v118: removed the large snapshot / key strengths block from Stats Review.
-  // It reduced readability and duplicated information already available in the stats cards.
-  return '';
+  const sr=samuraiRate(raw);
+  const minutes=toNumber(raw.minutes||0);
+  const scopeLabel=ctx?.label||'';
+  const metrics=[
+    {label:'Samurai Stats', value:sr, display:signedOneDec(sr), note:'Player BIP rate', tone:sr>=0?'green':'red'},
+    {label:'Carry Metres', value:toNumber(st.carryMetres), display:displayNumber(st.carryMetres), note:metricLabel(), tone:'red'},
+    {label:'Tackle Completion', value:raw.tackleAttempts?pctNum(raw.tackleMade,raw.tackleAttempts):0, display:pct(raw.tackleMade,raw.tackleAttempts), note:`${intFmt(raw.tackleMade)}/${intFmt(raw.tackleAttempts)} made`, tone:'navy'},
+    {label:'Effort Quality', value:raw.reviewTotal?pctNum((raw.colours?.Gold||0)+(raw.colours?.Green||0),raw.reviewTotal):0, display:raw.reviewTotal?`${intFmt(pctNum((raw.colours?.Gold||0)+(raw.colours?.Green||0),raw.reviewTotal))}%`:'—', note:'Gold + Green share', tone:'green'}
+  ];
+  const best=metrics.slice().sort((a,b)=>toNumber(b.value)-toNumber(a.value))[0]||metrics[0];
+  const redEntries=Object.entries(raw.typeByColour?.Red||{}).sort((a,b)=>b[1]-a[1]);
+  const next=redEntries.length?`${redEntries[0][0]} (${intFmt(redEntries[0][1])} Red)`:raw.negativeActions>0?`${intFmt(raw.negativeActions)} negative actions`:'Keep current standard';
+  const trendHint=(ctx?.scope||state.scope)==='match'
+    ? (UI_LANG==='ja'?'この試合での良い点と次の改善点を確認':'Review this match, then check the next focus')
+    : (UI_LANG==='ja'?'シーズン／通算の成長ストーリー':'Season / career growth story');
+  return `<section class="section growthStoryPanel" id="growthStoryPanel"><div class="sectionTitle"><h3>${escapeHtml(UI_LANG==='ja'?'Growth Story':'Growth Story')}</h3><span>${escapeHtml(trendHint)}</span></div><div class="growthHero"><div><div class="growthKicker">${escapeHtml(UI_LANG==='ja'?'Performance pulse':'Performance pulse')}</div><h3>${escapeHtml(raw.player?.name||'Player')}</h3><p>${escapeHtml(scopeLabel)} · ${escapeHtml(oneDec(minutes))} min</p></div><div class="growthScore"><small>Samurai</small><strong>${escapeHtml(signedOneDec(sr))}</strong><span>${escapeHtml(UI_LANG==='ja'?'BIP基準':'BIP rate')}</span></div></div><div class="growthCards">${metrics.map(m=>`<div class="growthCard ${escapeHtml(m.tone)}"><small>${escapeHtml(m.label)}</small><strong>${escapeHtml(m.display)}</strong><span>${escapeHtml(m.note)}</span></div>`).join('')}</div><div class="growthFocusGrid"><div class="growthFocusCard good"><small>${escapeHtml(UI_LANG==='ja'?'Best signal':'Best signal')}</small><strong>${escapeHtml(best.label)}</strong><span>${escapeHtml(best.display)}</span></div><div class="growthFocusCard focus"><small>${escapeHtml(UI_LANG==='ja'?'Next focus':'Next focus')}</small><strong>${escapeHtml(next)}</strong><span>${escapeHtml(UI_LANG==='ja'?'詳細カードをタップして確認':'Tap detail cards to review')}</span></div></div></section>`;
 }
 
 const __v114RenderDashboardBase = renderDashboard;
@@ -4139,6 +4184,57 @@ async function hydratePlayerMomentum(ctx){
     return html+`<div class="matchReviewGrid wide"><div data-momentum-match="${escapeHtml(id)}" class="momentumSection"><div class="momentumEmpty">${escapeHtml(UI_LANG==='ja'?'Momentum / Match Flow を読み込み中…':'Loading Momentum / Match Flow…')}</div></div></div>`;
   };
 })();
+
+/* v129: story, benchmark, key factors, mobile bottom nav */
+function v129MatchKeyFactors(match){
+  const teamStats=getMatchTeamStats(match); const [left,right]=matchTeamsOrdered(teamStats,match);
+  const leftName=left.team||match.match?.home||'Team 1';
+  const rightName=right.team||match.match?.away||'Team 2';
+  const pick=(label,a,b,fmt=displayNumber,lower=false)=>{
+    const w=matchWinnerLabel(a,b,leftName,rightName,lower);
+    const winner=w.side==='even'?(UI_LANG==='ja'?'Even':'Even'):w.label;
+    return `<div class="keyFactorCard ${escapeHtml(w.side)}"><small>${escapeHtml(label)}</small><strong>${escapeHtml(winner)}</strong><span>${escapeHtml(fmt(a))} vs ${escapeHtml(fmt(b))}</span></div>`;
+  };
+  const lineoutL=pctNum(left.lineoutWon,left.lineoutTotal), lineoutR=pctNum(right.lineoutWon,right.lineoutTotal);
+  const scrumL=pctNum(left.scrumWon,left.scrumTotal), scrumR=pctNum(right.scrumWon,right.scrumTotal);
+  return `<section class="matchModule keyFactorsModule"><div class="sectionTitle"><h3>${escapeHtml(UI_LANG==='ja'?'Key Factors':'Key Factors')}</h3><span>${escapeHtml(UI_LANG==='ja'?'試合の勝敗要因を先に確認':'Read the match story before the details')}</span></div><div class="keyFactorGrid">${pick('Gainline / metres',left.carryMetres,right.carryMetres,displayNumber)}${pick('Discipline',left.penaltiesConceded,right.penaltiesConceded,displayNumber,true)}${pick('Opp 22 pressure',left.opp22Time,right.opp22Time,v=>`${oneDec(v)} min`)}${pick('Set piece control',(lineoutL+scrumL)/2,(lineoutR+scrumR)/2,v=>`${intFmt(v)}%`)}</div></section>`;
+}
+(function v129EnhanceMatchReview(){
+  const base=renderMatchReview;
+  renderMatchReview=function(match){
+    let html=base(match);
+    if(html.includes('keyFactorsModule')) return html;
+    const insert=v129MatchKeyFactors(match);
+    const marker='<div class="matchReviewGrid wide"><section class="matchModule"><div class="sectionTitle"><h3>Key Battles';
+    const idx=html.indexOf(marker);
+    if(idx>=0) return html.slice(0,idx)+`<div class="matchReviewGrid wide">${insert}</div>`+html.slice(idx);
+    return insert+html;
+  };
+})();
+
+function v129SetMode(mode){
+  const ids={review:'playerReviewModeToggle',compare:'compareModeToggle',world:'worldModeToggle',match:'matchReviewModeToggle'};
+  const el=document.getElementById(ids[mode]);
+  if(el) el.click();
+  window.scrollTo({top:0,behavior:'smooth'});
+  v129UpdateBottomNav(mode);
+}
+function v129UpdateBottomNav(mode){
+  document.querySelectorAll('.mobileBottomNav button').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));
+}
+function v129InstallBottomNav(){
+  if(document.querySelector('.mobileBottomNav')) return;
+  const nav=document.createElement('nav');
+  nav.className='mobileBottomNav';
+  nav.innerHTML=`<button data-mode="review" class="active" type="button"><span>Review</span></button><button data-mode="compare" type="button"><span>Compare</span></button><button data-mode="world" type="button"><span>World</span></button><button data-mode="match" type="button"><span>Match</span></button>`;
+  nav.addEventListener('click',e=>{const b=e.target.closest('button[data-mode]'); if(b) v129SetMode(b.dataset.mode);});
+  document.body.appendChild(nav);
+  [['playerReviewModeToggle','review'],['compareModeToggle','compare'],['worldModeToggle','world'],['matchReviewModeToggle','match']].forEach(([id,mode])=>{
+    const el=document.getElementById(id);
+    if(el) el.addEventListener('click',()=>setTimeout(()=>v129UpdateBottomNav(mode),0));
+  });
+}
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',v129InstallBottomNav); else v129InstallBottomNav();
 
 </script>
 </body>
