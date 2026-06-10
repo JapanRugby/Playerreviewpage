@@ -1627,6 +1627,90 @@ body{
 #dashboard .playerMomentumTop,
 #dashboard .momentumListCard{display:none!important;}
 
+
+/* v131: common Match Review battle graph + 4-digit number visibility */
+.battleCard{overflow:hidden!important;}
+.battleCompareHeader{
+  grid-template-columns:minmax(0,1fr) 36px minmax(0,1fr)!important;
+  gap:8px!important;
+  align-items:end!important;
+}
+.battleTeamBlock{min-width:0!important;overflow:hidden!important;}
+.battleTeamName{
+  max-width:100%!important;
+  white-space:nowrap!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+}
+.battleTeamName.right{justify-content:flex-end!important;}
+.battleTeamValue{
+  font-size:clamp(18px,1.55vw,27px)!important;
+  line-height:.98!important;
+  letter-spacing:-.055em!important;
+  white-space:nowrap!important;
+  word-break:normal!important;
+  overflow-wrap:normal!important;
+  max-width:100%!important;
+  overflow:visible!important;
+}
+.battleTeamValue .metricNum{
+  display:inline-block!important;
+  white-space:nowrap!important;
+  word-break:normal!important;
+  overflow-wrap:normal!important;
+  max-width:100%!important;
+  transform-origin:left center;
+}
+.battleTeamValue.right .metricNum{transform-origin:right center;}
+.battleVs{
+  min-width:32px!important;
+  width:32px!important;
+  padding:5px 0!important;
+  text-align:center!important;
+}
+.battleTrack100{
+  display:block!important;
+  position:relative!important;
+  height:18px!important;
+  overflow:hidden!important;
+  background:#e8edf5!important;
+}
+.battleTrackSegment{
+  display:block!important;
+  position:absolute!important;
+  top:0!important;
+  bottom:0!important;
+  height:100%!important;
+  opacity:1!important;
+  transition:width .9s cubic-bezier(.2,.8,.2,1)!important;
+}
+.battleTrackSegment.left{
+  left:0!important;
+  right:auto!important;
+  border-radius:999px 0 0 999px!important;
+  background:linear-gradient(90deg,#b90f1b 0%,#e21825 58%,#ff5d69 100%)!important;
+}
+.battleTrackSegment.right{
+  right:0!important;
+  left:auto!important;
+  border-radius:0 999px 999px 0!important;
+  background:linear-gradient(90deg,#07111f 0%,#111827 58%,#475467 100%)!important;
+}
+.battleTrackDivider{
+  z-index:2!important;
+}
+@media(max-width:720px){
+  .battleCompareHeader{grid-template-columns:minmax(0,1fr) 32px minmax(0,1fr)!important;gap:6px!important;}
+  .battleTeamValue{font-size:clamp(20px,7vw,28px)!important;letter-spacing:-.06em!important;}
+  .battleVs{min-width:30px!important;width:30px!important;font-size:10px!important;}
+}
+@media(min-width:721px) and (max-width:1500px){
+  .battleTeamValue{font-size:clamp(18px,1.35vw,24px)!important;}
+}
+@media(min-width:1501px){
+  .battleTeamValue{font-size:28px!important;}
+}
+
 </style>
 </head>
 <body>
@@ -3559,22 +3643,36 @@ async function runMatchReview(){
   const html=renderMatchReview(match);
   matchReviewHtmlCache.set(id,html);
   out.innerHTML=html;
-  v129InjectWorldBenchmark(out, baseRows, tops);
   prepareScrollAnimations(out); animateMatchReviewBars(out);
   setTimeout(updateMatchH2HStat,0);
 }
 
 
 function animateMatchReviewBars(root=document){
-  const run=()=>{
-    root.querySelectorAll('.matchBarFill[data-width]').forEach(el=>{ const w=el.getAttribute('data-width')||0; el.style.width='0%'; requestAnimationFrame(()=>{ el.style.width=w+'%'; }); });
-    updateMatchH2HStat();
+  const fills=[...root.querySelectorAll('.matchBarFill[data-width], .battleTrackSegment[data-width]')];
+  const animateOne=(el)=>{
+    const w=Math.max(0,Math.min(100,toNumber(el.getAttribute('data-width')||0)));
+    el.style.width='0%';
+    el.style.opacity='1';
+    // Force layout so repeat renders restart animation.
+    void el.offsetWidth;
+    requestAnimationFrame(()=>{ el.style.width=w+'%'; });
   };
   if('IntersectionObserver' in window){
-    const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){ const el=e.target; const w=el.getAttribute('data-width')||0; el.style.width=w+'%'; io.unobserve(el);}})},{threshold:.2});
-    root.querySelectorAll('.matchBarFill[data-width]').forEach(el=>io.observe(el));
-    setTimeout(updateMatchH2HStat,120);
-  } else setTimeout(run,80);
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          animateOne(e.target);
+          io.unobserve(e.target);
+        }
+      });
+    },{threshold:.08,rootMargin:'0px 0px -4% 0px'});
+    fills.forEach(el=>io.observe(el));
+    setTimeout(()=>fills.forEach(el=>{ if(!el.style.width || el.style.width==='0%') animateOne(el); }),260);
+  } else {
+    setTimeout(()=>fills.forEach(animateOne),80);
+  }
+  setTimeout(updateMatchH2HStat,140);
 }
 
 function openGenericModal(title,html){ const modal=$('effortAnalysisModal'), body=$('effortAnalysisModalBody'), titleEl=$('effortAnalysisModalTitle'); if(!modal||!body) return; if(titleEl) titleEl.textContent=title; body.innerHTML=html; modal.classList.add('show'); modal.setAttribute('aria-hidden','false'); }
