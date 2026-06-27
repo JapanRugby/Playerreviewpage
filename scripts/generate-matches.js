@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const DATA_DIR = path.join(process.cwd(), 'data');
+const MIN_MATCH_DATE = '2024-01-01';
 function listFiles(dir){ try{return fs.readdirSync(dir).filter(f=>fs.statSync(path.join(dir,f)).isFile());}catch{return [];} }
 function parseId(name){ const m=String(name).match(/^(\d{5,})/); return m ? m[1] : ''; }
 function readFirstCsvRow(file){
@@ -13,6 +14,7 @@ function readFirstCsvRow(file){
   }catch{return {};}
 }
 function dateLabel(v){ if(!v) return ''; const s=String(v).trim(); const dm=s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/); if(dm) return `${dm[3]}-${dm[2].padStart(2,'0')}-${dm[1].padStart(2,'0')}`; return s.slice(0,10); }
+function isDateOnOrAfter(date, minDate=MIN_MATCH_DATE){ const d=String(date||'').slice(0,10); return /^\d{4}-\d{2}-\d{2}$/.test(d) && d>=minDate; }
 function main(){
   fs.mkdirSync(DATA_DIR,{recursive:true});
   const files=listFiles(DATA_DIR);
@@ -30,6 +32,9 @@ function main(){
     if(g.reviewCsv) item.reviewCsv=g.reviewCsv;
     if(g.superscoutXml) item.superscoutXml=g.superscoutXml;
     Object.assign(item, overrides[id]||{});
+    item.date = dateLabel(item.date || date);
+    item.season = item.date ? item.date.slice(0,4) : (item.season || 'Unknown');
+    if(!isDateOnOrAfter(item.date)) continue;
     out.push(item);
   }
   fs.writeFileSync(path.join(DATA_DIR,'matches.json'), JSON.stringify(out, null, 2));

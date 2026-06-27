@@ -6,6 +6,7 @@ const DATA_DIR = path.join(ROOT, 'data');
 const STATS_DIR = path.join(DATA_DIR, 'stats');
 const MATCH_REVIEW_DIR = path.join(DATA_DIR, 'match_review');
 const TARGET_TEAMS = ['Japan', 'Japan XV'];
+const MIN_MATCH_DATE = '2024-01-01';
 
 function norm(v){return String(v??'').trim().replace(/\s+/g,' ').toLowerCase();}
 function normTeam(v){return String(v??'').trim().replace(/\s+/g,' ').toUpperCase();}
@@ -23,6 +24,8 @@ function toNumber(v){const n=parseFloat(String(v??'').replace(/,/g,''));return N
 function getField(row,names){ if(!row) return ''; for(const name of names){ if(Object.prototype.hasOwnProperty.call(row,name)) return row[name]; } const lower={}; for(const k of Object.keys(row||{})) lower[k.toLowerCase()]=row[k]; for(const name of names){ const v=lower[String(name).toLowerCase()]; if(v!==undefined) return v; } return ''; }
 function normalizeShirt(v){ const m=String(v??'').trim().match(/\d+/); return m?String(Number(m[0])).padStart(2,'0'):''; }
 function dateLabel(v){ if(!v) return ''; const s=String(v).trim(); const dm=s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/); if(dm) return `${dm[3]}-${dm[2].padStart(2,'0')}-${dm[1].padStart(2,'0')}`; return s.slice(0,10); }
+function isDateOnOrAfter(date, minDate=MIN_MATCH_DATE){ const d=String(date||'').slice(0,10); return /^\d{4}-\d{2}-\d{2}$/.test(d) && d>=minDate; }
+function cleanJsonFiles(dir){ try{ fs.mkdirSync(dir,{recursive:true}); for(const f of fs.readdirSync(dir)){ if(f.endsWith('.json')) fs.rmSync(path.join(dir,f),{force:true}); } }catch{} }
 function titleCaseWords(value){ return String(value||'').trim().replace(/\s+/g,' ').split(' ').filter(Boolean).map(w=>w.charAt(0).toUpperCase()+w.slice(1).toLowerCase()).join(' '); }
 function canonicalEffortType(value){ const clean=String(value||'Other').trim().replace(/\s+/g,' '); return clean ? titleCaseWords(clean) : 'Other'; }
 function canonicalEffortColour(value){ const key=String(value||'').trim().toLowerCase(); if(key==='gold') return 'Gold'; if(key==='green') return 'Green'; if(key==='yellow') return 'Yellow'; if(key==='red') return 'Red'; return String(value||'').trim(); }
@@ -406,9 +409,11 @@ function serializeMatchReview(match){
 function main(){
   fs.mkdirSync(STATS_DIR,{recursive:true});
   fs.mkdirSync(MATCH_REVIEW_DIR,{recursive:true});
+  cleanJsonFiles(STATS_DIR);
+  cleanJsonFiles(MATCH_REVIEW_DIR);
   const manifestPath=path.join(DATA_DIR,'matches.json');
   if(!fs.existsSync(manifestPath)){ throw new Error('data/matches.json not found. Run generate-matches.js first.'); }
-  const manifest=JSON.parse(fs.readFileSync(manifestPath,'utf8'));
+  const manifest=JSON.parse(fs.readFileSync(manifestPath,'utf8')).filter(item=>isDateOnOrAfter(item.date));
   const players=new Map(); const matchSummaries=[];
   for(const item of manifest){
     const id=String(item.id||item.matchId||'').trim();

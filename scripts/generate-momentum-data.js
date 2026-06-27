@@ -32,6 +32,7 @@ const PLAYER_DIR = path.join(OUT_DIR, 'players');
 const HALF_LIFE_SECONDS = 240;
 const RMI_SCALE = 3.0;
 const JAPAN_TEAM_NAMES = new Set(['JAPAN', 'JAPAN XV']);
+const MIN_MATCH_DATE = '2024-01-01';
 
 function ensureDir(p) { fs.mkdirSync(p, { recursive: true }); }
 function norm(v) { return String(v ?? '').trim().replace(/\s+/g, ' '); }
@@ -61,6 +62,8 @@ function matchSeconds(row) {
   }
   return toNumber(get(row, ['ps_timestamp', 'start_timestamp']));
 }
+function isDateOnOrAfter(date, minDate=MIN_MATCH_DATE) { const d = String(date || '').slice(0,10); return /^\d{4}-\d{2}-\d{2}$/.test(d) && d >= minDate; }
+function cleanJsonFiles(dir) { try { ensureDir(dir); for (const f of fs.readdirSync(dir)) { if (f.endsWith('.json')) fs.rmSync(path.join(dir, f), { force: true }); } } catch {} }
 function dateLabel(v) {
   const s = norm(v);
   const dm = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
@@ -448,6 +451,8 @@ function generateForFile(file) {
 
 function main() {
   ensureDir(OUT_DIR); ensureDir(MATCH_DIR); ensureDir(PLAYER_DIR);
+  cleanJsonFiles(MATCH_DIR);
+  cleanJsonFiles(PLAYER_DIR);
   const files = listBI();
   const byId = new Map();
   for (const f of files) {
@@ -462,6 +467,10 @@ function main() {
     try {
       const res = generateForFile(file);
       if (!res) continue;
+      if (!isDateOnOrAfter(res.indexItem && res.indexItem.date)) {
+        console.log(`Momentum skipped before ${MIN_MATCH_DATE}: ${id}`);
+        continue;
+      }
       fs.writeFileSync(path.join(MATCH_DIR, `${id}.json`), JSON.stringify(res.match, null, 2));
       fs.writeFileSync(path.join(PLAYER_DIR, `${id}.json`), JSON.stringify(res.players, null, 2));
       index.push(res.indexItem);

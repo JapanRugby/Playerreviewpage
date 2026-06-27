@@ -1797,6 +1797,137 @@ body{
   .battleVs{min-width:42px!important;width:42px!important;font-size:11px!important;}
 }
 
+
+/* v133: compact non-clipping Match Review battle cards */
+.battleDeck{
+  display:grid!important;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr))!important;
+  gap:14px!important;
+}
+.battleCardV133{
+  padding:16px!important;
+  min-height:0!important;
+  overflow:hidden!important;
+}
+.battleCardV133 .battleCardTop{
+  display:flex!important;
+  align-items:flex-start!important;
+  justify-content:space-between!important;
+  gap:10px!important;
+}
+.battleCardV133 .battleWinner{
+  flex:0 0 auto!important;
+  max-width:46%!important;
+  white-space:normal!important;
+  line-height:1.15!important;
+  text-align:right!important;
+}
+.battleValueRows{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:12px!important;
+  margin-top:14px!important;
+}
+.battleValueRow{
+  min-width:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  gap:5px!important;
+}
+.battleValueRow.right{
+  align-items:flex-end!important;
+  text-align:right!important;
+}
+.battleValueRow .battleTeamName{
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  font-size:12px!important;
+  line-height:1.1!important;
+  font-weight:950!important;
+  color:#344054!important;
+  white-space:nowrap!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+}
+.battleValueText{
+  display:flex!important;
+  align-items:baseline!important;
+  gap:4px!important;
+  max-width:100%!important;
+  min-width:0!important;
+  color:#071a3a!important;
+  line-height:1!important;
+}
+.battleValueText.right{justify-content:flex-end!important;}
+.battleMetricNum{
+  display:inline-block!important;
+  max-width:100%!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+  text-overflow:clip!important;
+  font-size:clamp(24px,2.15vw,40px)!important;
+  font-weight:1000!important;
+  letter-spacing:-.055em!important;
+  line-height:.92!important;
+  font-variant-numeric:tabular-nums!important;
+}
+.battleMetricUnit{
+  flex:0 0 auto!important;
+  white-space:nowrap!important;
+  font-size:clamp(13px,.95vw,17px)!important;
+  font-weight:1000!important;
+  letter-spacing:-.02em!important;
+}
+.battleTrack100.v133Track{
+  display:block!important;
+  position:relative!important;
+  margin-top:14px!important;
+  height:18px!important;
+  border-radius:999px!important;
+  background:#e8edf5!important;
+  overflow:hidden!important;
+}
+.v133Track .battleTrackSegment{
+  position:absolute!important;
+  top:0!important;
+  bottom:0!important;
+  height:100%!important;
+  width:0%!important;
+  opacity:1!important;
+}
+.v133Track .battleTrackSegment.left{
+  left:0!important;
+  right:auto!important;
+  border-radius:999px 0 0 999px!important;
+  background:linear-gradient(90deg,#bf001c,#e60012,#ff5962)!important;
+}
+.v133Track .battleTrackSegment.right{
+  right:0!important;
+  left:auto!important;
+  border-radius:0 999px 999px 0!important;
+  background:linear-gradient(90deg,#07111f,#111827,#475467)!important;
+}
+.v133Track .battleTrackDivider{
+  position:absolute!important;
+  top:-3px!important;
+  bottom:-3px!important;
+  width:2px!important;
+  background:#fff!important;
+  box-shadow:0 0 0 1px rgba(7,26,58,.12)!important;
+  z-index:3!important;
+  pointer-events:none!important;
+}
+@media(max-width:760px){
+  .battleDeck{grid-template-columns:1fr!important;}
+  .battleMetricNum{font-size:clamp(28px,10vw,44px)!important;}
+  .battleMetricUnit{font-size:14px!important;}
+}
+@media(min-width:761px) and (max-width:1380px){
+  .battleDeck{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))!important;}
+  .battleMetricNum{font-size:clamp(24px,2.4vw,38px)!important;}
+}
+
 </style>
 </head>
 <body>
@@ -2003,7 +2134,7 @@ body{
 </div>
 
 <script>
-const CONFIG = { manifestUrl:'data/matches.json', targetTeams:['Japan','Japan XV'] };
+const CONFIG = { manifestUrl:'data/matches.json', targetTeams:['Japan','Japan XV'],minMatchDate:'2024-01-01' };
 const state = { matches:[], players:new Map(), selectedPlayer:'', selectedId:'', scope:'match', metric:'total', mode:'live', matchById:new Map(), matchReviewById:new Map(), matchIndex:new Map(), playerMatchIds:new Map(), playerSummaries:new Map(), compareMode:false, worldMode:false, matchReviewMode:false, compare:{team1:'',team2:'',player1:'',player2:'',scope:'career',id1:'',id2:''}, world:{team:'',player:'',position:'1',scope:'total',season:''} };
 const $ = id => document.getElementById(id);
 const statusEl=$('status'), playerSelect=$('playerSelect'), playerList=$('playerList'), matchCards=$('matchCards'), dashboard=$('dashboard');
@@ -2270,6 +2401,7 @@ function ensurePlayer(match,name,team,data={},includeInList=false){
   return {key,player:p,stats:st};
 }
 function dateLabel(v){ if(!v) return ''; const s=String(v).trim(); const dm=s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/); if(dm) return `${dm[3]}-${dm[2].padStart(2,'0')}-${dm[1].padStart(2,'0')}`; return s.slice(0,10); }
+function isMatchDateAllowed(date){ const d=String(date||'').slice(0,10); return /^\d{4}-\d{2}-\d{2}$/.test(d) && d>=CONFIG.minMatchDate; }
 
 function clockMinutes(v){
   const n=Number(v); if(!Number.isFinite(n)) return null;
@@ -2498,15 +2630,21 @@ async function loadPrecomputedIndex(force=false){
   state.playerMatchIds=new Map();
   state.playerSummaries=new Map();
   state.players=new Map();
-  for(const m of index.matches||[]) state.matchIndex.set(String(m.id),m);
+  const allowedMatches=(index.matches||[]).filter(m=>isMatchDateAllowed(m.date));
+  const allowedIds=new Set(allowedMatches.map(m=>String(m.id)));
+  for(const m of allowedMatches) state.matchIndex.set(String(m.id),m);
   for(const p of index.players||[]){
-    state.players.set(p.key,{key:p.key,name:p.name,team:p.team,teams:p.teams||[p.team].filter(Boolean),shirt:p.shirt||'',position:p.position||'',show:p.show!==false,matches:p.matches||[]});
-    state.playerMatchIds.set(p.key,p.matches||[]);
-    state.playerSummaries.set(p.key,p.matchSummaries||{});
+    const allowedPlayerMatches=(p.matches||[]).filter(id=>allowedIds.has(String(id)));
+    if(!allowedPlayerMatches.length) continue;
+    const summaries={};
+    for(const id of allowedPlayerMatches){ if(p.matchSummaries&&p.matchSummaries[id]) summaries[id]=p.matchSummaries[id]; }
+    state.players.set(p.key,{key:p.key,name:p.name,team:p.team,teams:p.teams||[p.team].filter(Boolean),shirt:p.shirt||'',position:p.position||'',show:p.show!==false,matches:allowedPlayerMatches});
+    state.playerMatchIds.set(p.key,allowedPlayerMatches);
+    state.playerSummaries.set(p.key,summaries);
   }
   hydrateUI();
-  const matchCount=(index.matches||[]).length;
-  const playerCount=(index.players||[]).length;
+  const matchCount=allowedMatches.length;
+  const playerCount=state.players.size;
   setStatus(`${matchCount} matches / ${playerCount} Japan players indexed`, 'ok');
 }
 async function loadPlayerMatches(key,force=false){
@@ -3484,7 +3622,7 @@ function setMatchReviewMode(on){
 }
 
 /* v97: Match Review mode */
-function matchReviewMatches(){ return [...state.matchIndex.values()].sort((a,b)=>String(b.date||'').localeCompare(String(a.date||''))||String(b.id||'').localeCompare(String(a.id||''))); }
+function matchReviewMatches(){ return [...state.matchIndex.values()].filter(m=>isMatchDateAllowed(m.date)).sort((a,b)=>String(b.date||'').localeCompare(String(a.date||''))||String(b.id||'').localeCompare(String(a.id||''))); }
 
 const matchReviewHtmlCache=new Map();
 const matchReviewLoadingIds=new Set();
@@ -3662,20 +3800,15 @@ function matchWinnerLabel(a,b,leftName,rightName,lowerIsBetter=false){
   return {side:leftWins?'left':'right',label:leftWins?leftName:rightName,gap:Math.abs(a-b)};
 }
 
+
 function battleMetricDisplayParts(value){
   const raw=String(value??'—').trim();
   const match=raw.match(/^([+\-]?[0-9][0-9,\.]*)(?:\s*([A-Za-z%]+))?$/);
-  const num=match?match[1]:raw;
-  const unit=match&&match[2]?match[2]:'';
-  const digits=num.replace(/[^0-9]/g,'').length;
-  let sizeClass='metric--normal';
-  if(digits>=5 || num.length>=6) sizeClass='metric--compact';
-  else if(digits>=4 || num.length>=5) sizeClass='metric--tight';
-  return {num,unit,sizeClass};
+  return {num:match?match[1]:raw, unit:match&&match[2]?match[2]:''};
 }
-function renderBattleMetricValue(value, align='left'){
+function renderBattleMetricValue(value){
   const parts=battleMetricDisplayParts(value);
-  return `<div class="battleTeamValue ${align}"><span class="metricNum ${parts.sizeClass}">${escapeHtml(parts.num)}</span>${parts.unit?`<span class="metricUnit">${escapeHtml(parts.unit)}</span>`:''}</div>`;
+  return `<span class="battleMetricNum">${escapeHtml(parts.num)}</span>${parts.unit?`<span class="battleMetricUnit">${escapeHtml(parts.unit)}</span>`:''}`;
 }
 function richBattleCard(label,a,b,fmt=displayNumber,leftName='Team 1',rightName='Team 2',lowerIsBetter=false){
   a=toNumber(a); b=toNumber(b);
@@ -3688,30 +3821,34 @@ function richBattleCard(label,a,b,fmt=displayNumber,leftName='Team 1',rightName=
   const gapText=w.side==='even' ? (UI_LANG==='ja'?'同点':'Even') : `${escapeHtml(w.label)} +${escapeHtml(fmt(w.gap))}`;
   const hint=lowerIsBetter ? (UI_LANG==='ja'?'少ない方が優位':'Lower is better') : (UI_LANG==='ja'?'多い方が優位':'Higher is better');
   return `
-  <div class="battleCard reveal-card">
-    <div class="battleHeader">
-      <h4>${escapeHtml(label)}</h4>
-      <div class="battleGapPill">${gapText}</div>
-    </div>
-    <div class="battleHint">${hint}</div>
-    <div class="battleCompareHeader">
-      <div class="battleTeamBlock">
-        <div class="battleTeamName"><span class="battleDot left"></span>${escapeHtml(leftName)}</div>
-        ${renderBattleMetricValue(displayA,'left')}
+  <div class="battleCard battleCardV133 reveal-card">
+    <div class="battleCardTop">
+      <div>
+        <div class="battleLabel">${escapeHtml(label)}</div>
+        <div class="battleHint">${escapeHtml(hint)}</div>
       </div>
-      <div class="battleVs">VS</div>
-      <div class="battleTeamBlock right">
-        <div class="battleTeamName right">${escapeHtml(rightName)}<span class="battleDot right"></span></div>
-        ${renderBattleMetricValue(displayB,'right')}
+      <div class="battleWinner ${w.side}">${gapText}</div>
+    </div>
+
+    <div class="battleValueRows">
+      <div class="battleValueRow left">
+        <div class="battleTeamName"><span class="battleDot left"></span><span>${escapeHtml(leftName)}</span></div>
+        <div class="battleValueText left">${renderBattleMetricValue(displayA)}</div>
+      </div>
+      <div class="battleValueRow right">
+        <div class="battleTeamName right"><span>${escapeHtml(rightName)}</span><span class="battleDot right"></span></div>
+        <div class="battleValueText right">${renderBattleMetricValue(displayB)}</div>
       </div>
     </div>
-    <div class="battleTrack100">
+
+    <div class="battleTrack100 v133Track" aria-label="${escapeHtml(leftName)} ${escapeHtml(displayA)}, ${escapeHtml(rightName)} ${escapeHtml(displayB)}">
       <div class="battleTrackSegment left matchBarFill" data-width="${shareA.toFixed(2)}" style="width:0%"></div>
-      <div class="battleTrackDivider"></div>
+      <div class="battleTrackDivider" style="left:${shareA.toFixed(2)}%"></div>
       <div class="battleTrackSegment right matchBarFill" data-width="${shareB.toFixed(2)}" style="width:0%"></div>
     </div>
+
     <div class="battleShareLabels">
-      <div class="battleShareLabel"><span class="battleSharePct">${intFmt(shareA)}%</span><span>${escapeHtml(leftName)}</span></div>
+      <div class="battleShareLabel left"><span class="battleSharePct">${intFmt(shareA)}%</span><span>${escapeHtml(leftName)}</span></div>
       <div class="battleShareLabel right"><span>${escapeHtml(rightName)}</span><span class="battleSharePct">${intFmt(shareB)}%</span></div>
     </div>
   </div>`;
@@ -3780,15 +3917,17 @@ async function runMatchReview(){
 }
 
 
+
 function animateMatchReviewBars(root=document){
   const fills=[...root.querySelectorAll('.matchBarFill[data-width], .battleTrackSegment[data-width]')];
   const animateOne=(el)=>{
-    const w=Math.max(0,Math.min(100,toNumber(el.getAttribute('data-width')||0)));
+    const target=Math.max(0,Math.min(100,toNumber(el.getAttribute('data-width')||0)));
+    el.style.transition='none';
     el.style.width='0%';
     el.style.opacity='1';
-    // Force layout so repeat renders restart animation.
     void el.offsetWidth;
-    requestAnimationFrame(()=>{ el.style.width=w+'%'; });
+    el.style.transition='width .95s cubic-bezier(.2,.8,.2,1)';
+    requestAnimationFrame(()=>{ el.style.width=target+'%'; });
   };
   if('IntersectionObserver' in window){
     const io=new IntersectionObserver(entries=>{
@@ -3798,13 +3937,17 @@ function animateMatchReviewBars(root=document){
           io.unobserve(e.target);
         }
       });
-    },{threshold:.08,rootMargin:'0px 0px -4% 0px'});
+    },{threshold:.05,rootMargin:'0px 0px -2% 0px'});
     fills.forEach(el=>io.observe(el));
-    setTimeout(()=>fills.forEach(el=>{ if(!el.style.width || el.style.width==='0%') animateOne(el); }),260);
+    // Fallback: run even if IntersectionObserver timing is missed.
+    setTimeout(()=>fills.forEach(el=>{
+      const target=Math.max(0,Math.min(100,toNumber(el.getAttribute('data-width')||0)));
+      if(parseFloat(el.style.width||'0') < target) animateOne(el);
+    }),350);
   } else {
     setTimeout(()=>fills.forEach(animateOne),80);
   }
-  setTimeout(updateMatchH2HStat,140);
+  setTimeout(updateMatchH2HStat,160);
 }
 
 function openGenericModal(title,html){ const modal=$('effortAnalysisModal'), body=$('effortAnalysisModalBody'), titleEl=$('effortAnalysisModalTitle'); if(!modal||!body) return; if(titleEl) titleEl.textContent=title; body.innerHTML=html; modal.classList.add('show'); modal.setAttribute('aria-hidden','false'); }
