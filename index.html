@@ -2115,7 +2115,7 @@ body{
     </div>
 
     <div class="formula">
-      Carry Metres = <b>Metres2</b> / Post Contact Metres = <b>Metres3</b> / Carry Dominance% = <b>Dominant Contact ÷ Contact carries</b> / Tackle Completion = <b>made tackles ÷ attempts</b> / Tackle Dominance% = <b>Dominant Tackle ÷ attempts</b>. Goal Kick% = <b>Goals kicked ÷ goal kick attempts</b>. Samurai Stats = <b>(JRFU Positive Actions − JRFU Negative Actions) ÷ that player's Ball-in-play minutes</b>. Player Ball-in-play minutes uses <b>SuperScout XML TeamData Player BallInPlayMins</b> when available. Per 80 uses <b>SuperScout XML TeamData MINS</b> when available, with BI CSV match clock / Sub In / Sub Out as fallback.
+      Gain Metres = <b>Metres</b> / Post Contact Metres = <b>Metres3</b> / Carry Dominance% = <b>Dominant Contact ÷ Contact carries</b> / Tackle Completion = <b>made tackles ÷ attempts</b> / Tackle Dominance% = <b>Dominant Tackle ÷ attempts</b>. Goal Kick% = <b>Goals kicked ÷ goal kick attempts</b>. Samurai Stats = <b>(JRFU Positive Actions − JRFU Negative Actions) ÷ that player's Ball-in-play minutes</b>. Player Ball-in-play minutes uses <b>SuperScout XML TeamData Player BallInPlayMins</b> when available. Per 80 uses <b>SuperScout XML TeamData MINS</b> when available, with BI CSV match clock / Sub In / Sub Out as fallback.
     </div>
   </section>
 </main>
@@ -2582,7 +2582,7 @@ function buildMatch(item,biRows,reviewRows,xmlText=''){
     if(!seen.has(sk)){ seen.add(sk); st.appearances=1; st.minutes=playerMinutes.get(sk)||0; st.ballInPlayMins=playerBallInPlay.get(sk)||st.minutes||0; }
     applyXmlMinutes(st,xmlInfoFor(row,name,team));
     st.totalActions++; const sam=samuraiScoreRow(row); st.positiveActions+=sam.positive; st.negativeActions+=sam.negative; for(const label of sam.positiveReasons||[]) st.positiveActionTypes[label]=(st.positiveActionTypes[label]||0)+1; for(const label of sam.negativeReasons||[]) st.negativeActionTypes[label]=(st.negativeActionTypes[label]||0)+1; const action=String(row.actionName||'').trim();
-    if(action==='Carry'){ st.carry++; st.carryMetres+=toNumber(row.Metres2); st.postContactMetres+=toNumber(row.Metres3); const contact=String(row.qualifier4Name||''); if(/Contact/i.test(contact)) st.carryContact++; if(/Dominant Contact/i.test(contact)) st.carryDominant++; }
+    if(action==='Carry'){ st.carry++; st.carryMetres+=toNumber(row.Metres); st.postContactMetres+=toNumber(row.Metres3); const contact=String(row.qualifier4Name||''); if(/Contact/i.test(contact)) st.carryContact++; if(/Dominant Contact/i.test(contact)) st.carryDominant++; }
     if(action==='Tackle'){ st.tackleAttempts++; const result=String(row.ActionResultName||'').trim(); if(result!=='Missed') st.tackleMade++; const tq=String(row.qualifier4Name||''); if(/Dominant Tackle/i.test(tq)) st.tackleDominant++; } if(action==='Goal Kick'){ const result=String(row.ActionResultName||'').trim(); if(result){ st.goalKickAttempts++; if(result==='Goal Kicked') st.goalKickMade++; } }
   }
   for(const row of reviewRows){
@@ -3032,7 +3032,7 @@ function trendSectionConfig(section){
   const configs={
     samurai:{title:'Samurai Stats', metrics:[{key:'samurai',label:'Samurai Stats'},{key:'positive',label:'Positive Actions'},{key:'negative',label:'Negative Actions'}]},
     effort:{title:'Effort Review', metrics:[{key:'gold',label:'Gold',cls:'trend-gold'},{key:'green',label:'Green',cls:'trend-green'},{key:'yellow',label:'Yellow',cls:'trend-yellow'},{key:'red',label:'Red',cls:'trend-red'}]},
-    carry:{title:'Carry', metrics:[{key:'carry',label:'Carry'},{key:'carryMetres',label:'Carry Metres'},{key:'carryDominance',label:'Carry Dominance%'},{key:'postContactMetres',label:'Post Contact Metres'}]},
+    carry:{title:'Carry', metrics:[{key:'carry',label:'Carry'},{key:'carryMetres',label:'Gain Metres'},{key:'carryDominance',label:'Carry Dominance%'},{key:'postContactMetres',label:'Post Contact Metres'}]},
     tackle:{title:'Tackle', metrics:[{key:'tackle',label:'Tackle'},{key:'tackleCompletion',label:'Tackle Completion'},{key:'tackleDominance',label:'Tackle Dominance%'}]}
   };
   return configs[section]||null;
@@ -3158,7 +3158,7 @@ function renderSamuraiDetail(st){
   if($('samuraiDetail')) $('samuraiDetail').innerHTML='';
 }
 function renderDashboard(){ const ctx=currentContext(); if(!ctx||!ctx.raw) return; const raw=ctx.raw; const st=scaleStats(raw,state.metric); const p=raw.player; dashboard.style.display='block'; $('playerName').textContent=p.name; const meta=[]; if(raw.shirt) meta.push(`<span class="badge red">#${escapeHtml(raw.shirt)}</span>`); meta.push(`<span class="badge">${escapeHtml(p.team)}</span>`); if(raw.position) meta.push(`<span class="badge">${escapeHtml(raw.position)}</span>`); meta.push(`<span class="badge">${escapeHtml(metricLabel())}</span>`); if(ctx.match&&ctx.match.minutesSource) meta.push(`<span class="badge">Minutes: ${escapeHtml(ctx.match.minutesSource)}</span>`); $('playerMeta').innerHTML=meta.join(''); $('scoreLine').textContent=ctx.label; $('matchMeta').innerHTML=ctx.sub||''; $('carryContext').textContent=metricLabel(); $('tackleContext').textContent=metricLabel(); $('effortContext').textContent=metricLabel();
-  $('carryStats').innerHTML=[card('Carry',displayNumber(st.carry)),card('Carry Metres',displayNumber(st.carryMetres)),card('Carry Dominance%',pct(raw.carryDominant,raw.carryContact),`${raw.carryDominant}/${raw.carryContact} dominant contact`),card('Post Contact Metres',displayNumber(st.postContactMetres))].join('');
+  $('carryStats').innerHTML=[card('Carry',displayNumber(st.carry)),card('Gain Metres',displayNumber(st.carryMetres)),card('Carry Dominance%',pct(raw.carryDominant,raw.carryContact),`${raw.carryDominant}/${raw.carryContact} dominant contact`),card('Post Contact Metres',displayNumber(st.postContactMetres))].join('');
   $('tackleStats').innerHTML=[card('Tackle',displayNumber(st.tackleMade),`${intFmt(raw.tackleAttempts)} attempts`),card('Tackle Completion',pct(raw.tackleMade,raw.tackleAttempts),`${raw.tackleMade}/${raw.tackleAttempts} made`),card('Tackle Dominance%',pct(raw.tackleDominant,raw.tackleAttempts),`${raw.tackleDominant}/${raw.tackleAttempts} dominant tackle`)].join('');
   const goalKickSection=$('goalKickSection');
   if(goalKickSection){
@@ -3354,7 +3354,7 @@ function pctNum(num,den){
 function renderComparison(ctx){ const sec=$('comparisonSection'), cont=$('comparisonContent'); if(state.scope!=='match'||!ctx.match){sec.style.display='none';return;} const raw=ctx.raw; const opp=findOpponentSameNumber(ctx.match,raw); if(!opp){ sec.style.display='block'; cont.innerHTML='<div class="empty">No matching opponent was found. For jerseys 1–18 this uses the same number; for 19+ it also requires a compatible position ID group.</div>'; return; } sec.style.display='block'; const rows=[
   matchupCell('Samurai Stats',samuraiRate(raw),samuraiRate(opp),signedOneDec,true),
   matchupCell('Carry',raw.carry,opp.carry),
-  matchupCell('Carry Metres',raw.carryMetres,opp.carryMetres),
+  matchupCell('Gain Metres',raw.carryMetres,opp.carryMetres),
   matchupCell('Post Contact Metres',raw.postContactMetres,opp.postContactMetres),
   matchupCell('Tackle',raw.tackleMade,opp.tackleMade),
   matchupCell('Tackle Completion',pctNum(raw.tackleMade,raw.tackleAttempts),pctNum(opp.tackleMade,opp.tackleAttempts),v=>`${intFmt(v)}%`,true),
@@ -3713,7 +3713,7 @@ function matchCompareRow(label,a,b,fmt=displayNumber,higher=true){
   return `<div class="matchBarRow reveal-card"><div class="matchBarHead"><div class="matchBarValue left"><span class="metricNum" data-final="${escapeHtml(fmt(av))}">${escapeHtml(fmt(av))}</span></div><div class="matchBarMetric">${escapeHtml(label)}</div><div class="matchBarValue right"><span class="metricNum" data-final="${escapeHtml(fmt(bv))}">${escapeHtml(fmt(bv))}</span></div></div><div class="matchBarTrack"><div class="matchBarHalf left"><div class="matchBarFill jp" data-width="${aw}" style="width:0%"></div></div><div class="matchBarHalf"><div class="matchBarFill opp" data-width="${bw}" style="width:0%"></div></div></div></div>`;
 }
 function matchKeyStatsRows(jp,opp){ return [
-  ['Carry Metres',jp.carryMetres,opp.carryMetres,displayNumber],['Kicking Metres',jp.kickingMetres,opp.kickingMetres,displayNumber],['Penalties Conceded',jp.penaltiesConceded,opp.penaltiesConceded,displayNumber],['Turnovers Conceded',jp.turnoversConceded,opp.turnoversConceded,displayNumber],['Opp 22 Area Time',jp.opp22Time,opp.opp22Time,v=>`${oneDec(v)} min`]
+  ['Gain Metres',jp.carryMetres,opp.carryMetres,displayNumber],['Kicking Metres',jp.kickingMetres,opp.kickingMetres,displayNumber],['Penalties Conceded',jp.penaltiesConceded,opp.penaltiesConceded,displayNumber],['Turnovers Conceded',jp.turnoversConceded,opp.turnoversConceded,displayNumber],['Opp 22 Area Time',jp.opp22Time,opp.opp22Time,v=>`${oneDec(v)} min`]
 ]; }
 function rankingFromMatch(match, statKey, label, fmt=displayNumber, teamFilter=''){
   const rows=[...match.playerStats.values()]
@@ -3753,7 +3753,7 @@ function teamPlayersByShirt(match,teamName){
 }
 function renderHeadToHead(match,left,right){
   const leftMap=teamPlayersByShirt(match,left.team), rightMap=teamPlayersByShirt(match,right.team);
-  const opts=[['samurai','Samurai Stats'],['carry','Carries'],['carryMetres','Carry Metres'],['carryDominance','Carry Dominance%'],['tackleMade','Tackle Made'],['tackleDominance','Tackle Dominance%'],['ruckSupportAttack','Ruck Support Attack']];
+  const opts=[['samurai','Samurai Stats'],['carry','Carries'],['carryMetres','Gain Metres'],['carryDominance','Carry Dominance%'],['tackleMade','Tackle Made'],['tackleDominance','Tackle Dominance%'],['ruckSupportAttack','Ruck Support Attack']];
   const rows=[];
   for(let i=1;i<=23;i++){
     const a=leftMap.get(String(i)); const b=rightMap.get(String(i));
@@ -3872,7 +3872,7 @@ function renderSetPieceScoreboard(left,right,leftName,rightName){
 function renderCarryUnitCard(group,label,left,right,leftName,rightName){
   const a=left.carry?.[group]||{}, b=right.carry?.[group]||{};
   const mpcA=a.carries?a.metres/a.carries:0, mpcB=b.carries?b.metres/b.carries:0;
-  return `<div class="carryUnitCard reveal-card"><h4>${escapeHtml(label)}</h4><div class="carryMiniStats"><div><small>${escapeHtml(leftName)} carries</small><strong>${escapeHtml(displayNumber(a.carries||0))}</strong></div><div><small>${escapeHtml(rightName)} carries</small><strong>${escapeHtml(displayNumber(b.carries||0))}</strong></div><div><small>${escapeHtml(leftName)} m/carry</small><strong>${escapeHtml(oneDec(mpcA))}</strong></div><div><small>${escapeHtml(rightName)} m/carry</small><strong>${escapeHtml(oneDec(mpcB))}</strong></div></div><div class="battleDeck" style="margin-top:12px">${richBattleCard(`${label} Carry Metres`,a.metres||0,b.metres||0,displayNumber,leftName,rightName)}${richBattleCard(`${label} Post Contact`,a.pcm||0,b.pcm||0,displayNumber,leftName,rightName)}</div></div>`;
+  return `<div class="carryUnitCard reveal-card"><h4>${escapeHtml(label)}</h4><div class="carryMiniStats"><div><small>${escapeHtml(leftName)} carries</small><strong>${escapeHtml(displayNumber(a.carries||0))}</strong></div><div><small>${escapeHtml(rightName)} carries</small><strong>${escapeHtml(displayNumber(b.carries||0))}</strong></div><div><small>${escapeHtml(leftName)} m/carry</small><strong>${escapeHtml(oneDec(mpcA))}</strong></div><div><small>${escapeHtml(rightName)} m/carry</small><strong>${escapeHtml(oneDec(mpcB))}</strong></div></div><div class="battleDeck" style="margin-top:12px">${richBattleCard(`${label} Gain Metres`,a.metres||0,b.metres||0,displayNumber,leftName,rightName)}${richBattleCard(`${label} Post Contact`,a.pcm||0,b.pcm||0,displayNumber,leftName,rightName)}</div></div>`;
 }
 
 function renderMatchReview(match){
@@ -3883,7 +3883,7 @@ function renderMatchReview(match){
   const meta=[match.match?.date||match.date, match.match?.venue||match.venue, match.match?.competition||match.competition].filter(Boolean).join(' · ');
   const score=match.match?.score||match.score||'';
   let html=`<div class="matchCoachHero"><div class="matchCoachHeroTop"><div class="matchTeamBlock"><div class="matchTeamName">${escapeHtml(leftName)}</div><div class="matchTeamMeta">${escapeHtml(meta||matchTitle)}</div></div><div class="matchScoreBlock"><div class="matchVs">${escapeHtml(UI_LANG==='ja'?'Match Review':'Match Review')}</div><div class="matchScore">${escapeHtml(score||'v')}</div></div><div class="matchTeamBlock right"><div class="matchTeamName">${escapeHtml(rightName)}</div><div class="matchTeamMeta">${escapeHtml(matchTitle)}</div></div></div><div class="matchCoachHeroFoot">${matchSignalCard('Gainline',left.carryMetres,right.carryMetres,displayNumber,leftName,rightName)}${matchSignalCard('Discipline',left.penaltiesConceded,right.penaltiesConceded,displayNumber,leftName,rightName,true)}${matchSignalCard('Opp 22 pressure',left.opp22Time,right.opp22Time,v=>`${oneDec(v)} min`,leftName,rightName)}</div></div>`;
-  html+=`<div class="matchReviewGrid wide"><section class="matchModule"><div class="sectionTitle"><h3>Key Battles</h3><span>${escapeHtml(UI_LANG==='ja'?'試合を動かした主要スタッツ':'The battles that shaped the match')}</span></div><p class="matchModuleLead">${escapeHtml(UI_LANG==='ja'?'まずは距離、規律、ターンオーバー、22mエリアの圧力を確認します。':'Start with metres, discipline, turnovers and pressure in the attacking 22.')}</p><div class="battleDeck">${richBattleCard('Carry Metres',left.carryMetres,right.carryMetres,displayNumber,leftName,rightName)}${richBattleCard('Kicking Metres',left.kickingMetres,right.kickingMetres,displayNumber,leftName,rightName)}${richBattleCard('Penalties Conceded',left.penaltiesConceded,right.penaltiesConceded,displayNumber,leftName,rightName,true)}${richBattleCard('Turnovers Conceded',left.turnoversConceded,right.turnoversConceded,displayNumber,leftName,rightName,true)}${richBattleCard('Opp 22 Area Time',left.opp22Time,right.opp22Time,v=>`${oneDec(v)} min`,leftName,rightName)}</div></section></div>`;
+  html+=`<div class="matchReviewGrid wide"><section class="matchModule"><div class="sectionTitle"><h3>Key Battles</h3><span>${escapeHtml(UI_LANG==='ja'?'試合を動かした主要スタッツ':'The battles that shaped the match')}</span></div><p class="matchModuleLead">${escapeHtml(UI_LANG==='ja'?'まずは距離、規律、ターンオーバー、22mエリアの圧力を確認します。':'Start with metres, discipline, turnovers and pressure in the attacking 22.')}</p><div class="battleDeck">${richBattleCard('Gain Metres',left.carryMetres,right.carryMetres,displayNumber,leftName,rightName)}${richBattleCard('Kicking Metres',left.kickingMetres,right.kickingMetres,displayNumber,leftName,rightName)}${richBattleCard('Penalties Conceded',left.penaltiesConceded,right.penaltiesConceded,displayNumber,leftName,rightName,true)}${richBattleCard('Turnovers Conceded',left.turnoversConceded,right.turnoversConceded,displayNumber,leftName,rightName,true)}${richBattleCard('Opp 22 Area Time',left.opp22Time,right.opp22Time,v=>`${oneDec(v)} min`,leftName,rightName)}</div></section></div>`;
   html+=`<div class="matchReviewGrid"><section class="matchModule"><div class="sectionTitle"><h3>Set Piece Control</h3><span>Lineout & Scrum</span></div>${renderSetPieceScoreboard(left,right,leftName,rightName)}</section><section class="matchModule"><div class="sectionTitle"><h3>Carry Units</h3><span>Forwards / Backs by Position ID</span></div><div class="carryUnitGrid">${renderCarryUnitCard('fwds','Forwards',left,right,leftName,rightName)}${renderCarryUnitCard('bks','Backs',left,right,leftName,rightName)}</div></section></div>`;
   html+=`<section class="matchModule"><div class="sectionTitle"><h3>1–23 Head to Head</h3><span>${escapeHtml(UI_LANG==='ja'?'中央から伸びるバーで、番号ごとの優位を確認':'Centre-out bars show who wins each shirt battle.')}</span></div><div class="h2hScoutingNote">${escapeHtml(UI_LANG==='ja'?'コーチングポイントを見つけるための個人比較':'Use this to find matchup coaching points')}</div>${renderHeadToHead(match,left,right)}</section>`;
   setTimeout(updateMatchH2HStat,0);
@@ -3964,7 +3964,7 @@ function comparisonMetricRows(a,b,rawA=null,rawB=null){
   return [
     {group:'Samurai Stats', label:'Samurai Stats', a:samuraiRate(samA), b:samuraiRate(samB), fmt:signedOneDec, higher:true},
     {group:'Ball Carry', label:'Ball Carry', a:a.carry, b:b.carry, fmt:displayNumber, higher:true},
-    {group:'Ball Carry', label:'Carry Metres', a:a.carryMetres, b:b.carryMetres, fmt:displayNumber, higher:true},
+    {group:'Ball Carry', label:'Gain Metres', a:a.carryMetres, b:b.carryMetres, fmt:displayNumber, higher:true},
     {group:'Ball Carry', label:'Post Contact Metres', a:a.postContactMetres, b:b.postContactMetres, fmt:displayNumber, higher:true},
     {group:'Ball Carry', label:'Clean breaks', a:a.cleanBreaks||0, b:b.cleanBreaks||0, fmt:displayNumber, higher:true},
     {group:'Ball Carry', label:'Defenders Beaten', a:a.defendersBeaten||0, b:b.defendersBeaten||0, fmt:displayNumber, higher:true},
@@ -4313,7 +4313,7 @@ function v114ReviewInsightDeck(raw, st, ctx){
   const scopeLabel=ctx?.label||'';
   const metrics=[
     {label:'Samurai Stats', value:sr, display:signedOneDec(sr), note:'Player BIP rate', tone:sr>=0?'green':'red'},
-    {label:'Carry Metres', value:toNumber(st.carryMetres), display:displayNumber(st.carryMetres), note:metricLabel(), tone:'red'},
+    {label:'Gain Metres', value:toNumber(st.carryMetres), display:displayNumber(st.carryMetres), note:metricLabel(), tone:'red'},
     {label:'Tackle Completion', value:raw.tackleAttempts?pctNum(raw.tackleMade,raw.tackleAttempts):0, display:pct(raw.tackleMade,raw.tackleAttempts), note:`${intFmt(raw.tackleMade)}/${intFmt(raw.tackleAttempts)} made`, tone:'navy'},
     {label:'Effort Quality', value:raw.reviewTotal?pctNum((raw.colours?.Gold||0)+(raw.colours?.Green||0),raw.reviewTotal):0, display:raw.reviewTotal?`${intFmt(pctNum((raw.colours?.Gold||0)+(raw.colours?.Green||0),raw.reviewTotal))}%`:'—', note:'Gold + Green share', tone:'green'}
   ];
