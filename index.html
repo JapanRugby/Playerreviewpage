@@ -2022,6 +2022,16 @@ body{
   }
 }
 
+
+/* v139: reliable chart rendering in A4 PDF */
+.comparisonPrintBarSvg{display:none;width:100%;height:3mm;margin-top:1mm;overflow:visible}
+.comparisonPrintContent .barGraph{opacity:1!important;visibility:visible!important}
+@media print{
+  .comparisonPrintContent .chartBars{display:none!important}
+  .comparisonPrintContent .comparisonPrintBarSvg{display:block!important;width:100%!important;height:3mm!important}
+  .comparisonPrintContent .matchupChartRow{overflow:visible!important}
+}
+
 </style>
 </head>
 <body>
@@ -4727,12 +4737,45 @@ function updateComparePdfButton(){
   const btn=document.getElementById('comparePdfBtn');
   if(btn) btn.disabled=!comparisonHasPrintableResult();
 }
+function comparisonPrintBarPercent(bar){
+  const candidates=[bar?.dataset?.targetWidth,bar?.style?.width,bar?.getAttribute?.('data-width')];
+  for(const value of candidates){
+    const n=parseFloat(String(value||'').replace('%',''));
+    if(Number.isFinite(n)) return Math.max(0,Math.min(100,n));
+  }
+  return 0;
+}
+function comparisonPrintSvgBars(row){
+  const bars=[...row.querySelectorAll('.chartBars .barGraph')];
+  if(bars.length<2) return;
+  const leftPct=comparisonPrintBarPercent(bars[0]);
+  const rightPct=comparisonPrintBarPercent(bars[1]);
+  const ns='http://www.w3.org/2000/svg';
+  const svg=document.createElementNS(ns,'svg');
+  svg.setAttribute('class','comparisonPrintBarSvg');
+  svg.setAttribute('viewBox','0 0 200 14');
+  svg.setAttribute('preserveAspectRatio','none');
+  svg.setAttribute('aria-hidden','true');
+  const rect=(x,y,w,h,fill,rx=7)=>{const r=document.createElementNS(ns,'rect');r.setAttribute('x',x);r.setAttribute('y',y);r.setAttribute('width',w);r.setAttribute('height',h);r.setAttribute('rx',rx);r.setAttribute('fill',fill);return r;};
+  svg.appendChild(rect(0,1,97,12,'#e9eef5'));
+  svg.appendChild(rect(103,1,97,12,'#e9eef5'));
+  if(leftPct>0) svg.appendChild(rect(97-leftPct*.97,1,leftPct*.97,12,'#d71920'));
+  if(rightPct>0) svg.appendChild(rect(103,1,rightPct*.97,12,'#111827'));
+  const centre=document.createElementNS(ns,'line');
+  centre.setAttribute('x1','100');centre.setAttribute('x2','100');centre.setAttribute('y1','0');centre.setAttribute('y2','14');centre.setAttribute('stroke','#ffffff');centre.setAttribute('stroke-width','2');
+  svg.appendChild(centre);
+  const existing=row.querySelector('.comparisonPrintBarSvg'); if(existing) existing.remove();
+  const chartBars=row.querySelector('.chartBars');
+  if(chartBars) chartBars.insertAdjacentElement('afterend',svg);
+}
 function finalizeComparisonPrintBars(root){
   root.querySelectorAll('.barGraph').forEach(bar=>{
-    const width=bar.style.width || getComputedStyle(bar).width;
-    if(width) bar.style.width=width;
-    bar.style.transition='none';
+    const width=bar.dataset.targetWidth || bar.style.width || '0%';
+    bar.style.setProperty('width',width,'important');
+    bar.style.setProperty('transition','none','important');
+    bar.style.setProperty('opacity','1','important');
   });
+  root.querySelectorAll('.matchupChartRow').forEach(comparisonPrintSvgBars);
   root.querySelectorAll('.reveal-card,.matchupChartRow').forEach(el=>{
     el.style.opacity='1';
     el.style.transform='none';
