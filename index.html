@@ -1928,6 +1928,100 @@ body{
   .battleMetricNum{font-size:clamp(24px,2.4vw,38px)!important;}
 }
 
+
+/* v137: one-page A4 Stats Comparison PDF export */
+.comparePdfBtn{
+  border:1px solid #071a3a;
+  border-radius:999px;
+  background:#fff;
+  color:#071a3a;
+  font-weight:1000;
+  padding:11px 16px;
+  cursor:pointer;
+  box-shadow:0 10px 22px rgba(7,26,58,.10);
+}
+.comparePdfBtn:not(:disabled):hover{background:#071a3a;color:#fff;transform:translateY(-1px)}
+.comparePdfBtn:disabled{opacity:.4;cursor:not-allowed;box-shadow:none}
+.comparisonPrintSheet{display:none}
+.comparisonPrintSheet.preparing{
+  display:block;
+  position:fixed;
+  left:-12000px;
+  top:0;
+  width:281mm;
+  height:194mm;
+  padding:0;
+  overflow:hidden;
+  visibility:hidden;
+  background:#fff;
+}
+.comparisonPrintCanvas{
+  position:relative;
+  width:281mm;
+  height:194mm;
+  box-sizing:border-box;
+  overflow:hidden;
+  background:#fff;
+  color:#071a3a;
+  padding:5mm 6mm 4mm;
+}
+.comparisonPrintBrand{font-size:8pt;font-weight:1000;letter-spacing:.14em;color:#d71920;text-transform:uppercase}
+.comparisonPrintTitle{font-size:16pt;font-weight:1000;letter-spacing:-.04em;margin:1mm 0 2mm;color:#071a3a}
+.comparisonPrintContent{transform-origin:top left;width:100%}
+.comparisonPrintFooter{position:absolute;left:6mm;right:6mm;bottom:2mm;border-top:.25mm solid #dbe5f1;padding-top:1.2mm;font-size:6.5pt;font-weight:800;color:#667085;text-align:right}
+.comparisonPrintContent .categoryTabs{display:none!important}
+.comparisonPrintContent .compareStickyHeader{position:static!important;top:auto!important}
+.comparisonPrintContent .compareResultHeader{margin:0 0 2mm!important;padding:3mm 4mm!important;border-radius:4mm!important;box-shadow:none!important}
+.comparisonPrintContent .compareResultHeader h3{font-size:14pt!important;margin:0 0 1mm!important}
+.comparisonPrintContent .compareResultHeader p{font-size:7.5pt!important;line-height:1.25!important}
+.comparisonPrintContent .compareHeader{margin:1.5mm 0 2mm!important;gap:3mm!important}
+.comparisonPrintContent .comparePlayerName{font-size:12pt!important}
+.comparisonPrintContent .comparePlayerMeta{font-size:6.5pt!important;line-height:1.2!important}
+.comparisonPrintContent .compareVs{width:9mm!important;height:9mm!important;font-size:7pt!important}
+.comparisonPrintContent .comparisonSummaryGrid{grid-template-columns:repeat(3,1fr)!important;gap:2mm!important;margin:1.5mm 0 2mm!important}
+.comparisonPrintContent .summaryCard{padding:2mm 2.5mm!important;border-radius:3mm!important;box-shadow:none!important}
+.comparisonPrintContent .summaryCard small{font-size:5.5pt!important}
+.comparisonPrintContent .summaryCard strong{font-size:9pt!important;margin-top:.5mm!important}
+.comparisonPrintContent .summaryCard span{font-size:6pt!important;margin-top:.5mm!important}
+.comparisonPrintContent .compareBattleBoard{padding:2mm!important;border-radius:4mm!important;box-shadow:none!important}
+.comparisonPrintContent .compareChart{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;column-gap:2.2mm!important;row-gap:1.2mm!important}
+.comparisonPrintContent .compareGroupTitle{grid-column:1/-1!important;margin:1.2mm 0 .5mm!important}
+.comparisonPrintContent .compareGroupTitle span{padding:1mm 3mm!important;font-size:6.5pt!important;border-radius:99mm!important}
+.comparisonPrintContent .matchupChartRow{display:block!important;opacity:1!important;transform:none!important;break-inside:avoid!important;margin:0!important;padding:1.6mm 2mm!important;border-radius:3mm!important;box-shadow:none!important}
+.comparisonPrintContent .chartHeader{grid-template-columns:19mm minmax(0,1fr) 19mm!important;gap:1mm!important}
+.comparisonPrintContent .chartVal{font-size:8pt!important;white-space:nowrap!important}
+.comparisonPrintContent .chartMetric{font-size:6.2pt!important;line-height:1.1!important}
+.comparisonPrintContent .metricWinner{font-size:4.8pt!important;margin-top:.4mm!important}
+.comparisonPrintContent .chartBars{margin-top:1mm!important;height:2.8mm!important}
+.comparisonPrintContent .barHalf{height:2.8mm!important}
+.comparisonPrintContent .barGraph{transition:none!important}
+.comparisonPrintContent .chartDelta{margin-top:.7mm!important}
+.comparisonPrintContent .winnerPill{font-size:5pt!important;padding:.5mm 1.5mm!important}
+@page{size:A4 landscape;margin:8mm}
+@media print{
+  html,body{width:auto!important;height:auto!important;margin:0!important;padding:0!important;background:#fff!important}
+  body>*:not(#comparisonPrintSheet){display:none!important}
+  #comparisonPrintSheet{display:block!important;position:static!important;width:281mm!important;height:194mm!important;overflow:hidden!important;visibility:visible!important;background:#fff!important}
+  #comparisonPrintSheet *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  .comparisonPrintCanvas{width:281mm!important;height:194mm!important;overflow:hidden!important}
+}
+@media(max-width:760px){.comparePdfBtn{flex:1 1 130px}}
+
+
+/* v138: Gold / Red effort comparison */
+.compareMatchupRow[data-group="Effort Review"] .chartMetric{
+  font-weight:1000;
+}
+.compareMatchupRow[data-group="Effort Review"] .chartDelta .winnerPill{
+  border:1px solid rgba(7,26,58,.10);
+}
+@media print{
+  .comparisonPrintContent [data-group="Effort Review"]{
+    break-inside:avoid;
+    page-break-inside:avoid;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -2026,7 +2120,7 @@ body{
         <button data-metric="per80" type="button">Per 80</button>
       </div>
     </div>
-    <div class="compareActions"><button id="compareRun" class="compareRun" type="button" disabled>Show comparison</button><div id="compareHint" class="helper">Choose two players to compare.</div></div>
+    <div class="compareActions"><button id="compareRun" class="compareRun" type="button" disabled>Show comparison</button><button id="comparePdfBtn" class="comparePdfBtn" type="button" disabled title="Export this comparison as a one-page A4 PDF">A4 PDF</button><div id="compareHint" class="helper">Choose two players to compare.</div></div>
     <div id="compareResult" class="compareResult"></div>
   </section>
 
@@ -2130,6 +2224,16 @@ body{
       <button id="effortAnalysisModalClose" class="effortModalClose" type="button" aria-label="Close Effort Analysis">×</button>
     </div>
     <div id="effortAnalysisModalBody" class="effortModalBody"></div>
+  </div>
+</div>
+
+
+<div id="comparisonPrintSheet" class="comparisonPrintSheet" aria-hidden="true">
+  <div class="comparisonPrintCanvas">
+    <div class="comparisonPrintBrand">JAPAN RUGBY PERFORMANCE REVIEW HUB</div>
+    <div class="comparisonPrintTitle">STATS COMPARISON</div>
+    <div id="comparisonPrintContent" class="comparisonPrintContent"></div>
+    <div class="comparisonPrintFooter">Generated from JAPAN RUGBY PERFORMANCE REVIEW HUB</div>
   </div>
 </div>
 
@@ -3974,7 +4078,9 @@ function comparisonMetricRows(a,b,rawA=null,rawB=null){
     {group:'First Tackle', label:'Tackle Completion (1st Tackle)', a:pctNum(a.tackleFirstMade,a.tackleFirstAttempts), b:pctNum(b.tackleFirstMade,b.tackleFirstAttempts), fmt:v=>`${intFmt(v)}%`, higher:true},
     {group:'First Tackle', label:'Tackle Dominance% (1st Tackle)', a:pctNum(a.tackleFirstDominant,a.tackleFirstAttempts), b:pctNum(b.tackleFirstDominant,b.tackleFirstAttempts), fmt:v=>`${intFmt(v)}%`, higher:true},
     {group:'Ruck Support', label:'Ruck Support Attack', a:a.ruckSupportAttack||0, b:b.ruckSupportAttack||0, fmt:displayNumber, higher:true},
-    {group:'Ruck Support', label:'Ruck Support Attack Effectiveness %', a:pctNum(a.ruckSupportAttackEffective,a.ruckSupportAttack), b:pctNum(b.ruckSupportAttackEffective,b.ruckSupportAttack), fmt:v=>`${intFmt(v)}%`, higher:true}
+    {group:'Ruck Support', label:'Ruck Support Attack Effectiveness %', a:pctNum(a.ruckSupportAttackEffective,a.ruckSupportAttack), b:pctNum(b.ruckSupportAttackEffective,b.ruckSupportAttack), fmt:v=>`${intFmt(v)}%`, higher:true},
+    {group:'Effort Review', label:'Gold Efforts', a:a.colours?.Gold||0, b:b.colours?.Gold||0, fmt:displayNumber, higher:true},
+    {group:'Effort Review', label:'Red Efforts', a:a.colours?.Red||0, b:b.colours?.Red||0, fmt:displayNumber, higher:false}
   ];
 }
 function compareBarRow(row){
@@ -4611,6 +4717,92 @@ function v129InstallBottomNav(){
   });
 }
 if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',v129InstallBottomNav); else v129InstallBottomNav();
+
+/* v137: A4 one-page PDF export for Stats Comparison */
+function comparisonHasPrintableResult(){
+  const result=document.getElementById('compareResult');
+  return !!(result && result.querySelector('.compareBattleBoard') && result.querySelector('.compareHeader'));
+}
+function updateComparePdfButton(){
+  const btn=document.getElementById('comparePdfBtn');
+  if(btn) btn.disabled=!comparisonHasPrintableResult();
+}
+function finalizeComparisonPrintBars(root){
+  root.querySelectorAll('.barGraph').forEach(bar=>{
+    const width=bar.style.width || getComputedStyle(bar).width;
+    if(width) bar.style.width=width;
+    bar.style.transition='none';
+  });
+  root.querySelectorAll('.reveal-card,.matchupChartRow').forEach(el=>{
+    el.style.opacity='1';
+    el.style.transform='none';
+  });
+  root.querySelectorAll('[hidden]').forEach(el=>el.removeAttribute('hidden'));
+  root.querySelectorAll('[style*="display: none"],[style*="display:none"]').forEach(el=>el.style.display='');
+}
+function buildComparisonPrintSheet(){
+  const source=document.getElementById('compareResult');
+  const sheet=document.getElementById('comparisonPrintSheet');
+  const target=document.getElementById('comparisonPrintContent');
+  if(!source||!sheet||!target||!comparisonHasPrintableResult()) return false;
+  const clone=source.cloneNode(true);
+  clone.removeAttribute('id');
+  clone.querySelectorAll('.categoryTabs').forEach(el=>el.remove());
+  finalizeComparisonPrintBars(clone);
+  target.innerHTML='';
+  target.appendChild(clone);
+  target.style.transform='none';
+  target.style.width='100%';
+  sheet.classList.add('preparing');
+  sheet.setAttribute('aria-hidden','false');
+  return true;
+}
+function fitComparisonPrintToOnePage(){
+  const sheet=document.getElementById('comparisonPrintSheet');
+  const canvas=sheet?.querySelector('.comparisonPrintCanvas');
+  const content=document.getElementById('comparisonPrintContent');
+  if(!sheet||!canvas||!content) return 1;
+  const footer=canvas.querySelector('.comparisonPrintFooter');
+  const top=content.offsetTop;
+  const bottomReserve=(footer?.offsetHeight||0)+18;
+  const availableHeight=Math.max(1,canvas.clientHeight-top-bottomReserve);
+  const availableWidth=Math.max(1,canvas.clientWidth-2);
+  const naturalHeight=Math.max(1,content.scrollHeight);
+  const naturalWidth=Math.max(1,content.scrollWidth);
+  const scale=Math.min(1,availableWidth/naturalWidth,availableHeight/naturalHeight);
+  content.style.transform=`scale(${scale})`;
+  content.style.width=`${100/scale}%`;
+  return scale;
+}
+function cleanupComparisonPrintSheet(){
+  const sheet=document.getElementById('comparisonPrintSheet');
+  const target=document.getElementById('comparisonPrintContent');
+  if(sheet){sheet.classList.remove('preparing');sheet.setAttribute('aria-hidden','true');}
+  if(target){target.style.transform='none';target.style.width='100%';target.innerHTML='';}
+}
+function exportComparisonA4Pdf(){
+  if(!buildComparisonPrintSheet()) return;
+  const oldTitle=document.title;
+  const names=[...document.querySelectorAll('#compareResult .comparePlayerName')].map(x=>x.textContent.trim()).filter(Boolean);
+  document.title=`Stats Comparison${names.length===2?' - '+names.join(' vs '):''}`;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    fitComparisonPrintToOnePage();
+    setTimeout(()=>window.print(),80);
+  }));
+  const restore=()=>{document.title=oldTitle;cleanupComparisonPrintSheet();window.removeEventListener('afterprint',restore);};
+  window.addEventListener('afterprint',restore);
+  setTimeout(()=>{if(document.getElementById('comparisonPrintSheet')?.classList.contains('preparing')) restore();},120000);
+}
+(function installComparisonPdfExport(){
+  const btn=document.getElementById('comparePdfBtn');
+  const result=document.getElementById('compareResult');
+  if(btn) btn.addEventListener('click',exportComparisonA4Pdf);
+  if(result){
+    const observer=new MutationObserver(updateComparePdfButton);
+    observer.observe(result,{childList:true,subtree:true});
+  }
+  updateComparePdfButton();
+})();
 
 </script>
 </body>
