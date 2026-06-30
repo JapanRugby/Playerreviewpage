@@ -1948,8 +1948,8 @@ body{
   position:fixed;
   left:-12000px;
   top:0;
-  width:281mm;
-  height:194mm;
+  width:194mm;
+  height:281mm;
   padding:0;
   overflow:hidden;
   visibility:hidden;
@@ -1957,8 +1957,8 @@ body{
 }
 .comparisonPrintCanvas{
   position:relative;
-  width:281mm;
-  height:194mm;
+  width:194mm;
+  height:281mm;
   box-sizing:border-box;
   overflow:hidden;
   background:#fff;
@@ -1997,13 +1997,13 @@ body{
 .comparisonPrintContent .barGraph{transition:none!important}
 .comparisonPrintContent .chartDelta{margin-top:.7mm!important}
 .comparisonPrintContent .winnerPill{font-size:5pt!important;padding:.5mm 1.5mm!important}
-@page{size:A4 landscape;margin:8mm}
+@page{size:A4 portrait;margin:8mm}
 @media print{
   html,body{width:auto!important;height:auto!important;margin:0!important;padding:0!important;background:#fff!important}
   body>*:not(#comparisonPrintSheet){display:none!important}
-  #comparisonPrintSheet{display:block!important;position:static!important;width:281mm!important;height:194mm!important;overflow:hidden!important;visibility:visible!important;background:#fff!important}
+  #comparisonPrintSheet{display:block!important;position:static!important;width:194mm!important;height:281mm!important;overflow:hidden!important;visibility:visible!important;background:#fff!important}
   #comparisonPrintSheet *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
-  .comparisonPrintCanvas{width:281mm!important;height:194mm!important;overflow:hidden!important}
+  .comparisonPrintCanvas{width:194mm!important;height:281mm!important;overflow:hidden!important}
 }
 @media(max-width:760px){.comparePdfBtn{flex:1 1 130px}}
 
@@ -2030,6 +2030,94 @@ body{
   .comparisonPrintContent .chartBars{display:none!important}
   .comparisonPrintContent .comparisonPrintBarSvg{display:block!important;width:100%!important;height:3mm!important}
   .comparisonPrintContent .matchupChartRow{overflow:visible!important}
+}
+
+
+/* v140: A4 portrait one-page Stats Comparison PDF */
+@page{size:A4 portrait;margin:8mm}
+.comparisonPrintSheet.preparing{
+  width:194mm!important;
+  height:281mm!important;
+}
+.comparisonPrintCanvas{
+  width:194mm!important;
+  height:281mm!important;
+  padding:5mm 5mm 4mm!important;
+}
+.comparisonPrintFooter{left:5mm!important;right:5mm!important}
+.comparisonPrintContent .compareResultHeader{
+  padding:3.2mm 4mm!important;
+  margin-bottom:2.2mm!important;
+}
+.comparisonPrintContent .compareResultHeader h3{font-size:15pt!important}
+.comparisonPrintContent .compareResultHeader p{font-size:8pt!important}
+.comparisonPrintContent .compareHeader{
+  grid-template-columns:minmax(0,1fr) 10mm minmax(0,1fr)!important;
+  gap:2mm!important;
+  margin:1.8mm 0 2.4mm!important;
+}
+.comparisonPrintContent .comparePlayerName{
+  font-size:12.5pt!important;
+  line-height:1.05!important;
+}
+.comparisonPrintContent .comparePlayerMeta{font-size:6.8pt!important}
+.comparisonPrintContent .comparisonSummaryGrid{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:1.6mm!important;
+  margin:1.8mm 0 2.4mm!important;
+}
+.comparisonPrintContent .summaryCard{
+  padding:2.2mm 2.4mm!important;
+}
+.comparisonPrintContent .compareBattleBoard{
+  padding:2.2mm!important;
+}
+.comparisonPrintContent .compareChart{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  column-gap:1.8mm!important;
+  row-gap:1.1mm!important;
+}
+.comparisonPrintContent .compareGroupTitle{
+  grid-column:1/-1!important;
+  margin:1.1mm 0 .5mm!important;
+}
+.comparisonPrintContent .compareGroupTitle span{
+  padding:1.1mm 3mm!important;
+  font-size:6.8pt!important;
+}
+.comparisonPrintContent .matchupChartRow{
+  padding:1.7mm 1.8mm!important;
+  border:0.25mm solid #e3e8ef!important;
+  background:#fff!important;
+}
+.comparisonPrintContent .chartHeader{
+  grid-template-columns:17mm minmax(0,1fr) 17mm!important;
+  gap:.8mm!important;
+}
+.comparisonPrintContent .chartVal{font-size:8.4pt!important}
+.comparisonPrintContent .chartMetric{
+  font-size:6.4pt!important;
+  line-height:1.08!important;
+}
+.comparisonPrintContent .metricWinner{font-size:5pt!important}
+.comparisonPrintContent .comparisonPrintBarSvg{
+  height:3.3mm!important;
+  margin-top:1mm!important;
+}
+.comparisonPrintContent .winnerPill{
+  font-size:5.2pt!important;
+  padding:.55mm 1.5mm!important;
+}
+@media print{
+  #comparisonPrintSheet{
+    width:194mm!important;
+    height:281mm!important;
+  }
+  .comparisonPrintCanvas{
+    width:194mm!important;
+    height:281mm!important;
+  }
 }
 
 </style>
@@ -2130,7 +2218,7 @@ body{
         <button data-metric="per80" type="button">Per 80</button>
       </div>
     </div>
-    <div class="compareActions"><button id="compareRun" class="compareRun" type="button" disabled>Show comparison</button><button id="comparePdfBtn" class="comparePdfBtn" type="button" disabled title="Export this comparison as a one-page A4 PDF">A4 PDF</button><div id="compareHint" class="helper">Choose two players to compare.</div></div>
+    <div class="compareActions"><button id="compareRun" class="compareRun" type="button" disabled>Show comparison</button><button id="comparePdfBtn" class="comparePdfBtn" type="button" disabled title="Export this comparison as a one-page A4 PDF">A4 Portrait PDF</button><div id="compareHint" class="helper">Choose two players to compare.</div></div>
     <div id="compareResult" class="compareResult"></div>
   </section>
 
@@ -4827,7 +4915,7 @@ function exportComparisonA4Pdf(){
   if(!buildComparisonPrintSheet()) return;
   const oldTitle=document.title;
   const names=[...document.querySelectorAll('#compareResult .comparePlayerName')].map(x=>x.textContent.trim()).filter(Boolean);
-  document.title=`Stats Comparison${names.length===2?' - '+names.join(' vs '):''}`;
+  document.title=`Stats Comparison Portrait${names.length===2?' - '+names.join(' vs '):''}`;
   requestAnimationFrame(()=>requestAnimationFrame(()=>{
     fitComparisonPrintToOnePage();
     setTimeout(()=>window.print(),80);
