@@ -10,7 +10,7 @@
   "awayScore": 32,
   "hasJapan": false,
   "modelVersion": "v5-auto-explainable-lite",
-  "generatedAt": "2026-08-15T22:00:08.939Z",
+  "generatedAt": "2026-08-26T08:16:46.595Z",
   "halfLifeSeconds": 240,
   "series": {
     "home": [
@@ -66,8 +66,8 @@
       {
         "minute": 5,
         "matchClock": "5:00",
-        "rmi": 29,
-        "raw": 0.897,
+        "rmi": 29.1,
+        "raw": 0.899,
         "label": "home",
         "leadingReasons": [
           "接点・BD +7.2 / 得点脅威 +5.4 / 継続品質 +5.2",
@@ -79,7 +79,7 @@
         "minute": 6,
         "matchClock": "6:00",
         "rmi": 99.6,
-        "raw": 9.449,
+        "raw": 9.448,
         "label": "home",
         "leadingReasons": [
           "得点脅威 +10.4 / 規律・TO +2.1 / 継続品質 +0.6",
@@ -127,7 +127,7 @@
         "minute": 10,
         "matchClock": "10:00",
         "rmi": 100,
-        "raw": 14.145,
+        "raw": 14.144,
         "label": "home",
         "leadingReasons": [
           "得点脅威 +12.1 / 継続品質 +1.4 / テリトリー +1.0",
@@ -282,7 +282,7 @@
       {
         "minute": 23,
         "matchClock": "23:00",
-        "rmi": 23.4,
+        "rmi": 23.3,
         "raw": 0.714,
         "label": "home",
         "leadingReasons": [
@@ -1531,7 +1531,7 @@
       "setNum": 4,
       "matchClock": "4:15",
       "team": "New Zealand",
-      "signal": 8.871,
+      "signal": 8.873,
       "reason": "接点・BD +7.2 / 得点脅威 +5.4 / 継続品質 +5.2",
       "components": {
         "scoringThreat": 5.44,
@@ -1633,18 +1633,18 @@
       "xEnd": 83,
       "yStart": 68,
       "yEnd": 28,
-      "events": 149,
+      "events": 151,
       "scoringThreat": 5.44,
       "territory": 2.845,
       "possessionQuality": 5.18,
       "contactBreakdown": 7.22,
       "disciplineTurnover": 2.9,
       "ruleSignal": 23.585,
-      "ownerScoreProb5m": 0.8284,
+      "ownerScoreProb5m": 0.8286,
       "opponentScoreProb5m": 0.0165,
-      "predictedMarginDelta5m": 4.519,
-      "learnedSignal": 6.771,
-      "finalSignal": 8.871,
+      "predictedMarginDelta5m": 4.52,
+      "learnedSignal": 6.773,
+      "finalSignal": 8.873,
       "reason": "接点・BD +7.2 / 得点脅威 +5.4 / 継続品質 +5.2"
     },
     {
@@ -1659,18 +1659,18 @@
       "xEnd": 92,
       "yStart": 0,
       "yEnd": 18,
-      "events": 112,
+      "events": 110,
       "scoringThreat": 10.44,
       "territory": -0.138,
       "possessionQuality": 0.63,
       "contactBreakdown": -0.31,
       "disciplineTurnover": 2.15,
       "ruleSignal": 12.772,
-      "ownerScoreProb5m": 0.8345,
+      "ownerScoreProb5m": 0.8342,
       "opponentScoreProb5m": 0.0406,
-      "predictedMarginDelta5m": 4.429,
-      "learnedSignal": 6.627,
-      "finalSignal": 8.727,
+      "predictedMarginDelta5m": 4.428,
+      "learnedSignal": 6.625,
+      "finalSignal": 8.725,
       "reason": "得点脅威 +10.4 / 規律・TO +2.1 / 継続品質 +0.6"
     },
     {
